@@ -1,0 +1,1893 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CValidatorUnitCompareBehaviorCount id="AA12">
+        <WhichUnit Value="Source"/>
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="AA12"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="AcidBurns">
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="AcidBurns"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="AcidMelt">
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="AcidMelt"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="AcidSplash">
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="AcidSplash"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="BeserkCast">
+        <Value value="1"/>
+        <Behavior value="Beserk"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="BloatedAcid">
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="BloatedAcid"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="BurstCounter10">
+        <WhichUnit Value="Caster"/>
+        <Value value="10"/>
+        <Behavior value="BurstCounter"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="BurstCounter13">
+        <WhichUnit Value="Caster"/>
+        <Value value="13"/>
+        <Behavior value="BurstCounter2"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="BurstFire">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="BurstFireAssaultRifle"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="BurstFire2">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="BurstFireMini"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="BurstFire3">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="BurstFireLN"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="BurstFire4">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="BurstFireCarbine"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="BurstFire5">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="BurstFireSteelSaberCarbine"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="BurstFiring">
+        <CombineArray value="BurstFire4"/>
+        <CombineArray value="BurstFire5"/>
+        <CombineArray value="BurstFire"/>
+        <CombineArray value="BurstFire3"/>
+        <CombineArray value="BurstFire2"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="BurstPause">
+        <Behavior value="BurstPause"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="BurstPause2">
+        <Behavior value="BurstPause2"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="ChargesReadied">
+        <WhichUnit Value="Caster"/>
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="ChargesReadied"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitType id="Cyborg2">
+        <Value value="Cyborg2"/>
+    </CValidatorUnitType>
+    <CValidatorUnitCompareBehaviorCount id="DilophosaurAcid">
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="DilophosaurAcid"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitType id="Cyborg">
+        <Value value="Cyborg"/>
+    </CValidatorUnitType>
+    <CValidatorUnitCompareBehaviorCount id="FuelBombReady">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="FuelBombReady"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="HasMechSeat">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="MechSeat"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="HasNoSAW">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="M41SAW"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="HasSAW">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="M41SAW"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="HasSF">
+        <Value value="1"/>
+        <Behavior value="SpecialForcesExpertise"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="IsInspired">
+        <Value value="1"/>
+        <Behavior value="SquadLeadership2"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="M241MMGEquipped">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="M241MMG"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="M241MMGNotEquipped">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="M241MMG"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="Marked">
+        <Value value="1"/>
+        <Behavior value="Marked"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitType id="MechOperator">
+        <Value value="MechOperator"/>
+    </CValidatorUnitType>
+    <CValidatorCombine id="NoDMR">
+        <CombineArray value="IDMR2"/>
+        <CombineArray value="M92TorrentItem"/>
+        <CombineArray value="XR900"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="SAW">
+        <WhichUnit Value="Source"/>
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="M41SAW"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="NoMG">
+        <CombineArray value="MMG"/>
+        <CombineArray value="Minigun"/>
+        <CombineArray value="SAW"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="NoRifle">
+        <CombineArray value="BR2"/>
+        <CombineArray value="HK42"/>
+        <CombineArray value="SOFAR"/>
+        <CombineArray value="USMCR"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="NotBurstPausing">
+        <CombineArray value="BurstPause"/>
+        <CombineArray value="BurstPause2"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="OverclockPlasmaRifle">
+        <Value value="1"/>
+        <Behavior value="OverclockAW"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="OverheatPlasma">
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="OverheatPlasma"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="RiflemanPlasma">
+        <Value value="1"/>
+        <Behavior value="AdvancedWarfighter"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitFilters id="IsRobotic">
+        <Filters value="Robotic;-"/>
+    </CValidatorUnitFilters>
+    <CValidatorUnitCompareBehaviorCount id="NoFuelBomb">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="FuelBombReady"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareVital id="Health100">
+        <ResultNoUnit value="Error"/>
+        <Compare value="LT"/>
+        <Type value="Fraction"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorCombine id="IsAcidSoaked">
+        <CombineArray value="AcidBurns"/>
+        <CombineArray value="AcidMelt"/>
+        <CombineArray value="AcidSplash"/>
+        <CombineArray value="BloatedAcid"/>
+        <CombineArray value="DilophosaurAcid"/>
+        <CombineArray value="HorrorAcid"/>
+        <CombineArray value="SpitterAcid"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="IsCombatMedic">
+        <CombineArray value="Medic"/>
+        <CombineArray value="Medic2"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="NapalmBurn1">
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="NapalmBurn1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="NapalmBurn2">
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="NapalmBurn2"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="NapalmBurn3">
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="NapalmBurn3"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="NapalmBurn4">
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="NapalmBurn4"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="NapalmBurnMini">
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="Napalm5"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="NapalmBurnt">
+        <CombineArray value="NapalmBurn1"/>
+        <CombineArray value="NapalmBurn2"/>
+        <CombineArray value="NapalmBurn3"/>
+        <CombineArray value="NapalmBurn4"/>
+        <CombineArray value="NapalmBurnMini"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="NoBiosuit">
+        <Behavior value="BioSuit"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="InfectedBite">
+        <Value value="1"/>
+        <Behavior value="InfectedBite"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="EmittingHealingAura">
+        <Value value="1"/>
+        <Behavior value="HealingAura"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareVital id="Health50">
+        <ResultNoUnit value="Error"/>
+        <Compare value="LT"/>
+        <Type value="Fraction"/>
+        <Value value="0.5"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorCombine id="AssassinCritical11">
+        <Type value="And"/>
+        <CombineArray value="AssassinSkills1"/>
+        <CombineArray value="Marksmanship1"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="AssassinCritical12">
+        <Type value="And"/>
+        <CombineArray value="AssassinSkills1"/>
+        <CombineArray value="Marksmanship2"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="AssassinCritical13">
+        <Type value="And"/>
+        <CombineArray value="AssassinSkills1"/>
+        <CombineArray value="Marksmanship3"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="AssassinCritical14">
+        <Type value="And"/>
+        <CombineArray value="AssassinSkills1"/>
+        <CombineArray value="Marksmanship4"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="AssassinCritical21">
+        <Type value="And"/>
+        <CombineArray value="AssassinSkills2"/>
+        <CombineArray value="Marksmanship1"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="AssassinCritical22">
+        <Type value="And"/>
+        <CombineArray value="AssassinSkills2"/>
+        <CombineArray value="Marksmanship2"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="AssassinCritical23">
+        <Type value="And"/>
+        <CombineArray value="AssassinSkills2"/>
+        <CombineArray value="Marksmanship3"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="AssassinCritical24">
+        <Type value="And"/>
+        <CombineArray value="AssassinSkills2"/>
+        <CombineArray value="Marksmanship4"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="AssassinCritical31">
+        <Type value="And"/>
+        <CombineArray value="AssassinSkills3"/>
+        <CombineArray value="Marksmanship1"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="AssassinCritical32">
+        <Type value="And"/>
+        <CombineArray value="AssassinSkills3"/>
+        <CombineArray value="Marksmanship2"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="AssassinCritical33">
+        <Type value="And"/>
+        <CombineArray value="AssassinSkills3"/>
+        <CombineArray value="Marksmanship3"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="AssassinCritical34">
+        <Type value="And"/>
+        <CombineArray value="AssassinSkills3"/>
+        <CombineArray value="Marksmanship4"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="AssassinCritical41">
+        <Type value="And"/>
+        <CombineArray value="AssassinSkills4"/>
+        <CombineArray value="Marksmanship1"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="AssassinCritical42">
+        <Type value="And"/>
+        <CombineArray value="AssassinSkills4"/>
+        <CombineArray value="Marksmanship2"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="AssassinCritical43">
+        <Type value="And"/>
+        <CombineArray value="AssassinSkills4"/>
+        <CombineArray value="Marksmanship3"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="AssassinCritical44">
+        <Type value="And"/>
+        <CombineArray value="AssassinSkills4"/>
+        <CombineArray value="Marksmanship4"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="BR2BurstFireUpgrade">
+        <Type value="And"/>
+        <CombineArray value="SoldierSkills3Check"/>
+        <CombineArray value="SoldierSkills4Check"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="CriticalAgility">
+        <Value value="1"/>
+        <Behavior value="PAgility3"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="CriticalStealth">
+        <Value value="1"/>
+        <Behavior value="PStealth3"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="CriticalStealthAndAgility">
+        <Type value="And"/>
+        <CombineArray value="CriticalAgility"/>
+        <CombineArray value="CriticalStealth"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="CriticalStealthOrAgility">
+        <CombineArray value="CriticalAgility"/>
+        <CombineArray value="CriticalStealth"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="CriticalSuppress11">
+        <Type value="And"/>
+        <CombineArray value="Marksmanship1"/>
+        <CombineArray value="SuppressiveFiring1"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="CriticalSuppress">
+        <Type value="And"/>
+        <CombineArray value="SuppressiveFiring5"/>
+        <CombineArray value="Criticals3x"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="CriticalSuppress122">
+        <Type value="And"/>
+        <CombineArray value="CriticalStealthOrAgility"/>
+        <CombineArray value="SuppressiveFiring2"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="CriticalSuppress132">
+        <Type value="And"/>
+        <CombineArray value="CriticalStealthOrAgility"/>
+        <CombineArray value="SuppressiveFiring3"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="CriticalSuppress142">
+        <Type value="And"/>
+        <CombineArray value="CriticalStealthOrAgility"/>
+        <CombineArray value="SuppressiveFiring4"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="CriticalSuppress212">
+        <Type value="And"/>
+        <CombineArray value="CriticalStealthAndAgility"/>
+        <CombineArray value="SuppressiveFiring1"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="CriticalSuppress2">
+        <Type value="And"/>
+        <CombineArray value="SuppressiveFiringLN"/>
+        <CombineArray value="Criticals"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="CriticalSuppress21">
+        <Type value="And"/>
+        <CombineArray value="Marksmanship2"/>
+        <CombineArray value="SuppressiveFiring1"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="CriticalSuppress12">
+        <Type value="And"/>
+        <CombineArray value="Marksmanship1"/>
+        <CombineArray value="SuppressiveFiring2"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="CriticalSuppress13">
+        <Type value="And"/>
+        <CombineArray value="Marksmanship1"/>
+        <CombineArray value="SuppressiveFiring3"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="CriticalSuppress14">
+        <Type value="And"/>
+        <CombineArray value="Marksmanship1"/>
+        <CombineArray value="SuppressiveFiring4"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="CriticalRapid">
+        <Type value="And"/>
+        <CombineArray value="Criticals"/>
+        <CombineArray value="RapidFiring5"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="CriticalSuppress222">
+        <Type value="And"/>
+        <CombineArray value="CriticalStealthAndAgility"/>
+        <CombineArray value="SuppressiveFiring2"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="CriticalSuppress232">
+        <Type value="And"/>
+        <CombineArray value="CriticalStealthAndAgility"/>
+        <CombineArray value="SuppressiveFiring3"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="CriticalSuppress242">
+        <Type value="And"/>
+        <CombineArray value="CriticalStealthAndAgility"/>
+        <CombineArray value="SuppressiveFiring4"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="CriticalSuppress31">
+        <Type value="And"/>
+        <CombineArray value="Marksmanship3"/>
+        <CombineArray value="SuppressiveFiring1"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="CriticalSuppress22">
+        <Type value="And"/>
+        <CombineArray value="Marksmanship2"/>
+        <CombineArray value="SuppressiveFiring2"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="CriticalSuppress23">
+        <Type value="And"/>
+        <CombineArray value="Marksmanship2"/>
+        <CombineArray value="SuppressiveFiring3"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="CriticalSuppress24">
+        <Type value="And"/>
+        <CombineArray value="Marksmanship2"/>
+        <CombineArray value="SuppressiveFiring4"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="CriticalSuppress32">
+        <Type value="And"/>
+        <CombineArray value="Marksmanship3"/>
+        <CombineArray value="SuppressiveFiring2"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="CriticalSuppress33">
+        <Type value="And"/>
+        <CombineArray value="Marksmanship3"/>
+        <CombineArray value="SuppressiveFiring3"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="CriticalSuppress34">
+        <Type value="And"/>
+        <CombineArray value="Marksmanship3"/>
+        <CombineArray value="SuppressiveFiring4"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="CriticalSuppress41">
+        <Type value="And"/>
+        <CombineArray value="Marksmanship4"/>
+        <CombineArray value="SuppressiveFiring1"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="CriticalSuppress42">
+        <Type value="And"/>
+        <CombineArray value="Marksmanship4"/>
+        <CombineArray value="SuppressiveFiring2"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="CriticalSuppress43">
+        <Type value="And"/>
+        <CombineArray value="Marksmanship4"/>
+        <CombineArray value="SuppressiveFiring3"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="CriticalSuppress44">
+        <Type value="And"/>
+        <CombineArray value="Marksmanship4"/>
+        <CombineArray value="SuppressiveFiring4"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="Criticals">
+        <Value value="1"/>
+        <Behavior value="MarksmanshipLN"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="Criticals3x">
+        <Value value="1"/>
+        <Behavior value="Critical3xDamage"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="FilterMechMassive">
+        <CombineArray value="IsMassive"/>
+        <CombineArray value="IsMechanical"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="HasBloodlust">
+        <Value value="1"/>
+        <Behavior value="BloodLust"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="IsHemorrhaging">
+        <CombineArray value="ClassIIIHemorage"/>
+        <CombineArray value="ClassIVHemorage"/>
+        <CombineArray value="MinorLacerations"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="IsInfantry">
+        <Value value="1"/>
+        <Behavior value="Infantry"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="Interrogatable">
+        <Value value="1"/>
+        <Behavior value="Disarmable"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="HasGasMaskBetaRifle">
+        <Value value="1"/>
+        <Behavior value="GasMaskBeta"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="IsInfected">
+        <CombineArray value="DebilitatingInfection"/>
+        <CombineArray value="InfectedBite"/>
+        <CombineArray value="MalignantInfection"/>
+        <CombineArray value="ParasiticInfection"/>
+        <CombineArray value="EnergyLeak"/>
+        <CombineArray value="UnidentifiedInfection"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="IsLocalNational">
+        <Value value="1"/>
+        <Behavior value="LocalNational"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="IsPMC"/>
+    <CValidatorCombine id="IsPoisoned">
+        <CombineArray value="NecroticVenom"/>
+        <CombineArray value="NeurotoxicVenom"/>
+        <CombineArray value="ScorpioVenom"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="IsTraumad">
+        <CombineArray value="FracturedArm"/>
+        <CombineArray value="FracturedLeg"/>
+        <CombineArray value="TraumaticBrainInjury"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="M92Rapid">
+        <Type value="And"/>
+        <CombineArray value="M92Rapid"/>
+        <CombineArray value="RapidFiring"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="M92Equipped">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="M92Torrent"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="Marksmanship2">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="Marksmanship2"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="Marksmanship3">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="Marksmanship3"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="Marksmanship4">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="Marksmanship4"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="MinorInjury">
+        <CombineArray value="MinorLacerations"/>
+        <CombineArray value="UnidentifiedInfection"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="ModerateInjury">
+        <CombineArray value="ClassIIIHemorage"/>
+        <CombineArray value="EnergyLeak"/>
+        <CombineArray value="FracturedArm"/>
+        <CombineArray value="FracturedLeg"/>
+        <CombineArray value="MalignantInfection"/>
+        <CombineArray value="TraumaticBrainInjury"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="NecroticVenom">
+        <Value value="1"/>
+        <Behavior value="NecroticVenom"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="NeurotoxicVenom">
+        <Value value="1"/>
+        <Behavior value="NeurotoxicVenom"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="OSSEMPReq">
+        <CombineArray value="IsRobotic"/>
+        <CombineArray value="IsMechanical"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="ParasiticInfection">
+        <Value value="1"/>
+        <Behavior value="ParasiticInfection"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="PreciseCritical11">
+        <CombineArray value="Marksmanship1"/>
+        <CombineArray value="PreciseFiring1"/>
+        <Type value="And"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="PreciseCritical12">
+        <CombineArray value="Marksmanship1"/>
+        <CombineArray value="PreciseFiring2"/>
+        <Type value="And"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="PreciseCritical13">
+        <CombineArray value="Marksmanship1"/>
+        <CombineArray value="PreciseFiring3"/>
+        <Type value="And"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="PreciseCritical14">
+        <CombineArray value="Marksmanship1"/>
+        <CombineArray value="PreciseFiring4"/>
+        <Type value="And"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="PreciseCritical21">
+        <CombineArray value="Marksmanship2"/>
+        <CombineArray value="PreciseFiring1"/>
+        <Type value="And"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="PreciseCritical22">
+        <CombineArray value="Marksmanship2"/>
+        <CombineArray value="PreciseFiring2"/>
+        <Type value="And"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="PreciseCritical23">
+        <CombineArray value="Marksmanship2"/>
+        <CombineArray value="PreciseFiring3"/>
+        <Type value="And"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="PreciseCritical24">
+        <CombineArray value="Marksmanship2"/>
+        <CombineArray value="PreciseFiring4"/>
+        <Type value="And"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="PreciseCritical31">
+        <CombineArray value="Marksmanship3"/>
+        <CombineArray value="PreciseFiring1"/>
+        <Type value="And"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="PreciseCritical32">
+        <CombineArray value="Marksmanship3"/>
+        <CombineArray value="PreciseFiring2"/>
+        <Type value="And"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="PreciseCritical33">
+        <CombineArray value="Marksmanship3"/>
+        <CombineArray value="PreciseFiring3"/>
+        <Type value="And"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="PreciseCritical34">
+        <CombineArray value="Marksmanship3"/>
+        <CombineArray value="PreciseFiring4"/>
+        <Type value="And"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="PreciseCritical41">
+        <CombineArray value="Marksmanship4"/>
+        <CombineArray value="PreciseFiring1"/>
+        <Type value="And"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="PreciseCritical42">
+        <CombineArray value="Marksmanship4"/>
+        <CombineArray value="PreciseFiring2"/>
+        <Type value="And"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="PreciseCritical43">
+        <CombineArray value="Marksmanship4"/>
+        <CombineArray value="PreciseFiring3"/>
+        <Type value="And"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="PreciseCritical44">
+        <CombineArray value="Marksmanship4"/>
+        <CombineArray value="PreciseFiring4"/>
+        <Type value="And"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="PreciseFiring1">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="PreciseAim1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="PreciseFiring2">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="PreciseAim2"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="PreciseFiring3">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="PreciseAim3"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="PreciseFiring4">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="PreciseAim4"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="RapidFiring6">
+        <Value value="1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="RapidCriticals41">
+        <CombineArray value="RapidFiring4"/>
+        <CombineArray value="Marksmanship1"/>
+        <Type value="And"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="RapidCriticals42">
+        <CombineArray value="RapidFiring4"/>
+        <CombineArray value="Marksmanship2"/>
+        <Type value="And"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="RapidCriticals43">
+        <CombineArray value="RapidFiring4"/>
+        <CombineArray value="Marksmanship3"/>
+        <Type value="And"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="RapidCriticals44">
+        <CombineArray value="RapidFiring4"/>
+        <CombineArray value="Marksmanship4"/>
+        <Type value="And"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="RapidFiring5">
+        <Value value="1"/>
+        <Behavior value="RapidFire"/>
+        <WhichUnit Value="Caster"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="SatchelChargeReady">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="SatchelChargeReady"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="NoSatchelCharge">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="SatchelChargeReady"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="ScorpioVenom">
+        <Value value="1"/>
+        <Behavior value="ScorpioVenom"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="SevereInjury">
+        <CombineArray value="ClassIVHemorage"/>
+        <CombineArray value="DebilitatingInfection"/>
+        <CombineArray value="InfectedBite"/>
+        <CombineArray value="ParasiticInfection"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="SoldierSkills1Check">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="SoldierSkills1"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="SoldierSkills2Check">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="SoldierSkills2"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="SoldierSkills3Check">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="SoldierSkills3"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="M41SAWBurstCheck">
+        <CombineArray value="SoldierSkills1Check"/>
+        <CombineArray value="SoldierSkills2Check"/>
+        <CombineArray value="SoldierSkills3Check"/>
+        <CombineArray value="IsInfantry"/>
+        <CombineArray value="IsLocalNational"/>
+        <CombineArray value="IsPMC"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="SoldierSkills4Check">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="SoldierSkills4"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="BR2BurstFire">
+        <Type value="And"/>
+        <CombineArray value="SoldierSkills1Check"/>
+        <CombineArray value="SoldierSkills2Check"/>
+    </CValidatorCombine>
+    <CValidatorPlayerRequirement id="RainofFireValidator">
+        <Find value="1"/>
+        <Value value="RainofFireReq"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorUnitCompareBehaviorCount id="Marksmanship1">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="Marksmanship1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="CriticalSuppress112">
+        <Type value="And"/>
+        <CombineArray value="CriticalStealthOrAgility"/>
+        <CombineArray value="SuppressiveFiring1"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="HorrorAcid">
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="HorrorAcid"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="SwampSlow1">
+        <Behavior value="SwampSlowI"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="SwampSlow2">
+        <Behavior value="SwampSlowII"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="SwampSlowed">
+        <CombineArray value="SwampSlow1"/>
+        <CombineArray value="SwampSlow2"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareVital id="SystemRestoreTest">
+        <WhichUnit Value="Source"/>
+        <Compare value="GT"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitFilters id="TargetIsAllyorPlayer2">
+        <Filters value="-;Neutral,Enemy"/>
+    </CValidatorUnitFilters>
+    <CValidatorUnitCompareBehaviorCount id="UnidentifiedInfection">
+        <Value value="1"/>
+        <Behavior value="UnidentifiedInfection"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="SpitterAcid">
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="SpitterAcid"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="UnknownValidator">
+        <Type value="And"/>
+        <CombineArray value="NoFuelBomb"/>
+        <CombineArray value="NoSatchelCharge"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="XR900">
+        <WhichUnit Value="Source"/>
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="XR900"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="XM88b">
+        <WhichUnit Value="Source"/>
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="XM88b"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareVital id="CasterHas8Energy">
+        <WhichUnit Value="Caster"/>
+        <Compare value="GE"/>
+        <Value value="8"/>
+        <Vital value="Energy"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitCompareVital id="CasterMaxShieldEQ0">
+        <WhichUnit Value="Caster"/>
+        <Type value="Maximum"/>
+        <Vital value="Shields"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorCombine id="Casterhas8energyandNotDead">
+        <Type value="And"/>
+        <CombineArray value="CasterHas8Energy"/>
+        <CombineArray value="NotDead"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareVital id="Energy12">
+        <WhichUnit Value="Caster"/>
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Vital value="Energy"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitCompareBehaviorCount id="HK42">
+        <WhichUnit Value="Source"/>
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="HK42"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareVital id="Life5000">
+        <ResultFailed value="NotEnoughLife"/>
+        <WhichUnit Effect="BioStasisSlow"/>
+        <Compare value="GT"/>
+        <Value value="5000"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitCompareVital id="Life50003">
+        <ResultFailed value="NotEnoughLife"/>
+        <Compare value="LT"/>
+        <Value value="5000"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitCompareVital id="Life50002">
+        <ResultFailed value="NotEnoughLife"/>
+        <Compare value="GE"/>
+        <Value value="5000"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitCompareVital id="Life15000">
+        <ResultFailed value="NotEnoughLife"/>
+        <Compare value="LT"/>
+        <Value value="15000"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitCompareVital id="Life150002">
+        <ResultFailed value="NotEnoughLife"/>
+        <Compare value="GE"/>
+        <Value value="15000"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitCompareBehaviorCount id="NoNovaStoneDefensiveMatrix">
+        <ResultFailed value="CantTargetShieldCapableUnits,Error/CantTargetShieldedStone"/>
+        <Behavior value="NovaStoneDefensiveMatrix"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="NoNovaStoneDefensiveMatrix2">
+        <WhichUnit Value="Caster"/>
+        <Compare value="NE"/>
+        <Value value="1"/>
+        <Behavior value="NovaStoneDefensiveMatrix"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareSpeed id="Moving">
+        <Compare value="GT"/>
+    </CValidatorUnitCompareSpeed>
+    <CValidatorUnitFilters id="TargetisLight">
+        <Filters value="Light;Self,Player,Ally,Air,Massive,Invulnerable"/>
+    </CValidatorUnitFilters>
+    <CValidatorCombine id="TempShieldsNotEmptyOrNoTempShields">
+        <CombineArray value="hasShields"/>
+        <CombineArray value="CasterMaxShieldEQ0"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="CasterHasWhizKid">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="WhizKid"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorLocationEnumArea id="EnemiesNearby">
+        <AreaArray index="0" Compare="GE" Count="1" Radius="6"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorUnitCompareVital id="Energy0">
+        <WhichUnit Value="Caster"/>
+        <Compare value="LT"/>
+        <Vital value="Energy"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitCompareBehaviorCount id="HasMount50CalTurret">
+        <Value value="1"/>
+        <Behavior value="MountedAATurret"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="IssueNPCReload">
+        <CombineArray value="Energy1"/>
+        <CombineArray value="Energy0"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareVital id="NPCReloadAILowEnergy">
+        <WhichUnit Value="Source"/>
+        <Compare value="LE"/>
+        <Value value="5"/>
+        <Vital value="Energy"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorPlayerRequirement id="CampaignMode">
+        <Find value="1"/>
+        <Value value="ModeIsCampaign"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorUnitOrderQueue id="SourceIsMoving">
+        <WhichUnit Value="Source"/>
+        <AbilLink value="move"/>
+    </CValidatorUnitOrderQueue>
+    <CValidatorUnitCompareAbilLevel id="GhostSkills1">
+        <WhichUnit Value="Caster"/>
+        <AbilLink value="GhostSkills"/>
+    </CValidatorUnitCompareAbilLevel>
+    <CValidatorUnitCompareAbilLevel id="GhostSkills2">
+        <WhichUnit Value="Caster"/>
+        <AbilLink value="GhostSkills"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareAbilLevel>
+    <CValidatorUnitCompareAbilLevel id="GhostSkills3">
+        <WhichUnit Value="Caster"/>
+        <AbilLink value="GhostSkills"/>
+        <Value value="2"/>
+    </CValidatorUnitCompareAbilLevel>
+    <CValidatorUnitCompareAbilLevel id="GhostSkills4">
+        <WhichUnit Value="Caster"/>
+        <AbilLink value="GhostSkills"/>
+        <Value value="3"/>
+    </CValidatorUnitCompareAbilLevel>
+    <CValidatorUnitCompareAbilLevel id="GhostSkills5">
+        <WhichUnit Value="Caster"/>
+        <AbilLink value="GhostSkills"/>
+        <Value value="4"/>
+    </CValidatorUnitCompareAbilLevel>
+    <CValidatorCombine id="IsCommando">
+        <CombineArray value="Commando"/>
+        <CombineArray value="CommandoCC"/>
+    </CValidatorCombine>
+    <CValidatorUnitType id="Commando">
+        <WhichUnit Value="Source"/>
+        <Value value="CommandoHero"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="CommandoCC">
+        <WhichUnit Value="Source"/>
+        <Value value="CommandoHero2"/>
+    </CValidatorUnitType>
+    <CValidatorUnitCompareBehaviorCount id="HasSteelSaber">
+        <WhichUnit Value="Source"/>
+        <Value value="1"/>
+        <Behavior value="SteelSaber"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="DoesntHaveSteelSaber">
+        <WhichUnit Value="Source"/>
+        <Behavior value="SteelSaber"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="AdrenalineRushCooldown">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="AdrenalineRushCooldown"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="AntiGravity">
+        <Compare value="NE"/>
+        <Value value="1"/>
+        <Behavior value="AntiGravity"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="DoesNotHaveCSSI">
+        <Compare value="NE"/>
+        <Value value="1"/>
+        <Behavior value="SteelSaber"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareVital id="Energy1">
+        <WhichUnit Value="Caster"/>
+        <Compare value="LE"/>
+        <Value value="1"/>
+        <Vital value="Energy"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitCompareVital id="Energy40">
+        <WhichUnit Value="Source"/>
+        <Compare value="LT"/>
+        <Type value="Fraction"/>
+        <Value value="0.4"/>
+        <Vital value="Energy"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitCompareBehaviorCount id="HasBurstUpgrade">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="MGBurstUpgrade"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="HasBurstUpgradeAndM135Minigun">
+        <Type value="And"/>
+        <CombineArray value="HasBurstUpgrade"/>
+        <CombineArray value="HasM135MinigunBurstUpgrade"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="HasBurstUpgradeAndM41SAW">
+        <Type value="And"/>
+        <CombineArray value="HasBurstUpgrade"/>
+        <CombineArray value="HasM41SAWBurstUpgrade"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="HasM135MinigunBurstUpgrade">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="M135Minigun"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="HasM41SAWBurstUpgrade">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="M41SAW"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="HasReducedFlareGun">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="ReduceFlareGuns"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="IsNotProne">
+        <CombineArray value="Proned"/>
+        <CombineArray value="ImprovedProned"/>
+        <Negate value="1"/>
+    </CValidatorCombine>
+    <CValidatorUnitType id="Medic">
+        <Value value="CombatMedic"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="Medic2">
+        <Value value="CombatMedic2"/>
+    </CValidatorUnitType>
+    <CValidatorUnitCompareBehaviorCount id="MidAir">
+        <Compare value="NE"/>
+        <Value value="1"/>
+        <Behavior value="Jumped"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorPlayerCompareResource id="MineralsGE1">
+        <ResultFailed value="Error,Partial Burst"/>
+        <WhichPlayer Value="Caster"/>
+        <Compare value="GE"/>
+        <Value value="1"/>
+    </CValidatorPlayerCompareResource>
+    <CValidatorUnitCompareBehaviorCount id="NotSlowed">
+        <Behavior value="CannotBeSlowed"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="RapidFiring">
+        <CombineArray value="RapidFiring1"/>
+        <CombineArray value="RapidFiring2"/>
+        <CombineArray value="RapidFiring3"/>
+        <CombineArray value="RapidFiring4"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="RapidFiring1">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="RapidFire1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="RapidFiring2">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="RapidFire2"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="RapidFiring3">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="RapidFire3"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="RapidFiring4">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="RapidFire4"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="SOFAR">
+        <WhichUnit Value="Source"/>
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="SOFAR"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="SuitIsNotMalfunctioned">
+        <Compare value="NE"/>
+        <Value value="1"/>
+        <Behavior value="SuitMalfunction"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitType id="Flamethrower2">
+        <Value value="Flamethrower2"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="FlamethrowerLN2">
+        <Value value="LN74DFlamethrower2"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="FlamethrowerMini2">
+        <Value value="Infantry74DFlamethrower2"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="Ghost2">
+        <Value value="GhostHero2"/>
+    </CValidatorUnitType>
+    <CValidatorUnitCompareBehaviorCount id="IsNotJammed">
+        <ResultFailed value="Error,Error/WeaponJammed"/>
+        <Compare value="NE"/>
+        <Value value="1"/>
+        <Behavior value="Jammed"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitType id="LaserEnforcer2">
+        <Value value="LaserEnforcer2"/>
+    </CValidatorUnitType>
+    <CValidatorCombine id="MagsFilter">
+        <CombineArray value="IsHero"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="DebilitatingInfection">
+        <Value value="1"/>
+        <Behavior value="DebilitatingInfection"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="MalignantInfection">
+        <Value value="1"/>
+        <Behavior value="MalignantInfection"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="ArchVile">
+        <Behavior value="ArchVileRegeneration"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="AssassinSkills1">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="AssassinSkills1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="AssassinSkills2">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="AssassinSkills2"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="AssassinSkills3">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="AssassinSkills3"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="AssassinSkills4">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="AssassinSkills4"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="AutoShotgun">
+        <CombineArray value="ISS7"/>
+        <CombineArray value="M1014"/>
+        <CombineArray value="AA12"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="BlueCrystal">
+        <WhichUnit Value="Source"/>
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="BlueCrystal"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="DisarmAble">
+        <Value value="1"/>
+        <Behavior value="Disarmable"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="DisarmHandleSentries">
+        <CombineArray value="DisarmPackSentries"/>
+        <CombineArray value="DisarmSentriesNot"/>
+    </CValidatorCombine>
+    <CValidatorUnitType id="DisarmMK44SentryGun">
+        <Value value="MK44SentryGun"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="DisarmMK79SentryGun">
+        <Value value="MK79SentryGun"/>
+    </CValidatorUnitType>
+    <CValidatorCombine id="DisarmPackSentries">
+        <Type value="And"/>
+        <CombineArray value="DisarmSentries"/>
+        <CombineArray value="DisarmSentryEnergy"/>
+        <CombineArray value="TargetLifeFull"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="DisarmSentries">
+        <CombineArray value="DisarmMK44SentryGun"/>
+        <CombineArray value="DisarmMK79SentryGun"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="DisarmSentriesNot">
+        <Type value="And"/>
+        <CombineArray value="DisarmMK44SentryGun"/>
+        <CombineArray value="DisarmMK79SentryGun"/>
+        <Negate value="1"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareVital id="DisarmSentryEnergy">
+        <Compare value="GE"/>
+        <Type value="Fraction"/>
+        <Value value="0.4"/>
+        <Vital value="Energy"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorCombine id="FilterMechArmorMassive">
+        <CombineArray value="IsArmored"/>
+        <CombineArray value="IsMassive"/>
+        <CombineArray value="IsMechanical"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="FlameorTurretOnly">
+        <CombineArray value="Flamethrower"/>
+        <CombineArray value="FlamethrowerMini"/>
+        <CombineArray value="M1SentryGun"/>
+        <CombineArray value="M2SentryGun"/>
+        <CombineArray value="MK44SentryGun"/>
+        <CombineArray value="MK79SentryGun"/>
+        <CombineArray value="MiniM1SentryGun"/>
+        <CombineArray value="LNM1SentryGun"/>
+        <CombineArray value="LNM2SentryGun"/>
+        <CombineArray value="FlamethrowerLN"/>
+        <CombineArray value="Flamethrower2"/>
+        <CombineArray value="FlamethrowerLN2"/>
+        <CombineArray value="FlamethrowerMini2"/>
+    </CValidatorCombine>
+    <CValidatorUnitType id="FlamethrowerLN">
+        <Value value="LN74DFlamethrower"/>
+    </CValidatorUnitType>
+    <CValidatorUnitCompareVitality id="GasGrenadeHP20">
+        <Compare value="GT"/>
+        <Value value="20"/>
+    </CValidatorUnitCompareVitality>
+    <CValidatorUnitType id="GhostMini">
+        <Value value="GhostMini"/>
+    </CValidatorUnitType>
+    <CValidatorCombine id="HasAGasMask">
+        <Type value="And"/>
+        <CombineArray value="HasGasMask"/>
+        <CombineArray value="HasGasMaskNoReq"/>
+        <CombineArray value="HasGasMaskRifleman"/>
+        <CombineArray value="HasRebreatherBorg"/>
+        <CombineArray value="HasGasMaskMercenary"/>
+        <CombineArray value="HasGasMaskBetaRifle"/>
+        <Negate value="1"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="HasGasMask">
+        <Value value="1"/>
+        <Behavior value="GasMask"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="HasGasMaskNoReq">
+        <Value value="1"/>
+        <Behavior value="GasMaskNoReq"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="ClassIVHemorage">
+        <Value value="1"/>
+        <Behavior value="ClassIVHemmorrhaging"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="HasStage2or3Infection">
+        <CombineArray value="DebilitatingInfection"/>
+        <CombineArray value="MalignantInfection"/>
+        <Negate value="1"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="ImprovedProned">
+        <WhichUnit Value="Source"/>
+        <Value value="1"/>
+        <Behavior value="Prone2"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitFilters id="IsNotRobotic">
+        <Filters value="Robotic;-"/>
+    </CValidatorUnitFilters>
+    <CValidatorCombine id="IsProned">
+        <CombineArray value="Proned"/>
+        <CombineArray value="ImprovedProned"/>
+    </CValidatorCombine>
+    <CValidatorUnitType id="LNM1SentryGun">
+        <Value value="LNM1SentryGun"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="LNM2SentryGun">
+        <Value value="LNM2SentryGun"/>
+    </CValidatorUnitType>
+    <CValidatorUnitCompareBehaviorCount id="LNNapalm1">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="Training1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="LNNapalm2">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="Training3"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="LaserBurn1">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="LaserBurnDummy1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="LaserBurn2">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="LaserBurnDummy2"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="LaserBurn3">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="LaserBurnDummy3"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="LaserBurn4">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="LaserBurnDummy4"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="LaserBurn5">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="LaserBurnDummy5"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitType id="LaserEnforcer">
+        <Value value="LaserEnforcer"/>
+    </CValidatorUnitType>
+    <CValidatorUnitCompareBehaviorCount id="M1014">
+        <WhichUnit Value="Source"/>
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="M1014"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitType id="M2SentryGun">
+        <Value value="M2SentryGun"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="MK44SentryGun">
+        <Value value="MK44SentryGun"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="M1SentryGun">
+        <Value value="M1SentryGun"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="MK79SentryGun">
+        <Value value="MK79SentryGun"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="MiniM1SentryGun">
+        <Value value="MiniM1SentryGun"/>
+    </CValidatorUnitType>
+    <CValidatorUnitCompareAbilLevel id="MonoWire1">
+        <WhichUnit Value="Caster"/>
+        <AbilLink value="MonomolecularWire"/>
+    </CValidatorUnitCompareAbilLevel>
+    <CValidatorUnitCompareAbilLevel id="MonoWire2">
+        <WhichUnit Value="Caster"/>
+        <AbilLink value="MonomolecularWire"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareAbilLevel>
+    <CValidatorUnitCompareAbilLevel id="MonoWire3">
+        <WhichUnit Value="Caster"/>
+        <AbilLink value="MonomolecularWire"/>
+        <Value value="2"/>
+    </CValidatorUnitCompareAbilLevel>
+    <CValidatorUnitCompareAbilLevel id="MonoWire32">
+        <WhichUnit Value="Caster"/>
+        <Compare value="LT"/>
+        <AbilLink value="MonomolecularWire"/>
+        <Value value="2"/>
+    </CValidatorUnitCompareAbilLevel>
+    <CValidatorUnitCompareAbilLevel id="MonoWire33">
+        <WhichUnit Value="Caster"/>
+        <Compare value="GE"/>
+        <AbilLink value="MonomolecularWire"/>
+        <Value value="2"/>
+    </CValidatorUnitCompareAbilLevel>
+    <CValidatorUnitCompareAbilLevel id="MonoWire4">
+        <WhichUnit Value="Caster"/>
+        <AbilLink value="MonomolecularWire"/>
+        <Value value="3"/>
+    </CValidatorUnitCompareAbilLevel>
+    <CValidatorLocationEnumArea id="NoNearbyAllies4">
+        <WhichLocation Value="TargetUnitOrPoint"/>
+        <AreaArray Radius="4" Validator="Isnotastructure"/>
+        <AreaArray/>
+        <Compare value="Eq"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+        <SearchFilters value="Ground,Visible;Neutral,Enemy,Missile,Stasis,Dead,Hidden,Hallucination,Invulnerable"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorLocationEnumArea id="NoNearbyAllies8">
+        <WhichLocation Value="TargetUnitOrPoint"/>
+        <AreaArray Radius="8"/>
+        <Compare value="Eq"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+        <SearchFilters value="Ground,Visible;Neutral,Enemy,Missile,Stasis,Dead,Hidden,Hallucination,Invulnerable"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorUnitCompareBehaviorCount id="NoPenetratorDummy">
+        <Behavior value="PenetratorRoundDummy"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="NotCleansing">
+        <Behavior value="Cleansing"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitType id="OSS">
+        <Value value="OrbitalSupportSpecialist"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="OSS2">
+        <Value value="OrbitalSupportSpecialist2"/>
+    </CValidatorUnitType>
+    <CValidatorCombine id="PlasmaOnly">
+        <CombineArray value="Ghost"/>
+        <CombineArray value="GhostMini"/>
+        <CombineArray value="RiflemanPlasma"/>
+        <CombineArray value="ShockTrooper"/>
+        <CombineArray value="Ghost2"/>
+        <CombineArray value="MechOperator"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="Proned">
+        <WhichUnit Value="Source"/>
+        <Value value="1"/>
+        <Behavior value="Prone"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="SuppressiveFiring5">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="SuppressiveFireMini"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="RifleButtDoesNotHaveBehavior2">
+        <Behavior value="RifleButtBehaviorController2"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitOrderQueue id="AutomaticMode">
+        <OtherUnit Value="Target"/>
+        <AbilLink value="attack"/>
+        <Find value="0"/>
+        <Target Value="TargetUnit"/>
+    </CValidatorUnitOrderQueue>
+    <CValidatorUnitCompareBehaviorCount id="EnergyLeak">
+        <Value value="1"/>
+        <Behavior value="EnergyLeak"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="FracturedArm">
+        <Value value="1"/>
+        <Behavior value="FracturedArm"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="FracturedLeg">
+        <Value value="1"/>
+        <Behavior value="FracturedLeg"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="MinorLacerations">
+        <Value value="1"/>
+        <Behavior value="MinorLacerations"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="TraumaticBrainInjury">
+        <Value value="1"/>
+        <Behavior value="TraumaticBrainInjury"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="ISS7">
+        <WhichUnit Value="Source"/>
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="ISS7"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="BulletsOnly">
+        <Type value="And"/>
+        <CombineArray value="Ghost"/>
+        <CombineArray value="Flamethrower"/>
+        <CombineArray value="FlamethrowerMini"/>
+        <CombineArray value="GhostMini"/>
+        <CombineArray value="LaserEnforcer"/>
+        <CombineArray value="FlamethrowerLN"/>
+        <CombineArray value="RiflemanPlasma"/>
+        <CombineArray value="ShockTrooper"/>
+        <CombineArray value="Flamethrower2"/>
+        <CombineArray value="FlamethrowerLN2"/>
+        <CombineArray value="FlamethrowerMini2"/>
+        <CombineArray value="Ghost2"/>
+        <CombineArray value="LaserEnforcer2"/>
+        <CombineArray value="Cyborg"/>
+        <CombineArray value="Cyborg2"/>
+        <Negate value="1"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="Strength3">
+        <WhichUnit Value="Source"/>
+        <Value value="1"/>
+        <Behavior value="Strength3"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="Strength2">
+        <WhichUnit Value="Source"/>
+        <Value value="1"/>
+        <Behavior value="Strength2"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitType id="CombatWalker">
+        <WhichUnit Value="Source"/>
+        <Value value="CombatWalker"/>
+    </CValidatorUnitType>
+    <CValidatorCombine id="CyborgSuperJump">
+        <CombineArray value="Strength3"/>
+        <CombineArray value="Strength2"/>
+        <CombineArray value="ProsthesisAugmentLoadout2"/>
+        <CombineArray value="ProsthesisAugmentLoadout3"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="Disarm">
+        <ResultFailed value="Error,Error/Disarm"/>
+        <CombineArray value="DisarmAble"/>
+        <CombineArray value="DisarmHandleSentries"/>
+        <Type value="And"/>
+    </CValidatorCombine>
+    <CValidatorLocationCompareRange id="DistanceLessThan4">
+        <WhichLocation Value="TargetUnit"/>
+        <Compare value="LT"/>
+        <Range value="4"/>
+    </CValidatorLocationCompareRange>
+    <CValidatorCombine id="FilterHeroMechArmorMassive">
+        <CombineArray value="IsMechanical"/>
+        <CombineArray value="IsHero"/>
+        <CombineArray value="IsArmored"/>
+        <CombineArray value="IsMassive"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="FilterHeroMechMassive">
+        <CombineArray value="IsMechanical"/>
+        <CombineArray value="IsHero"/>
+        <CombineArray value="IsMassive"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="ClassIIIIVHemorage">
+        <CombineArray value="ClassIIIHemorage"/>
+        <CombineArray value="ClassIVHemorage"/>
+    </CValidatorCombine>
+    <CValidatorUnitFilters id="IsMechanical"/>
+    <CValidatorUnitFilters id="IsMassive">
+        <Filters value="Massive;-"/>
+    </CValidatorUnitFilters>
+    <CValidatorUnitFilters id="IsArmored">
+        <Filters value="Armored;-"/>
+    </CValidatorUnitFilters>
+    <CValidatorCombine id="JumpCastValidators">
+        <ResultFailed value="Error,JumpUp"/>
+        <Type value="And"/>
+        <CombineArray value="JumpCrossCliff"/>
+        <CombineArray value="JumpOnlyDown"/>
+        <CombineArray value="SwampSlowed"/>
+    </CValidatorCombine>
+    <CValidatorLocationCrossCliff id="JumpCrossCliff">
+        <ResultFailed value="Error,JumpUp"/>
+        <WhichLocation Value="TargetPoint"/>
+        <OtherLocation Value="SourceUnitOrPoint"/>
+    </CValidatorLocationCrossCliff>
+    <CValidatorLocationCompareCliffLevel id="JumpInjury">
+        <OtherLocation Value="SourceUnitOrPoint"/>
+        <Compare value="LT"/>
+        <Value value="1"/>
+    </CValidatorLocationCompareCliffLevel>
+    <CValidatorUnitCompareVital id="LifeMaxGE400">
+        <Compare value="GE"/>
+        <Type value="Maximum"/>
+        <Value value="400"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitCompareBehaviorCount id="MWBuff1">
+        <Behavior value="MonomolecularWire1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="MWBuff2">
+        <Behavior value="MonomolecularWire2"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="Minigun">
+        <WhichUnit Value="Source"/>
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="M135Minigun"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="M92TorrentItem">
+        <WhichUnit Value="Source"/>
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="M92Torrent"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitType id="Flamethrower">
+        <Value value="Flamethrower"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="Ghost">
+        <Value value="GhostHero"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="FlamethrowerMini">
+        <Value value="Infantry74DFlamethrower"/>
+    </CValidatorUnitType>
+    <CValidatorUnitCompareBehaviorCount id="ClassIIIHemorage">
+        <Value value="1"/>
+        <Behavior value="ClassIIIHemmorrhaging"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="NanoMiniLifeAil">
+        <CombineArray value="ClassIIIIVHemorage"/>
+        <CombineArray value="LifeLTHalf"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="NoMWBuff">
+        <Type value="And"/>
+        <CombineArray value="MWBuff1"/>
+        <CombineArray value="MWBuff2"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="NotSprinting">
+        <WhichUnit Value="Source"/>
+        <Behavior value="Sprint"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorPlayerCompareRace id="RaceZerg">
+        <WhichPlayer Value="Target"/>
+        <Value value="Zerg"/>
+    </CValidatorPlayerCompareRace>
+    <CValidatorCombine id="NoShotgun">
+        <CombineArray value="ISS7"/>
+        <CombineArray value="M1014"/>
+        <CombineArray value="AA12"/>
+        <Negate value="1"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="RegularAutoRifle">
+        <WhichUnit Value="Source"/>
+        <Behavior value="M135Minigun"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="RegularSDMRifle">
+        <WhichUnit Value="Source"/>
+        <Behavior value="M92Torrent"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="BeltLinking1">
+        <Type value="And"/>
+        <CombineArray value="BeltLinkingMags"/>
+        <CombineArray value="BeltLinkingRnds1"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="BeltLinking2">
+        <Type value="And"/>
+        <CombineArray value="BeltLinkingMags"/>
+        <CombineArray value="BeltLinkingRnds2"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="BeltLinking3">
+        <Type value="And"/>
+        <CombineArray value="BeltLinkingMags"/>
+        <CombineArray value="BeltLinkingRnds3"/>
+    </CValidatorCombine>
+    <CValidatorPlayerCompareResource id="BeltLinkingMags">
+        <ResultFailed value="Error,Belt Linking Mags"/>
+        <WhichPlayer Value="Caster"/>
+        <Compare value="GE"/>
+        <Resource value="Vespene"/>
+        <Value value="1"/>
+    </CValidatorPlayerCompareResource>
+    <CValidatorPlayerCompareResource id="BeltLinkingRnds1">
+        <ResultFailed value="Error,Belt Linking Rnds"/>
+        <WhichPlayer Value="Caster"/>
+        <Compare value="LE"/>
+        <Value value="100"/>
+    </CValidatorPlayerCompareResource>
+    <CValidatorPlayerCompareResource id="BeltLinkingRnds2">
+        <ResultFailed value="Error,Belt Linking Rnds"/>
+        <WhichPlayer Value="Caster"/>
+        <Compare value="LE"/>
+        <Value value="200"/>
+    </CValidatorPlayerCompareResource>
+    <CValidatorPlayerCompareResource id="BeltLinkingRnds3">
+        <ResultFailed value="Error,Belt Linking Rnds"/>
+        <WhichPlayer Value="Caster"/>
+        <Compare value="LE"/>
+        <Value value="300"/>
+    </CValidatorPlayerCompareResource>
+    <CValidatorUnitCompareBehaviorCount id="HeroIncapacitated">
+        <ResultNoUnit value="NoCalldownAvailable,Revive"/>
+        <Value value="1"/>
+        <Behavior value="HeroIncapacitated"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="IncendiaryRound1">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="IncendiaryRounds1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="IncendiaryRound2">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="IncendiaryRounds2"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="IncendiaryRound3">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="IncendiaryRounds3"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="IncendiaryRound4">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="IncendiaryRounds4"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitFilters id="IsHero">
+        <Filters value="Heroic;-"/>
+    </CValidatorUnitFilters>
+    <CValidatorUnitFilters id="IsNotHeroBiological">
+        <Filters value="Biological;Heroic"/>
+    </CValidatorUnitFilters>
+    <CValidatorLocationCompareCliffLevel id="JumpOnlyDown">
+        <OtherLocation Value="SourceUnitOrPoint"/>
+        <Compare value="LE"/>
+        <ResultFailed value="Error,JumpUp"/>
+    </CValidatorLocationCompareCliffLevel>
+    <CValidatorCombine id="LNReloadAICombined">
+        <Type value="And"/>
+        <CombineArray value="LNReloadAIEnum"/>
+        <CombineArray value="LNReloadAILowEnergy"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareVital id="LNReloadAILowEnergy">
+        <WhichUnit Value="Source"/>
+        <Compare value="LE"/>
+        <Value value="10"/>
+        <Vital value="Energy"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitCompareBehaviorCount id="Napalm1">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="Napalm1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="Napalm2">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="Napalm2"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="Napalm3">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="Napalm3"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="Napalm4">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="Napalm4"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorLocationEnumArea id="NoNearbyAllies6" parent="HostileSearchEmpty">
+        <WhichLocation Value="TargetUnitOrPoint"/>
+        <AreaArray Radius="6"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+        <SearchFilters value="Ground,Visible;Neutral,Enemy,Missile,Stasis,Dead,Hidden,Hallucination,Invulnerable"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorUnitFilters id="NonMechanicalValidators">
+        <Filters value="-;Robotic,Mechanical,Psionic,Structure,Invulnerable"/>
+    </CValidatorUnitFilters>
+    <CValidatorCombine id="SuppressiveFiring">
+        <Type value="And"/>
+        <CombineArray value="SuppressiveFiring1"/>
+        <CombineArray value="SuppressiveFiring2"/>
+        <CombineArray value="SuppressiveFiring3"/>
+        <CombineArray value="SuppressiveFiring4"/>
+        <CombineArray value="SuppressiveFiringLN"/>
+        <CombineArray value="SuppressiveFiring5"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="SuppressiveFiring1">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="SuppressiveFire1"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="SuppressiveFiring2">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="SuppressiveFire2"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="SuppressiveFiring3">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="SuppressiveFire3"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="SuppressiveFiring4">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="SuppressiveFire4"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="SuppressiveFiringLN">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="SuppressiveFireLN"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="RifleButtDoesNotHaveBehavior">
+        <Behavior value="RifleButtBehaviorController"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareVital id="IsHeroHurt">
+        <ResultNoUnit value="TooMuchLife"/>
+        <Compare value="LT"/>
+        <Type value="Fraction"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitCompareBehaviorCount id="ArachChargeNoBehavior">
+        <Behavior value="ArachChargeTarg"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareVital id="SelfAidAILife100">
+        <ResultFailed value="TooMuchLife"/>
+        <WhichUnit Value="Caster"/>
+        <Compare value="LT"/>
+        <Type value="Fraction"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitType id="ShockTrooper">
+        <Value value="ShockTrooper"/>
+    </CValidatorUnitType>
+    <CValidatorUnitCompareBehaviorCount id="SpecterCloakisActive">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="SpecterCloak"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitOrderQueue id="SuppressiveFire">
+        <OtherUnit Value="Target"/>
+        <AbilLink value="attack"/>
+        <Find value="0"/>
+        <Target Value="TargetUnit"/>
+    </CValidatorUnitOrderQueue>
+    <CValidatorLocationEnumArea id="LNReloadAIEnum">
+        <WhichLocation Value="SourceUnitOrPoint"/>
+        <AreaArray Radius="20"/>
+        <Compare value="Eq"/>
+        <LaunchLocation Value="SourceUnitOrPoint"/>
+        <SearchFilters value="-;Player,Ally,Neutral,Dead,Hidden,Invulnerable"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorUnitFilters id="NotEnemy">
+        <Filters value="-;Enemy"/>
+    </CValidatorUnitFilters>
+    <CValidatorUnitCompareVital id="TargetEnergyGE25" parent="TargetShieldsGE70">
+        <Value value="25"/>
+        <Vital value="Energy"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitCompareVital id="TargetEnergyGE1" parent="TargetShieldsGE70">
+        <Value value="1"/>
+        <Vital value="Energy"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorCombine id="TargetIsMedic">
+        <CombineArray value="Medic"/>
+        <CombineArray value="Medic2"/>
+        <Negate value="1"/>
+    </CValidatorCombine>
+    <CValidatorPlayerCompareRace id="TargetisTerran">
+        <WhichPlayer Value="Target"/>
+        <Value value="Terr"/>
+    </CValidatorPlayerCompareRace>
+    <CValidatorUnitCompareBehaviorCount id="USMCR">
+        <WhichUnit Value="Source"/>
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="USMCR"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="BR2">
+        <WhichUnit Value="Source"/>
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="StynerSPR"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="MMG">
+        <WhichUnit Value="Source"/>
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="M241MMG"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="USMCRorSOFAR">
+        <CombineArray value="USMCR"/>
+        <CombineArray value="SOFAR"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="UnitDoesntHaveFirestormBurns">
+        <Behavior value="FirestormBurns"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="UnitHasLaserDesignator">
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="LaserDesignator"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="UnitSprinting">
+        <WhichUnit Value="Source"/>
+        <Compare value="GT"/>
+        <Behavior value="Sprint"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="UnithasEM25R">
+        <Behavior value="EM25R"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="UnithasSMG">
+        <Compare value="NE"/>
+        <Behavior value="GAM30PDW"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="UnithasStynerBR3">
+        <Behavior value="StynerBR3"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorPlayerRequirement id="PMCMode">
+        <Find value="1"/>
+        <Value value="ModeIsPMC"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorLocationPathable id="Walkable">
+        <ResultFailed value="CantFindPlacementLocation"/>
+        <Find value="0"/>
+        <Types index="Ground" value="0"/>
+    </CValidatorLocationPathable>
+    <CValidatorUnitCompareBehaviorCount id="WaveAmplifier">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="WaveAmplifier"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="HasGasMaskRifleman">
+        <Value value="1"/>
+        <Behavior value="GasMaskRifleman"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="IDMR2">
+        <WhichUnit Value="Source"/>
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="IDMR2"/>
+    </CValidatorUnitCompareBehaviorCount>
+</Catalog>

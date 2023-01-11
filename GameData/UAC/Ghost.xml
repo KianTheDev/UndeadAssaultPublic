@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CEffectSet id="GPlasmaGrenadeDamageSet">
+        <EditorCategories value=""/>
+        <EffectArray value="GPlasmaGrenadeDamage"/>
+        <EffectArray value="GPlasmaGrenadeDamageBurnSearch"/>
+        <EffectArray value="GPlasmaGrenadeShockPersistent"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="GPlasmaGrenadeDamageBurnApply">
+        <ValidatorArray index="0" removed="1"/>
+        <EditorCategories value=""/>
+        <Behavior value="GPlasmaGrenadeBurn"/>
+    </CEffectApplyBehavior>
+    <CEffectDamage id="GPlasmaGrenadeDamage">
+        <EditorCategories value=""/>
+        <AINotifyFlags index="HurtFriend" value="1"/>
+        <AINotifyFlags index="HurtEnemy" value="1"/>
+        <AINotifyFlags index="MinorDanger" value="1"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <AttributeFactor index="Armored" value="0.3"/>
+        <AttributeFactor index="Heroic" value="-0.25"/>
+        <AttributeFactor index="Summoned" value="-0.25"/>
+        <Amount value="500"/>
+        <Random value="25"/>
+        <Death value="Electrocute"/>
+        <AreaArray Radius="3" Fraction="0.5"/>
+        <SearchFilters value="Ground;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="CallForHelp" value="1"/>
+    </CEffectDamage>
+    <CEffectApplyBehavior id="GPlasmaGrenadeShockApply">
+        <EditorCategories value=""/>
+        <Behavior value="GPlasmaGrenadeShockControl"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyForce id="GPlasmaGrenadeShockApplyForce">
+        <EditorCategories value=""/>
+        <Amount value="1"/>
+    </CEffectApplyForce>
+    <CEffectApplyBehavior id="GPlasmaGrenadeShockApplyHeight">
+        <EditorCategories value=""/>
+        <Behavior value="GPlasmaGrenadeHeight"/>
+    </CEffectApplyBehavior>
+    <CEffectModifyUnit id="GPlasmaGrenadeShockLower">
+        <EditorCategories value=""/>
+        <Height value="-1.75"/>
+        <HeightTime value="0.05"/>
+    </CEffectModifyUnit>
+    <CEffectCreatePersistent id="GPlasmaGrenadeShockPersistent">
+        <EditorCategories value=""/>
+        <InitialEffect value="GPlasmaGrenadeShockSearch"/>
+        <PeriodCount value="14"/>
+        <PeriodicEffectArray value="GPlasmaGrenadeShockSearch"/>
+        <PeriodicPeriodArray value="0.0625"/>
+    </CEffectCreatePersistent>
+    <CEffectModifyUnit id="GPlasmaGrenadeShockRaise">
+        <EditorCategories value=""/>
+        <Height value="1.75"/>
+        <HeightTime value="0.1"/>
+    </CEffectModifyUnit>
+    <CEffectEnumArea id="GPlasmaGrenadeShockSearch">
+        <EditorCategories value=""/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <ExcludeArray/>
+        <SearchFilters value="-;Self,Player,Ally,Structure,Missile,Buried,Stasis,Hidden,Invulnerable,Unstoppable"/>
+        <AreaArray Radius="2.9" Effect="GPlasmaGrenadeShockSet"/>
+        <SearchFlags index="CallForHelp" value="1"/>
+        <SearchFlags index="OffsetAreaByAngle" value="0"/>
+        <SearchFlags index="SameCliff" value="1"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="GPlasmaGrenadeDamageBurnSearch">
+        <EditorCategories value=""/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <ExcludeArray/>
+        <SearchFilters value="-;Self,Air,Psionic,Dead,Hidden,Invulnerable"/>
+        <AreaArray Radius="3.1" RadiusBonus="0.3" Effect="GPlasmaGrenadeDamageBurnApply"/>
+        <SearchFlags index="CallForHelp" value="1"/>
+        <SearchFlags index="OffsetAreaByAngle" value="0"/>
+        <SearchFlags index="SameCliff" value="1"/>
+    </CEffectEnumArea>
+    <CEffectSet id="GPlasmaGrenadeShockSet">
+        <EditorCategories value=""/>
+        <EffectArray value="GPlasmaGrenadeShockApplyForce"/>
+        <EffectArray value="GPlasmaGrenadeShockApply"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="GPlasmaGrenadeLaunchImpactTargetBurnApply">
+        <ValidatorArray index="0" removed="1"/>
+        <EditorCategories value=""/>
+        <AINotifyFlags index="HurtFriend" value="1"/>
+        <AINotifyFlags index="HurtEnemy" value="1"/>
+        <AINotifyFlags index="MajorDanger" value="1"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <WhichUnit Effect="GPlasmaGrenadeLaunch1"/>
+        <Behavior value="GPlasmaGrenadeTargetBurn"/>
+    </CEffectApplyBehavior>
+    <CEffectModifyUnit id="GPlasmaGrenadeDoT">
+        <EditorCategories value=""/>
+        <VitalArray index="Life" Change="-1"/>
+    </CEffectModifyUnit>
+    <CEffectLaunchMissile id="GPlasmaGrenadeLaunch1">
+        <ValidatorArray index="0" removed="1"/>
+        <EditorCategories value=""/>
+        <AmmoUnit value="GPlasmaGrenade"/>
+        <DeathType value="Electrocute"/>
+        <FinishEffect value="GPlasmaGrenadeLaunchImpactTargetBurnApply"/>
+    </CEffectLaunchMissile>
+    <CAbilEffectTarget id="GPlasmaGrenade">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="GPlasmaGrenadeLaunch1"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Display index="Energy" value="1"/>
+            <Vital index="Energy" value="80"/>
+            <Cooldown TimeStart="0.5" TimeUse="35"/>
+        </Cost>
+        <Range value="15"/>
+        <PrepTime value="0.2"/>
+        <CursorEffect value="GPlasmaGrenadeDamage"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="GPlasmaGrenade"/>
+    </CAbilEffectTarget>
+    <CButton id="GPlasmaGrenade"/>
+    <CActorUnit id="GPlasmaGrenadeImpact" parent="GenericUnitBase" unitName="GPlasmaGrenadeTargetPoint">
+        <Model value="GPlasmaGrenadeBurnImpact"/>
+        <EditorModel value="GPlasmaGrenadeBurnImpact"/>
+        <HighlightTooltip value="Unit/Name/GPlasmaGrenadeImpact"/>
+        <StatusBarFlags index="Shields" value="0"/>
+        <StatusBarFlags index="Life" value="0"/>
+        <StatusBarFlags index="Energy" value="0"/>
+        <StatusBarFlags index="Cargo" value="0"/>
+        <StatusBarFlags index="Progress" value="0"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+    </CActorUnit>
+    <CActorRange id="GPlasmaGrenadeRange" parent="RangeAbil" abil="GPlasmaGrenade">
+        <Icon value="Assets\Custom Icons\UAC Ability Range Icon.dds"/>
+        <IconArcLength value="0.400000"/>
+    </CActorRange>
+    <CActorSplat id="GPlasmaGrenadeCursorSplat2" parent="TerranCursorSplat" abil="GPlasmaGrenade"/>
+    <CActorModel id="GPlasmaGrenadeExplosion" parent="ModelAnimationStyleOneShot">
+        <FogVisibility value="Visible"/>
+        <On Terms="Effect.GPlasmaGrenadeDamage.Start; At Source" Send="Create"/>
+        <Model value="GPlasmaGrenadeAttackImpact"/>
+    </CActorModel>
+    <CActorSound id="GPlasmaGrenadeExplosionSound" parent="SoundOneShot">
+        <On Terms="Effect.GPlasmaGrenadeDamage.Start" Send="Create"/>
+        <Sound value="PlasmaGrenadeImpact"/>
+    </CActorSound>
+    <CActorAction id="GPlasmaGrenadeAttack" parent="GenericAttack" effectImpact="GPlasmaGrenadeDamage" effectLaunch="GPlasmaGrenadeLaunch1">
+        <FogVisibility value="Visible"/>
+        <On index="1" Terms="Effect.SplashDamage.Start; FromEffectTreeDescendant" Send="ActionDamage"/>
+        <On index="2" Terms="Effect.SplashDamage.Stop; FromEffectTreeDescendant" Send="ActionDamagePhysics"/>
+        <On index="3" Terms="Effect.Bogus.Start; At Caster" Send="Create"/>
+        <On index="4" Terms="Effect.GPlasmaGrenadeLaunch1.Start" Send="Create"/>
+        <On index="5" removed="1"/>
+        <On index="6" removed="1"/>
+        <LaunchAttachQuery Methods="Weapon 2"/>
+        <LaunchAssets Sound="Raynor_TossGrenadeLaunch"/>
+        <ImpactMap index="None" Model="GPlasmaBlastImpact" Sound="GPlasmaGrenadeImpact"/>
+        <ImpactPhysics Name="Explosion" MatchKeys="Basic" Physics="GrenadeAttackForce"/>
+    </CActorAction>
+    <CActorMissile id="GPlasmaGrenadeAttackMissile" parent="GenericAttackMissile" unitName="GPlasmaGrenade">
+        <Model value="GPlasmaGrenadeWeapon"/>
+    </CActorMissile>
+    <CActorDoodad id="GPlasmaFireSmall">
+        <Aliases value="_EditorHelper"/>
+        <EditorCategories value="DoodadType:Environment"/>
+        <On Terms="ActorCreation" Send="Create Generic_ProtossFire_Large_ActorSound"/>
+        <On Terms="Behavior.GPlasmaSurgeBurn.On" Send="Create"/>
+        <On Terms="Behavior.GPlasmaSurgeBurn.Off" Target="Generic_ProtossFire_Large_ActorSound" Send="Destroy"/>
+        <On Terms="Behavior.GPlasmaSurgeBurn.Off" Send="Destroy"/>
+        <On Terms="Behavior.GPlasmaGrenadeTargetBurn.On" Send="Create"/>
+        <On Terms="Behavior.GPlasmaGrenadeTargetBurn.Off" Target="Generic_ProtossFire_Large_ActorSound" Send="Destroy"/>
+        <On Terms="Behavior.GPlasmaGrenadeTargetBurn.Off" Send="Destroy"/>
+        <On Terms="Behavior.GPlasmaGrenadeBurn.On" Send="Create"/>
+        <On Terms="Behavior.GPlasmaGrenadeBurn.Off" Target="Generic_ProtossFire_Large_ActorSound" Send="Destroy"/>
+        <On Terms="Behavior.GPlasmaGrenadeBurn.Off" Send="Destroy"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachRandomDamage"/>
+        <Model value="GPlasmaGrenadeBurnImpact"/>
+        <AutoScaleFromSelectionFactor value="1.000000"/>
+        <EditorFlags index="NoAutoRotate" value="1"/>
+    </CActorDoodad>
+    <CModel id="GPlasmaGrenadeWeapon" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\Nova_PulseGrenade_Missile\Nova_PulseGrenade_Missile.m3"/>
+        <ScaleMax value="0.300000,0.300000,0.300000"/>
+        <ScaleMin value="0.300000,0.300000,0.300000"/>
+        <SelectionRadius value="0.433200"/>
+        <ShadowRadius value="0.433200"/>
+    </CModel>
+    <CModel id="GPlasmaGrenadeBurnImpact" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Protoss\ProtossBuildingFireSmall\ProtossBuildingFireSmall.m3"/>
+    </CModel>
+    <CModel id="GPlasmaGrenadeAttackImpact" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Terran\VultureChase_Nova_PulseGrenade\VultureChase_Nova_PulseGrenade.m3"/>
+    </CModel>
+    <CSound id="GPlasmaGrenadeImpact" parent="Combat">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Sounds\Plasma Burst.ogg" Weight="51" FacialGroup=""/>
+        <DupeDestroyCount value="5"/>
+        <Pitch value="-3.000000,-2.000000"/>
+    </CSound>
+    <CUnit id="GPlasmaGrenade" parent="MISSILE">
+        <Race value="Terr"/>
+        <Mover value="TossGrenade"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Campaign"/>
+    </CUnit>
+    <CUpgrade id="CrysisSuit">
+        <EffectArray Operation="Set" Reference="Effect,PlasmaRifleMissileCryo,LaunchEffect" Value="CrysisSuitCloakDummy"/>
+        <EffectArray Operation="Set" Reference="Effect,PlasmaRifleMissileDis,LaunchEffect" Value="CrysisSuitCloakDummy"/>
+        <EffectArray Operation="Set" Reference="Effect,PlasmaRifleMissileHero,LaunchEffect" Value="CrysisSuitCloakDummy"/>
+        <EffectArray Operation="Set" Reference="Effect,PlasmaRifleMissileInc,LaunchEffect" Value="CrysisSuitCloakDummy"/>
+    </CUpgrade>
+    <CUpgrade id="CrysisSuitEnergy">
+        <EffectArray Reference="Behavior,CrysisSuit,Modification.VitalRegenMultiplier[Energy]" Value="0.05"/>
+        <MaxLevel value="4"/>
+    </CUpgrade>
+    <CUpgrade id="GPlasmaExpertiseLevel3">
+        <EffectArray Operation="Subtract" Reference="Abil,GPlasmaGrenade,Cost[0].Cooldown.TimeStart" Value="0.250000"/>
+        <EffectArray Reference="Abil,GPlasmaGrenade,Cost[0].Vital[Energy]" Value="10"/>
+        <EffectArray Operation="Subtract" Reference="Abil,GPlasmaGrenade,PrepTime[0]" Value="0.100000"/>
+        <EffectArray Reference="Abil,GPlasmaGrenade,Range[0]" Value="5"/>
+        <EffectArray Reference="Effect,GPlasmaGrenadeDamage,Amount" Value="500"/>
+        <EffectArray Operation="Subtract" Reference="Abil,GPlasmaGrenade,Cost[0].Cooldown.TimeUse" Value="15.000000"/>
+        <EffectArray Reference="Effect,GPlasmaGrenadeDamage,AreaArray[0].Radius" Value="1"/>
+        <EffectArray Reference="Effect,GPlasmaGrenadeShockSearch,AreaArray[0].Radius" Value="1"/>
+        <EffectArray Reference="Effect,GPlasmaGrenadeDamageBurnSearch,AreaArray[0].Radius" Value="1"/>
+        <EffectArray Operation="Subtract" Reference="Effect,GPlasmaGrenadeDoT,VitalArray[Life].Change" Value="1"/>
+        <EffectArray Reference="Behavior,GPlasmaGrenadeBurn,Duration" Value="1.000000"/>
+        <EffectArray Reference="Behavior,GPlasmaGrenadeTargetBurn,Duration" Value="1.000000"/>
+        <EditorCategories value="UpgradeType:SpellResearch"/>
+    </CUpgrade>
+    <CBehaviorBuff id="CrysisSuit">
+        <Alignment value="Positive"/>
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification MoveSpeedBonus="-0.0507">
+            <DamageDealtFraction index="Ranged" value="0.15"/>
+            <VitalRegenMultiplier index="Energy" value="-0.2"/>
+        </Modification>
+        <DamageResponse Chance="0.075" ModifyFraction="0"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="GPlasmaGrenadeTimedLife">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="2"/>
+        <ExpireEffect value="GPlasmaGrenadeUnitFate"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="GPlasmaGrenadeBurn">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\fireball_6_blue.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="NotCleansing"/>
+        <Duration value="2"/>
+        <Period value="0.1"/>
+        <PeriodicEffect value="GPlasmaGrenadeDoT"/>
+        <KillCredit Value="Target" History="Death"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="GPlasmaGrenadeHeight">
+        <Alignment value="Negative"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="0.21"/>
+        <Period value="0.2"/>
+        <PeriodCount value="1"/>
+        <InitialEffect value="GPlasmaGrenadeShockRaise"/>
+        <PeriodicEffect value="GPlasmaGrenadeShockLower"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="GPlasmaGrenadeShockControl">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="0.15"/>
+        <InitialEffect value="GPlasmaGrenadeShockApplyHeight"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="GPlasmaGrenadeTargetBurn">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\fireball_6_blue.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisplayDuration index="Self" value="1"/>
+        <DisplayDuration index="Ally" value="1"/>
+        <DisplayDuration index="Neutral" value="1"/>
+        <DisplayDuration index="Enemy" value="1"/>
+        <RemoveValidatorArray value="NotCleansing"/>
+        <Duration value="2"/>
+        <Period value="0.1"/>
+        <PeriodicEffect value="GPlasmaGrenadeDoT"/>
+        <PeriodicDisplayEffect value="GPlasmaGrenadeDoT"/>
+        <FinalEffect value="GPlasmaGrenadeDamageSet"/>
+        <DamageResponse Fatal="1" Handled="GPlasmaGrenadeSet2"/>
+        <KillCredit Value="Target" History="Death"/>
+    </CBehaviorBuff>
+</Catalog>

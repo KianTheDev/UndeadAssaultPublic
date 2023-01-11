@@ -1,0 +1,2188 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CUnit id="LN68WCombatMedic2">
+        <DeathRevealRadius value="3"/>
+        <Race value="Terr"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <Attributes index="Summoned" value="1"/>
+        <LifeStart value="390"/>
+        <LifeMax value="390"/>
+        <LifeArmor value="1"/>
+        <LifeRegenRate value="0.25"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranInfantryArmor"/>
+        <EnergyStart value="40"/>
+        <EnergyMax value="40"/>
+        <Speed value="2.8984"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="46.0625"/>
+        <StationaryTurningRate value="999.8437"/>
+        <TurningRate value="999.8437"/>
+        <Sight value="15"/>
+        <Food value="-1"/>
+        <CostCategory value="Army"/>
+        <RepairTime value="20"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="35"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="Sprint"/>
+        <AbilArray Link="ReloadNPC"/>
+        <AbilArray Link="PerformSelfAidMini"/>
+        <AbilArray Link="Jump"/>
+        <AbilArray Link="MiniInventoryRifle"/>
+        <AbilArray Link="Prone"/>
+        <AbilArray Link="BloodTransfusionLN"/>
+        <AbilArray Link="AnabolicPerformanceEnhancementLN"/>
+        <AbilArray Link="NanoInjectionLN"/>
+        <AbilArray Link="PainKillerLN"/>
+        <BehaviorArray Link="Training1"/>
+        <BehaviorArray Link="Training3"/>
+        <BehaviorArray Link="RifleButtLN"/>
+        <BehaviorArray Link="LNReloadAI"/>
+        <BehaviorArray Link="XPSharing"/>
+        <BehaviorArray Link="AllyReveal"/>
+        <BehaviorArray Link="SpecialForcesExpertise"/>
+        <WeaponArray Link="AssaultRifleMedic"/>
+        <CardLayouts>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="2"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="3"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="AdditionalActions" Type="Submenu" SubmenuCardId="0003" Row="1" Column="3"/>
+            <LayoutButtons Face="BloodTransfusion2" Type="AbilCmd" AbilCmd="BloodTransfusionLN,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="NanoInjection" Type="AbilCmd" AbilCmd="NanoInjectionLN,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="AnabolicPerformanceEnhancement" Type="AbilCmd" AbilCmd="AnabolicPerformanceEnhancementLN,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="PainKiller2" Type="AbilCmd" AbilCmd="PainKillerLN,Execute" Row="2" Column="3"/>
+            <LayoutButtons>
+                <Face value="RifleButt"/>
+                <Type value="Passive"/>
+                <Behavior value="RifleButtLN"/>
+                <Requirements value="LNTraining4"/>
+                <Row value="1"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="1"/>
+        </CardLayouts>
+        <CardLayouts CardId="0003">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="Reload" Type="AbilCmd" AbilCmd="ReloadNPC,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="PerformSelfAid" Type="AbilCmd" AbilCmd="PerformSelfAidMini,Execute" Row="1" Column="0"/>
+            <LayoutButtons Face="Prone" Type="AbilCmd" AbilCmd="Prone,Execute" Row="0" Column="1"/>
+        </CardLayouts>
+        <Radius value="0.375"/>
+        <SeparationRadius value="0.375"/>
+        <InnerRadius value="0.375"/>
+        <CargoSize value="1"/>
+        <ScoreMake value="50"/>
+        <ScoreKill value="100"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="14"/>
+        <MinimapRadius value="0.375"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <TacticalAI value="Marine"/>
+        <Item value="8SlotBag"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="21"/>
+        <HotkeyCategory value="Unit/Category/LNCustom"/>
+        <KillDisplay value="Never"/>
+        <AIEvaluateAlias value="Marine"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="33"/>
+            <ChanceArray index="Idle" value="33"/>
+            <ChanceArray index="Turn" value="33"/>
+        </Fidget>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
+        <ReviveInfoBase>
+            <Charge Link="Marine/Revive"/>
+            <Cooldown Link="Marine/Revive"/>
+        </ReviveInfoBase>
+        <EffectArray index="Birth" value="EquipCombatMedicSet"/>
+    </CUnit>
+    <CUnit id="LN74DFlamethrower2">
+        <DeathRevealRadius value="3"/>
+        <Race value="Terr"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <Attributes index="Summoned" value="1"/>
+        <LifeStart value="390"/>
+        <LifeMax value="390"/>
+        <LifeArmor value="1"/>
+        <LifeRegenRate value="0.25"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranInfantryArmor"/>
+        <Speed value="2.8984"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="46.0625"/>
+        <StationaryTurningRate value="999.8437"/>
+        <TurningRate value="999.8437"/>
+        <Sight value="15"/>
+        <Food value="-1"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="50"/>
+        <RepairTime value="20"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="40"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="Sprint"/>
+        <AbilArray Link="PerformSelfAidMini"/>
+        <AbilArray Link="Jump"/>
+        <AbilArray Link="MiniInventoryFlame"/>
+        <AbilArray Link="Prone"/>
+        <AbilArray Link="FuelDischargeLN"/>
+        <AbilArray Link="PlasmaShieldLN"/>
+        <BehaviorArray Link="Training1"/>
+        <BehaviorArray Link="Training3"/>
+        <BehaviorArray Link="RifleButtLN"/>
+        <BehaviorArray Link="XPSharing"/>
+        <BehaviorArray Link="HardArmorLN"/>
+        <BehaviorArray Link="AllyDamageReducerRanged"/>
+        <BehaviorArray Link="SpecialForcesExpertise"/>
+        <WeaponArray Link="74DFlamethrowerLN"/>
+        <CardLayouts>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="2"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="3"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="AdditionalActions" Type="Submenu" SubmenuCardId="0003" Row="1" Column="3"/>
+            <LayoutButtons>
+                <Face value="RifleButt"/>
+                <Type value="Passive"/>
+                <Behavior value="RifleButtLN"/>
+                <Requirements value="LNTraining4"/>
+                <Row value="1"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="HardArmor"/>
+                <Type value="Passive"/>
+                <Behavior value="HardArmorLN"/>
+                <Requirements value="LNTraining2"/>
+                <Row value="1"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons Face="FuelDischargeMini" Type="AbilCmd" AbilCmd="FuelDischargeLN,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="PlasmaShieldLN" Type="AbilCmd" AbilCmd="PlasmaShieldLN,On" Row="2" Column="2"/>
+            <LayoutButtons Face="NapalmLN" Type="Passive" Requirements="TrainingShow" Row="2" Column="0"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="1"/>
+        </CardLayouts>
+        <CardLayouts CardId="0003">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="PerformSelfAid" Type="AbilCmd" AbilCmd="PerformSelfAidMini,Execute" Row="1" Column="0"/>
+            <LayoutButtons Face="Prone" Type="AbilCmd" AbilCmd="Prone,Execute" Row="0" Column="1"/>
+        </CardLayouts>
+        <Radius value="0.375"/>
+        <SeparationRadius value="0.375"/>
+        <InnerRadius value="0.375"/>
+        <CargoSize value="1"/>
+        <ScoreMake value="50"/>
+        <ScoreKill value="100"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="13"/>
+        <MinimapRadius value="0.375"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <TacticalAI value="Marine"/>
+        <Item value="8SlotBag"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="21"/>
+        <HotkeyCategory value="Unit/Category/LNCustom"/>
+        <KillDisplay value="Never"/>
+        <AIEvaluateAlias value="Marine"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="33"/>
+            <ChanceArray index="Idle" value="33"/>
+            <ChanceArray index="Turn" value="33"/>
+        </Fidget>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
+        <ReviveInfoBase>
+            <Charge Link="Marine/Revive"/>
+            <Cooldown Link="Marine/Revive"/>
+        </ReviveInfoBase>
+        <EffectArray index="Birth" value="EquipFlamethrowerSet"/>
+        <Description value="Button/Tooltip/LN74DFlamethrower"/>
+    </CUnit>
+    <CUnit id="LNAutomaticRifleman2">
+        <DeathRevealRadius value="3"/>
+        <Race value="Terr"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <Attributes index="Summoned" value="1"/>
+        <LifeStart value="390"/>
+        <LifeMax value="390"/>
+        <LifeArmor value="1"/>
+        <LifeRegenRate value="0.25"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranInfantryArmor"/>
+        <EnergyStart value="100"/>
+        <EnergyMax value="100"/>
+        <Speed value="2.8984"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="46.0625"/>
+        <StationaryTurningRate value="999.8437"/>
+        <TurningRate value="999.8437"/>
+        <Sight value="15"/>
+        <Food value="-1"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="50"/>
+        <RepairTime value="20"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="35"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="Sprint"/>
+        <AbilArray Link="ReloadNPC"/>
+        <AbilArray Link="PerformSelfAidMini"/>
+        <AbilArray Link="SuppressiveFireLN"/>
+        <AbilArray Link="Jump"/>
+        <AbilArray Link="MiniInventoryMG"/>
+        <AbilArray Link="Prone"/>
+        <AbilArray Link="LNIncendiary"/>
+        <BehaviorArray Link="Training1"/>
+        <BehaviorArray Link="Training3"/>
+        <BehaviorArray Link="LNReloadAI"/>
+        <BehaviorArray Link="XPSharing"/>
+        <BehaviorArray Link="MarksmanshipLN"/>
+        <BehaviorArray Link="Critical3xDamage2"/>
+        <BehaviorArray Link="CriticalSuppress2"/>
+        <BehaviorArray Link="BurstCyclerPause"/>
+        <BehaviorArray Link="EntrenchedAB"/>
+        <BehaviorArray Link="SpecialForcesExpertise"/>
+        <WeaponArray Link="SquadAutomaticWeaponLN"/>
+        <CardLayouts>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="2"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="3"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="Entrenched" Type="Passive" Behavior="Entrenched" Row="1" Column="3"/>
+            <LayoutButtons Face="SuppressiveFireOff" Type="AbilCmd" AbilCmd="SuppressiveFireLN,Off" Row="2" Column="0"/>
+            <LayoutButtons Face="SuppressiveFireLN" Type="AbilCmd" AbilCmd="SuppressiveFireLN,On" Row="2" Column="0"/>
+            <LayoutButtons>
+                <Face value="IncendiaryRoundsLN"/>
+                <Type value="AbilCmd"/>
+                <AbilCmd value="LNIncendiary,On"/>
+                <Behavior value="IncendiaryRoundsLN"/>
+                <Requirements value="LNTraining4"/>
+                <Row value="1"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons Face="IncendiaryRoundsOff" Type="AbilCmd" AbilCmd="LNIncendiary,Off" Row="1" Column="0"/>
+            <LayoutButtons>
+                <Face value="MarksmanshipLN"/>
+                <Type value="Passive"/>
+                <Behavior value="MarksmanshipLN"/>
+                <Requirements value="LNTraining4"/>
+                <Row value="1"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="1"/>
+            <LayoutButtons>
+                <Face value="BurstCounter"/>
+                <Type value="Passive"/>
+                <Behavior value="BurstCounter"/>
+                <Requirements value="M241MMG"/>
+                <Row value="1"/>
+                <Column value="2"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="BurstCounter3"/>
+                <Type value="Passive"/>
+                <Behavior value="BurstCounter2"/>
+                <Requirements value="M241MMG"/>
+                <Row value="1"/>
+                <Column value="2"/>
+            </LayoutButtons>
+            <LayoutButtons Face="AdditionalActions" Type="Submenu" SubmenuCardId="0003" Row="1" Column="4"/>
+        </CardLayouts>
+        <CardLayouts CardId="0003">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="Reload2" Type="AbilCmd" AbilCmd="ReloadNPC,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="PerformSelfAid" Type="AbilCmd" AbilCmd="PerformSelfAidMini,Execute" Row="1" Column="0"/>
+            <LayoutButtons Face="Prone" Type="AbilCmd" AbilCmd="Prone,Execute" Row="0" Column="1"/>
+        </CardLayouts>
+        <Radius value="0.375"/>
+        <SeparationRadius value="0.375"/>
+        <InnerRadius value="0.375"/>
+        <CargoSize value="1"/>
+        <ScoreMake value="50"/>
+        <ScoreKill value="100"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="13"/>
+        <MinimapRadius value="0.375"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <TacticalAI value="Marine"/>
+        <Item value="8SlotBag"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="21"/>
+        <HotkeyCategory value="Unit/Category/LNCustom"/>
+        <KillDisplay value="Never"/>
+        <AIEvaluateAlias value="Marine"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="33"/>
+            <ChanceArray index="Idle" value="33"/>
+            <ChanceArray index="Turn" value="33"/>
+        </Fidget>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
+        <ReviveInfoBase>
+            <Charge Link="Marine/Revive"/>
+            <Cooldown Link="Marine/Revive"/>
+        </ReviveInfoBase>
+        <EffectArray index="Birth" value="EquipAutomaticRiflemanSet"/>
+        <Description value="Button/Tooltip/LNAutomaticRifleman"/>
+    </CUnit>
+    <CUnit id="LNCombatEngineer2">
+        <DeathRevealRadius value="3"/>
+        <Race value="Terr"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <Attributes index="Summoned" value="1"/>
+        <LifeStart value="390"/>
+        <LifeMax value="390"/>
+        <LifeArmor value="1"/>
+        <LifeRegenRate value="0.25"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranInfantryArmor"/>
+        <EnergyStart value="18"/>
+        <EnergyMax value="18"/>
+        <Speed value="2.8984"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="46.0625"/>
+        <StationaryTurningRate value="999.8437"/>
+        <TurningRate value="999.8437"/>
+        <Sight value="15"/>
+        <Food value="-1"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="50"/>
+        <RepairTime value="20"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="35"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="Sprint"/>
+        <AbilArray Link="ReloadNPC"/>
+        <AbilArray Link="PerformSelfAidMini"/>
+        <AbilArray Link="ClusterRocketsLN"/>
+        <AbilArray Link="Jump"/>
+        <AbilArray Link="MiniInventoryShotgun"/>
+        <AbilArray Link="Prone"/>
+        <AbilArray Link="DisarmLN"/>
+        <AbilArray Link="LNM1SentryGun"/>
+        <AbilArray Link="LNM2SentryGun"/>
+        <AbilArray Link="RepairLN"/>
+        <BehaviorArray Link="Training1"/>
+        <BehaviorArray Link="Training3"/>
+        <BehaviorArray Link="RifleButtLN"/>
+        <BehaviorArray Link="LNReloadAI"/>
+        <BehaviorArray Link="XPSharing"/>
+        <BehaviorArray Link="SpecialForcesExpertise"/>
+        <WeaponArray Link="LNShotgun"/>
+        <CardLayouts>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="2"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="3"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="AdditionalActions" Type="Submenu" SubmenuCardId="0003" Row="1" Column="3"/>
+            <LayoutButtons>
+                <Face value="RifleButt"/>
+                <Type value="Passive"/>
+                <Behavior value="RifleButtLN"/>
+                <Requirements value="LNTraining4"/>
+                <Row value="1"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons Face="ClusterRocketsMini" Type="AbilCmd" AbilCmd="ClusterRocketsLN,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="LNM1SentryGun" Type="AbilCmd" AbilCmd="LNM1SentryGun,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="LNM2SentryGun2" Type="AbilCmd" AbilCmd="LNM2SentryGun,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="1"/>
+        </CardLayouts>
+        <CardLayouts CardId="0003">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="Reload2" Type="AbilCmd" AbilCmd="ReloadNPC,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="PerformSelfAid" Type="AbilCmd" AbilCmd="PerformSelfAidMini,Execute" Row="1" Column="0"/>
+            <LayoutButtons Face="Prone" Type="AbilCmd" AbilCmd="Prone,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="Disarm" Type="AbilCmd" AbilCmd="DisarmLN,Execute" Row="1" Column="1"/>
+            <LayoutButtons Face="RepairMini" Type="AbilCmd" AbilCmd="RepairLN,Execute" Row="1" Column="2"/>
+        </CardLayouts>
+        <Radius value="0.375"/>
+        <SeparationRadius value="0.375"/>
+        <InnerRadius value="0.375"/>
+        <CargoSize value="1"/>
+        <ScoreMake value="50"/>
+        <ScoreKill value="100"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="13"/>
+        <MinimapRadius value="0.375"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <TacticalAI value="Marine"/>
+        <Item value="8SlotBag"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="21"/>
+        <HotkeyCategory value="Unit/Category/LNCustom"/>
+        <KillDisplay value="Never"/>
+        <AIEvaluateAlias value="Marine"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="33"/>
+            <ChanceArray index="Idle" value="33"/>
+            <ChanceArray index="Turn" value="33"/>
+        </Fidget>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
+        <ReviveInfoBase>
+            <Charge Link="Marine/Revive"/>
+            <Cooldown Link="Marine/Revive"/>
+        </ReviveInfoBase>
+        <EffectArray index="Birth" value="EquipShotgun"/>
+        <Description value="Button/Tooltip/LNCombatEngineer"/>
+    </CUnit>
+    <CUnit id="LNJavelinGunner2">
+        <DeathRevealRadius value="3"/>
+        <Race value="Terr"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <Attributes index="Summoned" value="1"/>
+        <LifeStart value="390"/>
+        <LifeMax value="390"/>
+        <LifeRegenRate value="0.25"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranInfantryArmor"/>
+        <EnergyStart value="40"/>
+        <EnergyMax value="40"/>
+        <Speed value="2.8984"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="46.0625"/>
+        <StationaryTurningRate value="999.8437"/>
+        <TurningRate value="999.8437"/>
+        <Sight value="15"/>
+        <Food value="-1"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="50"/>
+        <RepairTime value="20"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="35"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="Sprint"/>
+        <AbilArray Link="ReloadNPC"/>
+        <AbilArray Link="PerformSelfAidMini"/>
+        <AbilArray Link="LNMRL"/>
+        <AbilArray Link="Jump"/>
+        <AbilArray Link="MiniInventoryRifle"/>
+        <AbilArray Link="Prone"/>
+        <AbilArray Link="DisarmLN"/>
+        <AbilArray Link="PlaceExplosiveChargeLN"/>
+        <AbilArray Link="ClaymoreLN"/>
+        <BehaviorArray Link="Training1"/>
+        <BehaviorArray Link="Training3"/>
+        <BehaviorArray Link="RifleButtLN"/>
+        <BehaviorArray Link="LNReloadAI"/>
+        <BehaviorArray Link="XPSharing"/>
+        <BehaviorArray Link="SpecialForcesExpertise"/>
+        <WeaponArray Link="AssaultRifleJav"/>
+        <CardLayouts>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="2"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="3"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="AdditionalActions" Type="Submenu" SubmenuCardId="0003" Row="1" Column="3"/>
+            <LayoutButtons Face="MRL" Type="AbilCmd" AbilCmd="LNMRL,Execute" Row="2" Column="0"/>
+            <LayoutButtons>
+                <Face value="RifleButt"/>
+                <Type value="Passive"/>
+                <Behavior value="RifleButtLN"/>
+                <Requirements value="LNTraining4"/>
+                <Row value="1"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons Face="ExplosiveCharge3" Type="AbilCmd" AbilCmd="PlaceExplosiveChargeLN,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="Claymore" Type="AbilCmd" AbilCmd="ClaymoreLN,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="1"/>
+        </CardLayouts>
+        <CardLayouts CardId="0003">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="Reload2" Type="AbilCmd" AbilCmd="ReloadNPC,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="PerformSelfAid" Type="AbilCmd" AbilCmd="PerformSelfAidMini,Execute" Row="1" Column="0"/>
+            <LayoutButtons Face="Prone" Type="AbilCmd" AbilCmd="Prone,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="Disarm" Type="AbilCmd" AbilCmd="DisarmLN,Execute" Row="1" Column="1"/>
+        </CardLayouts>
+        <Radius value="0.375"/>
+        <SeparationRadius value="0.375"/>
+        <InnerRadius value="0.375"/>
+        <CargoSize value="1"/>
+        <ScoreMake value="50"/>
+        <ScoreKill value="100"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="13"/>
+        <MinimapRadius value="0.375"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <TacticalAI value="Marine"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="21"/>
+        <HotkeyCategory value="Unit/Category/LNCustom"/>
+        <KillDisplay value="Never"/>
+        <AIEvaluateAlias value="Marine"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="33"/>
+            <ChanceArray index="Idle" value="33"/>
+            <ChanceArray index="Turn" value="33"/>
+        </Fidget>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
+        <ReviveInfoBase>
+            <Charge Link="Marine/Revive"/>
+            <Cooldown Link="Marine/Revive"/>
+        </ReviveInfoBase>
+        <EffectArray index="Birth" value="EquipJavelinGunnerSet"/>
+        <Description value="Button/Tooltip/LNJavelinGunner"/>
+    </CUnit>
+    <CUnit id="LNRifleman2">
+        <DeathRevealRadius value="3"/>
+        <Race value="Terr"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <Attributes index="Summoned" value="1"/>
+        <LifeStart value="390"/>
+        <LifeMax value="390"/>
+        <LifeRegenRate value="0.25"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranInfantryArmor"/>
+        <EnergyStart value="40"/>
+        <EnergyMax value="40"/>
+        <Speed value="2.8984"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="46.0625"/>
+        <StationaryTurningRate value="999.8437"/>
+        <TurningRate value="999.8437"/>
+        <Sight value="15"/>
+        <Food value="-1"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="50"/>
+        <RepairTime value="20"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="35"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="Sprint"/>
+        <AbilArray Link="ReloadNPC"/>
+        <AbilArray Link="PerformSelfAidMini"/>
+        <AbilArray Link="FragGrenadeLN"/>
+        <AbilArray Link="Jump"/>
+        <AbilArray Link="MiniInventoryRifle"/>
+        <AbilArray Link="Prone"/>
+        <AbilArray Link="SmokeGrenadeLN"/>
+        <AbilArray Link="LNFiremode"/>
+        <BehaviorArray Link="Training1"/>
+        <BehaviorArray Link="Training3"/>
+        <BehaviorArray Link="RifleButtLN"/>
+        <BehaviorArray Link="LNReloadAI"/>
+        <BehaviorArray Link="XPSharing"/>
+        <BehaviorArray Link="MarksmanshipLN"/>
+        <BehaviorArray Link="Critical3xDamage2"/>
+        <BehaviorArray/>
+        <BehaviorArray Link="SpecialForcesExpertise"/>
+        <WeaponArray Link="LNAssaultRifle"/>
+        <CardLayouts>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="2"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="3"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="AdditionalActions" Type="Submenu" SubmenuCardId="0003" Row="1" Column="3"/>
+            <LayoutButtons Face="FragGrenadeItem" Type="AbilCmd" AbilCmd="FragGrenadeLN,Execute" Row="2" Column="0"/>
+            <LayoutButtons>
+                <Face value="RifleButt"/>
+                <Type value="Passive"/>
+                <Behavior value="RifleButtLN"/>
+                <Requirements value="LNTraining4"/>
+                <Row value="1"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="MarksmanshipLN"/>
+                <Type value="Passive"/>
+                <AbilCmd value="MarksmanshipLN,On"/>
+                <Behavior value="Critical3xDamage2"/>
+                <Requirements value="LNTraining4"/>
+                <Row value="1"/>
+                <Column value="2"/>
+            </LayoutButtons>
+            <LayoutButtons Face="SmokeGrenade" Type="AbilCmd" AbilCmd="SmokeGrenadeLN,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="FiremodeBurst2" Type="AbilCmd" AbilCmd="LNFiremode,On" Row="1" Column="1"/>
+            <LayoutButtons Face="FiremodeSemi2" Type="AbilCmd" AbilCmd="LNFiremode,Off" Row="1" Column="1"/>
+        </CardLayouts>
+        <CardLayouts CardId="0003">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="Reload2" Type="AbilCmd" AbilCmd="ReloadNPC,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="PerformSelfAid" Type="AbilCmd" AbilCmd="PerformSelfAidMini,Execute" Row="1" Column="0"/>
+            <LayoutButtons Face="Prone" Type="AbilCmd" AbilCmd="Prone,Execute" Row="0" Column="1"/>
+        </CardLayouts>
+        <Radius value="0.375"/>
+        <SeparationRadius value="0.375"/>
+        <InnerRadius value="0.375"/>
+        <CargoSize value="1"/>
+        <ScoreMake value="50"/>
+        <ScoreKill value="100"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="14"/>
+        <MinimapRadius value="0.375"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <TacticalAI value="Marine"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="21"/>
+        <HotkeyCategory value="Unit/Category/LNCustom"/>
+        <KillDisplay value="Never"/>
+        <AIEvaluateAlias value="Marine"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="33"/>
+            <ChanceArray index="Idle" value="33"/>
+            <ChanceArray index="Turn" value="33"/>
+        </Fidget>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
+        <ReviveInfoBase>
+            <Charge Link="Marine/Revive"/>
+            <Cooldown Link="Marine/Revive"/>
+        </ReviveInfoBase>
+        <EffectArray index="Birth" value="EquipRiflemanSet"/>
+    </CUnit>
+    <CUnit id="LNSquadDesignatedMarksman2">
+        <DeathRevealRadius value="3"/>
+        <Race value="Terr"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <Attributes index="Summoned" value="1"/>
+        <LifeStart value="390"/>
+        <LifeMax value="390"/>
+        <LifeRegenRate value="0.25"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranInfantryArmor"/>
+        <EnergyStart value="20"/>
+        <EnergyMax value="20"/>
+        <Speed value="2.8984"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="46.0625"/>
+        <StationaryTurningRate value="999.8437"/>
+        <TurningRate value="999.8437"/>
+        <Sight value="15"/>
+        <Food value="-1"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="50"/>
+        <RepairTime value="20"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="35"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="Sprint"/>
+        <AbilArray Link="ReloadNPC"/>
+        <AbilArray Link="PerformSelfAidMini"/>
+        <AbilArray Link="BinocularsLN"/>
+        <AbilArray Link="Jump"/>
+        <AbilArray Link="MiniInventorySDM"/>
+        <AbilArray Link="Prone"/>
+        <AbilArray Link="RapidFireLN"/>
+        <AbilArray Link="FieldCamera2"/>
+        <BehaviorArray Link="Training1"/>
+        <BehaviorArray Link="Training3"/>
+        <BehaviorArray Link="LNReloadAI"/>
+        <BehaviorArray Link="XPSharing"/>
+        <BehaviorArray Link="MarksmanshipLN"/>
+        <BehaviorArray Link="WeakPointTargetingLN"/>
+        <BehaviorArray Link="Critical3xDamage2"/>
+        <BehaviorArray Link="CriticalRapid"/>
+        <BehaviorArray Link="SpecialForcesExpertise"/>
+        <WeaponArray Link="DMRLN"/>
+        <CardLayouts>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="2"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="3"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="AdditionalActions" Type="Submenu" SubmenuCardId="0003" Row="1" Column="3"/>
+            <LayoutButtons>
+                <Face value="MarksmanshipLN"/>
+                <Type value="Passive"/>
+                <AbilCmd value="MarksmanshipLN,On"/>
+                <Behavior value="Critical3xDamage2"/>
+                <Requirements value="LNTraining4"/>
+                <Row value="1"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons Face="RapidFireOff" Type="AbilCmd" AbilCmd="RapidFireLN,Off" Row="2" Column="1"/>
+            <LayoutButtons Face="RapidFireLN" Type="AbilCmd" AbilCmd="RapidFireLN,On" Row="2" Column="1"/>
+            <LayoutButtons Face="FieldCameraSDM" Type="AbilCmd" AbilCmd="FieldCamera2,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="Binoculars6" Type="AbilCmd" AbilCmd="BinocularsLN,Execute" Row="2" Column="0"/>
+        </CardLayouts>
+        <CardLayouts CardId="0003">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="Reload2" Type="AbilCmd" AbilCmd="ReloadNPC,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="PerformSelfAid" Type="AbilCmd" AbilCmd="PerformSelfAidMini,Execute" Row="1" Column="0"/>
+            <LayoutButtons Face="Prone" Type="AbilCmd" AbilCmd="Prone,Execute" Row="0" Column="1"/>
+            <LayoutButtons>
+                <Face value="WeakPointTargeting"/>
+                <Type value="Passive"/>
+                <Behavior value="WeakPointTargetingLN"/>
+                <Requirements value="LNTraining2"/>
+                <Row value="1"/>
+                <Column value="1"/>
+            </LayoutButtons>
+        </CardLayouts>
+        <Radius value="0.375"/>
+        <SeparationRadius value="0.375"/>
+        <InnerRadius value="0.375"/>
+        <CargoSize value="1"/>
+        <ScoreMake value="50"/>
+        <ScoreKill value="100"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="13"/>
+        <MinimapRadius value="0.375"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <TacticalAI value="Marine"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="21"/>
+        <HotkeyCategory value="Unit/Category/LNCustom"/>
+        <KillDisplay value="Never"/>
+        <AIEvaluateAlias value="Marine"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="33"/>
+            <ChanceArray index="Idle" value="33"/>
+            <ChanceArray index="Turn" value="33"/>
+        </Fidget>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
+        <ReviveInfoBase>
+            <Charge Link="Marine/Revive"/>
+            <Cooldown Link="Marine/Revive"/>
+        </ReviveInfoBase>
+        <EffectArray index="Birth" value="EquipSDMSet"/>
+    </CUnit>
+    <CUnit id="PlatoonLeader2" parent="UnitTemplate">
+        <Description value="Button/Tooltip/11APlatoonLeader"/>
+        <DeathRevealFilters value="Visible;Enemy,Missile,Hidden"/>
+        <Race value="Terr"/>
+        <LifeArmorDisplayFlags index="CollapseBuffed" value="0"/>
+        <LifeRegenRate value="0.25"/>
+        <LifeArmorName value="Unit/LifeArmorName/LandWarriorSystemLight"/>
+        <SpeedDisplayFlags index="CollapseBuffed" value="0"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="50"/>
+        <RepairTime value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="HeroInventoryRifle"/>
+        <AbilArray Link="LearnAbilitiesPlatoonLeader"/>
+        <AbilArray Link="SoldierSkills"/>
+        <AbilArray Link="Sprint"/>
+        <AbilArray Link="ReloadHero"/>
+        <AbilArray Link="ImmediateRemedialAction"/>
+        <AbilArray Link="PerformSelfAid"/>
+        <AbilArray Link="FiremodeAssaultRifle"/>
+        <AbilArray Link="Marksmanship"/>
+        <AbilArray Link="DropMagazine"/>
+        <AbilArray Link="Jump"/>
+        <AbilArray Link="LeadershipSkills"/>
+        <AbilArray Link="BinocularsPL"/>
+        <AbilArray Link="FieldAid"/>
+        <AbilArray Link="LaserDesignatorPL"/>
+        <AbilArray Link="CallForFirePL"/>
+        <AbilArray Link="Prone"/>
+        <AbilArray Link="Concentration"/>
+        <AbilArray Link="Leadership"/>
+        <AbilArray Link="Training"/>
+        <AbilArray Link="Dismiss"/>
+        <AbilArray Link="LNSITREP"/>
+        <AbilArray Link="LNReport"/>
+        <AbilArray Link="WeaponsHold2"/>
+        <BehaviorArray Link="HeroLevels"/>
+        <BehaviorArray Link="Fitness"/>
+        <BehaviorArray Link="Dexterity"/>
+        <BehaviorArray Link="Mechanical"/>
+        <BehaviorArray Link="StartingStats"/>
+        <BehaviorArray Link="RifleButt"/>
+        <BehaviorArray Link="Marksmanship1"/>
+        <BehaviorArray Link="Marksmanship2"/>
+        <BehaviorArray Link="Marksmanship3"/>
+        <BehaviorArray Link="Marksmanship4"/>
+        <BehaviorArray Link="SoldierSkills1"/>
+        <BehaviorArray Link="SoldierSkills2"/>
+        <BehaviorArray Link="SoldierSkills3"/>
+        <BehaviorArray Link="SoldierSkills4"/>
+        <BehaviorArray Link="Criticallvl1"/>
+        <BehaviorArray Link="Criticallvl2"/>
+        <BehaviorArray Link="Criticallvl3"/>
+        <BehaviorArray Link="Criticallvl4"/>
+        <BehaviorArray Link="SpecialForcesExpertise"/>
+        <BehaviorArray Link="Training1SF"/>
+        <BehaviorArray Link="Training3SF"/>
+        <WeaponArray index="0" Link="HeroAssaultRifle"/>
+        <EffectArray index="Birth" value="EquipPlatoonLeaderSet"/>
+        <EffectArray index="Revive" value="EquipPlatoonLeaderSet"/>
+        <CardLayouts>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="2"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="3"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons>
+                <Face value="LearnAbilities"/>
+                <Type value="Submenu"/>
+                <SubmenuAbilState value="LearnAbilitiesPlatoonLeader"/>
+                <SubmenuCardId value="0002"/>
+                <Row value="1"/>
+                <Column value="4"/>
+            </LayoutButtons>
+            <LayoutButtons Face="AdditionalActions" Type="Submenu" SubmenuCardId="0003" Row="1" Column="3"/>
+            <LayoutButtons Face="CallForFirePL" Type="AbilCmd" AbilCmd="CallForFirePL,Execute" Row="2" Column="4"/>
+            <LayoutButtons Face="FieldAid2" Type="AbilCmd" AbilCmd="FieldAid,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="LaserDesignatorPL" Type="AbilCmd" AbilCmd="LaserDesignatorPL,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="Leadership" Type="AbilCmd" AbilCmd="Leadership,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="Training" Type="Passive" Requirements="TrainingShow" Row="2" Column="3"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="Dismiss" Type="AbilCmd" AbilCmd="Dismiss,Execute" Row="1" Column="2"/>
+            <LayoutButtons Face="FiremodeBurst4" Type="AbilCmd" AbilCmd="FiremodeAssaultRifle,On" Row="1" Column="1"/>
+            <LayoutButtons Face="FiremodeSemi4" Type="AbilCmd" AbilCmd="FiremodeAssaultRifle,Off" Row="1" Column="1"/>
+            <LayoutButtons Face="Binoculars4" Type="AbilCmd" AbilCmd="BinocularsPL,Execute" Row="1" Column="0"/>
+        </CardLayouts>
+        <CardLayouts CardId="0002">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="LearnSoldierSkills" Type="AbilCmd" AbilCmd="LearnAbilitiesPlatoonLeader,Learn1" Row="0" Column="0"/>
+            <LayoutButtons Face="Marksmanship" Type="AbilCmd" AbilCmd="LearnAbilitiesPlatoonLeader,Learn3" Row="0" Column="1"/>
+            <LayoutButtons Face="LeadershipSkills" Type="AbilCmd" AbilCmd="LearnAbilitiesPlatoonLeader,Learn4" Row="0" Column="2"/>
+            <LayoutButtons Face="Leadership" Type="AbilCmd" AbilCmd="LearnAbilitiesPlatoonLeader,Learn2" Row="0" Column="3"/>
+            <LayoutButtons Face="Training" Type="AbilCmd" AbilCmd="LearnAbilitiesPlatoonLeader,Learn5" Row="0" Column="4"/>
+        </CardLayouts>
+        <CardLayouts CardId="0003">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="Reload" Type="AbilCmd" AbilCmd="ReloadHero,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="ImmediateRemedialAction" Type="AbilCmd" AbilCmd="ImmediateRemedialAction,Execute" Row="0" Column="2"/>
+            <LayoutButtons Face="DropMagazine" Type="AbilCmd" AbilCmd="DropMagazine,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="PerformSelfAid" Type="AbilCmd" AbilCmd="PerformSelfAid,Execute" Row="1" Column="0"/>
+            <LayoutButtons>
+                <Face value="RifleButt"/>
+                <Type value="Passive"/>
+                <Behavior value="RifleButt"/>
+                <Requirements value="RifleButt"/>
+                <Row value="2"/>
+                <Column value="2"/>
+            </LayoutButtons>
+            <LayoutButtons Face="Prone" Type="AbilCmd" AbilCmd="Prone,Execute" Row="0" Column="3"/>
+            <LayoutButtons Face="Concentration" Type="AbilCmd" AbilCmd="Concentration,On" Row="1" Column="1"/>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel4"/>
+                <Type value="Passive"/>
+                <Behavior value="SoldierSkills4"/>
+                <Requirements value="SoldierSkills04"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel3"/>
+                <Type value="Passive"/>
+                <Behavior value="SoldierSkills3"/>
+                <Requirements value="SoldierSkills03"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel2"/>
+                <Type value="Passive"/>
+                <Behavior value="SoldierSkills2"/>
+                <Requirements value="SoldierSkills02"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel1"/>
+                <Type value="Passive"/>
+                <Behavior value="SoldierSkills1"/>
+                <Requirements value="SoldierSkills01"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="Marksmanship"/>
+                <Type value="Passive"/>
+                <Behavior value="Marksmanship4"/>
+                <Requirements value="Marksmanship04"/>
+                <Row value="2"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="Marksmanship"/>
+                <Type value="Passive"/>
+                <Behavior value="Marksmanship3"/>
+                <Requirements value="Marksmanship03"/>
+                <Row value="2"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="Marksmanship"/>
+                <Type value="Passive"/>
+                <Behavior value="Marksmanship2"/>
+                <Requirements value="Marksmanship02"/>
+                <Row value="2"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="Marksmanship"/>
+                <Type value="Passive"/>
+                <Behavior value="Marksmanship1"/>
+                <Requirements value="Marksmanship01M"/>
+                <Row value="2"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons Face="LNReport" Type="AbilCmd" AbilCmd="LNReport,Execute" Row="1" Column="2"/>
+            <LayoutButtons Face="LNSITREP" Type="AbilCmd" AbilCmd="LNSITREP,Execute" Row="1" Column="4"/>
+            <LayoutButtons Face="HoldFire3" Type="AbilCmd" AbilCmd="WeaponsHold2,On" Row="1" Column="3"/>
+            <LayoutButtons Face="HoldFireOff2" Type="AbilCmd" AbilCmd="WeaponsHold2,Off" Row="1" Column="3"/>
+        </CardLayouts>
+        <Radius value="0.375"/>
+        <SeparationRadius value="0.375"/>
+        <DeadInnerRadius value="0"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="15"/>
+        <EditorCategories value="ObjectType:Hero,ObjectFamily:Melee"/>
+        <TacticalAI value="Marine"/>
+        <LeaderAlias value="PlatoonLeader"/>
+        <SelectAlias value="PlatoonLeader"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="21"/>
+        <HotkeyCategory value="Hotkey/Catagory/MOSCustom"/>
+        <AIEvaluateAlias value="Marine"/>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
+        <ReviveInfoBase>
+            <Charge Link="Marine/Revive"/>
+            <Cooldown Link="Marine/Revive"/>
+        </ReviveInfoBase>
+        <Attributes index="Light" value="0"/>
+    </CUnit>
+    <CUnit id="LN68WCombatMedic">
+        <DeathRevealRadius value="3"/>
+        <Race value="Terr"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <Attributes index="Summoned" value="1"/>
+        <LifeStart value="390"/>
+        <LifeMax value="390"/>
+        <LifeArmor value="1"/>
+        <LifeRegenRate value="0.25"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranInfantryArmor"/>
+        <EnergyStart value="40"/>
+        <EnergyMax value="40"/>
+        <Speed value="2.8984"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="46.0625"/>
+        <StationaryTurningRate value="999.8437"/>
+        <TurningRate value="999.8437"/>
+        <Sight value="15"/>
+        <Food value="-1"/>
+        <CostCategory value="Army"/>
+        <RepairTime value="20"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="35"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="Sprint"/>
+        <AbilArray Link="ReloadNPC"/>
+        <AbilArray Link="PerformSelfAidMini"/>
+        <AbilArray Link="Jump"/>
+        <AbilArray Link="MiniInventoryRifle"/>
+        <AbilArray Link="Prone"/>
+        <AbilArray Link="BloodTransfusionLN"/>
+        <AbilArray Link="AnabolicPerformanceEnhancementLN"/>
+        <AbilArray Link="NanoInjectionLN"/>
+        <AbilArray Link="PainKillerLN"/>
+        <BehaviorArray Link="Training1"/>
+        <BehaviorArray Link="Training3"/>
+        <BehaviorArray Link="RifleButtLN"/>
+        <BehaviorArray Link="LNReloadAI"/>
+        <BehaviorArray Link="XPSharing"/>
+        <BehaviorArray Link="AllyReveal"/>
+        <BehaviorArray Link="SpecialForcesExpertise"/>
+        <WeaponArray Link="AssaultRifleMedic"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="AdditionalActions" Type="Submenu" SubmenuCardId="0003" Row="1" Column="3"/>
+            <LayoutButtons Face="BloodTransfusion" Type="AbilCmd" AbilCmd="BloodTransfusionLN,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="NanoInjection" Type="AbilCmd" AbilCmd="NanoInjectionLN,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="AnabolicPerformanceEnhancement" Type="AbilCmd" AbilCmd="AnabolicPerformanceEnhancementLN,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="PainKiller" Type="AbilCmd" AbilCmd="PainKillerLN,Execute" Row="2" Column="3"/>
+            <LayoutButtons>
+                <Face value="RifleButt"/>
+                <Type value="Passive"/>
+                <Behavior value="RifleButtLN"/>
+                <Requirements value="LNTraining4"/>
+                <Row value="1"/>
+                <Column value="0"/>
+            </LayoutButtons>
+        </CardLayouts>
+        <CardLayouts CardId="0003">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="Reload2" Type="AbilCmd" AbilCmd="ReloadNPC,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="PerformSelfAid" Type="AbilCmd" AbilCmd="PerformSelfAidMini,Execute" Row="0" Column="2"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="Prone" Type="AbilCmd" AbilCmd="Prone,Execute" Row="0" Column="3"/>
+        </CardLayouts>
+        <Radius value="0.375"/>
+        <SeparationRadius value="0.375"/>
+        <InnerRadius value="0.375"/>
+        <CargoSize value="1"/>
+        <ScoreMake value="50"/>
+        <ScoreKill value="100"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="14"/>
+        <MinimapRadius value="0.375"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <TacticalAI value="Marine"/>
+        <Item value="8SlotBag"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="21"/>
+        <HotkeyCategory value="Unit/Category/LNClassic"/>
+        <KillDisplay value="Never"/>
+        <AIEvaluateAlias value="Marine"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="33"/>
+            <ChanceArray index="Idle" value="33"/>
+            <ChanceArray index="Turn" value="33"/>
+        </Fidget>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
+        <ReviveInfoBase>
+            <Charge Link="Marine/Revive"/>
+            <Cooldown Link="Marine/Revive"/>
+        </ReviveInfoBase>
+        <EffectArray index="Birth" value="EquipCombatMedicSet"/>
+    </CUnit>
+    <CUnit id="LN74DFlamethrower">
+        <DeathRevealRadius value="3"/>
+        <Race value="Terr"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <Attributes index="Summoned" value="1"/>
+        <LifeStart value="390"/>
+        <LifeMax value="390"/>
+        <LifeArmor value="1"/>
+        <LifeRegenRate value="0.25"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranInfantryArmor"/>
+        <Speed value="2.8984"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="46.0625"/>
+        <StationaryTurningRate value="999.8437"/>
+        <TurningRate value="999.8437"/>
+        <Sight value="15"/>
+        <Food value="-1"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="50"/>
+        <RepairTime value="20"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="40"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="Sprint"/>
+        <AbilArray Link="PerformSelfAidMini"/>
+        <AbilArray Link="Jump"/>
+        <AbilArray Link="MiniInventoryFlame"/>
+        <AbilArray Link="Prone"/>
+        <AbilArray Link="FuelDischargeLN"/>
+        <AbilArray Link="PlasmaShieldLN"/>
+        <BehaviorArray Link="Training1"/>
+        <BehaviorArray Link="Training3"/>
+        <BehaviorArray Link="RifleButtLN"/>
+        <BehaviorArray Link="XPSharing"/>
+        <BehaviorArray Link="HardArmorLN"/>
+        <BehaviorArray Link="SpecialForcesExpertise"/>
+        <WeaponArray Link="74DFlamethrowerLN"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="AdditionalActions" Type="Submenu" SubmenuCardId="0003" Row="1" Column="3"/>
+            <LayoutButtons>
+                <Face value="RifleButt"/>
+                <Type value="Passive"/>
+                <Behavior value="RifleButtLN"/>
+                <Requirements value="LNTraining4"/>
+                <Row value="1"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="HardArmor"/>
+                <Type value="Passive"/>
+                <Behavior value="HardArmorLN"/>
+                <Requirements value="LNTraining2"/>
+                <Row value="1"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons Face="FuelDischargeMini" Type="AbilCmd" AbilCmd="FuelDischargeLN,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="PlasmaShieldLN" Type="AbilCmd" AbilCmd="PlasmaShieldLN,On" Row="2" Column="2"/>
+            <LayoutButtons Face="NapalmLN" Type="Passive" Requirements="TrainingShow" Row="2" Column="0"/>
+        </CardLayouts>
+        <CardLayouts CardId="0003">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="PerformSelfAid" Type="AbilCmd" AbilCmd="PerformSelfAidMini,Execute" Row="0" Column="2"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="Prone" Type="AbilCmd" AbilCmd="Prone,Execute" Row="0" Column="3"/>
+        </CardLayouts>
+        <Radius value="0.375"/>
+        <SeparationRadius value="0.375"/>
+        <InnerRadius value="0.375"/>
+        <CargoSize value="1"/>
+        <ScoreMake value="50"/>
+        <ScoreKill value="100"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="13"/>
+        <MinimapRadius value="0.375"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <TacticalAI value="Marine"/>
+        <Item value="8SlotBag"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="21"/>
+        <HotkeyCategory value="Unit/Category/LNClassic"/>
+        <KillDisplay value="Never"/>
+        <AIEvaluateAlias value="Marine"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="33"/>
+            <ChanceArray index="Idle" value="33"/>
+            <ChanceArray index="Turn" value="33"/>
+        </Fidget>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
+        <ReviveInfoBase>
+            <Charge Link="Marine/Revive"/>
+            <Cooldown Link="Marine/Revive"/>
+        </ReviveInfoBase>
+        <EffectArray index="Birth" value="EquipFlamethrowerSet"/>
+    </CUnit>
+    <CUnit id="LNM1SentryGun">
+        <DeathRevealRadius value="3"/>
+        <ReviveType value="MK44SentryGun"/>
+        <Race value="Terr"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="Turnable" value="0"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="NoScore" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
+        <FlagArray index="AILifetime" value="1"/>
+        <FlagArray index="AIDefense" value="1"/>
+        <FlagArray index="ArmorDisabledWhileConstructing" value="1"/>
+        <FogVisibility value="Snapshot"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Burrow" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Structure" value="1"/>
+        <Collide index="RoachBurrow" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <LifeStart value="350"/>
+        <LifeMax value="350"/>
+        <LifeArmor value="7"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranBuildingPlating"/>
+        <EnergyStart value="200"/>
+        <EnergyMax value="400"/>
+        <StationaryTurningRate value="719.4726"/>
+        <TurningRate value="719.4726"/>
+        <Sight value="15"/>
+        <CostResource index="Minerals" value="100"/>
+        <RepairTime value="50"/>
+        <AttackTargetPriority value="20"/>
+        <AbilArray Link="BuildInProgress"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="HeroInventoryMG"/>
+        <AbilArray Link="SelfDestruct"/>
+        <BehaviorArray Link="LightFilter"/>
+        <BehaviorArray Link="XPSharing"/>
+        <BehaviorArray Link="FireSuppressionSystem"/>
+        <WeaponArray Link="MountedMMG" Turret="AutoTurret"/>
+        <CardLayouts>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="AttackBuilding" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="SelfDestruct" Type="AbilCmd" AbilCmd="SelfDestruct,On" Row="2" Column="4"/>
+        </CardLayouts>
+        <Radius value="0"/>
+        <SeparationRadius value="0"/>
+        <SubgroupPriority value="2"/>
+        <MinimapRadius value="0.75"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <TacticalAI value="MK44SentryGun"/>
+        <LeaderAlias value="MK44SentryGun"/>
+        <HotkeyAlias value="MK44SentryGun"/>
+        <SelectAlias value="MK44SentryGun"/>
+        <SubgroupAlias value="MK44SentryGun"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="346"/>
+        <HotkeyCategory value="Unit/Category/TerranUnits"/>
+        <KillDisplay value="Never"/>
+        <RankDisplay value="Never"/>
+        <AIEvaluateAlias value="MK44SentryGun"/>
+        <ReviveInfoBase>
+            <Charge Link="MK44SentryGun/Revive"/>
+            <Cooldown Link="MK44SentryGun/Revive"/>
+        </ReviveInfoBase>
+    </CUnit>
+    <CUnit id="LNM2SentryGun">
+        <DeathRevealRadius value="3"/>
+        <ReviveType value="MK44SentryGun"/>
+        <Race value="Terr"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="Turnable" value="0"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="NoScore" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
+        <FlagArray index="AILifetime" value="1"/>
+        <FlagArray index="AIDefense" value="1"/>
+        <FlagArray index="ArmorDisabledWhileConstructing" value="1"/>
+        <FogVisibility value="Snapshot"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Burrow" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Structure" value="1"/>
+        <Collide index="RoachBurrow" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <LifeStart value="350"/>
+        <LifeMax value="350"/>
+        <LifeArmor value="7"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranBuildingPlating"/>
+        <EnergyStart value="200"/>
+        <EnergyMax value="400"/>
+        <StationaryTurningRate value="719.4726"/>
+        <TurningRate value="719.4726"/>
+        <Sight value="15"/>
+        <CostResource index="Minerals" value="100"/>
+        <RepairTime value="50"/>
+        <AttackTargetPriority value="20"/>
+        <AbilArray Link="BuildInProgress"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="HeroInventoryMG"/>
+        <AbilArray Link="SelfDestruct"/>
+        <BehaviorArray Link="LightFilter"/>
+        <BehaviorArray Link="XPSharing"/>
+        <BehaviorArray Link="FireSuppressionSystem"/>
+        <WeaponArray Link="MountedFlamethrower" Turret="AutoTurret"/>
+        <CardLayouts>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="AttackBuilding" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="SelfDestruct" Type="AbilCmd" AbilCmd="SelfDestruct,On" Row="2" Column="4"/>
+        </CardLayouts>
+        <Radius value="0"/>
+        <SeparationRadius value="0"/>
+        <SubgroupPriority value="2"/>
+        <MinimapRadius value="0.75"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <TacticalAI value="MK44SentryGun"/>
+        <LeaderAlias value="MK44SentryGun"/>
+        <HotkeyAlias value="MK44SentryGun"/>
+        <SelectAlias value="MK44SentryGun"/>
+        <SubgroupAlias value="MK44SentryGun"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="346"/>
+        <HotkeyCategory value="Unit/Category/TerranUnits"/>
+        <KillDisplay value="Never"/>
+        <RankDisplay value="Never"/>
+        <AIEvaluateAlias value="MK44SentryGun"/>
+        <ReviveInfoBase>
+            <Charge Link="MK44SentryGun/Revive"/>
+            <Cooldown Link="MK44SentryGun/Revive"/>
+        </ReviveInfoBase>
+    </CUnit>
+    <CUnit id="LNSquadDesignatedMarksman">
+        <DeathRevealRadius value="3"/>
+        <Race value="Terr"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <Attributes index="Summoned" value="1"/>
+        <LifeStart value="390"/>
+        <LifeMax value="390"/>
+        <LifeRegenRate value="0.25"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranInfantryArmor"/>
+        <EnergyStart value="20"/>
+        <EnergyMax value="20"/>
+        <Speed value="2.8984"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="46.0625"/>
+        <StationaryTurningRate value="999.8437"/>
+        <TurningRate value="999.8437"/>
+        <Sight value="15"/>
+        <Food value="-1"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="50"/>
+        <RepairTime value="20"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="35"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="Sprint"/>
+        <AbilArray Link="ReloadNPC"/>
+        <AbilArray Link="PerformSelfAidMini"/>
+        <AbilArray Link="BinocularsLN"/>
+        <AbilArray Link="Jump"/>
+        <AbilArray Link="MiniInventorySDM"/>
+        <AbilArray Link="Prone"/>
+        <AbilArray Link="RapidFireLN"/>
+        <AbilArray Link="FieldCamera2"/>
+        <BehaviorArray Link="Training1"/>
+        <BehaviorArray Link="Training3"/>
+        <BehaviorArray Link="LNReloadAI"/>
+        <BehaviorArray Link="XPSharing"/>
+        <BehaviorArray Link="MarksmanshipLN"/>
+        <BehaviorArray Link="WeakPointTargetingLN"/>
+        <BehaviorArray Link="Critical3xDamage2"/>
+        <BehaviorArray Link="CriticalRapid"/>
+        <BehaviorArray Link="SpecialForcesExpertise"/>
+        <WeaponArray Link="DMRLN"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="AdditionalActions" Type="Submenu" SubmenuCardId="0003" Row="1" Column="3"/>
+            <LayoutButtons Face="Binoculars" Type="AbilCmd" AbilCmd="BinocularsLN,Execute" Row="2" Column="0"/>
+            <LayoutButtons>
+                <Face value="MarksmanshipLN"/>
+                <Type value="Passive"/>
+                <AbilCmd value="MarksmanshipLN,On"/>
+                <Behavior value="Critical3xDamage2"/>
+                <Requirements value="LNTraining4"/>
+                <Row value="1"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons Face="RapidFireOff" Type="AbilCmd" AbilCmd="RapidFireLN,Off" Row="2" Column="1"/>
+            <LayoutButtons Face="RapidFireLN" Type="AbilCmd" AbilCmd="RapidFireLN,On" Row="2" Column="1"/>
+            <LayoutButtons Face="FieldCameraSDM" Type="AbilCmd" AbilCmd="FieldCamera2,Execute" Row="2" Column="2"/>
+        </CardLayouts>
+        <CardLayouts CardId="0003">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="Reload2" Type="AbilCmd" AbilCmd="ReloadNPC,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="PerformSelfAid" Type="AbilCmd" AbilCmd="PerformSelfAidMini,Execute" Row="0" Column="2"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="Prone" Type="AbilCmd" AbilCmd="Prone,Execute" Row="0" Column="3"/>
+            <LayoutButtons>
+                <Face value="WeakPointTargeting"/>
+                <Type value="Passive"/>
+                <Behavior value="WeakPointTargetingLN"/>
+                <Requirements value="LNTraining2"/>
+                <Row value="1"/>
+                <Column value="0"/>
+            </LayoutButtons>
+        </CardLayouts>
+        <Radius value="0.375"/>
+        <SeparationRadius value="0.375"/>
+        <InnerRadius value="0.375"/>
+        <CargoSize value="1"/>
+        <ScoreMake value="50"/>
+        <ScoreKill value="100"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="13"/>
+        <MinimapRadius value="0.375"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <TacticalAI value="Marine"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="21"/>
+        <HotkeyCategory value="Unit/Category/LNClassic"/>
+        <KillDisplay value="Never"/>
+        <AIEvaluateAlias value="Marine"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="33"/>
+            <ChanceArray index="Idle" value="33"/>
+            <ChanceArray index="Turn" value="33"/>
+        </Fidget>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
+        <ReviveInfoBase>
+            <Charge Link="Marine/Revive"/>
+            <Cooldown Link="Marine/Revive"/>
+        </ReviveInfoBase>
+        <EffectArray index="Birth" value="EquipSDMSet"/>
+    </CUnit>
+    <CUnit id="PlatoonLeader" parent="UnitTemplate">
+        <Description value="Button/Tooltip/11APlatoonLeader"/>
+        <DeathRevealFilters value="Visible;Enemy,Missile,Hidden"/>
+        <Race value="Terr"/>
+        <LifeArmorDisplayFlags index="CollapseBuffed" value="0"/>
+        <LifeRegenRate value="0.25"/>
+        <LifeArmorName value="Unit/LifeArmorName/LandWarriorSystemLight"/>
+        <SpeedDisplayFlags index="CollapseBuffed" value="0"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="50"/>
+        <RepairTime value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="HeroInventoryRifle"/>
+        <AbilArray Link="LearnAbilitiesPlatoonLeader"/>
+        <AbilArray Link="SoldierSkills"/>
+        <AbilArray Link="Sprint"/>
+        <AbilArray Link="ReloadHero"/>
+        <AbilArray Link="ImmediateRemedialAction"/>
+        <AbilArray Link="PerformSelfAid"/>
+        <AbilArray Link="FiremodeAssaultRifle"/>
+        <AbilArray Link="Marksmanship"/>
+        <AbilArray Link="DropMagazine"/>
+        <AbilArray Link="Jump"/>
+        <AbilArray Link="LeadershipSkills"/>
+        <AbilArray Link="BinocularsPL"/>
+        <AbilArray Link="FieldAid"/>
+        <AbilArray Link="LaserDesignatorPL"/>
+        <AbilArray Link="CallForFirePL"/>
+        <AbilArray Link="Prone"/>
+        <AbilArray Link="Concentration"/>
+        <AbilArray Link="Leadership"/>
+        <AbilArray Link="Training"/>
+        <AbilArray Link="Dismiss"/>
+        <AbilArray Link="LNReport"/>
+        <AbilArray Link="LNSITREP"/>
+        <AbilArray Link="WeaponsHold2"/>
+        <BehaviorArray Link="HeroLevels"/>
+        <BehaviorArray Link="Fitness"/>
+        <BehaviorArray Link="Dexterity"/>
+        <BehaviorArray Link="Mechanical"/>
+        <BehaviorArray Link="StartingStats"/>
+        <BehaviorArray Link="RifleButt"/>
+        <BehaviorArray Link="Marksmanship1"/>
+        <BehaviorArray Link="Marksmanship2"/>
+        <BehaviorArray Link="Marksmanship3"/>
+        <BehaviorArray Link="Marksmanship4"/>
+        <BehaviorArray Link="SoldierSkills1"/>
+        <BehaviorArray Link="SoldierSkills2"/>
+        <BehaviorArray Link="SoldierSkills3"/>
+        <BehaviorArray Link="SoldierSkills4"/>
+        <BehaviorArray Link="Criticallvl1"/>
+        <BehaviorArray Link="Criticallvl2"/>
+        <BehaviorArray Link="Criticallvl3"/>
+        <BehaviorArray Link="Criticallvl4"/>
+        <BehaviorArray Link="SpecialForcesExpertise"/>
+        <BehaviorArray Link="Training1SF"/>
+        <BehaviorArray Link="Training3SF"/>
+        <WeaponArray index="0" Link="HeroAssaultRifle"/>
+        <EffectArray index="Birth" value="EquipPlatoonLeaderSet"/>
+        <EffectArray index="Revive" value="EquipPlatoonLeaderSet"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons>
+                <Face value="LearnAbilities"/>
+                <Type value="Submenu"/>
+                <SubmenuAbilState value="LearnAbilitiesPlatoonLeader"/>
+                <SubmenuCardId value="0002"/>
+                <Row value="1"/>
+                <Column value="4"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel4"/>
+                <Type value="Passive"/>
+                <Behavior value="SoldierSkills4"/>
+                <Requirements value="SoldierSkills04"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel3"/>
+                <Type value="Passive"/>
+                <Behavior value="SoldierSkills3"/>
+                <Requirements value="SoldierSkills03"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel2"/>
+                <Type value="Passive"/>
+                <Behavior value="SoldierSkills2"/>
+                <Requirements value="SoldierSkills02"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel1"/>
+                <Type value="Passive"/>
+                <Behavior value="SoldierSkills1"/>
+                <Requirements value="SoldierSkills01"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons Face="AdditionalActions" Type="Submenu" SubmenuCardId="0003" Row="1" Column="3"/>
+            <LayoutButtons>
+                <Face value="Marksmanship"/>
+                <Type value="Passive"/>
+                <Behavior value="Marksmanship4"/>
+                <Requirements value="Marksmanship04"/>
+                <Row value="2"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="Marksmanship"/>
+                <Type value="Passive"/>
+                <Behavior value="Marksmanship3"/>
+                <Requirements value="Marksmanship03"/>
+                <Row value="2"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="Marksmanship"/>
+                <Type value="Passive"/>
+                <Behavior value="Marksmanship2"/>
+                <Requirements value="Marksmanship02"/>
+                <Row value="2"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="Marksmanship"/>
+                <Type value="Passive"/>
+                <AbilCmd value="Marksmanship,On"/>
+                <Behavior value="Marksmanship1"/>
+                <Requirements value="Marksmanship01M"/>
+                <Row value="2"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons Face="CallForFirePL" Type="AbilCmd" AbilCmd="CallForFirePL,Execute" Row="2" Column="4"/>
+            <LayoutButtons Face="BinocularsPL" Type="AbilCmd" AbilCmd="BinocularsPL,Execute" Row="1" Column="0"/>
+            <LayoutButtons Face="FieldAid" Type="AbilCmd" AbilCmd="FieldAid,Execute" Row="1" Column="1"/>
+            <LayoutButtons Face="LaserDesignatorPL" Type="AbilCmd" AbilCmd="LaserDesignatorPL,Execute" Row="1" Column="2"/>
+            <LayoutButtons Face="Leadership" Type="AbilCmd" AbilCmd="Leadership,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="Training" Type="Passive" Requirements="TrainingShow" Row="2" Column="3"/>
+        </CardLayouts>
+        <CardLayouts CardId="0002">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="LearnSoldierSkills" Type="AbilCmd" AbilCmd="LearnAbilitiesPlatoonLeader,Learn1" Row="0" Column="0"/>
+            <LayoutButtons Face="Marksmanship" Type="AbilCmd" AbilCmd="LearnAbilitiesPlatoonLeader,Learn3" Row="0" Column="1"/>
+            <LayoutButtons Face="LeadershipSkills" Type="AbilCmd" AbilCmd="LearnAbilitiesPlatoonLeader,Learn4" Row="0" Column="2"/>
+            <LayoutButtons Face="Leadership" Type="AbilCmd" AbilCmd="LearnAbilitiesPlatoonLeader,Learn2" Row="0" Column="3"/>
+            <LayoutButtons Face="Training" Type="AbilCmd" AbilCmd="LearnAbilitiesPlatoonLeader,Learn5" Row="0" Column="4"/>
+        </CardLayouts>
+        <CardLayouts CardId="0003">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="Reload" Type="AbilCmd" AbilCmd="ReloadHero,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="ImmediateRemedialAction" Type="AbilCmd" AbilCmd="ImmediateRemedialAction,Execute" Row="0" Column="2"/>
+            <LayoutButtons Face="DropMagazine" Type="AbilCmd" AbilCmd="DropMagazine,Execute" Row="0" Column="3"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="PerformSelfAid" Type="AbilCmd" AbilCmd="PerformSelfAid,Execute" Row="1" Column="0"/>
+            <LayoutButtons>
+                <Face value="RifleButt"/>
+                <Type value="Passive"/>
+                <Behavior value="RifleButt"/>
+                <Requirements value="RifleButt"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons Face="FiremodeBurst" Type="AbilCmd" AbilCmd="FiremodeAssaultRifle,On" Row="1" Column="1"/>
+            <LayoutButtons Face="FiremodeSemi" Type="AbilCmd" AbilCmd="FiremodeAssaultRifle,Off" Row="1" Column="1"/>
+            <LayoutButtons Face="Prone" Type="AbilCmd" AbilCmd="Prone,Execute" Row="1" Column="2"/>
+            <LayoutButtons Face="Dismiss" Type="AbilCmd" AbilCmd="Dismiss,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="LNSITREP" Type="AbilCmd" AbilCmd="LNSITREP,Execute" Row="1" Column="4"/>
+            <LayoutButtons Face="LNReport" Type="AbilCmd" AbilCmd="LNReport,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="Concentration" Type="AbilCmd" AbilCmd="Concentration,On" Row="2" Column="3"/>
+            <LayoutButtons Face="HoldFire3" Type="AbilCmd" AbilCmd="WeaponsHold2,On" Row="1" Column="3"/>
+            <LayoutButtons Face="HoldFireOff2" Type="AbilCmd" AbilCmd="WeaponsHold2,Off" Row="1" Column="3"/>
+        </CardLayouts>
+        <Radius value="0.375"/>
+        <SeparationRadius value="0.375"/>
+        <DeadInnerRadius value="0"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="15"/>
+        <EditorCategories value="ObjectType:Hero,ObjectFamily:Melee"/>
+        <TacticalAI value="Marine"/>
+        <SelectAlias value="PlatoonLeader"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="21"/>
+        <HotkeyCategory value="Hotkey/Catagory/MOSClassic"/>
+        <AIEvaluateAlias value="Marine"/>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
+        <ReviveInfoBase>
+            <Charge Link="Marine/Revive"/>
+            <Cooldown Link="Marine/Revive"/>
+        </ReviveInfoBase>
+        <Attributes index="Light" value="0"/>
+    </CUnit>
+    <CUnit id="LNCombatEngineer">
+        <DeathRevealRadius value="3"/>
+        <Race value="Terr"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <Attributes index="Summoned" value="1"/>
+        <LifeStart value="390"/>
+        <LifeMax value="390"/>
+        <LifeArmor value="1"/>
+        <LifeRegenRate value="0.25"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranInfantryArmor"/>
+        <EnergyStart value="18"/>
+        <EnergyMax value="18"/>
+        <Speed value="2.8984"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="46.0625"/>
+        <StationaryTurningRate value="999.8437"/>
+        <TurningRate value="999.8437"/>
+        <Sight value="15"/>
+        <Food value="-1"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="50"/>
+        <RepairTime value="20"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="35"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="Sprint"/>
+        <AbilArray Link="ReloadNPC"/>
+        <AbilArray Link="PerformSelfAidMini"/>
+        <AbilArray Link="ClusterRocketsLN"/>
+        <AbilArray Link="Jump"/>
+        <AbilArray Link="MiniInventoryShotgun"/>
+        <AbilArray Link="Prone"/>
+        <AbilArray Link="DisarmLN"/>
+        <AbilArray Link="LNM1SentryGun"/>
+        <AbilArray Link="LNM2SentryGun"/>
+        <AbilArray Link="RepairLN"/>
+        <BehaviorArray Link="Training1"/>
+        <BehaviorArray Link="Training3"/>
+        <BehaviorArray Link="RifleButtLN"/>
+        <BehaviorArray Link="LNReloadAI"/>
+        <BehaviorArray Link="XPSharing"/>
+        <BehaviorArray Link="SpecialForcesExpertise"/>
+        <WeaponArray Link="LNShotgun"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="AdditionalActions" Type="Submenu" SubmenuCardId="0003" Row="1" Column="3"/>
+            <LayoutButtons>
+                <Face value="RifleButt"/>
+                <Type value="Passive"/>
+                <Behavior value="RifleButtLN"/>
+                <Requirements value="LNTraining4"/>
+                <Row value="1"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons Face="ClusterRocketsMini" Type="AbilCmd" AbilCmd="ClusterRocketsLN,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="LNM1SentryGun" Type="AbilCmd" AbilCmd="LNM1SentryGun,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="LNM2SentryGun" Type="AbilCmd" AbilCmd="LNM2SentryGun,Execute" Row="2" Column="2"/>
+        </CardLayouts>
+        <CardLayouts CardId="0003">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="Reload2" Type="AbilCmd" AbilCmd="ReloadNPC,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="PerformSelfAid" Type="AbilCmd" AbilCmd="PerformSelfAidMini,Execute" Row="0" Column="2"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="Prone" Type="AbilCmd" AbilCmd="Prone,Execute" Row="0" Column="3"/>
+            <LayoutButtons Face="Disarm" Type="AbilCmd" AbilCmd="DisarmLN,Execute" Row="1" Column="3"/>
+            <LayoutButtons Face="RepairMini" Type="AbilCmd" AbilCmd="RepairLN,Execute" Row="1" Column="4"/>
+        </CardLayouts>
+        <Radius value="0.375"/>
+        <SeparationRadius value="0.375"/>
+        <InnerRadius value="0.375"/>
+        <CargoSize value="1"/>
+        <ScoreMake value="50"/>
+        <ScoreKill value="100"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="13"/>
+        <MinimapRadius value="0.375"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <TacticalAI value="Marine"/>
+        <Item value="8SlotBag"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="21"/>
+        <HotkeyCategory value="Unit/Category/LNClassic"/>
+        <KillDisplay value="Never"/>
+        <AIEvaluateAlias value="Marine"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="33"/>
+            <ChanceArray index="Idle" value="33"/>
+            <ChanceArray index="Turn" value="33"/>
+        </Fidget>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
+        <ReviveInfoBase>
+            <Charge Link="Marine/Revive"/>
+            <Cooldown Link="Marine/Revive"/>
+        </ReviveInfoBase>
+        <EffectArray index="Birth" value="EquipShotgun"/>
+    </CUnit>
+    <CUnit id="LNAutomaticRifleman">
+        <DeathRevealRadius value="3"/>
+        <Race value="Terr"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <Attributes index="Summoned" value="1"/>
+        <LifeStart value="390"/>
+        <LifeMax value="390"/>
+        <LifeArmor value="1"/>
+        <LifeRegenRate value="0.25"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranInfantryArmor"/>
+        <EnergyStart value="100"/>
+        <EnergyMax value="100"/>
+        <Speed value="2.8984"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="46.0625"/>
+        <StationaryTurningRate value="999.8437"/>
+        <TurningRate value="999.8437"/>
+        <Sight value="15"/>
+        <Food value="-1"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="50"/>
+        <RepairTime value="20"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="35"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="Sprint"/>
+        <AbilArray Link="ReloadNPC"/>
+        <AbilArray Link="PerformSelfAidMini"/>
+        <AbilArray Link="SuppressiveFireLN"/>
+        <AbilArray Link="Jump"/>
+        <AbilArray Link="MiniInventoryMG"/>
+        <AbilArray Link="Prone"/>
+        <AbilArray Link="LNIncendiary"/>
+        <BehaviorArray Link="Training1"/>
+        <BehaviorArray Link="Training3"/>
+        <BehaviorArray Link="LNReloadAI"/>
+        <BehaviorArray Link="XPSharing"/>
+        <BehaviorArray Link="MarksmanshipLN"/>
+        <BehaviorArray Link="Critical3xDamage2"/>
+        <BehaviorArray Link="CriticalSuppress2"/>
+        <BehaviorArray Link="BurstCyclerPause"/>
+        <BehaviorArray Link="EntrenchedAB"/>
+        <BehaviorArray Link="SpecialForcesExpertise"/>
+        <WeaponArray Link="SquadAutomaticWeaponLN"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="Entrenched" Type="Passive" Behavior="Entrenched" Row="1" Column="3"/>
+            <LayoutButtons Face="SuppressiveFireOff" Type="AbilCmd" AbilCmd="SuppressiveFireLN,Off" Row="2" Column="0"/>
+            <LayoutButtons Face="SuppressiveFireLN" Type="AbilCmd" AbilCmd="SuppressiveFireLN,On" Row="2" Column="0"/>
+            <LayoutButtons>
+                <Face value="IncendiaryRoundsLN"/>
+                <Type value="AbilCmd"/>
+                <AbilCmd value="LNIncendiary,On"/>
+                <Behavior value="IncendiaryRoundsLN"/>
+                <Requirements value="LNTraining4"/>
+                <Row value="1"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons Face="IncendiaryRoundsOff" Type="AbilCmd" AbilCmd="LNIncendiary,Off" Row="1" Column="0"/>
+            <LayoutButtons>
+                <Face value="MarksmanshipLN"/>
+                <Type value="Passive"/>
+                <Behavior value="MarksmanshipLN"/>
+                <Requirements value="LNTraining4"/>
+                <Row value="1"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="BurstCounter"/>
+                <Type value="Passive"/>
+                <Behavior value="BurstCounter"/>
+                <Requirements value="NoM241MMG"/>
+                <Row value="1"/>
+                <Column value="2"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="BurstCounter3"/>
+                <Type value="Passive"/>
+                <Behavior value="BurstCounter2"/>
+                <Requirements value="M241MMG"/>
+                <Row value="1"/>
+                <Column value="2"/>
+            </LayoutButtons>
+            <LayoutButtons Face="AdditionalActions" Type="Submenu" SubmenuCardId="0003" Row="1" Column="4"/>
+        </CardLayouts>
+        <CardLayouts CardId="0003">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="Reload2" Type="AbilCmd" AbilCmd="ReloadNPC,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="PerformSelfAid" Type="AbilCmd" AbilCmd="PerformSelfAidMini,Execute" Row="0" Column="2"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="Prone" Type="AbilCmd" AbilCmd="Prone,Execute" Row="0" Column="3"/>
+        </CardLayouts>
+        <Radius value="0.375"/>
+        <SeparationRadius value="0.375"/>
+        <InnerRadius value="0.375"/>
+        <CargoSize value="1"/>
+        <ScoreMake value="50"/>
+        <ScoreKill value="100"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="13"/>
+        <MinimapRadius value="0.375"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <TacticalAI value="Marine"/>
+        <Item value="8SlotBag"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="21"/>
+        <HotkeyCategory value="Unit/Category/LNClassic"/>
+        <KillDisplay value="Never"/>
+        <AIEvaluateAlias value="Marine"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="33"/>
+            <ChanceArray index="Idle" value="33"/>
+            <ChanceArray index="Turn" value="33"/>
+        </Fidget>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
+        <ReviveInfoBase>
+            <Charge Link="Marine/Revive"/>
+            <Cooldown Link="Marine/Revive"/>
+        </ReviveInfoBase>
+        <EffectArray index="Birth" value="EquipAutomaticRiflemanSet"/>
+    </CUnit>
+    <CUnit id="LNRifleman">
+        <DeathRevealRadius value="3"/>
+        <Race value="Terr"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <Attributes index="Summoned" value="1"/>
+        <LifeStart value="390"/>
+        <LifeMax value="390"/>
+        <LifeRegenRate value="0.25"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranInfantryArmor"/>
+        <EnergyStart value="40"/>
+        <EnergyMax value="40"/>
+        <Speed value="2.8984"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="46.0625"/>
+        <StationaryTurningRate value="999.8437"/>
+        <TurningRate value="999.8437"/>
+        <Sight value="15"/>
+        <Food value="-1"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="50"/>
+        <RepairTime value="20"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="35"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="Sprint"/>
+        <AbilArray Link="ReloadNPC"/>
+        <AbilArray Link="PerformSelfAidMini"/>
+        <AbilArray Link="FragGrenadeLN"/>
+        <AbilArray Link="Jump"/>
+        <AbilArray Link="MiniInventoryRifle"/>
+        <AbilArray Link="Prone"/>
+        <AbilArray Link="SmokeGrenadeLN"/>
+        <AbilArray Link="LNFiremode"/>
+        <BehaviorArray Link="Training1"/>
+        <BehaviorArray Link="Training3"/>
+        <BehaviorArray Link="RifleButtLN"/>
+        <BehaviorArray Link="LNReloadAI"/>
+        <BehaviorArray Link="XPSharing"/>
+        <BehaviorArray Link="MarksmanshipLN"/>
+        <BehaviorArray Link="Critical3xDamage2"/>
+        <BehaviorArray Link="SpecialForcesExpertise"/>
+        <WeaponArray Link="LNAssaultRifle"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="AdditionalActions" Type="Submenu" SubmenuCardId="0003" Row="1" Column="3"/>
+            <LayoutButtons Face="FragGrenadeItem" Type="AbilCmd" AbilCmd="FragGrenadeLN,Execute" Row="2" Column="0"/>
+            <LayoutButtons>
+                <Face value="RifleButt"/>
+                <Type value="Passive"/>
+                <Behavior value="RifleButtLN"/>
+                <Requirements value="LNTraining4"/>
+                <Row value="1"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="MarksmanshipLN"/>
+                <Type value="Passive"/>
+                <AbilCmd value="MarksmanshipLN,On"/>
+                <Behavior value="Critical3xDamage2"/>
+                <Requirements value="LNTraining4"/>
+                <Row value="1"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons Face="SmokeGrenade" Type="AbilCmd" AbilCmd="SmokeGrenadeLN,Execute" Row="2" Column="1"/>
+        </CardLayouts>
+        <CardLayouts CardId="0003">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="Reload2" Type="AbilCmd" AbilCmd="ReloadNPC,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="PerformSelfAid" Type="AbilCmd" AbilCmd="PerformSelfAidMini,Execute" Row="0" Column="2"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="Prone" Type="AbilCmd" AbilCmd="Prone,Execute" Row="0" Column="3"/>
+            <LayoutButtons Face="FiremodeBurst" Type="AbilCmd" AbilCmd="LNFiremode,On" Row="1" Column="0"/>
+            <LayoutButtons Face="FiremodeSemi" Type="AbilCmd" AbilCmd="LNFiremode,Off" Row="1" Column="0"/>
+        </CardLayouts>
+        <Radius value="0.375"/>
+        <SeparationRadius value="0.375"/>
+        <InnerRadius value="0.375"/>
+        <CargoSize value="1"/>
+        <ScoreMake value="50"/>
+        <ScoreKill value="100"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="14"/>
+        <MinimapRadius value="0.375"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <TacticalAI value="Marine"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="21"/>
+        <HotkeyCategory value="Unit/Category/LNClassic"/>
+        <KillDisplay value="Never"/>
+        <AIEvaluateAlias value="Marine"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="33"/>
+            <ChanceArray index="Idle" value="33"/>
+            <ChanceArray index="Turn" value="33"/>
+        </Fidget>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
+        <ReviveInfoBase>
+            <Charge Link="Marine/Revive"/>
+            <Cooldown Link="Marine/Revive"/>
+        </ReviveInfoBase>
+        <EffectArray index="Birth" value="EquipRiflemanSet"/>
+    </CUnit>
+    <CUnit id="LNJavelinGunner">
+        <DeathRevealRadius value="3"/>
+        <Race value="Terr"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <Attributes index="Summoned" value="1"/>
+        <LifeStart value="390"/>
+        <LifeMax value="390"/>
+        <LifeRegenRate value="0.25"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranInfantryArmor"/>
+        <EnergyStart value="40"/>
+        <EnergyMax value="40"/>
+        <Speed value="2.8984"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="46.0625"/>
+        <StationaryTurningRate value="999.8437"/>
+        <TurningRate value="999.8437"/>
+        <Sight value="15"/>
+        <Food value="-1"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="50"/>
+        <RepairTime value="20"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="35"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="Sprint"/>
+        <AbilArray Link="ReloadNPC"/>
+        <AbilArray Link="PerformSelfAidMini"/>
+        <AbilArray Link="LNMRL"/>
+        <AbilArray Link="Jump"/>
+        <AbilArray Link="MiniInventoryRifle"/>
+        <AbilArray Link="Prone"/>
+        <AbilArray Link="DisarmLN"/>
+        <AbilArray Link="PlaceExplosiveChargeLN"/>
+        <AbilArray Link="ClaymoreLN"/>
+        <BehaviorArray Link="Training1"/>
+        <BehaviorArray Link="Training3"/>
+        <BehaviorArray Link="RifleButtLN"/>
+        <BehaviorArray Link="LNReloadAI"/>
+        <BehaviorArray Link="XPSharing"/>
+        <BehaviorArray Link="SpecialForcesExpertise"/>
+        <WeaponArray Link="AssaultRifleJav"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="AdditionalActions" Type="Submenu" SubmenuCardId="0003" Row="1" Column="3"/>
+            <LayoutButtons Face="MRL" Type="AbilCmd" AbilCmd="LNMRL,Execute" Row="2" Column="0"/>
+            <LayoutButtons>
+                <Face value="RifleButt"/>
+                <Type value="Passive"/>
+                <Behavior value="RifleButtLN"/>
+                <Requirements value="LNTraining4"/>
+                <Row value="1"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons Face="ExplosiveCharge" Type="AbilCmd" AbilCmd="PlaceExplosiveChargeLN,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="Claymore" Type="AbilCmd" AbilCmd="ClaymoreLN,Execute" Row="2" Column="2"/>
+        </CardLayouts>
+        <CardLayouts CardId="0003">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="Reload2" Type="AbilCmd" AbilCmd="ReloadNPC,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="PerformSelfAid" Type="AbilCmd" AbilCmd="PerformSelfAidMini,Execute" Row="0" Column="2"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="Prone" Type="AbilCmd" AbilCmd="Prone,Execute" Row="0" Column="3"/>
+            <LayoutButtons Face="Disarm" Type="AbilCmd" AbilCmd="DisarmLN,Execute" Row="1" Column="3"/>
+        </CardLayouts>
+        <Radius value="0.375"/>
+        <SeparationRadius value="0.375"/>
+        <InnerRadius value="0.375"/>
+        <CargoSize value="1"/>
+        <ScoreMake value="50"/>
+        <ScoreKill value="100"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="13"/>
+        <MinimapRadius value="0.375"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <TacticalAI value="Marine"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="21"/>
+        <HotkeyCategory value="Unit/Category/LNClassic"/>
+        <KillDisplay value="Never"/>
+        <AIEvaluateAlias value="Marine"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="33"/>
+            <ChanceArray index="Idle" value="33"/>
+            <ChanceArray index="Turn" value="33"/>
+        </Fidget>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
+        <ReviveInfoBase>
+            <Charge Link="Marine/Revive"/>
+            <Cooldown Link="Marine/Revive"/>
+        </ReviveInfoBase>
+        <EffectArray index="Birth" value="EquipJavelinGunnerSet"/>
+    </CUnit>
+    <CBehaviorBuff id="SpecialForcesExpertise">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="SpecialForces"/>
+        <InitialEffect value="SFRemoveRankModifier"/>
+        <Modification MoveSpeedBonus="0.1015" WeaponRange="1">
+            <DamageDealtFraction index="Spell" value="0.35"/>
+            <DamageDealtFraction index="Melee" value="0.35"/>
+            <DamageDealtFraction index="Ranged" value="0.35"/>
+            <DamageDealtFraction index="Splash" value="0.35"/>
+            <DamageDealtFraction index="NoProc" value="0.35"/>
+            <VitalMaxArray index="Life" value="-220"/>
+            <VitalMaxArray index="Shields" value="20"/>
+            <VitalMaxAdditiveMultiplierArray index="Energy" value="0.25"/>
+            <VitalRegenArray index="Shields" value="0.5"/>
+            <RateMultiplierArray index="Cooldown" value="1.1"/>
+        </Modification>
+    </CBehaviorBuff>
+</Catalog>

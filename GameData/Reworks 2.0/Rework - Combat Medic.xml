@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CValidatorUnitCompareBehaviorCount id="InsulatedBattery">
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="InsulatedBattery"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CEffectApplyBehavior id="AnabolicSteroidsAB">
+        <EditorCategories value="Race:Terran"/>
+        <Behavior value="AnabolicSteroids"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="AnabolicSteroidsDrawbackAB">
+        <EditorCategories value="Race:Terran"/>
+        <Behavior value="AnabolicSteroidsDrawback"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="ImprovedAnabolicSteroidsAB">
+        <EditorCategories value="Race:Terran"/>
+        <Behavior value="ImprovedAnabolicSteroids"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="ImprovedAnabolicSteroidsDrawbackAB">
+        <EditorCategories value="Race:Terran"/>
+        <Behavior value="ImprovedAnabolicSteroidsDrawback"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="ImprovedReactiveAmphetaminesAB">
+        <EditorCategories value="Race:Terran"/>
+        <Behavior value="ImprovedReactiveAmphetamines"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="ImprovedReactiveAmphetaminesDrawbackAB">
+        <EditorCategories value="Race:Terran"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="PainkillersAB">
+        <EditorCategories value="Race:Terran"/>
+        <Behavior value="Painkillers"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="PainkillersDrawbackAB">
+        <EditorCategories value="Race:Terran"/>
+        <Behavior value="PainkillersDrawback"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="ReactiveAmphetaminesAB">
+        <EditorCategories value="Race:Terran"/>
+        <Behavior value="ReactiveAmphetamines"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="ReactiveAmphetaminesDrawbackAB">
+        <EditorCategories value="Race:Terran"/>
+        <Behavior value="ReactiveAmphetaminesDrawback"/>
+    </CEffectApplyBehavior>
+    <CAbilEffectTarget id="AnabolicSteroids">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="AnabolicSteroidsAB"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="95"/>
+            <Charge Link="Abil/AnabolicPerformanceEnhancement"/>
+            <Cooldown Link="Abil/AnabolicPerformanceEnhancement" TimeUse="60"/>
+        </Cost>
+        <InterruptCost>
+            <Charge Link="Abil/AnabolicPerformanceEnhancement"/>
+            <Cooldown Link="Abil/AnabolicPerformanceEnhancement"/>
+        </InterruptCost>
+        <TargetFilters value="Biological;Enemy,Psionic,Structure,Dead,Hidden,Invulnerable"/>
+        <Range value="2"/>
+        <Marker Link="Abil/AnabolicPerformanceEnhancement"/>
+        <AINotifyEffect value="AnabolicPerformanceEnhancement"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="AnabolicPerformanceEnhancement" Requirements="AUG01"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="ImprovedAnabolicSteroids">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="ImprovedAnabolicSteroidsAB"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="80"/>
+            <Charge Link="Abil/ImprovedAnabolicPerformanceEnhancement"/>
+            <Cooldown Link="Abil/ImprovedAnabolicPerformanceEnhancement" TimeUse="45"/>
+        </Cost>
+        <InterruptCost>
+            <Charge Link="Abil/ImprovedAnabolicPerformanceEnhancement"/>
+            <Cooldown Link="Abil/ImprovedAnabolicPerformanceEnhancement"/>
+        </InterruptCost>
+        <TargetFilters value="Biological;Enemy,Psionic,Structure,Dead,Hidden,Invulnerable"/>
+        <Range value="2"/>
+        <Marker Link="Abil/ImprovedAnabolicPerformanceEnhancement"/>
+        <AINotifyEffect value="ImprovedAnabolicPerformanceEnhancement"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="ImprovedAnabolicPerformanceEnhancement" Requirements="AUG03B"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="ImprovedReactiveAmphetamines">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="ImprovedReactiveAmphetaminesAB"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="90"/>
+            <Charge Link="Abil/ImprovedCognitiveEnhancement"/>
+            <Cooldown Link="Abil/ImprovedCognitiveEnhancement" TimeUse="45"/>
+        </Cost>
+        <InterruptCost>
+            <Charge Link="Abil/ImprovedCognitiveEnhancement"/>
+            <Cooldown Link="Abil/ImprovedCognitiveEnhancement"/>
+        </InterruptCost>
+        <TargetFilters value="Biological;Enemy,Psionic,Structure,Dead,Hidden,Invulnerable"/>
+        <Range value="2"/>
+        <Marker Link="Abil/ImprovedCognitiveEnhancement"/>
+        <AINotifyEffect value="ImprovedCognitiveEnhancementAB"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="ImprovedCognitiveEnhancement" Requirements="AUG05"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="Painkillers">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="PainkillersAB"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="55"/>
+            <Charge Link="Abil/PainKiller"/>
+            <Cooldown Link="Abil/PainKiller" TimeUse="35"/>
+        </Cost>
+        <InterruptCost>
+            <Charge Link="Abil/PainKiller"/>
+            <Cooldown Link="Abil/PainKiller"/>
+        </InterruptCost>
+        <TargetFilters value="Biological;Enemy,Psionic,Structure,Dead,Hidden,Invulnerable"/>
+        <Range value="2"/>
+        <Marker Link="Abil/PainKiller"/>
+        <AINotifyEffect value="PainKiller"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="PainKiller" Requirements="AUG03"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="ReactiveAmphetamines">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="ReactiveAmphetaminesAB"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="105"/>
+            <Charge Link="Abil/CognitiveEnhancement"/>
+            <Cooldown Link="Abil/CognitiveEnhancement" TimeUse="60"/>
+        </Cost>
+        <InterruptCost>
+            <Charge Link="Abil/CognitiveEnhancement"/>
+            <Cooldown Link="Abil/CognitiveEnhancement"/>
+        </InterruptCost>
+        <TargetFilters value="Biological;Enemy,Psionic,Dead,Hidden,Invulnerable"/>
+        <Range value="2"/>
+        <Marker Link="Abil/CognitiveEnhancement"/>
+        <AINotifyEffect value="CognitiveEnhancement"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="CognitiveEnhancement" Requirements="AUG02"/>
+    </CAbilEffectTarget>
+    <CUnit id="BetaCorpsman" parent="UnitTemplateClassic">
+        <Description value="Button/Tooltip/68WBetaCorpsman"/>
+        <Race value="Terr"/>
+        <FlagArray index="Worker" value="1"/>
+        <LifeArmorDisplayFlags index="CollapseBuffed" value="0"/>
+        <LifeRegenRate value="0.25"/>
+        <LifeArmorName value="Unit/LifeArmorName/LandWarriorSystemLight"/>
+        <Speed value="2.8984"/>
+        <SpeedDisplayFlags index="CollapseBuffed" value="0"/>
+        <CostCategory value="Army"/>
+        <RepairTime value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <AbilArray index="0" Link="stop"/>
+        <AbilArray index="1" Link="attack"/>
+        <AbilArray index="3" Link="HeroInventoryRifle"/>
+        <AbilArray index="4" Link="SoldierSkills"/>
+        <AbilArray index="5" Link="Sprint"/>
+        <AbilArray index="6" Link="ReloadHero"/>
+        <AbilArray index="7" Link="ImmediateRemedialAction"/>
+        <AbilArray index="8" Link="FiremodeAssaultRifle"/>
+        <AbilArray index="9" Link="DropMagazine"/>
+        <AbilArray Link="Jump"/>
+        <AbilArray Link="Marksmanship"/>
+        <AbilArray Link="SITREP"/>
+        <AbilArray Link="Prone"/>
+        <AbilArray Link="FragGrenadeMedic"/>
+        <AbilArray Link="FlareGunWO5"/>
+        <AbilArray Link="WeaponsHold2"/>
+        <BehaviorArray Link="RifleButt"/>
+        <BehaviorArray Link="SoldierSkills1"/>
+        <BehaviorArray Link="SoldierSkills2"/>
+        <BehaviorArray Link="SoldierSkills3"/>
+        <BehaviorArray Link="SoldierSkills4"/>
+        <BehaviorArray Link="HealingAura"/>
+        <BehaviorArray Link="Marksmanship1"/>
+        <BehaviorArray Link="Marksmanship2"/>
+        <BehaviorArray Link="Marksmanship3"/>
+        <BehaviorArray Link="Marksmanship4"/>
+        <WeaponArray index="0" Link="HeroAssaultRifle"/>
+        <EffectArray index="Birth" value="EquipCombatMedicSet"/>
+        <EffectArray index="Revive" value="EquipCombatMedicSet"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="0" Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons index="1">
+                <Face value="Stop"/>
+                <Type value="AbilCmd"/>
+                <AbilCmd value="stop,Stop"/>
+                <SubmenuCardId value=""/>
+                <Row value="0"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons index="2">
+                <Face value="MoveHoldPosition"/>
+                <Type value="AbilCmd"/>
+                <AbilCmd value="move,HoldPos"/>
+                <SubmenuCardId value=""/>
+                <Row value="0"/>
+                <Column value="2"/>
+            </LayoutButtons>
+            <LayoutButtons index="3" Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons index="4" Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons index="5">
+                <Face value="LearnAbilities"/>
+                <Type value="Submenu"/>
+                <AbilCmd value=""/>
+                <SubmenuAbilState value="LearnAbilitiesCombatMedic"/>
+                <SubmenuCardId value="0002"/>
+                <Row value="1"/>
+                <Column value="4"/>
+            </LayoutButtons>
+            <LayoutButtons index="6">
+                <Face value="SoldierSkillsLevel4"/>
+                <Type value="Passive"/>
+                <AbilCmd value=""/>
+                <Behavior value="SoldierSkills4"/>
+                <Requirements value="SoldierSkills04"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel3"/>
+                <Type value="Passive"/>
+                <Behavior value="SoldierSkills3"/>
+                <Requirements value="SoldierSkills03"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel2"/>
+                <Type value="Passive"/>
+                <Behavior value="SoldierSkills2"/>
+                <Requirements value="SoldierSkills02"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel1"/>
+                <Type value="Passive"/>
+                <Behavior value="SoldierSkills1"/>
+                <Requirements value="SoldierSkills01"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons Face="AdditionalActions" Type="Submenu" SubmenuCardId="0003" Row="1" Column="3"/>
+            <LayoutButtons Face="Marksmanship" Type="Passive" Requirements="MarksmanshipMedic1M" Row="2" Column="4"/>
+        </CardLayouts>
+        <CardLayouts index="1" CardId="0002">
+            <LayoutButtons Face="LearnSoldierSkills" Type="AbilCmd" AbilCmd="LearnAbilitiesCombatMedic,Learn1" Row="0" Column="0"/>
+            <LayoutButtons Face="LearnMarksmanship" Type="AbilCmd" AbilCmd="LearnAbilitiesCombatMedic,Learn5" Row="0" Column="4"/>
+        </CardLayouts>
+        <CardLayouts index="2" CardId="0003">
+            <LayoutButtons index="0" Face="Cancel" Type="CancelSubmenu" AbilCmd="" Row="2" Column="4"/>
+            <LayoutButtons index="1" Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="0"/>
+            <LayoutButtons index="2" Face="Reload" Type="AbilCmd" AbilCmd="ReloadHero,Execute" Row="0" Column="1"/>
+            <LayoutButtons index="3" Face="ImmediateRemedialAction" Type="AbilCmd" AbilCmd="ImmediateRemedialAction,Execute" Row="0" Column="2"/>
+            <LayoutButtons index="4" Face="DropMagazine" Type="AbilCmd" AbilCmd="DropMagazine,Execute" Row="0" Column="3"/>
+            <LayoutButtons index="5" Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="4"/>
+            <LayoutButtons index="6" Face="PerformSelfAid" Type="AbilCmd" AbilCmd="PerformSelfAid,Execute" Row="1" Column="0"/>
+            <LayoutButtons index="7">
+                <Face value="RifleButt"/>
+                <Type value="Passive"/>
+                <AbilCmd value=""/>
+                <Behavior value="RifleButt"/>
+                <Requirements value="RifleButt"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons index="8" Face="FiremodeBurst" Type="AbilCmd" AbilCmd="FiremodeAssaultRifle,On" Row="1" Column="1"/>
+            <LayoutButtons Face="FiremodeSemi" Type="AbilCmd" AbilCmd="FiremodeAssaultRifle,Off" Row="1" Column="1"/>
+            <LayoutButtons Face="Prone" Type="AbilCmd" AbilCmd="Prone,Execute" Row="1" Column="2"/>
+            <LayoutButtons Face="FragGrenadeMedic" Type="AbilCmd" AbilCmd="FragGrenadeMedic,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="FlareGun" Type="AbilCmd" AbilCmd="FlareGunWO5,Execute" Row="2" Column="3"/>
+            <LayoutButtons>
+                <Face value="HealingAura"/>
+                <Type value="Passive"/>
+                <Behavior value="HealingAura"/>
+                <Requirements value="SoldierSkills04M"/>
+                <Row value="2"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons Face="SITREP" Type="AbilCmd" AbilCmd="SITREP,Execute" Row="1" Column="4"/>
+            <LayoutButtons Face="HoldFire3" Type="AbilCmd" AbilCmd="WeaponsHold2,On" Row="1" Column="3"/>
+            <LayoutButtons Face="HoldFireOff2" Type="AbilCmd" AbilCmd="WeaponsHold2,Off" Row="1" Column="3"/>
+        </CardLayouts>
+        <EditorCategories value=""/>
+        <TacticalAI value="Marine"/>
+        <HotkeyAlias value="Marine"/>
+        <SelectAlias value="BetaCorpsman"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="21"/>
+        <HotkeyCategory value="Unit/Category/TerranUnits"/>
+        <AIEvaluateAlias value="Marine"/>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
+    </CUnit>
+    <CUpgrade id="InjectorPistol">
+        <EditorCategories value="Race:Terran"/>
+    </CUpgrade>
+    <CBehaviorBuff id="AnabolicSteroids">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="30"/>
+        <FinalEffect value="AnabolicSteroidsDrawbackAB"/>
+        <Modification AttackSpeedMultiplier="1.3"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="AnabolicSteroidsDrawback">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="15"/>
+        <Modification AttackSpeedMultiplier="0.85"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ImprovedAnabolicSteroids">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="30"/>
+        <FinalEffect value="ImprovedAnabolicSteroidsDrawbackAB"/>
+        <Modification AttackSpeedMultiplier="1.425"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ImprovedAnabolicSteroidsDrawback">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="15"/>
+        <Modification AttackSpeedMultiplier="0.85"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ImprovedReactiveAmphetamines">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="30"/>
+        <FinalEffect value="ImprovedAnabolicSteroidsDrawbackAB"/>
+        <Modification WeaponRange="6">
+            <DamageDealtFraction index="Ranged" value="0.35"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ImprovedReactiveAmphetaminesDrawback">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="15"/>
+        <Modification AttackSpeedMultiplier="0.85" WeaponRange="-3">
+            <DamageDealtFraction index="Ranged" value="-0.15"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="InsulatedBattery">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Modification>
+            <BehaviorLinkDisableArray value="EnergyLeak"/>
+            <BehaviorLinkDisableArray value="SuitMalfunction"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="PainkillersDrawback">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="15"/>
+        <Modification MoveSpeedBonus="-0.1015"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ReactiveAmphetamines">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="30"/>
+        <FinalEffect value="ReactiveAmphetaminesDrawbackAB"/>
+        <Modification WeaponRange="4">
+            <DamageDealtFraction index="Ranged" value="0.25"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ReactiveAmphetaminesDrawback">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="15"/>
+        <Modification AttackSpeedMultiplier="0.9" WeaponRange="-2">
+            <DamageDealtFraction index="Ranged" value="-0.1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Painkillers">
+        <Cost>
+            <Charge Link="Behavior/PainKiller"/>
+            <Cooldown Link="Behavior/PainKiller"/>
+        </Cost>
+        <InfoIcon value="Buttons\BTNPain.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="30"/>
+        <FinalEffect value="PainkillersDrawbackAB"/>
+        <Modification MoveSpeedMinimum="2.6992" MoveSpeedBonus="0.1015">
+            <VitalMaxArray index="Life" value="100"/>
+        </Modification>
+        <DamageResponse>
+            <Cost>
+                <Charge Link="Behavior/PainKiller"/>
+                <Cooldown Link="Behavior/PainKiller"/>
+            </Cost>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="heattest">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+</Catalog>

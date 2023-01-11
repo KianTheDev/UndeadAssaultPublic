@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CValidatorUnitCompareBehaviorCount id="NotATree">
+        <Behavior value="Tree"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CEffectLaunchMissile id="A10CascadingDamgeLM">
+        <EditorCategories value="Race:Terran"/>
+        <LaunchOffset value="0,0,-7"/>
+        <ImpactEffect value="A10CascadingDamage"/>
+        <AmmoUnit value="MissileRifleBullet"/>
+    </CEffectLaunchMissile>
+    <CEffectDamage id="TestLingClawsDamage">
+        <EditorCategories value="Race:Zerg"/>
+        <Amount value="1"/>
+    </CEffectDamage>
+    <CEffectDamage id="A10CascadingDamage">
+        <EditorCategories value="Race:Terran"/>
+        <AttributeFactor index="Massive" value="1"/>
+        <Amount value="44"/>
+        <Random value="76"/>
+        <Kind value="Ranged"/>
+        <SearchFlags index="SameCliff" value="0"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="A10CascadingDamageSA">
+        <EditorCategories value="Race:Terran"/>
+        <LaunchLocation Value="TargetUnit"/>
+        <AreaArray RectangleWidth="11" RectangleHeight="3"/>
+        <AreaArray Arc="99.9975" Radius="7" Effect="A10CascadingDamage"/>
+        <AreaRelativeOffset value="0,-4"/>
+        <SearchFilters value="Ground;Player,Ally,Neutral,Structure,Missile,Dead,Hidden,Invulnerable"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="A10MaverickAISA">
+        <EditorCategories value="Race:Terran"/>
+        <SearchFilters value="Ground,Massive;Player,Ally,Neutral,Psionic,Missile,Item,Dead,Hidden,Invulnerable"/>
+        <AreaArray>
+            <Arc value="90"/>
+            <MaxCount value="1"/>
+            <Radius value="20"/>
+            <Effect value="A10MaverickIO"/>
+        </AreaArray>
+        <LaunchLocation Value="TargetUnit"/>
+    </CEffectEnumArea>
+    <CEffectDamage id="A10MaverickDamage">
+        <EditorCategories value="Race:Terran"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <Amount value="3500"/>
+        <Death value="Blast"/>
+        <AreaArray Radius="0.3" Fraction="1"/>
+        <SearchFilters value="-;Air,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+        <SearchFlags index="SameCliff" value="0"/>
+    </CEffectDamage>
+    <CEffectIssueOrder id="A10MaverickIO">
+        <EditorCategories value="Race:Terran"/>
+        <WhichUnit Value="Source"/>
+        <Abil value="A10MaverickStrike"/>
+        <Player Value="Source"/>
+        <Target Value="TargetUnitOrPoint"/>
+    </CEffectIssueOrder>
+    <CEffectLaunchMissile id="A10MaverickLM">
+        <ValidatorArray index="0" removed="1"/>
+        <EditorCategories value="Race:Terran"/>
+        <ImpactEffect value="A10MaverickDamage"/>
+        <AmmoUnit value="MRLRocket2"/>
+        <LaunchOffset value="0,0,-7"/>
+    </CEffectLaunchMissile>
+    <CAbilEffectTarget id="A10MaverickStrike">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="A10MaverickLM"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="AllowMovingSuppressed" value="1"/>
+        <Flags index="AllowTurningSuppressed" value="1"/>
+        <Flags index="ChannelingMinimum" value="0"/>
+        <Flags index="NoDeceleration" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Flags index="Transient" value="1"/>
+        <Flags index="UpdateChargesOnLevelChange" value="0"/>
+        <Cost>
+            <Charge CountMax="2" CountStart="2" CountUse="1"/>
+            <Cooldown TimeUse="1"/>
+        </Cost>
+        <Range value="30"/>
+        <PrepTime value="0"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="ClusterRocketsMini"/>
+        <Arc value="360"/>
+        <ArcSlop value="360"/>
+    </CAbilEffectTarget>
+    <CRequirement id="A10Test">
+        <EditorCategories value="Race:Terran"/>
+        <NodeArray index="Use" Link="EqCountUpgradeRadioManCompleteOnlyTechTreeCheat1"/>
+    </CRequirement>
+    <CRequirementCountUpgrade id="CountUpgradeRadioManCompleteOnlyTechTreeCheat">
+        <Count Link="RadioMan" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementEq id="EqCountUpgradeRadioManCompleteOnlyTechTreeCheat1">
+        <OperandArray index="0" value="CountUpgradeRadioManCompleteOnlyTechTreeCheat"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementEq>
+    <CActorUnit id="FastLing" parent="GenericUnitStandard" unitName="FastLing">
+        <Aliases value="_UnitSmall"/>
+        <Macros value="ZergBurrowStandardAnimMacro"/>
+        <Macros value="UnloadDropAnim"/>
+        <EditorCategories value=""/>
+        <On index="0" Send="Create SoundEmitter Zergling_Ambience"/>
+        <On index="3" Terms="UnitConstruction.Hopper"/>
+        <On index="4" Terms="UnitConstruction.Hopper"/>
+        <On index="5" Terms="UnitConstruction.Zergling.Finish"/>
+        <On index="50" Terms="UnitDeathCustomize; ValidateUnit IsKillerPhantasm" Send="DeathCustomize Hallucination"/>
+        <On index="51" Terms="WeaponStart.HopperClaws.AttackStart" Send="AnimBracketStart Attack Attack"/>
+        <On index="52" Terms="WeaponStop.HopperClaws.AttackStop" Send="AnimBracketStop Attack"/>
+        <On index="53" removed="1"/>
+        <On index="54" removed="1"/>
+        <On index="55" removed="1"/>
+        <On index="56" removed="1"/>
+        <On index="57" removed="1"/>
+        <On index="58" removed="1"/>
+        <On index="59" removed="1"/>
+        <On index="60" removed="1"/>
+        <On index="61" removed="1"/>
+        <On index="62" removed="1"/>
+        <On index="63" removed="1"/>
+        <On index="64" removed="1"/>
+        <On index="65" removed="1"/>
+        <On index="66" removed="1"/>
+        <On index="67" removed="1"/>
+        <On index="68" removed="1"/>
+        <Model value="HotSRaptor"/>
+        <Scale value="0.800000"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <EventDataFootprint index="0" Actor="UnitFootprint" Model=""/>
+        <BuildModel value="HotSRaptor"/>
+        <DeathArray index="Normal" ModelLink="ZerglingCarbotDeath" SoundLink="Zergling_Death" VoiceLink="RaisuliDeathVoice"/>
+        <DeathArray index="Disintegrate" ModelLink="ZerglingCarbotDeath" SoundLink="Uni_DeathFXAcid"/>
+        <DeathArray index="Eviscerate" AnimProps="Death" ModelLink="ZerglingCarbotDeath" SoundLink="Zergling_DeathFXEviscerate"/>
+        <DeathArray index="Fire" AnimProps="Death" ModelLink="ZerglingCarbotDeath" SoundLink="Zergling_DeathFXFire"/>
+        <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
+        <PlacementModel value="HotSRaptor"/>
+        <PortraitModel value="RaptorPortrait"/>
+        <TerrainSquibs>
+            <GroupName value="RippleStandard"/>
+            <MovementDistance value="0.250000,0.250000"/>
+            <IdlePeriod value="0.200000,0.400000"/>
+            <RangeUp value="1.000000"/>
+            <RangeDown value="1.000000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleTiny"/>
+        </TerrainSquibs>
+        <WalkAnimMoveSpeed value="3.1328"/>
+        <BarOffset value="30"/>
+        <BarWidth value="36"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\wireframe-zerg-zerglingex1a.dds"/>
+        </GroupIcon>
+        <GroupSoundArray index="What" value=""/>
+        <GroupSoundArray index="Yes" value=""/>
+        <GroupSoundArray index="Attack" value=""/>
+        <GroupSoundArray index="Board" value=""/>
+        <HeroIcon value="Assets\Textures\btn-unit-zerg-zergling.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level0.dds"/>
+        <MovementHerdNode value="HerdNode_ZergSmall"/>
+        <ShieldArmorIcon value="Assets\Textures\btn-upgrade-zerg-swarmfrenzy.dds"/>
+        <SoundArray index="Birth" value=""/>
+        <SoundArray index="Ready" value=""/>
+        <SoundArray index="Help" value=""/>
+        <SoundArray index="What" value=""/>
+        <SoundArray index="Yes" value=""/>
+        <SoundArray index="Attack" value=""/>
+        <SoundArray index="Pissed" value=""/>
+        <SoundArray index="Movement" value=""/>
+        <SoundArray index="Turning" value=""/>
+        <SoundArray index="Board" value=""/>
+        <SoundArray index="Click" value=""/>
+        <SoundArray index="ClickError" value=""/>
+        <SoundArray index="Highlight" value=""/>
+        <StatusColors index="Shields">
+            <ColorArray index="0" value="255,0,128,0"/>
+        </StatusColors>
+        <UnitIcon value="Assets\Textures\btn-unit-zerg-zergling-raptor.dds"/>
+        <VitalColors index="Shields">
+            <ColorArray value="255,0,128,0"/>
+        </VitalColors>
+        <VitalNames index="Shields" value="Vital/ZergShields"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-zerg-zerglingex1a.dds"/>
+        </Wireframe>
+        <WireframeShieldColor value="255,0,128,0"/>
+    </CActorUnit>
+    <CActorUnit id="SlowLing" parent="GenericUnitStandard" unitName="SlowLing">
+        <Aliases value="_UnitSmall"/>
+        <Macros value="ZergBurrowStandardAnimMacro"/>
+        <Macros value="UnloadDropAnim"/>
+        <EditorCategories value=""/>
+        <On index="0" Send="Create SoundEmitter Zergling_Ambience"/>
+        <On index="3" Terms="UnitConstruction.Hopper"/>
+        <On index="4" Terms="UnitConstruction.Hopper"/>
+        <On index="5" Terms="UnitConstruction.Zergling.Finish"/>
+        <On index="50" Terms="UnitDeathCustomize; ValidateUnit IsKillerPhantasm" Send="DeathCustomize Hallucination"/>
+        <On index="51" Terms="WeaponStart.HopperClaws.AttackStart" Send="AnimBracketStart Attack Attack"/>
+        <On index="52" Terms="WeaponStop.HopperClaws.AttackStop" Send="AnimBracketStop Attack"/>
+        <On index="53" removed="1"/>
+        <On index="54" removed="1"/>
+        <On index="55" removed="1"/>
+        <On index="56" removed="1"/>
+        <On index="57" removed="1"/>
+        <On index="58" removed="1"/>
+        <On index="59" removed="1"/>
+        <On index="60" removed="1"/>
+        <On index="61" removed="1"/>
+        <On index="62" removed="1"/>
+        <On index="63" removed="1"/>
+        <On index="64" removed="1"/>
+        <On index="65" removed="1"/>
+        <On index="66" removed="1"/>
+        <On index="67" removed="1"/>
+        <On index="68" removed="1"/>
+        <Model value="HotSRaptor"/>
+        <Scale value="0.800000"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <EventDataFootprint index="0" Actor="UnitFootprint" Model=""/>
+        <BuildModel value="HotSRaptor"/>
+        <DeathArray index="Normal" ModelLink="ZerglingCarbotDeath" SoundLink="Zergling_Death" VoiceLink="RaisuliDeathVoice"/>
+        <DeathArray index="Disintegrate" ModelLink="ZerglingCarbotDeath" SoundLink="Uni_DeathFXAcid"/>
+        <DeathArray index="Eviscerate" AnimProps="Death" ModelLink="ZerglingCarbotDeath" SoundLink="Zergling_DeathFXEviscerate"/>
+        <DeathArray index="Fire" AnimProps="Death" ModelLink="ZerglingCarbotDeath" SoundLink="Zergling_DeathFXFire"/>
+        <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
+        <PlacementModel value="HotSRaptor"/>
+        <PortraitModel value="RaptorPortrait"/>
+        <TerrainSquibs>
+            <GroupName value="RippleStandard"/>
+            <MovementDistance value="0.250000,0.250000"/>
+            <IdlePeriod value="0.200000,0.400000"/>
+            <RangeUp value="1.000000"/>
+            <RangeDown value="1.000000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleTiny"/>
+        </TerrainSquibs>
+        <WalkAnimMoveSpeed value="3.1328"/>
+        <BarOffset value="30"/>
+        <BarWidth value="36"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\wireframe-zerg-zerglingex1a.dds"/>
+        </GroupIcon>
+        <GroupSoundArray index="What" value=""/>
+        <GroupSoundArray index="Yes" value=""/>
+        <GroupSoundArray index="Attack" value=""/>
+        <GroupSoundArray index="Board" value=""/>
+        <HeroIcon value="Assets\Textures\btn-unit-zerg-zergling.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level0.dds"/>
+        <MovementHerdNode value="HerdNode_ZergSmall"/>
+        <ShieldArmorIcon value="Assets\Textures\btn-upgrade-zerg-swarmfrenzy.dds"/>
+        <SoundArray index="Birth" value=""/>
+        <SoundArray index="Ready" value=""/>
+        <SoundArray index="Help" value=""/>
+        <SoundArray index="What" value=""/>
+        <SoundArray index="Yes" value=""/>
+        <SoundArray index="Attack" value=""/>
+        <SoundArray index="Pissed" value=""/>
+        <SoundArray index="Movement" value=""/>
+        <SoundArray index="Turning" value=""/>
+        <SoundArray index="Board" value=""/>
+        <SoundArray index="Click" value=""/>
+        <SoundArray index="ClickError" value=""/>
+        <SoundArray index="Highlight" value=""/>
+        <StatusColors index="Shields">
+            <ColorArray index="0" value="255,0,128,0"/>
+        </StatusColors>
+        <UnitIcon value="Assets\Textures\btn-unit-zerg-zergling-raptor.dds"/>
+        <VitalColors index="Shields">
+            <ColorArray value="255,0,128,0"/>
+        </VitalColors>
+        <VitalNames index="Shields" value="Vital/ZergShields"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-zerg-zerglingex1a.dds"/>
+        </Wireframe>
+        <WireframeShieldColor value="255,0,128,0"/>
+    </CActorUnit>
+    <CActorUnit id="TestLing" parent="GenericUnitStandard" unitName="TestLing">
+        <Aliases value="_UnitSmall"/>
+        <Macros value="ZergBurrowStandardAnimMacro"/>
+        <Macros value="UnloadDropAnim"/>
+        <EditorCategories value=""/>
+        <On index="0" Send="Create SoundEmitter Zergling_Ambience"/>
+        <On index="3" Terms="UnitConstruction.Hopper"/>
+        <On index="4" Terms="UnitConstruction.Hopper"/>
+        <On index="5" Terms="UnitConstruction.Zergling.Finish"/>
+        <On index="50" Terms="UnitDeathCustomize; ValidateUnit IsKillerPhantasm" Send="DeathCustomize Hallucination"/>
+        <On index="51" Terms="WeaponStart.HopperClaws.AttackStart" Send="AnimBracketStart Attack Attack"/>
+        <On index="52" Terms="WeaponStop.HopperClaws.AttackStop" Send="AnimBracketStop Attack"/>
+        <On index="53" removed="1"/>
+        <On index="54" removed="1"/>
+        <On index="55" removed="1"/>
+        <On index="56" removed="1"/>
+        <On index="57" removed="1"/>
+        <On index="58" removed="1"/>
+        <On index="59" removed="1"/>
+        <On index="60" removed="1"/>
+        <On index="61" removed="1"/>
+        <On index="62" removed="1"/>
+        <On index="63" removed="1"/>
+        <On index="64" removed="1"/>
+        <On index="65" removed="1"/>
+        <On index="66" removed="1"/>
+        <On index="67" removed="1"/>
+        <On index="68" removed="1"/>
+        <Model value="HotSRaptor"/>
+        <Scale value="0.800000"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <EventDataFootprint index="0" Actor="UnitFootprint" Model=""/>
+        <BuildModel value="HotSRaptor"/>
+        <DeathArray index="Normal" ModelLink="ZerglingCarbotDeath" SoundLink="Zergling_Death" VoiceLink="RaisuliDeathVoice"/>
+        <DeathArray index="Disintegrate" ModelLink="ZerglingCarbotDeath" SoundLink="Uni_DeathFXAcid"/>
+        <DeathArray index="Eviscerate" AnimProps="Death" ModelLink="ZerglingCarbotDeath" SoundLink="Zergling_DeathFXEviscerate"/>
+        <DeathArray index="Fire" AnimProps="Death" ModelLink="ZerglingCarbotDeath" SoundLink="Zergling_DeathFXFire"/>
+        <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
+        <PlacementModel value="HotSRaptor"/>
+        <PortraitModel value="RaptorPortrait"/>
+        <TerrainSquibs>
+            <GroupName value="RippleStandard"/>
+            <MovementDistance value="0.250000,0.250000"/>
+            <IdlePeriod value="0.200000,0.400000"/>
+            <RangeUp value="1.000000"/>
+            <RangeDown value="1.000000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleTiny"/>
+        </TerrainSquibs>
+        <WalkAnimMoveSpeed value="3.1328"/>
+        <BarOffset value="30"/>
+        <BarWidth value="36"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\wireframe-zerg-zerglingex1a.dds"/>
+        </GroupIcon>
+        <GroupSoundArray index="What" value=""/>
+        <GroupSoundArray index="Yes" value=""/>
+        <GroupSoundArray index="Attack" value=""/>
+        <GroupSoundArray index="Board" value=""/>
+        <HeroIcon value="Assets\Textures\btn-unit-zerg-zergling.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level0.dds"/>
+        <MovementHerdNode value="HerdNode_ZergSmall"/>
+        <ShieldArmorIcon value="Assets\Textures\btn-upgrade-zerg-swarmfrenzy.dds"/>
+        <SoundArray index="Birth" value=""/>
+        <SoundArray index="Ready" value=""/>
+        <SoundArray index="Help" value=""/>
+        <SoundArray index="What" value=""/>
+        <SoundArray index="Yes" value=""/>
+        <SoundArray index="Attack" value=""/>
+        <SoundArray index="Pissed" value=""/>
+        <SoundArray index="Movement" value=""/>
+        <SoundArray index="Turning" value=""/>
+        <SoundArray index="Board" value=""/>
+        <SoundArray index="Click" value=""/>
+        <SoundArray index="ClickError" value=""/>
+        <SoundArray index="Highlight" value=""/>
+        <StatusColors index="Shields">
+            <ColorArray index="0" value="255,0,128,0"/>
+        </StatusColors>
+        <UnitIcon value="Assets\Textures\btn-unit-zerg-zergling-raptor.dds"/>
+        <VitalColors index="Shields">
+            <ColorArray value="255,0,128,0"/>
+        </VitalColors>
+        <VitalNames index="Shields" value="Vital/ZergShields"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-zerg-zerglingex1a.dds"/>
+        </Wireframe>
+        <WireframeShieldColor value="255,0,128,0"/>
+    </CActorUnit>
+    <CActorSound id="A10CascadingDamageSound" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.A10CascadingDamgeLM.Start" Send="Create"/>
+        <On Terms="Effect.A10CascadingDamgeLM.Stop" Send="Destroy"/>
+        <Sound value="30mmImpact"/>
+    </CActorSound>
+    <CActorSound id="A10MaverickStrikeLaunchSound" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.A10MaverickLM.Start" Send="Create"/>
+    </CActorSound>
+    <CActorModel id="A10MaverickStrikeBoom" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.A10MaverickDamage.Start" Send="Create"/>
+    </CActorModel>
+    <CActorSound id="A10MaverickStrikeBoomSound" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.A10CascadingDamage.Start" Send="Create"/>
+    </CActorSound>
+    <CActorModel id="A10CascadingDamageAnimation" parent="ModelAddition">
+        <EditorCategories value=""/>
+        <On Terms="Effect.A10CascadingDamgeLM.Start" Send="Create"/>
+        <On Terms="Effect.A10CascadingDamgeLM.Stop" Send="Destroy"/>
+        <Model value="MarineAttackLaunch"/>
+    </CActorModel>
+    <CWeaponLegacy id="TestLingClaws">
+        <EditorCategories value="Race:Zerg"/>
+        <Options index="Melee" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level0.dds"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="0.1"/>
+        <Period value="0.1"/>
+        <Effect value="TestLingClawsDamage"/>
+    </CWeaponLegacy>
+    <CModel id="DeadHeroIconAsca" parent="Doodad">
+        <Model value="Assets\Buildings\Protoss\PylonXPRewardPlacement\PylonXPRewardPlacement.m3"/>
+        <EditorCategories value=""/>
+        <Flags index="VariationPreload" value="1"/>
+        <ScaleMax value="0.330000,0.330000,0.330000"/>
+        <ScaleMin value="0.330000,0.330000,0.330000"/>
+    </CModel>
+    <CModel id="A10MaverickStrikeBoom">
+        <Model value="Assets\Effects\Terran\Nuke\Nuke.m3"/>
+        <AnimSpeed value="2.000000"/>
+        <EditorCategories value="Race:Terran"/>
+        <Flags index="Wait" value="0"/>
+        <Priority value="16"/>
+        <ScaleMax value="0.250000,0.250000,0.250000"/>
+        <ScaleMin value="0.250000,0.250000,0.250000"/>
+    </CModel>
+    <CSound id="A10MaverickStrikeBoomSound">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Terran\Thor\Thor_AttackImpact0.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\Thor\Thor_AttackImpact1.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\Thor\Thor_AttackImpact2.wav"/>
+        <Flags index="Purgable" value="1"/>
+        <Category value="Spell"/>
+        <Mode value="3DWorld"/>
+        <ReverbBalance Room="0"/>
+    </CSound>
+    <CSound id="A10MaverickStrikeLaunchSound">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Terran\Viking\Viking_FighterAttackLaunch0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Viking\Viking_FighterAttackLaunch1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Viking\Viking_FighterAttackLaunch2.wav" FacialGroup=""/>
+        <Flags index="Purgable" value="1"/>
+        <Category value="Combat"/>
+        <DupeDestroyCount value="10"/>
+        <Mode value="3DWorld"/>
+        <OverlapTimeDelta value="100"/>
+        <Pitch value="-1.390000,4.110000"/>
+        <ReverbBalance Room="0"/>
+        <Volume value="-8.099999,-5.000000"/>
+    </CSound>
+    <CUnit id="FastLing">
+        <DeathRevealRadius value="3"/>
+        <Race value="Zerg"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Attributes index="Light" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <LifeStart value="100000"/>
+        <LifeMax value="100000"/>
+        <LifeRegenRate value="500"/>
+        <LifeArmorName value="Unit/LifeArmorName/ZergGroundArmor"/>
+        <Speed value="10"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="46.0625"/>
+        <StationaryTurningRate value="999.8437"/>
+        <TurningRate value="999.8437"/>
+        <Sight value="32"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="25"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <WeaponArray Link="TestLingClaws"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+        </CardLayouts>
+        <Radius value="0.25"/>
+        <SeparationRadius value="0.25"/>
+        <CargoSize value="1"/>
+        <ScoreMake value="25"/>
+        <ScoreKill value="25"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="8"/>
+        <MinimapRadius value="0.25"/>
+        <GlossaryCategory value="Unit/Category/ZergUnits"/>
+        <GlossaryPriority value="50"/>
+        <KillDisplay value="Always"/>
+        <RankDisplay value="Always"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="33"/>
+            <ChanceArray index="Idle" value="33"/>
+            <ChanceArray index="Turn" value="33"/>
+        </Fidget>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
+    </CUnit>
+    <CUnit id="SlowLing">
+        <DeathRevealRadius value="3"/>
+        <Race value="Zerg"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Attributes index="Light" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <LifeStart value="100000"/>
+        <LifeMax value="100000"/>
+        <LifeRegenRate value="500"/>
+        <LifeArmorName value="Unit/LifeArmorName/ZergGroundArmor"/>
+        <Speed value="0.1015"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="46.0625"/>
+        <StationaryTurningRate value="999.8437"/>
+        <TurningRate value="999.8437"/>
+        <Sight value="32"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="25"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <WeaponArray Link="TestLingClaws"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+        </CardLayouts>
+        <Radius value="0.25"/>
+        <SeparationRadius value="0.25"/>
+        <CargoSize value="1"/>
+        <ScoreMake value="25"/>
+        <ScoreKill value="25"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="8"/>
+        <MinimapRadius value="0.25"/>
+        <GlossaryCategory value="Unit/Category/ZergUnits"/>
+        <GlossaryPriority value="50"/>
+        <KillDisplay value="Always"/>
+        <RankDisplay value="Always"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="33"/>
+            <ChanceArray index="Idle" value="33"/>
+            <ChanceArray index="Turn" value="33"/>
+        </Fidget>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
+    </CUnit>
+    <CUnit id="TestLing">
+        <DeathRevealRadius value="3"/>
+        <Race value="Zerg"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Attributes index="Light" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <LifeStart value="100000"/>
+        <LifeMax value="100000"/>
+        <LifeRegenRate value="500"/>
+        <LifeArmorName value="Unit/LifeArmorName/ZergGroundArmor"/>
+        <Speed value="5"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="46.0625"/>
+        <StationaryTurningRate value="999.8437"/>
+        <TurningRate value="999.8437"/>
+        <Sight value="32"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="25"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <WeaponArray Link="TestLingClaws"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+        </CardLayouts>
+        <Radius value="0.25"/>
+        <SeparationRadius value="0.25"/>
+        <CargoSize value="1"/>
+        <ScoreMake value="25"/>
+        <ScoreKill value="25"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="8"/>
+        <MinimapRadius value="0.25"/>
+        <TacticalAI value="FastLing"/>
+        <GlossaryCategory value="Unit/Category/ZergUnits"/>
+        <GlossaryPriority value="50"/>
+        <KillDisplay value="Always"/>
+        <RankDisplay value="Always"/>
+        <AIEvaluateAlias value="FastLing"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="33"/>
+            <ChanceArray index="Idle" value="33"/>
+            <ChanceArray index="Turn" value="33"/>
+        </Fidget>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
+    </CUnit>
+    <CBehaviorBuff id="Tree">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MechSeat">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="A10CascadingDamage">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Period value="0.0625"/>
+        <PeriodicEffect value="A10CascadingDamageSA"/>
+        <Modification>
+            <WeaponDisableArray value="A10VengeanceChaingun"/>
+            <WeaponDisableArray value="RAA10VengeanceChaingun"/>
+            <WeaponDisableArray value="ShockerTurret"/>
+        </Modification>
+        <Requirements value="A10Test"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="A10MaverickAI">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Period value="0.125"/>
+        <PeriodicEffect value="A10MaverickAISA"/>
+        <Requirements value="A10Test"/>
+    </CBehaviorBuff>
+</Catalog>

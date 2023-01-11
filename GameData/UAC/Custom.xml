@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CAbilEffectTarget id="LiftBooting">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="LiftBootsLaunchMissile"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Charge Link="ItemCharges" Location="Unit"/>
+            <Cooldown Link="Abil/LiftBoots" Location="Unit" TimeUse="30"/>
+        </Cost>
+        <InterruptCost>
+            <Charge Link="Abil/LiftBoots"/>
+            <Cooldown Link="Abil/LiftBoots"/>
+        </InterruptCost>
+        <Range value="20"/>
+        <Marker Link="Abil/LiftBoots"/>
+        <AINotifyEffect value="LiftBootsLaunchMissile"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="LiftBoots">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+    </CAbilEffectTarget>
+    <CAbilEffectInstant id="RegendareSonicPulse">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="SonicPulseEnum"/>
+        <Flags index="AbortOnAllianceChange" value="0"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="25"/>
+            <Charge Link="Abil/SonicPulse"/>
+            <Cooldown Link="Abil/SonicPulse" TimeUse="10"/>
+        </Cost>
+        <InterruptCost>
+            <Charge Link="Abil/SonicPulse"/>
+            <Cooldown Link="Abil/SonicPulse"/>
+        </InterruptCost>
+        <AutoCastFilters value="-;-"/>
+        <Marker Link="Abil/SonicPulse"/>
+        <AINotifyEffect value=""/>
+        <DefaultError value="NotEnoughEnergy"/>
+        <EffectRange index="0" removed="1"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SonicPulse" Requirements="RegendareOnly">
+            <Flags index="ShowInGlossary" value="0"/>
+        </CmdButtonArray>
+    </CAbilEffectInstant>
+    <CAbilEffectTarget id="RegendareStrafe">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="StrafeRun"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Charge Link="Abil/TerminalLanceStrafe"/>
+            <Cooldown Link="Abil/TerminalLanceStrafe" TimeUse="20"/>
+        </Cost>
+        <Range value="42"/>
+        <AINotifyEffect value="StrafeDesignator"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="StrafeDesignator">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+    </CAbilEffectTarget>
+    <CAbilLearn id="LearnAbilitiesRegendare" parent="LearnAbilityMOS">
+        <Name value="Abil/Name/LearnAbilitiesRegendare"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InfoArray index="Learn1" Abil="SoldierSkills">
+            <Button DefaultButtonFace="LearnSoldierSkills"/>
+        </InfoArray>
+        <InfoArray index="Learn2" Abil="Marksmanship">
+            <Button DefaultButtonFace="Marksmanship"/>
+        </InfoArray>
+        <InfoArray index="Learn3" Abil="DefensiveTactics">
+            <Button DefaultButtonFace="DefensiveTactics"/>
+        </InfoArray>
+        <InfoArray index="Learn4" Abil="RiflemanSkills">
+            <Button DefaultButtonFace="RiflemanSkillsOld"/>
+        </InfoArray>
+        <InfoArray index="Learn5" Abil="FragGrenade">
+            <Button DefaultButtonFace="LearnFragGrenade"/>
+        </InfoArray>
+    </CAbilLearn>
+    <CAbilEffectInstant id="ChooseRegendare">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="404bRegendare" Requirements="RegendareOnly"/>
+    </CAbilEffectInstant>
+    <CButton id="404bRegendare">
+        <Icon value="Buttons/BTNSoldier.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-marine.dds"/>
+    </CButton>
+    <CActorUnit id="Regendare" parent="GenericUnitStandard" unitName="Regendare">
+        <Macros value="UnloadDropAnim"/>
+        <Macros value="Animations"/>
+        <EditorCategories value=""/>
+        <On index="61" Terms="WeaponStart.*.AttackStart; WeaponTargetElevation GE 20.000000" Send="AnimBracketStart Attack Attack,Superior"/>
+        <On index="62" Terms="WeaponStart.*.AttackStart; WeaponTargetElevation LE -20.000000" Send="AnimBracketStart Attack Attack,Inferior"/>
+        <On index="63" Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Attack Attack"/>
+        <On index="64" Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack"/>
+        <On Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
+        <On Terms="ModelEvent; ModelEventName SquibStart" Send="Create MarineCheerSquib"/>
+        <On Terms="ModelEvent; ModelEventName SquibStop" Target="MarineCheerSquib" Send="Destroy"/>
+        <On Terms="ModelEvent; ModelEventName SquibStop" Target="MarineCheerSquibSound" Send="Destroy"/>
+        <On Terms="AnimDone; AnimName Cheer" Target="MarineCheerSquib" Send="Destroy"/>
+        <On Terms="AnimDone; AnimName Cheer" Target="MarineCheerSquibSound" Send="Destroy"/>
+        <Model value="Marine"/>
+        <BuildModel value="Marine"/>
+        <DeathArray index="Normal">
+            <AnimProps value="Death,Silentkill"/>
+            <ModelLink value="MarineDeath"/>
+            <SoundLink value="Marine_Death"/>
+            <VoiceLink value="InfantryRiflemanDeathVoice"/>
+        </DeathArray>
+        <DeathArray index="Blast" ModelLink="MarineDeathBlast"/>
+        <DeathArray index="Disintegrate" ModelLink="MarineDeathAcid" SoundLink="Uni_DeathFXAcid"/>
+        <DeathArray index="Eat" AnimProps="Stand" ModelLink="MarineDeathEat" SoundLink="Marine_DeathFXEat"/>
+        <DeathArray index="Eviscerate" ModelLink="MarineDeathEviscerate" SoundLink="Marine_DeathFXEviscerate"/>
+        <DeathArray index="Fire" ModelLink="MarineDeathFire" SoundLink="Marine_DeathFXFire"/>
+        <DeathArray index="Silentkill" SoundLink="Uni_DeathFXSilentKill"/>
+        <DeathArray index="Squish" SoundLink="Marine_DeathFXBloodSpray"/>
+        <PlacementModel value="Marine"/>
+        <PortraitModel value="Marine3Portrait"/>
+        <StandAnimTurnTime value="4"/>
+        <WalkAnimMoveSpeed value="2.25"/>
+        <AbilSoundArray AbilCmd="Stimpack,Execute" Sound="Marine_StimPackVO"/>
+        <BarOffset value="40"/>
+        <BarWidth value="36"/>
+        <GlossaryAnim value="Spell"/>
+        <GroupIcon>
+            <Image value="Assets\Wireframes\UAC_Marine_Wireframe.dds"/>
+        </GroupIcon>
+        <GroupSoundArray index="What" value="Marine_GroupWhat"/>
+        <GroupSoundArray index="Yes" value="Marine_GroupYes"/>
+        <GroupSoundArray index="Attack" value="Marine_GroupAttack"/>
+        <GroupSoundArray index="Board" value="Marine_GroupBoard"/>
+        <HeroIcon value="Buttons/BTNSoldier.dds"/>
+        <HighlightTooltip value="Unit/Name/Rifleman"/>
+        <LifeArmorIcon value="Buttons\BTNKevlar.dds"/>
+        <SoundArray index="Birth" value="Marine_Birth"/>
+        <SoundArray index="Ready" value="Marine_Ready"/>
+        <SoundArray index="Help" value="Marine_Help"/>
+        <SoundArray index="What" value="Marine_What"/>
+        <SoundArray index="Yes" value="Marine_Yes"/>
+        <SoundArray index="Attack" value="Marine_Attack"/>
+        <SoundArray index="Pissed" value="Marine_Pissed"/>
+        <SoundArray index="Movement" value="Marine_Movement"/>
+        <SoundArray index="Turning" value="Marine_Turning"/>
+        <SoundArray index="Board" value="Marine_Board"/>
+        <SoundArray index="Click" value="Marine_Click"/>
+        <SoundArray index="ClickError" value="Marine_ClickError"/>
+        <SoundArray index="Highlight" value="Marine_Highlight"/>
+        <UnitBorderNormalColor value="150,150,150"/>
+        <UnitBorderSubgroupColor value="255,255,255"/>
+        <UnitIcon value="Buttons/BTNSoldier.dds"/>
+        <Wireframe>
+            <Image value="Assets\Wireframes\UAC_Marine_Wireframe.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CBehaviorBuff id="RifleButtArmored">
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="BTNMeleeAttack.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="RifleButt"/>
+        <Period value="1.4"/>
+        <PeriodicEffect value="RifleButtSearchAreaCyborg"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RegendareDodge">
+        <Alignment value="Positive"/>
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DamageResponse Chance="0.6" ModifyFraction="0"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RegendareRadar">
+        <Name value="Behavior/RegendareRadar"/>
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Structures"/>
+        <BuffFlags index="DisableWhileUnderConstruction" value="1"/>
+        <Modification Radar="35" RadarFilters="-;Player,Ally,Neutral,RawResource,HarvestableResource,Missile,Destructible,Buried"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RegendareDefensiveTactics3">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <Requirements value="DefensiveTactics3"/>
+        <Modification MoveSpeedBonus="0.0507" LifeArmorBonus="9">
+            <DamageDealtFraction index="Ranged" value="0.05"/>
+        </Modification>
+        <DamageResponse Chance="1" ModifyFraction="0.9"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Regendare">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification AttackSpeedMultiplier="1.08" WeaponRange="2">
+            <DamageDealtFraction index="Ranged" value="0.25"/>
+            <VitalRegenArray index="Life" value="3"/>
+            <VitalRegenArray index="Shields" value="3"/>
+            <VitalRegenArray index="Energy" value="3"/>
+        </Modification>
+    </CBehaviorBuff>
+</Catalog>

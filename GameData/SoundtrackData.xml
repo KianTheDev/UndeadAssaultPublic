@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CSoundtrack id="AbyssCave">
+        <CueArray>
+            <MasterLayer Sound="AbyssCave"/>
+        </CueArray>
+    </CSoundtrack>
+    <CSoundtrack id="Catalyst" parent="Music">
+        <CueArray>
+            <MasterLayer Sound="Catalyst"/>
+        </CueArray>
+    </CSoundtrack>
+    <CSoundtrack id="Charon" parent="Music">
+        <CueArray>
+            <MasterLayer Sound="Charon"/>
+        </CueArray>
+    </CSoundtrack>
+    <CSoundtrack id="EasterEggMusic_TerranUpTheNight">
+        <CueArray index="0">
+            <MasterLayer Sound=""/>
+        </CueArray>
+    </CSoundtrack>
+    <CSoundtrack id="FightingPinkBeen">
+        <CueArray>
+            <MasterLayer Sound="FightingPinkBeen"/>
+        </CueArray>
+    </CSoundtrack>
+    <CSoundtrack id="FinalDOOMHorizonSoundtrack">
+        <CueArray>
+            <MasterLayer Sound="DOOMPMC"/>
+        </CueArray>
+    </CSoundtrack>
+    <CSoundtrack id="FinalDOOMDOOM2Soundtrack">
+        <CueArray>
+            <MasterLayer Sound="DOOMBOSSM"/>
+        </CueArray>
+    </CSoundtrack>
+    <CSoundtrack id="FinalDOOMMetalSoundtrack">
+        <CueArray>
+            <MasterLayer Sound="DOOM"/>
+        </CueArray>
+    </CSoundtrack>
+    <CSoundtrack id="Hekaton">
+        <CueArray>
+            <MasterLayer Sound="Hekaton"/>
+        </CueArray>
+    </CSoundtrack>
+    <CSoundtrack id="JukeBoxPlayer">
+        <CueArray>
+            <MasterLayer Sound="UACMusicLoop"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="LostViking_MusicGameLoop"/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="MagnusTheme"/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="MutationSoundtrack"/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="Catalyst"/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="Hekaton"/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="DOOM"/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="DOOMPMC"/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="XempestArrival"/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="FightingPinkBeen"/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="AbyssCave"/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="RazorBlades"/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="WakeTheDawn"/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="WorldWithoutEnd"/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="Legion"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="KnuckleUp"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="EndOfTheWorld"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="DogsOfWar"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="Decimate"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="Fearless"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="Inevitable"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="Expelled"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="Ves20"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="PainKiller"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray/>
+    </CSoundtrack>
+    <CSoundtrack id="LostCity" parent="Music">
+        <CueArray>
+            <MasterLayer Sound="LostCity"/>
+        </CueArray>
+    </CSoundtrack>
+    <CSoundtrack id="MagnusSoundtrack" parent="Music">
+        <CueArray>
+            <MasterLayer Sound="MagnusTheme"/>
+        </CueArray>
+    </CSoundtrack>
+    <CSoundtrack id="UACIntroMusic" parent="Music">
+        <CueArray>
+            <MasterLayer Sound="UACIntroSong"/>
+        </CueArray>
+        <CueArray/>
+        <CueArray/>
+    </CSoundtrack>
+    <CSoundtrack id="UACMusicLoop" parent="Music">
+        <CueArray>
+            <MasterLayer Sound="UACMusicLoop"/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="Catalyst"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="LostCity"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="WorldWithoutEnd"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="RazorBlades"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="Spawn"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="WakeTheDawn"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="Legion"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="KnuckleUp"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="EndOfTheWorld"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="DogsOfWar"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="Decimate"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="Fearless"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="Expelled"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="PainKiller"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+    </CSoundtrack>
+    <CSoundtrack id="GenesisMusicLoop" parent="Music">
+        <CueArray>
+            <MasterLayer Sound="BeyondLimits"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="WorldWithoutEnd"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="RazorBlades"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="Spawn"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="WakeTheDawn"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="Legion"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="KnuckleUp"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="EndOfTheWorld"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="AllOrNothing"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="DogsOfWar"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="Decimate"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="Fearless"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="Inevitable"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="Expelled"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="Heretic"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="PainKiller"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="BringThePain"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="LostCity"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="Catalyst"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+        <CueArray>
+            <MasterLayer Sound="UACMusicLoop"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+        </CueArray>
+    </CSoundtrack>
+    <CSoundtrack id="WARIntro" parent="Music">
+        <CueArray>
+            <MasterLayer Sound="WARIntro"/>
+        </CueArray>
+    </CSoundtrack>
+</Catalog>

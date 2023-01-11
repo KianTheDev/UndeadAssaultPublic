@@ -1,0 +1,1658 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CEffectDamage id="Mk47Damage">
+        <EditorCategories value=""/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <AttributeFactor index="Armored" value="-0.15"/>
+        <AttributeFactor index="Mechanical" value="-0.5"/>
+        <AttributeFactor index="Massive" value="-0.5"/>
+        <AttributeFactor index="Heroic" value="-0.6"/>
+        <AttributeFactor index="Summoned" value="-0.6"/>
+        <ArmorReduction value="3"/>
+        <Visibility value="Visible"/>
+        <Flags index="Notification" value="1"/>
+        <Amount value="120"/>
+        <Random value="20"/>
+        <AreaArray Radius="1" Fraction="1"/>
+        <AreaArray Radius="2" Fraction="0.25"/>
+        <ExcludeArray/>
+        <ExcludeArray Value="Target"/>
+        <SearchFilters value="-;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="CallForHelp" value="1"/>
+        <SearchFlags index="OffsetByUnitRadius" value="1"/>
+        <SearchFlags index="OffsetAreaByAngle" value="1"/>
+        <DisplayFlags index="CollapseBuffed" value="1"/>
+        <Total value="Maximum"/>
+    </CEffectDamage>
+    <CEffectSet id="Mk47DamageSet">
+        <EditorCategories value=""/>
+        <EffectArray value="Mk47Damage"/>
+    </CEffectSet>
+    <CEffectLaunchMissile id="Mk47Launch">
+        <EditorCategories value=""/>
+        <ImpactLocation Value="TargetUnitOrPoint"/>
+        <ImpactEffect value="Mk47DamageSet"/>
+        <AmmoUnit value="40mmGrenade2"/>
+        <Movers Link="BulletMover"/>
+    </CEffectLaunchMissile>
+    <CEffectLaunchMissile id="StickyGrenadeLaunch">
+        <EditorCategories value=""/>
+        <ImpactEffect value="StickyGrenadeSet"/>
+        <AmmoUnit value="EMP2Weapon"/>
+    </CEffectLaunchMissile>
+    <CEffectSet id="StickyGrenadeSet">
+        <EditorCategories value=""/>
+    </CEffectSet>
+    <CEffectSet id="W34PythonDamageSet">
+        <EditorCategories value=""/>
+        <EffectArray value="W34PythonDamage"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="StunGrenadeAB">
+        <EditorCategories value=""/>
+        <Behavior value="StunGrenade"/>
+        <ValidatorArray index="0" value="NotMassive"/>
+    </CEffectApplyBehavior>
+    <CEffectLaunchMissile id="StunGrenadeLM">
+        <ValidatorArray index="0" removed="1"/>
+        <EditorCategories value=""/>
+        <Marker Link="Effect/FragGrenade1LaunchMissile"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <ImpactEffect value="StunGrenadeSA"/>
+        <AmmoUnit value="TossGrenadeWeapon"/>
+    </CEffectLaunchMissile>
+    <CEffectEnumArea id="StunGrenadeSA">
+        <EditorCategories value=""/>
+        <LaunchLocation Value="SourceUnitOrPoint"/>
+        <ImpactLocation Value="SourceUnitOrPoint"/>
+        <SearchFilters value="-;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AreaArray Radius="2" Effect="StunGrenadeAB"/>
+    </CEffectEnumArea>
+    <CEffectCreatePersistent id="BattleRifleBurstCP">
+        <EditorCategories value=""/>
+        <Marker Link="Effect/AssaultRifleBurstCP"/>
+        <WhichLocation Value="TargetUnit"/>
+        <TimeScaleSource Value="Caster"/>
+        <Flags index="Channeled" value="1"/>
+        <InitialEffect value="AssaultRifleLaunch"/>
+        <PeriodCount value="1"/>
+        <PeriodicValidator value="MineralsGE1"/>
+        <PeriodicEffectArray value="AssaultRifleBurstSet"/>
+        <PeriodicPeriodArray value="0.033"/>
+    </CEffectCreatePersistent>
+    <CEffectSet id="EM25RAttackSet">
+        <EditorCategories value=""/>
+        <EffectArray value="EM25RDamage"/>
+        <EffectArray value="EM25RCP"/>
+    </CEffectSet>
+    <CEffectCreatePersistent id="EM25RCP">
+        <EditorCategories value=""/>
+        <PeriodCount value="5"/>
+        <PeriodicEffectArray value="EM25RSA"/>
+        <PeriodicOffsetArray value="0,1,0"/>
+        <PeriodicOffsetArray value="0,2,0"/>
+        <PeriodicOffsetArray value="0,3,0"/>
+        <PeriodicOffsetArray value="0,4,0"/>
+        <PeriodicOffsetArray value="0,5,0"/>
+    </CEffectCreatePersistent>
+    <CEffectEnumArea id="EM25RSA">
+        <EditorCategories value=""/>
+        <SearchFilters value="-;Self,Psionic,Missile,Dead,Hidden,Invulnerable"/>
+        <AreaArray Arc="90" Radius="1" Effect="EM25RDamageMini"/>
+    </CEffectEnumArea>
+    <CEffectDamage id="EM25RDamageMini">
+        <EditorCategories value=""/>
+        <Marker Link="Effect/EM25RDamage"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <AttributeFactor index="Mechanical" value="0.3"/>
+        <AttributeFactor index="Massive" value="0.5"/>
+        <AttributeFactor index="Heroic" value="-0.6"/>
+        <AttributeFactor index="Summoned" value="-0.5"/>
+        <Visibility value="Visible"/>
+        <Flags index="Notification" value="1"/>
+        <Kind value="Ranged"/>
+        <KindSplash value="Ranged"/>
+        <Amount value="250"/>
+        <Random value="250"/>
+        <AreaArray/>
+        <ExcludeArray Value="Target"/>
+        <ExcludeArray Value="Source"/>
+        <SearchFilters value="-;Self,Player,Ally,Psionic,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="CallForHelp" value="1"/>
+        <SearchFlags index="OffsetByUnitRadius" value="1"/>
+        <SearchFlags index="OffsetAreaByAngle" value="1"/>
+        <DisplayFlags index="CollapseBuffed" value="1"/>
+        <Death value="Blast"/>
+    </CEffectDamage>
+    <CEffectCreatePersistent id="W34PythonCP">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetUnit"/>
+        <TimeScaleSource Value="Caster"/>
+        <Flags index="Channeled" value="1"/>
+        <PeriodCount value="2"/>
+        <PeriodicEffectArray value="W34PythonLM"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.1"/>
+    </CEffectCreatePersistent>
+    <CEffectLaunchMissile id="W34PythonLM">
+        <EditorCategories value=""/>
+        <ImpactLocation Value="TargetUnitOrPoint"/>
+        <ImpactEffect value="W34PythonDamageSet"/>
+        <AmmoUnit value="MissileRifleBullet"/>
+        <Movers Link="BulletMover"/>
+    </CEffectLaunchMissile>
+    <CEffectDamage id="W34PythonDamage">
+        <EditorCategories value=""/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <AttributeFactor index="Armored" value="-0.15"/>
+        <AttributeFactor index="Mechanical" value="-0.5"/>
+        <AttributeFactor index="Massive" value="-0.5"/>
+        <AttributeFactor index="Heroic" value="-0.6"/>
+        <AttributeFactor index="Summoned" value="-0.6"/>
+        <Flags index="Notification" value="1"/>
+        <Amount value="120"/>
+        <Random value="20"/>
+        <AreaArray Radius="0.85" Fraction="1"/>
+        <AreaArray Radius="1.7" Fraction="0.25"/>
+        <ExcludeArray/>
+        <ExcludeArray Value="Target"/>
+        <SearchFilters value="-;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="CallForHelp" value="1"/>
+        <SearchFlags index="OffsetByUnitRadius" value="1"/>
+        <SearchFlags index="OffsetAreaByAngle" value="1"/>
+        <DisplayFlags index="CollapseBuffed" value="1"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <ArmorReduction value="4"/>
+        <Visibility value="Visible"/>
+        <KindSplash value="Ranged"/>
+    </CEffectDamage>
+    <CEffectCreateUnit id="ChooseMercenary">
+        <EditorCategories value=""/>
+        <SpawnUnit value="Mercenary"/>
+    </CEffectCreateUnit>
+    <CEffectApplyBehavior id="EquipHighCaliberRailgun">
+        <EditorCategories value=""/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="EquipCombatDroneWeapon">
+        <EditorCategories value=""/>
+    </CEffectApplyBehavior>
+    <CEffectSet id="EquipWeaponsExpertSet">
+        <EditorCategories value=""/>
+        <EffectArray value="EquipArrayPack"/>
+        <EffectArray value="EquipScoutVisor"/>
+        <EffectArray value="EquipCommsHeadset"/>
+        <EffectArray value="EquipCommsPack"/>
+        <EffectArray value="EquipRifleBasic"/>
+        <EffectArray value="EquipShotgun"/>
+        <EffectArray value="EquipD19LaserRifle"/>
+    </CEffectSet>
+    <CEffectSet id="W34PythonSet">
+        <EditorCategories value=""/>
+        <EffectArray value="TOEM25R"/>
+        <EffectArray value="EquipShotgun"/>
+    </CEffectSet>
+    <CEffectDamage id="GrenadeLauncherDamage">
+        <EditorCategories value=""/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <AttributeFactor index="Armored" value="-0.15"/>
+        <AttributeFactor index="Massive" value="-0.5"/>
+        <AttributeFactor index="Heroic" value="-0.6"/>
+        <AttributeFactor index="Summoned" value="-0.6"/>
+        <ArmorReduction value="4"/>
+        <Visibility value="Visible"/>
+        <Flags index="Notification" value="1"/>
+        <Kind value="Ranged"/>
+        <KindSplash value="Ranged"/>
+        <Amount value="150"/>
+        <Random value="20"/>
+        <AreaArray Radius="1.5" Fraction="0.9"/>
+        <AreaArray Radius="4" Fraction="0.3"/>
+        <ExcludeArray Value="Target"/>
+        <ExcludeArray Value="Source"/>
+        <SearchFilters value="Ground;Self,Player,Ally,Neutral,Psionic,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="CallForHelp" value="1"/>
+        <SearchFlags index="OffsetByUnitRadius" value="1"/>
+        <SearchFlags index="OffsetAreaByAngle" value="1"/>
+        <DisplayFlags index="CollapseBuffed" value="1"/>
+    </CEffectDamage>
+    <CEffectDamage id="EM25RDamage">
+        <EditorCategories value=""/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <AttributeFactor index="Mechanical" value="1.5"/>
+        <AttributeFactor index="Massive" value="1.5"/>
+        <AttributeFactor index="Heroic" value="-0.8"/>
+        <AttributeFactor index="Summoned" value="-0.8"/>
+        <Visibility value="Visible"/>
+        <Flags index="Notification" value="1"/>
+        <Amount value="1000"/>
+        <Random value="325"/>
+        <AreaArray Radius="0.5" Fraction="1"/>
+        <ExcludeArray Value="Target"/>
+        <ExcludeArray Value="Source"/>
+        <SearchFilters value="-;Self,Player,Ally,Psionic,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="CallForHelp" value="1"/>
+        <SearchFlags index="OffsetAreaByAngle" value="1"/>
+        <DisplayFlags index="CollapseBuffed" value="1"/>
+        <Death value="Blast"/>
+        <Kind value="Ranged"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="EM25RLM">
+        <EditorCategories value=""/>
+        <ImpactEffect value="EM25RDamage"/>
+        <AmmoUnit value="WarHoundWeapon"/>
+    </CEffectLaunchMissile>
+    <CEffectSet id="EM25RSet">
+        <EditorCategories value=""/>
+        <EffectArray value="TOW34Python"/>
+        <EffectArray value="EquipD19LaserRifle"/>
+    </CEffectSet>
+    <CEffectLaunchMissile id="GrenadeLauncherLM">
+        <ValidatorArray index="0" value="MGLTurretTargetFilters"/>
+        <EditorCategories value=""/>
+        <ImpactLocation Value="TargetPoint"/>
+        <ImpactOffset value="0.4,0,0"/>
+        <ImpactEffect value="GrenadeLauncherDamage"/>
+        <AmmoUnit value="40mmGrenade2"/>
+        <Movers Link="40mmGrenade"/>
+    </CEffectLaunchMissile>
+    <CEffectIssueOrder id="TOEM25R">
+        <EditorCategories value=""/>
+        <Abil value="EquipHighCaliberRailgun"/>
+        <AbilCmdIndex value="1"/>
+    </CEffectIssueOrder>
+    <CEffectIssueOrder id="TOW34Python">
+        <EditorCategories value=""/>
+        <Abil value="EquipW34Python"/>
+        <AbilCmdIndex value="1"/>
+    </CEffectIssueOrder>
+    <CEffectApplyBehavior id="UnequipHighCaliberRailgun">
+        <EditorCategories value=""/>
+        <Behavior value="EquipHighCaliberRailgun"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="UnequipXM25GrenadeLauncher">
+        <EditorCategories value=""/>
+        <Behavior value="EquipCombatDroneWeapon"/>
+    </CEffectApplyBehavior>
+    <CAbilEffectTarget id="StickyGrenadeLauncher">
+        <Alignment value="Negative"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="StickyGrenadeLaunch"/>
+        <Cost>
+            <Vital index="Energy" value="75"/>
+            <Charge Link="Abil/StickyGrenade"/>
+            <Cooldown Link="Abil/StickyGrenade"/>
+        </Cost>
+        <Range value="25"/>
+        <PrepTime value="0.01"/>
+        <FinishTime value="0.0625"/>
+        <UninterruptibleArray index="Prep" value="1"/>
+        <UninterruptibleArray index="Finish" value="1"/>
+        <CursorEffect value="EMPSearch"/>
+        <AINotifyEffect value="EMPLaunchMissile"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="StickyGrenadeLauncher" State="Restricted">
+            <Flags index="ShowInGlossary" value="0"/>
+        </CmdButtonArray>
+    </CAbilEffectTarget>
+    <CAbilBehavior id="SteadyAim">
+        <OrderArray index="0">
+            <DisplayType value="Confirm"/>
+            <Color value="255,0,255,0"/>
+            <Model value="Assets\UI\Cursors\WayPointAttack_Void\WayPointAttack_Void.m3"/>
+            <LineTexture value="Assets\Textures\WayPointLine.dds"/>
+        </OrderArray>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="SteadyAim" Requirements="MercenarySkills4"/>
+        <CmdButtonArray index="Off" DefaultButtonFace="SteadyAimOff"/>
+        <Flags index="Toggle" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="60"/>
+            <Cooldown TimeUse="60"/>
+        </Cost>
+        <BehaviorArray value="SteadyAim"/>
+        <ValidatorArray value="IsProned"/>
+    </CAbilBehavior>
+    <CAbilEffectTarget id="StunGrenade">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="StunGrenadeLM"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="RangeUseCasterRadius" value="0"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Display index="Energy" value="1"/>
+            <Vital index="Energy" value="40"/>
+            <Charge>
+                <CountMax value="2"/>
+                <CountStart value="2"/>
+                <CountUse value="1"/>
+                <Link value="Abil/MercenaryGrenade"/>
+                <Location value="Unit"/>
+                <TimeUse value="50"/>
+            </Charge>
+            <Cooldown Link="Abil/MercenaryGrenade" Location="Unit" TimeUse="2.5"/>
+        </Cost>
+        <InterruptCost>
+            <Charge Link="Abil/FragGrenadeMercenary"/>
+            <Cooldown Link="Abil/FragGrenadeMercenary"/>
+        </InterruptCost>
+        <Range value="12"/>
+        <PrepTime value="0.15"/>
+        <Marker Link="Abil/FragGrenadeMercenary"/>
+        <CursorEffect value="StunGrenadeSA"/>
+        <AINotifyEffect value="FragGrenadeMercenary"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="StunGrenade" Requirements="MercenarySkills2"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="DisarmMercenary">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InfoTooltipPriority value="21"/>
+        <Effect index="0" value="Disarm"/>
+        <Cost>
+            <Vital index="Energy" value="15"/>
+            <Charge Link="Abil/Disarm"/>
+            <Cooldown Link="Abil/Disarm" TimeUse="3"/>
+        </Cost>
+        <InterruptCost>
+            <Charge Link="Abil/Disarm"/>
+            <Cooldown Link="Abil/Disarm"/>
+        </InterruptCost>
+        <TargetFilters value="-;Enemy"/>
+        <Range value="1.5"/>
+        <CastIntroTime value="1.5"/>
+        <Marker Link="Abil/Disarm"/>
+        <ErrorAlert value="Error"/>
+        <AINotifyEffect value="Disarm"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Disarm" Requirements="MercenarySkills1"/>
+        <ShowProgressArray index="Cast" value="1"/>
+        <ShowProgressArray index="Channel" value="1"/>
+    </CAbilEffectTarget>
+    <CAbilEffectInstant id="LearnEM25r">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="LearnEM25r"/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="LearnW34Python">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="LearnW34Python"/>
+        <Cost/>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+    </CAbilEffectInstant>
+    <CAbilEffectTarget id="FragGrenadeMercenary">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="FragGrenade1LaunchMissile"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Display index="Energy" value="1"/>
+            <Vital index="Energy" value="40"/>
+            <Charge>
+                <CountMax value="2"/>
+                <CountStart value="2"/>
+                <CountUse value="1"/>
+                <Link value="Abil/MercenaryGrenade"/>
+                <Location value="Unit"/>
+                <TimeUse value="50"/>
+            </Charge>
+            <Cooldown Link="Abil/MercenaryGrenade" Location="Unit" TimeUse="2.5"/>
+        </Cost>
+        <Range value="12"/>
+        <PrepTime value="0.15"/>
+        <CursorEffect value="FragGrenadeDamage1"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="FragGrenade2" Requirements="MercenarySkills3"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="MonomolecularWire">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="MonoWireCreatePersist"/>
+        <Effect value="MonoWireCreatePersist"/>
+        <Effect value="MonoWireCreatePersist"/>
+        <Effect value="MonoWireCreatePersist"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Vital index="Energy" value="95"/>
+            <Charge Link="Abil/Binoculars"/>
+            <Cooldown Link="Abil/Binoculars" TimeUse="30"/>
+        </Cost>
+        <Cost>
+            <Vital index="Energy" value="90"/>
+            <Charge Link="Abil/Binoculars"/>
+            <Cooldown Link="Abil/Binoculars" TimeUse="28"/>
+        </Cost>
+        <Cost>
+            <Vital index="Energy" value="85"/>
+            <Charge Link="Abil/Binoculars"/>
+            <Cooldown Link="Abil/Binoculars" TimeUse="26"/>
+        </Cost>
+        <Cost>
+            <Vital index="Energy" value="80"/>
+            <Charge Link="Abil/Binoculars"/>
+            <Cooldown Link="Abil/Binoculars" TimeUse="24"/>
+        </Cost>
+        <Range value="17"/>
+        <Range value="17"/>
+        <Range value="17"/>
+        <Range value="17"/>
+        <AutoCastFilters value="-;Player,Ally,Neutral,Visible"/>
+        <UseMarkerArray index="Approach" value="0"/>
+        <UseMarkerArray index="Prep" value="0"/>
+        <UseMarkerArray index="Channel" value="0"/>
+        <ValidatedArray index="Approach" value="0"/>
+        <ValidatedArray index="Prep" value="0"/>
+        <ValidatedArray index="Channel" value="0"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MonomolecularWire"/>
+        <FinishTime value="0.45"/>
+        <CursorEffect value="MonoWireSearchArea"/>
+        <CastIntroTime value="0.3"/>
+        <ProgressButtonArray index="Cast" value="MonomolecularWire"/>
+        <ShowProgressArray index="Cast" value="1"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="BinocularsMercenary">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="BinocularsPL"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Vital index="Energy" value="9"/>
+            <Charge Link="Abil/BinocularsPL"/>
+            <Cooldown Link="Abil/BinocularsPL" TimeUse="18"/>
+        </Cost>
+        <InterruptCost>
+            <Charge Link="Abil/BinocularsPL"/>
+            <Cooldown Link="Abil/BinocularsPL"/>
+        </InterruptCost>
+        <Range value="44"/>
+        <AutoCastFilters value="-;Player,Ally,Neutral,Visible"/>
+        <Marker Link="Abil/BinocularsPL"/>
+        <UseMarkerArray index="Approach" value="0"/>
+        <UseMarkerArray index="Prep" value="0"/>
+        <UseMarkerArray index="Channel" value="0"/>
+        <ValidatedArray index="Approach" value="0"/>
+        <ValidatedArray index="Prep" value="0"/>
+        <ValidatedArray index="Channel" value="0"/>
+        <AINotifyEffect value="BinocularsPL"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BinocularsPL" Requirements="MercenarySkills1"/>
+    </CAbilEffectTarget>
+    <CAbilEffectInstant id="ChooseMercenary">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="ChooseMercenary" Requirements="BetaTesterOnlyNR"/>
+        <Cost>
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Location value="Global"/>
+            </Charge>
+            <Cooldown Location="Player" TimeUse="1"/>
+        </Cost>
+    </CAbilEffectInstant>
+    <CAbilEffectTarget id="FlareGunMercenary">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="FlareGunLaunchMissile"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Vital index="Energy" value="40"/>
+            <Cooldown TimeUse="75"/>
+        </Cost>
+        <InterruptCost>
+            <Charge Link="Abil/FlareGunGhost"/>
+            <Cooldown Link="Abil/FlareGunGhost"/>
+        </InterruptCost>
+        <Range value="24"/>
+        <PrepTime value="0"/>
+        <Marker Link="Abil/FragGrenadeLevel1"/>
+        <AINotifyEffect value=""/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="FlareGunItem" Requirements="MercenarySkills1"/>
+    </CAbilEffectTarget>
+    <CAbilEffectInstant id="MuscleRelaxantsMercenary">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="MuscleRelaxantAB"/>
+        <Cost>
+            <Vital index="Energy" value="100"/>
+            <Cooldown TimeUse="300"/>
+        </Cost>
+        <CancelCost>
+            <Charge Link=""/>
+            <Cooldown Link="" TimeUse="360"/>
+        </CancelCost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MuscleRelaxant" Requirements="MercenarySkills4"/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="SelfNanoInjection">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="NanoInjectionHeal"/>
+        <Cost>
+            <Vital index="Energy" value="75"/>
+            <Cooldown TimeUse="30"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SelfNanoInjection" Requirements="MercenarySkills4"/>
+    </CAbilEffectInstant>
+    <CAbilEffectTarget id="SmokeGrenadeMercenary">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="SmokeGrenadeLaunchMissile"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Cost>
+            <Display index="Energy" value="1"/>
+            <Vital index="Energy" value="40"/>
+            <Charge>
+                <CountMax value="2"/>
+                <CountStart value="2"/>
+                <CountUse value="1"/>
+                <Link value="Abil/MercenaryGrenade"/>
+                <Location value="Unit"/>
+                <TimeUse value="50"/>
+            </Charge>
+            <Cooldown Link="Abil/MercenaryGrenade" Location="Unit" TimeUse="2.5"/>
+        </Cost>
+        <InterruptCost>
+            <Charge Link="Abil/SmokeGrenadeJG"/>
+            <Cooldown Link="Abil/SmokeGrenadeJG"/>
+        </InterruptCost>
+        <Range value="12"/>
+        <PrepTime value="0.361"/>
+        <Marker Link="Abil/FragGrenadeLevel1"/>
+        <CursorEffect value="SmokeGrenadeSearchArea"/>
+        <AINotifyEffect value="FragGrenadeLevel1"/>
+        <LevelButtonImage value="Assets\Buttons\BTNFragGrenade.TGA"/>
+        <LevelButtonName value="Button/Name/SmokeGrenadeMercenary"/>
+        <LevelButtonTooltip value="Button/Tooltip/SmokeGrenadeMercenary"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SmokeGrenade" Requirements="MercenarySkills3"/>
+    </CAbilEffectTarget>
+    <CAbilEffectInstant id="MercenarySkills">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MercenarySkills"/>
+    </CAbilEffectInstant>
+    <CAbilBehavior id="EquipHighCaliberRailgun">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="EM25R" Requirements="EM25R"/>
+        <CmdButtonArray index="Off" DefaultButtonFace="BattleRifle"/>
+        <Flags index="Toggle" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Charge Link="Abil/SpecialtyWeapons" Location="Unit"/>
+            <Cooldown Link="Abil/SpecialtyWeapons" Location="Unit" TimeUse="7"/>
+        </Cost>
+        <BehaviorArray value="EM25R"/>
+    </CAbilBehavior>
+    <CAbilLearn id="LearnAbilitiesMercenary" parent="LearnAbilityMOS">
+        <Name value="Abil/Name/LearnAbilitiesMercenary"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InfoArray index="Learn1" Abil="SoldierSkills">
+            <Button DefaultButtonFace="LearnSoldierSkills" Requirements=""/>
+        </InfoArray>
+        <InfoArray index="Learn2" Abil="Marksmanship">
+            <Button DefaultButtonFace="LearnMarksmanship" Requirements=""/>
+        </InfoArray>
+        <InfoArray index="Learn3" Abil="LearnEM25r">
+            <Charge CountMax="100" CountStart="100"/>
+            <Button DefaultButtonFace="LearnEM25r" Requirements="LearnEM25r"/>
+        </InfoArray>
+        <InfoArray index="Learn4" Abil="MercenarySkills">
+            <Charge CountMax="100" CountStart="100"/>
+            <Button DefaultButtonFace="MercenarySkills"/>
+        </InfoArray>
+        <InfoArray index="Learn5" Abil="LearnW34Python">
+            <Charge CountMax="100" CountStart="100"/>
+            <Button DefaultButtonFace="LearnW34Python" Requirements="LearnW34Python"/>
+        </InfoArray>
+    </CAbilLearn>
+    <CAbilBehavior id="EquipW34Python">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="W34Python" Requirements="W34Python"/>
+        <CmdButtonArray index="Off" DefaultButtonFace="BattleRifle"/>
+        <Flags index="Toggle" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Charge Link="Abil/SpecialtyWeapons" Location="Unit"/>
+            <Cooldown Link="Abil/SpecialtyWeapons" Location="Unit" TimeUse="7"/>
+        </Cost>
+        <BehaviorArray value="W34Python"/>
+    </CAbilBehavior>
+    <CValidatorUnitType id="IsShockTrooper">
+        <Value value="ShockTrooper"/>
+    </CValidatorUnitType>
+    <CValidatorUnitCompareBehaviorCount id="FiringinAutomatic">
+        <Value value="1"/>
+        <Behavior value="AutomaticMode"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="PythonOn">
+        <Value value="1"/>
+        <Behavior value="W34Python"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="PythonRapid">
+        <Type value="And"/>
+        <CombineArray value="PythonOn"/>
+        <CombineArray value="FiringinAutomatic"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="HasGasMaskMercenary">
+        <Value value="1"/>
+        <Behavior value="GasMaskMercenary"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitType id="IsMercenary">
+        <Value value="Mercenary"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="IsMercenary2">
+        <Value value="Mercenary2"/>
+    </CValidatorUnitType>
+    <CValidatorCombine id="Mercenary">
+        <CombineArray value="IsMercenary"/>
+        <CombineArray value="IsMercenary2"/>
+    </CValidatorCombine>
+    <CRequirement id="LearnW34Python">
+        <NodeArray index="Use" Link="GT682506536CountBehaviorHeroLevelsCompleteOnlyAtUnitSumCountAbilLearnW34PythonCompleteOnlyAtUnitCountAbilLearnW34PythonCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="EM25R">
+        <NodeArray index="Use" Link="GTE4246221726CountAbilLearnEM25rCompleteOnlyAtUnit14246221726"/>
+    </CRequirement>
+    <CRequirement id="RegendareOnly">
+        <NodeArray index="Use" Link="GTE1515572183CountUpgradeRegendareOnlyCompleteOnly1"/>
+        <NodeArray index="Show" Link="GTE543422291CountUpgradeRegendareOnlyCompleteOnly1"/>
+    </CRequirement>
+    <CRequirement id="LearnEM25r">
+        <NodeArray index="Use" Link="GT682506536CountBehaviorHeroLevelsCompleteOnlyAtUnitSumCountAbilLearnEM25rCompleteOnlyAtUnitCountAbilLearnEM25rCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="MercenarySkills1">
+        <NodeArray index="Use" Link="GTE2868659219CountAbilMercenarySkillsCompleteOnlyAtUnit1"/>
+        <NodeArray index="Show" Link="GTE613288240CountAbilMercenarySkillsCompleteOnlyAtUnit0"/>
+    </CRequirement>
+    <CRequirement id="MercenarySkills2">
+        <NodeArray index="Use" Link="GTE1252009485CountAbilMercenarySkillsCompleteOnlyAtUnit2"/>
+        <NodeArray index="Show" Link="GTE3959971579CountAbilMercenarySkillsCompleteOnlyAtUnit0"/>
+    </CRequirement>
+    <CRequirement id="MercenarySkills3">
+        <NodeArray index="Use" Link="GTE771133526CountAbilMercenarySkillsCompleteOnlyAtUnit3"/>
+        <NodeArray index="Show" Link="GTE3379628916CountAbilMercenarySkillsCompleteOnlyAtUnit0"/>
+    </CRequirement>
+    <CRequirement id="MercenarySkills4">
+        <NodeArray index="Use" Link="AndOr2965822763CountBehaviorProneCompleteOnlyCountBehaviorProne2CompleteOnlyGTE2326275184CountAbilMercenarySkillsCompleteOnlyAtUnit4"/>
+        <NodeArray index="Show" Link="GTE3136116707CountAbilMercenarySkillsCompleteOnlyAtUnit0"/>
+    </CRequirement>
+    <CRequirement id="W34Python">
+        <NodeArray index="Use" Link="GTE280104464CountAbilLearnW34PythonCompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CButton id="StickyGrenadeLauncher"/>
+    <CButton id="SteadyAim">
+        <Icon value="Assets\Textures\btn-upgrade-protoss-alarak-rangeweapon.dds"/>
+    </CButton>
+    <CButton id="SteadyAimOff">
+        <Icon value="Assets\Textures\btn-upgrade-protoss-alarak-melleeweapon.dds"/>
+    </CButton>
+    <CButton id="StunGrenade">
+        <Icon value="Assets\Textures\btn-upgrade-nova-equipment-flashgrenade.dds"/>
+    </CButton>
+    <CButton id="LearnEM25r">
+        <Icon value="Assets\Textures\btn-upgrade-terran-nova-snipetripletap.dds"/>
+    </CButton>
+    <CButton id="LearnW34Python">
+        <Icon value="Assets\Textures\btn-upgrade-nova-equipment-shotgun.dds"/>
+    </CButton>
+    <CButton id="ChooseMercenary">
+        <Icon value="Assets\Textures\reaperportrait_static.dds"/>
+    </CButton>
+    <CButton id="SelfNanoInjection">
+        <Icon value="Buttons\BTNAdrenalin.dds"/>
+        <AlertIcon value="Buttons\BTNAdrenalin.dds"/>
+        <Hotkey value="Button/Hotkey/NanoInjection"/>
+    </CButton>
+    <CButton id="MercenarySkills">
+        <Icon value="Assets\Textures\nova coop_lvl 01_black ops.dds"/>
+    </CButton>
+    <CButton id="BattleRifle">
+        <Icon value="Buttons\Weapons\MANTEL-75.dds"/>
+    </CButton>
+    <CButton id="EM25R">
+        <Icon value="Assets\Textures\btn-upgrade-terran-nova-snipetripletap.dds"/>
+    </CButton>
+    <CButton id="W34Python">
+        <Icon value="Assets\Textures\btn-upgrade-nova-equipment-shotgun.dds"/>
+    </CButton>
+    <CRequirementAnd id="AndOr2965822763CountBehaviorProneCompleteOnlyCountBehaviorProne2CompleteOnlyGTE2326275184CountAbilMercenarySkillsCompleteOnlyAtUnit4">
+        <OperandArray value="Or2965822763CountBehaviorProneCompleteOnlyCountBehaviorProne2CompleteOnly"/>
+        <OperandArray value="GTE2326275184CountAbilMercenarySkillsCompleteOnlyAtUnit4"/>
+    </CRequirementAnd>
+    <CRequirementCountBehavior id="CountBehaviorProne2CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Prone2" State="CompleteOnly"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorProneCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="PMCApplyProne" State="CompleteOnly"/>
+    </CRequirementCountBehavior>
+    <CRequirementOr id="Or2965822763CountBehaviorProneCompleteOnlyCountBehaviorProne2CompleteOnly">
+        <OperandArray value="CountBehaviorProneCompleteOnly"/>
+        <OperandArray value="CountBehaviorProne2CompleteOnly"/>
+    </CRequirementOr>
+    <CRequirementGTE id="GTE3136116707CountAbilMercenarySkillsCompleteOnlyAtUnit0">
+        <OperandArray index="0" value="CountAbilMercenarySkillsCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementGTE>
+    <CRequirementGTE id="GTE3379628916CountAbilMercenarySkillsCompleteOnlyAtUnit0">
+        <OperandArray index="0" value="CountAbilMercenarySkillsCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementGTE>
+    <CRequirementGTE id="GTE3959971579CountAbilMercenarySkillsCompleteOnlyAtUnit0">
+        <OperandArray index="0" value="CountAbilMercenarySkillsCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementGTE>
+    <CRequirementGTE id="GTE613288240CountAbilMercenarySkillsCompleteOnlyAtUnit0">
+        <OperandArray index="0" value="CountAbilMercenarySkillsCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementGTE>
+    <CRequirementGT id="GT682506536CountBehaviorHeroLevelsCompleteOnlyAtUnitSumCountAbilLearnW34PythonCompleteOnlyAtUnitCountAbilLearnW34PythonCompleteOnlyAtUnit">
+        <OperandArray index="0" value="CountBehaviorHeroLevelsCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="SumCountAbilLearnW34PythonCompleteOnlyAtUnitCountAbilLearnW34PythonCompleteOnlyAtUnit"/>
+    </CRequirementGT>
+    <CRequirementGTE id="GTE4246221726CountAbilLearnEM25rCompleteOnlyAtUnit14246221726">
+        <OperandArray index="0" value="CountAbilLearnEM25rCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="14246221726"/>
+    </CRequirementGTE>
+    <CRequirementSum id="SumCountAbilLearnW34PythonCompleteOnlyAtUnitCountAbilLearnW34PythonCompleteOnlyAtUnit">
+        <OperandArray value="CountAbilLearnW34PythonCompleteOnlyAtUnit"/>
+        <OperandArray value="CountAbilLearnW34PythonCompleteOnlyAtUnit"/>
+    </CRequirementSum>
+    <CRequirementConst id="14246221726">
+        <Value value="1"/>
+    </CRequirementConst>
+    <CRequirementCountAbil id="CountAbilLearnEM25rCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="LearnEM25r" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountAbil>
+    <CRequirementCountAbil id="CountAbilLearnW34PythonCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="LearnW34Python" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountAbil>
+    <CRequirementGT id="GT682506536CountBehaviorHeroLevelsCompleteOnlyAtUnitSumCountAbilLearnEM25rCompleteOnlyAtUnitCountAbilLearnEM25rCompleteOnlyAtUnit">
+        <OperandArray index="0" value="CountBehaviorHeroLevelsCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="SumCountAbilLearnEM25rCompleteOnlyAtUnitCountAbilLearnEM25rCompleteOnlyAtUnit"/>
+    </CRequirementGT>
+    <CRequirementGTE id="GTE280104464CountAbilLearnW34PythonCompleteOnlyAtUnit1">
+        <OperandArray index="0" value="CountAbilLearnW34PythonCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementGTE>
+    <CRequirementSum id="SumCountAbilLearnEM25rCompleteOnlyAtUnitCountAbilLearnEM25rCompleteOnlyAtUnit">
+        <OperandArray value="CountAbilLearnEM25rCompleteOnlyAtUnit"/>
+        <OperandArray value="CountAbilLearnEM25rCompleteOnlyAtUnit"/>
+    </CRequirementSum>
+    <CRequirementCountUpgrade id="CountUpgradeRegendareOnlyCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="RegendareOnly" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementGTE id="GTE1515572183CountUpgradeRegendareOnlyCompleteOnly1">
+        <OperandArray index="0" value="CountUpgradeRegendareOnlyCompleteOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementGTE>
+    <CRequirementGTE id="GTE543422291CountUpgradeRegendareOnlyCompleteOnly1">
+        <OperandArray index="0" value="CountUpgradeRegendareOnlyCompleteOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementGTE>
+    <CRequirementCountAbil id="CountAbilMercenarySkillsCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="MercenarySkills" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountAbil>
+    <CRequirementGTE id="GTE1252009485CountAbilMercenarySkillsCompleteOnlyAtUnit2">
+        <OperandArray index="0" value="CountAbilMercenarySkillsCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="2"/>
+    </CRequirementGTE>
+    <CRequirementGTE id="GTE2326275184CountAbilMercenarySkillsCompleteOnlyAtUnit4">
+        <OperandArray index="0" value="CountAbilMercenarySkillsCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="4"/>
+    </CRequirementGTE>
+    <CRequirementGTE id="GTE2868659219CountAbilMercenarySkillsCompleteOnlyAtUnit1">
+        <OperandArray index="0" value="CountAbilMercenarySkillsCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementGTE>
+    <CRequirementGTE id="GTE771133526CountAbilMercenarySkillsCompleteOnlyAtUnit3">
+        <OperandArray index="0" value="CountAbilMercenarySkillsCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="3"/>
+    </CRequirementGTE>
+    <CActorAction id="Mk47Mod0GrenadeLauncher" parent="GenericAttack" effectImpact="Mk47Damage" effectLaunch="Mk47Launch">
+        <EditorCategories value=""/>
+        <On Terms="Effect.Viper30mmChainGunDamage.Start; FromEffectTreeDescendant" Send="ActionImpact"/>
+        <On Terms="Effect.Viper30mmChainGunDamage.Stop; FromEffectTreeDescendant" Send="ActionImpactPhysics"/>
+        <On Terms="Effect.Viper30mmChainGunLaunch.Start; At Caster" Send="Create"/>
+        <LaunchAttachQuery Methods="AMFilterWeapon"/>
+        <LaunchAssets Model="BradleyHELaunch" Scale="2.500000" Sound="Mk47Launch"/>
+        <Beam value="30mmChainGunDamageBeam"/>
+        <Missile value="40mmGrenadeMissile"/>
+        <ImpactMap index="None" Model="TossGrenadeImpact" Sound="MGLImpact" ModelReaction="30mmChainGunDamageImpactReaction"/>
+        <ImpactMap index="Shield" Sound="30mmChainGunDamageImpactShield" ModelReaction="30mmChainGunDamageImpactReactionShield"/>
+        <DamageMap index="None" Model="30mmChainGunDamageDamage" Sound="30mmChainGunDamageDamage" ModelReaction="30mmChainGunDamageDamageReaction"/>
+        <DamageMap index="Shield" Sound="30mmChainGunDamageDamageShield" ModelReaction="30mmChainGunDamageDamageReactionShield"/>
+        <AcquisitionYawHalfArc value="20.000000"/>
+        <AcquisitionPitchHalfArc value="20.000000"/>
+        <AccuracyHalfArc value="25.000000"/>
+    </CActorAction>
+    <CActorSound id="SteadyAimStart" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Abil.SteadyAim.TargetOn" Send="Create"/>
+        <Sound value="Stalker_Blink"/>
+    </CActorSound>
+    <CActorRange id="StunGrenadeRange">
+        <EditorCategories value=""/>
+        <On Terms="Abil.StunGrenade.TargetOn" Send="Create"/>
+        <On Terms="Abil.StunGrenade.TargetOff" Send="Destroy"/>
+        <Abil Link="StunGrenade" Index="1"/>
+    </CActorRange>
+    <CActorAction id="StunGrenade" parent="GenericAttack" effectImpact="StunGrenadeSA" effectLaunch="StunGrenadeLM">
+        <EditorCategories value=""/>
+        <ImpactMap index="None" Model="OracleStasisTrapExplosion" Scale="0.500000" Sound="Nova_FlashBangGrenade_Impact"/>
+        <ImpactMap index="Shield" Sound=""/>
+        <ImpactSound value="Nova_FlashBangGrenade_PinPull_Sound"/>
+    </CActorAction>
+    <CActorSound id="StunGrenadeLaunch" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.StunGrenadeLM.Start" Send="Create"/>
+        <Sound value="Raynor_TossGrenadeLaunch"/>
+    </CActorSound>
+    <CActorSplat id="UnknownActor" parent="TerranCursorSplat" abil="StunGrenade">
+        <EditorCategories value=""/>
+    </CActorSplat>
+    <CActorAction id="W34Python" parent="GenericAttack" effectImpact="W34PythonDamage" effectLaunch="W34PythonLM">
+        <EditorCategories value=""/>
+        <On Terms="Effect.Viper30mmChainGunDamage.Start; FromEffectTreeDescendant" Send="ActionImpact"/>
+        <On Terms="Effect.Viper30mmChainGunDamage.Stop; FromEffectTreeDescendant" Send="ActionImpactPhysics"/>
+        <On Terms="Effect.Viper30mmChainGunLaunch.Start; At Caster" Send="Create"/>
+        <LaunchAttachQuery Methods="AMFilterWeapon"/>
+        <LaunchAssets Model="GhostAttackLaunch" Scale="2.500000" Sound="MGLLaunch"/>
+        <Beam value="30mmChainGunDamageBeam"/>
+        <Missile value="BulletAttackMissile"/>
+        <ImpactMap index="None">
+            <Model value="BradleyHEAttackImpact"/>
+            <Scale value="0.300000"/>
+            <Sound value="MGLImpact"/>
+            <ModelReaction value="30mmChainGunDamageImpactReaction"/>
+        </ImpactMap>
+        <ImpactMap index="Dirt" Scale="0.300000"/>
+        <ImpactMap index="Rock" Scale="0.300000"/>
+        <ImpactMap index="Snow" Scale="0.300000"/>
+        <ImpactMap index="Sand" Scale="0.300000"/>
+        <ImpactMap index="Water" Scale="0.300000"/>
+        <ImpactMap index="Flesh" Scale="0.300000"/>
+        <ImpactMap index="LightArmor" Scale="0.300000"/>
+        <ImpactMap index="Metal" Scale="0.300000"/>
+        <ImpactMap index="Shield" Scale="0.300000" Sound="30mmChainGunDamageImpactShield" ModelReaction="30mmChainGunDamageImpactReactionShield"/>
+        <ImpactMap index="Miss" Scale="0.300000"/>
+        <DamageMap index="None" Model="30mmChainGunDamageDamage" Sound="30mmChainGunDamageDamage" ModelReaction="30mmChainGunDamageDamageReaction"/>
+        <DamageMap index="Shield" Sound="30mmChainGunDamageDamageShield" ModelReaction="30mmChainGunDamageDamageReactionShield"/>
+        <AcquisitionYawHalfArc value="20.000000"/>
+        <AcquisitionPitchHalfArc value="20.000000"/>
+        <AccuracyHalfArc value="25.000000"/>
+    </CActorAction>
+    <CActorUnit id="Mercenary" parent="GenericUnitStandard" UnitTemplatePortrait="" UnitTemplateIcon="" unitName="Mercenary">
+        <Macros value="UnloadDropAnim"/>
+        <Macros value="Animations"/>
+        <CustomUnitStatusFrame value="VoidShared_UnitStatus/HeroUnitEnergyStatusFrameTemplate"/>
+        <CustomUnitStatusOffset value="-4,-20"/>
+        <UnitFlags index="SuppressDefaultStatusBar" value="1"/>
+        <EditorCategories value=""/>
+        <On index="61" Terms="WeaponStart.*.AttackStart; WeaponTargetElevation GE 20.000000" Send="AnimBracketStart Attack Attack,Superior"/>
+        <On index="62" Terms="WeaponStart.*.AttackStart; WeaponTargetElevation LE -20.000000" Send="AnimBracketStart Attack Attack,Inferior"/>
+        <On index="63" Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Attack Attack"/>
+        <On index="64" Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack"/>
+        <On Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
+        <On Terms="ModelEvent; ModelEventName SquibStart" Send="Create MarineCheerSquib"/>
+        <On Terms="ModelEvent; ModelEventName SquibStop" Target="MarineCheerSquib" Send="Destroy"/>
+        <On Terms="ModelEvent; ModelEventName SquibStop" Target="MarineCheerSquibSound" Send="Destroy"/>
+        <On Terms="AnimDone; AnimName Cheer" Target="MarineCheerSquib" Send="Destroy"/>
+        <On Terms="AnimDone; AnimName Cheer" Target="MarineCheerSquibSound" Send="Destroy"/>
+        <Model value="Marine"/>
+        <EventDataFootprint index="0" Actor="UnitFootprint" Model="BogusFootprint"/>
+        <BuildModel value="Marine"/>
+        <DeathArray index="Normal">
+            <AnimProps value="Death,Silentkill"/>
+            <ModelLink value="MarineDeath"/>
+            <SoundLink value="Reaper_Death"/>
+            <VoiceLink value="InfantryRiflemanDeathVoice"/>
+        </DeathArray>
+        <DeathArray index="Blast" ModelLink="MarineDeathBlast"/>
+        <DeathArray index="Disintegrate" ModelLink="MarineDeathAcid" SoundLink="Uni_DeathFXAcid"/>
+        <DeathArray index="Eat" AnimProps="Stand" ModelLink="MarineDeathEat" SoundLink="Marine_DeathFXEat"/>
+        <DeathArray index="Eviscerate" ModelLink="MarineDeathEviscerate" SoundLink="Marine_DeathFXEviscerate"/>
+        <DeathArray index="Fire" ModelLink="MarineDeathFire" SoundLink="Marine_DeathFXFire"/>
+        <DeathArray index="Silentkill" SoundLink="Uni_DeathFXSilentKill"/>
+        <DeathArray index="Squish" SoundLink="Marine_DeathFXBloodSpray"/>
+        <PlacementModel value="Marine"/>
+        <PortraitModel value="ReaperPortrait"/>
+        <StandAnimTurnTime value="4"/>
+        <WalkAnimMoveSpeed value="2.25"/>
+        <AbilSoundArray AbilCmd="Stimpack,Execute" Sound="Marine_StimPackVO"/>
+        <BarOffset value="40"/>
+        <BarWidth value="36"/>
+        <GlossaryAnim value="Spell"/>
+        <GroupIcon>
+            <Image value="Assets\Wireframes\UAC_Marine_Wireframe.dds"/>
+        </GroupIcon>
+        <GroupSoundArray index="What" value="Marine_GroupWhat"/>
+        <GroupSoundArray index="Yes" value="Marine_GroupYes"/>
+        <GroupSoundArray index="Attack" value="Marine_GroupAttack"/>
+        <GroupSoundArray index="Board" value="Marine_GroupBoard"/>
+        <HeroIcon value="Assets\Textures\blackopsreaperportrait_static.dds"/>
+        <LifeArmorIcon value="Buttons\BTNKevlar.dds"/>
+        <SoundArray index="Birth" value="Marine_Birth"/>
+        <SoundArray index="Ready" value="Reaper_Ready"/>
+        <SoundArray index="Help" value="Reaper_Help"/>
+        <SoundArray index="What" value="Reaper_What"/>
+        <SoundArray index="Yes" value="Reaper_Yes"/>
+        <SoundArray index="Attack" value="Reaper_Attack"/>
+        <SoundArray index="Pissed" value="Reaper_Pissed"/>
+        <SoundArray index="Movement" value="Marine_Movement"/>
+        <SoundArray index="Turning" value="Marine_Turning"/>
+        <SoundArray index="Board" value="Marine_Board"/>
+        <SoundArray index="Click" value="Marine_Click"/>
+        <SoundArray index="ClickError" value="Marine_ClickError"/>
+        <SoundArray index="Highlight" value="Marine_Highlight"/>
+        <UnitBorderNormalColor value="150,150,150"/>
+        <UnitBorderSubgroupColor value="255,255,255"/>
+        <UnitIcon value="Assets\Textures\blackopsreaperportrait_static.dds"/>
+        <Wireframe>
+            <Image value="Assets\Wireframes\UAC_Marine_Wireframe.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorAction id="GrenadeLauncher" parent="GenericAttack" effectAttack="" effectImpact="GrenadeLauncherDamage" effectLaunch="GrenadeLauncherLM">
+        <EditorCategories value=""/>
+        <On index="0" Terms="Effect.Stop; FromEffectTreeDescendant" Send="ActionImpactPhysics"/>
+        <On index="3" Terms="Effect.Bogus.Start; At Caster" Send="Create"/>
+        <On index="5" Terms="Effect.Start; At Caster" Send="Create"/>
+        <LaunchAssets Model="AutoTurretAttackLaunch" Scale="1.500000" Sound="MGLLaunch"/>
+        <Beam value="MK79SentryGunAttackBeam"/>
+        <Missile value="40mmGrenadeMissile"/>
+        <ImpactMap index="None" Model="TossGrenadeImpact" Sound="TossGrenadeImpact" ModelReaction="MK79SentryGunAttackImpactReaction"/>
+        <ImpactMap index="Shield" Sound="MK79SentryGunAttackImpactShield" ModelReaction="MK79SentryGunAttackImpactReactionShield"/>
+        <DamageMap index="None" Model="MK79SentryGunAttackDamage" Sound="MK79SentryGunAttackDamage" ModelReaction="MK79SentryGunAttackDamageReaction"/>
+        <DamageMap index="Shield" Sound="MK79SentryGunAttackDamageShield" ModelReaction="MK79SentryGunAttackDamageReactionShield"/>
+    </CActorAction>
+    <CActorModel id="HighCaliberRailgun" parent="ModelAnimationStyleContinuous">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.EquipHighCaliberRailgun.On" Send="Create"/>
+        <On Terms="Behavior.EquipHighCaliberRailgun.Off" Send="Destroy"/>
+        <Aliases value="_Snapshot"/>
+        <Inherits index="BaseModelScale" value="1"/>
+        <Inherits index="CastShadows" value="1"/>
+        <Inherits index="CloakEffect" value="1"/>
+        <Inherits index="CreepEngulfment" value="1"/>
+        <Inherits index="Decal" value="1"/>
+        <Inherits index="Opacity" value="1"/>
+        <Inherits index="Scale" value="1"/>
+        <Inherits index="TeamColor" value="1"/>
+        <Inherits index="TimeScale" value="1"/>
+        <Inherits index="TintColor" value="1"/>
+        <Inherits index="Visibility" value="1"/>
+        <Inherits index="WarpGroup" value="1"/>
+        <ModelFlags index="UseSyncSeed" value="1"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachWeapon00"/>
+    </CActorModel>
+    <CActorAction id="HighCaliberRailgunLM" parent="GenericAttack" effectImpact="EM25RDamage" effectLaunch="EM25RLM">
+        <EditorCategories value=""/>
+        <LaunchAssets Model="WarHoundAttackLaunch" Sound="NovaXanthosRailgunTurretLaunch"/>
+        <Beam value="WarHoundAttackBeam"/>
+        <BeamScope value="Caster"/>
+        <Missile value="WarHoundAttackMissile"/>
+        <ImpactMap index="None" Model="WarHoundAttackImpact" Sound="RailGun_Impact" ModelReaction="WarHoundAttackImpactReaction"/>
+        <ImpactMap index="Shield" Sound="WarHoundAttackImpactShield" ModelReaction="WarHoundAttackImpactReactionShield"/>
+        <ImpactPhysics Name="RailgunImpact" MatchKeys="Basic" Physics="RailgunAttackDeathForce"/>
+        <DamageMap index="None" Model="WarHoundAttackDamage" Sound="WarHoundAttackDamage" ModelReaction="WarHoundAttackDamageReaction"/>
+        <DamageMap index="Shield" Sound="WarHoundAttackDamageShield" ModelReaction="WarHoundAttackDamageReactionShield"/>
+        <ActionFlags index="LaunchForceSite" value="1"/>
+    </CActorAction>
+    <CActorBeamSimple id="HighCaliberRailgunBeam" parent="BeamSimpleAnimationStyleOneShot">
+        <Inherits index="CloakEffect" value="1"/>
+        <Inherits index="Visibility" value="1"/>
+        <EditorCategories value=""/>
+        <On Terms="Effect.EM25RLM.Start; At Caster" Send="Create"/>
+        <On Terms="Effect.EM25RDamage.Start" Send="Create WarHoundImpactHoldingSite"/>
+        <On Terms="Effect.EM25RDamage.Start" Send="RefSet ::HostImpact WarHoundImpactHoldingSite"/>
+        <Host Subject="_Selectable"/>
+        <Model value="WarHoundBeam"/>
+        <HostLaunch Subject="_Selectable" Actor="Find"/>
+        <HostLaunchSiteOps Ops="SOpAttachWeapon" HoldPosition="1" HoldRotation="1"/>
+        <HostImpact Subject="_Missile" Actor="Find"/>
+        <HostImpactSiteOps Ops="SOpAttachCenter"/>
+    </CActorBeamSimple>
+    <CActorUnit id="Mercenary2" parent="UnitTemplateActor" unitName="Mercenary2">
+        <EditorCategories value=""/>
+        <CustomUnitStatusFrame value="VoidShared_UnitStatus/HeroUnitEnergyStatusFrameTemplate"/>
+        <CustomUnitStatusOffset value="-4,-20"/>
+        <UnitFlags index="SuppressDefaultStatusBar" value="1"/>
+        <DeathArray index="Normal" SoundLink="Reaper_Death"/>
+        <PortraitModel value="ReaperPortrait"/>
+        <HeroIcon value="Assets\Textures\blackopsreaperportrait_static.dds"/>
+        <SoundArray index="Ready" value="Reaper_Ready"/>
+        <SoundArray index="Help" value="Reaper_Help"/>
+        <SoundArray index="What" value="Reaper_What"/>
+        <SoundArray index="Yes" value="Reaper_Yes"/>
+        <SoundArray index="Attack" value="Reaper_Attack"/>
+        <SoundArray index="Pissed" value="Reaper_Pissed"/>
+        <UnitIcon value="Assets\Textures\blackopsreaperportrait_static.dds"/>
+    </CActorUnit>
+    <CActorModel id="CombatDroneWeapon" parent="ModelAnimationStyleContinuous">
+        <Aliases value="_Snapshot"/>
+        <Inherits index="BaseModelScale" value="1"/>
+        <Inherits index="CastShadows" value="1"/>
+        <Inherits index="CloakEffect" value="1"/>
+        <Inherits index="CreepEngulfment" value="1"/>
+        <Inherits index="Decal" value="1"/>
+        <Inherits index="Opacity" value="1"/>
+        <Inherits index="Scale" value="1"/>
+        <Inherits index="TeamColor" value="1"/>
+        <Inherits index="TimeScale" value="1"/>
+        <Inherits index="TintColor" value="1"/>
+        <Inherits index="Visibility" value="1"/>
+        <Inherits index="WarpGroup" value="1"/>
+        <EditorCategories value=""/>
+        <On Terms="Behavior.EquipCombatDroneWeapon.On" Send="Create"/>
+        <On Terms="Behavior.EquipCombatDroneWeapon.Off" Send="Destroy"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachWeapon00"/>
+        <ModelFlags index="UseSyncSeed" value="1"/>
+    </CActorModel>
+    <CActorModel id="RifleW" parent="ModelAnimationStyleContinuous">
+        <Aliases value="_Snapshot"/>
+        <Inherits index="BaseModelScale" value="1"/>
+        <Inherits index="CastShadows" value="1"/>
+        <Inherits index="CloakEffect" value="1"/>
+        <Inherits index="CreepEngulfment" value="1"/>
+        <Inherits index="Decal" value="1"/>
+        <Inherits index="Opacity" value="1"/>
+        <Inherits index="Scale" value="1"/>
+        <Inherits index="TeamColor" value="1"/>
+        <Inherits index="TimeScale" value="1"/>
+        <Inherits index="TintColor" value="1"/>
+        <Inherits index="Visibility" value="1"/>
+        <Inherits index="WarpGroup" value="1"/>
+        <EditorCategories value=""/>
+        <On Terms="Behavior.EquipRifleBasic.On" Send="Create"/>
+        <On Terms="Behavior.EquipRifleBasic.Off" Send="Destroy"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachWeapon00"/>
+        <Model value="2140StandardRifle"/>
+        <ModelFlags index="UseSyncSeed" value="1"/>
+    </CActorModel>
+    <CModel id="HighCaliberRailgun" parent="Unit">
+        <Model value="UAC_M92Torrent_Rifle.m3"/>
+        <EditorCategories value=""/>
+    </CModel>
+    <CModel id="CombatDroneWeapon" parent="Unit">
+        <Model value="Models\Soldier\Weapons\Weapon_SpectreRifle.m3"/>
+        <EditorCategories value=""/>
+    </CModel>
+    <CWeaponLegacy id="Mk47Mod0">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Icon value="Assets\Textures\btn-ability-terran-punishergrenade-color.dds"/>
+        <DisplayEffect value="Mk47Damage"/>
+        <TargetFilters value="Visible;Self,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="15"/>
+        <Range value="15"/>
+        <Cost>
+            <Resource index="Minerals" value="1"/>
+        </Cost>
+        <Period value="0.75"/>
+        <Backswing value="0"/>
+        <Effect value="Mk47Launch"/>
+        <LegacyOptions index="NoDeceleration" value="1"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="W34Python">
+        <EditorCategories value=""/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Icon value="Assets\Textures\btn-upgrade-nova-equipment-shotgun.dds"/>
+        <DisplayEffect value="W34PythonDamage"/>
+        <TargetFilters value="Ground,Visible;Self,Air,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="15"/>
+        <Range value="15"/>
+        <Cost>
+            <Resource index="Minerals" value="1"/>
+        </Cost>
+        <Period value="0.75"/>
+        <Backswing value="0"/>
+        <Effect value="W34PythonLM"/>
+        <LegacyOptions index="NoDeceleration" value="1"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="BattleRifleMk2">
+        <EditorCategories value=""/>
+        <Icon value="Buttons\Weapons\MANTEL-75.dds"/>
+        <DisplayEffect value="RiflemanAssaultRifle"/>
+        <DisplayAttackCount value="2"/>
+        <TargetFilters value="Visible;Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <ChaseFilters value="-;Player,Ally,Neutral,Enemy"/>
+        <MinScanRange value="15"/>
+        <Range value="15"/>
+        <RangeSlop value="3"/>
+        <Marker Link="Weapon/AssaultRifleBurst"/>
+        <Cost>
+            <Resource index="Minerals" value="1"/>
+            <Cooldown Link="Weapon/AssaultRifleBurst"/>
+        </Cost>
+        <Period value="0.5"/>
+        <DamagePoint value="0.05"/>
+        <Backswing value="0"/>
+        <Effect value="BattleRifleBurstCP"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="EM25R">
+        <EditorCategories value=""/>
+        <Options index="DisplayCooldown" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-nova-snipetripletap.dds"/>
+        <DisplayEffect value="EM25RDamage"/>
+        <TargetFilters value="Visible;Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="25"/>
+        <Range value="25"/>
+        <Cost>
+            <Resource index="Minerals" value="1"/>
+        </Cost>
+        <Period value="5"/>
+        <PeriodDisplayFlags index="CollapseBuffed" value="1"/>
+        <DamagePoint value="0.05"/>
+        <Backswing value="0"/>
+        <Effect value="EM25RLM"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="M25GrenadeLauncher">
+        <EditorCategories value=""/>
+        <Icon value="Assets\Textures\btn-upgrade-nova-equipment-shotgun.dds"/>
+        <DisplayEffect value="GrenadeLauncherDamage"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="15"/>
+        <Range value="15"/>
+        <Cost>
+            <Resource index="Minerals" value="1"/>
+            <Vital index="Energy" value="5"/>
+        </Cost>
+        <Period value="0.75"/>
+        <PeriodDisplayFlags index="CollapseBuffed" value="1"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0"/>
+        <Effect value="GrenadeLauncherLM"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CMoverMissile id="HighCaliberRailgunWeapon">
+        <MotionPhases>
+            <Driver value="Guidance"/>
+            <Acceleration value="3200"/>
+            <Speed value="0"/>
+            <MaxSpeed value="0"/>
+        </MotionPhases>
+    </CMoverMissile>
+    <CSound id="HighCaliberRailgunAttackImpact" parent="Combat">
+        <AssetArray File="Assets\Sounds\Nova_Xanthos_Railgun_Impact_03.wav" FacialGroup=""/>
+    </CSound>
+    <CUnit id="Mercenary" UnitTemplateCustomWeapon="">
+        <DeathTime value="-1"/>
+        <DeathRevealRadius value="3"/>
+        <DeathRevealDuration value="-1"/>
+        <DeathRevealType value="Vision"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="Hero" value="1"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <Attributes index="Heroic" value="1"/>
+        <LifeStart value="420"/>
+        <LifeMax value="420"/>
+        <LifeArmor value="1"/>
+        <LifeArmorDisplayFlags index="CollapseBuffed" value="1"/>
+        <EnergyStart value="190"/>
+        <EnergyMax value="190"/>
+        <EnergyRegenRate value="1.4492"/>
+        <Speed value="2.914"/>
+        <SpeedDisplayFlags index="CollapseBuffed" value="1"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="46.0625"/>
+        <StationaryTurningRate value="999.8437"/>
+        <TurningRate value="999.8437"/>
+        <Sight value="15"/>
+        <Food value="-1"/>
+        <AttackTargetPriority value="20"/>
+        <KillXP value="100"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="Prone"/>
+        <AbilArray Link="DropMagazine"/>
+        <AbilArray Link="ImmediateRemedialAction"/>
+        <AbilArray Link="Sprint"/>
+        <AbilArray Link="Jump"/>
+        <AbilArray Link="WeaponsHold2"/>
+        <AbilArray Link="LearnAbilitiesMercenary"/>
+        <AbilArray Link="HeroInventoryNoWeapon"/>
+        <AbilArray Link="SoldierSkills"/>
+        <AbilArray Link="Marksmanship"/>
+        <AbilArray Link="EquipW34Python"/>
+        <AbilArray Link="EquipHighCaliberRailgun"/>
+        <AbilArray Link="PerformSelfAid"/>
+        <AbilArray Link="BinocularsMercenary"/>
+        <AbilArray Link="MercenarySkills"/>
+        <AbilArray Link="ReloadHero"/>
+        <AbilArray Link="FlareGunMercenary"/>
+        <AbilArray Link="AutomaticMode"/>
+        <AbilArray Link="LearnEM25r"/>
+        <AbilArray Link="LearnW34Python"/>
+        <AbilArray Link="DisarmMercenary"/>
+        <AbilArray Link="StunGrenade"/>
+        <AbilArray Link="SteadyAim"/>
+        <AbilArray Link="SmokeGrenadeMercenary"/>
+        <AbilArray Link="AutomaticMode"/>
+        <AbilArray Link="SelfNanoInjection"/>
+        <BehaviorArray Link="HeroLevels"/>
+        <BehaviorArray Link="Fitness"/>
+        <BehaviorArray Link="Dexterity"/>
+        <BehaviorArray Link="Mechanical"/>
+        <BehaviorArray Link="StartingStats"/>
+        <BehaviorArray Link="SoldierSkills1"/>
+        <BehaviorArray Link="SoldierSkills2"/>
+        <BehaviorArray Link="SoldierSkills3"/>
+        <BehaviorArray Link="SoldierSkills4"/>
+        <BehaviorArray Link="Marksmanship1"/>
+        <BehaviorArray Link="Marksmanship2"/>
+        <BehaviorArray Link="Marksmanship3"/>
+        <BehaviorArray Link="Marksmanship4"/>
+        <BehaviorArray Link="SpecialtyWeaponsLevel1"/>
+        <BehaviorArray Link="SpecialtyWeaponsLevel2"/>
+        <BehaviorArray Link="SpecialtyWeaponsLevel3"/>
+        <BehaviorArray Link="ImprovedBattleRifle"/>
+        <BehaviorArray Link="RifleButt"/>
+        <BehaviorArray Link="MercenaryFlashlight"/>
+        <BehaviorArray Link="GasMaskMercenary"/>
+        <BehaviorArray Link="Criticallvl1"/>
+        <BehaviorArray Link="Criticallvl2"/>
+        <BehaviorArray Link="Criticallvl3"/>
+        <BehaviorArray Link="Criticallvl4"/>
+        <WeaponArray Link="BattleRifleMk2"/>
+        <EffectArray index="Birth" value="EquipWeaponsExpertSet"/>
+        <EffectArray index="Revive" value="EquipWeaponsExpertSet"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="1"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="2"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="3"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="AdditionalActions" Type="Submenu" SubmenuCardId="0003" Row="1" Column="3"/>
+            <LayoutButtons>
+                <Face value="LearnAbilities"/>
+                <Type value="Submenu"/>
+                <SubmenuAbilState value="LearnAbilitiesMercenary"/>
+                <SubmenuCardId value="0002"/>
+                <Row value="1"/>
+                <Column value="4"/>
+            </LayoutButtons>
+            <LayoutButtons Face="W34Python" Type="AbilCmd" AbilCmd="EquipW34Python,On" Row="1" Column="1"/>
+            <LayoutButtons Face="BattleRifle" Type="AbilCmd" AbilCmd="EquipW34Python,Off" Row="1" Column="1"/>
+            <LayoutButtons Face="EM25R" Type="AbilCmd" AbilCmd="EquipHighCaliberRailgun,On" Row="1" Column="2"/>
+            <LayoutButtons Face="BattleRifle" Type="AbilCmd" AbilCmd="EquipHighCaliberRailgun,Off" Row="1" Column="2"/>
+            <LayoutButtons Face="BinocularsPL" Type="AbilCmd" AbilCmd="BinocularsMercenary,Execute" Row="1" Column="0"/>
+            <LayoutButtons Face="StunGrenade" Type="AbilCmd" AbilCmd="StunGrenade,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="SmokeGrenade" Type="AbilCmd" AbilCmd="SmokeGrenadeMercenary,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="SteadyAim" Type="AbilCmd" AbilCmd="SteadyAim,On" Row="2" Column="2"/>
+            <LayoutButtons Face="SteadyAimOff" Type="AbilCmd" AbilCmd="SteadyAim,Off" Row="2" Column="2"/>
+        </CardLayouts>
+        <CardLayouts CardId="0002">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="LearnSoldierSkills" Type="AbilCmd" AbilCmd="LearnAbilitiesMercenary,Learn1" Row="0" Column="0"/>
+            <LayoutButtons Face="LearnMarksmanship" Type="AbilCmd" AbilCmd="LearnAbilitiesMercenary,Learn2" Row="0" Column="1"/>
+            <LayoutButtons Face="MercenarySkills" Type="AbilCmd" AbilCmd="LearnAbilitiesMercenary,Learn4" Row="0" Column="2"/>
+            <LayoutButtons Face="LearnW34Python" Type="AbilCmd" AbilCmd="LearnAbilitiesMercenary,Learn5" Row="0" Column="3"/>
+            <LayoutButtons Face="LearnEM25r" Type="AbilCmd" AbilCmd="LearnAbilitiesMercenary,Learn3" Row="0" Column="4"/>
+        </CardLayouts>
+        <CardLayouts CardId="0003">
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="Reload" Type="AbilCmd" AbilCmd="ReloadHero,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="DropMagazine" Type="AbilCmd" AbilCmd="DropMagazine,Execute" Row="0" Column="2"/>
+            <LayoutButtons Face="ImmediateRemedialAction" Type="AbilCmd" AbilCmd="ImmediateRemedialAction,Execute" Row="0" Column="3"/>
+            <LayoutButtons Face="HoldFire3" Type="AbilCmd" AbilCmd="WeaponsHold2,On" Row="1" Column="3"/>
+            <LayoutButtons Face="HoldFireOff2" Type="AbilCmd" AbilCmd="WeaponsHold2,Off" Row="1" Column="3"/>
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="PerformSelfAid" Type="AbilCmd" AbilCmd="PerformSelfAid,Execute" Row="1" Column="0"/>
+            <LayoutButtons Face="SelfNanoInjection" Type="AbilCmd" AbilCmd="SelfNanoInjection,Execute" Row="1" Column="0"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="Prone" Type="AbilCmd" AbilCmd="Prone,Execute" Row="1" Column="2"/>
+            <LayoutButtons Face="AutomaticMode" Type="AbilCmd" AbilCmd="AutomaticMode,On" Row="1" Column="1"/>
+            <LayoutButtons Face="Disarm" Type="AbilCmd" AbilCmd="DisarmMercenary,Execute" Row="2" Column="0"/>
+        </CardLayouts>
+        <Radius value="0.375"/>
+        <SeparationRadius value="0.375"/>
+        <InnerRadius value="0.375"/>
+        <CargoSize value="1"/>
+        <ScoreMake value="50"/>
+        <ScoreKill value="100"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="15"/>
+        <MinimapRadius value="0.375"/>
+        <EditorCategories value=""/>
+        <TacticalAI value="Mercenary2"/>
+        <Item value="8SlotBag"/>
+        <LeaderAlias value="Mercenary2"/>
+        <HotkeyAlias value="Mercenary2"/>
+        <SelectAlias value="Marine2"/>
+        <SubgroupAlias value="Mercenary2"/>
+        <HotkeyCategory value="Hotkey/Catagory/MOSClassic"/>
+        <KillDisplay value="Always"/>
+        <AIEvaluateAlias value="Mercenary2"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="33"/>
+            <ChanceArray index="Idle" value="33"/>
+            <ChanceArray index="Turn" value="33"/>
+        </Fidget>
+        <ReviveInfoBase>
+            <Charge Link="Marine/Revive"/>
+            <Cooldown Link="Marine/Revive"/>
+        </ReviveInfoBase>
+    </CUnit>
+    <CUnit id="Mercenary2" parent="UnitTemplateCustom" UnitTemplateCustomWeapon="">
+        <AbilArray index="5" Link="ImmediateRemedialAction"/>
+        <AbilArray index="6" Link="Sprint"/>
+        <AbilArray index="7" Link="Jump"/>
+        <AbilArray index="8" Link="WeaponsHold2"/>
+        <AbilArray index="9" Link="LearnAbilitiesMercenary"/>
+        <AbilArray Link="HeroInventoryNoWeapon"/>
+        <AbilArray Link="SoldierSkills"/>
+        <AbilArray Link="Marksmanship"/>
+        <AbilArray Link="EquipW34Python"/>
+        <AbilArray Link="EquipHighCaliberRailgun"/>
+        <AbilArray Link="PerformSelfAid"/>
+        <AbilArray Link="BinocularsMercenary"/>
+        <AbilArray Link="MercenarySkills"/>
+        <AbilArray Link="ReloadHero"/>
+        <AbilArray Link="FlareGunMercenary"/>
+        <AbilArray Link="AutomaticMode"/>
+        <AbilArray Link="LearnEM25r"/>
+        <AbilArray Link="LearnW34Python"/>
+        <AbilArray Link="DisarmMercenary"/>
+        <AbilArray Link="StunGrenade"/>
+        <AbilArray Link="SteadyAim"/>
+        <AbilArray Link="SmokeGrenadeMercenary"/>
+        <AbilArray Link="AutomaticMode"/>
+        <AbilArray Link="SelfNanoInjection"/>
+        <BehaviorArray Link="SoldierSkills1"/>
+        <BehaviorArray Link="SoldierSkills2"/>
+        <BehaviorArray Link="SoldierSkills3"/>
+        <BehaviorArray Link="SoldierSkills4"/>
+        <BehaviorArray Link="Marksmanship1"/>
+        <BehaviorArray Link="Marksmanship2"/>
+        <BehaviorArray Link="Marksmanship3"/>
+        <BehaviorArray Link="Marksmanship4"/>
+        <BehaviorArray Link="SpecialtyWeaponsLevel1"/>
+        <BehaviorArray Link="SpecialtyWeaponsLevel2"/>
+        <BehaviorArray Link="SpecialtyWeaponsLevel3"/>
+        <BehaviorArray Link="ImprovedBattleRifle"/>
+        <BehaviorArray Link="RifleButt"/>
+        <BehaviorArray Link="MercenaryFlashlight"/>
+        <BehaviorArray Link="GasMaskMercenary"/>
+        <BehaviorArray Link="Criticallvl1"/>
+        <BehaviorArray Link="Criticallvl2"/>
+        <BehaviorArray Link="Criticallvl3"/>
+        <BehaviorArray Link="Criticallvl4"/>
+        <WeaponArray index="0" Link="BattleRifleMk2"/>
+        <EffectArray index="Birth" value="EquipWeaponsExpertSet"/>
+        <EffectArray index="Revive" value="EquipWeaponsExpertSet"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="0" Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="2"/>
+            <LayoutButtons index="1" Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="3"/>
+            <LayoutButtons index="2" Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons index="3">
+                <Face value="AdditionalActions"/>
+                <Type value="Submenu"/>
+                <AbilCmd value=""/>
+                <SubmenuCardId value="0003"/>
+                <Row value="1"/>
+                <Column value="3"/>
+            </LayoutButtons>
+            <LayoutButtons index="4">
+                <Face value="LearnAbilities"/>
+                <Type value="Submenu"/>
+                <AbilCmd value=""/>
+                <SubmenuAbilState value="LearnAbilitiesMercenary"/>
+                <SubmenuCardId value="0002"/>
+                <Row value="1"/>
+                <Column value="4"/>
+            </LayoutButtons>
+            <LayoutButtons index="5">
+                <Face value="Jump"/>
+                <Type value="AbilCmd"/>
+                <AbilCmd value="Jump,Execute"/>
+                <SubmenuCardId value=""/>
+                <Row value="0"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons index="6">
+                <Face value="Sprint"/>
+                <Type value="AbilCmd"/>
+                <AbilCmd value="Sprint,Execute"/>
+                <SubmenuCardId value=""/>
+                <Row value="0"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons Face="W34Python" Type="AbilCmd" AbilCmd="EquipW34Python,On" Row="1" Column="1"/>
+            <LayoutButtons Face="BattleRifle" Type="AbilCmd" AbilCmd="EquipW34Python,Off" Row="1" Column="1"/>
+            <LayoutButtons Face="EM25R" Type="AbilCmd" AbilCmd="EquipHighCaliberRailgun,On" Row="1" Column="2"/>
+            <LayoutButtons Face="BattleRifle" Type="AbilCmd" AbilCmd="EquipHighCaliberRailgun,Off" Row="1" Column="2"/>
+            <LayoutButtons Face="StunGrenade" Type="AbilCmd" AbilCmd="StunGrenade,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="SmokeGrenade" Type="AbilCmd" AbilCmd="SmokeGrenadeMercenary,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="SteadyAim" Type="AbilCmd" AbilCmd="SteadyAim,On" Row="2" Column="2"/>
+            <LayoutButtons Face="SteadyAimOff" Type="AbilCmd" AbilCmd="SteadyAim,Off" Row="2" Column="2"/>
+            <LayoutButtons Face="Binoculars5" Type="AbilCmd" AbilCmd="BinocularsMercenary,Execute" Row="1" Column="0"/>
+        </CardLayouts>
+        <CardLayouts index="1" CardId="0002">
+            <LayoutButtons Face="LearnSoldierSkills" Type="AbilCmd" AbilCmd="LearnAbilitiesMercenary,Learn1" Row="0" Column="0"/>
+            <LayoutButtons Face="LearnMarksmanship" Type="AbilCmd" AbilCmd="LearnAbilitiesMercenary,Learn2" Row="0" Column="1"/>
+            <LayoutButtons Face="MercenarySkills" Type="AbilCmd" AbilCmd="LearnAbilitiesMercenary,Learn4" Row="0" Column="2"/>
+            <LayoutButtons Face="LearnW34Python" Type="AbilCmd" AbilCmd="LearnAbilitiesMercenary,Learn5" Row="0" Column="3"/>
+            <LayoutButtons Face="LearnEM25r" Type="AbilCmd" AbilCmd="LearnAbilitiesMercenary,Learn3" Row="0" Column="4"/>
+        </CardLayouts>
+        <CardLayouts index="2" CardId="0003">
+            <LayoutButtons index="0" Face="Reload" Type="AbilCmd" AbilCmd="ReloadHero,Execute" Row="0" Column="1"/>
+            <LayoutButtons index="1" Face="DropMagazine" Type="AbilCmd" AbilCmd="DropMagazine,Execute" Row="0" Column="2"/>
+            <LayoutButtons index="2" Face="ImmediateRemedialAction" Type="AbilCmd" AbilCmd="ImmediateRemedialAction,Execute" Row="0" Column="3"/>
+            <LayoutButtons index="3" Face="HoldFire3" Type="AbilCmd" AbilCmd="WeaponsHold2,On" Row="1" Column="3"/>
+            <LayoutButtons index="4" Face="HoldFireOff2" Type="AbilCmd" AbilCmd="WeaponsHold2,Off" Row="1" Column="3"/>
+            <LayoutButtons index="5" Face="Cancel" Type="CancelSubmenu" AbilCmd="" Row="2" Column="4"/>
+            <LayoutButtons index="6" Face="PerformSelfAid" Type="AbilCmd" AbilCmd="PerformSelfAid,Execute" Row="1" Column="0"/>
+            <LayoutButtons Face="SelfNanoInjection" Type="AbilCmd" AbilCmd="SelfNanoInjection,Execute" Row="1" Column="0"/>
+            <LayoutButtons Face="Prone" Type="AbilCmd" AbilCmd="Prone,Execute" Row="1" Column="2"/>
+            <LayoutButtons Face="AutomaticMode" Type="AbilCmd" AbilCmd="AutomaticMode,On" Row="1" Column="1"/>
+            <LayoutButtons Face="Disarm" Type="AbilCmd" AbilCmd="DisarmMercenary,Execute" Row="2" Column="0"/>
+        </CardLayouts>
+        <EditorCategories value=""/>
+        <HotkeyCategory value="Hotkey/Catagory/MOSCustom"/>
+        <Attributes index="Light" value="0"/>
+    </CUnit>
+    <CBehaviorBuff id="PythonRapid">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="PythonRapid"/>
+        <Modification AttackSpeedMultiplier="0.5"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="GasMaskMercenary">
+        <Cost>
+            <Charge Link="Behavior/GasMask"/>
+            <Cooldown Link="Behavior/GasMask"/>
+        </Cost>
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="MercenarySkills3"/>
+        <DamageResponse>
+            <Cost>
+                <Charge Link="Behavior/GasMask"/>
+                <Cooldown Link="Behavior/GasMask"/>
+            </Cost>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SteadyAim">
+        <InfoIcon value="Assets\Textures\btn-upgrade-protoss-alarak-melleeweapon.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="IsProned"/>
+        <Duration value="10"/>
+        <Modification AttackSpeedMultiplier="0.4" WeaponRange="4" WeaponScanBonus="4">
+            <AdditiveMoveSpeedFactor value="-0.2"/>
+            <DamageDealtFraction index="Spell" value="3"/>
+            <DamageDealtFraction index="Melee" value="3"/>
+            <DamageDealtFraction index="Ranged" value="3"/>
+            <DamageDealtFraction index="Splash" value="3"/>
+            <VitalRegenArray index="Energy" value="-5"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="StunGrenade">
+        <Alignment value="Negative"/>
+        <Cost>
+            <Charge Link="Behavior/SonicPulse"/>
+            <Cooldown Link="Behavior/SonicPulse"/>
+        </Cost>
+        <InfoIcon value="Assets\Textures\btn-upgrade-nova-equipment-flashgrenade.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <ModifyFlags index="DisableAbils" value="1"/>
+            <ModifyFlags index="Reveal" value="1"/>
+            <ModifyFlags index="SuppressMoving" value="1"/>
+            <ModifyFlags index="SuppressTurning" value="1"/>
+            <StateFlags index="Uncommandable" value="1"/>
+        </Modification>
+        <DamageResponse>
+            <Cost>
+                <Charge Link="Behavior/SonicPulse"/>
+                <Cooldown Link="Behavior/SonicPulse"/>
+            </Cost>
+        </DamageResponse>
+        <DurationRandomMin value="5"/>
+        <DurationRandomMax value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ImprovedBattleRifle">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-nova-shotgunaoe.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification AttackSpeedMultiplier="1.025" WeaponRange="0.75">
+            <DamageDealtFraction index="Ranged" value="0.045"/>
+            <BehaviorLinkDisableArray value="EquipD19LaserRifle"/>
+            <BehaviorLinkDisableArray value="EquipShotgun"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MercenaryFlashlight">
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-techupgrade-terran-ocularimplants.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="SoldierSkills02M"/>
+        <Modification Detect="15" DetectFilters="-;Missile"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="EquipHighCaliberRailgun">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="EquipCombatDroneWeapon">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="EM25R">
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-nova-snipetripletap.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InitialEffect value="EM25RSet"/>
+        <Modification>
+            <BehaviorLinkDisableArray value="ImprovedBattleRifle"/>
+            <BehaviorLinkDisableArray value="EquipShotgun"/>
+            <BehaviorLinkDisableArray value="RifleButt"/>
+            <BehaviorLinkDisableArray value="Criticallvl1"/>
+            <BehaviorLinkDisableArray value="Criticallvl2"/>
+            <BehaviorLinkDisableArray value="Criticallvl3"/>
+            <BehaviorLinkDisableArray value="Criticallvl4"/>
+            <WeaponArray Link="EM25R"/>
+            <WeaponDisableArray value="BattleRifleMk2"/>
+        </Modification>
+        <BehaviorFlags index="Permanent" value="1"/>
+        <BehaviorFlags index="EnabledWhileDead" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="EquipRifleBasic">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="DoesntHaveSteelSaber"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="W34Python">
+        <InfoIcon value="Assets\Textures\btn-upgrade-nova-equipment-ui-shotgun.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InitialEffect value="W34PythonSet"/>
+        <Modification>
+            <BehaviorLinkDisableArray value="EquipRifleBasic"/>
+            <BehaviorLinkDisableArray value="ImprovedBattleRifle"/>
+            <BehaviorLinkDisableArray value="EquipD19LaserRifle"/>
+            <BehaviorLinkDisableArray value="Criticallvl1"/>
+            <BehaviorLinkDisableArray value="Criticallvl2"/>
+            <BehaviorLinkDisableArray value="Criticallvl3"/>
+            <BehaviorLinkDisableArray value="Criticallvl4"/>
+            <WeaponArray Link="W34Python"/>
+            <WeaponDisableArray value="BattleRifleMk2"/>
+        </Modification>
+        <BehaviorFlags index="Permanent" value="1"/>
+        <BehaviorFlags index="EnabledWhileDead" value="1"/>
+    </CBehaviorBuff>
+    <CUpgrade id="EM25rLevel2">
+        <EffectArray Reference="Weapon,EM25R,Range" Value="5"/>
+        <EffectArray Operation="Multiply" Reference="Weapon,EM25R,Period" Value="0.850000"/>
+    </CUpgrade>
+    <CUpgrade id="SkilledWeaponry"/>
+    <CUpgrade id="W34PythonLevel2">
+        <EffectArray Reference="Effect,W34PythonDamage,AreaArray[0].Radius" Value="1"/>
+        <EffectArray Reference="Effect,W34PythonDamage,AreaArray[1].Radius" Value="1"/>
+        <EffectArray Reference="Weapon,W34Python,Range" Value="2"/>
+        <EffectArray Reference="Weapon,W34Python,MinScanRange" Value="2"/>
+    </CUpgrade>
+    <CUpgrade id="W34PythonLevel3">
+        <EffectArray Reference="Effect,W34PythonDamage,Amount" Value="25"/>
+        <EffectArray Operation="Set" Reference="Effect,W34PythonDamage,AttributeFactor[Armored]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Effect,W34PythonDamage,AttributeFactor[Mechanical]" Value="-0.25"/>
+    </CUpgrade>
+    <CUpgrade id="EM25rLevel3">
+        <EffectArray Operation="Multiply" Reference="Effect,EM25RDamage,Amount" Value="1.15"/>
+        <EffectArray Reference="Effect,EM25RDamage,AreaArray[0].Radius" Value="1"/>
+    </CUpgrade>
+    <CUpgrade id="ImprovedAssaultRifle">
+        <EffectArray Reference="Behavior,ImprovedBattleRifle,Modification.DamageDealtFraction[Ranged]" Value="0.045"/>
+        <EffectArray Reference="Behavior,ImprovedBattleRifle,Modification.AttackSpeedMultiplier" Value="0.025"/>
+        <EffectArray Reference="Behavior,ImprovedBattleRifle,Modification.WeaponRange" Value="0.75"/>
+        <MaxLevel value="4"/>
+    </CUpgrade>
+    <CUpgrade id="RegendareOnly">
+        <EffectArray Operation="Set" Reference="Effect,RailGunDamage,AreaArray[0].Radius" Value="4"/>
+    </CUpgrade>
+</Catalog>

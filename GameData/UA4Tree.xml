@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CValidatorUnitCompareBehaviorCount id="TerrainHitOn">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="TerrainHit"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CEffectSwitch id="TerrainHitLifeSwitch6Second">
+        <EditorCategories value=""/>
+        <CaseArray Validator="TerrainHitOn" Effect="TerrainTimedLife6SecsApply"/>
+        <CaseDefault value="TerrainHitApply"/>
+    </CEffectSwitch>
+    <CEffectApplyBehavior id="TerrainTimedLife6SecsApply">
+        <EditorCategories value=""/>
+        <WhichUnit Value="Caster"/>
+        <Behavior value="TerrainTimedLife6Secs"/>
+    </CEffectApplyBehavior>
+    <CEffectDamage id="TerrainTimedLifeFateRemove">
+        <EditorCategories value=""/>
+        <Flags index="Kill" value="1"/>
+        <Flags index="NoKillCredit" value="1"/>
+        <Total value="Maximum"/>
+        <Death value="Remove"/>
+    </CEffectDamage>
+    <CEffectApplyBehavior id="TerrainHitApply">
+        <EditorCategories value=""/>
+        <WhichUnit Value="Caster"/>
+        <Behavior value="TerrainHit"/>
+    </CEffectApplyBehavior>
+    <CAbilEffectTarget id="MassiveDestroy">
+        <Effect index="0" value="TerrainHitApply"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="ReExecutable" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Charge Link="Abil/MassiveKnockover"/>
+            <Cooldown Link="Abil/MassiveKnockover" TimeUse="0.5"/>
+        </Cost>
+        <Range value="1.5"/>
+        <Arc value="360"/>
+        <AutoCastFilters value="Ground,Massive;Self,Structure,Missile,Destructible,Stasis,Dead,Invulnerable,Benign"/>
+        <AutoCastRange value="1.5"/>
+        <AutoCastValidatorArray value="IsMassive"/>
+        <FinishTime value="3"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MassiveKnockover"/>
+    </CAbilEffectTarget>
+    <CActorUnit id="Tree" parent="GenericUnitStandardNoAutoSoundLinks" unitName="Tree">
+        <On Terms="Effect.TerrainHitApply.Start; ModelVariation 0" Send="ModelSwap TreeDeath00"/>
+        <On Terms="Effect.TerrainHitApply.Start; ModelVariation 1" Send="ModelSwap TreeDeath01"/>
+        <On Terms="Effect.TerrainHitApply.Start; ModelVariation 2" Send="ModelSwap TreeDeath02"/>
+        <On Terms="Effect.TerrainHitApply.Start; ModelVariation 3" Send="ModelSwap TreeDeath03"/>
+        <On Terms="Effect.TerrainHitApply.Start; ModelVariation 4" Send="ModelSwap TreeDeath04"/>
+        <On Terms="Effect.TerrainHitApply.Start; ModelVariation 5" Send="ModelSwap TreeDeath05"/>
+        <On Terms="Effect.TerrainHitApply.Start; ModelVariation 6" Send="ModelSwap TreeDeath06"/>
+        <On Terms="Effect.TerrainHitApply.Start; ModelVariation 7" Send="ModelSwap TreeDeath07"/>
+        <On Terms="Effect.TerrainHitApply.Start" Send="AnimBracketStart Death Death,Fire Dead,Fire IGNORE"/>
+        <On Terms="Effect.TerrainHitApply.Start; AnimPlaying Death" Send="StatusSet TreeBurned 1"/>
+        <On Terms="Effect.TerrainTimedLife6SecsApply.Start; IsStatus TreeBurned 1" Send="AttachModel GenericTreeFireLarge {} AMPreferGround"/>
+        <On Terms="Effect.TerrainTimedLife6SecsApply.Start; IsStatus TreeBurned 1" Send="TimerSet 6.000000 {Final Burn}"/>
+        <On Terms="Effect.TerrainTimedLife6SecsApply.Start; IsStatus TreeBurned 1" Send="SetScale 0.600000 6.000000 Shrink"/>
+        <On Terms="TimerExpired; TimerName {Final Burn}" Target="GenericTreeFireLarge" Send="Destroy Immediate"/>
+        <On Terms="Effect.TerrainTimedLife6SecsApply.Start; IsStatus TreeBurned 1; At Caster" Target="TreeCrashSound" Send="Signal Falling"/>
+        <DeathArray index="Normal" ModelLink="TreeDeath00" SoundLink="Destructible_TreeCrash"/>
+        <DeathArray index="Fire" ModelLink="TreeDeath00" SoundLink="Destructible_TreeCrash"/>
+        <DeathCustoms ModelLink="TreeDeath00" Name="Variation0"/>
+        <DeathCustoms ModelLink="TreeDeath01" Name="Variation1"/>
+        <DeathCustoms ModelLink="TreeDeath02" Name="Variation2"/>
+        <DeathCustoms ModelLink="TreeDeath03" Name="Variation3"/>
+        <DeathCustoms ModelLink="TreeDeath04" Name="Variation4"/>
+        <DeathCustoms ModelLink="TreeDeath05" Name="Variation5"/>
+        <DeathCustoms ModelLink="TreeDeath06" Name="Variation6"/>
+        <DeathCustoms ModelLink="TreeDeath07" Name="Variation7"/>
+        <BarOffset value="22"/>
+        <BarWidth value="45"/>
+        <StatusBarFlags index="Shields" value="0"/>
+        <StatusBarFlags index="Life" value="0"/>
+        <StatusBarFlags index="Energy" value="0"/>
+        <StatusBarFlags index="Cargo" value="0"/>
+        <StatusBarFlags index="Progress" value="0"/>
+        <StatusBarFlags index="Duration" value="0"/>
+        <ModelFlags index="AutomatedGlobalLoopsIgnoreOrphan" value="1"/>
+        <ModelFlags index="IgnoreWalkables" value="1"/>
+        <ModelFlags index="NeedsVolumeMonitoring" value="0"/>
+        <ModelFlags index="UseSyncSeed" value="0"/>
+        <ModelFlags index="OutlineOccluder" value="1"/>
+        <Aliases value="_UnitHuge"/>
+        <DeathActorSound value="TreeCrashSound"/>
+    </CActorUnit>
+    <CActorSound id="TreeCrashSound" parent="SoundContinuous">
+        <EditorCategories value=""/>
+        <On Terms="Signal.*.Falling" Send="Create"/>
+        <Sound value="Destructible_TreeCrash"/>
+    </CActorSound>
+    <CActorUnit id="TrafficLight" parent="GenericUnitStandardNoAutoSoundLinks" unitName="TrafficLight">
+        <Aliases value="_CreepEngulfable"/>
+        <Aliases value="_UnitHuge"/>
+        <On Terms="Effect.TerrainHitApply.Start; ModelVariation 0" Send="ModelSwap TreeDeath00"/>
+        <On Terms="Effect.TerrainHitApply.Start; ModelVariation 1" Send="ModelSwap TreeDeath01"/>
+        <On Terms="Effect.TerrainHitApply.Start; ModelVariation 2" Send="ModelSwap TreeDeath02"/>
+        <On Terms="Effect.TerrainHitApply.Start; ModelVariation 3" Send="ModelSwap TreeDeath03"/>
+        <On Terms="Effect.TerrainHitApply.Start; ModelVariation 4" Send="ModelSwap TreeDeath04"/>
+        <On Terms="Effect.TerrainHitApply.Start; ModelVariation 5" Send="ModelSwap TreeDeath05"/>
+        <On Terms="Effect.TerrainHitApply.Start; ModelVariation 6" Send="ModelSwap TreeDeath06"/>
+        <On Terms="Effect.TerrainHitApply.Start; ModelVariation 7" Send="ModelSwap TreeDeath07"/>
+        <On Terms="Effect.TerrainHitApply.Start" Send="AnimBracketStart Death Death,Fire Dead,Fire IGNORE"/>
+        <On Terms="Effect.TerrainHitApply.Start; AnimPlaying Death" Send="StatusSet TreeBurned 1"/>
+        <On Terms="Effect.TerrainTimedLife6SecsApply.Start; IsStatus TreeBurned 1" Send="AttachModel GenericTreeFireLarge {} AMPreferGround"/>
+        <On Terms="Effect.TerrainTimedLife6SecsApply.Start; IsStatus TreeBurned 1" Send="TimerSet 6.000000 {Final Burn}"/>
+        <On Terms="Effect.TerrainTimedLife6SecsApply.Start; IsStatus TreeBurned 1" Send="SetScale 0.600000 6.000000 Shrink"/>
+        <On Terms="TimerExpired; TimerName {Final Burn}" Target="GenericTreeFireLarge" Send="Destroy Immediate"/>
+        <On Terms="Effect.TerrainTimedLife6SecsApply.Start; IsStatus TreeBurned 1; At Caster" Send="Create TreeCrash_ActorSound"/>
+        <Model value="Tree"/>
+        <ModelFlags index="AutomatedGlobalLoopsIgnoreOrphan" value="1"/>
+        <ModelFlags index="IgnoreWalkables" value="1"/>
+        <ModelFlags index="NeedsVolumeMonitoring" value="0"/>
+        <ModelFlags index="UseSyncSeed" value="0"/>
+        <ModelFlags index="OutlineOccluder" value="1"/>
+        <BuildModel value="Tree"/>
+        <DeathArray index="Normal" ModelLink="TreeDeath00" SoundLink="Destructible_TreeCrash"/>
+        <DeathArray index="Fire" ModelLink="TreeDeath00" SoundLink="Destructible_TreeCrash"/>
+        <DeathCustoms ModelLink="TreeDeath00" Name="Variation0"/>
+        <DeathCustoms ModelLink="TreeDeath01" Name="Variation1"/>
+        <DeathCustoms ModelLink="TreeDeath02" Name="Variation2"/>
+        <DeathCustoms ModelLink="TreeDeath03" Name="Variation3"/>
+        <DeathCustoms ModelLink="TreeDeath04" Name="Variation4"/>
+        <DeathCustoms ModelLink="TreeDeath05" Name="Variation5"/>
+        <DeathCustoms ModelLink="TreeDeath06" Name="Variation6"/>
+        <DeathCustoms ModelLink="TreeDeath07" Name="Variation7"/>
+        <PlacementModel value="Tree"/>
+        <BarOffset value="22"/>
+        <BarWidth value="45"/>
+        <StatusBarFlags index="Shields" value="0"/>
+        <StatusBarFlags index="Life" value="0"/>
+        <StatusBarFlags index="Energy" value="0"/>
+        <StatusBarFlags index="Cargo" value="0"/>
+        <StatusBarFlags index="Progress" value="0"/>
+        <StatusBarFlags index="Duration" value="0"/>
+    </CActorUnit>
+    <CActorDoodad id="GenericTreeFireLarge">
+        <Aliases value="_EditorHelper"/>
+        <EditorCategories value="DoodadType:Environment"/>
+        <On Terms="ActorCreation" Send="Create Generic_ProtossFire_Large_ActorSound"/>
+        <Model value="GenericFire_Large"/>
+        <EditorFlags index="NoAutoRotate" value="1"/>
+        <RandomScaleRange value="1.000000,1.000000"/>
+    </CActorDoodad>
+    <CModel id="TreeDeath" parent="BuildingDeath">
+        <Model value="Assets\Doodads\AiurTreeDeath\AiurTreeDeath.m3"/>
+        <AttachProps>
+            <Keys index="Origin" value="0"/>
+        </AttachProps>
+        <Flags index="VariationPreload" value="0"/>
+        <Lighting value="Haven"/>
+        <Occlusion value="Hide"/>
+        <OccludingOpacity value="0.550000"/>
+        <PausedParticleSystemBehavior value="Fade"/>
+        <Radius value="1.500000"/>
+        <RadiusLoose value="1.500000"/>
+        <ScaleMax value="1.500000,1.500000,2.000000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="1.250000"/>
+        <ShadowRadius value="1.250000"/>
+        <VariationCount value="8"/>
+    </CModel>
+    <CModel id="TreeDeath00" parent="TreeDeath" Race="Terran">
+        <Model value="Assets\Doodads\AiurTreeDeath\AiurTreeDeath_00.m3"/>
+        <EditorCategories value=""/>
+        <VariationCount value="1"/>
+    </CModel>
+    <CModel id="TreeDeath01" parent="TreeDeath" Race="Terran">
+        <Model value="Assets\Doodads\AiurTreeDeath\AiurTreeDeath_01.m3"/>
+        <EditorCategories value=""/>
+        <VariationCount value="1"/>
+    </CModel>
+    <CModel id="TreeDeath02" parent="TreeDeath" Race="Terran">
+        <Model value="Assets\Doodads\AiurTreeDeath\AiurTreeDeath_02.m3"/>
+        <EditorCategories value=""/>
+        <VariationCount value="1"/>
+    </CModel>
+    <CModel id="TreeDeath03" parent="TreeDeath" Race="Terran">
+        <Model value="Assets\Doodads\AiurTreeDeath\AiurTreeDeath_03.m3"/>
+        <EditorCategories value=""/>
+        <VariationCount value="1"/>
+    </CModel>
+    <CModel id="TreeDeath04" parent="TreeDeath" Race="Terran">
+        <Model value="Assets\Doodads\AiurTreeDeath\AiurTreeDeath_04.m3"/>
+        <EditorCategories value=""/>
+        <VariationCount value="1"/>
+    </CModel>
+    <CModel id="TreeDeath05" parent="TreeDeath" Race="Terran">
+        <Model value="Assets\Doodads\AiurTreeDeath\AiurTreeDeath_05.m3"/>
+        <EditorCategories value=""/>
+        <VariationCount value="1"/>
+    </CModel>
+    <CModel id="TreeDeath06" parent="TreeDeath" Race="Terran">
+        <Model value="Assets\Doodads\AiurTreeDeath\AiurTreeDeath_06.m3"/>
+        <EditorCategories value=""/>
+        <VariationCount value="1"/>
+    </CModel>
+    <CModel id="TreeDeath07" parent="TreeDeath" Race="Terran">
+        <Model value="Assets\Doodads\AiurTreeDeath\AiurTreeDeath_07.m3"/>
+        <EditorCategories value=""/>
+        <VariationCount value="1"/>
+    </CModel>
+    <CModel id="Tree" parent="Building">
+        <Model value="Assets\Doodads\AiurTree_Ex2\AiurTree_Ex2.m3"/>
+        <AttachProps>
+            <Keys index="Origin" value="0"/>
+        </AttachProps>
+        <Flags index="TeenSafe" value="1"/>
+        <ScaleMax value="1.500000,1.500000,2.000000"/>
+        <VariationCount value="8"/>
+        <Lighting value="Haven"/>
+        <Occlusion value="Hide"/>
+        <OccludingOpacity value="0.550000"/>
+        <Radius value="1.500000"/>
+        <RadiusLoose value="1.500000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="1.250000"/>
+        <ShadowRadius value="1.250000"/>
+    </CModel>
+    <CUnit id="Tree">
+        <DeathRevealFilters value="Visible;Missile,Dead,Hidden"/>
+        <DeathRevealRadius value="3"/>
+        <FlagArray index="Movable" value="0"/>
+        <FlagArray index="CreateVisible" value="1"/>
+        <FlagArray index="Uncommandable" value="1"/>
+        <FlagArray index="Unselectable" value="1"/>
+        <FlagArray index="Untargetable" value="1"/>
+        <FlagArray index="Uncursorable" value="1"/>
+        <FlagArray index="Unradarable" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="Destructible" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
+        <FlagArray index="AICantAddToWave" value="1"/>
+        <FogVisibility value="Snapshot"/>
+        <EditorFlags index="NeutralDefault" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Burrow" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Structure" value="1"/>
+        <Collide index="RoachBurrow" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Attributes index="Psionic" value="1"/>
+        <Attributes index="Structure" value="1"/>
+        <LifeStart value="60000"/>
+        <LifeMax value="60000"/>
+        <LifeArmor value="1"/>
+        <BehaviorArray Link="TerrainDamageResponse2Hit6Second"/>
+        <BehaviorArray Link="Tree"/>
+        <Footprint value="FootprintDoodad1x1BlockLOS"/>
+        <MinimapRadius value="0"/>
+        <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
+        <!--AbilArray Link="MassiveDestroy" /-->
+    </CUnit>
+    <CUnit id="TrafficLight">
+        <DeathRevealFilters value="Visible;Missile,Dead,Hidden"/>
+        <DeathRevealRadius value="3"/>
+        <FlagArray index="Movable" value="0"/>
+        <FlagArray index="CreateVisible" value="1"/>
+        <FlagArray index="Uncommandable" value="1"/>
+        <FlagArray index="Unselectable" value="1"/>
+        <FlagArray index="Untargetable" value="1"/>
+        <FlagArray index="Uncursorable" value="1"/>
+        <FlagArray index="Unradarable" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="Destructible" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
+        <FlagArray index="AICantAddToWave" value="1"/>
+        <FogVisibility value="Snapshot"/>
+        <EditorFlags index="NeutralDefault" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Burrow" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Structure" value="1"/>
+        <Collide index="RoachBurrow" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Attributes index="Psionic" value="1"/>
+        <Attributes index="Structure" value="1"/>
+        <LifeStart value="60000"/>
+        <LifeMax value="60000"/>
+        <LifeArmor value="1"/>
+        <BehaviorArray Link="TerrainDamageResponse2Hit6Second"/>
+        <Footprint value="FootprintDoodad1x1BlockLOS"/>
+        <MinimapRadius value="0"/>
+        <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
+        <!--AbilArray Link="MassiveDestroy" /-->
+    </CUnit>
+    <CBehaviorBuff id="TerrainDamageResponse2Hit6Second">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DamageResponse Chance="1" Handled="TerrainHitLifeSwitch6Second" ModifyFraction="0">
+            <Kind index="Melee" value="0"/>
+            <Kind index="Splash" value="0"/>
+            <Kind index="NoProc" value="0"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="TerrainHit">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="TerrainTimedLife6Secs" parent="TimedLife">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="6.01"/>
+        <Period value="6"/>
+        <PeriodicEffect value="TerrainTimedLifeFateRemove"/>
+        <ExpireEffect value="TerrainTimedLifeFateRemove"/>
+        <Modification>
+            <StateFlags index="SuppressFoodUsed" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+</Catalog>

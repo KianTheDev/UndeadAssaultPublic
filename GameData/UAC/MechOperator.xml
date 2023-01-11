@@ -1,0 +1,2757 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CEffectApplyBehavior id="ApplyFieldTunedGlaze">
+        <EditorCategories value=""/>
+        <WhichUnit Value="Caster"/>
+        <Behavior value="FieldTuned"/>
+    </CEffectApplyBehavior>
+    <CEffectIssueOrder id="TurnOffSupportSystems">
+        <ValidatorArray value="SupportSystemsNotDisabled"/>
+        <EditorCategories value=""/>
+        <WhichUnit Value="Caster"/>
+        <Abil value="DisableSupportSystems"/>
+    </CEffectIssueOrder>
+    <CEffectEnumArea id="MechSuitScan">
+        <EditorCategories value=""/>
+        <ImpactLocation Value="TargetUnit"/>
+        <ExcludeArray/>
+        <SearchFilters value="Mechanical,Heroic;Ally,Neutral,Enemy"/>
+        <AreaArray MaxCount="1" Radius="500" Effect="SelfDestructAB"/>
+    </CEffectEnumArea>
+    <CEffectApplyBehavior id="SafteyEject">
+        <EditorCategories value=""/>
+        <Behavior value="SafetyEject"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="SelfDestructAB">
+        <EditorCategories value=""/>
+        <Behavior value="SelfDestruct"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="SelfDestructExplosion">
+        <EditorCategories value=""/>
+    </CEffectApplyBehavior>
+    <CEffectSet id="SelfDestructSet">
+        <EditorCategories value=""/>
+        <EffectArray value="SelfDestructAB"/>
+        <EffectArray value="SelfDestructExplosion"/>
+    </CEffectSet>
+    <CEffectSet id="BattleWalkerAttack">
+        <EditorCategories value=""/>
+        <EffectArray value="BattleWalkerGun"/>
+        <EffectArray value="BurstCounter"/>
+    </CEffectSet>
+    <CEffectSet id="HeavyWalkerAttack">
+        <EditorCategories value=""/>
+        <EffectArray value="HeavyWalkerLM"/>
+        <EffectArray value="BurstCounter"/>
+    </CEffectSet>
+    <CEffectLaunchMissile id="HeavyWalkerLM">
+        <ValidatorArray index="0" removed="1"/>
+        <EditorCategories value="Race:Terran"/>
+        <ImpactEffect value="CombatWalkerArmamentsDamage"/>
+        <AmmoUnit value="MissileMinigun"/>
+    </CEffectLaunchMissile>
+    <CEffectCreatePersistent id="TagCP">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="TargetUnit"/>
+        <OffsetVectorEndLocation Value="TargetUnit"/>
+        <ExpireDelay value="15"/>
+        <RevealRadius value="2"/>
+        <RevealFlags index="Unfog" value="1"/>
+        <RevealFlags index="Detect" value="1"/>
+    </CEffectCreatePersistent>
+    <CEffectEnumArea id="ProximityRevealSA">
+        <EditorCategories value=""/>
+        <AreaArray Radius="30" Effect="ProximitySensorCP"/>
+    </CEffectEnumArea>
+    <CEffectCreatePersistent id="ProximitySensorCP">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="TargetUnit"/>
+        <OffsetVectorEndLocation Value="TargetUnit"/>
+        <ExpireDelay value="0.3"/>
+        <RevealRadius value="2"/>
+        <RevealFlags index="Unfog" value="1"/>
+        <RevealFlags index="Detect" value="1"/>
+    </CEffectCreatePersistent>
+    <CEffectIssueOrder id="ProximitySensorIO">
+        <EditorCategories value=""/>
+        <WhichUnit Value="Source"/>
+        <Abil value="ProximitySensor"/>
+        <AbilCmdIndex value="1"/>
+    </CEffectIssueOrder>
+    <CEffectModifyUnit id="AutoSelect">
+        <EditorCategories value="Race:Terran"/>
+        <ImpactUnit Value="Caster"/>
+        <SelectTransferUnit Effect="SelectMechOp" Value="Target"/>
+        <SelectTransferFlags index="DeselectSource" value="1"/>
+        <SelectTransferFlags index="IncludeControlGroups" value="1"/>
+        <FacingLocation Value="SourceUnit"/>
+    </CEffectModifyUnit>
+    <CEffectApplyBehavior id="SelectMechOp">
+        <EditorCategories value=""/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="ApplyOvershieldGlaze">
+        <EditorCategories value=""/>
+        <Behavior value="GlazeWho"/>
+    </CEffectApplyBehavior>
+    <CEffectRemoveBehavior id="RemoveOvershieldGlaze">
+        <ValidatorArray index="0" value="ApplyOvershieldGlazeTargetFilters"/>
+        <EditorCategories value=""/>
+        <Marker Link="Effect/ApplyOvershieldGlaze"/>
+        <BehaviorLink value="GlazeWho"/>
+    </CEffectRemoveBehavior>
+    <CEffectApplyBehavior id="KineticWaveModuleAB">
+        <EditorCategories value=""/>
+        <Behavior value="ShieldBashStun"/>
+        <Duration value="3"/>
+    </CEffectApplyBehavior>
+    <CEffectCreatePersistent id="KineticWaveModuleCP1">
+        <EditorCategories value=""/>
+        <InitialEffect value="KineticWaveModuleSA"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="KineticWaveModuleDamage">
+        <EditorCategories value=""/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <Flags index="Notification" value="1"/>
+        <Amount value="200"/>
+        <ExcludeArray Value="Origin"/>
+        <SearchFlags index="CallForHelp" value="1"/>
+        <SearchFlags index="OffsetByUnitRadius" value="1"/>
+        <SearchFlags index="OffsetAreaByAngle" value="1"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="KineticWaveModuleSA">
+        <EditorCategories value=""/>
+        <ImpactLocation Value="CasterOuterUnit"/>
+        <ExcludeArray/>
+        <SearchFilters value="Ground,Biological,Visible;Player,Ally,Neutral,Air,Massive,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AreaArray Radius="4" Effect="KineticWaveModuleSet"/>
+    </CEffectEnumArea>
+    <CEffectSet id="KineticWaveModuleSet">
+        <EditorCategories value=""/>
+        <EffectArray value="KineticWaveModuleAB"/>
+        <EffectArray value="KineticWaveModuleDamage"/>
+    </CEffectSet>
+    <CEffectDamage id="CombatWalkerArmamentsDamage" parent="DU_WEAP">
+        <EditorCategories value="Race:Terran"/>
+        <AttributeFactor index="Light" value="0.3"/>
+        <AttributeFactor index="Armored" value="-0.25"/>
+        <AttributeFactor index="Mechanical" value="-0.25"/>
+        <AttributeFactor index="Heroic" value="-0.5"/>
+        <AttributeFactor index="Summoned" value="-0.5"/>
+        <Kind value="Ranged"/>
+        <KindSplash value="Ranged"/>
+        <Total value="Combine"/>
+        <Amount value="60"/>
+        <Random value="15"/>
+        <AreaArray Radius="1.8" Fraction="0.6"/>
+        <AreaArray Arc="24.972" Radius="2.55" Fraction="0.4"/>
+        <ExcludeArray Value="Target"/>
+        <ExcludeArray Value="Source"/>
+        <SearchFilters value="-;Self,Player,Ally,Neutral,Psionic,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <DisplayFlags index="CollapseBuffed" value="1"/>
+    </CEffectDamage>
+    <CEffectApplyBehavior id="DisruptorFieldApplyDebuff">
+        <ValidatorArray index="0" value="TargetIsEnemy"/>
+        <EditorCategories value="Race:Terran"/>
+        <Behavior value="DisruptorField"/>
+    </CEffectApplyBehavior>
+    <CEffectEnumArea id="DisruptorFieldSearchArea">
+        <EditorCategories value="Race:Terran"/>
+        <SearchFilters value="Visible;Self,Player,Ally,Neutral,Structure,Heroic,Missile,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AreaArray Radius="8" Effect="DisruptorFieldApplyDebuff"/>
+    </CEffectEnumArea>
+    <CEffectIssueOrder id="IOOverclockWeapons">
+        <EditorCategories value=""/>
+        <Abil value="OverclockWeapons"/>
+        <AbilCmdIndex value="1"/>
+    </CEffectIssueOrder>
+    <CEffectIssueOrder id="IOOverclockEngines">
+        <EditorCategories value=""/>
+        <Abil value="OverclockWeapons2"/>
+        <AbilCmdIndex value="1"/>
+    </CEffectIssueOrder>
+    <CEffectSet id="TOOverlockEject">
+        <EditorCategories value=""/>
+        <EffectArray value="IOOverclockEngines"/>
+        <EffectArray value="IOOverclockWeapons"/>
+        <EffectArray value="ProximitySensorIO"/>
+        <EffectArray value="Eject"/>
+    </CEffectSet>
+    <CEffectLaunchMissile id="BattleWalkerGun">
+        <ImpactEffect value="WalkerArmamentDamage"/>
+        <LaunchLocation Value="CasterUnit"/>
+    </CEffectLaunchMissile>
+    <CEffectDamage id="WalkerArmamentDamage">
+        <ResponseFlags index="Acquire" value="1"/>
+        <AttributeFactor index="Armored" value="-0.2"/>
+        <AttributeFactor index="Mechanical" value="-0.2"/>
+        <AttributeFactor index="Massive" value="0.2"/>
+        <AttributeFactor index="Heroic" value="-0.5"/>
+        <AttributeFactor index="Summoned" value="-0.5"/>
+        <Kind value="Ranged"/>
+        <KindSplash value="Ranged"/>
+        <Amount value="80"/>
+        <Random value="15"/>
+        <AreaArray Arc="14.9963" Radius="2" Fraction="0.3"/>
+        <SearchFilters value="-;Self,Ally,Psionic,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <DisplayFlags index="CollapseBuffed" value="1"/>
+        <Death value="Impact"/>
+    </CEffectDamage>
+    <CEffectIssueOrder id="Eject">
+        <EditorCategories value=""/>
+        <Abil value="VehicleSeat"/>
+        <AbilCmdIndex value="1"/>
+    </CEffectIssueOrder>
+    <CEffectCreateUnit id="SummonBattleWalker">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetPoint"/>
+        <CreateFlags index="UseFood" value="0"/>
+        <CreateFlags index="NormalizeSpawnOffset" value="0"/>
+        <SpawnUnit value="InvisibleTargetDummy"/>
+    </CEffectCreateUnit>
+    <CEffectCreateUnit id="SummonCombatWalker">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetPoint"/>
+        <CreateFlags index="UseFood" value="0"/>
+        <CreateFlags index="NormalizeSpawnOffset" value="0"/>
+        <SpawnUnit value="InvisibleTargetDummy"/>
+    </CEffectCreateUnit>
+    <CAbilEffectInstant id="DisposeMechSuit">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="MechSuitScan"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="3"/>
+        </Cost>
+        <TargetFilters value="Heroic;Ally,Neutral,Enemy"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="DestroyActiveSuits"/>
+    </CAbilEffectInstant>
+    <CAbilBehavior id="MechOperatorSkills">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="MechOperatorSkills"/>
+        <Flags index="ToggledOn" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <LevelButtonOnImage value="Assets\Textures\transportpilotportrait_static.dds"/>
+        <LevelButtonOnImage value="Assets\Textures\transportpilotportrait_static.dds"/>
+        <LevelButtonOnImage value="Assets\Textures\transportpilotportrait_static.dds"/>
+        <LevelButtonOnImage value="Assets\Textures\transportpilotportrait_static.dds"/>
+        <LevelButtonOnName value="Button/Name/MechOperatorSkills"/>
+        <LevelButtonOnName value="Button/Name/MechOperatorSkills"/>
+        <LevelButtonOnName value="Button/Name/MechOperatorSkills"/>
+        <LevelButtonOnName value="Button/Name/MechOperatorSkills"/>
+        <LevelButtonOnTooltip value="Button/Tooltip/MechOperatorSkills"/>
+        <LevelButtonOnTooltip value="Button/Tooltip/MechOperatorSkills"/>
+        <LevelButtonOnTooltip value="Button/Tooltip/MechOperatorSkills"/>
+        <LevelButtonOnTooltip value="Button/Tooltip/MechOperatorSkills"/>
+    </CAbilBehavior>
+    <CAbilBehavior id="ProximitySensor">
+        <Alignment value="Positive"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="ProximitySensor" Requirements="LogisticalAdjustmentsUpgrade1A"/>
+        <CmdButtonArray index="Off" DefaultButtonFace="ProximitySensorOff"/>
+        <Flags index="Toggle" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="5"/>
+        </Cost>
+        <BehaviorArray value="ProximitySensor"/>
+    </CAbilBehavior>
+    <CAbilBehavior id="DisableSupportSystems">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="DisableSupportSystems" Requirements="MechOperatorSkills1A"/>
+        <CmdButtonArray index="Off" DefaultButtonFace="EnableSupportSystems"/>
+        <Flags index="Toggle" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link="" TimeUse="1"/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <BehaviorArray value="SuspendedSupportSystems"/>
+    </CAbilBehavior>
+    <CAbilEffectInstant id="KineticWaveModule">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="KineticWaveModuleCP1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="35"/>
+            <Charge Link=""/>
+            <Cooldown TimeUse="7"/>
+        </Cost>
+        <TargetFilters value="Ground,Visible;Ally,Neutral,Air,Massive,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="KineticWaveModule" Requirements="DefensiveAdjustmentsUpgrade1A"/>
+    </CAbilEffectInstant>
+    <CAbilEffectTarget id="FlareGunCombat">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="FlareGunLaunchMissile"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Vital index="Energy" value="60"/>
+            <Charge>
+                <CountMax value="2"/>
+                <CountStart value="2"/>
+                <CountUse value="1"/>
+                <Link value="Abil/FlareGunCyborg"/>
+                <TimeUse value="75"/>
+            </Charge>
+            <Cooldown Link="Abil/FlareGunCyborg"/>
+        </Cost>
+        <Range value="30"/>
+        <PrepTime value="0"/>
+        <AINotifyEffect value=""/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="FlareGunItem" Requirements="LogisticalAdjustmentsUpgrade1A"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="ClusterRockets2">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="ClusterRocketsFire"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Vital index="Energy" value="55"/>
+            <Charge>
+                <CountMax value="2"/>
+                <CountStart value="2"/>
+                <CountUse value="1"/>
+                <Link value="Abil/ClusterRocketsMini"/>
+                <TimeUse value="50"/>
+            </Charge>
+            <Cooldown Link="Abil/ClusterRocketsMini"/>
+        </Cost>
+        <Range value="30"/>
+        <PrepTime value="0"/>
+        <Marker Link="Abil/FragGrenadeLevel1"/>
+        <CursorEffect value="FragGrenadeDamage1"/>
+        <AINotifyEffect value="FragGrenadeDamage1"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="ClusterRockets2" Requirements="CombatAdjustmentsUpgrade3"/>
+    </CAbilEffectTarget>
+    <CAbilEffectInstant id="ReconDrone2">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="ReconDrone"/>
+        <Flags index="AbortOnAllianceChange" value="0"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <VitalFraction index="Energy" value="0.5"/>
+            <Charge Link="Abil/ReconDrone"/>
+            <Cooldown Link="Abil/ReconDrone" TimeUse="120"/>
+        </Cost>
+        <ShowProgressArray index="Cast" value="1"/>
+        <AINotifyEffect value="ISBot"/>
+        <ProducedUnitArray value="ReconDrone"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="ReconDrone" Requirements="MechDrone"/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="RepulsionField">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Cost>
+            <Vital index="Energy" value="25"/>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <CmdButtonArray index="Execute" Requirements="DefensiveAdjustmentsUpgrade2A"/>
+    </CAbilEffectInstant>
+    <CAbilTransport id="VehicleSeat">
+        <OrderArray index="0">
+            <DisplayType value="Confirm"/>
+            <Color value="255,0,255,0"/>
+            <Model value="Assets\UI\Cursors\WayPointConfirmSwarm\WayPointConfirmSwarm.m3"/>
+            <LineTexture value="Assets\Textures\WayPointLine.dds"/>
+        </OrderArray>
+        <AbilSetId value="ULdS"/>
+        <EditorCategories value="Race:Neutral,AbilityorEffectType:Structures"/>
+        <CmdButtonArray index="Load" DefaultButtonFace="BunkerLoad"/>
+        <CmdButtonArray index="UnloadAll" DefaultButtonFace="BunkerUnloadAll">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="UnloadAt">
+            <Flags index="Hidden" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="UnloadUnit">
+            <Flags index="Hidden" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="LoadAll">
+            <Flags index="Hidden" value="1"/>
+        </CmdButtonArray>
+        <Flags index="ShowCargoSize" value="0"/>
+        <Range value="2"/>
+        <MaxCargoCount value="1"/>
+        <MaxCargoSize value="1"/>
+        <TotalCargoSpace value="1"/>
+        <LoadCargoBehavior value="MechPilot"/>
+        <LoadTransportBehavior value="Powered"/>
+        <TargetFilters value="Biological,Heroic,Visible;Ally,Neutral,Enemy,Dead,Hidden"/>
+        <LoadValidatorArray value="Energy12"/>
+        <LoadValidatorArray value="HasMechSeat"/>
+        <UnloadTransportEffect value="TOOverlockEject"/>
+        <DeathUnloadEffect value="SafteyEject"/>
+    </CAbilTransport>
+    <CAbilBehavior id="EmergencyRepair">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="EmergencyRepair" Requirements="DefensiveAdjustmentsUpgrade1A"/>
+        <Cost>
+            <Vital index="Energy" value="100"/>
+            <Charge TimeUse="1"/>
+            <Cooldown TimeUse="300"/>
+        </Cost>
+        <BehaviorArray value="EmergencyRepair"/>
+        <Flags index="Toggle" value="1"/>
+        <Flags index="Transient" value="1"/>
+    </CAbilBehavior>
+    <CAbilBehavior id="ProtectorProtocal">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="ProtectionProtocal" Requirements="DefensiveAdjustmentsUpgrade2A"/>
+        <Cost>
+            <Display index="Energy" value="1"/>
+            <Vital index="Energy" value="75"/>
+            <Charge Link="Abil/EmergencyRepair" TimeUse="1"/>
+            <Cooldown Link="Abil/EmergencyRepair" TimeUse="60"/>
+        </Cost>
+        <BehaviorArray value="ProtecterProtocal"/>
+        <Flags index="Toggle" value="1"/>
+        <Flags index="Transient" value="1"/>
+    </CAbilBehavior>
+    <CAbilBehavior id="OverclockWeapons2">
+        <Name value="Abil/Name/OverclockEngine"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="OverclockEnginesOn" Requirements="LogisticalAdjustmentsUpgrade1A"/>
+        <CmdButtonArray index="Off" DefaultButtonFace="OverclockEnginesOff"/>
+        <Flags index="Toggle" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="1"/>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <BehaviorArray value="OverclockEngines"/>
+    </CAbilBehavior>
+    <CAbilEffectTarget id="SuitRecharge">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="EnergyTransfer2"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="NoDeceleration" value="1"/>
+        <Flags index="ReExecutable" value="1"/>
+        <Flags index="Smart" value="1"/>
+        <Flags index="PassengerAcquirePassengers" value="1"/>
+        <TargetFilters value="Heroic,Visible;Self,Neutral,Enemy,Structure,Missile,Dead,Hidden,Invulnerable,Summoned"/>
+        <TargetSorts RequestCount="1">
+            <SortArray value="TSEnergy"/>
+        </TargetSorts>
+        <Range value="4"/>
+        <AutoCastAcquireLevel value="Defensive"/>
+        <AutoCastFilters value="Heroic;Neutral,Enemy"/>
+        <AutoCastRange value="6"/>
+        <UseMarkerArray index="Approach" value="0"/>
+        <UseMarkerArray index="Prep" value="0"/>
+        <AINotifyEffect value="NanoRepair2"/>
+        <DefaultError value="Error"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SuitRecharge" Requirements="MechOperatorSkills1A"/>
+        <Cost>
+            <Cooldown TimeUse="5"/>
+        </Cost>
+        <TrackingArc value="360"/>
+        <AutoCastValidatorArray value="EnergyNotFull"/>
+        <FollowRange value="5.5"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="RepairMO">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="RepairCE"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="NoDeceleration" value="1"/>
+        <Flags index="ReExecutable" value="1"/>
+        <Flags index="Smart" value="1"/>
+        <Flags index="PassengerAcquirePassengers" value="1"/>
+        <Cost>
+            <Charge Link="Abil/RepairCE"/>
+            <Cooldown Link="Abil/RepairCE" TimeUse="5"/>
+        </Cost>
+        <TargetFilters value="Mechanical,Visible;Self,Enemy,Psionic,Missile,UnderConstruction,Dead,Hidden,Invulnerable"/>
+        <TargetSorts RequestCount="1">
+            <SortArray value="TSAlliancePassive"/>
+            <SortArray value="TSDistance"/>
+            <SortArray value="TSLifeFraction"/>
+        </TargetSorts>
+        <Range value="2"/>
+        <SmartValidatorArray value="healSmartTargetFilters"/>
+        <AutoCastAcquireLevel value="Defensive"/>
+        <AutoCastFilters value="Visible;Neutral,Enemy"/>
+        <AutoCastRange value="6"/>
+        <AutoCastValidatorArray value="healCasterMinEnergy"/>
+        <AutoCastValidatorArray value="NotWarpingIn"/>
+        <UseMarkerArray index="Approach" value="0"/>
+        <UseMarkerArray index="Prep" value="0"/>
+        <AINotifyEffect value="RepairCE"/>
+        <DefaultError value="RequiresHealTarget"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="RepairCE" Requirements="MechOperatorSkills1A"/>
+        <FollowRange value="1.5"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="RequestMk2LightWalker">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="SummonBattleWalker"/>
+        <Effect value="SummonBattleWalker"/>
+        <Effect value="SummonBattleWalker"/>
+        <Cost>
+            <VitalFraction index="Energy" value="0.5"/>
+            <Charge HideCount="1" Link="Abil/RequestHeavyWalker" Location="Unit"/>
+            <Cooldown Link="Abil/RequestHeavyWalker" Location="Unit" TimeUse="600"/>
+        </Cost>
+        <Cost>
+            <VitalFraction index="Energy" value="0.5"/>
+            <Charge Link="Abil/RequestHeavyWalker" Location="Unit"/>
+            <Cooldown Link="Abil/RequestHeavyWalker" Location="Unit" TimeUse="540"/>
+        </Cost>
+        <Cost>
+            <VitalFraction index="Energy" value="0.5"/>
+            <Charge Link="Abil/RequestHeavyWalker" Location="Unit"/>
+            <Cooldown Link="Abil/RequestHeavyWalker" Location="Unit" TimeUse="540"/>
+        </Cost>
+        <Range value="5"/>
+        <CastIntroTime value="7.5"/>
+        <CastIntroTime value="7.5"/>
+        <CastIntroTime value="0"/>
+        <ShowProgressArray index="Cast" value="1"/>
+        <ProgressButtonArray index="Cast" value="RequestBattleWalker"/>
+        <EffectRange index="0" value="0.5,500"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="RequestBattleWalker" Requirements="Level4Needed"/>
+        <Flags index="RangeUsePathing" value="1"/>
+        <Flags index="UpdateChargesOnLevelChange" value="0"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="RequestHeavyWalker">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="SummonCombatWalker"/>
+        <Effect value="SummonCombatWalker"/>
+        <Effect value="SummonCombatWalker"/>
+        <Cost>
+            <VitalFraction index="Energy" value="0.5"/>
+            <Charge HideCount="1" Location="Unit"/>
+            <Cooldown Location="Unit" TimeUse="600"/>
+        </Cost>
+        <Cost>
+            <VitalFraction index="Energy" value="0.5"/>
+            <Charge Location="Unit"/>
+            <Cooldown Location="Unit" TimeUse="540"/>
+        </Cost>
+        <Cost>
+            <VitalFraction index="Energy" value="0.5"/>
+            <Charge Location="Unit"/>
+            <Cooldown Location="Unit" TimeUse="540"/>
+        </Cost>
+        <Range value="5"/>
+        <CastIntroTime value="7.5"/>
+        <CastIntroTime value="7.5"/>
+        <CastIntroTime value="0"/>
+        <ShowProgressArray index="Cast" value="1"/>
+        <ProgressButtonArray index="Cast" value="RequestHeavyWalker"/>
+        <EffectRange index="0" value="0.5,500"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="RequestHeavyWalker" Requirements="Level4Needed"/>
+        <Flags index="RangeUsePathing" value="1"/>
+        <Flags index="UpdateChargesOnLevelChange" value="0"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="WalkerMRL">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="MRLFire"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Display index="Energy" value="1"/>
+            <Vital index="Energy" value="50"/>
+            <Charge>
+                <CountMax value="2"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Link value="Abil/MiniMRL"/>
+                <TimeUse value="80"/>
+            </Charge>
+            <Cooldown Link="Abil/MiniMRL"/>
+        </Cost>
+        <Range value="45"/>
+        <CastIntroTime value="0.5"/>
+        <Marker Link="Abil/MRL"/>
+        <ShowProgressArray index="Cast" value="1"/>
+        <CursorEffect value="MRLDamage1"/>
+        <AINotifyEffect value="MRLDamage1"/>
+        <ProgressButtonArray index="Cast" value="MRL"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="HEDPRocket" Requirements="CombatAdjustmentsUpgrade3"/>
+    </CAbilEffectTarget>
+    <CAbilBehavior id="OverclockWeapons">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="OverclockWeapons" Requirements="CombatAdjustmentsUpgrade1A"/>
+        <CmdButtonArray index="Off" DefaultButtonFace="OverclockWeapons2"/>
+        <Flags index="Toggle" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <BehaviorArray value="OverclockWeapons"/>
+        <Cost>
+            <Vital index="Energy" value="1"/>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+    </CAbilBehavior>
+    <CAbilBehavior id="CombatAdjustments">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="CombatAdjustments"/>
+        <Flags index="ToggledOn" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <LevelButtonOnImage value="Assets\Textures\btn-upgrade-terran-shipweaponslevel3.dds"/>
+        <LevelButtonOnImage value="Assets\Textures\btn-upgrade-terran-shipweaponslevel3.dds"/>
+        <LevelButtonOnImage value="Assets\Textures\btn-upgrade-terran-shipweaponslevel3.dds"/>
+        <LevelButtonOnName value="Button/Name/CombatAdjustments"/>
+        <LevelButtonOnName value="Button/Name/CombatAdjustments"/>
+        <LevelButtonOnName value="Button/Name/CombatAdjustments"/>
+        <LevelButtonOnTooltip value="Button/Tooltip/CombatAdjustments"/>
+        <LevelButtonOnTooltip value="Button/Tooltip/CombatAdjustments"/>
+        <LevelButtonOnTooltip value="Button/Tooltip/CombatAdjustments"/>
+    </CAbilBehavior>
+    <CAbilBehavior id="DefensiveAdjustments">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="DefensiveAdjustments"/>
+        <Flags index="ToggledOn" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+    </CAbilBehavior>
+    <CAbilBehavior id="LogisticalAdjustments">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="LogisticalAdjustments"/>
+        <Flags index="ToggledOn" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+    </CAbilBehavior>
+    <CAbilBehavior id="MechCalldowns">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <LevelButtonOnImage value="Assets\Textures\btn-unit-collection-vikingassault-covertops.dds"/>
+        <LevelButtonOnImage value="Assets\Textures\btn-unit-collection-vikingassault-covertops.dds"/>
+        <LevelButtonOnImage value="Assets\Textures\btn-unit-collection-vikingassault-covertops.dds"/>
+        <LevelButtonOnImage value="Assets\Textures\btn-unit-collection-vikingassault-covertops.dds"/>
+        <LevelButtonOnName value="Button/Name/Mech Calldown"/>
+        <LevelButtonOnName value="Button/Name/Mech Calldown"/>
+        <LevelButtonOnName value="Button/Name/Mech Calldown"/>
+        <LevelButtonOnName value="Button/Name/Mech Calldown"/>
+        <LevelButtonOnTooltip value="Button/Tooltip/Mech Calldown Description"/>
+        <LevelButtonOnTooltip value="Button/Tooltip/Mech Calldown Description"/>
+        <LevelButtonOnTooltip value="Button/Tooltip/Mech Calldown Description"/>
+        <LevelButtonOnTooltip value="Button/Tooltip/Mech Calldown Description"/>
+        <Flags index="ToggledOn" value="1"/>
+        <Flags index="Transient" value="1"/>
+    </CAbilBehavior>
+    <CAbilLearn id="LearnAbilitiesMechOperator" parent="LearnAbilityMOS">
+        <Name value="Abil/Name/LearnAbilitiesMechOperator"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InfoArray index="Learn1" Abil="MechOperatorSkills">
+            <Button DefaultButtonFace="MechOperatorSkills" Requirements=""/>
+        </InfoArray>
+        <InfoArray index="Learn2">
+            <Button Requirements=""/>
+        </InfoArray>
+        <InfoArray index="Learn3" Abil="CombatAdjustments">
+            <Charge CountMax="100" CountStart="100"/>
+            <Button DefaultButtonFace="CombatAdjustments"/>
+        </InfoArray>
+        <InfoArray index="Learn4" Abil="DefensiveAdjustments">
+            <Charge CountMax="100" CountStart="100"/>
+            <Button DefaultButtonFace="DefensiveAdjustments"/>
+        </InfoArray>
+        <InfoArray index="Learn5" Abil="LogisticalAdjustments">
+            <Charge CountMax="100" CountStart="100"/>
+            <Button DefaultButtonFace="LogisticalAdjustments"/>
+        </InfoArray>
+        <InfoArray index="Learn6" Abil="RequestHeavyWalker">
+            <Charge CountMax="100" CountStart="100"/>
+            <Button DefaultButtonFace="RequestHeavyWalker" Requirements="Level4"/>
+        </InfoArray>
+        <InfoArray index="Learn7" Abil="RequestMk2LightWalker">
+            <Charge CountMax="100" CountStart="100"/>
+            <Button DefaultButtonFace="RequestBattleWalker" Requirements="Level4"/>
+        </InfoArray>
+    </CAbilLearn>
+    <CValidatorUnitCompareBehaviorCount id="IsUnPowered">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="UnpoweredMech"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="IsPowered">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="Powered"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="SupportSystemsNotDisabled">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="SuspendedSupportSystems"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="MechSuit">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="MechSuit"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareVital id="Energy2">
+        <WhichUnit Value="Caster"/>
+        <Compare value="LE"/>
+        <Value value="2"/>
+        <Vital value="Energy"/>
+    </CValidatorUnitCompareVital>
+    <CRequirement id="MechDrone">
+        <NodeArray index="Use" Link="And1284806349GTECountAbilLogisticalAdjustmentsCompleteOnlyAtUnit1LTSumCountUnitReconDroneCompleteOnlySumCountUnitMechOperatorCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="FieldTuning">
+        <NodeArray index="Use" Link="Eq1090518262CountUpgradeFieldTuningCompleteOnly1"/>
+    </CRequirement>
+    <CRequirement id="MechDroneasdfasdfadsf">
+        <NodeArray index="Use" Link="And1284806349GTECountAbilLogisticalAdjustmentsCompleteOnlyAtUnit1LTCountUnitReconDroneQueuedOrBetter1"/>
+    </CRequirement>
+    <CRequirement id="TunedCritical">
+        <NodeArray index="Use" Link="Eq3407127069CountBehaviorFieldTuningCompleteOnlyAtUnit10"/>
+    </CRequirement>
+    <CRequirement id="Level4Needed">
+        <NodeArray index="Use" Link="AndGTECountBehaviorHeroLevelsCompleteOnlyAtUnit4AndLTCountUnitMOBattleWalkerQueuedOrBetter1LTCountUnitMOCombatWalkerQueuedOrBetter1"/>
+    </CRequirement>
+    <CRequirement id="HeavyMechRequirement">
+        <NodeArray index="Use" Link="AndGTE1216351361CountAbilMechOperatorSkillsQueuedOrBetterAtUnit1GTE66337779CountAbilDefensiveAdjustmentsQueuedOrBetterAtUnit1GTE1333737485CountAbilLogisticalAdjustmentsQueuedOrBetterAtUnit1And34521667221412676"/>
+    </CRequirement>
+    <CRequirement id="LightMechRequirement">
+        <NodeArray index="Use" Link="AndGTE1216351361CountAbilMechOperatorSkillsQueuedOrBetterAtUnit1GTE2969430275CountAbilCombatAdjustmentsQueuedOrBetterAtUnit1GTE1333737485CountAbilLogisticalAdjustmentsQueuedOrBetterAtUnit1And3452166783543355420"/>
+    </CRequirement>
+    <CRequirement id="MechOperatorSkills1">
+        <NodeArray index="Use" Link="EqCountAbilMechOperatorSkillsQueuedOrBetterAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="MechOperatorSkills1A">
+        <NodeArray index="Use" Link="GTECountAbilMechOperatorSkillsQueuedOrBetterAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="MechOperatorSkills2">
+        <NodeArray index="Use" Link="EqCountAbilMechOperatorSkillsQueuedOrBetterAtUnit2"/>
+    </CRequirement>
+    <CRequirement id="MechOperatorSkills3">
+        <NodeArray index="Use" Link="EqCountAbilMechOperatorSkillsQueuedOrBetterAtUnit3"/>
+    </CRequirement>
+    <CRequirement id="MechOperatorSkills4">
+        <NodeArray index="Use" Link="EqCountAbilMechOperatorSkillsQueuedOrBetterAtUnit4"/>
+    </CRequirement>
+    <CRequirement id="MechCalldownRequirements1">
+        <NodeArray index="Use" Link="AndGTECountAbilMechCalldownsCompleteOnlyAtUnit1LT2114031064CountUnitMOCombatWalkerQueuedOrBetter1LT2114031064CountUnitMOBattleWalkerQueuedOrBetter1"/>
+    </CRequirement>
+    <CRequirement id="MechCalldownRequirements2">
+        <NodeArray index="Use" Link="AndGTECountAbilMechCalldownsCompleteOnlyAtUnit2LT2114031064CountUnitMOCombatWalkerQueuedOrBetter1LT2114031064CountUnitMOBattleWalkerQueuedOrBetter1"/>
+    </CRequirement>
+    <CRequirement id="SupportSystemsRequirement">
+        <NodeArray index="Use" Link="GTECountAbilMechCalldownsCompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="MechCalldownRequirements3">
+        <NodeArray index="Use" Link="AndGTECountAbilMechCalldownsCompleteOnlyAtUnit3LT2114031064CountUnitMOCombatWalkerQueuedOrBetter1LT2114031064CountUnitMOBattleWalkerQueuedOrBetter1"/>
+    </CRequirement>
+    <CRequirement id="MechCalldownRequirements4">
+        <NodeArray index="Use" Link="AndGTECountAbilMechCalldownsCompleteOnlyAtUnit4LT2114031064CountUnitMOCombatWalkerQueuedOrBetter1LT2114031064CountUnitMOBattleWalkerQueuedOrBetter1"/>
+    </CRequirement>
+    <CRequirement id="CombatAdjustmentsUpgrade1A">
+        <NodeArray index="Use" Link="GTE1196581068CountUpgradeCombatAdjustmentsCompleteOnly1"/>
+        <NodeArray index="Show" Link="GTECountUpgradeCombatAdjustmentsCompleteOnly1"/>
+    </CRequirement>
+    <CRequirement id="DefensiveAdjustmentsUpgrade1A">
+        <NodeArray index="Use" Link="GTE1326250448CountUpgradeDefensiveAdjustmentsCompleteOnly1"/>
+        <NodeArray index="Show" Link="GTECountUpgradeDefensiveAdjustmentsCompleteOnly1"/>
+    </CRequirement>
+    <CRequirement id="DefensiveAdjustmentsUpgrade2A">
+        <NodeArray index="Use" Link="GTE12559429CountUpgradeDefensiveAdjustmentsCompleteOnly2"/>
+        <NodeArray index="Show" Link="GTECountUpgradeDefensiveAdjustmentsCompleteOnly2"/>
+    </CRequirement>
+    <CRequirement id="LogisticalAdjustmentsUpgrade1A">
+        <NodeArray index="Use" Link="GTE465030216CountUpgradeLogisticalAdjustmentsCompleteOnly1"/>
+        <NodeArray index="Show" Link="GTECountUpgradeLogisticalAdjustmentsCompleteOnly1"/>
+    </CRequirement>
+    <CRequirement id="LogisticalAdjustmentsUpgrade2A">
+        <NodeArray index="Use" Link="GTE1843858759CountUpgradeLogisticalAdjustmentsCompleteOnly2"/>
+        <NodeArray index="Show" Link="GTECountUpgradeLogisticalAdjustmentsCompleteOnly2"/>
+    </CRequirement>
+    <CRequirement id="CombatAdjustmentsUpgrade1">
+        <NodeArray index="Use" Link="Eq1196581068CountUpgradeCombatAdjustmentsCompleteOnly1"/>
+        <NodeArray index="Show" Link="LTECountUpgradeCombatAdjustmentsCompleteOnly1"/>
+    </CRequirement>
+    <CRequirement id="CombatAdjustmentsUpgrade2">
+        <NodeArray index="Use" Link="Eq3651448500CountUpgradeCombatAdjustmentsCompleteOnly2"/>
+        <NodeArray index="Show" Link="EqCountUpgradeCombatAdjustmentsCompleteOnly2"/>
+    </CRequirement>
+    <CRequirement id="CombatAdjustmentsUpgrade3">
+        <NodeArray index="Use" Link="Eq851234902CountUpgradeCombatAdjustmentsCompleteOnly3"/>
+        <NodeArray index="Show" Link="EqCountUpgradeCombatAdjustmentsCompleteOnly3"/>
+    </CRequirement>
+    <CRequirement id="LogisticalAdjustmentsUpgrade1">
+        <NodeArray index="Use" Link="Eq465030216CountUpgradeLogisticalAdjustmentsCompleteOnly1"/>
+        <NodeArray index="Show" Link="LTECountUpgradeLogisticalAdjustmentsCompleteOnly1"/>
+    </CRequirement>
+    <CRequirement id="LogisticalAdjustmentsUpgrade2">
+        <NodeArray index="Use" Link="Eq1843858759CountUpgradeLogisticalAdjustmentsCompleteOnly2"/>
+        <NodeArray index="Show" Link="LTECountUpgradeLogisticalAdjustmentsCompleteOnly2"/>
+    </CRequirement>
+    <CRequirement id="LogisticalAdjustmentsUpgrade3">
+        <NodeArray index="Use" Link="Eq1806956896CountUpgradeLogisticalAdjustmentsCompleteOnly3"/>
+        <NodeArray index="Show" Link="EqCountUpgradeLogisticalAdjustmentsCompleteOnly3"/>
+    </CRequirement>
+    <CRequirement id="DefensiveAdjustmentsUpgrade1">
+        <NodeArray index="Use" Link="Eq1326250448CountUpgradeDefensiveAdjustmentsCompleteOnly1"/>
+        <NodeArray index="Show" Link="LTECountUpgradeDefensiveAdjustmentsCompleteOnly1"/>
+    </CRequirement>
+    <CRequirement id="DefensiveAdjustmentsUpgrade2">
+        <NodeArray index="Use" Link="Eq12559429CountUpgradeDefensiveAdjustmentsCompleteOnly2"/>
+        <NodeArray index="Show" Link="EqCountUpgradeDefensiveAdjustmentsCompleteOnly2"/>
+    </CRequirement>
+    <CRequirement id="DefensiveAdjustmentsUpgrade3">
+        <NodeArray index="Use" Link="Eq2874532692CountUpgradeDefensiveAdjustmentsCompleteOnly3"/>
+        <NodeArray index="Show" Link="EqCountUpgradeDefensiveAdjustmentsCompleteOnly3"/>
+    </CRequirement>
+    <CRequirement id="LogisticalAdjustmentsLevel1">
+        <NodeArray index="Use" Link="EqCountAbilLogisticalAdjustmentsCompleteOnly1"/>
+        <NodeArray index="Show" Link="EqCountAbilLogisticalAdjustmentsCompleteOnly1"/>
+    </CRequirement>
+    <CRequirement id="DefensiveAdjustmentsLevel1">
+        <NodeArray index="Use" Link="EqCountAbilDefensiveAdjustmentsCompleteOnly1"/>
+        <NodeArray index="Show" Link="EqCountAbilDefensiveAdjustmentsCompleteOnly1"/>
+    </CRequirement>
+    <CRequirement id="DefensiveAdjustmentsLevel2">
+        <NodeArray index="Use" Link="EqCountAbilDefensiveAdjustmentsCompleteOnly2"/>
+        <NodeArray index="Show" Link="EqCountAbilDefensiveAdjustmentsCompleteOnly2"/>
+    </CRequirement>
+    <CRequirement id="DefensiveAdjustmentsLevel3">
+        <NodeArray index="Use" Link="EqCountAbilDefensiveAdjustmentsCompleteOnly3"/>
+        <NodeArray index="Show" Link="EqCountAbilDefensiveAdjustmentsCompleteOnly3"/>
+    </CRequirement>
+    <CRequirement id="LogisticalAdjustmentsLevel2">
+        <NodeArray index="Use" Link="EqCountAbilLogisticalAdjustmentsCompleteOnly2"/>
+        <NodeArray index="Show" Link="EqCountAbilLogisticalAdjustmentsCompleteOnly2"/>
+    </CRequirement>
+    <CRequirement id="LogisticalAdjustmentsLevel22">
+        <NodeArray index="Use" Link="EqCountAbilLogisticalAdjustmentsCompleteOnly3"/>
+        <NodeArray index="Show" Link="EqCountAbilLogisticalAdjustmentsCompleteOnly3"/>
+    </CRequirement>
+    <CRequirement id="CombatAdjustmentsLevel2">
+        <NodeArray index="Use" Link="EqCountAbilCombatAdjustmentsCompleteOnly2"/>
+        <NodeArray index="Show" Link="EqCountAbilCombatAdjustmentsCompleteOnly2"/>
+    </CRequirement>
+    <CRequirement id="CombatAdjustmentsLevel3">
+        <NodeArray index="Use" Link="EqCountAbilCombatAdjustmentsCompleteOnly3"/>
+        <NodeArray index="Show" Link="EqCountAbilCombatAdjustmentsCompleteOnly3"/>
+    </CRequirement>
+    <CRequirement id="CombatAdjustmentsLevel1">
+        <NodeArray index="Use" Link="EqCountAbilCombatAdjustmentsCompleteOnly1"/>
+        <NodeArray index="Show" Link="EqCountAbilCombatAdjustmentsCompleteOnly1"/>
+    </CRequirement>
+    <CButton id="FieldTuning">
+        <Icon value="Assets\Textures\btn-unit-terran-vikingarchangel.dds"/>
+    </CButton>
+    <CButton id="FieldTuningCritical">
+        <Icon value="Assets\Textures\btn-upgrade-swann-aresclasstargetingsystem.dds"/>
+    </CButton>
+    <CButton id="FiltrationSystem">
+        <Icon value="Assets\Textures\btn-doodad-dominiongasvent.dds"/>
+    </CButton>
+    <CButton id="DestroyActiveSuits">
+        <Icon value="Assets\Textures\btn-ability-tychus-odin-bigredbutton.dds"/>
+    </CButton>
+    <CButton id="BurstCounter2">
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel3.dds"/>
+        <HotkeyAlias value="BurstCounter"/>
+        <ChargeText value="Button/Tooltip/BurstCount"/>
+    </CButton>
+    <CButton id="MechOperatorSkills">
+        <Icon value="Assets\Images\Mechoperator_static.dds"/>
+        <AlertIcon value="Assets\Textures\transportpilotportrait_static.dds"/>
+    </CButton>
+    <CButton id="ProximitySensor">
+        <Icon value="Assets\Textures\btn-ability-terran-scannersweep-color.dds"/>
+    </CButton>
+    <CButton id="ProximitySensorOff">
+        <Icon value="Assets\Textures\btn-ability-terran-scannersweep.dds"/>
+        <Hotkey value="Button/Hotkey/ProximitySensor"/>
+    </CButton>
+    <CButton id="ReconDrone2">
+        <Icon value="Assets\Textures\talent-raynor-level05-pointdefensedrones.dds"/>
+    </CButton>
+    <CButton id="SuitRecharge">
+        <Icon value="Assets\Textures\btn-upgrade-swann-nanorepair.dds"/>
+        <AlertName value="Button/Name/Suit Recharge"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="DensePowerCell">
+        <Icon value="Assets\Textures\btn-upgrade-terran-nova-snipeenergyrefund.dds"/>
+    </CButton>
+    <CButton id="DisableSupportSystems">
+        <Icon value="Assets\Textures\btn-unit-targetingdrone.dds"/>
+    </CButton>
+    <CButton id="EnableSupportSystems">
+        <Icon value="Assets\Textures\btn-unit-targetingdrone.dds"/>
+    </CButton>
+    <CButton id="KineticWaveModule">
+        <Icon value="Assets\Textures\btn-techupgrade-terran-ripwavemissiles.dds"/>
+    </CButton>
+    <CButton id="ClusterRockets2">
+        <Icon value="Assets\Textures\btn-techupgrade-terran-missilepods.dds"/>
+    </CButton>
+    <CButton id="DisruptionField">
+        <Icon value="Assets\Textures\btn-ability-terran-psidisruption.dds"/>
+    </CButton>
+    <CButton id="EmergencyRepair">
+        <Icon value="Assets\Textures\btn-techupgrade-terran-automatedselfrepair.dds"/>
+    </CButton>
+    <CButton id="ProtectionProtocal">
+        <Icon value="Assets\Textures\btn-ability-protoss-hardenedshields-color.dds"/>
+    </CButton>
+    <CButton id="OverclockEnginesOn">
+        <Icon value="Assets\Textures\btn-research-terran-techreactor.dds"/>
+    </CButton>
+    <CButton id="OverclockEnginesOff">
+        <Icon value="Assets\Textures\btn-building-terran-techreactor.dds"/>
+    </CButton>
+    <CButton id="CombatAdjustmentsLevel1">
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel3.dds"/>
+    </CButton>
+    <CButton id="CombatAdjustmentsLevel2">
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel3.dds"/>
+    </CButton>
+    <CButton id="CombatAdjustmentsLevel3">
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel3.dds"/>
+    </CButton>
+    <CButton id="DefensiveAdjustmentsLevel1">
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel3.dds"/>
+    </CButton>
+    <CButton id="DefensiveAdjustmentsLevel2">
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel3.dds"/>
+    </CButton>
+    <CButton id="DefensiveAdjustmentsLevel3">
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel3.dds"/>
+    </CButton>
+    <CButton id="LogisticalAdjustmentsLevel1">
+        <Icon value="Assets\Textures\btn-upgrade-terran-behemothreactor.dds"/>
+    </CButton>
+    <CButton id="LogisticalAdjustmentsLevel2">
+        <Icon value="Assets\Textures\btn-upgrade-terran-behemothreactor.dds"/>
+    </CButton>
+    <CButton id="LogisticalAdjustmentsLevel3">
+        <Icon value="Assets\Textures\btn-upgrade-terran-behemothreactor.dds"/>
+    </CButton>
+    <CButton id="HeavyPlating">
+        <Icon value="Assets\Textures\btn-techupgrade-terran-juggernautplating.dds"/>
+    </CButton>
+    <CButton id="CombatAdjustments">
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel3.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel3.dds"/>
+    </CButton>
+    <CButton id="DefensiveAdjustments">
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel3.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel3.dds"/>
+    </CButton>
+    <CButton id="LightPlating">
+        <Icon value="Assets\Textures\btn-techupgrade-terran-marauderlife.dds"/>
+    </CButton>
+    <CButton id="RequestBattleWalker">
+        <Icon value="Assets\Textures\btn-unit-terran-warhound.dds"/>
+        <Tooltip value="Button/Tooltip/RequestMk2LightWalker"/>
+    </CButton>
+    <CButton id="MechCalldowns">
+        <Name value="Button/Name/Mech Calldown"/>
+        <Tooltip value="Button/Tooltip/Mech Calldown Description"/>
+        <Icon value="Assets\Textures\btn-unit-collection-vikingassault-covertops.dds"/>
+        <AlertName value="Button/Name/Mech Calldown"/>
+        <AlertIcon value="Assets\Textures\btn-unit-collection-vikingassault-covertops.dds"/>
+    </CButton>
+    <CButton id="RequestHeavyWalker">
+        <Icon value="Assets\Textures\btn-unit-terran-vikingassault.dds"/>
+        <AlertName value="Button/Name/RequestBattleWalker2"/>
+        <AlertTooltip value="Button/Tooltip/RequestBattleWalker2"/>
+    </CButton>
+    <CButton id="HEDPRocket">
+        <Icon value="Assets\Textures\missilestandard_coop.dds"/>
+    </CButton>
+    <CButton id="OverclockWeapons">
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel1.dds"/>
+    </CButton>
+    <CButton id="OverclockWeapons2">
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
+    </CButton>
+    <CButton id="LogisticalAdjustments">
+        <Icon value="Assets\Textures\btn-upgrade-terran-behemothreactor.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-behemothreactor.dds"/>
+    </CButton>
+    <CRequirementAnd id="And1284806349GTECountAbilLogisticalAdjustmentsCompleteOnlyAtUnit1LTSumCountUnitReconDroneCompleteOnlySumCountUnitMechOperatorCompleteOnly">
+        <OperandArray value="GTECountAbilLogisticalAdjustmentsCompleteOnlyAtUnit1"/>
+        <OperandArray value="LTSumCountUnitReconDroneCompleteOnlySumCountUnitMechOperatorCompleteOnly"/>
+    </CRequirementAnd>
+    <CRequirementCountUnit id="CountUnitMechOperatorCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="MechOperator" State="CompleteOnly"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitReconDroneCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ReconDrone" State="CompleteOnly"/>
+    </CRequirementCountUnit>
+    <CRequirementLT id="LTSumCountUnitReconDroneCompleteOnlySumCountUnitMechOperatorCompleteOnly">
+        <OperandArray index="0" value="SumCountUnitReconDroneCompleteOnly"/>
+        <OperandArray index="1" value="SumCountUnitMechOperatorCompleteOnly"/>
+    </CRequirementLT>
+    <CRequirementSum id="SumCountUnitMechOperatorCompleteOnly">
+        <OperandArray value="CountUnitMechOperatorCompleteOnly"/>
+    </CRequirementSum>
+    <CRequirementSum id="SumCountUnitReconDroneCompleteOnly">
+        <OperandArray value="CountUnitReconDroneCompleteOnly"/>
+    </CRequirementSum>
+    <CRequirementCountBehavior id="CountBehaviorFieldTuningCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="FieldTuning" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountUpgrade id="CountUpgradeFieldTuningCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="FieldTuning" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementEq id="Eq1090518262CountUpgradeFieldTuningCompleteOnly1">
+        <OperandArray index="0" value="CountUpgradeFieldTuningCompleteOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementEq>
+    <CRequirementEq id="Eq3407127069CountBehaviorFieldTuningCompleteOnlyAtUnit10">
+        <OperandArray index="0" value="CountBehaviorFieldTuningCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="10"/>
+    </CRequirementEq>
+    <CRequirementAnd id="And1284806349GTECountAbilLogisticalAdjustmentsCompleteOnlyAtUnit1LTCountUnitReconDroneQueuedOrBetter1">
+        <OperandArray value="GTECountAbilLogisticalAdjustmentsCompleteOnlyAtUnit1"/>
+        <OperandArray value="LTCountUnitReconDroneQueuedOrBetter1"/>
+    </CRequirementAnd>
+    <CRequirementCountUnit id="CountUnitReconDroneQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ReconDrone" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementLT id="LTCountUnitReconDroneQueuedOrBetter1">
+        <OperandArray index="0" value="CountUnitReconDroneQueuedOrBetter"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
+    <CRequirementCountAbil id="CountAbilLogisticalAdjustmentsCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="LogisticalAdjustments" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountAbil>
+    <CRequirementGTE id="GTECountAbilLogisticalAdjustmentsCompleteOnlyAtUnit1">
+        <OperandArray index="0" value="CountAbilLogisticalAdjustmentsCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementGTE>
+    <CRequirementAnd id="AndGTECountBehaviorHeroLevelsCompleteOnlyAtUnit4AndLTCountUnitMOBattleWalkerQueuedOrBetter1LTCountUnitMOCombatWalkerQueuedOrBetter1">
+        <OperandArray value="GTECountBehaviorHeroLevelsCompleteOnlyAtUnit4"/>
+        <OperandArray value="AndLTCountUnitMOBattleWalkerQueuedOrBetter1LTCountUnitMOCombatWalkerQueuedOrBetter1"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndLTCountUnitMOBattleWalkerQueuedOrBetter1LTCountUnitMOCombatWalkerQueuedOrBetter1">
+        <OperandArray value="LTCountUnitMOBattleWalkerQueuedOrBetter1"/>
+        <OperandArray value="LTCountUnitMOCombatWalkerQueuedOrBetter1"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="And3452166785LTCountUnitMOCombatWalkerQueuedOrBetter1LTCountUnitMOBattleWalkerQueuedOrBetter1">
+        <OperandArray value="LTCountUnitMOCombatWalkerQueuedOrBetter1"/>
+        <OperandArray value="LTCountUnitMOBattleWalkerQueuedOrBetter1"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndGTE1216351361CountAbilMechOperatorSkillsQueuedOrBetterAtUnit1GTE2969430275CountAbilCombatAdjustmentsQueuedOrBetterAtUnit1GTE1333737485CountAbilLogisticalAdjustmentsQueuedOrBetterAtUnit1And3452166783543355420">
+        <OperandArray value="GTE1216351361CountAbilMechOperatorSkillsQueuedOrBetterAtUnit1"/>
+        <OperandArray value="GTE2969430275CountAbilCombatAdjustmentsQueuedOrBetterAtUnit1"/>
+        <OperandArray value="GTE1333737485CountAbilLogisticalAdjustmentsQueuedOrBetterAtUnit1"/>
+        <OperandArray value="And3452166785LTCountUnitMOCombatWalkerQueuedOrBetter1LTCountUnitMOBattleWalkerQueuedOrBetter1"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndGTE1216351361CountAbilMechOperatorSkillsQueuedOrBetterAtUnit1GTE66337779CountAbilDefensiveAdjustmentsQueuedOrBetterAtUnit1GTE1333737485CountAbilLogisticalAdjustmentsQueuedOrBetterAtUnit1And34521667221412676">
+        <OperandArray value="GTE1216351361CountAbilMechOperatorSkillsQueuedOrBetterAtUnit1"/>
+        <OperandArray value="GTE66337779CountAbilDefensiveAdjustmentsQueuedOrBetterAtUnit1"/>
+        <OperandArray value="GTE1333737485CountAbilLogisticalAdjustmentsQueuedOrBetterAtUnit1"/>
+        <OperandArray value="And3452166785LTCountUnitMOCombatWalkerQueuedOrBetter1LTCountUnitMOBattleWalkerQueuedOrBetter1"/>
+    </CRequirementAnd>
+    <CRequirementCountAbil id="CountAbilCombatAdjustmentsQueuedOrBetterAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="CombatAdjustments" State="QueuedOrBetterAtUnit"/>
+    </CRequirementCountAbil>
+    <CRequirementCountAbil id="CountAbilDefensiveAdjustmentsQueuedOrBetterAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DefensiveAdjustments" State="QueuedOrBetterAtUnit"/>
+    </CRequirementCountAbil>
+    <CRequirementCountAbil id="CountAbilLogisticalAdjustmentsQueuedOrBetterAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="LogisticalAdjustments" State="QueuedOrBetterAtUnit"/>
+    </CRequirementCountAbil>
+    <CRequirementGTE id="GTE1216351361CountAbilMechOperatorSkillsQueuedOrBetterAtUnit1">
+        <OperandArray index="0" value="CountAbilMechOperatorSkillsQueuedOrBetterAtUnit"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementGTE>
+    <CRequirementGTE id="GTE1333737485CountAbilLogisticalAdjustmentsQueuedOrBetterAtUnit1">
+        <OperandArray index="0" value="CountAbilLogisticalAdjustmentsQueuedOrBetterAtUnit"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementGTE>
+    <CRequirementGTE id="GTE2969430275CountAbilCombatAdjustmentsQueuedOrBetterAtUnit1">
+        <OperandArray index="0" value="CountAbilCombatAdjustmentsQueuedOrBetterAtUnit"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementGTE>
+    <CRequirementGTE id="GTE66337779CountAbilDefensiveAdjustmentsQueuedOrBetterAtUnit1">
+        <OperandArray index="0" value="CountAbilDefensiveAdjustmentsQueuedOrBetterAtUnit"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementGTE>
+    <CRequirementLT id="LTCountUnitMOCombatWalkerQueuedOrBetter1">
+        <OperandArray index="0" value="CountUnitMOCombatWalkerQueuedOrBetter"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
+    <CRequirementCountAbil id="CountAbilMechOperatorSkillsQueuedOrBetterAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="MechOperatorSkills" State="QueuedOrBetterAtUnit"/>
+    </CRequirementCountAbil>
+    <CRequirementEq id="EqCountAbilMechOperatorSkillsQueuedOrBetterAtUnit1">
+        <OperandArray index="0" value="CountAbilMechOperatorSkillsQueuedOrBetterAtUnit"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountAbilMechOperatorSkillsQueuedOrBetterAtUnit2">
+        <OperandArray index="0" value="CountAbilMechOperatorSkillsQueuedOrBetterAtUnit"/>
+        <OperandArray index="1" value="2"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountAbilMechOperatorSkillsQueuedOrBetterAtUnit3">
+        <OperandArray index="0" value="CountAbilMechOperatorSkillsQueuedOrBetterAtUnit"/>
+        <OperandArray index="1" value="3"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountAbilMechOperatorSkillsQueuedOrBetterAtUnit4">
+        <OperandArray index="0" value="CountAbilMechOperatorSkillsQueuedOrBetterAtUnit"/>
+        <OperandArray index="1" value="4"/>
+    </CRequirementEq>
+    <CRequirementGTE id="GTECountAbilMechOperatorSkillsQueuedOrBetterAtUnit1">
+        <OperandArray index="0" value="CountAbilMechOperatorSkillsQueuedOrBetterAtUnit"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementGTE>
+    <CRequirementAnd id="AndAndCountUnitMOCombatWalkerQueuedOrBetter1AndLTCountUnitMOBattleWalkerQueuedOrBetter1">
+        <OperandArray value="AndCountUnitMOCombatWalkerQueuedOrBetter1"/>
+        <OperandArray value="AndLTCountUnitMOBattleWalkerQueuedOrBetter1"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndCountUnitMOCombatWalkerQueuedOrBetter1">
+        <OperandArray value="CountUnitMOCombatWalkerQueuedOrBetter"/>
+        <OperandArray value="1"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndGTECountAbilMechCalldownsCompleteOnlyAtUnit1LT2114031064CountUnitMOCombatWalkerQueuedOrBetter1LT2114031064CountUnitMOBattleWalkerQueuedOrBetter1">
+        <OperandArray value="GTECountAbilMechCalldownsCompleteOnlyAtUnit1"/>
+        <OperandArray value="LT2114031064CountUnitMOCombatWalkerQueuedOrBetter1"/>
+        <OperandArray value="LT2114031064CountUnitMOBattleWalkerQueuedOrBetter1"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndGTECountAbilMechCalldownsCompleteOnlyAtUnit2LT2114031064CountUnitMOCombatWalkerQueuedOrBetter1LT2114031064CountUnitMOBattleWalkerQueuedOrBetter1">
+        <OperandArray value="GTECountAbilMechCalldownsCompleteOnlyAtUnit2"/>
+        <OperandArray value="LT2114031064CountUnitMOCombatWalkerQueuedOrBetter1"/>
+        <OperandArray value="LT2114031064CountUnitMOBattleWalkerQueuedOrBetter1"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndGTECountAbilMechCalldownsCompleteOnlyAtUnit3LT2114031064CountUnitMOCombatWalkerQueuedOrBetter1LT2114031064CountUnitMOBattleWalkerQueuedOrBetter1">
+        <OperandArray value="GTECountAbilMechCalldownsCompleteOnlyAtUnit3"/>
+        <OperandArray value="LT2114031064CountUnitMOCombatWalkerQueuedOrBetter1"/>
+        <OperandArray value="LT2114031064CountUnitMOBattleWalkerQueuedOrBetter1"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndGTECountAbilMechCalldownsCompleteOnlyAtUnit4LT2114031064CountUnitMOCombatWalkerQueuedOrBetter1LT2114031064CountUnitMOBattleWalkerQueuedOrBetter1">
+        <OperandArray value="GTECountAbilMechCalldownsCompleteOnlyAtUnit4"/>
+        <OperandArray value="LT2114031064CountUnitMOCombatWalkerQueuedOrBetter1"/>
+        <OperandArray value="LT2114031064CountUnitMOBattleWalkerQueuedOrBetter1"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndLTCountUnitMOBattleWalkerQueuedOrBetter1">
+        <OperandArray value="LTCountUnitMOBattleWalkerQueuedOrBetter1"/>
+    </CRequirementAnd>
+    <CRequirementCountAbil id="CountAbilMechCalldownsCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="MechCalldowns" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountAbil>
+    <CRequirementGTE id="GTECountAbilMechCalldownsCompleteOnlyAtUnit1">
+        <OperandArray index="0" value="CountAbilMechCalldownsCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementGTE>
+    <CRequirementGTE id="GTECountAbilMechCalldownsCompleteOnlyAtUnit2">
+        <OperandArray index="0" value="CountAbilMechCalldownsCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="2"/>
+    </CRequirementGTE>
+    <CRequirementGTE id="GTECountAbilMechCalldownsCompleteOnlyAtUnit3">
+        <OperandArray index="0" value="CountAbilMechCalldownsCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="3"/>
+    </CRequirementGTE>
+    <CRequirementGTE id="GTECountAbilMechCalldownsCompleteOnlyAtUnit4">
+        <OperandArray index="0" value="CountAbilMechCalldownsCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="4"/>
+    </CRequirementGTE>
+    <CRequirementLT id="LT2114031064CountUnitMOBattleWalkerQueuedOrBetter1">
+        <OperandArray index="0" value="CountUnitMOBattleWalkerQueuedOrBetter"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
+    <CRequirementLT id="LT2114031064CountUnitMOCombatWalkerQueuedOrBetter1">
+        <OperandArray index="0" value="CountUnitMOCombatWalkerQueuedOrBetter"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTAndCountUnitMOCombatWalkerQueuedOrBetter1AndLTCountUnitMOBattleWalkerQueuedOrBetter1">
+        <OperandArray index="0" value="AndCountUnitMOCombatWalkerQueuedOrBetter1"/>
+        <OperandArray index="1" value="AndLTCountUnitMOBattleWalkerQueuedOrBetter1"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUnitMOBattleWalkerQueuedOrBetter1">
+        <OperandArray index="0" value="CountUnitMOBattleWalkerQueuedOrBetter"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
+    <CRequirementAnd id="AndCountUnitMOCombatWalkerQueuedOrBetter1OrCountUnitMOBattleWalkerQueuedOrBetter1">
+        <OperandArray value="CountUnitMOCombatWalkerQueuedOrBetter"/>
+        <OperandArray value="1"/>
+        <OperandArray value="OrCountUnitMOBattleWalkerQueuedOrBetter1"/>
+    </CRequirementAnd>
+    <CRequirementEq id="EqCountUnitMOBattleWalkerQueuedOrBetter0">
+        <OperandArray index="0" value="CountUnitMOBattleWalkerQueuedOrBetter"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountUnitMOCombatWalkerQueuedOrBetter0">
+        <OperandArray index="0" value="CountUnitMOCombatWalkerQueuedOrBetter"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementEq>
+    <CRequirementOr id="OrCountUnitMOBattleWalkerQueuedOrBetter1">
+        <OperandArray value="CountUnitMOBattleWalkerQueuedOrBetter"/>
+        <OperandArray value="1"/>
+    </CRequirementOr>
+    <CRequirementOr id="OrCountUnitMOCombatWalkerQueuedOrBetter1OrCountUnitMOBattleWalkerQueuedOrBetter1">
+        <OperandArray value="CountUnitMOCombatWalkerQueuedOrBetter"/>
+        <OperandArray value="1"/>
+        <OperandArray value="OrCountUnitMOBattleWalkerQueuedOrBetter1"/>
+    </CRequirementOr>
+    <CRequirementOr id="OrEqCountUnitMOBattleWalkerQueuedOrBetter0">
+        <OperandArray value="EqCountUnitMOBattleWalkerQueuedOrBetter0"/>
+    </CRequirementOr>
+    <CRequirementOr id="OrEqCountUnitMOCombatWalkerQueuedOrBetter0OrEqCountUnitMOBattleWalkerQueuedOrBetter0">
+        <OperandArray value="EqCountUnitMOCombatWalkerQueuedOrBetter0"/>
+        <OperandArray value="OrEqCountUnitMOBattleWalkerQueuedOrBetter0"/>
+    </CRequirementOr>
+    <CRequirementAnd id="AndLTCountUnitMOCombatWalkerTotal1LTCountUnitMOBattleWalkerTotal1">
+        <OperandArray value="LTCountUnitMOCombatWalkerTotal1"/>
+        <OperandArray value="LTCountUnitMOBattleWalkerTotal1"/>
+    </CRequirementAnd>
+    <CRequirementCountUnit id="CountUnitMOBattleWalkerTotal">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="MOBattleWalker" State="Total"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitMOCombatWalkerTotal">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="MOCombatWalker" State="Total"/>
+    </CRequirementCountUnit>
+    <CRequirementLT id="LTCountUnitMOBattleWalkerTotal1">
+        <OperandArray index="0" value="CountUnitMOBattleWalkerTotal"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUnitMOCombatWalkerTotal1">
+        <OperandArray index="0" value="CountUnitMOCombatWalkerTotal"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
+    <CRequirementGTE id="GTE1196581068CountUpgradeCombatAdjustmentsCompleteOnly1">
+        <OperandArray index="0" value="CountUpgradeCombatAdjustmentsCompleteOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementGTE>
+    <CRequirementGTE id="GTE12559429CountUpgradeDefensiveAdjustmentsCompleteOnly2">
+        <OperandArray index="0" value="CountUpgradeDefensiveAdjustmentsCompleteOnly"/>
+        <OperandArray index="1" value="2"/>
+    </CRequirementGTE>
+    <CRequirementGTE id="GTE1326250448CountUpgradeDefensiveAdjustmentsCompleteOnly1">
+        <OperandArray index="0" value="CountUpgradeDefensiveAdjustmentsCompleteOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementGTE>
+    <CRequirementGTE id="GTE1843858759CountUpgradeLogisticalAdjustmentsCompleteOnly2">
+        <OperandArray index="0" value="CountUpgradeLogisticalAdjustmentsCompleteOnly"/>
+        <OperandArray index="1" value="2"/>
+    </CRequirementGTE>
+    <CRequirementGTE id="GTE465030216CountUpgradeLogisticalAdjustmentsCompleteOnly1">
+        <OperandArray index="0" value="CountUpgradeLogisticalAdjustmentsCompleteOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementGTE>
+    <CRequirementGTE id="GTECountUpgradeCombatAdjustmentsCompleteOnly1">
+        <OperandArray index="0" value="CountUpgradeCombatAdjustmentsCompleteOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementGTE>
+    <CRequirementGTE id="GTECountUpgradeDefensiveAdjustmentsCompleteOnly1">
+        <OperandArray index="0" value="CountUpgradeDefensiveAdjustmentsCompleteOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementGTE>
+    <CRequirementGTE id="GTECountUpgradeDefensiveAdjustmentsCompleteOnly2">
+        <OperandArray index="0" value="CountUpgradeDefensiveAdjustmentsCompleteOnly"/>
+        <OperandArray index="1" value="2"/>
+    </CRequirementGTE>
+    <CRequirementGTE id="GTECountUpgradeLogisticalAdjustmentsCompleteOnly1">
+        <OperandArray index="0" value="CountUpgradeLogisticalAdjustmentsCompleteOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementGTE>
+    <CRequirementGTE id="GTECountUpgradeLogisticalAdjustmentsCompleteOnly2">
+        <OperandArray index="0" value="CountUpgradeLogisticalAdjustmentsCompleteOnly"/>
+        <OperandArray index="1" value="2"/>
+    </CRequirementGTE>
+    <CRequirementCountUnit id="CountUnitMOBattleWalkerQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="MOBattleWalker" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitMOCombatWalkerQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="MOCombatWalker" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementLTE id="LTECountUnitMOBattleWalkerQueuedOrBetter0">
+        <OperandArray index="0" value="CountUnitMOBattleWalkerQueuedOrBetter"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementLTE>
+    <CRequirementLTE id="LTECountUnitMOCombatWalkerQueuedOrBetter0">
+        <OperandArray index="0" value="CountUnitMOCombatWalkerQueuedOrBetter"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementLTE>
+    <CRequirementCountUpgrade id="CountUpgradeCombatAdjustmentsCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="CombatAdjustments" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDefensiveAdjustmentsCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DefensiveAdjustments" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeLogisticalAdjustmentsCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="LogisticalAdjustments" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementEq id="Eq1196581068CountUpgradeCombatAdjustmentsCompleteOnly1">
+        <OperandArray index="0" value="CountUpgradeCombatAdjustmentsCompleteOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementEq>
+    <CRequirementEq id="Eq12559429CountUpgradeDefensiveAdjustmentsCompleteOnly2">
+        <OperandArray index="0" value="CountUpgradeDefensiveAdjustmentsCompleteOnly"/>
+        <OperandArray index="1" value="2"/>
+    </CRequirementEq>
+    <CRequirementEq id="Eq1326250448CountUpgradeDefensiveAdjustmentsCompleteOnly1">
+        <OperandArray index="0" value="CountUpgradeDefensiveAdjustmentsCompleteOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementEq>
+    <CRequirementEq id="Eq1806956896CountUpgradeLogisticalAdjustmentsCompleteOnly3">
+        <OperandArray index="0" value="CountUpgradeLogisticalAdjustmentsCompleteOnly"/>
+        <OperandArray index="1" value="3"/>
+    </CRequirementEq>
+    <CRequirementEq id="Eq1843858759CountUpgradeLogisticalAdjustmentsCompleteOnly2">
+        <OperandArray index="0" value="CountUpgradeLogisticalAdjustmentsCompleteOnly"/>
+        <OperandArray index="1" value="2"/>
+    </CRequirementEq>
+    <CRequirementEq id="Eq2874532692CountUpgradeDefensiveAdjustmentsCompleteOnly3">
+        <OperandArray index="0" value="CountUpgradeDefensiveAdjustmentsCompleteOnly"/>
+        <OperandArray index="1" value="3"/>
+    </CRequirementEq>
+    <CRequirementEq id="Eq3651448500CountUpgradeCombatAdjustmentsCompleteOnly2">
+        <OperandArray index="0" value="CountUpgradeCombatAdjustmentsCompleteOnly"/>
+        <OperandArray index="1" value="2"/>
+    </CRequirementEq>
+    <CRequirementEq id="Eq465030216CountUpgradeLogisticalAdjustmentsCompleteOnly1">
+        <OperandArray index="0" value="CountUpgradeLogisticalAdjustmentsCompleteOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementEq>
+    <CRequirementEq id="Eq851234902CountUpgradeCombatAdjustmentsCompleteOnly3">
+        <OperandArray index="0" value="CountUpgradeCombatAdjustmentsCompleteOnly"/>
+        <OperandArray index="1" value="3"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountUpgradeCombatAdjustmentsCompleteOnly2">
+        <OperandArray index="0" value="CountUpgradeCombatAdjustmentsCompleteOnly"/>
+        <OperandArray index="1" value="2"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountUpgradeCombatAdjustmentsCompleteOnly3">
+        <OperandArray index="0" value="CountUpgradeCombatAdjustmentsCompleteOnly"/>
+        <OperandArray index="1" value="3"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountUpgradeDefensiveAdjustmentsCompleteOnly2">
+        <OperandArray index="0" value="CountUpgradeDefensiveAdjustmentsCompleteOnly"/>
+        <OperandArray index="1" value="2"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountUpgradeDefensiveAdjustmentsCompleteOnly3">
+        <OperandArray index="0" value="CountUpgradeDefensiveAdjustmentsCompleteOnly"/>
+        <OperandArray index="1" value="3"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountUpgradeLogisticalAdjustmentsCompleteOnly3">
+        <OperandArray index="0" value="CountUpgradeLogisticalAdjustmentsCompleteOnly"/>
+        <OperandArray index="1" value="3"/>
+    </CRequirementEq>
+    <CRequirementLTE id="LTECountUpgradeCombatAdjustmentsCompleteOnly1">
+        <OperandArray index="0" value="CountUpgradeCombatAdjustmentsCompleteOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLTE>
+    <CRequirementLTE id="LTECountUpgradeDefensiveAdjustmentsCompleteOnly1">
+        <OperandArray index="0" value="CountUpgradeDefensiveAdjustmentsCompleteOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLTE>
+    <CRequirementLTE id="LTECountUpgradeLogisticalAdjustmentsCompleteOnly1">
+        <OperandArray index="0" value="CountUpgradeLogisticalAdjustmentsCompleteOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLTE>
+    <CRequirementLTE id="LTECountUpgradeLogisticalAdjustmentsCompleteOnly2">
+        <OperandArray index="0" value="CountUpgradeLogisticalAdjustmentsCompleteOnly"/>
+        <OperandArray index="1" value="2"/>
+    </CRequirementLTE>
+    <CRequirementCountAbil id="CountAbilDefensiveAdjustmentsCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DefensiveAdjustments" State="CompleteOnly"/>
+    </CRequirementCountAbil>
+    <CRequirementCountAbil id="CountAbilLogisticalAdjustmentsCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="LogisticalAdjustments" State="CompleteOnly"/>
+    </CRequirementCountAbil>
+    <CRequirementEq id="EqCountAbilDefensiveAdjustmentsCompleteOnly1">
+        <OperandArray index="0" value="CountAbilDefensiveAdjustmentsCompleteOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountAbilDefensiveAdjustmentsCompleteOnly2">
+        <OperandArray index="0" value="CountAbilDefensiveAdjustmentsCompleteOnly"/>
+        <OperandArray index="1" value="2"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountAbilDefensiveAdjustmentsCompleteOnly3">
+        <OperandArray index="0" value="CountAbilDefensiveAdjustmentsCompleteOnly"/>
+        <OperandArray index="1" value="3"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountAbilLogisticalAdjustmentsCompleteOnly1">
+        <OperandArray index="0" value="CountAbilLogisticalAdjustmentsCompleteOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountAbilLogisticalAdjustmentsCompleteOnly2">
+        <OperandArray index="0" value="CountAbilLogisticalAdjustmentsCompleteOnly"/>
+        <OperandArray index="1" value="2"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountAbilLogisticalAdjustmentsCompleteOnly3">
+        <OperandArray index="0" value="CountAbilLogisticalAdjustmentsCompleteOnly"/>
+        <OperandArray index="1" value="3"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountAbilCombatAdjustmentsCompleteOnly1">
+        <OperandArray index="0" value="CountAbilCombatAdjustmentsCompleteOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementEq>
+    <CRequirementCountAbil id="CountAbilCombatAdjustmentsCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="CombatAdjustments" State="CompleteOnly"/>
+    </CRequirementCountAbil>
+    <CRequirementEq id="EqCountAbilCombatAdjustmentsCompleteOnly2">
+        <OperandArray index="0" value="CountAbilCombatAdjustmentsCompleteOnly"/>
+        <OperandArray index="1" value="2"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountAbilCombatAdjustmentsCompleteOnly3">
+        <OperandArray index="0" value="CountAbilCombatAdjustmentsCompleteOnly"/>
+        <OperandArray index="1" value="3"/>
+    </CRequirementEq>
+    <CActorModel id="PsionicShockwave2">
+        <On Terms="Abil.KineticWaveModule.SourceCastStart" Send="Create"/>
+        <On Terms="ActorCreation" Send="$Birth"/>
+        <On Terms="AnimDone; AnimName Birth" Send="Destroy"/>
+        <On Terms="ActorOrphan" Send="Destroy"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachOriginStationary"/>
+        <Model value="KineticWaveEmitter"/>
+        <Scale value="0.700000,0.700000,0.400000"/>
+    </CActorModel>
+    <CActorAction id="BattleWalkerGunAttack" parent="GenericAttack">
+        <On index="1" Terms="Effect.WalkerArmamentDamage.Start; FromEffectTreeDescendant" Send="ActionImpact"/>
+        <On index="6" Terms="Effect.BattleWalkerGun.Start; At Caster" Send="Create"/>
+        <LaunchAssets Model="AutoTurretAttackLaunch" Sound="SentryGunAttackLaunch"/>
+    </CActorAction>
+    <CActorMissile id="BattleWalkerGunAttackMissile" parent="GenericAttackMissile" unitName="BattleWalkerGunWeapon"/>
+    <CActorUnit id="MOCBattleWalker" parent="GenericUnitBase" unitName="RABattleWalker">
+        <Macros value="UnloadDropAnim"/>
+        <Macros value="PhysicsDeathsSwarmGround"/>
+        <Macros value="TerrainSquibAnimations"/>
+        <On index="0" Terms="UnitBirth.MOBattleWalker"/>
+        <On index="1" Terms="UnitBirth.MOBattleWalker"/>
+        <On index="2" Terms="UnitRevive.MOBattleWalker"/>
+        <On index="3" Terms="UnitRevive.MOBattleWalker"/>
+        <On index="4" Terms="UnitConstruction.MOBattleWalker"/>
+        <On index="5" Terms="UnitConstruction.MOBattleWalker"/>
+        <On Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Attack Attack"/>
+        <On Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack"/>
+        <On Terms="WeaponStart.*.AttackStart; WeaponTargetElevation GE 20.000000" Send="AnimBracketStart AttackSuperior Attack,Superior"/>
+        <On Terms="WeaponStart.*.AttackStart; WeaponTargetElevation LE -20.000000" Send="AnimBracketStart AttackInferior Attack,Inferior"/>
+        <On Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop AttackSuperior"/>
+        <On Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop AttackInferior"/>
+        <On Terms="WeaponStart.WarHoundMelee.AttackStart" Send="AnimBracketStart Attack Spell,A"/>
+        <On Terms="WeaponStop.WarHoundMelee.AttackStop" Send="AnimBracketStop Attack"/>
+        <On Terms="Effect.CycloneMissileCP.Start; At Caster" Send="AnimBracketStart Cover Cover,Start Cover Cover,End"/>
+        <On Terms="Effect.CycloneMissileCP.Stop; At Caster" Send="AnimBracketStop Cover"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Warhound_Land"/>
+        <On Terms="UnitDeathCustomize; Option Model Low" Send="DeathCustomize Low"/>
+        <On Terms="ActorCreation" Send="TextureSelectById CamoDarkSky"/>
+        <Model value="WarHound"/>
+        <BuildModel value="WarHound"/>
+        <DeathArray index="Normal" ModelLink="WarHoundDeath" SoundLink="SiegeTank_Explode"/>
+        <DeathCustoms ModelLink="WarhoundDeathRagdoll" Name="RagdollBasic">
+            <BodySquibs Name="Basic" Model="TerranSquibDeathRagdoll"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollSiegeTank" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollFire" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollAcid" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollBaneling" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollUltraUnburrow" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms ModelLink="TerranLargeUnitDeathLow" Name="Low"/>
+        <DeathActorModel value="UnitDeathModelUnscaled"/>
+        <PlacementModel value="WarHound"/>
+        <PortraitModel value="TransportPilotPortrait"/>
+        <StandAnimTurnTime value="3.33"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.100000,0.250000"/>
+            <RangeUp value="2.000000"/>
+            <RangeDown value="2.000000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleWarhound"/>
+        </TerrainSquibs>
+        <WalkAnimMoveSpeed value="2.8984"/>
+        <BarOffset value="125"/>
+        <BarWidth value="90"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-terran-warhound.dds"/>
+        </GroupIcon>
+        <HighlightTooltip value="Unit/Name/MOCBattleWalker"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel3.dds"/>
+        <NameOffset value="40"/>
+        <SoundArray index="Ready" value="Banshee_Ready"/>
+        <SoundArray index="Help" value="Banshee_Help"/>
+        <SoundArray index="What" value="Banshee_What"/>
+        <SoundArray index="Yes" value="Banshee_Yes"/>
+        <SoundArray index="Attack" value="Banshee_Attack"/>
+        <SoundArray index="Pissed" value="Banshee_Pissed"/>
+        <SoundArray index="Movement" value="WarHound_Movement"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-warhound.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-terran-warhound.dds"/>
+        </Wireframe>
+        <UnitKillRank Text="BattleWalkerRank"/>
+    </CActorUnit>
+    <CActorUnit id="MOCombatWalker" parent="GenericUnitBase" unitName="CombatWalker">
+        <On index="0" Terms="UnitBirth.MOCombatWalker"/>
+        <On index="1" Terms="UnitBirth.MOCombatWalker"/>
+        <On index="2" Terms="UnitRevive.MOCombatWalker"/>
+        <On index="3" Terms="UnitRevive.MOCombatWalker"/>
+        <On index="4" Terms="UnitConstruction.MOCombatWalker"/>
+        <On index="5" Terms="UnitConstruction.MOCombatWalker"/>
+        <On Terms="Abil.attack.ReadyStart" Send="AnimGroupApply Ready"/>
+        <On Terms="WeaponStart.*.AttackStart; WeaponTargetElevation GE 20.000000" Send="AnimBracketStart Attack Attack,Superior"/>
+        <On Terms="WeaponStart.*.AttackStart; WeaponTargetElevation LE -20.000000" Send="AnimBracketStart Attack Attack,Inferior"/>
+        <On Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Attack Attack"/>
+        <On Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack"/>
+        <On Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
+        <On Terms="UnitPortrait.*.Configure" Target="::PortraitGameSelf" Send="AnimClear Visor 0.000000"/>
+        <On Terms="ActorCreation" Send="SetTintColor 204,255,230 0.000000 OneShot tintcolor 200.000000"/>
+        <On Terms="Behavior.Unpowered.On" Send="AnimSetPausedAll"/>
+        <On Terms="Behavior.Unpowered.Off" Send="AnimSetPausedAll 0"/>
+        <On Terms="ActorCreation" Send="SetOpacity 0.000000 0.000000 ops"/>
+        <On Terms="ActorCreation" Send="SetOpacity 1.000000 3.000000 ops"/>
+        <On Terms="ActorCreation" Send="TextureSelectById CamoDarkSky"/>
+        <Model value="VikingAssault"/>
+        <Scale value="1.750000"/>
+        <BuildModel value="VikingAssault"/>
+        <DeathArray index="Normal" ModelLink="VikingAssaultDeath" SoundLink="Viking_Explode"/>
+        <DeathArray index="Blast" AnimProps="Death,Blast" ModelLink="VikingAssaultDeath"/>
+        <PlacementModel value="VikingAssault"/>
+        <PortraitModel value="TransportPilotPortrait"/>
+        <WalkAnimMoveSpeed value="2.5507"/>
+        <AbilSoundArray AbilCmd="FighterMode,Execute" Sound="Viking_FighterModeVO"/>
+        <BarOffset value="70"/>
+        <BarWidth value="70"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-Viking-Assault.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-terran-vikingassault.dds"/>
+        <HighlightTooltip value="Unit/Name/MOCombatWalker"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel3.dds"/>
+        <SoundArray index="Ready" value="Banshee_Ready"/>
+        <SoundArray index="Help" value="Banshee_Help"/>
+        <SoundArray index="What" value="Banshee_What"/>
+        <SoundArray index="Yes" value="Banshee_Yes"/>
+        <SoundArray index="Attack" value="Banshee_Attack"/>
+        <SoundArray index="Pissed" value="Banshee_Pissed"/>
+        <SoundArray index="Movement" value="Thor_Movement"/>
+        <UnitFlags index="StandAnimBirthVariation" value="0"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-vikingassault.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-Viking-Assault.dds"/>
+        </Wireframe>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.100000,0.250000"/>
+            <RangeUp value="2.000000"/>
+            <RangeDown value="2.000000"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleLargeVehicle"/>
+        </TerrainSquibs>
+        <UnitKillRank Text="HeavyWalkerRank"/>
+    </CActorUnit>
+    <CActorUnit id="MechOperator" parent="UnitTemplateActor">
+        <PortraitModel value="TransportPilotPortrait"/>
+        <CustomUnitStatusFrame value="VoidShared_UnitStatus/HeroUnitEnergyStatusFrameTemplate"/>
+        <CustomUnitStatusOffset value="-4,-20"/>
+        <UnitFlags index="SuppressDefaultStatusBar" value="1"/>
+        <HeroIcon value="Assets\Textures\transportpilotportrait_static.dds"/>
+        <SoundArray index="Ready" value="Banshee_Ready"/>
+        <SoundArray index="Help" value="Banshee_Help"/>
+        <SoundArray index="What" value="Banshee_What"/>
+        <SoundArray index="Yes" value="Banshee_Yes"/>
+        <SoundArray index="Attack" value="Banshee_Attack"/>
+        <SoundArray index="Pissed" value="Banshee_Pissed"/>
+        <UnitIcon value="Assets\Textures\transportpilotportrait_static.dds"/>
+        <On index="0" Terms="UnitBirth.MechOperator"/>
+        <On index="1" Terms="UnitBirth.MechOperator"/>
+        <On index="2" Terms="UnitRevive.MechOperator"/>
+        <On index="3" Terms="UnitRevive.MechOperator"/>
+        <On index="4" Terms="UnitConstruction.MechOperator"/>
+        <On index="5" Terms="UnitConstruction.MechOperator"/>
+        <On index="6" Terms="AnimDone.MechOperator; AnimName ConstructionDeath"/>
+        <On index="8" Terms="ActorCreation.MechOperator; ValidateUnit IsNotFlying; Option Shadow Low; $AllowBlobShadow"/>
+        <DeathArray index="Normal" SoundLink="Medivac_Death"/>
+        <WalkAnimMoveSpeed value="2.8984"/>
+    </CActorUnit>
+    <CModel id="KineticWaveEmitter" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Protoss\Void_Narud_Psionic_Shock_Wave\Void_Narud_Psionic_Shock_Wave.m3"/>
+    </CModel>
+    <CModel id="BattleWalkerGunAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\ReaperWeaponImpact\ReaperWeaponImpact.m3"/>
+    </CModel>
+    <CModel id="BattleWalkerGunWeapon" parent="MissileFX">
+        <Model value="Models\Seewhatsee_Bullet.m3"/>
+    </CModel>
+    <CWeaponLegacy id="BattleWalkerArmament">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel3.dds"/>
+        <DisplayEffect value="WalkerArmamentDamage"/>
+        <TargetFilters value="Visible;Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <ChaseFilters value="-;Player,Ally,Neutral,Enemy"/>
+        <MinScanRange value="22"/>
+        <Range value="22"/>
+        <RangeSlop value="3"/>
+        <RangeDisplayFlags index="CollapseBuffed" value="1"/>
+        <Period value="0.1"/>
+        <DamagePoint value="0.05"/>
+        <Backswing value="0"/>
+        <Effect value="BattleWalkerAttack"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="CombatWalkerArmament">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel3.dds"/>
+        <DisplayEffect value="CombatWalkerArmamentsDamage"/>
+        <TargetFilters value="Visible;Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="18"/>
+        <Range value="18"/>
+        <Period value="0.1"/>
+        <Backswing value="0"/>
+        <Effect value="HeavyWalkerAttack"/>
+        <RangeDisplayFlags index="CollapseBuffed" value="1"/>
+        <ChaseFilters value="-;Player,Ally,Neutral,Enemy"/>
+        <DamagePoint value="0.05"/>
+        <RangeSlop value="3"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CMoverMissile id="BattleWalkerGunWeapon">
+        <MotionPhases>
+            <Driver value="Guidance"/>
+            <Acceleration value="3200"/>
+            <Speed value="300"/>
+            <MaxSpeed value="300"/>
+        </MotionPhases>
+    </CMoverMissile>
+    <CSound id="BattleWalkerGunAttackImpact" parent="Combat">
+        <AssetArray File="Assets\Sounds\Terran\Ghost\Ghost_SnipeImpact0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Ghost\Ghost_SnipeImpact1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Ghost\Ghost_SnipeImpact2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Ghost\Ghost_SnipeImpact3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Ghost\Ghost_SnipeImpact4.wav" FacialGroup=""/>
+    </CSound>
+    <CUnit id="BattleWalkerGunWeapon" parent="MISSILE_INVULNERABLE"/>
+    <CUnit id="MechOperator" parent="UnitTemplateClassic">
+        <Race value="Terr"/>
+        <LifeArmorDisplayFlags index="CollapseBuffed" value="0"/>
+        <SpeedDisplayFlags index="CollapseBuffed" value="0"/>
+        <AbilArray Link="LearnAbilitiesMechOperator"/>
+        <AbilArray Link="CombatAdjustments"/>
+        <AbilArray Link="DefensiveAdjustments"/>
+        <AbilArray Link="LogisticalAdjustments"/>
+        <AbilArray Link="RequestMk2LightWalker"/>
+        <AbilArray Link="RequestHeavyWalker"/>
+        <AbilArray Link="HeroInventoryPlasma"/>
+        <AbilArray Link="RepairMO"/>
+        <AbilArray Link="SuitRecharge"/>
+        <AbilArray Link="PerformSelfAid"/>
+        <AbilArray Link="DisableSupportSystems"/>
+        <AbilArray Link="MechOperatorSkills"/>
+        <AbilArray Link="DisposeMechSuit"/>
+        <AbilArray Link="ReconDrone2"/>
+        <BehaviorArray Link="MechOperatorSkillsLvl1"/>
+        <BehaviorArray Link="MechOperatorSkillsLvl2"/>
+        <BehaviorArray Link="MechOperatorSkillsLvl3"/>
+        <BehaviorArray Link="MechOperatorSkillsLvl4"/>
+        <WeaponArray index="0" Link="PlasmaRifle"/>
+        <EffectArray index="Birth" value="EquipMechOperatorSet"/>
+        <EffectArray index="Revive" value="EquipMechOperatorSet"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="2">
+                <Face value="LearnAbilities"/>
+                <Type value="Submenu"/>
+                <SubmenuAbilState value="LearnAbilitiesMechOperator"/>
+                <SubmenuCardId value="0002"/>
+                <Row value="1"/>
+                <Column value="4"/>
+            </LayoutButtons>
+            <LayoutButtons index="3" Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="3"/>
+            <LayoutButtons index="4" Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="2"/>
+            <LayoutButtons index="5" Face="RepairCE" Type="AbilCmd" AbilCmd="RepairMO,Execute" Row="1" Column="0"/>
+            <LayoutButtons index="6" Face="SuitRecharge" Type="AbilCmd" AbilCmd="SuitRecharge,Execute" Row="1" Column="1"/>
+            <LayoutButtons Face="DisableSupportSystems" Type="AbilCmd" AbilCmd="DisableSupportSystems,On" Row="1" Column="2"/>
+            <LayoutButtons Face="EnableSupportSystems" Type="AbilCmd" AbilCmd="DisableSupportSystems,Off" Row="1" Column="2"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="RequestBattleWalker" Type="AbilCmd" AbilCmd="RequestMk2LightWalker,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="RequestHeavyWalker" Type="AbilCmd" AbilCmd="RequestHeavyWalker,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="ReconDrone2" Type="AbilCmd" AbilCmd="ReconDrone2,Execute" Row="2" Column="2"/>
+        </CardLayouts>
+        <CardLayouts index="1" CardId="0002">
+            <LayoutButtons Face="RequestHeavyWalker" Type="AbilCmd" AbilCmd="LearnAbilitiesMechOperator,Learn6" Row="0" Column="2"/>
+            <LayoutButtons Face="MechOperatorSkills" Type="AbilCmd" AbilCmd="LearnAbilitiesMechOperator,Learn1" Row="0" Column="0"/>
+            <LayoutButtons Face="RequestBattleWalker" Type="AbilCmd" AbilCmd="LearnAbilitiesMechOperator,Learn7" Row="0" Column="1"/>
+            <LayoutButtons Face="CombatAdjustments" Type="AbilCmd" AbilCmd="LearnAbilitiesMechOperator,Learn3" Row="1" Column="0"/>
+            <LayoutButtons Face="DefensiveAdjustments" Type="AbilCmd" AbilCmd="LearnAbilitiesMechOperator,Learn4" Row="1" Column="1"/>
+            <LayoutButtons Face="LogisticalAdjustments" Type="AbilCmd" AbilCmd="LearnAbilitiesMechOperator,Learn5" Row="1" Column="2"/>
+        </CardLayouts>
+        <CardLayouts index="2" CardId="0003">
+            <LayoutButtons index="4" Face="HoldFire3" Type="AbilCmd" AbilCmd="WeaponsHold2,On" Row="1" Column="4"/>
+            <LayoutButtons index="5" Face="HoldFireOff2" Type="AbilCmd" AbilCmd="WeaponsHold2,Off" Row="1" Column="4"/>
+            <LayoutButtons index="7" Face="Prone" Type="AbilCmd" AbilCmd="Prone,Execute" Row="1" Column="3"/>
+            <LayoutButtons Face="CombatAdjustmentsLevel3" Type="Passive" Requirements="CombatAdjustmentsUpgrade3" Row="2" Column="0"/>
+            <LayoutButtons Face="CombatAdjustmentsLevel2" Type="Passive" Requirements="CombatAdjustmentsUpgrade2" Row="2" Column="0"/>
+            <LayoutButtons Face="CombatAdjustmentsLevel1" Type="Passive" Requirements="CombatAdjustmentsUpgrade1" Row="2" Column="0"/>
+            <LayoutButtons Face="DefensiveAdjustmentsLevel3" Type="Passive" Requirements="DefensiveAdjustmentsUpgrade3" Row="2" Column="1"/>
+            <LayoutButtons Face="DefensiveAdjustmentsLevel2" Type="Passive" Requirements="DefensiveAdjustmentsUpgrade2" Row="2" Column="1"/>
+            <LayoutButtons Face="DefensiveAdjustmentsLevel1" Type="Passive" Requirements="DefensiveAdjustmentsUpgrade1" Row="2" Column="1"/>
+            <LayoutButtons Face="LogisticalAdjustmentsLevel3" Type="Passive" Requirements="LogisticalAdjustmentsUpgrade3" Row="2" Column="2"/>
+            <LayoutButtons Face="LogisticalAdjustmentsLevel2" Type="Passive" Requirements="LogisticalAdjustmentsUpgrade2" Row="2" Column="2"/>
+            <LayoutButtons Face="LogisticalAdjustmentsLevel1" Type="Passive" Requirements="LogisticalAdjustmentsUpgrade1" Row="2" Column="2"/>
+            <LayoutButtons Face="MechOperatorSkills" Type="Passive" Requirements="MechOperatorSkills1A" Row="2" Column="3"/>
+            <LayoutButtons Face="DestroyActiveSuits" Type="AbilCmd" AbilCmd="DisposeMechSuit,Execute" Row="1" Column="0"/>
+        </CardLayouts>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
+        <TauntDuration index="Tease" value="5"/>
+        <HotkeyCategory value="Hotkey/Catagory/MOSClassic"/>
+        <Attributes index="Light" value="0"/>
+        <LifeArmorName value="Unit/LifeArmorName/MechOperator"/>
+    </CUnit>
+    <CUnit id="MOCombatWalker" parent="VikingAssault">
+        <Name value="Unit/Name/MOCombatWalker"/>
+        <Description value="Button/Tooltip/MOCombatWalker"/>
+        <ReviveType value="CombatWalker"/>
+        <PushPriority value="25"/>
+        <Attributes index="Armored" value="0"/>
+        <Attributes index="Heroic" value="1"/>
+        <LifeStart value="1750"/>
+        <LifeMax value="1750"/>
+        <LifeArmor value="15"/>
+        <EnergyStart value="650"/>
+        <EnergyMax value="650"/>
+        <Speed value="2.5"/>
+        <Sight value="15"/>
+        <KillXP value="1000"/>
+        <AbilArray index="3" Link="VehicleSeat"/>
+        <AbilArray Link="WeaponsHold"/>
+        <AbilArray Link="OverclockWeapons2"/>
+        <AbilArray Link="ClusterRockets2"/>
+        <AbilArray Link="OverclockWeapons"/>
+        <AbilArray Link="EmergencyRepair"/>
+        <AbilArray Link="ProtectorProtocal"/>
+        <AbilArray Link="FlareGunCombat"/>
+        <BehaviorArray index="0" Link="UnpoweredMech"/>
+        <BehaviorArray Link="Flashlight"/>
+        <BehaviorArray Link="LightFilter"/>
+        <BehaviorArray Link="InfantryXPSharing"/>
+        <BehaviorArray Link="CombatAdjustments1"/>
+        <BehaviorArray Link="CombatAdjustments2"/>
+        <BehaviorArray Link="CombatAdjustments3"/>
+        <BehaviorArray Link="DefensiveAdjustments1"/>
+        <BehaviorArray Link="DefensiveAdjustments2"/>
+        <BehaviorArray Link="DefensiveAdjustments3"/>
+        <BehaviorArray Link="LogisticalAdjustments1"/>
+        <BehaviorArray Link="LogisticalAdjustments2"/>
+        <BehaviorArray Link="LogisticalAdjustments3"/>
+        <BehaviorArray Link="HeavyPlating"/>
+        <BehaviorArray Link="Eject2"/>
+        <BehaviorArray Link="DensePowerCellDummy"/>
+        <BehaviorArray Link="BurstCyclerPause"/>
+        <BehaviorArray Link="MechSuit"/>
+        <BehaviorArray Link="FiltrationSystem"/>
+        <BehaviorArray Link="MechSeat"/>
+        <BehaviorArray Link="FieldTuning"/>
+        <BehaviorArray Link="TunedCritical"/>
+        <WeaponArray index="0" Link="CombatWalkerArmament"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="0" Face="MoveHoldPosition" AbilCmd="move,HoldPos" Column="1"/>
+            <LayoutButtons index="1" Face="Stop" AbilCmd="stop,Stop" Column="0"/>
+            <LayoutButtons index="2" Face="Attack" AbilCmd="attack,Execute" Column="4"/>
+            <LayoutButtons index="3">
+                <Face value="AdditionalActions"/>
+                <Type value="Submenu"/>
+                <AbilCmd value=""/>
+                <SubmenuCardId value="0002"/>
+                <Row value="1"/>
+                <Column value="4"/>
+            </LayoutButtons>
+            <LayoutButtons index="4" Face="OverclockWeapons" AbilCmd="OverclockWeapons,On" Row="2" Column="1"/>
+            <LayoutButtons index="5" Face="OverclockWeapons2" AbilCmd="OverclockWeapons,Off" Column="1"/>
+            <LayoutButtons index="6" Face="OverclockEnginesOn" Type="AbilCmd" AbilCmd="OverclockWeapons2,On" Requirements="" Column="2"/>
+            <LayoutButtons index="7" Face="OverclockEnginesOff" Type="AbilCmd" AbilCmd="OverclockWeapons2,Off" Requirements=""/>
+            <LayoutButtons index="8">
+                <Face value="EmergencyRepair"/>
+                <Type value="AbilCmd"/>
+                <AbilCmd value="EmergencyRepair,On"/>
+                <Requirements value=""/>
+                <Row value="2"/>
+                <Column value="4"/>
+            </LayoutButtons>
+            <LayoutButtons index="9">
+                <Face value="ProtectionProtocal"/>
+                <Type value="AbilCmd"/>
+                <AbilCmd value="ProtectorProtocal,On"/>
+                <Requirements value=""/>
+                <Row value="2"/>
+                <Column value="3"/>
+            </LayoutButtons>
+            <LayoutButtons Face="HerculesLoad" Type="AbilCmd" AbilCmd="VehicleSeat,Load" Row="0" Column="2"/>
+            <LayoutButtons Face="HerculesUnloadAll" Type="AbilCmd" AbilCmd="VehicleSeat,UnloadAll" Row="0" Column="2"/>
+            <LayoutButtons Face="ClusterRockets2" Type="AbilCmd" AbilCmd="ClusterRockets2,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="FlareGunItem" Type="AbilCmd" AbilCmd="FlareGunCombat,Execute" Row="1" Column="0"/>
+            <LayoutButtons Face="BurstCounter2" Type="Passive" Row="1" Column="3"/>
+            <LayoutButtons>
+                <Face value="FieldTuning"/>
+                <Type value="Passive"/>
+                <Behavior value="FieldTuning"/>
+                <Requirements value="FieldTuning"/>
+                <Row value="1"/>
+                <Column value="2"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="FieldTuningCritical"/>
+                <Type value="Passive"/>
+                <Behavior value="TunedCritical"/>
+                <Requirements value="TunedCritical"/>
+                <Row value="1"/>
+                <Column value="1"/>
+            </LayoutButtons>
+        </CardLayouts>
+        <CardLayouts CardId="0002">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="GhostHoldFire" Type="AbilCmd" AbilCmd="WeaponsHold,On" Row="0" Column="0"/>
+            <LayoutButtons Face="SpectreWeaponsFree" Type="AbilCmd" AbilCmd="WeaponsHold,Off" Row="0" Column="0"/>
+            <LayoutButtons>
+                <Face value="CombatAdjustmentsLevel1"/>
+                <Type value="Passive"/>
+                <Behavior value="CombatAdjustments1"/>
+                <Requirements value="CombatAdjustmentsUpgrade1"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="CombatAdjustmentsLevel2"/>
+                <Type value="Passive"/>
+                <Behavior value="CombatAdjustments2"/>
+                <Requirements value="CombatAdjustmentsUpgrade2"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="CombatAdjustmentsLevel3"/>
+                <Type value="Passive"/>
+                <Behavior value="CombatAdjustments3"/>
+                <Requirements value="CombatAdjustmentsUpgrade3"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="DefensiveAdjustmentsLevel1"/>
+                <Type value="Passive"/>
+                <Behavior value="DefensiveAdjustments1"/>
+                <Requirements value="DefensiveAdjustmentsUpgrade1"/>
+                <Row value="2"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="DefensiveAdjustmentsLevel2"/>
+                <Type value="Passive"/>
+                <Behavior value="DefensiveAdjustments2"/>
+                <Requirements value="DefensiveAdjustmentsUpgrade2"/>
+                <Row value="2"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="DefensiveAdjustmentsLevel3"/>
+                <Type value="Passive"/>
+                <Behavior value="DefensiveAdjustments3"/>
+                <Requirements value="DefensiveAdjustmentsUpgrade3"/>
+                <Row value="2"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="LogisticalAdjustmentsLevel1"/>
+                <Type value="Passive"/>
+                <Behavior value="LogisticalAdjustments1"/>
+                <Requirements value="LogisticalAdjustmentsUpgrade1"/>
+                <Row value="2"/>
+                <Column value="2"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="LogisticalAdjustmentsLevel2"/>
+                <Type value="Passive"/>
+                <Behavior value="LogisticalAdjustments1"/>
+                <Requirements value="LogisticalAdjustmentsUpgrade2"/>
+                <Row value="2"/>
+                <Column value="2"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="LogisticalAdjustmentsLevel3"/>
+                <Type value="Passive"/>
+                <Behavior value="LogisticalAdjustments3"/>
+                <Requirements value="LogisticalAdjustmentsUpgrade3"/>
+                <Row value="2"/>
+                <Column value="2"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="HeavyPlating"/>
+                <Type value="Passive"/>
+                <Behavior value="HeavyPlating"/>
+                <Requirements value="DefensiveAdjustmentsUpgrade3"/>
+                <Row value="2"/>
+                <Column value="3"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="DensePowerCell"/>
+                <Type value="Passive"/>
+                <Behavior value="DensePowerCellDummy"/>
+                <Requirements value="LogisticalAdjustmentsLevel22"/>
+                <Row value="1"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons Face="FiltrationSystem" Type="Passive" Behavior="FiltrationSystem" Row="1" Column="2"/>
+        </CardLayouts>
+        <CargoSize value="1"/>
+        <TacticalAI value="CombatWalker"/>
+        <SelectAlias value="CombatWalker"/>
+        <SubgroupAlias value="MOCombatWalker"/>
+        <AIEvaluateAlias value="CombatWalker"/>
+        <ReviveInfoBase>
+            <Charge Link="CombatWalker/Revive"/>
+            <Cooldown Link="CombatWalker/Revive"/>
+        </ReviveInfoBase>
+        <LifeArmorName value="Unit/LifeArmorName/CombatWalker"/>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
+        <TauntDuration index="Tease" value="5"/>
+        <TurningRate value="360"/>
+        <Radius value="1"/>
+        <InnerRadius value="0.5"/>
+        <MinimapRadius value="1"/>
+        <DamageDealtXP value="0"/>
+        <DamageTakenXP value="0"/>
+        <ScoreMake value="225"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="0"/>
+            <ChanceArray index="Idle" value="0"/>
+            <ChanceArray index="Turn" value="0"/>
+        </Fidget>
+        <FlagArray index="Worker" value="1"/>
+        <FlagArray index="HiddenCargoUI" value="1"/>
+        <HotkeyAlias value="MOCombatWalker"/>
+        <StationaryTurningRate value="360"/>
+        <AlliedPushPriority value="25"/>
+    </CUnit>
+    <CUnit id="MOBattleWalker">
+        <DeathRevealRadius value="3"/>
+        <Race value="Terr"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="Worker" value="1"/>
+        <FlagArray index="HiddenCargoUI" value="1"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="TurnBeforeMove" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <Attributes index="Heroic" value="1"/>
+        <LifeStart value="750"/>
+        <LifeMax value="750"/>
+        <LifeArmor value="8"/>
+        <LifeArmorName value="Unit/LifeArmorName/BattleWalker"/>
+        <EnergyStart value="600"/>
+        <EnergyMax value="600"/>
+        <Speed value="2.8984"/>
+        <Acceleration value="1000"/>
+        <TurningRate value="540"/>
+        <Sight value="15"/>
+        <CostCategory value="Army"/>
+        <RepairTime value="45"/>
+        <AttackTargetPriority value="20"/>
+        <KillXP value="1000"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="Jump"/>
+        <AbilArray Link="WeaponsHold"/>
+        <AbilArray Link="VehicleSeat"/>
+        <AbilArray Link="WalkerMRL"/>
+        <AbilArray Link="OverclockWeapons"/>
+        <AbilArray Link="OverclockWeapons2"/>
+        <AbilArray Link="KineticWaveModule"/>
+        <AbilArray Link="ProximitySensor"/>
+        <BehaviorArray Link="UnpoweredMech"/>
+        <BehaviorArray Link="Flashlight"/>
+        <BehaviorArray Link="LightFilter"/>
+        <BehaviorArray Link="InfantryXPSharing"/>
+        <BehaviorArray Link="CombatAdjustments1"/>
+        <BehaviorArray Link="CombatAdjustments2"/>
+        <BehaviorArray Link="CombatAdjustments3"/>
+        <BehaviorArray Link="DefensiveAdjustments1"/>
+        <BehaviorArray Link="DefensiveAdjustments2"/>
+        <BehaviorArray Link="DefensiveAdjustments3"/>
+        <BehaviorArray Link="LogisticalAdjustments1"/>
+        <BehaviorArray Link="LogisticalAdjustments2"/>
+        <BehaviorArray Link="LogisticalAdjustments3"/>
+        <BehaviorArray Link="HeavyPlating"/>
+        <BehaviorArray Link="Eject2"/>
+        <BehaviorArray Link="DensePowerCellDummy"/>
+        <BehaviorArray Link="BurstCyclerPause"/>
+        <BehaviorArray Link="MechSuit"/>
+        <BehaviorArray Link="FiltrationSystem"/>
+        <BehaviorArray Link="MechSeat"/>
+        <BehaviorArray Link="FieldTuning"/>
+        <BehaviorArray Link="TunedCritical"/>
+        <WeaponArray Link="BattleWalkerArmament"/>
+        <CardLayouts>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="0"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="1"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="AdditionalActions" Type="Submenu" SubmenuCardId="0002" Row="1" Column="4"/>
+            <LayoutButtons Face="OverclockWeapons" Type="AbilCmd" AbilCmd="OverclockWeapons,On" Row="2" Column="1"/>
+            <LayoutButtons Face="OverclockWeapons2" Type="AbilCmd" AbilCmd="OverclockWeapons,Off" Row="2" Column="1"/>
+            <LayoutButtons Face="HEDPRocket" Type="AbilCmd" AbilCmd="WalkerMRL,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="OverclockEnginesOn" Type="AbilCmd" AbilCmd="OverclockWeapons2,On" Row="2" Column="2"/>
+            <LayoutButtons Face="OverclockEnginesOff" Type="AbilCmd" AbilCmd="OverclockWeapons2,Off" Row="2" Column="2"/>
+            <LayoutButtons Face="HerculesLoad" Type="AbilCmd" AbilCmd="VehicleSeat,Load" Row="0" Column="2"/>
+            <LayoutButtons Face="HerculesUnloadAll" Type="AbilCmd" AbilCmd="VehicleSeat,UnloadAll" Row="0" Column="2"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="3"/>
+            <LayoutButtons Face="KineticWaveModule" Type="AbilCmd" AbilCmd="KineticWaveModule,Execute" Row="2" Column="3"/>
+            <LayoutButtons Face="ProximitySensorOff" Type="AbilCmd" AbilCmd="ProximitySensor,Off" Row="2" Column="4"/>
+            <LayoutButtons Face="ProximitySensor" Type="AbilCmd" AbilCmd="ProximitySensor,On" Row="2" Column="4"/>
+            <LayoutButtons Face="BurstCounter2" Type="Passive" Row="1" Column="3"/>
+            <LayoutButtons>
+                <Face value="FieldTuning"/>
+                <Type value="Passive"/>
+                <Behavior value="FieldTuning"/>
+                <Requirements value="FieldTuning"/>
+                <Row value="1"/>
+                <Column value="2"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="FieldTuningCritical"/>
+                <Type value="Passive"/>
+                <Behavior value="TunedCritical"/>
+                <Requirements value="TunedCritical"/>
+                <Row value="1"/>
+                <Column value="1"/>
+            </LayoutButtons>
+        </CardLayouts>
+        <CardLayouts CardId="0002">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="GhostHoldFire" Type="AbilCmd" AbilCmd="WeaponsHold,On" Row="0" Column="0"/>
+            <LayoutButtons Face="SpectreWeaponsFree" Type="AbilCmd" AbilCmd="WeaponsHold,Off" Row="0" Column="0"/>
+            <LayoutButtons>
+                <Face value="CombatAdjustmentsLevel1"/>
+                <Type value="Passive"/>
+                <Behavior value="CombatAdjustments1"/>
+                <Requirements value="CombatAdjustmentsUpgrade1"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="CombatAdjustmentsLevel2"/>
+                <Type value="Passive"/>
+                <Behavior value="CombatAdjustments2"/>
+                <Requirements value="CombatAdjustmentsUpgrade2"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="CombatAdjustmentsLevel3"/>
+                <Type value="Passive"/>
+                <Behavior value="CombatAdjustments3"/>
+                <Requirements value="CombatAdjustmentsUpgrade3"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="DefensiveAdjustmentsLevel1"/>
+                <Type value="Passive"/>
+                <Behavior value="DefensiveAdjustments1"/>
+                <Requirements value="DefensiveAdjustmentsUpgrade1"/>
+                <Row value="2"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="DefensiveAdjustmentsLevel2"/>
+                <Type value="Passive"/>
+                <Behavior value="DefensiveAdjustments2"/>
+                <Requirements value="DefensiveAdjustmentsUpgrade2"/>
+                <Row value="2"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="DefensiveAdjustmentsLevel3"/>
+                <Type value="Passive"/>
+                <Behavior value="DefensiveAdjustments3"/>
+                <Requirements value="DefensiveAdjustmentsUpgrade3"/>
+                <Row value="2"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="LogisticalAdjustmentsLevel1"/>
+                <Type value="Passive"/>
+                <Behavior value="LogisticalAdjustments1"/>
+                <Requirements value="LogisticalAdjustmentsUpgrade1"/>
+                <Row value="2"/>
+                <Column value="2"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="LogisticalAdjustmentsLevel2"/>
+                <Type value="Passive"/>
+                <Behavior value="LogisticalAdjustments1"/>
+                <Requirements value="LogisticalAdjustmentsUpgrade2"/>
+                <Row value="2"/>
+                <Column value="2"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="LogisticalAdjustmentsLevel3"/>
+                <Type value="Passive"/>
+                <Behavior value="LogisticalAdjustments3"/>
+                <Requirements value="LogisticalAdjustmentsUpgrade3"/>
+                <Row value="2"/>
+                <Column value="2"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="LightPlating"/>
+                <Type value="Passive"/>
+                <Behavior value="LightPlating"/>
+                <Requirements value="DefensiveAdjustmentsUpgrade3"/>
+                <Row value="2"/>
+                <Column value="3"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="DisruptionField"/>
+                <Type value="Passive"/>
+                <Behavior value="DisruptorFieldSeach"/>
+                <Requirements value="DefensiveAdjustmentsUpgrade2A"/>
+                <Row value="1"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="DensePowerCell"/>
+                <Type value="Passive"/>
+                <Behavior value="DensePowerCellDummy"/>
+                <Requirements value="LogisticalAdjustmentsLevel22"/>
+                <Row value="1"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons Face="FiltrationSystem" Type="Passive" Behavior="FiltrationSystem" Row="1" Column="2"/>
+        </CardLayouts>
+        <Radius value="0.8125"/>
+        <SeparationRadius value="0.625"/>
+        <InnerRadius value="0.5"/>
+        <CargoSize value="1"/>
+        <ScoreMake value="225"/>
+        <ScoreKill value="225"/>
+        <SubgroupPriority value="8"/>
+        <MinimapRadius value="1"/>
+        <EditorCategories value="ObjectFamily:Melee,ObjectType:Unit"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="126"/>
+        <HotkeyCategory value="Unit/Category/TerranUnits"/>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
+        <TauntDuration index="Tease" value="5"/>
+        <PushPriority value="17"/>
+        <Food value="-2"/>
+        <Fidget>
+            <ChanceArray index="Idle" value="0"/>
+        </Fidget>
+        <StationaryTurningRate value="540"/>
+        <AlliedPushPriority value="17"/>
+    </CUnit>
+    <CBehaviorBuff id="FieldTuned">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorVeterancy id="FieldTuning">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <ShareFilters index="DamageDealt" value="-;Enemy,Worker,Hallucination"/>
+        <ShareFilters index="Kills" value="-;Enemy,Hallucination"/>
+        <VeterancyLevelArray>
+            <Modification>
+                <HealTakenMultiplier value="1.05"/>
+                <MoveSpeedBonus value="0.0156"/>
+                <XPMultiplier value="0"/>
+                <XPUnscaledBonus value="1"/>
+                <DamageDealtFraction index="Spell" value="0.025"/>
+                <DamageDealtFraction index="Ranged" value="0.025"/>
+                <VitalMaxIncreaseAffectsCurrentArray index="Life" value="0"/>
+                <VitalMaxIncreaseAffectsCurrentArray index="Shields" value="0"/>
+                <VitalMaxIncreaseAffectsCurrentArray index="Energy" value="0"/>
+                <RateMultiplierArray index="Cooldown" value="1.025"/>
+            </Modification>
+        </VeterancyLevelArray>
+        <VeterancyLevelArray MinVeterancyXP="277">
+            <Modification HealTakenMultiplier="1.05" MoveSpeedBonus="0.0156" XPMultiplier="0">
+                <DamageDealtFraction index="Spell" value="0.025"/>
+                <DamageDealtFraction index="Ranged" value="0.025"/>
+                <VitalMaxIncreaseAffectsCurrentArray index="Life" value="0"/>
+                <VitalMaxIncreaseAffectsCurrentArray index="Shields" value="0"/>
+                <VitalMaxIncreaseAffectsCurrentArray index="Energy" value="0"/>
+                <RateMultiplierArray index="Cooldown" value="1.025"/>
+            </Modification>
+        </VeterancyLevelArray>
+        <VeterancyLevelArray MinVeterancyXP="544">
+            <Modification HealTakenMultiplier="1.05" MoveSpeedBonus="0.0156" XPMultiplier="0">
+                <DamageDealtFraction index="Spell" value="0.025"/>
+                <DamageDealtFraction index="Ranged" value="0.025"/>
+                <VitalMaxIncreaseAffectsCurrentArray index="Life" value="0"/>
+                <VitalMaxIncreaseAffectsCurrentArray index="Shields" value="0"/>
+                <VitalMaxIncreaseAffectsCurrentArray index="Energy" value="0"/>
+                <RateMultiplierArray index="Cooldown" value="1.025"/>
+            </Modification>
+        </VeterancyLevelArray>
+        <VeterancyLevelArray MinVeterancyXP="831">
+            <Modification HealTakenMultiplier="1.05" MoveSpeedBonus="0.0156" XPMultiplier="0">
+                <DamageDealtFraction index="Spell" value="0.025"/>
+                <DamageDealtFraction index="Ranged" value="0.025"/>
+                <VitalMaxIncreaseAffectsCurrentArray index="Life" value="0"/>
+                <VitalMaxIncreaseAffectsCurrentArray index="Shields" value="0"/>
+                <VitalMaxIncreaseAffectsCurrentArray index="Energy" value="0"/>
+                <RateMultiplierArray index="Cooldown" value="1.025"/>
+            </Modification>
+        </VeterancyLevelArray>
+        <VeterancyLevelArray MinVeterancyXP="1108">
+            <Modification HealTakenMultiplier="1.05" MoveSpeedBonus="0.0156" XPMultiplier="0">
+                <DamageDealtFraction index="Spell" value="0.025"/>
+                <DamageDealtFraction index="Ranged" value="0.025"/>
+                <LifeArmorBonus value="2"/>
+                <VitalMaxIncreaseAffectsCurrentArray index="Life" value="0"/>
+                <VitalMaxIncreaseAffectsCurrentArray index="Shields" value="0"/>
+                <VitalMaxIncreaseAffectsCurrentArray index="Energy" value="0"/>
+                <RateMultiplierArray index="Cooldown" value="1.025"/>
+            </Modification>
+        </VeterancyLevelArray>
+        <VeterancyLevelArray MinVeterancyXP="1385">
+            <Modification HealTakenMultiplier="1.05" MoveSpeedBonus="0.0156" XPMultiplier="0">
+                <DamageDealtFraction index="Spell" value="0.025"/>
+                <DamageDealtFraction index="Ranged" value="0.025"/>
+                <VitalMaxIncreaseAffectsCurrentArray index="Life" value="0"/>
+                <VitalMaxIncreaseAffectsCurrentArray index="Shields" value="0"/>
+                <VitalMaxIncreaseAffectsCurrentArray index="Energy" value="0"/>
+                <RateMultiplierArray index="Cooldown" value="1.025"/>
+            </Modification>
+        </VeterancyLevelArray>
+        <VeterancyLevelArray MinVeterancyXP="1662">
+            <Modification HealTakenMultiplier="1.05" MoveSpeedBonus="0.0156" XPMultiplier="0">
+                <DamageDealtFraction index="Spell" value="0.025"/>
+                <DamageDealtFraction index="Ranged" value="0.025"/>
+                <VitalMaxIncreaseAffectsCurrentArray index="Life" value="0"/>
+                <VitalMaxIncreaseAffectsCurrentArray index="Shields" value="0"/>
+                <VitalMaxIncreaseAffectsCurrentArray index="Energy" value="0"/>
+                <RateMultiplierArray index="Cooldown" value="1.025"/>
+            </Modification>
+        </VeterancyLevelArray>
+        <VeterancyLevelArray MinVeterancyXP="1939">
+            <Modification HealTakenMultiplier="1.05" MoveSpeedBonus="0.0156" XPMultiplier="0">
+                <DamageDealtFraction index="Spell" value="0.025"/>
+                <DamageDealtFraction index="Ranged" value="0.025"/>
+                <VitalMaxIncreaseAffectsCurrentArray index="Life" value="0"/>
+                <VitalMaxIncreaseAffectsCurrentArray index="Shields" value="0"/>
+                <VitalMaxIncreaseAffectsCurrentArray index="Energy" value="0"/>
+                <RateMultiplierArray index="Cooldown" value="1.025"/>
+            </Modification>
+        </VeterancyLevelArray>
+        <VeterancyLevelArray MinVeterancyXP="2216">
+            <Modification HealTakenMultiplier="1.05" MoveSpeedBonus="0.0156" XPMultiplier="0">
+                <DamageDealtFraction index="Spell" value="0.025"/>
+                <DamageDealtFraction index="Ranged" value="0.025"/>
+                <VitalMaxIncreaseAffectsCurrentArray index="Life" value="0"/>
+                <VitalMaxIncreaseAffectsCurrentArray index="Shields" value="0"/>
+                <VitalMaxIncreaseAffectsCurrentArray index="Energy" value="0"/>
+                <RateMultiplierArray index="Cooldown" value="1.025"/>
+            </Modification>
+        </VeterancyLevelArray>
+        <VeterancyLevelArray MinVeterancyXP="2493">
+            <Modification HealTakenMultiplier="1.05" MoveSpeedBonus="0.0156" XPMultiplier="0">
+                <DamageDealtFraction index="Spell" value="0.025"/>
+                <DamageDealtFraction index="Ranged" value="0.025"/>
+                <LifeArmorBonus value="2"/>
+                <VitalMaxIncreaseAffectsCurrentArray index="Life" value="0"/>
+                <VitalMaxIncreaseAffectsCurrentArray index="Shields" value="0"/>
+                <VitalMaxIncreaseAffectsCurrentArray index="Energy" value="0"/>
+                <RateMultiplierArray index="Cooldown" value="1.025"/>
+            </Modification>
+        </VeterancyLevelArray>
+        <Requirements value="FieldTuning"/>
+        <Flags index="CombineXP" value="0"/>
+        <SharedXPMaxCount index="Kills" value="0"/>
+    </CBehaviorVeterancy>
+    <CBehaviorBuff id="TunedCritical">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="TunedCritical"/>
+        <DamageResponse Location="Attacker" ModifyFraction="3">
+            <Kind index="Melee" value="0"/>
+            <Kind index="Splash" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <Chance value="0.125"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="FiltrationSystem">
+        <InfoIcon value="Assets\Textures\btn-doodad-dominiongasvent.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <BehaviorLinkDisableArray value="SmokeGrenade"/>
+            <BehaviorLinkDisableArray value="GasGrenade1Debuff"/>
+            <BehaviorLinkDisableArray value="GasGrenade2Debuff"/>
+            <BehaviorLinkDisableArray value="GasGrenade3Debuff"/>
+            <BehaviorLinkDisableArray value="GasGrenade4Debuff"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SafetyEject">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="5"/>
+        <InitialEffect value="ApplyOvershieldGlaze"/>
+        <FinalEffect value="RemoveOvershieldGlaze"/>
+        <Modification>
+            <StateFlags index="Invulnerable" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SelfDestructExplosion">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <FinalEffect value="C4ChargeExplosionDamage"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BurstPause3">
+        <InfoIcon value="Assets\Textures\btn-ability-terran-holdfire.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisplayDuration index="Self" value="1"/>
+        <Duration value="1"/>
+        <Period value="0.001"/>
+        <PeriodicEffect value="BurstCounterRemover"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MechSuit">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DensePowerCellDummy">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="LogisticalAdjustmentsUpgrade3"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MechOperatorSkillsLvl1">
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\transportpilotportrait_static.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="MechOperatorSkills1"/>
+        <Modification>
+            <AttributeChangeArray Attribute="Mechanical" Points="3"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MechOperatorSkillsLvl2">
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\transportpilotportrait_static.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="MechOperatorSkills2"/>
+        <Modification>
+            <AttributeChangeArray Attribute="Mechanical" Points="6"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MechOperatorSkillsLvl3">
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\transportpilotportrait_static.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="MechOperatorSkills3"/>
+        <Modification>
+            <AttributeChangeArray Attribute="Mechanical" Points="9"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MechOperatorSkillsLvl4">
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\transportpilotportrait_static.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="MechOperatorSkills4"/>
+        <Modification>
+            <AttributeChangeArray Attribute="Mechanical" Points="12"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ProximitySensor">
+        <InfoIcon value="Assets\Textures\btn-ability-terran-scannersweep-color.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Period value="0.25"/>
+        <PeriodicEffect value="ProximityRevealSA"/>
+        <Modification Radar="30" RadarFilters="-;Neutral,RawResource,HarvestableResource,Item,Cloaked,Hidden,Hallucination,Invulnerable">
+            <VitalRegenArray index="Energy" value="-10"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="13ExpGain">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification XPMultiplier="0.3332"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SuspendedSupportSystems">
+        <InfoIcon value="Assets\Textures\btn-unit-targetingdrone.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <VitalRegenArray index="Energy" value="0.1484"/>
+            <AbilLinkDisableArray value="RepairMO"/>
+            <AbilLinkDisableArray value="SuitRecharge"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MechPilot">
+        <InfoFlags index="Hidden" value="1"/>
+        <Modification>
+            <AbilLinkDisableArray value="SuitRecharge"/>
+            <AbilLinkDisableArray value="RepairMO"/>
+            <BehaviorLinkEnableArray value="13ExpGain"/>
+            <BehaviorLinkEnableArray value="DamageTakenNone"/>
+            <BehaviorLinkDisableArray value="ClassIIIHemmorrhaging"/>
+            <BehaviorLinkDisableArray value="ClassIVHemmorrhaging"/>
+            <BehaviorLinkDisableArray value="DebilitatingInfection"/>
+            <BehaviorLinkDisableArray value="EnergyLeak"/>
+            <BehaviorLinkDisableArray value="FracturedArm"/>
+            <BehaviorLinkDisableArray value="FracturedLeg"/>
+            <BehaviorLinkDisableArray value="HatchedParasites"/>
+            <BehaviorLinkDisableArray value="InfectedBite"/>
+            <BehaviorLinkDisableArray value="MalignantInfection"/>
+            <BehaviorLinkDisableArray value="MinorLacerations"/>
+            <BehaviorLinkDisableArray value="NecroticVenom"/>
+            <BehaviorLinkDisableArray value="NeurotoxicVenom"/>
+            <BehaviorLinkDisableArray value="ParasiticInfection"/>
+            <BehaviorLinkDisableArray value="TraumaticBrainInjury"/>
+            <BehaviorLinkDisableArray value="UnidentifiedInfection"/>
+            <BehaviorLinkDisableArray value="ScorpioVenom"/>
+        </Modification>
+        <DamageResponse ModifyFraction="0">
+            <Chance value="1"/>
+        </DamageResponse>
+        <InitialEffect value="TurnOffSupportSystems"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DisruptorFieldSeach">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <Requirements value="DefensiveAdjustmentsUpgrade2A"/>
+        <Period value="0.125"/>
+        <PeriodicEffect value="DisruptorFieldSearchArea"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DisruptorField">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-terran-psidisruption.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="0.1875"/>
+        <Modification MoveSpeedBonus="-0.1015" AttackSpeedMultiplier="0.85"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Eject2">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="Energy2"/>
+        <Period value="1"/>
+        <PeriodicEffect value="TOOverlockEject"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InitialEffect value="TOOverlockEject"/>
+        <FinalEffect value="TOOverlockEject"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ProtecterProtocal">
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-hardenedshields-color.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="10"/>
+        <Modification ShieldArmorBonus="20">
+            <VitalMaxArray index="Shields" value="1000"/>
+        </Modification>
+        <InitialEffect value="ApplyOvershieldGlaze"/>
+        <FinalEffect value="RemoveOvershieldGlaze"/>
+        <DamageResponse ClampMaximum="1000">
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="EmergencyRepair">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="10"/>
+        <Modification>
+            <VitalRegenArray index="Life" value="50"/>
+            <BehaviorLinkDisableArray value="Powered"/>
+        </Modification>
+        <InfoIcon value="Assets\Textures\btn-techupgrade-terran-automatedselfrepair.dds"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="OverclockEngines">
+        <InfoIcon value="Assets\Textures\btn-research-terran-techreactor.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification MoveSpeedMultiplier="1.2">
+            <VitalRegenArray index="Energy" value="-7.5"/>
+        </Modification>
+        <RemoveValidatorArray value="CanSpendEnergy"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Powered">
+        <InfoIcon value="Assets\Textures\btn-tips-computerterminals.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Neutral"/>
+        <Modification>
+            <VitalRegenArray index="Energy" value="-1.5"/>
+            <BehaviorLinkDisableArray value="UnpoweredMech"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="OverclockWeapons">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification AttackSpeedMultiplier="1.3">
+            <VitalRegenArray index="Energy" value="-3"/>
+            <BehaviorLinkDisableArray value="BurstCyclerPause"/>
+        </Modification>
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel1.dds"/>
+        <RemoveValidatorArray value="CanSpendEnergy"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="UnpoweredMech">
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-arguslink.dds"/>
+        <Modification SightMaximum="0">
+            <ModifyFlags index="DisableAbils" value="1"/>
+            <ModifyFlags index="SuppressMoving" value="1"/>
+            <ModifyFlags index="SuppressTurning" value="1"/>
+            <StateFlags index="GenerateThreat" value="1"/>
+            <StateFlags index="Passive" value="1"/>
+            <StateFlags index="Uncommandable" value="1"/>
+            <AbilLinkEnableArray value="VehicleSeat"/>
+            <BehaviorLinkDisableArray value="OverclockEngines"/>
+            <BehaviorLinkDisableArray value="OverclockWeapons"/>
+            <BehaviorLinkDisableArray value="Flashlight"/>
+            <BehaviorLinkDisableArray value="LightFilter"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="LightPlating">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <DamageResponse ModifyFraction="0.75">
+            <Kind index="Spell" value="0"/>
+            <Kind index="Ranged" value="0"/>
+            <Chance value="1"/>
+        </DamageResponse>
+        <InfoIcon value="Assets\Textures\btn-techupgrade-terran-marauderlife.dds"/>
+        <Requirements value="DefensiveAdjustmentsUpgrade3"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <Alignment value="Positive"/>
+        <Modification>
+            <LifeArmorBonus value="3"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="HeavyPlating">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <DamageResponse ModifyFraction="0.65">
+            <Kind index="Spell" value="0"/>
+            <Kind index="Ranged" value="0"/>
+            <Chance value="1"/>
+        </DamageResponse>
+        <InfoIcon value="Assets\Textures\btn-techupgrade-terran-juggernautplating.dds"/>
+        <Requirements value="DefensiveAdjustmentsUpgrade3"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <Alignment value="Positive"/>
+        <Modification>
+            <LifeArmorBonus value="3"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CombatAdjustments1">
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel3.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Modification AttackSpeedMultiplier="1.1">
+            <DamageDealtFraction index="Spell" value="0.1"/>
+            <DamageDealtFraction index="Ranged" value="0.1"/>
+        </Modification>
+        <Requirements value="CombatAdjustmentsUpgrade1"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CombatAdjustments2">
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel3.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Modification AttackSpeedMultiplier="1.1" WeaponRange="3" WeaponScanBonus="3">
+            <DamageDealtFraction index="Spell" value="0.2"/>
+            <DamageDealtFraction index="Ranged" value="0.2"/>
+            <BehaviorLinkDisableArray value="CombatAdjustments1"/>
+        </Modification>
+        <Requirements value="CombatAdjustmentsUpgrade2"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CombatAdjustments3">
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel3.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Modification AttackSpeedMultiplier="1.25" WeaponRange="3" WeaponScanBonus="3">
+            <DamageDealtFraction index="Spell" value="0.4"/>
+            <DamageDealtFraction index="Ranged" value="0.4"/>
+            <BehaviorLinkDisableArray value="CombatAdjustments1"/>
+            <BehaviorLinkDisableArray value="CombatAdjustments2"/>
+        </Modification>
+        <Requirements value="CombatAdjustmentsUpgrade3"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DefensiveAdjustments1">
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel3.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Modification>
+            <LifeArmorBonus value="2"/>
+            <VitalMaxFractionArray index="Life" value="0.1"/>
+        </Modification>
+        <Requirements value="DefensiveAdjustmentsUpgrade1"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DefensiveAdjustments2">
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel3.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Modification>
+            <LifeArmorBonus value="4"/>
+            <VitalMaxFractionArray index="Life" value="0.15"/>
+            <BehaviorLinkDisableArray value="DefensiveAdjustments1"/>
+        </Modification>
+        <Requirements value="DefensiveAdjustmentsUpgrade2"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DefensiveAdjustments3">
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel3.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Modification>
+            <LifeArmorBonus value="6"/>
+            <VitalMaxArray index="Life" value="1"/>
+            <VitalMaxFractionArray index="Life" value="0.2"/>
+            <BehaviorLinkDisableArray value="DefensiveAdjustments1"/>
+            <BehaviorLinkDisableArray value="DefensiveAdjustments2"/>
+        </Modification>
+        <Requirements value="DefensiveAdjustmentsUpgrade3"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="LogisticalAdjustments1">
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-behemothreactor.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Modification AttackSpeedMultiplier="1.1" WeaponRange="2" WeaponScanBonus="2">
+            <DamageDealtFraction index="Spell" value="0.1"/>
+            <DamageDealtFraction index="Ranged" value="0.1"/>
+            <VitalRegenArray index="Energy" value="0.1484"/>
+        </Modification>
+        <Requirements value="LogisticalAdjustmentsUpgrade1"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="LogisticalAdjustments2">
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-behemothreactor.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Modification>
+            <SightBonus value="2"/>
+            <AttackSpeedMultiplier value="1.1"/>
+            <WeaponRange value="2"/>
+            <WeaponScanBonus value="2"/>
+            <DamageDealtFraction index="Spell" value="0.1"/>
+            <DamageDealtFraction index="Ranged" value="0.1"/>
+            <VitalRegenArray index="Life" value="1.5"/>
+            <VitalRegenArray index="Energy" value="0.2265"/>
+            <BehaviorLinkDisableArray value="LogisticalAdjustments1"/>
+        </Modification>
+        <Requirements value="LogisticalAdjustmentsUpgrade2"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="LogisticalAdjustments3">
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-behemothreactor.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Modification>
+            <SightBonus value="2"/>
+            <MoveSpeedMultiplier value="1.05"/>
+            <AttackSpeedMultiplier value="1.1"/>
+            <WeaponRange value="2"/>
+            <WeaponScanBonus value="2"/>
+            <DamageDealtFraction index="Spell" value="0.1"/>
+            <DamageDealtFraction index="Ranged" value="0.1"/>
+            <VitalMaxAdditiveMultiplierArray index="Energy" value="0.5"/>
+            <VitalRegenArray index="Life" value="1.5"/>
+            <VitalRegenArray index="Energy" value="0.3007"/>
+            <BehaviorLinkDisableArray value="LogisticalAdjustments1"/>
+            <BehaviorLinkDisableArray value="LogisticalAdjustments2"/>
+        </Modification>
+        <Requirements value="LogisticalAdjustmentsUpgrade3"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CUpgrade id="FieldTuning"/>
+    <CUpgrade id="MechOperatorSkills" parent="Research">
+        <InfoTooltipPriority value="0"/>
+        <Alert value="UpgradeComplete"/>
+        <EffectArray Operation="Subtract" Reference="Effect,RepairCE,PeriodicPeriod" Value="0.150000"/>
+        <EffectArray Reference="Effect,EnergyTransfer2,RechargeVitalRate" Value="1.500000"/>
+        <EffectArray Reference="Behavior,SuspendedSupportSystems,Modification.VitalRegenArray[Energy]" Value="0.148400"/>
+        <EffectArray Reference="Behavior,SafetyEject,Duration" Value="1.000000"/>
+        <EffectArray Reference="Behavior,SafetyEject,Modification.MoveSpeedBonus" Value="0.101500"/>
+        <MaxLevel value="3"/>
+    </CUpgrade>
+    <CUpgrade id="CombatAdjustments">
+        <MaxLevel value="3"/>
+    </CUpgrade>
+    <CUpgrade id="DefensiveAdjustments">
+        <MaxLevel value="3"/>
+    </CUpgrade>
+    <CUpgrade id="LogisticalAdjustments">
+        <MaxLevel value="3"/>
+    </CUpgrade>
+</Catalog>

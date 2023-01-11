@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CAttachMethodFilter id="AMFilterWeaponALT" parent="AMFilterWeapon00">
+        <Keys Keyword="Weapon" Index="1"/>
+        <Keys Keyword="Weapon" Index="1"/>
+        <Logic value="OR"/>
+    </CAttachMethodFilter>
+    <CAttachMethodPattern id="AMPatternMKII">
+        <Keyword value="Weapon"/>
+        <Base value="::RollingIndex"/>
+        <Multiplier value="0"/>
+        <Driver value="32mmPunisherCannonLaunchMissile"/>
+    </CAttachMethodPattern>
+    <CAttachMethodPattern id="PatternRAJuggernaught">
+        <Keyword value="Weapon"/>
+        <Base value="::RollingIndex"/>
+        <Multiplier value="0"/>
+        <Driver value="JuggernaughtIncendiaryRoundsLaunch"/>
+    </CAttachMethodPattern>
+</Catalog>

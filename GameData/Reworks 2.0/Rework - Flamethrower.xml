@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CEffectSet id="FuelDischargeMiniSetTest">
+        <EditorCategories value="Race:Terran"/>
+        <EffectArray value="FuelDischargeDamageMini"/>
+        <EffectArray value="FuelDischargeTDTest"/>
+        <TargetLocationType value="Point"/>
+    </CEffectSet>
+    <CEffectDamage id="FuelDischargeTDTest">
+        <EditorCategories value="Race:Terran"/>
+        <Marker Link="Effect/FuelDischargeDamage1"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <ImpactLocation Value="SourcePoint"/>
+        <Amount value="1"/>
+        <Death value="Fire"/>
+        <AreaArray Arc="39.9902" Radius="11" Fraction="1"/>
+        <SearchFilters value="Structure;Player,Enemy,Missile,Stasis,Dead,Invulnerable"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+        <SearchFlags index="OffsetAreaByAngle" value="1"/>
+        <SearchFlags index="SameCliff" value="0"/>
+    </CEffectDamage>
+    <CEffectSet id="FuelDischargeSet1Test">
+        <EditorCategories value=""/>
+        <EffectArray value="FuelDischargeDamageTest"/>
+        <EffectArray value="FuelDischargeTDTest"/>
+        <TargetLocationType value="Point"/>
+    </CEffectSet>
+    <CEffectSet id="FuelDischargeSet2Test">
+        <EditorCategories value=""/>
+        <EffectArray value="FuelDischargeDamageTest"/>
+        <EffectArray value="FuelDischargeSATest"/>
+        <EffectArray value="FuelDischargeTDTest"/>
+        <TargetLocationType value="Point"/>
+    </CEffectSet>
+    <CEffectDamage id="FuelDischargeDamageTest">
+        <EditorCategories value="Race:Terran"/>
+        <Marker Link="Effect/FuelDischargeDamage1"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <ImpactLocation Value="SourcePoint"/>
+        <AttributeFactor index="Armored" value="0.3"/>
+        <AttributeFactor index="Mechanical" value="-0.2"/>
+        <AttributeFactor index="Heroic" value="-0.35"/>
+        <AttributeFactor index="Summoned" value="-0.25"/>
+        <Amount value="450"/>
+        <Death value="Fire"/>
+        <AreaArray Arc="39.9902" Radius="11" Fraction="1"/>
+        <SearchFilters value="-;Player,Ally,Neutral,Missile,Stasis,Dead,Invulnerable"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+        <SearchFlags index="OffsetAreaByAngle" value="1"/>
+        <SearchFlags index="SameCliff" value="0"/>
+    </CEffectDamage>
+    <CEffectApplyForce id="FuelDischargeAFTest">
+        <EditorCategories value="Race:Terran"/>
+        <ValidatorArray value="CasterIsNotHidden"/>
+        <Amount value="6"/>
+        <TimeScaleSource Value="Target"/>
+    </CEffectApplyForce>
+    <CEffectCreatePersistent id="FuelDischargeCPTest">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="TargetUnitOrPoint"/>
+        <OffsetVectorStartLocation Value="SourceUnitOrPoint"/>
+        <OffsetVectorEndLocation Value="SourceUnitOrPoint"/>
+        <OffsetFacingFallback Value="SourceUnitOrPoint"/>
+        <PeriodCount value="10"/>
+        <PeriodicEffectArray value="FuelDischargeAFTest"/>
+        <PeriodicPeriodArray value="0.05"/>
+    </CEffectCreatePersistent>
+    <CEffectEnumArea id="FuelDischargeSATest">
+        <EditorCategories value="Race:Terran"/>
+        <AreaArray Arc="39.9792" Radius="11" Effect="FuelDischargeCPTest"/>
+        <LaunchLocation Value="SourceUnitOrPoint"/>
+        <ImpactLocation Value="SourceUnitOrPoint"/>
+        <ExcludeArray Value="Source"/>
+        <SearchFilters value="Ground,Biological,Visible;Player,Ally,Neutral,Air,Massive,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectEnumArea>
+    <CAbilEffectTarget id="FuelDischargeTest">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="FuelDischargeSet1Test"/>
+        <Effect value="FuelDischargeSet1Test"/>
+        <Effect value="FuelDischargeSet2Test"/>
+        <Effect value="FuelDischargeSet2Test"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Resource index="Terrazine" value="20"/>
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <HideCount value="1"/>
+                <Location value="Unit"/>
+                <TimeStart value="0.5"/>
+                <TimeUse value="30"/>
+            </Charge>
+            <Cooldown Location="Unit" TimeStart="0.5" TimeUse="3"/>
+        </Cost>
+        <Cost>
+            <Resource index="Terrazine" value="30"/>
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <HideCount value="1"/>
+                <Location value="Unit"/>
+                <TimeStart value="0.5"/>
+                <TimeUse value="26"/>
+            </Charge>
+            <Cooldown Location="Unit" TimeStart="0.5" TimeUse="3"/>
+        </Cost>
+        <Cost>
+            <Resource index="Terrazine" value="40"/>
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Location value="Unit"/>
+                <TimeStart value="0.5"/>
+                <TimeUse value="24"/>
+            </Charge>
+            <Cooldown Location="Unit" TimeStart="0.5" TimeUse="3"/>
+        </Cost>
+        <Cost>
+            <Resource index="Terrazine" value="50"/>
+            <Charge>
+                <CountMax value="2"/>
+                <CountStart value="2"/>
+                <CountUse value="1"/>
+                <Location value="Unit"/>
+                <TimeStart value="0.5"/>
+                <TimeUse value="22"/>
+            </Charge>
+            <Cooldown Location="Unit" TimeStart="0.5" TimeUse="3"/>
+        </Cost>
+        <Range value="10"/>
+        <CastOutroTime value="0.3"/>
+        <UninterruptibleArray index="Finish" value="1"/>
+        <ValidatedArray index="Finish" value="1"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="FuelDischargeTest"/>
+    </CAbilEffectTarget>
+    <CButton id="FuelDischargeTest">
+        <Icon value="Assets\Textures\btn-tips-walloffire.dds"/>
+        <AlertIcon value="Assets\Textures\btn-tips-walloffire.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CUpgrade id="FuelDischarge1Test">
+        <EffectArray Operation="Set" Reference="Effect,FuelDischargeDamageTest,Amount" Value="600"/>
+        <EditorCategories value="Race:Terran,UpgradeType:SpellResearch"/>
+        <TechAliasArray value="Fuel Discharge"/>
+    </CUpgrade>
+    <CUpgrade id="FuelDischarge2Test">
+        <EffectArray Operation="Set" Reference="Effect,FuelDischargeDamageTest,Amount" Value="700"/>
+        <EditorCategories value="Race:Terran,UpgradeType:SpellResearch"/>
+        <TechAliasArray value="Fuel Discharge"/>
+    </CUpgrade>
+    <CUpgrade id="FuelDischarge3Test">
+        <EffectArray Operation="Set" Reference="Effect,FuelDischargeDamageTest,Amount" Value="800"/>
+        <EditorCategories value="Race:Terran,UpgradeType:SpellResearch"/>
+        <TechAliasArray value="Fuel Discharge"/>
+    </CUpgrade>
+</Catalog>

@@ -1,0 +1,1479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CEffectRemoveBehavior id="ChargeCost">
+        <EditorCategories value=""/>
+        <WhichUnit Value="Caster"/>
+        <BehaviorLink value="ChargesReadied"/>
+        <Count value="1"/>
+    </CEffectRemoveBehavior>
+    <CEffectSet id="ChargeSet2">
+        <EditorCategories value=""/>
+        <EffectArray value="ChargeCost"/>
+        <EffectArray value="ExplosiveChargePlace"/>
+    </CEffectSet>
+    <CEffectEnumArea id="DetonateSatchelSA">
+        <EditorCategories value=""/>
+        <ImpactLocation Value="SourceUnit"/>
+        <ExcludeArray/>
+        <SearchFilters value="-;Ally,Neutral,Enemy"/>
+        <AreaArray Radius="25" Effect="DetonateSatchels"/>
+    </CEffectEnumArea>
+    <CEffectRemoveBehavior id="DetonateSatchels">
+        <EditorCategories value=""/>
+        <BehaviorLink value="SatchelCharge"/>
+    </CEffectRemoveBehavior>
+    <CEffectDamage id="FuelBurn">
+        <EditorCategories value=""/>
+        <Amount value="1"/>
+        <Death value="Fire"/>
+    </CEffectDamage>
+    <CEffectDamage id="SatchelChargeExplosion">
+        <EditorCategories value="Race:Terran"/>
+        <Marker Link="Effect/ExplosiveChargeDamage"/>
+        <Amount value="1000"/>
+        <Random value="400"/>
+        <Death value="Blast"/>
+        <AreaArray Radius="3" Fraction="1"/>
+        <AreaArray Radius="4.5" Fraction="0.5"/>
+        <SearchFilters value="-;Missile,Stasis,Dead,Invulnerable"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+        <SearchFlags index="OffsetAreaByAngle" value="1"/>
+    </CEffectDamage>
+    <CEffectIssueOrder id="NoSatchelIO">
+        <EditorCategories value=""/>
+        <WhichUnit Value="Caster"/>
+        <Abil value="SatchelChargeReady"/>
+        <AbilCmdIndex value="1"/>
+    </CEffectIssueOrder>
+    <CEffectSwitch id="PlaceCharge">
+        <ValidatorArray value="ChargesReadied"/>
+        <EditorCategories value=""/>
+        <CaseArray Validator="UnknownValidator" Effect="ChargeSet2"/>
+        <CaseArray Validator="FuelBombReady" Effect="FuelBombSet"/>
+        <CaseArray Validator="SatchelChargeReady" Effect="SatchelChargeSet"/>
+        <TargetLocationType value="Point"/>
+    </CEffectSwitch>
+    <CEffectCreateUnit id="PlaceSatchelCharge">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="TargetPoint"/>
+        <SpawnEffect value="AddWhizKidApplyToAbility"/>
+        <SpawnUnit value="SatchelCharge2"/>
+        <SpawnRange value="0"/>
+    </CEffectCreateUnit>
+    <CEffectApplyBehavior id="ReadyExplosiveCharge">
+        <EditorCategories value=""/>
+        <WhichUnit Value="Caster"/>
+        <Behavior value="ChargesReadied"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="ReadyExplosiveCharge2">
+        <EditorCategories value=""/>
+        <WhichUnit Value="Caster"/>
+        <Behavior value="ChargesReadied"/>
+        <Count value="2"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="ReadyExplosiveCharge3">
+        <EditorCategories value=""/>
+        <WhichUnit Value="Caster"/>
+        <Behavior value="ChargesReadied"/>
+        <Count value="3"/>
+    </CEffectApplyBehavior>
+    <CEffectSet id="SatchelChargeSet">
+        <EditorCategories value=""/>
+        <EffectArray value="ChargeCost"/>
+        <EffectArray value="PlaceSatchelCharge"/>
+    </CEffectSet>
+    <CEffectLaunchMissile id="RepulsionShot1LM">
+        <ValidatorArray index="0" removed="1"/>
+        <EditorCategories value=""/>
+        <ImpactLocation Value="TargetPoint"/>
+        <ImpactOffset value="0.4,0,0"/>
+        <ImpactEffect value="RepulsionShot"/>
+        <AmmoUnit value="40mmGrenade2"/>
+    </CEffectLaunchMissile>
+    <CEffectSet id="BioSpecialistSet" parent="MOSSet">
+        <Name value="Effect/Name/BioSpecialistSet"/>
+        <EffectArray index="0" value="EquipMedicChemicals"/>
+        <EffectArray index="1" value="EquipStandardVisionVisor"/>
+        <EffectArray index="2" value="EquipWaistPack"/>
+        <EffectArray index="3" value="EquipBackPack"/>
+        <EffectArray index="4" value="EquipPlasmaRifle"/>
+    </CEffectSet>
+    <CAbilSpecialize id="BioSpecialistSubAbilities">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InfoArray index="Specialize1" Effect="BioSpecialistWeaponsHold">
+            <Button DefaultButtonFace="HoldFire3" Requirements="BioSpecialistWeaponsHold"/>
+        </InfoArray>
+        <InfoArray index="Specialize2" Effect="BioSpecialistDummyEffect">
+            <Cooldown TimeUse="5"/>
+            <Button DefaultButtonFace="Reload"/>
+        </InfoArray>
+        <InfoArray index="Specialize3" Effect="BioSpecialistWeaponsHoldOff">
+            <Button DefaultButtonFace="HoldFireOff2" Requirements="BioSpecialistWeaponsHoldOff"/>
+        </InfoArray>
+        <InfoArray index="Specialize4" Effect="BioSpecialistDummyEffect">
+            <Cooldown TimeUse="1.5"/>
+            <Button DefaultButtonFace="DropMagazine"/>
+        </InfoArray>
+        <MaxCount value="10"/>
+    </CAbilSpecialize>
+    <CAbilEffectTarget id="ParalysisTrap">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <InfoTooltipPriority value="21"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="60"/>
+            <Cooldown TimeUse="20"/>
+        </Cost>
+        <Placeholder value="ParalysisTrap"/>
+        <Range value="1.5"/>
+        <ErrorAlert value="Error"/>
+        <CursorEffect value="ParalysisTrapDamage"/>
+        <AINotifyEffect value=""/>
+        <ProducedUnitArray value="ParalysisTrap"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="ParalysisTrap" Requirements="JavelinSkills4M"/>
+        <PlaceUnit value="ParalysisTrap"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="RepulsionShot1">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="RepulsionShot1LM"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Vital index="Energy" value="60"/>
+            <Charge Link="Abil/RepulsionShot1LM"/>
+            <Cooldown Link="Abil/RepulsionShot1LM" TimeUse="30"/>
+        </Cost>
+        <InterruptCost>
+            <Charge Link="Abil/RepulsionShot1LM"/>
+            <Cooldown Link="Abil/RepulsionShot1LM"/>
+        </InterruptCost>
+        <Range value="35"/>
+        <CursorEffect value="RepulsionShotEnum"/>
+        <AINotifyEffect value="PlasmaMGLJashan"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="RepulsionShot1" Requirements="RepulsionSkillsShot"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="FragGrenade2">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="FragGrenade1LaunchMissile"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Display index="Energy" value="1"/>
+            <Vital index="Energy" value="85"/>
+            <Charge HideCount="1" Location="Unit"/>
+            <Cooldown Location="Unit" TimeUse="35"/>
+        </Cost>
+        <Range value="12"/>
+        <PrepTime value="0.15"/>
+        <CursorEffect value="FragGrenadeDamage1"/>
+        <AINotifyEffect value="FragGrenadeLevel1"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="FragGrenade2" Requirements="ExplosivesExpert1"/>
+    </CAbilEffectTarget>
+    <CAbilEffectInstant id="BioResonatorSkills">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BioResonantorSkills"/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="GeneticSkills">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Geneticskills" Requirements="LearnGeneticSkills"/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="MutilationSkills">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MutilationSkills"/>
+    </CAbilEffectInstant>
+    <CAbilLearn id="LearnAbilitiesBioSpecialist" parent="LearnAbilityMOS">
+        <Name value="Abil/Name/LearnAbilitiesBioSpecialist"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InfoArray index="Learn1" Abil="SpecialistSkills">
+            <Button DefaultButtonFace="SpecialistSkills" Requirements=""/>
+        </InfoArray>
+        <InfoArray index="Learn2" Abil="BioResonatorSkills">
+            <Button DefaultButtonFace="BioResonantorSkills" Requirements=""/>
+        </InfoArray>
+        <InfoArray index="Learn3" Abil="MutilationSkills">
+            <Charge CountMax="100" CountStart="100"/>
+            <Button DefaultButtonFace="MutilationSkills" Requirements="LearnMutilationSkills"/>
+        </InfoArray>
+        <InfoArray index="Learn4" Abil="GeneticSkills">
+            <Charge CountMax="100" CountStart="100"/>
+            <Button DefaultButtonFace="Geneticskills" Requirements="LearnGeneticSkills"/>
+        </InfoArray>
+        <InfoArray index="Learn5" Abil="RepulsionSkills">
+            <Charge CountMax="100" CountStart="100"/>
+            <Button DefaultButtonFace="RepulsionSkills" Requirements="LearnRepulsionSkills"/>
+        </InfoArray>
+        <InfoArray index="Learn6" Abil="SafeguardSkills">
+            <Charge CountMax="100" CountStart="100"/>
+            <Button DefaultButtonFace="SafeguardSkills" Requirements="LearnSafeguardSkills"/>
+        </InfoArray>
+    </CAbilLearn>
+    <CAbilEffectInstant id="RepulsionSkills">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="RepulsionSkills"/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="SafeguardSkills">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SafeguardSkills"/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="SpecialistSkills">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SpecialistSkills"/>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="ExplosivesExpert">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" removed="1"/>
+        <Flags index="AbortOnAllianceChange" value="0"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Flags index="Transient" value="1"/>
+        <Cost/>
+        <Cost/>
+        <Cost/>
+        <Cost/>
+        <Marker Link="Abil/SoldierSkills"/>
+        <AINotifyEffect value=""/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="ExplosivesExpert"/>
+    </CAbilEffectInstant>
+    <CRequirement id="SpecialistSkills04Standalone">
+        <NodeArray index="Use" Link="GTE314683293CountAbilSpecialistSkillsCompleteOnlyAtUnitTechTreeCheat4"/>
+    </CRequirement>
+    <CRequirement id="SpecialistSkills01">
+        <NodeArray index="Use" Link="Eq3371703760CountAbilSpecialistSkillsCompleteOnlyAtUnitTechTreeCheat1"/>
+        <NodeArray index="Show" Link="LTE3371703760CountAbilSpecialistSkillsCompleteOnlyAtUnitTechTreeCheat1"/>
+    </CRequirement>
+    <CRequirement id="SpecialistSkills02">
+        <NodeArray index="Use" Link="Eq1937639915CountAbilSpecialistSkillsCompleteOnlyAtUnitTechTreeCheat2"/>
+        <NodeArray index="Show" Link="Eq1937639915CountAbilSpecialistSkillsCompleteOnlyAtUnitTechTreeCheat2"/>
+    </CRequirement>
+    <CRequirement id="SpecialistSkills03">
+        <NodeArray index="Use" Link="Eq3707492776CountAbilSpecialistSkillsCompleteOnlyAtUnitTechTreeCheat3"/>
+        <NodeArray index="Show" Link="Eq3707492776CountAbilSpecialistSkillsCompleteOnlyAtUnitTechTreeCheat3"/>
+    </CRequirement>
+    <CRequirement id="SpecialistSkills04">
+        <NodeArray index="Use" Link="Eq314683293CountAbilSpecialistSkillsCompleteOnlyAtUnitTechTreeCheat4"/>
+        <NodeArray index="Show" Link="GTE314683293CountAbilSpecialistSkillsCompleteOnlyAtUnitTechTreeCheat4"/>
+    </CRequirement>
+    <CButton id="SpecialistSkillsLevel1">
+        <Icon value="Assets\Textures\talent-kerrigan-level15-energyregeneration.dds"/>
+    </CButton>
+    <CButton id="SpecialistSkillsLevel2">
+        <Icon value="Assets\Textures\talent-kerrigan-level15-energyregeneration.dds"/>
+    </CButton>
+    <CButton id="SpecialistSkillsLevel3">
+        <Icon value="Assets\Textures\talent-kerrigan-level15-energyregeneration.dds"/>
+    </CButton>
+    <CButton id="RepulsionShot1">
+        <Icon value="Assets\Textures\btn-ability-neutral-ursadonleap.dds"/>
+    </CButton>
+    <CButton id="SpecialistSkillsLevel4">
+        <Icon value="Assets\Textures\talent-kerrigan-level15-energyregeneration.dds"/>
+    </CButton>
+    <CButton id="BioResonantorSkills">
+        <Icon value="Assets\Textures\wireframe-zerg-pickupbiomass.dds"/>
+    </CButton>
+    <CButton id="Geneticskills">
+        <Icon value="Assets\Textures\btn-ability-zerg-rapidregeneration-color.dds"/>
+    </CButton>
+    <CButton id="MutilationSkills">
+        <Icon value="Assets\Textures\btn-ability-kerrigan-wildmutation.dds"/>
+    </CButton>
+    <CButton id="RepulsionSkills">
+        <Icon value="Assets\Textures\btn-upgrade-terran-nova-specialordance.dds"/>
+    </CButton>
+    <CButton id="SafeguardSkills">
+        <Icon value="Assets\Textures\btn-upgrade-protoss-adeptshieldupgrade.dds"/>
+    </CButton>
+    <CButton id="SpecialistSkills">
+        <Icon value="Assets\Textures\talent-kerrigan-level15-energyregeneration.dds"/>
+    </CButton>
+    <CRequirementGTE id="GTE314683293CountAbilSpecialistSkillsCompleteOnlyAtUnitTechTreeCheat4">
+        <OperandArray index="0" value="CountAbilSpecialistSkillsCompleteOnlyAtUnitTechTreeCheat"/>
+        <OperandArray index="1" value="4"/>
+    </CRequirementGTE>
+    <CRequirementLTE id="LTE3371703760CountAbilSpecialistSkillsCompleteOnlyAtUnitTechTreeCheat1">
+        <OperandArray index="0" value="CountAbilSpecialistSkillsCompleteOnlyAtUnitTechTreeCheat"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLTE>
+    <CRequirementEq id="Eq1937639915CountAbilSpecialistSkillsCompleteOnlyAtUnitTechTreeCheat2">
+        <OperandArray index="0" value="CountAbilSpecialistSkillsCompleteOnlyAtUnitTechTreeCheat"/>
+        <OperandArray index="1" value="2"/>
+    </CRequirementEq>
+    <CRequirementEq id="Eq314683293CountAbilSpecialistSkillsCompleteOnlyAtUnitTechTreeCheat4">
+        <OperandArray index="0" value="CountAbilSpecialistSkillsCompleteOnlyAtUnitTechTreeCheat"/>
+        <OperandArray index="1" value="4"/>
+    </CRequirementEq>
+    <CRequirementEq id="Eq3371703760CountAbilSpecialistSkillsCompleteOnlyAtUnitTechTreeCheat1">
+        <OperandArray index="0" value="CountAbilSpecialistSkillsCompleteOnlyAtUnitTechTreeCheat"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementEq>
+    <CRequirementEq id="Eq3707492776CountAbilSpecialistSkillsCompleteOnlyAtUnitTechTreeCheat3">
+        <OperandArray index="0" value="CountAbilSpecialistSkillsCompleteOnlyAtUnitTechTreeCheat"/>
+        <OperandArray index="1" value="3"/>
+    </CRequirementEq>
+    <CRequirementCountAbil id="CountAbilSpecialistSkillsCompleteOnlyAtUnitTechTreeCheat">
+        <Count Link="SpecialistSkills" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountAbil>
+    <CActorUnit id="BioSpecialist2" parent="UnitTemplateActor" unitName="BioSpecialist2">
+        <EditorCategories value=""/>
+        <DeathArray index="Normal" SoundLink="Stetmann_Death"/>
+        <PortraitModel value="StetmannPortrait"/>
+        <HeroIcon value="Assets\Textures\stetmann_portrait_static.dds"/>
+        <HighlightTooltip value="Unit/Name/Bogus"/>
+        <SoundArray index="Ready" value="Stetmann_Ready"/>
+        <SoundArray index="Help" value="Stetmann_Help"/>
+        <SoundArray index="What" value="Stetmann_What"/>
+        <SoundArray index="Yes" value="Stetmann_Yes"/>
+        <SoundArray index="Attack" value="Stetmann_Attack"/>
+        <SoundArray index="Pissed" value="Stetmann_Pissed"/>
+        <UnitIcon value="Assets\Textures\stetmann_portrait_static.dds"/>
+    </CActorUnit>
+    <CActorUnit id="ForceRecon" parent="UnitTemplateActor" unitName="ForceRecon">
+        <EditorCategories value=""/>
+        <EventDataFootprint index="0" Actor="UnitFootprint" Model="CavalryScoutFootprint"/>
+        <DeathArray index="Normal" SoundLink="Marine_Death"/>
+        <PortraitModel value="DiamondbackPortrait"/>
+        <AbilSoundArray index="0" AbilCmd="" Sound=""/>
+        <HeroIcon value="Buttons\Portraits\BTNCavalryScout.dds"/>
+        <SoundArray index="Birth" value="Diamondback_Birth"/>
+        <SoundArray index="Ready" value="Diamondback_Ready"/>
+        <SoundArray index="Help" value="Diamondback_Help"/>
+        <SoundArray index="What" value="Diamondback_What"/>
+        <SoundArray index="Yes" value="Diamondback_Yes"/>
+        <SoundArray index="Attack" value="Diamondback_Attack"/>
+        <SoundArray index="Pissed" value="Diamondback_Pissed"/>
+        <SoundArray index="Movement" value=""/>
+        <SoundArray index="Turning" value="Diamondback_Turning"/>
+        <SoundArray index="Board" value="Diamondback_Board"/>
+        <SoundArray index="Click" value="Diamondback_Click"/>
+        <SoundArray index="ClickError" value="Diamondback_ClickError"/>
+        <SoundArray index="Highlight" value="Diamondback_Highlight"/>
+        <UnitIcon value="Buttons\Portraits\BTNCavalryScout.dds"/>
+    </CActorUnit>
+    <CActorUnit id="BioSpecialist" parent="UnitTemplateActor" unitName="BioSpecialist">
+        <EditorCategories value=""/>
+        <PortraitModel value="StetmannPortrait"/>
+        <HeroIcon value="Assets\Textures\stetmann_portrait_static.dds"/>
+        <SoundArray index="Ready" value="Stetmann_Ready"/>
+        <SoundArray index="Help" value="Stetmann_Help"/>
+        <SoundArray index="What" value="Stetmann_What"/>
+        <SoundArray index="Yes" value="Stetmann_Yes"/>
+        <SoundArray index="Attack" value="Stetmann_Attack"/>
+        <SoundArray index="Pissed" value="Stetmann_Pissed"/>
+        <UnitIcon value="Assets\Textures\stetmann_portrait_static.dds"/>
+        <DeathArray index="Normal" SoundLink="Stetmann_Death"/>
+        <HighlightTooltip value="Unit/Name/Bogus"/>
+        <On Terms="Abil.NanoBoost.SourceCastStart" Send="AnimBaselineStop"/>
+        <On Terms="Abil.NanoBoost.SourceCastStart" Send="AnimPlay Attack Attack"/>
+        <On Terms="Abil.NanoBoost.SourceCastStop" Send="AnimClear Attack"/>
+        <On Terms="Abil.NanoBoost.SourceCastStop" Send="AnimBaselineStart"/>
+        <On Terms="Abil.NanoBoost.SourceChannelStart" Send="AnimPlay Attack Attack PlayForever"/>
+        <On Terms="Abil.NanoBoost.SourceChannelStop" Send="AnimClear Attack"/>
+        <On Terms="Abil.NanoBoost.SourceFinishStart" Send="AnimPlay Attack Attack"/>
+        <On Terms="UnitMovementUpdate.*.Walk; AnimPlaying Attack" Send="AnimClear Attack"/>
+        <On Terms="Abil.ImprovedNanoBoost.SourceCastStart" Send="AnimBaselineStop"/>
+        <On Terms="Abil.ImprovedNanoBoost.SourceCastStart" Send="AnimPlay Attack Attack"/>
+        <On Terms="Abil.ImprovedNanoBoost.SourceCastStop" Send="AnimClear Attack"/>
+        <On Terms="Abil.ImprovedNanoBoost.SourceCastStop" Send="AnimBaselineStart"/>
+        <On Terms="Abil.ImprovedNanoBoost.SourceChannelStart" Send="AnimPlay Attack Attack PlayForever"/>
+        <On Terms="Abil.ImprovedNanoBoost.SourceChannelStop" Send="AnimClear Attack"/>
+        <On Terms="Abil.ImprovedNanoBoost.SourceFinishStart" Send="AnimPlay Attack Attack"/>
+        <On Terms="Abil.ParalysisShot.SourceCastStart" Send="AnimBaselineStop"/>
+        <On Terms="Abil.ParalysisShot.SourceCastStart" Send="AnimPlay Attack Attack"/>
+        <On Terms="Abil.ParalysisShot.SourceCastStop" Send="AnimClear Attack"/>
+        <On Terms="Abil.ParalysisShot.SourceCastStop" Send="AnimBaselineStart"/>
+        <On Terms="Abil.ParalysisShot.SourceChannelStart" Send="AnimPlay Attack Attack PlayForever"/>
+        <On Terms="Abil.ParalysisShot.SourceChannelStop" Send="AnimClear Attack"/>
+        <On Terms="Abil.ParalysisShot.SourceFinishStart" Send="AnimPlay Attack Attack"/>
+        <On Terms="Abil.Deteriorate.SourceCastStart" Send="AnimBaselineStop"/>
+        <On Terms="Abil.Deteriorate.SourceCastStart" Send="AnimPlay Attack Attack"/>
+        <On Terms="Abil.Deteriorate.SourceCastStop" Send="AnimClear Attack"/>
+        <On Terms="Abil.Deteriorate.SourceCastStop" Send="AnimBaselineStart"/>
+        <On Terms="Abil.Deteriorate.SourceChannelStart" Send="AnimPlay Attack Attack PlayForever"/>
+        <On Terms="Abil.Deteriorate.SourceChannelStop" Send="AnimClear Attack"/>
+        <On Terms="Abil.Deteriorate.SourceFinishStart" Send="AnimPlay Attack Attack"/>
+        <On Terms="Abil.ImprovedParalysisShot.SourceCastStart" Send="AnimBaselineStop"/>
+        <On Terms="Abil.ImprovedParalysisShot.SourceCastStart" Send="AnimPlay Attack Attack"/>
+        <On Terms="Abil.ImprovedParalysisShot.SourceChannelStart" Send="AnimPlay Attack Attack PlayForever"/>
+        <On Terms="Abil.ImprovedParalysisShot.SourceChannelStop" Send="AnimClear Attack"/>
+        <On Terms="Abil.ImprovedParalysisShot.SourceFinishStart" Send="AnimPlay Attack Attack"/>
+        <On Terms="Abil.IrradiateBioSpecialist.SourceCastStart" Send="AnimBaselineStop"/>
+        <On Terms="Abil.IrradiateBioSpecialist.SourceCastStart" Send="AnimPlay Attack Attack"/>
+        <On Terms="Abil.IrradiateBioSpecialist.SourceChannelStart" Send="AnimPlay Attack Attack PlayForever"/>
+        <On Terms="Abil.IrradiateBioSpecialist.SourceChannelStop" Send="AnimClear Attack"/>
+        <On Terms="Abil.IrradiateBioSpecialist.SourceFinishStart" Send="AnimPlay Attack Attack"/>
+        <On Terms="Abil.ImprovedIrradiateBioSpecialist.SourceCastStart" Send="AnimBaselineStop"/>
+        <On Terms="Abil.ImprovedIrradiateBioSpecialist.SourceCastStart" Send="AnimPlay Attack Attack"/>
+        <On Terms="Abil.ImprovedIrradiateBioSpecialist.SourceChannelStart" Send="AnimPlay Attack Attack PlayForever"/>
+        <On Terms="Abil.ImprovedIrradiateBioSpecialist.SourceChannelStop" Send="AnimClear Attack"/>
+        <On Terms="Abil.ImprovedIrradiateBioSpecialist.SourceFinishStart" Send="AnimPlay Attack Attack"/>
+        <On Terms="Abil.ImprovedParalysisShot.SourceCastStop" Send="AnimClear Attack"/>
+        <On Terms="Abil.ImprovedParalysisShot.SourceCastStop" Send="AnimBaselineStart"/>
+        <On Terms="Abil.IrradiateBioSpecialist.SourceCastStop" Send="AnimClear Attack"/>
+        <On Terms="Abil.ImprovedIrradiateBioSpecialist.SourceCastStop" Send="AnimClear Attack"/>
+        <On Terms="Abil.IrradiateBioSpecialist.SourceCastStop" Send="AnimBaselineStart"/>
+        <On Terms="Abil.ImprovedIrradiateBioSpecialist.SourceCastStop" Send="AnimBaselineStart"/>
+    </CActorUnit>
+    <CUnit default="1" id="UnitTemplateClassic" parent="UnitTemplate">
+        <?token id="UnitTemplateClassicWeapon"?>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="Prone"/>
+        <AbilArray Link="DropMagazine"/>
+        <AbilArray Link="ReloadHero"/>
+        <AbilArray Link="ImmediateRemedialAction"/>
+        <AbilArray Link="Sprint"/>
+        <AbilArray Link="Jump"/>
+        <AbilArray Link="WeaponsHold2"/>
+        <BehaviorArray Link="HeroLevels"/>
+        <BehaviorArray Link="Fitness"/>
+        <BehaviorArray Link="Dexterity"/>
+        <BehaviorArray Link="Mechanical"/>
+        <BehaviorArray Link="StartingStats"/>
+        <WeaponArray index="0" Link="##UnitTemplateClassicWeapon##"/>
+        <CardLayouts>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="AdditionalActions" Type="Submenu" SubmenuCardId="0003" Row="1" Column="3"/>
+            <LayoutButtons Face="LearnAbilities" Type="Submenu" SubmenuCardId="0002" Row="1" Column="4"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="2"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="3"/>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="1"/>
+        </CardLayouts>
+        <CardLayouts CardId="0002">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+        </CardLayouts>
+        <CardLayouts CardId="0003">
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="Reload" Type="AbilCmd" AbilCmd="ReloadHero,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="ImmediateRemedialAction" Type="AbilCmd" AbilCmd="ImmediateRemedialAction,Execute" Row="0" Column="2"/>
+            <LayoutButtons Face="DropMagazine" Type="AbilCmd" AbilCmd="DropMagazine,Execute" Row="0" Column="3"/>
+            <LayoutButtons Face="HoldFire3" Type="AbilCmd" AbilCmd="WeaponsHold2,On" Row="1" Column="3"/>
+            <LayoutButtons Face="HoldFireOff2" Type="AbilCmd" AbilCmd="WeaponsHold2,Off" Row="1" Column="3"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="Prone" Type="AbilCmd" AbilCmd="Prone,Execute" Row="1" Column="2"/>
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+        </CardLayouts>
+        <Radius value="0.375"/>
+        <SeparationRadius value="0.375"/>
+        <DeadInnerRadius value="0"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="15"/>
+        <ReviveInfoBase>
+            <Charge Link="Marine/Revive"/>
+            <Cooldown Link="Marine/Revive"/>
+        </ReviveInfoBase>
+    </CUnit>
+    <CUnit default="1" id="UnitTemplateCustom" parent="UnitTemplate">
+        <?token id="UnitTemplateCustomWeapon"?>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="Prone"/>
+        <AbilArray Link="DropMagazine"/>
+        <AbilArray Link="ReloadHero"/>
+        <AbilArray Link="ImmediateRemedialAction"/>
+        <AbilArray Link="Sprint"/>
+        <AbilArray Link="Jump"/>
+        <AbilArray Link="WeaponsHold2"/>
+        <BehaviorArray Link="HeroLevels"/>
+        <BehaviorArray Link="Fitness"/>
+        <BehaviorArray Link="Dexterity"/>
+        <BehaviorArray Link="Mechanical"/>
+        <BehaviorArray Link="StartingStats"/>
+        <WeaponArray index="0" Link="##UnitTemplateCustomWeapon##"/>
+        <CardLayouts>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="2"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="3"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="AdditionalActions" Type="Submenu" SubmenuCardId="0003" Row="1" Column="3"/>
+            <LayoutButtons Face="LearnAbilities" Type="Submenu" SubmenuCardId="0002" Row="1" Column="4"/>
+        </CardLayouts>
+        <CardLayouts CardId="0002">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+        </CardLayouts>
+        <CardLayouts CardId="0003">
+            <LayoutButtons Face="Reload" Type="AbilCmd" AbilCmd="ReloadHero,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="DropMagazine" Type="AbilCmd" AbilCmd="DropMagazine,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="ImmediateRemedialAction" Type="AbilCmd" AbilCmd="ImmediateRemedialAction,Execute" Row="0" Column="2"/>
+            <LayoutButtons Face="Prone" Type="AbilCmd" AbilCmd="Prone,Execute" Row="0" Column="3"/>
+            <LayoutButtons Face="HoldFire3" Type="AbilCmd" AbilCmd="WeaponsHold2,On" Row="1" Column="3"/>
+            <LayoutButtons Face="HoldFireOff2" Type="AbilCmd" AbilCmd="WeaponsHold2,Off" Row="1" Column="3"/>
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+        </CardLayouts>
+        <Radius value="0.375"/>
+        <SeparationRadius value="0.375"/>
+        <DeadInnerRadius value="0"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="15"/>
+        <ReviveInfoBase>
+            <Charge Link="Marine/Revive"/>
+            <Cooldown Link="Marine/Revive"/>
+        </ReviveInfoBase>
+    </CUnit>
+    <CUnit id="CyborgTest" parent="UnitTemplate">
+        <Description value="Button/Tooltip/18OCyborgTest"/>
+        <Race value="Terr"/>
+        <Attributes index="Light" value="0"/>
+        <Attributes index="Mechanical" value="1"/>
+        <LifeStart value="445"/>
+        <LifeMax value="445"/>
+        <LifeArmorDisplayFlags index="CollapseBuffed" value="0"/>
+        <LifeRegenRate value="0.25"/>
+        <LifeArmorName value="Unit/LifeArmorName/M247CastraferrumPattern"/>
+        <Speed value="3"/>
+        <SpeedDisplayFlags index="CollapseBuffed" value="0"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="50"/>
+        <RepairTime value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="HeroInventoryPlasma"/>
+        <AbilArray Link="LearnAbilitiesCyborgTest"/>
+        <AbilArray Link="ReloadHero"/>
+        <AbilArray Link="DropMagazine"/>
+        <AbilArray Link="Jump"/>
+        <AbilArray Link="Prone"/>
+        <AbilArray Link="WeaponsHold2"/>
+        <BehaviorArray Link="HeroLevels"/>
+        <BehaviorArray Link="Fitness"/>
+        <BehaviorArray Link="Dexterity"/>
+        <BehaviorArray Link="Mechanical"/>
+        <BehaviorArray Link="StartingStats"/>
+        <WeaponArray index="0" Link="PlasmaRifle"/>
+        <EffectArray index="Birth" value="EquipCyborgSet"/>
+        <EffectArray index="Revive" value="EquipCyborgSet"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons>
+                <Face value="LearnAbilities"/>
+                <Type value="Submenu"/>
+                <SubmenuAbilState value="LearnAbilitiesCyborg"/>
+                <SubmenuCardId value="0002"/>
+                <Row value="1"/>
+                <Column value="4"/>
+            </LayoutButtons>
+            <LayoutButtons Face="AdditionalActions" Type="Submenu" SubmenuCardId="0003" Row="1" Column="3"/>
+        </CardLayouts>
+        <CardLayouts CardId="0002">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+        </CardLayouts>
+        <CardLayouts CardId="0003">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="Prone" Type="AbilCmd" AbilCmd="Prone,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="Reload" Type="AbilCmd" AbilCmd="ReloadHero,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="ImmediateRemedialAction" Type="AbilCmd" AbilCmd="ImmediateRemedialAction,Execute" Row="0" Column="2"/>
+            <LayoutButtons Face="DropMagazine" Type="AbilCmd" AbilCmd="DropMagazine,Execute" Row="0" Column="3"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="RifleButt" Type="Passive" Requirements="StrengthPassive2" Row="2" Column="0"/>
+            <LayoutButtons Face="HoldFire3" Type="AbilCmd" AbilCmd="WeaponsHold2,On" Row="1" Column="3"/>
+            <LayoutButtons Face="HoldFireOff2" Type="AbilCmd" AbilCmd="WeaponsHold2,Off" Row="1" Column="3"/>
+        </CardLayouts>
+        <Radius value="0.375"/>
+        <SeparationRadius value="0.375"/>
+        <DeadInnerRadius value="0"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="15"/>
+        <EditorCategories value="ObjectType:Hero,ObjectFamily:Melee"/>
+        <TacticalAI value="Marine"/>
+        <HotkeyAlias value="Marine"/>
+        <SelectAlias value="Cyborg"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="21"/>
+        <HotkeyCategory value="Unit/Category/TerranUnits"/>
+        <AIEvaluateAlias value="Marine"/>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
+        <ReviveInfoBase>
+            <Charge Link="Marine/Revive"/>
+            <Cooldown Link="Marine/Revive"/>
+        </ReviveInfoBase>
+    </CUnit>
+    <CUnit id="Assaultman2" UnitTemplateClassicWeapon="">
+        <DeathTime value="-1"/>
+        <DeathRevealRadius value="3"/>
+        <DeathRevealDuration value="-1"/>
+        <DeathRevealType value="Vision"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="Hero" value="1"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <Attributes index="Heroic" value="1"/>
+        <LifeStart value="420"/>
+        <LifeMax value="420"/>
+        <LifeArmor value="1"/>
+        <EnergyStart value="190"/>
+        <EnergyMax value="190"/>
+        <EnergyRegenRate value="1.4492"/>
+        <Speed value="2.914"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="46.0625"/>
+        <StationaryTurningRate value="999.8437"/>
+        <TurningRate value="999.8437"/>
+        <Sight value="15"/>
+        <Food value="-1"/>
+        <AttackTargetPriority value="20"/>
+        <KillXP value="100"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="Prone"/>
+        <AbilArray Link="DropMagazine"/>
+        <AbilArray Link="ReloadHero"/>
+        <AbilArray Link="ImmediateRemedialAction"/>
+        <AbilArray Link="Sprint"/>
+        <AbilArray Link="Jump"/>
+        <AbilArray Link="WeaponsHold2"/>
+        <AbilArray Link="LearnAssaultmanSkills"/>
+        <AbilArray Link="AssaultmanSkills"/>
+        <AbilArray Link="DisarmAM"/>
+        <AbilArray Link="HeroInventoryRifle"/>
+        <AbilArray Link="Marksmanship"/>
+        <AbilArray Link="SoldierSkills"/>
+        <AbilArray Link="M32GrenadeLauncher"/>
+        <AbilArray Link="PerformSelfAid"/>
+        <AbilArray Link="SatchelChargeReady"/>
+        <AbilArray Link="PlaceCharge"/>
+        <AbilArray Link="PrepareExplosiveCharge"/>
+        <AbilArray Link="Detonator"/>
+        <AbilArray Link="FiremodeCarbine"/>
+        <BehaviorArray Link="HeroLevels"/>
+        <BehaviorArray Link="Fitness"/>
+        <BehaviorArray Link="Dexterity"/>
+        <BehaviorArray Link="Mechanical"/>
+        <BehaviorArray Link="StartingStats"/>
+        <BehaviorArray Link="SoldierSkills4"/>
+        <BehaviorArray Link="SoldierSkills3"/>
+        <BehaviorArray Link="SoldierSkills2"/>
+        <BehaviorArray Link="SoldierSkills1"/>
+        <BehaviorArray Link="AssaultmanSkills5"/>
+        <BehaviorArray Link="AssaultmanSkills4"/>
+        <BehaviorArray Link="AssaultmanSkills3"/>
+        <BehaviorArray Link="AssaultmanSkills2"/>
+        <BehaviorArray Link="AssaultmanSkills1"/>
+        <BehaviorArray Link="RifleButt"/>
+        <WeaponArray Link="Carbine"/>
+        <WeaponArray/>
+        <EffectArray index="Birth" value="EquipJavelinGunnerSet2"/>
+        <EffectArray index="Revive" value="EquipJavelinGunnerSet2"/>
+        <CardLayouts>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="AdditionalActions" Type="Submenu" SubmenuCardId="0003" Row="1" Column="3"/>
+            <LayoutButtons>
+                <Face value="LearnAbilities"/>
+                <Type value="Submenu"/>
+                <SubmenuAbilState value="LearnAssaultmanSkills"/>
+                <SubmenuCardId value="0002"/>
+                <Row value="1"/>
+                <Column value="4"/>
+            </LayoutButtons>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="2"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="AssaultmanSkills" Type="Passive" Requirements="AssaultmanSkills1M" Row="1" Column="2"/>
+            <LayoutButtons Face="M32GrenadeLauncher2" Type="AbilCmd" AbilCmd="M32GrenadeLauncher,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="PlaceCharge" Type="AbilCmd" AbilCmd="PlaceCharge,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="Detonator" Type="AbilCmd" AbilCmd="Detonator,Execute" Row="1" Column="0"/>
+            <LayoutButtons Face="PrepareExplosiveCharges" Type="AbilCmd" AbilCmd="PrepareExplosiveCharge,Execute" Row="1" Column="1"/>
+            <LayoutButtons Face="ReadyExplosiveCharge2" Type="AbilCmd" AbilCmd="SatchelChargeReady,Off" Row="2" Column="2"/>
+            <LayoutButtons Face="ReadySatchelCharges" Type="AbilCmd" AbilCmd="SatchelChargeReady,On" Row="2" Column="2"/>
+            <LayoutButtons Face="FiremodeBurst3" Type="AbilCmd" AbilCmd="FiremodeCarbine,On" Row="0" Column="3"/>
+            <LayoutButtons Face="FiremodeSemi3" Type="AbilCmd" AbilCmd="FiremodeCarbine,Off" Row="0" Column="3"/>
+        </CardLayouts>
+        <CardLayouts CardId="0002">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="LearnSoldierSkills" Type="AbilCmd" AbilCmd="LearnAssaultmanSkills,Learn1" Row="0" Column="0"/>
+            <LayoutButtons Face="M32GrenadeLauncher2" Type="AbilCmd" AbilCmd="LearnAssaultmanSkills,Learn2" Row="0" Column="1"/>
+            <LayoutButtons Face="AssaultmanSkills" Type="AbilCmd" AbilCmd="LearnAssaultmanSkills,Learn3" Row="0" Column="3"/>
+            <LayoutButtons Face="PrepareExplosiveCharges" Type="AbilCmd" AbilCmd="LearnAssaultmanSkills,Learn4" Row="0" Column="2"/>
+        </CardLayouts>
+        <CardLayouts CardId="0003">
+            <LayoutButtons Face="Reload" Type="AbilCmd" AbilCmd="ReloadHero,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="ImmediateRemedialAction" Type="AbilCmd" AbilCmd="ImmediateRemedialAction,Execute" Row="0" Column="2"/>
+            <LayoutButtons Face="DropMagazine" Type="AbilCmd" AbilCmd="DropMagazine,Execute" Row="0" Column="3"/>
+            <LayoutButtons Face="HoldFire3" Type="AbilCmd" AbilCmd="WeaponsHold2,On" Row="1" Column="3"/>
+            <LayoutButtons Face="HoldFireOff2" Type="AbilCmd" AbilCmd="WeaponsHold2,Off" Row="1" Column="3"/>
+            <LayoutButtons Face="RifleButt" Type="Passive" Requirements="RifleButt" Row="0" Column="4"/>
+            <LayoutButtons Face="Prone" Type="AbilCmd" AbilCmd="Prone,Execute" Row="1" Column="2"/>
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="Disarm" Type="AbilCmd" AbilCmd="DisarmAM,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="PerformSelfAid" Type="AbilCmd" AbilCmd="PerformSelfAid,Execute" Row="0" Column="0"/>
+        </CardLayouts>
+        <Radius value="0.375"/>
+        <SeparationRadius value="0.375"/>
+        <InnerRadius value="0.375"/>
+        <CargoSize value="1"/>
+        <ScoreMake value="50"/>
+        <ScoreKill value="100"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="15"/>
+        <MinimapRadius value="0.375"/>
+        <EditorCategories value="ObjectType:Hero,ObjectFamily:Melee"/>
+        <TacticalAI value="Assaultman"/>
+        <Item value="8SlotBag"/>
+        <LeaderAlias value="Assaultman"/>
+        <SelectAlias value="Marine2"/>
+        <SubgroupAlias value="Assaultman"/>
+        <HotkeyCategory value="Hotkey/Catagory/MOSCustom"/>
+        <KillDisplay value="Always"/>
+        <AIEvaluateAlias value="Assaultman"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="33"/>
+            <ChanceArray index="Idle" value="33"/>
+            <ChanceArray index="Turn" value="33"/>
+        </Fidget>
+        <ReviveInfoBase>
+            <Charge Link="Marine/Revive"/>
+            <Cooldown Link="Marine/Revive"/>
+        </ReviveInfoBase>
+        <Description value="Button/Tooltip/Assaultman"/>
+        <Race value="Terr"/>
+    </CUnit>
+    <CUnit id="Assaultman" parent="UnitTemplateClassic">
+        <Race value="Terr"/>
+        <AbilArray Link="LearnAssaultmanSkills"/>
+        <AbilArray Link="AssaultmanSkills"/>
+        <AbilArray Link="DisarmAM"/>
+        <AbilArray Link="HeroInventoryRifle"/>
+        <AbilArray Link="Marksmanship"/>
+        <AbilArray Link="SoldierSkills"/>
+        <AbilArray Link="M32GrenadeLauncher"/>
+        <AbilArray Link="PerformSelfAid"/>
+        <AbilArray Link="SatchelChargeReady"/>
+        <AbilArray Link="PlaceCharge"/>
+        <AbilArray Link="PrepareExplosiveCharge"/>
+        <AbilArray Link="Detonator"/>
+        <AbilArray Link="FiremodeCarbine"/>
+        <BehaviorArray Link="SoldierSkills4"/>
+        <BehaviorArray Link="SoldierSkills3"/>
+        <BehaviorArray Link="SoldierSkills2"/>
+        <BehaviorArray Link="SoldierSkills1"/>
+        <BehaviorArray Link="AssaultmanSkills5"/>
+        <BehaviorArray Link="AssaultmanSkills4"/>
+        <BehaviorArray Link="AssaultmanSkills3"/>
+        <BehaviorArray Link="AssaultmanSkills2"/>
+        <BehaviorArray Link="AssaultmanSkills1"/>
+        <BehaviorArray Link="RifleButt"/>
+        <WeaponArray index="0" Link="Carbine"/>
+        <WeaponArray/>
+        <EffectArray index="Birth" value="EquipJavelinGunnerSet2"/>
+        <EffectArray index="Revive" value="EquipJavelinGunnerSet2"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="2">
+                <Face value="LearnAbilities"/>
+                <Type value="Submenu"/>
+                <SubmenuAbilState value="LearnAssaultmanSkills"/>
+                <SubmenuCardId value="0002"/>
+                <Row value="1"/>
+                <Column value="4"/>
+            </LayoutButtons>
+            <LayoutButtons index="5" Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="0"/>
+            <LayoutButtons index="6" Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="AssaultmanSkills" Type="Passive" Requirements="AssaultmanSkills1M" Row="1" Column="2"/>
+            <LayoutButtons Face="M32GrenadeLauncher2" Type="AbilCmd" AbilCmd="M32GrenadeLauncher,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="Detonator" Type="AbilCmd" AbilCmd="Detonator,Execute" Row="1" Column="0"/>
+            <LayoutButtons Face="PrepareExplosiveCharges" Type="AbilCmd" AbilCmd="PrepareExplosiveCharge,Execute" Row="1" Column="1"/>
+            <LayoutButtons Face="PlaceCharge" Type="AbilCmd" AbilCmd="PlaceCharge,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="ReadyExplosiveCharge2" Type="AbilCmd" AbilCmd="SatchelChargeReady,Off" Row="2" Column="2"/>
+            <LayoutButtons Face="ReadySatchelCharges" Type="AbilCmd" AbilCmd="SatchelChargeReady,On" Row="2" Column="2"/>
+        </CardLayouts>
+        <CardLayouts index="1" CardId="0002">
+            <LayoutButtons Face="LearnSoldierSkills" Type="AbilCmd" AbilCmd="LearnAssaultmanSkills,Learn1" Row="0" Column="0"/>
+            <LayoutButtons Face="M32GrenadeLauncher2" Type="AbilCmd" AbilCmd="LearnAssaultmanSkills,Learn2" Row="0" Column="1"/>
+            <LayoutButtons Face="AssaultmanSkills" Type="AbilCmd" AbilCmd="LearnAssaultmanSkills,Learn3" Row="0" Column="3"/>
+            <LayoutButtons Face="PrepareExplosiveCharges" Type="AbilCmd" AbilCmd="LearnAssaultmanSkills,Learn4" Row="0" Column="2"/>
+        </CardLayouts>
+        <CardLayouts index="2" CardId="0003">
+            <LayoutButtons index="0" Face="Reload" Type="AbilCmd" AbilCmd="ReloadHero,Execute" Row="0" Column="1"/>
+            <LayoutButtons index="1" Face="ImmediateRemedialAction" Type="AbilCmd" AbilCmd="ImmediateRemedialAction,Execute" Row="0" Column="2"/>
+            <LayoutButtons index="2" Face="DropMagazine" Type="AbilCmd" AbilCmd="DropMagazine,Execute" Row="0" Column="3"/>
+            <LayoutButtons index="3" Face="HoldFire3" Type="AbilCmd" AbilCmd="WeaponsHold2,On" Row="1" Column="3"/>
+            <LayoutButtons index="4" Face="HoldFireOff2" Type="AbilCmd" AbilCmd="WeaponsHold2,Off" Row="1" Column="3"/>
+            <LayoutButtons index="5">
+                <Face value="RifleButt"/>
+                <Type value="Passive"/>
+                <AbilCmd value=""/>
+                <Requirements value="RifleButt"/>
+                <Row value="0"/>
+                <Column value="4"/>
+            </LayoutButtons>
+            <LayoutButtons index="6" Face="Prone" Type="AbilCmd" AbilCmd="Prone,Execute" Row="1" Column="2"/>
+            <LayoutButtons index="7" Face="Cancel" Type="CancelSubmenu" AbilCmd="" Row="2" Column="4"/>
+            <LayoutButtons index="8" Face="Disarm" Type="AbilCmd" AbilCmd="DisarmAM,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="PerformSelfAid" Type="AbilCmd" AbilCmd="PerformSelfAid,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="FiremodeBurst" Type="AbilCmd" AbilCmd="FiremodeCarbine,On" Row="1" Column="0"/>
+            <LayoutButtons Face="FiremodeSemi" Type="AbilCmd" AbilCmd="FiremodeCarbine,Off" Row="1" Column="0"/>
+        </CardLayouts>
+        <EditorCategories value="ObjectType:Hero,ObjectFamily:Melee"/>
+        <LifeArmorDisplayFlags index="CollapseBuffed" value="0"/>
+        <SpeedDisplayFlags index="CollapseBuffed" value="0"/>
+        <HotkeyCategory value="Hotkey/Catagory/MOSClassic"/>
+        <Attributes index="Light" value="0"/>
+    </CUnit>
+    <CUnit id="BioSpecialist2" parent="UnitTemplateCustom">
+        <Race value="Terr"/>
+        <AbilArray index="2" Link="Prone"/>
+        <AbilArray index="3" Link="Sprint"/>
+        <AbilArray index="4" Link="Jump"/>
+        <AbilArray index="5" Link="BioSpecialistSubAbilities"/>
+        <AbilArray index="6" Link="LearnAbilitiesBioSpecialist"/>
+        <AbilArray index="7" Link="SpecialistSkills"/>
+        <AbilArray index="8" Link="MutilationSkills"/>
+        <AbilArray index="9" Link="RepulsionSkills"/>
+        <AbilArray Link="SafeguardSkills"/>
+        <AbilArray Link="GeneticSkills"/>
+        <AbilArray Link="RepulsionShot1"/>
+        <AbilArray Link="PlaceBioStasis"/>
+        <AbilArray Link="HeroInventoryPlasma"/>
+        <AbilArray Link="ImprovedRepulsionShot"/>
+        <AbilArray Link="PlaceImprovedBioStasis"/>
+        <AbilArray Link="HasteMGL"/>
+        <AbilArray Link="ImprovedHasteMGL"/>
+        <AbilArray Link="NanoBoost"/>
+        <AbilArray Link="ImprovedNanoBoost"/>
+        <AbilArray Link="RegeneratingMutation"/>
+        <AbilArray Link="ImprovedRegeneratingMutation"/>
+        <AbilArray Link="PlasmicShielding"/>
+        <AbilArray Link="ImprovedPlasmicShielding"/>
+        <AbilArray Link="IrradiateBioSpecialist"/>
+        <AbilArray Link="ImprovedIrradiateBioSpecialist"/>
+        <AbilArray Link="ParalysisShot"/>
+        <AbilArray Link="ImprovedParalysisShot"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="Deteriorate"/>
+        <AbilArray Link="BinocularsBioSpecialist"/>
+        <BehaviorArray index="4" Link="SpecialistSkills1"/>
+        <BehaviorArray Link="SpecialistSkills2"/>
+        <BehaviorArray Link="SpecialistSkills3"/>
+        <BehaviorArray Link="SpecialistSkills4"/>
+        <BehaviorArray Link="BackupGenerator"/>
+        <BehaviorArray Link="GeneticSkills1"/>
+        <BehaviorArray Link="GeneticSkills2"/>
+        <BehaviorArray Link="GeneticSkills3"/>
+        <BehaviorArray Link="GeneticSkills4"/>
+        <BehaviorArray Link="RepulsionSkills1"/>
+        <BehaviorArray Link="RepulsionSkills2"/>
+        <BehaviorArray Link="RepulsionSkills3"/>
+        <BehaviorArray Link="RepulsionSkills4"/>
+        <BehaviorArray Link="SafeguardSkills1"/>
+        <BehaviorArray Link="SafeguardSkills2"/>
+        <BehaviorArray Link="SafeguardSkills3"/>
+        <BehaviorArray Link="SafeguardSkills4"/>
+        <BehaviorArray Link="MutilationSkills1"/>
+        <BehaviorArray Link="MutilationSkills2"/>
+        <BehaviorArray Link="MutilationSkills3"/>
+        <BehaviorArray Link="MutilationSkills4"/>
+        <BehaviorArray Link="MutilationSkills5"/>
+        <BehaviorArray Link="StartingStats"/>
+        <WeaponArray index="0" Link="PlasmaRifle"/>
+        <EffectArray index="Birth" value="BioSpecialistSet"/>
+        <EffectArray index="Revive" value="BioSpecialistSet"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="0" Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons index="1">
+                <Face value="AdditionalActions"/>
+                <Type value="Submenu"/>
+                <AbilCmd value=""/>
+                <SubmenuCardId value="0003"/>
+                <Row value="1"/>
+                <Column value="3"/>
+            </LayoutButtons>
+            <LayoutButtons index="2">
+                <Face value="LearnAbilities"/>
+                <Type value="Submenu"/>
+                <AbilCmd value=""/>
+                <SubmenuAbilState value="LearnAbilitiesBioSpecialist"/>
+                <SubmenuCardId value="0002"/>
+                <Row value="1"/>
+                <Column value="4"/>
+            </LayoutButtons>
+            <LayoutButtons index="3" Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="2"/>
+            <LayoutButtons index="4" Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="3"/>
+            <LayoutButtons index="5">
+                <Face value="NanoBoost"/>
+                <Type value="AbilCmd"/>
+                <AbilCmd value="NanoBoost,Execute"/>
+                <SubmenuCardId value=""/>
+                <Row value="2"/>
+                <Column value="2"/>
+            </LayoutButtons>
+            <LayoutButtons index="6">
+                <Face value="Jump"/>
+                <Type value="AbilCmd"/>
+                <AbilCmd value="Jump,Execute"/>
+                <SubmenuCardId value=""/>
+                <Row value="0"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons Face="PlaceBioStasis" Type="AbilCmd" AbilCmd="PlaceBioStasis,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="PlaceImprovedBioStasis" Type="AbilCmd" AbilCmd="PlaceImprovedBioStasis,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="ImprovedNanoBoost" Type="AbilCmd" AbilCmd="ImprovedNanoBoost,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="ImprovedHasteMGL" Type="AbilCmd" AbilCmd="ImprovedHasteMGL,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="RepulsionShot1" Type="AbilCmd" AbilCmd="RepulsionShot1,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="ImprovedRepulsionShot" Type="AbilCmd" AbilCmd="ImprovedRepulsionShot,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="HasteMGL" Type="AbilCmd" AbilCmd="HasteMGL,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="RegeneratingMutation" Type="AbilCmd" AbilCmd="RegeneratingMutation,Execute" Row="1" Column="1"/>
+            <LayoutButtons Face="IrradiateBioSpecialist" Type="AbilCmd" AbilCmd="IrradiateBioSpecialist,Execute" Row="1" Column="1"/>
+            <LayoutButtons Face="ImprovedIrradiate" Type="AbilCmd" AbilCmd="ImprovedIrradiateBioSpecialist,Execute" Row="1" Column="1"/>
+            <LayoutButtons Face="ImprovedRegeneratingMutation" Type="AbilCmd" AbilCmd="ImprovedRegeneratingMutation,Execute" Row="1" Column="1"/>
+            <LayoutButtons Face="PlasmicShielding" Type="AbilCmd" AbilCmd="PlasmicShielding,Execute" Row="1" Column="2"/>
+            <LayoutButtons Face="ParalysisShot" Type="AbilCmd" AbilCmd="ParalysisShot,Execute" Row="1" Column="2"/>
+            <LayoutButtons Face="ImprovedParalysisShot" Type="AbilCmd" AbilCmd="ImprovedParalysisShot,Execute" Row="1" Column="2"/>
+            <LayoutButtons Face="ImprovedPlasmicShielding" Type="AbilCmd" AbilCmd="ImprovedPlasmicShielding,Execute" Row="1" Column="2"/>
+            <LayoutButtons Face="Deteriorate" Type="AbilCmd" AbilCmd="Deteriorate,Execute" Row="1" Column="0"/>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="BinocularsBioSpec" Type="AbilCmd" AbilCmd="BinocularsBioSpecialist,Execute" Row="2" Column="0"/>
+        </CardLayouts>
+        <CardLayouts index="1" CardId="0002">
+            <LayoutButtons Face="SpecialistSkills" Type="AbilCmd" AbilCmd="LearnAbilitiesBioSpecialist,Learn1" Row="0" Column="0"/>
+            <LayoutButtons Face="Geneticskills" Type="AbilCmd" AbilCmd="LearnAbilitiesBioSpecialist,Learn4" Row="0" Column="1"/>
+            <LayoutButtons Face="SafeguardSkills" Type="AbilCmd" AbilCmd="LearnAbilitiesBioSpecialist,Learn6" Row="0" Column="2"/>
+            <LayoutButtons Face="BioResonantorSkills" Type="AbilCmd" AbilCmd="LearnAbilitiesBioSpecialist,Learn2" Row="0" Column="4"/>
+            <LayoutButtons Face="RepulsionSkills" Type="AbilCmd" AbilCmd="LearnAbilitiesBioSpecialist,Learn5" Row="1" Column="1"/>
+            <LayoutButtons Face="MutilationSkills" Type="AbilCmd" AbilCmd="LearnAbilitiesBioSpecialist,Learn3" Row="1" Column="2"/>
+        </CardLayouts>
+        <CardLayouts index="2" CardId="0003">
+            <LayoutButtons index="0" Face="Reload" Type="AbilCmd" AbilCmd="BioSpecialistSubAbilities,Specialize2" Row="0" Column="1"/>
+            <LayoutButtons index="1" Face="DropMagazine" Type="AbilCmd" AbilCmd="BioSpecialistSubAbilities,Specialize4" Row="0" Column="3"/>
+            <LayoutButtons index="2" Face="HoldFire3" Type="AbilCmd" AbilCmd="BioSpecialistSubAbilities,Specialize1" Row="1" Column="3"/>
+            <LayoutButtons index="3" Face="Prone" Type="AbilCmd" AbilCmd="Prone,Execute" Row="1" Column="2"/>
+            <LayoutButtons index="4" Face="Cancel" Type="CancelSubmenu" AbilCmd="" Row="2" Column="4"/>
+            <LayoutButtons index="5" Face="HoldFireOff2" Type="AbilCmd" AbilCmd="BioSpecialistSubAbilities,Specialize3" Row="1" Column="3"/>
+            <LayoutButtons index="6">
+                <Face value="BackupGenerator"/>
+                <Type value="Passive"/>
+                <Behavior value="BackupGenerator"/>
+                <Requirements value="SpecialistSkills04Standalone"/>
+                <Row value="1"/>
+                <Column value="4"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SpecialistSkillsLevel1"/>
+                <Type value="Passive"/>
+                <Behavior value="SpecialistSkills1"/>
+                <Requirements value="SpecialistSkills01"/>
+                <Row value="2"/>
+                <Column value="3"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SpecialistSkillsLevel2"/>
+                <Type value="Passive"/>
+                <Behavior value="SpecialistSkills2"/>
+                <Requirements value="SpecialistSkills02"/>
+                <Row value="2"/>
+                <Column value="3"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SpecialistSkillsLevel3"/>
+                <Type value="Passive"/>
+                <Behavior value="SpecialistSkills3"/>
+                <Requirements value="SpecialistSkills03"/>
+                <Row value="2"/>
+                <Column value="3"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SpecialistSkillsLevel4"/>
+                <Type value="Passive"/>
+                <Behavior value="SpecialistSkills4"/>
+                <Requirements value="SpecialistSkills04"/>
+                <Row value="2"/>
+                <Column value="3"/>
+            </LayoutButtons>
+        </CardLayouts>
+        <EditorCategories value="ObjectFamily:Melee,ObjectType:Hero"/>
+        <Attributes index="Light" value="0"/>
+    </CUnit>
+    <CUnit id="BioSpecialist" parent="UnitTemplateClassic">
+        <Race value="Terr"/>
+        <AbilArray index="2" Link="Prone"/>
+        <AbilArray index="3" Link="Sprint"/>
+        <AbilArray index="4" Link="Jump"/>
+        <AbilArray index="5" Link="BioSpecialistSubAbilities"/>
+        <AbilArray index="6" Link="LearnAbilitiesBioSpecialist"/>
+        <AbilArray index="7" Link="SpecialistSkills"/>
+        <AbilArray index="8" Link="MutilationSkills"/>
+        <AbilArray index="9" Link="RepulsionSkills"/>
+        <AbilArray Link="SafeguardSkills"/>
+        <AbilArray Link="GeneticSkills"/>
+        <AbilArray Link="RepulsionShot1"/>
+        <AbilArray Link="PlaceBioStasis"/>
+        <AbilArray Link="HeroInventoryPlasma"/>
+        <AbilArray Link="ImprovedRepulsionShot"/>
+        <AbilArray Link="PlaceImprovedBioStasis"/>
+        <AbilArray Link="HasteMGL"/>
+        <AbilArray Link="ImprovedHasteMGL"/>
+        <AbilArray Link="NanoBoost"/>
+        <AbilArray Link="ImprovedNanoBoost"/>
+        <AbilArray Link="RegeneratingMutation"/>
+        <AbilArray Link="ImprovedRegeneratingMutation"/>
+        <AbilArray Link="PlasmicShielding"/>
+        <AbilArray Link="ImprovedPlasmicShielding"/>
+        <AbilArray Link="IrradiateBioSpecialist"/>
+        <AbilArray Link="ImprovedIrradiateBioSpecialist"/>
+        <AbilArray Link="ParalysisShot"/>
+        <AbilArray Link="ImprovedParalysisShot"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="Deteriorate"/>
+        <AbilArray Link="BinocularsBioSpecialist"/>
+        <BehaviorArray index="4" Link="SpecialistSkills1"/>
+        <BehaviorArray Link="SpecialistSkills2"/>
+        <BehaviorArray Link="SpecialistSkills3"/>
+        <BehaviorArray Link="SpecialistSkills4"/>
+        <BehaviorArray Link="BackupGenerator"/>
+        <BehaviorArray Link="GeneticSkills1"/>
+        <BehaviorArray Link="GeneticSkills2"/>
+        <BehaviorArray Link="GeneticSkills3"/>
+        <BehaviorArray Link="GeneticSkills4"/>
+        <BehaviorArray Link="RepulsionSkills1"/>
+        <BehaviorArray Link="RepulsionSkills2"/>
+        <BehaviorArray Link="RepulsionSkills3"/>
+        <BehaviorArray Link="RepulsionSkills4"/>
+        <BehaviorArray Link="SafeguardSkills1"/>
+        <BehaviorArray Link="SafeguardSkills2"/>
+        <BehaviorArray Link="SafeguardSkills3"/>
+        <BehaviorArray Link="SafeguardSkills4"/>
+        <BehaviorArray Link="MutilationSkills1"/>
+        <BehaviorArray Link="MutilationSkills2"/>
+        <BehaviorArray Link="MutilationSkills3"/>
+        <BehaviorArray Link="MutilationSkills4"/>
+        <BehaviorArray Link="MutilationSkills5"/>
+        <BehaviorArray Link="StartingStats"/>
+        <WeaponArray index="0" Link="PlasmaRifle"/>
+        <EffectArray index="Birth" value="BioSpecialistSet"/>
+        <EffectArray index="Revive" value="BioSpecialistSet"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="2">
+                <Face value="LearnAbilities"/>
+                <Type value="Submenu"/>
+                <SubmenuAbilState value="LearnAbilitiesBioSpecialist"/>
+                <SubmenuCardId value="0002"/>
+                <Row value="1"/>
+                <Column value="4"/>
+            </LayoutButtons>
+            <LayoutButtons index="6" Face="NanoBoost" Type="AbilCmd" AbilCmd="NanoBoost,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="PlaceBioStasis" Type="AbilCmd" AbilCmd="PlaceBioStasis,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="PlaceImprovedBioStasis" Type="AbilCmd" AbilCmd="PlaceImprovedBioStasis,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="ImprovedNanoBoost" Type="AbilCmd" AbilCmd="ImprovedNanoBoost,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="ImprovedHasteMGL" Type="AbilCmd" AbilCmd="ImprovedHasteMGL,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="RepulsionShot1" Type="AbilCmd" AbilCmd="RepulsionShot1,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="ImprovedRepulsionShot" Type="AbilCmd" AbilCmd="ImprovedRepulsionShot,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="HasteMGL" Type="AbilCmd" AbilCmd="HasteMGL,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="RegeneratingMutation" Type="AbilCmd" AbilCmd="RegeneratingMutation,Execute" Row="1" Column="1"/>
+            <LayoutButtons Face="IrradiateBioSpecialist" Type="AbilCmd" AbilCmd="IrradiateBioSpecialist,Execute" Row="1" Column="1"/>
+            <LayoutButtons Face="ImprovedIrradiate" Type="AbilCmd" AbilCmd="ImprovedIrradiateBioSpecialist,Execute" Row="1" Column="1"/>
+            <LayoutButtons Face="ImprovedRegeneratingMutation" Type="AbilCmd" AbilCmd="ImprovedRegeneratingMutation,Execute" Row="1" Column="1"/>
+            <LayoutButtons Face="PlasmicShielding" Type="AbilCmd" AbilCmd="PlasmicShielding,Execute" Row="1" Column="2"/>
+            <LayoutButtons Face="ParalysisShot" Type="AbilCmd" AbilCmd="ParalysisShot,Execute" Row="1" Column="2"/>
+            <LayoutButtons Face="ImprovedParalysisShot" Type="AbilCmd" AbilCmd="ImprovedParalysisShot,Execute" Row="1" Column="2"/>
+            <LayoutButtons Face="ImprovedPlasmicShielding" Type="AbilCmd" AbilCmd="ImprovedPlasmicShielding,Execute" Row="1" Column="2"/>
+            <LayoutButtons Face="Deteriorate" Type="AbilCmd" AbilCmd="Deteriorate,Execute" Row="1" Column="0"/>
+            <LayoutButtons Face="BinocularsBioSpec" Type="AbilCmd" AbilCmd="BinocularsBioSpecialist,Execute" Row="2" Column="0"/>
+        </CardLayouts>
+        <CardLayouts index="1" CardId="0002">
+            <LayoutButtons Face="SpecialistSkills" Type="AbilCmd" AbilCmd="LearnAbilitiesBioSpecialist,Learn1" Row="0" Column="0"/>
+            <LayoutButtons Face="Geneticskills" Type="AbilCmd" AbilCmd="LearnAbilitiesBioSpecialist,Learn4" Row="0" Column="1"/>
+            <LayoutButtons Face="SafeguardSkills" Type="AbilCmd" AbilCmd="LearnAbilitiesBioSpecialist,Learn6" Row="0" Column="2"/>
+            <LayoutButtons Face="BioResonantorSkills" Type="AbilCmd" AbilCmd="LearnAbilitiesBioSpecialist,Learn2" Row="0" Column="4"/>
+            <LayoutButtons Face="RepulsionSkills" Type="AbilCmd" AbilCmd="LearnAbilitiesBioSpecialist,Learn5" Row="1" Column="1"/>
+            <LayoutButtons Face="MutilationSkills" Type="AbilCmd" AbilCmd="LearnAbilitiesBioSpecialist,Learn3" Row="1" Column="2"/>
+        </CardLayouts>
+        <CardLayouts index="2" CardId="0003">
+            <LayoutButtons index="1" Face="Reload" Type="AbilCmd" AbilCmd="BioSpecialistSubAbilities,Specialize2" Row="0" Column="1"/>
+            <LayoutButtons index="2" Face="DropMagazine" Type="AbilCmd" AbilCmd="BioSpecialistSubAbilities,Specialize4" Row="0" Column="3"/>
+            <LayoutButtons index="3" Face="HoldFire3" Type="AbilCmd" AbilCmd="BioSpecialistSubAbilities,Specialize1" Row="1" Column="3"/>
+            <LayoutButtons index="4" Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="4"/>
+            <LayoutButtons index="5" Face="Prone" Type="AbilCmd" AbilCmd="Prone,Execute" Row="1" Column="2"/>
+            <LayoutButtons index="6" Face="Cancel" Type="CancelSubmenu" AbilCmd="" Row="2" Column="4"/>
+            <LayoutButtons index="7">
+                <Face value="BackupGenerator"/>
+                <Type value="Passive"/>
+                <AbilCmd value=""/>
+                <Behavior value="BackupGenerator"/>
+                <Requirements value="SpecialistSkills04Standalone"/>
+                <Row value="1"/>
+                <Column value="4"/>
+            </LayoutButtons>
+            <LayoutButtons index="8">
+                <Face value="SpecialistSkillsLevel1"/>
+                <Type value="Passive"/>
+                <Behavior value="SpecialistSkills1"/>
+                <Requirements value="SpecialistSkills01"/>
+                <Row value="2"/>
+                <Column value="3"/>
+            </LayoutButtons>
+            <LayoutButtons Face="HoldFireOff2" Type="AbilCmd" AbilCmd="BioSpecialistSubAbilities,Specialize3" Row="1" Column="3"/>
+            <LayoutButtons>
+                <Face value="SpecialistSkillsLevel2"/>
+                <Type value="Passive"/>
+                <Behavior value="SpecialistSkills2"/>
+                <Requirements value="SpecialistSkills02"/>
+                <Row value="2"/>
+                <Column value="3"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SpecialistSkillsLevel3"/>
+                <Type value="Passive"/>
+                <Behavior value="SpecialistSkills3"/>
+                <Requirements value="SpecialistSkills03"/>
+                <Row value="2"/>
+                <Column value="3"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SpecialistSkillsLevel4"/>
+                <Type value="Passive"/>
+                <Behavior value="SpecialistSkills4"/>
+                <Requirements value="SpecialistSkills04"/>
+                <Row value="2"/>
+                <Column value="3"/>
+            </LayoutButtons>
+        </CardLayouts>
+        <HotkeyCategory value="Hotkey/Catagory/MOSClassic"/>
+        <Attributes index="Light" value="0"/>
+    </CUnit>
+    <CUnit id="Cyborg" parent="UnitTemplate">
+        <Description value="Button/Tooltip/18OCyborg"/>
+        <Race value="Terr"/>
+        <LifeStart value="445"/>
+        <LifeMax value="445"/>
+        <LifeArmorDisplayFlags index="CollapseBuffed" value="0"/>
+        <LifeRegenRate value="0.25"/>
+        <LifeArmorName value="Unit/LifeArmorName/LandWarriorSystemLight"/>
+        <Speed value="3"/>
+        <SpeedDisplayFlags index="CollapseBuffed" value="0"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="50"/>
+        <RepairTime value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="HeroInventoryNoWeapon"/>
+        <AbilArray Link="LearnAbilitiesCyborg"/>
+        <AbilArray Link="ReloadHero"/>
+        <AbilArray Link="ImmediateRemedialAction"/>
+        <AbilArray Link="DropMagazine"/>
+        <AbilArray Link="SuppressiveFire"/>
+        <AbilArray Link="Jump"/>
+        <AbilArray Link="Prone"/>
+        <AbilArray Link="ClusterRockets"/>
+        <AbilArray Link="CyborgCharge"/>
+        <AbilArray Link="StonewallProtocol"/>
+        <AbilArray Link="CyborgMeltdown"/>
+        <AbilArray Link="CyborgAgility"/>
+        <AbilArray Link="CyborgStrength"/>
+        <AbilArray Link="CyborgStealth"/>
+        <AbilArray Link="FieldCameraCyborg"/>
+        <AbilArray Link="FlareGunCyborg"/>
+        <AbilArray Link="WeaponsHold2"/>
+        <BehaviorArray Link="HeroLevels"/>
+        <BehaviorArray Link="Fitness"/>
+        <BehaviorArray Link="Dexterity"/>
+        <BehaviorArray Link="Mechanical"/>
+        <BehaviorArray Link="StartingStats"/>
+        <BehaviorArray Link="MGBurst"/>
+        <BehaviorArray Link="RifleButtCyborg"/>
+        <BehaviorArray Link="RifleButtCyborg2"/>
+        <BehaviorArray Link="RifleButtCyborgCharging"/>
+        <BehaviorArray Link="LightFilter2"/>
+        <BehaviorArray Link="PAgility1"/>
+        <BehaviorArray Link="PAgility2"/>
+        <BehaviorArray Link="PAgility3"/>
+        <BehaviorArray Link="PStealth1"/>
+        <BehaviorArray Link="PStealth2"/>
+        <BehaviorArray Link="PStealth3"/>
+        <BehaviorArray Link="PStrength1"/>
+        <BehaviorArray Link="PStrength2"/>
+        <BehaviorArray Link="PStrength3"/>
+        <BehaviorArray Link="Criticallvl12"/>
+        <BehaviorArray Link="Criticallvl22"/>
+        <BehaviorArray Link="CriticalSuppress112"/>
+        <BehaviorArray Link="CriticalSuppress122"/>
+        <BehaviorArray Link="CriticalSuppress132"/>
+        <BehaviorArray Link="CriticalSuppress142"/>
+        <BehaviorArray Link="CriticalSuppress212"/>
+        <BehaviorArray Link="CriticalSuppress222"/>
+        <BehaviorArray Link="CriticalSuppress232"/>
+        <BehaviorArray Link="CriticalSuppress242"/>
+        <WeaponArray index="0" Link="Mk47Mod0"/>
+        <EffectArray index="Birth" value="EquipCyborgSet"/>
+        <EffectArray index="Revive" value="EquipCyborgSet"/>
+        <CardLayouts>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="3"/>
+            <LayoutButtons>
+                <Face value="LearnAbilities"/>
+                <Type value="Submenu"/>
+                <SubmenuAbilState value="LearnAbilitiesCyborg"/>
+                <SubmenuCardId value="0002"/>
+                <Row value="1"/>
+                <Column value="4"/>
+            </LayoutButtons>
+            <LayoutButtons Face="ClusterRockets" Type="AbilCmd" AbilCmd="ClusterRockets,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="AdditionalActions" Type="Submenu" SubmenuCardId="0003" Row="1" Column="3"/>
+            <LayoutButtons Face="SuppressiveFireOff" Type="AbilCmd" AbilCmd="SuppressiveFire,Off" Row="2" Column="2"/>
+            <LayoutButtons Face="SuppressiveFire" Type="AbilCmd" AbilCmd="SuppressiveFire,On" Row="2" Column="2"/>
+            <LayoutButtons Face="Charge2" Type="AbilCmd" AbilCmd="CyborgCharge,On" Row="2" Column="1"/>
+            <LayoutButtons Face="StonewallProtocol" Type="AbilCmd" AbilCmd="StonewallProtocol,On" Row="2" Column="3"/>
+            <LayoutButtons Face="StonewallProtocolOff" Type="AbilCmd" AbilCmd="StonewallProtocol,Off" Row="2" Column="3"/>
+            <LayoutButtons Face="Meltdown" Type="AbilCmd" AbilCmd="CyborgMeltdown,On" Row="2" Column="4"/>
+            <LayoutButtons Face="MeltdownOff" Type="AbilCmd" AbilCmd="CyborgMeltdown,Off" Row="2" Column="4"/>
+            <LayoutButtons Face="Agility" Type="AbilCmd" AbilCmd="CyborgAgility,On" Row="1" Column="0"/>
+            <LayoutButtons Face="AgilityOff" Type="AbilCmd" AbilCmd="CyborgAgility,Off" Row="1" Column="0"/>
+            <LayoutButtons Face="Strength" Type="AbilCmd" AbilCmd="CyborgStrength,On" Row="1" Column="1"/>
+            <LayoutButtons Face="StrengthOff" Type="AbilCmd" AbilCmd="CyborgStrength,Off" Row="1" Column="1"/>
+            <LayoutButtons Face="Stealth" Type="AbilCmd" AbilCmd="CyborgStealth,On" Row="1" Column="2"/>
+            <LayoutButtons Face="StealthOff" Type="AbilCmd" AbilCmd="CyborgStealth,Off" Row="1" Column="2"/>
+        </CardLayouts>
+        <CardLayouts CardId="0002">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="ClusterRockets" Type="AbilCmd" AbilCmd="LearnAbilitiesCyborg,Learn1" Row="0" Column="4"/>
+            <LayoutButtons Face="SuppressiveFire" Type="AbilCmd" AbilCmd="LearnAbilitiesCyborg,Learn2" Row="0" Column="3"/>
+            <LayoutButtons Face="Agility" Type="AbilCmd" AbilCmd="LearnAbilitiesCyborg,Learn3" Row="0" Column="0"/>
+            <LayoutButtons Face="Strength" Type="AbilCmd" AbilCmd="LearnAbilitiesCyborg,Learn4" Row="0" Column="1"/>
+            <LayoutButtons Face="Stealth" Type="AbilCmd" AbilCmd="LearnAbilitiesCyborg,Learn5" Row="0" Column="2"/>
+        </CardLayouts>
+        <CardLayouts CardId="0003">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="Prone" Type="AbilCmd" AbilCmd="Prone,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="Reload" Type="AbilCmd" AbilCmd="ReloadHero,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="ImmediateRemedialAction" Type="AbilCmd" AbilCmd="ImmediateRemedialAction,Execute" Row="0" Column="2"/>
+            <LayoutButtons Face="DropMagazine" Type="AbilCmd" AbilCmd="DropMagazine,Execute" Row="0" Column="3"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="4"/>
+            <LayoutButtons>
+                <Face value="LightFilter"/>
+                <Type value="Passive"/>
+                <Behavior value="LightFilter2"/>
+                <Requirements value="StealthPassive2"/>
+                <Row value="1"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons Face="RifleButt" Type="Passive" Requirements="StrengthPassive2" Row="2" Column="0"/>
+            <LayoutButtons Face="FieldCameraSDM" Type="AbilCmd" AbilCmd="FieldCameraCyborg,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="FlareGunBorg" Type="AbilCmd" AbilCmd="FlareGunCyborg,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="HoldFire3" Type="AbilCmd" AbilCmd="WeaponsHold2,On" Row="1" Column="3"/>
+            <LayoutButtons Face="HoldFireOff2" Type="AbilCmd" AbilCmd="WeaponsHold2,Off" Row="1" Column="3"/>
+        </CardLayouts>
+        <Radius value="0.375"/>
+        <SeparationRadius value="0.375"/>
+        <DeadInnerRadius value="0"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="15"/>
+        <EditorCategories value="ObjectType:Hero,ObjectFamily:Melee"/>
+        <TacticalAI value="Marine"/>
+        <SelectAlias value="Cyborg"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="21"/>
+        <HotkeyCategory value="Hotkey/Catagory/MOSClassic"/>
+        <AIEvaluateAlias value="Marine"/>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
+        <ReviveInfoBase>
+            <Charge Link="Marine/Revive"/>
+            <Cooldown Link="Marine/Revive"/>
+        </ReviveInfoBase>
+        <Attributes index="Light" value="0"/>
+        <Attributes index="Mechanical" value="1"/>
+    </CUnit>
+    <CBehaviorBuff id="SpecialistSkills1">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <AttributeChangeArray Attribute="Mechanical" Points="2"/>
+            <DeathResponse>
+                <Cost>
+                    <Charge Link="Behavior/SpecialistSkills1"/>
+                    <Cooldown Link="Behavior/SpecialistSkills1"/>
+                </Cost>
+            </DeathResponse>
+        </Modification>
+        <Requirements value="SpecialistSkills01"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SpecialistSkills2">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <AttributeChangeArray Attribute="Mechanical" Points="4"/>
+            <DeathResponse>
+                <Cost>
+                    <Charge Link="Behavior/SpecialistSkills1"/>
+                    <Cooldown Link="Behavior/SpecialistSkills1"/>
+                </Cost>
+            </DeathResponse>
+        </Modification>
+        <Requirements value="SpecialistSkills02"/>
+        <Cost>
+            <Charge Link="Behavior/SpecialistSkills1"/>
+            <Cooldown Link="Behavior/SpecialistSkills1"/>
+        </Cost>
+        <DamageResponse>
+            <Cost>
+                <Charge Link="Behavior/SpecialistSkills1"/>
+                <Cooldown Link="Behavior/SpecialistSkills1"/>
+            </Cost>
+        </DamageResponse>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SpecialistSkills3">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <AttributeChangeArray Attribute="Mechanical" Points="10"/>
+            <DeathResponse>
+                <Cost>
+                    <Charge Link="Behavior/SpecialistSkills1"/>
+                    <Cooldown Link="Behavior/SpecialistSkills1"/>
+                </Cost>
+            </DeathResponse>
+        </Modification>
+        <Requirements value="SpecialistSkills03"/>
+        <Cost>
+            <Charge Link="Behavior/SpecialistSkills1"/>
+            <Cooldown Link="Behavior/SpecialistSkills1"/>
+        </Cost>
+        <DamageResponse>
+            <Cost>
+                <Charge Link="Behavior/SpecialistSkills1"/>
+                <Cooldown Link="Behavior/SpecialistSkills1"/>
+            </Cost>
+        </DamageResponse>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SpecialistSkills4">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <AttributeChangeArray Attribute="Mechanical" Points="12"/>
+            <DeathResponse>
+                <Cost>
+                    <Charge Link="Behavior/SpecialistSkills1"/>
+                    <Cooldown Link="Behavior/SpecialistSkills1"/>
+                </Cost>
+            </DeathResponse>
+        </Modification>
+        <Requirements value="SpecialistSkills04"/>
+        <Cost>
+            <Charge Link="Behavior/SpecialistSkills1"/>
+            <Cooldown Link="Behavior/SpecialistSkills1"/>
+        </Cost>
+        <DamageResponse>
+            <Cost>
+                <Charge Link="Behavior/SpecialistSkills1"/>
+                <Cooldown Link="Behavior/SpecialistSkills1"/>
+            </Cost>
+        </DamageResponse>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+</Catalog>

@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CEffectModifyUnit id="ISLaserDamage">
+        <EditorCategories value=""/>
+        <Marker>
+            <MatchFlags index="Link" value="1"/>
+        </Marker>
+        <ModifyFlags index="Hide" value="1"/>
+        <ModifyFlags index="NullifyMissile" value="1"/>
+    </CEffectModifyUnit>
+    <CEffectSet id="ISLaserInitialSet">
+        <EditorCategories value=""/>
+        <EffectArray value="ISLaserSearch"/>
+    </CEffectSet>
+    <CEffectEnumArea id="ISLaserSearch">
+        <EditorCategories value=""/>
+        <ImpactLocation Value="SourceUnit"/>
+        <SearchFilters value="Missile,Visible;Self,Player,Ally,Neutral,Stasis,Dead,Hidden,Invulnerable"/>
+        <AreaArray Radius="8" Effect="ISLaserSet"/>
+    </CEffectEnumArea>
+    <CEffectSet id="ISLaserSet">
+        <EditorCategories value=""/>
+        <EffectArray value="ISLaserDamage"/>
+    </CEffectSet>
+    <CRequirement id="DroneTechnology">
+        <NodeArray index="Use" Link="GTE2198021887CountUpgradeDroneTechnologyCompleteOnlyAtUnit1"/>
+        <NodeArray index="Show" Link="GTE2198021887CountUpgradeDroneTechnologyCompleteOnlyAtUnit0"/>
+    </CRequirement>
+    <CRequirementCountUpgrade id="CountUpgradeDroneTechnologyCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DroneTechnology" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountUpgrade>
+    <CRequirementGTE id="GTE2198021887CountUpgradeDroneTechnologyCompleteOnlyAtUnit0">
+        <OperandArray index="0" value="CountUpgradeDroneTechnologyCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementGTE>
+    <CRequirementGTE id="GTE2198021887CountUpgradeDroneTechnologyCompleteOnlyAtUnit1">
+        <OperandArray index="0" value="CountUpgradeDroneTechnologyCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementGTE>
+    <CActorBeamSimple id="ISLaserAttackBeam" parent="BeamSimpleAnimationStyleOneShot">
+        <Flags index="SuppressSaveLoad" value="0"/>
+        <EditorCategories value=""/>
+        <On index="0" Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death"/>
+        <On Terms="Effect.ISLaserDamage.Start; At Caster" Send="Create"/>
+        <On Terms="ActorCreation" Send="TimerSet 0.125000 Die"/>
+        <On Terms="TimerExpired; TimerName Die" Send="Destroy"/>
+        <Model value="PointDefenseDroneAttackBeam"/>
+        <HostLaunch Subject="_Selectable" Actor="Find"/>
+        <HostLaunchSiteOps Ops="SOpAttachCenter"/>
+        <HostImpact Subject="_Missile" Actor="Find"/>
+        <HostImpactSiteOps Ops="SOpAttachCenter"/>
+    </CActorBeamSimple>
+    <CActorSound id="ISLaserAttackImpactSound" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.ISLaserDamage.Start; At Caster" Send="Create"/>
+        <Host Subject="::Creator"/>
+        <Sound value="Raven_PointDefenseDroneAttackImpact"/>
+    </CActorSound>
+    <CActorSound id="ISLaserAttackLaunchSound" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.ISLaserDamage.Start; At Caster" Send="Create"/>
+        <Host Subject="PointDefenseDrone"/>
+        <Sound value="Raven_PointDefenseDroneAttackLaunch"/>
+    </CActorSound>
+    <CActorModel id="ISLaserBeamImpact" parent="ModelAnimationStyleContinuousUNIT">
+        <EditorCategories value=""/>
+        <On Terms="Effect.ISLaserDamage.Start; At Target" Send="Create"/>
+        <On Terms="ActorCreation" Send="TimerSet 0.125000 Die"/>
+        <On Terms="TimerExpired; TimerName Die" Send="Destroy"/>
+        <On Terms="ActorCreation" Send="$Death"/>
+        <On Terms="ActorOrphan" Send="Destroy"/>
+        <Host Subject="_Missile"/>
+        <Model value="PointDefenseBeamImpact"/>
+    </CActorModel>
+    <CActorUnit id="ISDrone" parent="GenericUnitStandard" unitName="ISDrone">
+        <Aliases value="_UnitMedium"/>
+        <EditorCategories value=""/>
+        <On index="0" Send="Create SoundEmitter Banshee_Ambience"/>
+        <On index="48" Terms="Abil.attack.ReadyStart" Send="AnimGroupApply Ready"/>
+        <On index="49" Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Attack Attack"/>
+        <On index="60" Terms="Behavior.PointDefenseReady.On" Send="AnimBracketStart Work Work,Start Work Work,End"/>
+        <On index="61" Terms="Behavior.PointDefenseReady.Off" Send="AnimBracketStop Work"/>
+        <On Terms="UnitPortrait.*.Configure; ValidateUnit Cloaked" Target="::PortraitGameSelf" Send="AnimBracketStart Visor Morph,Start Morph,Stand Morph,End Instant"/>
+        <On Terms="UnitPortrait.*.Configure; ValidateUnit NotCloaked" Target="::PortraitGameSelf" Send="AnimBracketStop Visor Instant"/>
+        <On Terms="Behavior.BansheeCloak.On" Send="StatusIncrement Cloaked"/>
+        <On Terms="Behavior.CloakFieldEffect.On" Send="StatusIncrement Cloaked"/>
+        <On Terms="Behavior.BansheeCloak.Off" Send="StatusDecrement Cloaked"/>
+        <On Terms="Behavior.CloakFieldEffect.Off" Send="StatusDecrement Cloaked"/>
+        <On Terms="Behavior.BansheeCloak.On; IsStatus Cloaked 1" Target="::PortraitGameSelf" Send="AnimBracketStart Visor Morph,Start Morph,Stand Morph,End"/>
+        <On Terms="Behavior.BansheeCloak.Off; IsStatus Cloaked 0" Target="::PortraitGameSelf" Send="AnimBracketStop Visor"/>
+        <On Terms="Behavior.CloakFieldEffect.On; IsStatus Cloaked 1" Target="::PortraitGameSelf" Send="AnimBracketStart Visor Morph,Start Morph,Stand Morph,End"/>
+        <On Terms="Behavior.CloakFieldEffect.Off; IsStatus Cloaked 0" Target="::PortraitGameSelf" Send="AnimBracketStop Visor"/>
+        <On Terms="Behavior.BansheeCloakCrossSpectrumDampeners.On" Target="::PortraitGameSelf" Send="AnimBracketStart Visor Morph,Start Morph,Stand Morph,End"/>
+        <On Terms="Behavior.BansheeCloakCrossSpectrumDampeners.Off" Target="::PortraitGameSelf" Send="AnimBracketStop Visor"/>
+        <On Terms="Behavior.BansheeCloakCrossSpectrumDampeners.On" Target="::PortraitGameSelf" Send="AnimBracketStart Visor Morph,Start Morph,Stand Morph,End"/>
+        <On Terms="Behavior.BansheeCloakCrossSpectrumDampeners.Off" Target="::PortraitGameSelf" Send="AnimBracketStop Visor"/>
+        <Model value="PointDefenseDrone"/>
+        <Scale value="0.300000"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <EventDataFootprint index="0" Actor="UnitFootprint" Model="PointDefenseDroneFootprint"/>
+        <BuildModel value="PointDefenseDrone"/>
+        <DeathArray index="Normal" ModelLink="PointDefenseDroneDeath" SoundLink="Raven_TargetingDroneExplode" VoiceLink="PointDefenseDroneDeathVoice"/>
+        <PlacementModel value="PointDefenseDronePlacement"/>
+        <PlacementSound value="Terran_BuildingPlacement"/>
+        <PlacementActorModel value="PointDefenseDronePlacementModel"/>
+        <PlaceholderActorModel value="PointDefenseDronePlaceholderModel"/>
+        <PortraitModel value="AdjutantPortrait"/>
+        <BarOffset value="20"/>
+        <BarWidth value="36"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-PointDefenseDrone.dds"/>
+        </GroupIcon>
+        <GroupSoundArray index="What" value="PointDefenseDrone_GroupWhat"/>
+        <GroupSoundArray index="Yes" value="PointDefenseDrone_GroupYes"/>
+        <GroupSoundArray index="Attack" value="PointDefenseDrone_GroupAttack"/>
+        <GroupSoundArray index="Board" value="PointDefenseDrone_GroupBoard"/>
+        <HeroIcon value="Assets\Textures\btn-unit-terran-targetingdrone.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-buildingarmor.dds"/>
+        <SoundArray index="Birth" value="PointDefenseDrone_Birth"/>
+        <SoundArray index="Ready" value="PointDefenseDrone_Ready"/>
+        <SoundArray index="Help" value="PointDefenseDrone_Help"/>
+        <SoundArray index="What" value="Raven_PointDefenseDroneWhat"/>
+        <SoundArray index="Yes" value="PointDefenseDrone_Yes"/>
+        <SoundArray index="Attack" value="PointDefenseDrone_Attack"/>
+        <SoundArray index="Pissed" value="PointDefenseDrone_Pissed"/>
+        <SoundArray index="Movement" value="PointDefenseDrone_Movement"/>
+        <SoundArray index="Turning" value="PointDefenseDrone_Turning"/>
+        <SoundArray index="Board" value="PointDefenseDrone_Board"/>
+        <SoundArray index="Click" value="PointDefenseDrone_Click"/>
+        <SoundArray index="ClickError" value="PointDefenseDrone_ClickError"/>
+        <SoundArray index="Highlight" value="PointDefenseDrone_Highlight"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-targetingdrone.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-PointDefenseDrone.dds"/>
+        </Wireframe>
+        <StatusBarFlags index="Shields" value="0"/>
+        <StatusBarFlags index="Life" value="0"/>
+        <StatusBarFlags index="Energy" value="0"/>
+        <StatusBarFlags index="Cargo" value="0"/>
+        <StatusBarFlags index="Progress" value="0"/>
+        <StatusBarFlags index="Duration" value="0"/>
+        <StatusBarFlags index="Magazine" value="0"/>
+        <StatusBarFlags index="Workers" value="0"/>
+        <StatusBarFlags index="Custom" value="0"/>
+    </CActorUnit>
+    <CWeaponLegacy id="ISLaser">
+        <EditorCategories value=""/>
+        <Options index="Hidden" value="1"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="ContinuousScan" value="1"/>
+        <Options index="RequireEnabledAttackAbil" value="0"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
+        <TargetFilters value="Missile,Visible;Self,Player,Ally,Neutral,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquireFilters value="Missile,Visible;Self,Player,Ally,Neutral,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="8"/>
+        <Marker>
+            <MatchFlags index="Link" value="1"/>
+        </Marker>
+        <Period value="1"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0"/>
+        <Effect value="ISLaserInitialSet"/>
+        <AllowedMovement value="Moving"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CUnit id="ISBot" parent="Banshee">
+        <Name value="Unit/Name/ISBot"/>
+        <Description value="Button/Tooltip/ISBot"/>
+        <ReviveType value="ISBot"/>
+        <FlagArray index="ArmySelect" value="0"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Attributes index="Light" value="0"/>
+        <LifeStart value="180"/>
+        <LifeMax value="180"/>
+        <LifeArmor value="3"/>
+        <EnergyStart value="0"/>
+        <EnergyMax value="0"/>
+        <EnergyRegenRate value="0"/>
+        <Speed value="3"/>
+        <Sight value="8"/>
+        <Height value="1.5"/>
+        <Food value="0"/>
+        <DamageDealtXP value="0"/>
+        <DamageTakenXP value="0"/>
+        <KillXP value="5"/>
+        <AbilArray index="3" Link="DualRockets"/>
+        <AbilArray Link="40mmLVRocket"/>
+        <AbilArray Link="InstallRocketPodModule"/>
+        <AbilArray Link="InstallKestrelCombatModule"/>
+        <AbilArray Link="InstallMarkerlightModule"/>
+        <AbilArray Link="InstallRepairModule"/>
+        <AbilArray Link="RepairIS"/>
+        <AbilArray Link="DroneInventory"/>
+        <BehaviorArray index="0" Link="LightFilter"/>
+        <BehaviorArray index="1" Link="ISBotEnhancedThrusters"/>
+        <BehaviorArray index="2" Link="InfantryXPSharing"/>
+        <BehaviorArray Link="DroneInventory"/>
+        <WeaponArray index="0" Link="ISBotMG" Turret="PhantomTurret"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="5" Face="DualRockets" AbilCmd="DualRockets,Execute"/>
+            <LayoutButtons index="6" Face="40mmLVRocket" AbilCmd="40mmLVRocket,Execute" Column="0"/>
+            <LayoutButtons index="7">
+                <Face value="AdditionalModules"/>
+                <Type value="Submenu"/>
+                <AbilCmd value=""/>
+                <Requirements value="GhostintheMachine"/>
+                <SubmenuCardId value="0002"/>
+                <Row value="1"/>
+                <Column value="4"/>
+            </LayoutButtons>
+            <LayoutButtons index="8" Face="RepairMini" Type="AbilCmd" AbilCmd="RepairIS,Execute" Requirements="" Column="1"/>
+            <LayoutButtons index="9" removed="1"/>
+            <LayoutButtons index="10" removed="1"/>
+        </CardLayouts>
+        <CardLayouts CardId="0002">
+            <LayoutButtons Face="InstallRocketPod" Type="AbilCmd" AbilCmd="InstallRocketPodModule,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="InstallMarkerlightModule" Type="AbilCmd" AbilCmd="InstallMarkerlightModule,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="InstallKestrelCombatModule" Type="AbilCmd" AbilCmd="InstallKestrelCombatModule,Execute" Row="0" Column="2"/>
+            <LayoutButtons Face="InstallRepairModule" Type="AbilCmd" AbilCmd="InstallRepairModule,Execute" Row="0" Column="3"/>
+        </CardLayouts>
+        <ScoreMake value="0"/>
+        <SubgroupPriority value="15"/>
+        <TacticalAI value="ISBot"/>
+        <SelectAlias value="ISBot"/>
+        <SubgroupAlias value="ISBot"/>
+        <GlossaryPriority value="21"/>
+        <GlossaryStrongArray index="0" removed="1"/>
+        <GlossaryStrongArray index="1" removed="1"/>
+        <GlossaryStrongArray index="2" removed="1"/>
+        <GlossaryWeakArray index="0" removed="1"/>
+        <GlossaryWeakArray index="1" removed="1"/>
+        <GlossaryWeakArray index="2" removed="1"/>
+        <AIEvaluateAlias value="ISBot"/>
+    </CUnit>
+    <CUnit id="ISDrone">
+        <DeathRevealRadius value="3"/>
+        <ReviveType value="ISBot"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="Invulnerable" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <PlaneArray index="Air" value="1"/>
+        <Collide index="Flying" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <LifeStart value="50"/>
+        <LifeMax value="50"/>
+        <LifeArmor value="3"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranShipPlating"/>
+        <Mover value="Fly"/>
+        <Speed value="3"/>
+        <Acceleration value="3.25"/>
+        <StationaryTurningRate value="1499.9414"/>
+        <TurningRate value="1499.9414"/>
+        <Sight value="8"/>
+        <Height value="1.25"/>
+        <VisionHeight value="4"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="150"/>
+        <CostResource index="Vespene" value="100"/>
+        <RepairTime value="60"/>
+        <AttackTargetPriority value="20"/>
+        <KillXP value="5"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="stop"/>
+        <TurretArray value="PhantomTurret"/>
+        <WeaponArray Link="ISLaser" Turret="PhantomTurret"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+        </CardLayouts>
+        <Radius value="0.0625"/>
+        <SeparationRadius value="0.05"/>
+        <ScoreKill value="250"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="15"/>
+        <MinimapRadius value="0"/>
+        <EditorCategories value=""/>
+        <LeaderAlias value="Banshee"/>
+        <HotkeyAlias value="Banshee"/>
+        <SelectAlias value="ISBot"/>
+        <SubgroupAlias value="ISBot"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="21"/>
+        <HotkeyCategory value="Unit/Category/TerranUnits"/>
+    </CUnit>
+    <CUpgrade id="DroneTechnology">
+        <EffectArray Operation="Set" Reference="Unit,ISBot,LifeMax" Value="500"/>
+        <EffectArray Operation="Set" Reference="Unit,ISBot,LifeStart" Value="500"/>
+        <EffectArray Operation="Set" Reference="Unit,ISBot,LifeArmor" Value="5"/>
+    </CUpgrade>
+</Catalog>

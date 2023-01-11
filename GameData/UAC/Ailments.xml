@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CBehaviorBuff id="AcidProof">
+        <Alignment value="Positive"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <DisableValidatorArray value="IsAcidSoaked"/>
+        <Period value="0.1"/>
+        <PeriodicEffect value="AcidRemover"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BluntProof">
+        <Alignment value="Positive"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <DisableValidatorArray value="IsTraumad"/>
+        <Period value="0.1"/>
+        <PeriodicEffect value="AntiBlunt"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="HemorrhageProof">
+        <Alignment value="Positive"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <DisableValidatorArray value="IsHemorrhaging"/>
+        <Period value="0.1"/>
+        <PeriodicEffect value="AntiHemorrhage"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="InfectionProof">
+        <Alignment value="Positive"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <DisableValidatorArray value="IsInfected"/>
+        <Period value="0.1"/>
+        <PeriodicEffect value="AntiInfection"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MinorAilment">
+        <Alignment value="Positive"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <DisableValidatorArray value="MinorInjury"/>
+        <Period value="0.1"/>
+        <PeriodicEffect value="AntiMinor"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ModerateAilment">
+        <Alignment value="Positive"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <DisableValidatorArray value="ModerateInjury"/>
+        <Period value="0.1"/>
+        <PeriodicEffect value="AntiModerate"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SevereAilment">
+        <Alignment value="Positive"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <DisableValidatorArray value="SevereInjury"/>
+        <Period value="0.1"/>
+        <PeriodicEffect value="AntiSevere"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ToxinProof">
+        <Alignment value="Positive"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <DisableValidatorArray value="IsPoisoned"/>
+        <Period value="0.1"/>
+        <PeriodicEffect value="AntiToxin"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DebilitatingInfection">
+        <Alignment value="Negative"/>
+        <Cost>
+            <Charge Link="Behavior/MinorLacerations"/>
+            <Cooldown Link="Behavior/MinorLacerations"/>
+        </Cost>
+        <InfoIcon value="Assets\Textures\btn-unit-zerg-finalboss.dds"/>
+        <BehaviorCategories index="Temporary" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <BuffFlags index="Extend" value="1"/>
+        <Duration value="162"/>
+        <DurationRandomMin value="36"/>
+        <DurationRandomMax value="1"/>
+        <ExpireEffect value="DebilitatingInfectionDeath"/>
+        <Modification MoveSpeedMultiplier="0.8" AttackSpeedMultiplier="0.8">
+            <DamageDealtFraction index="Melee" value="-0.2"/>
+            <DamageDealtFraction index="Ranged" value="-0.2"/>
+            <VitalRegenArray index="Life" value="-2.6015"/>
+            <DeathResponse>
+                <Cost>
+                    <Charge Link="Behavior/MinorLacerations"/>
+                    <Cooldown Link="Behavior/MinorLacerations"/>
+                </Cost>
+            </DeathResponse>
+        </Modification>
+        <DamageResponse>
+            <Cost>
+                <Charge Link="Behavior/MinorLacerations"/>
+                <Cooldown Link="Behavior/MinorLacerations"/>
+            </Cost>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="TraumaticBrainInjury">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\stunswirl1_orange.dds"/>
+        <BehaviorCategories index="Temporary" value="1"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <BuffFlags index="Extend" value="1"/>
+        <Duration value="94.5"/>
+        <DurationRandomMin value="21"/>
+        <DurationRandomMax value="1"/>
+        <Modification SightMaximum="5" AccelerationMultiplier="0.1" WeaponRange="-5"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MalignantInfection">
+        <Alignment value="Negative"/>
+        <Cost>
+            <Charge Link="Behavior/MinorLacerations"/>
+            <Cooldown Link="Behavior/MinorLacerations"/>
+        </Cost>
+        <InfoIcon value="Assets\Textures\btn-unit-zerg-larvalqueen.dds"/>
+        <BehaviorCategories index="Temporary" value="1"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <BuffFlags index="Extend" value="1"/>
+        <Duration value="121.5"/>
+        <DurationRandomMin value="27"/>
+        <DurationRandomMax value="1"/>
+        <ExpireEffect value="DebilitatingInfection"/>
+        <Modification MoveSpeedMultiplier="0.95" AttackSpeedMultiplier="0.95">
+            <DamageDealtFraction index="Melee" value="-0.05"/>
+            <DamageDealtFraction index="Ranged" value="-0.05"/>
+            <VitalRegenArray index="Life" value="-2"/>
+            <DeathResponse>
+                <Cost>
+                    <Charge Link="Behavior/MinorLacerations"/>
+                    <Cooldown Link="Behavior/MinorLacerations"/>
+                </Cost>
+            </DeathResponse>
+        </Modification>
+        <DamageResponse>
+            <Cost>
+                <Charge Link="Behavior/MinorLacerations"/>
+                <Cooldown Link="Behavior/MinorLacerations"/>
+            </Cost>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="EnergyLeak">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-upgrade-protoss-researchbosoniccore.dds"/>
+        <BehaviorCategories index="Temporary" value="1"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <BuffFlags index="Extend" value="1"/>
+        <Duration value="108"/>
+        <DurationRandomMin value="24"/>
+        <DurationRandomMax value="1"/>
+        <Modification>
+            <VitalRegenArray index="Energy" value="-7"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="UnidentifiedInfection">
+        <Alignment value="Negative"/>
+        <Cost>
+            <Charge Link="Behavior/MinorLacerations"/>
+            <Cooldown Link="Behavior/MinorLacerations"/>
+        </Cost>
+        <InfoIcon value="Assets\Textures\btn-unit-zerg-larva.dds"/>
+        <BehaviorCategories index="Temporary" value="1"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="HasStage2or3Infection"/>
+        <BuffFlags index="Extend" value="1"/>
+        <Duration value="81"/>
+        <DurationRandomMin value="18"/>
+        <DurationRandomMax value="1"/>
+        <ExpireEffect value="MalignantInfection"/>
+        <Modification MoveSpeedMultiplier="0.98" AttackSpeedMultiplier="0.98">
+            <VitalRegenArray index="Life" value="-1.1992"/>
+            <DeathResponse>
+                <Cost>
+                    <Charge Link="Behavior/MinorLacerations"/>
+                    <Cooldown Link="Behavior/MinorLacerations"/>
+                </Cost>
+            </DeathResponse>
+        </Modification>
+        <DamageResponse>
+            <Cost>
+                <Charge Link="Behavior/MinorLacerations"/>
+                <Cooldown Link="Behavior/MinorLacerations"/>
+            </Cost>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ClassIVHemmorrhaging">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level3.dds"/>
+        <BehaviorCategories index="Temporary" value="1"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <BuffFlags index="Extend" value="1"/>
+        <Duration value="216"/>
+        <DurationRandomMin value="48"/>
+        <DurationRandomMax value="1"/>
+        <Modification MoveSpeedMultiplier="0.865" AttackSpeedMultiplier="0.9">
+            <DamageDealtFraction index="Melee" value="-0.25"/>
+            <DamageDealtFraction index="Ranged" value="-0.25"/>
+            <VitalRegenArray index="Life" value="-2"/>
+            <BehaviorLinkDisableArray value="AcidProof"/>
+            <BehaviorLinkDisableArray value="InfectionProof"/>
+            <BehaviorLinkDisableArray value="ToxinProof"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="NecroticVenom">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-contaminate-color.dds"/>
+        <BehaviorCategories index="Temporary" value="1"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <BuffFlags index="Extend" value="1"/>
+        <Duration value="153"/>
+        <DurationRandomMin value="34"/>
+        <DurationRandomMax value="1"/>
+        <Modification>
+            <VitalRegenArray index="Life" value="-2"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ClassIIIHemmorrhaging">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level2.dds"/>
+        <BehaviorCategories index="Temporary" value="1"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <BuffFlags index="Extend" value="1"/>
+        <Duration value="162"/>
+        <DurationRandomMin value="36"/>
+        <DurationRandomMax value="1"/>
+        <Modification MoveSpeedMultiplier="0.9">
+            <DamageDealtFraction index="Melee" value="-0.15"/>
+            <DamageDealtFraction index="Ranged" value="-0.15"/>
+            <VitalRegenArray index="Life" value="-1.5"/>
+            <BehaviorLinkDisableArray value="AcidProof"/>
+            <BehaviorLinkDisableArray value="InfectionProof"/>
+            <BehaviorLinkDisableArray value="ToxinProof"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ParasiticInfection">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-upgrade-zerg-evolveincreasedlocustlifetime.dds"/>
+        <BehaviorCategories index="Temporary" value="1"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <BuffFlags index="Extend" value="1"/>
+        <Duration value="108"/>
+        <DurationRandomMin value="24"/>
+        <DurationRandomMax value="1"/>
+        <ExpireEffect value="HatchedParasites"/>
+        <Modification MoveSpeedMultiplier="0.95" AttackSpeedMultiplier="0.95">
+            <DamageDealtFraction index="Melee" value="-0.05"/>
+            <DamageDealtFraction index="Ranged" value="-0.05"/>
+            <VitalRegenArray index="Life" value="-1"/>
+            <DeathResponse>
+                <Cost>
+                    <Charge Link="Behavior/MinorLacerations"/>
+                    <Cooldown Link="Behavior/MinorLacerations"/>
+                </Cost>
+            </DeathResponse>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SwampSlowI">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\zergping2_green.dds"/>
+        <BehaviorCategories index="Temporary" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Zerg"/>
+        <BuffFlags index="Extend" value="1"/>
+        <Modification MoveSpeedMultiplier="0.9">
+            <AbilLinkDisableArray value="Jump"/>
+            <AbilLinkDisableArray value="Jump2"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MinorLacerations">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level0.dds"/>
+        <BehaviorCategories index="Temporary" value="1"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <BuffFlags index="Extend" value="1"/>
+        <Duration value="31.5"/>
+        <DurationRandomMin value="7"/>
+        <DurationRandomMax value="1"/>
+        <Modification MoveSpeedMultiplier="0.95" AttackSpeedMultiplier="0.95">
+            <VitalRegenArray index="Life" value="-1"/>
+            <BehaviorLinkDisableArray value="AcidProof"/>
+            <BehaviorLinkDisableArray value="InfectionProof"/>
+            <BehaviorLinkDisableArray value="ToxinProof"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="InfectedBite">
+        <Alignment value="Negative"/>
+        <Cost>
+            <Charge Link="Behavior/MinorLacerations"/>
+            <Cooldown Link="Behavior/MinorLacerations"/>
+        </Cost>
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-infestation.dds"/>
+        <BehaviorCategories index="Temporary" value="1"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <BuffFlags index="Extend" value="1"/>
+        <Duration value="324"/>
+        <DurationRandomMin value="72"/>
+        <DurationRandomMax value="1"/>
+        <ExpireEffect value="InfectedBiteExpireSetChance"/>
+        <Modification MoveSpeedMultiplier="0.97">
+            <VitalRegenArray index="Life" value="-0.6718"/>
+            <DeathResponse>
+                <Cost>
+                    <Charge Link="Behavior/MinorLacerations"/>
+                    <Cooldown Link="Behavior/MinorLacerations"/>
+                </Cost>
+            </DeathResponse>
+        </Modification>
+        <DamageResponse>
+            <Cost>
+                <Charge Link="Behavior/MinorLacerations"/>
+                <Cooldown Link="Behavior/MinorLacerations"/>
+            </Cost>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SwampSlowII">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\zergping2_green.dds"/>
+        <BehaviorCategories index="Temporary" value="1"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <BuffFlags index="Extend" value="1"/>
+        <Duration value="1"/>
+        <DurationRandomMin value="1"/>
+        <DurationRandomMax value="1"/>
+        <Modification MoveSpeedMultiplier="0.9">
+            <AbilLinkDisableArray value="Jump"/>
+            <AbilLinkDisableArray value="Jump2"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="FracturedArm">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-harvestcorpse.dds"/>
+        <BehaviorCategories index="Temporary" value="1"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <BuffFlags index="Extend" value="1"/>
+        <Duration value="135"/>
+        <Modification AttackSpeedMultiplier="0.7" WeaponRange="-4">
+            <DamageDealtFraction index="Melee" value="-0.4"/>
+            <DamageDealtFraction index="Ranged" value="-0.4"/>
+            <VitalRegenArray index="Life" value="-0.25"/>
+            <AbilClassDisableArray index="CAbilAttack" value="1"/>
+        </Modification>
+        <DurationRandomMin value="30"/>
+        <DurationRandomMax value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="FracturedLeg">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-charge-color.dds"/>
+        <BehaviorCategories index="Temporary" value="1"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <BuffFlags index="Extend" value="1"/>
+        <Duration value="135"/>
+        <Modification MoveSpeedMultiplier="0.9">
+            <AbilLinkDisableArray value="Jump"/>
+            <AbilLinkDisableArray value="Sprint"/>
+            <AbilLinkDisableArray value="Jump2"/>
+        </Modification>
+        <DurationRandomMin value="30"/>
+        <DurationRandomMax value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="HatchedParasites">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-kerrigan-broodlingnest.dds"/>
+        <BehaviorCategories index="Temporary" value="1"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <BuffFlags index="Extend" value="1"/>
+        <Duration value="19.8"/>
+        <Modification MoveSpeedMultiplier="0.2" AttackSpeedMultiplier="0.7">
+            <DamageDealtFraction index="Melee" value="-0.05"/>
+            <DamageDealtFraction index="Ranged" value="-0.05"/>
+            <VitalRegenArray index="Life" value="-2.5"/>
+            <BehaviorLinkDisableArray value="Sprint"/>
+            <DeathResponse>
+                <Cost>
+                    <Charge Link="Behavior/MinorLacerations"/>
+                    <Cooldown Link="Behavior/MinorLacerations"/>
+                </Cost>
+            </DeathResponse>
+        </Modification>
+        <DurationRandomMin value="4.4"/>
+        <DurationRandomMax value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="NeurotoxicVenom">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-banelingspooge.dds"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <BuffFlags index="Extend" value="1"/>
+        <Duration value="130.5"/>
+        <Modification MoveSpeedMultiplier="0.85" AttackSpeedMultiplier="0.8"/>
+        <BehaviorCategories index="Temporary" value="1"/>
+        <DurationRandomMin value="29"/>
+        <DurationRandomMax value="1"/>
+    </CBehaviorBuff>
+</Catalog>

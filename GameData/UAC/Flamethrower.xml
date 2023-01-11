@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CValidatorUnitCompareBehaviorCount id="HasPyromaniac">
+        <WhichUnit Value="Caster"/>
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="Pyromaniac"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CEffectSet id="FuelDischargeSet1">
+        <EditorCategories value=""/>
+        <EffectArray value="FuelDischargeDamageMini"/>
+        <EffectArray value="GreenPhosphorusAB"/>
+        <TargetLocationType value="Point"/>
+    </CEffectSet>
+    <CEffectSet id="FuelDischargeSet2">
+        <EditorCategories value=""/>
+        <EffectArray value="FuelDischargeDamage2"/>
+        <EffectArray value="GreenPhosphorusAB"/>
+        <EffectArray value="GreenPhosphorusAB"/>
+        <TargetLocationType value="Point"/>
+    </CEffectSet>
+    <CEffectSet id="FuelDischargeSet3">
+        <EditorCategories value=""/>
+        <EffectArray value="FuelDischargeDamage3"/>
+        <EffectArray value="GreenPhosphorusAB"/>
+        <EffectArray value="GreenPhosphorusAB"/>
+        <EffectArray value="GreenPhosphorusAB"/>
+        <TargetLocationType value="Point"/>
+    </CEffectSet>
+    <CEffectSet id="FuelDischargeSet4">
+        <EditorCategories value=""/>
+        <EffectArray value="FuelDischargeDamage4"/>
+        <EffectArray value="GreenPhosphorusAB"/>
+        <EffectArray value="GreenPhosphorusAB"/>
+        <EffectArray value="GreenPhosphorusAB"/>
+        <EffectArray value="GreenPhosphorusAB"/>
+        <TargetLocationType value="Point"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="GreenPhosphorusAB">
+        <ValidatorArray index="0" value="HasPyromaniac"/>
+        <EditorCategories value=""/>
+        <Behavior value="GreenPhosphorus"/>
+    </CEffectApplyBehavior>
+    <CEffectDamage id="GreenPhosphorusDamageDoT">
+        <EditorCategories value=""/>
+        <Amount value="2.5"/>
+        <Death value="Fire"/>
+    </CEffectDamage>
+    <CEffectDamage id="GreenPhosphorusDamageInit">
+        <EditorCategories value=""/>
+        <AttributeBonus index="Armored" value="2"/>
+        <Amount value="4"/>
+        <Death value="Fire"/>
+    </CEffectDamage>
+    <CAbilBehavior id="Overburn">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="Overburn" Requirements="Pyromaniac"/>
+        <CmdButtonArray index="Off" DefaultButtonFace="OverburnOff" Requirements="Pyromaniac"/>
+        <Flags index="Toggle" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link="" TimeUse="15"/>
+        </Cost>
+        <BehaviorArray value="Overburn"/>
+    </CAbilBehavior>
+    <CAbilEffectTarget id="FuelDischargeMini">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="FuelDischargeMiniSetTest"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Cooldown TimeUse="25"/>
+        </Cost>
+        <Range value="10"/>
+        <Marker Link="Abil/FuelDischarge"/>
+        <UninterruptibleArray index="Finish" value="1"/>
+        <ValidatedArray index="Finish" value="1"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="FuelDischarge"/>
+        <CastIntroTime value="0"/>
+        <CastOutroTime value="0.3"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="FuelDischarge">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="FuelDischargeSet1"/>
+        <Effect value="FuelDischargeSet2"/>
+        <Effect value="FuelDischargeSet3"/>
+        <Effect value="FuelDischargeSet4"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Resource index="Terrazine" value="30"/>
+            <Vital index="Energy" value="85"/>
+            <Cooldown TimeUse="20"/>
+        </Cost>
+        <Cost>
+            <Resource index="Terrazine" value="24"/>
+            <Vital index="Energy" value="80"/>
+            <Cooldown TimeUse="19"/>
+        </Cost>
+        <Cost>
+            <Resource index="Terrazine" value="20"/>
+            <Vital index="Energy" value="75"/>
+            <Cooldown TimeUse="18"/>
+        </Cost>
+        <Cost>
+            <Resource index="Terrazine" value="16"/>
+            <Vital index="Energy" value="70"/>
+            <Cooldown TimeUse="17"/>
+        </Cost>
+        <Range value="10"/>
+        <UninterruptibleArray index="Finish" value="1"/>
+        <ValidatedArray index="Finish" value="1"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="FuelDischarge"/>
+        <CastOutroTime value="0.3"/>
+    </CAbilEffectTarget>
+    <CRequirement id="Pyromaniac">
+        <NodeArray index="Use" Link="GTECountUpgradePyromaniacCompleteOnly1"/>
+        <NodeArray index="Show" Link="GTECountUpgradePyromaniacCompleteOnly1"/>
+    </CRequirement>
+    <CButton id="Overburn">
+        <Icon value="Assets\Textures\btn-ability-protoss-firebeam.dds"/>
+    </CButton>
+    <CButton id="OverburnOff">
+        <Tooltip value="Button/Tooltip/Overburn"/>
+        <Icon value="Assets\Textures\btn-ability-zerg-yagdra-firewave.dds"/>
+    </CButton>
+    <CRequirementCountUpgrade id="CountUpgradePyromaniacCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Pyromaniac" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementGTE id="GTECountUpgradePyromaniacCompleteOnly1">
+        <OperandArray index="0" value="CountUpgradePyromaniacCompleteOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementGTE>
+    <CActorModel id="GreenPhosphorusImpactFire" parent="BuffContinuous">
+        <Aliases value="_Doodad"/>
+        <Aliases value="_Selectable"/>
+        <Aliases value="_EditorHelper"/>
+        <AcceptedHostedPropTransfers index="BaseModelScale" value="0"/>
+        <AcceptedHostedPropTransfers index="Scale" value="0"/>
+        <EditorCategories value=""/>
+        <On index="0" Terms="ActorCreation" Send="$Stand PlayForever"/>
+        <On index="1" Terms="Behavior.GreenPhosphorus.On" Send="Create"/>
+        <On index="2" Terms="Behavior.GreenPhosphorus.Off" Send="Destroy"/>
+        <On Terms="ActorCreation" Send="SetTintColor 53,118,14"/>
+        <HostSiteOps Ops="SOpAttachCenter SOpAttachTarget SOpAttachOrigin"/>
+        <Model value="FireMedium"/>
+        <ProximityPosition value="CenterActor"/>
+    </CActorModel>
+    <CActorModel id="Overburn" parent="BuffContinuous">
+        <Aliases value="_Doodad"/>
+        <Aliases value="_Selectable"/>
+        <Aliases value="_EditorHelper"/>
+        <AcceptedHostedPropTransfers index="BaseModelScale" value="0"/>
+        <AcceptedHostedPropTransfers index="Scale" value="0"/>
+        <EditorCategories value=""/>
+        <On index="0" Terms="ActorCreation" Send="$Stand PlayForever"/>
+        <On index="1" Terms="Behavior.Overburn.On" Send="Create"/>
+        <On index="2" Terms="Behavior.Overburn.Off" Send="Destroy"/>
+        <On Terms="ActorCreation" Send="SetTintColor 0,0,160"/>
+        <HostSiteOps Ops="SOpAttachCenter SOpAttachTarget SOpAttachOrigin"/>
+        <Model value="FireMedium"/>
+        <ProximityPosition value="CenterActor"/>
+    </CActorModel>
+    <CUnit id="Flamethrower2" parent="UnitTemplate">
+        <Description value="Button/Tooltip/74DFlamethrower"/>
+        <DeathRevealFilters value="Visible;Enemy,Missile,Hidden"/>
+        <Race value="Terr"/>
+        <LifeStart value="435"/>
+        <LifeMax value="435"/>
+        <LifeArmorDisplayFlags index="CollapseBuffed" value="0"/>
+        <LifeRegenRate value="0.25"/>
+        <LifeArmorName value="Unit/LifeArmorName/LandWarriorSystemLight"/>
+        <Speed value="2.8984"/>
+        <SpeedDisplayFlags index="CollapseBuffed" value="0"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="50"/>
+        <RepairTime value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="HeroInventoryFlame"/>
+        <AbilArray Link="Sprint"/>
+        <AbilArray Link="Jump"/>
+        <AbilArray Link="LearnAbilitiesFlamethrower"/>
+        <AbilArray Link="Napalm"/>
+        <AbilArray Link="PlasmaShield"/>
+        <AbilArray Link="FuelDischargeTest"/>
+        <AbilArray Link="GravitonCharge"/>
+        <AbilArray Link="DropMagazine"/>
+        <AbilArray Link="FuelSynthesizer"/>
+        <AbilArray Link="Prone"/>
+        <AbilArray Link="SoldierSkills"/>
+        <AbilArray Link="PerformSelfAid"/>
+        <AbilArray Link="WeaponsHold2"/>
+        <AbilArray Link="Overburn"/>
+        <BehaviorArray Link="HeroLevels"/>
+        <BehaviorArray Link="Fitness"/>
+        <BehaviorArray Link="Dexterity"/>
+        <BehaviorArray Link="Mechanical"/>
+        <BehaviorArray Link="StartingStats"/>
+        <BehaviorArray Link="SoldierSkills1"/>
+        <BehaviorArray Link="SoldierSkills2"/>
+        <BehaviorArray Link="SoldierSkills3"/>
+        <BehaviorArray Link="SoldierSkills4"/>
+        <BehaviorArray Link="RifleButt"/>
+        <BehaviorArray Link="HardArmor"/>
+        <WeaponArray index="0" Link="Flamethrower"/>
+        <EffectArray index="Birth" value="EquipFlamethrowerSet"/>
+        <EffectArray index="Revive" value="EquipFlamethrowerSet"/>
+        <CardLayouts>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="2"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="3"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons>
+                <Face value="LearnAbilities"/>
+                <Type value="Submenu"/>
+                <SubmenuAbilState value="LearnAbilitiesFlamethrower"/>
+                <SubmenuCardId value="0002"/>
+                <Row value="1"/>
+                <Column value="4"/>
+            </LayoutButtons>
+            <LayoutButtons Face="AdditionalActions" Type="Submenu" SubmenuCardId="0003" Row="1" Column="3"/>
+            <LayoutButtons Face="PlasmaShield" Type="AbilCmd" AbilCmd="PlasmaShield,On" Row="2" Column="2"/>
+            <LayoutButtons Face="FuelDischargeTest" Type="AbilCmd" AbilCmd="FuelDischargeTest,Execute" Row="2" Column="3"/>
+            <LayoutButtons Face="GravitonCharge" Type="AbilCmd" AbilCmd="GravitonCharge,Execute" Row="2" Column="4"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="Napalm" Type="Passive" Requirements="Napalm1M" Row="2" Column="1"/>
+            <LayoutButtons Face="Overburn" Type="AbilCmd" AbilCmd="Overburn,On" Row="1" Column="2"/>
+            <LayoutButtons Face="OverburnOff" Type="AbilCmd" AbilCmd="Overburn,Off" Row="1" Column="2"/>
+        </CardLayouts>
+        <CardLayouts CardId="0002">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="LearnSoldierSkills" Type="AbilCmd" AbilCmd="LearnAbilitiesFlamethrower,Learn5" Row="0" Column="0"/>
+            <LayoutButtons Face="Napalm" Type="AbilCmd" AbilCmd="LearnAbilitiesFlamethrower,Learn1" Row="0" Column="1"/>
+            <LayoutButtons Face="PlasmaShield" Type="AbilCmd" AbilCmd="LearnAbilitiesFlamethrower,Learn2" Row="0" Column="2"/>
+            <LayoutButtons Face="FuelDischargeTest" Type="AbilCmd" AbilCmd="LearnAbilitiesFlamethrower,Learn6" Row="0" Column="3"/>
+            <LayoutButtons Face="GravitonCharge" Type="AbilCmd" AbilCmd="LearnAbilitiesFlamethrower,Learn4" Row="0" Column="4"/>
+        </CardLayouts>
+        <CardLayouts CardId="0003">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="DropMagazine" Type="AbilCmd" AbilCmd="DropMagazine,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="FuelSynthesizer" Type="AbilCmd" AbilCmd="FuelSynthesizer,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="Prone" Type="AbilCmd" AbilCmd="Prone,Execute" Row="0" Column="2"/>
+            <LayoutButtons Face="PerformSelfAid" Type="AbilCmd" AbilCmd="PerformSelfAid,Execute" Row="1" Column="0"/>
+            <LayoutButtons>
+                <Face value="HardArmor"/>
+                <Type value="Passive"/>
+                <Behavior value="HardArmor"/>
+                <Requirements value="SoldierSkills04M"/>
+                <Row value="2"/>
+                <Column value="3"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="RifleButt"/>
+                <Type value="Passive"/>
+                <Behavior value="RifleButt"/>
+                <Requirements value="RifleButt"/>
+                <Row value="2"/>
+                <Column value="2"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel4"/>
+                <Type value="Passive"/>
+                <Behavior value="SoldierSkills4"/>
+                <Requirements value="SoldierSkills04"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel3"/>
+                <Type value="Passive"/>
+                <Behavior value="SoldierSkills3"/>
+                <Requirements value="SoldierSkills03"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel2"/>
+                <Type value="Passive"/>
+                <Behavior value="SoldierSkills2"/>
+                <Requirements value="SoldierSkills02"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel1"/>
+                <Type value="Passive"/>
+                <Behavior value="SoldierSkills1"/>
+                <Requirements value="SoldierSkills01"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons Face="HoldFire3" Type="AbilCmd" AbilCmd="WeaponsHold2,On" Row="1" Column="3"/>
+            <LayoutButtons Face="HoldFireOff2" Type="AbilCmd" AbilCmd="WeaponsHold2,Off" Row="1" Column="3"/>
+        </CardLayouts>
+        <Radius value="0.375"/>
+        <SeparationRadius value="0.375"/>
+        <DeadInnerRadius value="0"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="15"/>
+        <EditorCategories value="ObjectType:Hero,ObjectFamily:Melee"/>
+        <TacticalAI value="Marine"/>
+        <LeaderAlias value="Flamethrower"/>
+        <SelectAlias value="Flamethrower"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="21"/>
+        <HotkeyCategory value="Hotkey/Catagory/MOSCustom"/>
+        <AIEvaluateAlias value="Marine"/>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
+        <ReviveInfoBase>
+            <Charge Link="Marine/Revive"/>
+            <Cooldown Link="Marine/Revive"/>
+        </ReviveInfoBase>
+        <Attributes index="Light" value="0"/>
+    </CUnit>
+    <CUnit id="Flamethrower" parent="UnitTemplate">
+        <Description value="Button/Tooltip/74DFlamethrower"/>
+        <DeathRevealFilters value="Visible;Enemy,Missile,Hidden"/>
+        <Race value="Terr"/>
+        <LifeStart value="435"/>
+        <LifeMax value="435"/>
+        <LifeArmorDisplayFlags index="CollapseBuffed" value="0"/>
+        <LifeRegenRate value="0.25"/>
+        <LifeArmorName value="Unit/LifeArmorName/LandWarriorSystemLight"/>
+        <Speed value="2.8984"/>
+        <SpeedDisplayFlags index="CollapseBuffed" value="0"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="50"/>
+        <RepairTime value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="HeroInventoryFlame"/>
+        <AbilArray Link="Sprint"/>
+        <AbilArray Link="Jump"/>
+        <AbilArray Link="LearnAbilitiesFlamethrower"/>
+        <AbilArray Link="Napalm"/>
+        <AbilArray Link="PlasmaShield"/>
+        <AbilArray Link="FuelDischargeTest"/>
+        <AbilArray Link="GravitonCharge"/>
+        <AbilArray Link="DropMagazine"/>
+        <AbilArray Link="FuelSynthesizer"/>
+        <AbilArray Link="Prone"/>
+        <AbilArray Link="SoldierSkills"/>
+        <AbilArray Link="PerformSelfAid"/>
+        <AbilArray Link="WeaponsHold2"/>
+        <AbilArray Link="Overburn"/>
+        <BehaviorArray Link="HeroLevels"/>
+        <BehaviorArray Link="Fitness"/>
+        <BehaviorArray Link="Dexterity"/>
+        <BehaviorArray Link="Mechanical"/>
+        <BehaviorArray Link="StartingStats"/>
+        <BehaviorArray Link="SoldierSkills1"/>
+        <BehaviorArray Link="SoldierSkills2"/>
+        <BehaviorArray Link="SoldierSkills3"/>
+        <BehaviorArray Link="SoldierSkills4"/>
+        <BehaviorArray Link="RifleButt"/>
+        <BehaviorArray Link="HardArmor"/>
+        <WeaponArray index="0" Link="Flamethrower"/>
+        <EffectArray index="Birth" value="EquipFlamethrowerSet"/>
+        <EffectArray index="Revive" value="EquipFlamethrowerSet"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons>
+                <Face value="LearnAbilities"/>
+                <Type value="Submenu"/>
+                <SubmenuAbilState value="LearnAbilitiesFlamethrower"/>
+                <SubmenuCardId value="0002"/>
+                <Row value="1"/>
+                <Column value="4"/>
+            </LayoutButtons>
+            <LayoutButtons Face="AdditionalActions" Type="Submenu" SubmenuCardId="0003" Row="1" Column="3"/>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel4"/>
+                <Type value="Passive"/>
+                <AbilCmd value="SoldierSkills,On"/>
+                <Behavior value="SoldierSkills4"/>
+                <Requirements value="SoldierSkills04"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel3"/>
+                <Type value="Passive"/>
+                <AbilCmd value="SoldierSkills,On"/>
+                <Behavior value="SoldierSkills3"/>
+                <Requirements value="SoldierSkills03"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel2"/>
+                <Type value="Passive"/>
+                <AbilCmd value="SoldierSkills,On"/>
+                <Behavior value="SoldierSkills2"/>
+                <Requirements value="SoldierSkills02"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel1"/>
+                <Type value="Passive"/>
+                <AbilCmd value="SoldierSkills,On"/>
+                <Behavior value="SoldierSkills1"/>
+                <Requirements value="SoldierSkills01"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons Face="Napalm" Type="Passive" Requirements="Napalm1M" Row="2" Column="1"/>
+            <LayoutButtons Face="PlasmaShield" Type="AbilCmd" AbilCmd="PlasmaShield,On" Row="2" Column="2"/>
+            <LayoutButtons Face="FuelDischargeTest" Type="AbilCmd" AbilCmd="FuelDischargeTest,Execute" Row="2" Column="3"/>
+            <LayoutButtons Face="GravitonCharge" Type="AbilCmd" AbilCmd="GravitonCharge,Execute" Row="2" Column="4"/>
+            <LayoutButtons Face="Overburn" Type="AbilCmd" AbilCmd="Overburn,On" Row="1" Column="2"/>
+            <LayoutButtons Face="OverburnOff" Type="AbilCmd" AbilCmd="Overburn,Off" Row="1" Column="2"/>
+        </CardLayouts>
+        <CardLayouts CardId="0002">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="LearnSoldierSkills" Type="AbilCmd" AbilCmd="LearnAbilitiesFlamethrower,Learn5" Row="0" Column="0"/>
+            <LayoutButtons Face="Napalm" Type="AbilCmd" AbilCmd="LearnAbilitiesFlamethrower,Learn1" Row="0" Column="1"/>
+            <LayoutButtons Face="PlasmaShield" Type="AbilCmd" AbilCmd="LearnAbilitiesFlamethrower,Learn2" Row="0" Column="2"/>
+            <LayoutButtons Face="FuelDischargeTest" Type="AbilCmd" AbilCmd="LearnAbilitiesFlamethrower,Learn6" Row="0" Column="3"/>
+            <LayoutButtons Face="GravitonCharge" Type="AbilCmd" AbilCmd="LearnAbilitiesFlamethrower,Learn4" Row="0" Column="4"/>
+        </CardLayouts>
+        <CardLayouts CardId="0003">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="DropMagazine" Type="AbilCmd" AbilCmd="DropMagazine,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="FuelSynthesizer" Type="AbilCmd" AbilCmd="FuelSynthesizer,Execute" Row="0" Column="2"/>
+            <LayoutButtons Face="Prone" Type="AbilCmd" AbilCmd="Prone,Execute" Row="0" Column="3"/>
+            <LayoutButtons Face="PerformSelfAid" Type="AbilCmd" AbilCmd="PerformSelfAid,Execute" Row="1" Column="0"/>
+            <LayoutButtons>
+                <Face value="RifleButt"/>
+                <Type value="Passive"/>
+                <Behavior value="RifleButt"/>
+                <Requirements value="RifleButt"/>
+                <Row value="1"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="HardArmor"/>
+                <Type value="Passive"/>
+                <Behavior value="HardArmor"/>
+                <Requirements value="SoldierSkills04M"/>
+                <Row value="1"/>
+                <Column value="2"/>
+            </LayoutButtons>
+            <LayoutButtons Face="HoldFire3" Type="AbilCmd" AbilCmd="WeaponsHold2,On" Row="1" Column="3"/>
+            <LayoutButtons Face="HoldFireOff2" Type="AbilCmd" AbilCmd="WeaponsHold2,Off" Row="1" Column="3"/>
+        </CardLayouts>
+        <Radius value="0.375"/>
+        <SeparationRadius value="0.375"/>
+        <DeadInnerRadius value="0"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="15"/>
+        <EditorCategories value="ObjectType:Hero,ObjectFamily:Melee"/>
+        <TacticalAI value="Marine"/>
+        <SelectAlias value="Flamethrower"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="21"/>
+        <HotkeyCategory value="Hotkey/Catagory/MOSClassic"/>
+        <AIEvaluateAlias value="Marine"/>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
+        <ReviveInfoBase>
+            <Charge Link="Marine/Revive"/>
+            <Cooldown Link="Marine/Revive"/>
+        </ReviveInfoBase>
+        <Attributes index="Light" value="0"/>
+    </CUnit>
+    <CUpgrade id="Pyromaniac">
+        <EffectArray Operation="Set" Reference="Abil,FuelDischargeTest,Cost[0].Charge.TimeUse" Value="20.000000"/>
+        <EffectArray Reference="Abil,FuelDischargeTest,Cost[0].Charge.CountMax" Value="1"/>
+        <EffectArray Reference="Abil,FuelDischargeTest,Cost[0].Charge.CountStart" Value="1"/>
+        <EffectArray Operation="Set" Reference="Abil,FuelDischargeTest,Cost[0].Charge.CountUse" Value="1"/>
+        <EffectArray Operation="Set" Reference="Abil,FuelDischargeTest,Cost[1].Charge.TimeUse" Value="19.000000"/>
+        <EffectArray Operation="Set" Reference="Abil,FuelDischargeTest,Cost[2].Charge.TimeUse" Value="18.000000"/>
+        <EffectArray Operation="Set" Reference="Abil,FuelDischargeTest,Cost[3].Charge.TimeUse" Value="17.000000"/>
+        <EffectArray Reference="Abil,FuelDischargeTest,Cost[1].Charge.CountMax" Value="1"/>
+        <EffectArray Reference="Abil,FuelDischargeTest,Cost[1].Charge.CountStart" Value="1"/>
+        <EffectArray Operation="Set" Reference="Abil,FuelDischargeTest,Cost[1].Charge.CountUse" Value="1"/>
+        <EffectArray Reference="Abil,FuelDischargeTest,Cost[2].Charge.CountMax" Value="1"/>
+        <EffectArray Reference="Abil,FuelDischargeTest,Cost[2].Charge.CountStart" Value="1"/>
+        <EffectArray Operation="Set" Reference="Abil,FuelDischargeTest,Cost[2].Charge.CountUse" Value="1"/>
+        <EffectArray Reference="Abil,FuelDischargeTest,Cost[3].Charge.CountMax" Value="1"/>
+        <EffectArray Reference="Abil,FuelDischargeTest,Cost[3].Charge.CountStart" Value="1"/>
+        <EffectArray Operation="Set" Reference="Abil,FuelDischargeTest,Cost[3].Charge.CountUse" Value="1"/>
+        <EffectArray Operation="Set" Reference="Behavior,NapalmBurn1,Duration" Value="4.000000"/>
+        <EffectArray Operation="Set" Reference="Behavior,NapalmBurn2,Duration" Value="4.000000"/>
+        <EffectArray Operation="Set" Reference="Behavior,NapalmBurn3,Duration" Value="4.000000"/>
+        <EffectArray Operation="Set" Reference="Behavior,NapalmBurn4,Duration" Value="4.000000"/>
+        <EffectArray Operation="Set" Reference="Behavior,NapalmBurn1,Period" Value="0.075000"/>
+        <EffectArray Operation="Set" Reference="Behavior,NapalmBurn2,Period" Value="0.075000"/>
+        <EffectArray Operation="Set" Reference="Behavior,NapalmBurn3,Period" Value="0.075000"/>
+        <EffectArray Operation="Set" Reference="Behavior,NapalmBurn4,Period" Value="0.075000"/>
+        <EffectArray Operation="Set" Reference="Abil,FuelDischargeTest,Cost[0].Resource[Terrazine]" Value="10"/>
+        <EffectArray Operation="Set" Reference="Abil,FuelDischargeTest,Cost[1].Resource[Terrazine]" Value="15"/>
+        <EffectArray Operation="Set" Reference="Abil,FuelDischargeTest,Cost[2].Resource[Terrazine]" Value="20"/>
+        <EffectArray Operation="Set" Reference="Abil,FuelDischargeTest,Cost[3].Resource[Terrazine]" Value="25"/>
+        <EffectArray Operation="Multiply" Reference="Behavior,PlasmaShield1,Modification.VitalMaxArray[Shields]" Value="0.75"/>
+        <EffectArray Operation="Multiply" Reference="Behavior,PlasmaShield2,Modification.VitalMaxArray[Shields]" Value="0.75"/>
+        <EffectArray Operation="Multiply" Reference="Behavior,PlasmaShield3,Modification.VitalMaxArray[Shields]" Value="0.75"/>
+        <EffectArray Operation="Multiply" Reference="Behavior,PlasmaShield4,Modification.VitalMaxArray[Shields]" Value="0.75"/>
+        <EffectArray Operation="Set" Reference="Effect,GravitonChargePersistent1,PeriodCount" Value="40"/>
+        <EffectArray Operation="Set" Reference="Effect,GravitonChargePersistent2,PeriodCount" Value="50"/>
+        <EffectArray Operation="Set" Reference="Effect,GravitonChargePersistent3,PeriodCount" Value="60"/>
+        <EffectArray Operation="Set" Reference="Effect,GravitonChargePersistent4,PeriodCount" Value="70"/>
+    </CUpgrade>
+    <CBehaviorBuff id="GreenPhosphorus">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-fireroach-increasefiredamage.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <MaxStackCount value="20"/>
+        <MaxStackCountPerCaster value="15"/>
+        <Duration value="10"/>
+        <Period value="0.2"/>
+        <InitialEffect value="GreenPhosphorusDamageInit"/>
+        <PeriodicEffect value="GreenPhosphorusDamageDoT"/>
+        <Modification MoveSpeedBonus="-0.0117" LifeArmorBonus="-2"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Overburn">
+        <Tooltip value="Button/Tooltip/Overburn"/>
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-firebeam.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <DamageDealtFraction index="Spell" value="1"/>
+            <DamageDealtFraction index="Ranged" value="1"/>
+            <VitalRegenArray index="Life" value="-15"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Pyromaniac">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+</Catalog>

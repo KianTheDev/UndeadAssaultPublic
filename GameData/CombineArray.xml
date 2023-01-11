@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CSound id="ion" parent="MUSIC">
+        <AssetArray File="ion.ogg" Volume="3.000000,3.000000"/>
+        <SpeakerMix index="Center" value="1.000000"/>
+        <SpeakerMix index="BackLeft" value="1.000000"/>
+        <SpeakerMix index="BackRight" value="1.000000"/>
+        <SpeakerMix index="SideLeft" value="1.000000"/>
+        <SpeakerMix index="SideRight" value="1.000000"/>
+        <SustainFade index="1" Time="500" Volume="-96.000000"/>
+        <Volume value="3.000000,3.000000"/>
+    </CSound>
+    <CSound id="FinalWave" parent="MUSIC">
+        <AssetArray File="FinalWave.ogg" Volume="6.000000,6.000000"/>
+        <SpeakerMix index="Center" value="1.000000"/>
+        <SpeakerMix index="BackLeft" value="1.000000"/>
+        <SpeakerMix index="BackRight" value="1.000000"/>
+        <SpeakerMix index="SideLeft" value="1.000000"/>
+        <SpeakerMix index="SideRight" value="1.000000"/>
+        <SustainFade index="1" Time="500" Volume="-96.000000"/>
+        <Volume value="6.000000,6.000000"/>
+    </CSound>
+    <CSound id="idle" parent="MUSIC">
+        <AssetArray File="idle.ogg" Volume="6.000000,6.000000"/>
+        <SpeakerMix index="Center" value="1.000000"/>
+        <SpeakerMix index="BackLeft" value="1.000000"/>
+        <SpeakerMix index="BackRight" value="1.000000"/>
+        <SpeakerMix index="SideLeft" value="1.000000"/>
+        <SpeakerMix index="SideRight" value="1.000000"/>
+        <SustainFade index="1" Time="500" Volume="-96.000000"/>
+        <Volume value="6.000000,6.000000"/>
+    </CSound>
+    <CSound id="DP" parent="Alert">
+        <AssetArray File="DP.ogg" Volume="6.000000,6.000000"/>
+        <SpeakerMix index="BackLeft" value="1.000000"/>
+        <SpeakerMix index="BackRight" value="1.000000"/>
+        <SpeakerMix index="SideLeft" value="1.000000"/>
+        <SpeakerMix index="SideRight" value="1.000000"/>
+        <SustainFade index="1" Time="500" Volume="-96.000000"/>
+        <Volume value="6.000000,6.000000"/>
+        <Category value="Music"/>
+    </CSound>
+    <CSound id="vocaloid" parent="MUSIC">
+        <AssetArray File="vocaloid.ogg" Volume="6.000000,6.000000"/>
+        <SpeakerMix index="Center" value="1.000000"/>
+        <SpeakerMix index="BackLeft" value="1.000000"/>
+        <SpeakerMix index="BackRight" value="1.000000"/>
+        <SpeakerMix index="SideLeft" value="1.000000"/>
+        <SpeakerMix index="SideRight" value="1.000000"/>
+        <SustainFade index="1" Time="500" Volume="-96.000000"/>
+        <Volume value="6.000000,6.000000"/>
+    </CSound>
+    <CSound id="UAC_Intro_Song" parent="MUSIC">
+        <AssetArray File="UAC Intro Song.ogg" Volume="6.000000,6.000000"/>
+        <SpeakerMix index="Center" value="1.000000"/>
+        <SpeakerMix index="BackLeft" value="1.000000"/>
+        <SpeakerMix index="BackRight" value="1.000000"/>
+        <SpeakerMix index="SideLeft" value="1.000000"/>
+        <SpeakerMix index="SideRight" value="1.000000"/>
+        <SustainFade index="1" Time="500" Volume="-96.000000"/>
+        <Volume value="6.000000,6.000000"/>
+    </CSound>
+    <CSound id="TESTPASS" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="PASS.wav" FacialGroup=""/>
+        <Mode value="3DWorld"/>
+        <ReverbBalance Room="0"/>
+        <Volume value="6.000000,6.000000"/>
+    </CSound>
+    <CSound id="InitCase" parent="Alert">
+        <AssetArray File="InitCase.ogg" Volume="6.000000,6.000000"/>
+        <SpeakerMix index="BackLeft" value="1.000000"/>
+        <SpeakerMix index="BackRight" value="1.000000"/>
+        <SpeakerMix index="SideLeft" value="1.000000"/>
+        <SpeakerMix index="SideRight" value="1.000000"/>
+        <SustainFade index="1" Time="500" Volume="-96.000000"/>
+        <Volume value="6.000000,6.000000"/>
+    </CSound>
+    <CSound id="PPC" parent="Alert">
+        <AssetArray File="PPC.ogg" Volume="2.000000,2.000000"/>
+        <SpeakerMix index="BackLeft" value="1.000000"/>
+        <SpeakerMix index="BackRight" value="1.000000"/>
+        <SpeakerMix index="SideLeft" value="1.000000"/>
+        <SpeakerMix index="SideRight" value="1.000000"/>
+        <SustainFade index="1" Time="500" Volume="-96.000000"/>
+        <Volume value="2.000000,2.000000"/>
+        <Category value="Music"/>
+    </CSound>
+    <CSound id="PlatformPowerCore_Explosion_Deep_Meaty23" parent="Combat">
+        <AssetArray File="Assets\Sounds\El_Grande_Explosion_02a.wav" Pitch="-8.230000,-8.230000" FacialGroup=""/>
+        <FogFadeOut/>
+        <Mode value="2D"/>
+        <SpeakerMix index="FrontLeft" value="5.000000"/>
+        <SpeakerMix index="FrontRight" value="5.000000"/>
+        <SpeakerMix index="LFE" value="0.750000"/>
+        <SpeakerMix index="SideLeft" value="3.000000"/>
+        <SpeakerMix index="SideRight" value="3.000000"/>
+        <Volume value="6.000000,6.000000"/>
+    </CSound>
+    <CSound id="PlatformPowerCore_Explosion_Deep_Meaty232" parent="Combat">
+        <AssetArray File="Assets\Sounds\Quake_Rumble_01.wav" Pitch="-6.000000,-6.000000" FacialGroup=""/>
+        <FogFadeOut/>
+        <Mode value="2D"/>
+        <SpeakerMix index="FrontLeft" value="4.000000"/>
+        <SpeakerMix index="FrontRight" value="4.000000"/>
+        <SpeakerMix index="LFE" value="0.750000"/>
+        <SpeakerMix index="SideLeft" value="3.000000"/>
+        <SpeakerMix index="SideRight" value="3.000000"/>
+        <Volume value="6.000000,6.000000"/>
+    </CSound>
+    <CSound id="Event_Space02_CameraQuake"/>
+    <CSound id="RMX" parent="MUSIC">
+        <EditorCategories value="Race:Neutral"/>
+        <AssetArray File="RMX.ogg" Volume="6.000000,6.000000" FacialGroup=""/>
+        <SpeakerMix index="Center" value="1.000000"/>
+        <SpeakerMix index="BackLeft" value="1.000000"/>
+        <SpeakerMix index="BackRight" value="1.000000"/>
+        <SpeakerMix index="SideLeft" value="1.000000"/>
+        <SpeakerMix index="SideRight" value="1.000000"/>
+        <SustainFade index="1" Time="500" Volume="-96.000000"/>
+        <Volume value="6.000000,6.000000"/>
+    </CSound>
+    <CSound id="HOTS_Music_Zerus_Ambient" parent="MUSIC">
+        <AssetArray File="Assets\Music\HOTS_Music_Zerus_Ambient.ogg" Volume="6.000000,6.000000"/>
+        <SpeakerMix index="Center" value="1.000000"/>
+        <SpeakerMix index="BackLeft" value="1.000000"/>
+        <SpeakerMix index="BackRight" value="1.000000"/>
+        <SpeakerMix index="SideLeft" value="1.000000"/>
+        <SpeakerMix index="SideRight" value="1.000000"/>
+        <SustainFade index="1" Time="500" Volume="-96.000000"/>
+        <Volume value="6.000000,6.000000"/>
+    </CSound>
+    <CSound id="Music_ActionScary" parent="MUSIC">
+        <AssetArray File="Assets\Music\MissionMusic\Music_ActionScary.ogg" Volume="6.000000,6.000000"/>
+        <SpeakerMix index="Center" value="1.000000"/>
+        <SpeakerMix index="BackLeft" value="1.000000"/>
+        <SpeakerMix index="BackRight" value="1.000000"/>
+        <SpeakerMix index="SideLeft" value="1.000000"/>
+        <SpeakerMix index="SideRight" value="1.000000"/>
+        <SustainFade index="1" Time="500" Volume="-96.000000"/>
+        <Volume value="6.000000,6.000000"/>
+    </CSound>
+    <CSound id="Music_AmbientTension_Full" parent="MUSIC">
+        <AssetArray File="Assets\Music\MissionMusic\Music_AmbientTension_Full.ogg" Volume="6.000000,6.000000"/>
+        <SpeakerMix index="Center" value="1.000000"/>
+        <SpeakerMix index="BackLeft" value="1.000000"/>
+        <SpeakerMix index="BackRight" value="1.000000"/>
+        <SpeakerMix index="SideLeft" value="1.000000"/>
+        <SpeakerMix index="SideRight" value="1.000000"/>
+        <SustainFade index="1" Time="500" Volume="-96.000000"/>
+        <Volume value="6.000000,6.000000"/>
+    </CSound>
+    <CSound id="Music_DangerAlertPercClusters" parent="MUSIC">
+        <AssetArray File="Assets\Music\MissionMusic\Music_DangerAlertPerc&amp;Clusters.ogg" Volume="6.000000,6.000000"/>
+        <SpeakerMix index="Center" value="1.000000"/>
+        <SpeakerMix index="BackLeft" value="1.000000"/>
+        <SpeakerMix index="BackRight" value="1.000000"/>
+        <SpeakerMix index="SideLeft" value="1.000000"/>
+        <SpeakerMix index="SideRight" value="1.000000"/>
+        <SustainFade index="1" Time="500" Volume="-96.000000"/>
+        <Volume value="6.000000,6.000000"/>
+    </CSound>
+    <CSound id="Psi_StructurePowerUp2" parent="Death">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Psi_Destroyer_ShieldPowerDown_2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Psi_Destroyer_ShieldPowerDown_1.wav" FacialGroup=""/>
+        <Category value="Doodad"/>
+        <Pitch value="-10.000000,-8.000000"/>
+        <Volume value="6.000000,6.000000"/>
+    </CSound>
+    <CSound id="FMM" parent="MUSIC">
+        <AssetArray File="FMM.ogg" Volume="6.000000,6.000000"/>
+        <SpeakerMix index="Center" value="1.000000"/>
+        <SpeakerMix index="BackLeft" value="1.000000"/>
+        <SpeakerMix index="BackRight" value="1.000000"/>
+        <SpeakerMix index="SideLeft" value="1.000000"/>
+        <SpeakerMix index="SideRight" value="1.000000"/>
+        <SustainFade index="1" Time="500" Volume="-96.000000"/>
+        <Volume value="6.000000,6.000000"/>
+    </CSound>
+    <CSound id="TInit" parent="MUSIC">
+        <AssetArray File="Touhou.ogg" Volume="6.000000,6.000000"/>
+        <SpeakerMix index="Center" value="1.000000"/>
+        <SpeakerMix index="BackLeft" value="1.000000"/>
+        <SpeakerMix index="BackRight" value="1.000000"/>
+        <SpeakerMix index="SideLeft" value="1.000000"/>
+        <SpeakerMix index="SideRight" value="1.000000"/>
+        <SustainFade index="1" Time="500" Volume="-96.000000"/>
+        <Volume value="6.000000,6.000000"/>
+    </CSound>
+    <CSound id="SPC30" parent="Alert">
+        <AssetArray File="SPC30.ogg" Volume="6.000000,6.000000"/>
+        <SpeakerMix index="BackLeft" value="1.000000"/>
+        <SpeakerMix index="BackRight" value="1.000000"/>
+        <SpeakerMix index="SideLeft" value="1.000000"/>
+        <SpeakerMix index="SideRight" value="1.000000"/>
+        <SustainFade index="1" Time="500" Volume="-96.000000"/>
+        <Volume value="6.000000,6.000000"/>
+        <Category value="Music"/>
+    </CSound>
+    <CSound id="CAUTION_E" parent="Alert">
+        <AssetArray File="Assets\Music\MissionMusic\LibertyMusicCreepStinger_E.ogg" Volume="6.000000,6.000000"/>
+        <Volume value="6.000000,6.000000"/>
+        <Category value="Music"/>
+    </CSound>
+    <CSound id="Terran1V" parent="Alert">
+        <AssetArray File="Assets\Music\TerranSC2-01.ogg" Volume="6.000000,6.000000"/>
+        <Volume value="6.000000,6.000000"/>
+        <Category value="Music"/>
+    </CSound>
+    <CSound id="Music_DangerAlertClustersO" parent="Alert">
+        <AssetArray File="Assets\Music\MissionMusic\Music_DangerAlertClustersOnly.ogg" Volume="6.000000,6.000000"/>
+        <SpeakerMix index="BackLeft" value="1.000000"/>
+        <SpeakerMix index="BackRight" value="1.000000"/>
+        <SpeakerMix index="SideLeft" value="1.000000"/>
+        <SpeakerMix index="SideRight" value="1.000000"/>
+        <SustainFade index="1" Time="500" Volume="-96.000000"/>
+        <Volume value="6.000000,6.000000"/>
+        <Category value="Music"/>
+    </CSound>
+    <CSound id="Roach_Pissed" parent="Alert">
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Pissed0.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Pissed1.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Pissed2.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Pissed3.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Pissed4.ogg"/>
+        <EditorCategories value="Race:Zerg"/>
+        <Volume value="6.000000,6.000000"/>
+        <Pitch value="-1.000000,1.000000"/>
+    </CSound>
+    <CSound id="EPPN" parent="Alert">
+        <AssetArray File="EPPN.ogg" Volume="1.000000,1.000000"/>
+        <SpeakerMix index="BackLeft" value="1.000000"/>
+        <SpeakerMix index="BackRight" value="1.000000"/>
+        <SpeakerMix index="SideLeft" value="1.000000"/>
+        <SpeakerMix index="SideRight" value="1.000000"/>
+        <Volume value="1.000000,1.000000"/>
+        <Category value="Music"/>
+    </CSound>
+    <CSound id="DarkF" parent="Alert">
+        <AssetArray File="Dark.ogg" Volume="6.000000,6.000000"/>
+        <SpeakerMix index="BackLeft" value="1.000000"/>
+        <SpeakerMix index="BackRight" value="1.000000"/>
+        <SpeakerMix index="SideLeft" value="1.000000"/>
+        <SpeakerMix index="SideRight" value="1.000000"/>
+        <Volume value="6.000000,6.000000"/>
+        <Category value="Music"/>
+    </CSound>
+    <CSoundtrack id="ion" parent="Music">
+        <CueArray>
+            <MasterLayer Sound="ion"/>
+        </CueArray>
+    </CSoundtrack>
+    <CSoundtrack id="FinalWave" parent="Music">
+        <CueArray>
+            <MasterLayer Sound="FinalWave"/>
+        </CueArray>
+    </CSoundtrack>
+    <CSoundtrack id="idle" parent="Music">
+        <CueArray>
+            <MasterLayer Sound="idle"/>
+        </CueArray>
+    </CSoundtrack>
+    <CSoundtrack id="DP" parent="Music">
+        <CueArray>
+            <MasterLayer Sound="DP"/>
+        </CueArray>
+    </CSoundtrack>
+    <CSoundtrack id="vocaloid" parent="Music">
+        <CueArray>
+            <MasterLayer Sound="vocaloid"/>
+        </CueArray>
+    </CSoundtrack>
+    <CSoundtrack id="UAC_Intro_Song" parent="Music">
+        <CueArray>
+            <MasterLayer Sound="UAC_Intro_Song"/>
+        </CueArray>
+    </CSoundtrack>
+    <CSoundtrack id="PPC" parent="Music">
+        <CueArray>
+            <MasterLayer Sound="PPC"/>
+        </CueArray>
+    </CSoundtrack>
+    <CSoundtrack id="InitCase" parent="Music">
+        <CueArray>
+            <MasterLayer Sound="InitCase"/>
+        </CueArray>
+    </CSoundtrack>
+    <CSoundtrack id="RMX" parent="Music">
+        <CueArray>
+            <MasterLayer Sound="RMX"/>
+        </CueArray>
+    </CSoundtrack>
+    <CSoundtrack id="LostViking_MusicGameLoop" parent="Music">
+        <CueArray>
+            <MasterLayer Sound="LostViking_MusicGameLoop"/>
+        </CueArray>
+    </CSoundtrack>
+    <CSoundtrack id="HOTS_Music_Zerus_Ambient" parent="Music">
+        <CueArray>
+            <MasterLayer Sound="HOTS_Music_Zerus_Ambient"/>
+        </CueArray>
+    </CSoundtrack>
+    <CSoundtrack id="Music_ActionScary" parent="Music">
+        <CueArray>
+            <MasterLayer Sound="Music_ActionScary"/>
+        </CueArray>
+    </CSoundtrack>
+    <CSoundtrack id="FMM" parent="Music">
+        <CueArray>
+            <MasterLayer Sound="FMM"/>
+        </CueArray>
+    </CSoundtrack>
+    <CSoundtrack id="TInit" parent="Music">
+        <CueArray>
+            <MasterLayer Sound="TInit"/>
+        </CueArray>
+    </CSoundtrack>
+    <CSoundtrack id="SPC30" parent="Music">
+        <CueArray>
+            <MasterLayer Sound="SPC30"/>
+        </CueArray>
+    </CSoundtrack>
+    <CSoundtrack id="EPPN" parent="Music">
+        <CueArray>
+            <MasterLayer Sound="EPPN"/>
+        </CueArray>
+    </CSoundtrack>
+    <CSoundtrack id="DarkF" parent="Music">
+        <CueArray>
+            <MasterLayer Sound="DarkF"/>
+        </CueArray>
+    </CSoundtrack>
+</Catalog>

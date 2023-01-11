@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CEffectLaunchMissile id="CrowdControlLMTest">
+        <ValidatorArray index="0" removed="1"/>
+        <EditorCategories value="Race:Terran"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <ImpactOffset value="0.4,0,0"/>
+        <ImpactEffect value="CrowdControlSetTest"/>
+        <Flags index="Placement" value="1"/>
+        <Flags index="PlacementIgnoreBlockers" value="1"/>
+        <AmmoUnit value="40mmGrenade2"/>
+        <PlacementRange value="2"/>
+    </CEffectLaunchMissile>
+    <CEffectSet id="CrowdControlSetTest">
+        <EditorCategories value="Race:Terran"/>
+        <EffectArray value="CrowdControlDamageTest"/>
+        <EffectArray value="CrowdControlImpact"/>
+        <TargetLocationType value="Point"/>
+    </CEffectSet>
+    <CEffectDamage id="CrowdControlDamageTest">
+        <EditorCategories value="Race:Terran"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <AttributeFactor index="Armored" value="-0.075"/>
+        <AttributeFactor index="Mechanical" value="-0.075"/>
+        <AttributeFactor index="Heroic" value="-0.5"/>
+        <AttributeFactor index="Summoned" value="-0.5"/>
+        <Amount value="300"/>
+        <Random value="50"/>
+        <AreaArray Radius="3.65" Fraction="1"/>
+        <SearchFilters value="Ground;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+        <Death value="Blast"/>
+    </CEffectDamage>
+    <CAbilEffectTarget id="CrowdControlTest">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="CrowdControlLMTest"/>
+        <Effect value="CrowdControlLMTest"/>
+        <Effect value="CrowdControlLMTest"/>
+        <Effect value="CrowdControlLMTest"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Display index="Energy" value="1"/>
+            <Vital index="Energy" value="85"/>
+            <Charge HideCount="1" Link="Abil/CrowdControl" Location="Unit"/>
+            <Cooldown Link="Abil/CrowdControl" Location="Unit" TimeUse="40"/>
+        </Cost>
+        <Cost>
+            <Display index="Energy" value="1"/>
+            <Vital index="Energy" value="80"/>
+            <Charge HideCount="1" Link="Abil/CrowdControl" Location="Unit"/>
+            <Cooldown Link="Abil/CrowdControl" Location="Unit" TimeUse="35"/>
+        </Cost>
+        <Cost>
+            <Display index="Energy" value="1"/>
+            <Vital index="Energy" value="75"/>
+            <Charge HideCount="1" Link="Abil/CrowdControl" Location="Unit"/>
+            <Cooldown Link="Abil/CrowdControl" Location="Unit" TimeUse="30"/>
+        </Cost>
+        <Cost>
+            <Display index="Energy" value="1"/>
+            <Vital index="Energy" value="70"/>
+            <Charge HideCount="1" Link="Abil/CrowdControl" Location="Unit"/>
+            <Cooldown Link="Abil/CrowdControl" Location="Unit" TimeUse="25"/>
+        </Cost>
+        <Range value="25"/>
+        <Range value="28"/>
+        <Range value="30"/>
+        <Range value="35"/>
+        <CursorEffect value="MGLDamage1"/>
+        <CursorEffect value="MGLDamage2"/>
+        <CursorEffect value="MGLDamage3"/>
+        <CursorEffect value="MGLDamage4"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="CrowdControlTest"/>
+    </CAbilEffectTarget>
+    <CAbilLearn id="LearnAbilitiesEnforcer" parent="LearnAbilityMOS">
+        <Name value="Abil/Name/LearnAbilitiesEnforcer"/>
+        <InfoArray index="Learn1" Abil="SoldierSkills">
+            <Button DefaultButtonFace="LearnSoldierSkills" Requirements=""/>
+        </InfoArray>
+        <InfoArray index="Learn2" Abil="ProtectandServe">
+            <Button DefaultButtonFace="ProtectandServe" Requirements=""/>
+        </InfoArray>
+        <InfoArray index="Learn3" Abil="Marksmanship">
+            <Charge CountMax="100" CountStart="100"/>
+            <Button DefaultButtonFace="LearnMarksmanship"/>
+        </InfoArray>
+        <InfoArray index="Learn4" Abil="CrowdControl">
+            <Charge CountMax="100" CountStart="100"/>
+            <Button DefaultButtonFace="CrowdControl"/>
+        </InfoArray>
+        <InfoArray index="Learn5" Abil="DefensiveTactics">
+            <Charge CountMax="100" CountStart="100"/>
+            <Button DefaultButtonFace="DefensiveTactics"/>
+        </InfoArray>
+        <InfoArray index="Learn6" Abil="CrowdControlTest">
+            <Charge CountMax="100" CountStart="100"/>
+            <Button DefaultButtonFace="CrowdControlTest"/>
+        </InfoArray>
+    </CAbilLearn>
+    <CButton id="CrowdControlTest">
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel3.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel3.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CUpgrade id="CrowdControl1">
+        <EffectArray Operation="Set" Reference="Effect,CrowdControlSA,AreaArray[0].Radius" Value="3.5"/>
+        <EffectArray Operation="Set" Reference="Behavior,CrowdControlSmokeTimedLife,Duration" Value="35.000000"/>
+        <EffectArray Operation="Set" Reference="Actor,CrowdControlUnit,Scale" Value="1.166000,1.166000,1.000000"/>
+        <EffectArray Operation="Set" Reference="Effect,CrowdControlDamageTest,Amount" Value="450"/>
+        <EditorCategories value="Race:Terran,UpgradeType:SpellResearch"/>
+    </CUpgrade>
+    <CUpgrade id="CrowdControl2">
+        <EffectArray Operation="Set" Reference="Effect,CrowdControlSA,AreaArray[0].Radius" Value="4"/>
+        <EffectArray Operation="Set" Reference="Behavior,CrowdControlSmokeTimedLife,Duration" Value="40.000000"/>
+        <EffectArray Operation="Set" Reference="Actor,CrowdControlUnit,Scale" Value="1.332000,1.332000,1.000000"/>
+        <EffectArray Operation="Set" Reference="Effect,CrowdControlDamageTest,Amount" Value="600"/>
+        <EditorCategories value="Race:Terran,UpgradeType:SpellResearch"/>
+        <LeaderAlias value="CrowdControl1"/>
+    </CUpgrade>
+    <CUpgrade id="CrowdControl3">
+        <EffectArray Operation="Set" Reference="Effect,CrowdControlSA,AreaArray[0].Radius" Value="4.5"/>
+        <EffectArray Operation="Set" Reference="Behavior,CrowdControlSmokeTimedLife,Duration" Value="45.000000"/>
+        <EffectArray Operation="Set" Reference="Actor,CrowdControlUnit,Scale" Value="1.498000,1.498000,1.000000"/>
+        <EffectArray Operation="Set" Reference="Effect,CrowdControlDamageTest,Amount" Value="750"/>
+        <EditorCategories value="Race:Terran,UpgradeType:SpellResearch"/>
+        <LeaderAlias value="CrowdControl1"/>
+    </CUpgrade>
+</Catalog>

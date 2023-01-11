@@ -1,0 +1,1324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CEffectCreateUnit id="ChooseRifleman">
+        <EditorCategories value="Race:Terran"/>
+        <SpawnUnit value="Rifleman"/>
+    </CEffectCreateUnit>
+    <CEffectCreateUnit id="ChooseRiflemanOld">
+        <EditorCategories value="Race:Terran"/>
+        <SpawnUnit value="RiflemanOld"/>
+    </CEffectCreateUnit>
+    <CAbilBehavior id="DisengageLimiter">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="DisengageLimiter" Requirements="SoldierSkills02MAW">
+            <Flags index="ShowInGlossary" value="0"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="Off" DefaultButtonFace="ReengageLimiter"/>
+        <Flags index="Toggle" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="25"/>
+            <Charge Link="Abil/FiremodeCarbine"/>
+            <Cooldown Link="Abil/FiremodeCarbine" TimeUse="3"/>
+        </Cost>
+        <BehaviorArray value="SafetyLimiter"/>
+    </CAbilBehavior>
+    <CAbilEffectTarget id="PlasmaGrenadeRifleman">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="PlasmaGrenadeLaunch1"/>
+        <Effect value="PlasmaGrenadeLaunch2"/>
+        <Effect value="PlasmaGrenadeLaunch3"/>
+        <Effect value="PlasmaGrenadeLaunch4"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Vital index="Energy" value="75"/>
+            <Charge Link="Abil/PlasmaGrenade"/>
+            <Cooldown Link="Abil/PlasmaGrenade" TimeUse="35"/>
+        </Cost>
+        <Cost>
+            <Vital index="Energy" value="70"/>
+            <Charge Link="Abil/PlasmaGrenade"/>
+            <Cooldown Link="Abil/PlasmaGrenade" TimeUse="30"/>
+        </Cost>
+        <Cost>
+            <Vital index="Energy" value="65"/>
+            <Charge Link="Abil/PlasmaGrenade"/>
+            <Cooldown Link="Abil/PlasmaGrenade" TimeUse="25"/>
+        </Cost>
+        <Cost>
+            <Vital index="Energy" value="60"/>
+            <Charge Link="Abil/PlasmaGrenade"/>
+            <Cooldown Link="Abil/PlasmaGrenade" TimeUse="20"/>
+        </Cost>
+        <InterruptCost>
+            <Charge Link="Abil/PlasmaGrenade"/>
+            <Cooldown Link="Abil/PlasmaGrenade"/>
+        </InterruptCost>
+        <Range value="14"/>
+        <PrepTime value="0.2"/>
+        <PrepTime value="0.1"/>
+        <PrepTime value="0.1"/>
+        <PrepTime value="0.01"/>
+        <Marker Link="Abil/PlasmaGrenade"/>
+        <CursorEffect value="PlasmaGrenadeDamage1"/>
+        <AINotifyEffect value="PlasmaGrenade"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="PlasmaGrenade" Requirements="AWPlasmaGrenReq"/>
+    </CAbilEffectTarget>
+    <CAbilEffectInstant id="ChooseBetaRifleman">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Flags index="AbortOnAllianceChange" value="0"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Charge>
+                <CountMax value="12"/>
+                <CountStart value="12"/>
+                <CountUse value="1"/>
+                <Link value="Abil/ChooseRifleman"/>
+                <Location value="Global"/>
+            </Charge>
+            <Cooldown Link="ChooseHero" Location="Player" TimeUse="1"/>
+        </Cost>
+        <InterruptCost>
+            <Charge Link="Abil/ChooseRifleman"/>
+            <Cooldown Link="Abil/ChooseRifleman"/>
+        </InterruptCost>
+        <Marker Link="Abil/ChooseRifleman"/>
+        <AINotifyEffect value="ChooseRifleman"/>
+        <ProducedUnitArray value="BetaRifleman"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="ChooseBetaRifleman" Requirements="HasNoBasicBitch"/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="ChooseRifleman">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Flags index="AbortOnAllianceChange" value="0"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Charge>
+                <CountMax value="12"/>
+                <CountStart value="12"/>
+                <CountUse value="1"/>
+                <Location value="Global"/>
+            </Charge>
+            <Cooldown Link="ChooseHero" Location="Player" TimeUse="1"/>
+        </Cost>
+        <ProducedUnitArray value="Rifleman"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Rifleman" Requirements="HasNoBasicBitch"/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="RiflemanSkills">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" removed="1"/>
+        <Flags index="AbortOnAllianceChange" value="0"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Flags index="Transient" value="1"/>
+        <Cost/>
+        <Cost/>
+        <Cost/>
+        <Cost/>
+        <Marker Link="Abil/SoldierSkills"/>
+        <AINotifyEffect value=""/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="RiflemanSkills"/>
+    </CAbilEffectInstant>
+    <CAbilEffectTarget id="MGL">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="MGLLaunch1"/>
+        <Effect value="MGLLaunch2"/>
+        <Effect value="MGLLaunch3"/>
+        <Effect value="MGLLaunch4"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Display index="Energy" value="1"/>
+            <Vital index="Energy" value="85"/>
+            <Charge HideCount="1" Link="Abil/MGLItem" Location="Unit"/>
+            <Cooldown Link="Abil/FragGrenade" TimeStart="0.5" TimeUse="30"/>
+        </Cost>
+        <Cost>
+            <Display index="Energy" value="1"/>
+            <Vital index="Energy" value="80"/>
+            <Charge HideCount="1" Link="Abil/MGLItem" Location="Unit"/>
+            <Cooldown Link="Abil/FragGrenade" TimeStart="0.5" TimeUse="25"/>
+        </Cost>
+        <Cost>
+            <Display index="Energy" value="1"/>
+            <Vital index="Energy" value="75"/>
+            <Charge HideCount="1" Link="Abil/MGLItem" Location="Unit"/>
+            <Cooldown Link="Abil/FragGrenade" TimeStart="0.5" TimeUse="20"/>
+        </Cost>
+        <Cost>
+            <Display index="Energy" value="1"/>
+            <Vital index="Energy" value="70"/>
+            <Charge HideCount="1" Link="Abil/MGLItem" Location="Unit"/>
+            <Cooldown Link="Abil/FragGrenade" TimeStart="0.5" TimeUse="15"/>
+        </Cost>
+        <Range value="25"/>
+        <Range value="28"/>
+        <Range value="30"/>
+        <Range value="35"/>
+        <Marker Link="Abil/FragGrenadeLevel1"/>
+        <CursorEffect value="MGLDamage1"/>
+        <CursorEffect value="MGLDamage2"/>
+        <CursorEffect value="MGLDamage3"/>
+        <CursorEffect value="MGLDamage4"/>
+        <AINotifyEffect value="MGLDamage"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MGLRifleman" Requirements="RifleMGL"/>
+    </CAbilEffectTarget>
+    <CAbilLearn id="LearnAbilitiesRiflemanOld" parent="LearnAbilityMOS">
+        <Name value="Abil/Name/LearnAbilitiesRiflemanOld"/>
+        <InfoArray index="Learn1" Abil="SoldierSkills">
+            <Charge CountMax="1" CountStart="1"/>
+            <Button DefaultButtonFace="LearnSoldierSkills" Requirements=""/>
+        </InfoArray>
+        <InfoArray index="Learn2" Abil="FragGrenade">
+            <Charge CountMax="1" CountStart="1"/>
+            <Button DefaultButtonFace="LearnFragGrenade" Requirements=""/>
+        </InfoArray>
+        <InfoArray index="Learn3" Abil="Marksmanship">
+            <Button DefaultButtonFace="LearnMarksmanship"/>
+        </InfoArray>
+        <InfoArray index="Learn4" Abil="RiflemanSkills">
+            <Button DefaultButtonFace="RiflemanSkillsOld"/>
+        </InfoArray>
+    </CAbilLearn>
+    <CAbilLearn id="LearnAbilitiesRifleman">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <TechAliasArray value="Learn Ability MOS Alias"/>
+        <InfoArray index="Learn1" Abil="SoldierSkills">
+            <Charge>
+                <CountMax value="100"/>
+                <CountStart value="100"/>
+                <CountUse value="1"/>
+                <Link value="Abil/LearnAbilityMOS"/>
+                <Location value="Unit"/>
+            </Charge>
+            <Button DefaultButtonFace="LearnSoldierSkills"/>
+        </InfoArray>
+        <InfoArray index="Learn2" Abil="MGLBeta">
+            <Charge>
+                <CountMax value="100"/>
+                <CountStart value="100"/>
+                <CountUse value="1"/>
+                <Link value="Abil/LearnAbilityMOS"/>
+                <Location value="Unit"/>
+            </Charge>
+            <Button DefaultButtonFace="MGLNew" Requirements="LearnM32GrenadeLauncher"/>
+        </InfoArray>
+        <InfoArray index="Learn3" Abil="Marksmanship">
+            <Charge>
+                <CountMax value="100"/>
+                <CountStart value="100"/>
+                <CountUse value="1"/>
+                <Link value="Abil/LearnAbilityMOS"/>
+                <Location value="Unit"/>
+            </Charge>
+            <Button DefaultButtonFace="LearnMarksmanship"/>
+        </InfoArray>
+        <InfoArray index="Learn4" Abil="RiflemanSkills">
+            <Charge>
+                <CountMax value="100"/>
+                <CountStart value="100"/>
+                <CountUse value="1"/>
+                <Link value="Abil/LearnAbilityMOS"/>
+                <Location value="Unit"/>
+            </Charge>
+            <Button DefaultButtonFace="RiflemanSkills"/>
+        </InfoArray>
+        <InfoArray index="Learn5" Abil="PlasmaGrenadeRifleman">
+            <Charge>
+                <CountMax value="100"/>
+                <CountStart value="100"/>
+                <CountUse value="1"/>
+                <Link value="Abil/LearnAbilityMOS"/>
+                <Location value="Unit"/>
+            </Charge>
+            <Button DefaultButtonFace="PlasmaGrenade" Requirements="AWPlasmaGrenReq"/>
+        </InfoArray>
+        <InfoArray index="Learn6">
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Link value="Abil/LearnAbilityMOS"/>
+                <Location value="Unit"/>
+            </Charge>
+        </InfoArray>
+        <InfoArray index="Learn7">
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Link value="Abil/LearnAbilityMOS"/>
+                <Location value="Unit"/>
+            </Charge>
+        </InfoArray>
+        <InfoArray index="Learn8">
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Link value="Abil/LearnAbilityMOS"/>
+                <Location value="Unit"/>
+            </Charge>
+        </InfoArray>
+        <InfoArray index="Learn9">
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Link value="Abil/LearnAbilityMOS"/>
+                <Location value="Unit"/>
+            </Charge>
+        </InfoArray>
+        <InfoArray index="Learn10">
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Link value="Abil/LearnAbilityMOS"/>
+                <Location value="Unit"/>
+            </Charge>
+        </InfoArray>
+        <InfoArray index="Learn11">
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Link value="Abil/LearnAbilityMOS"/>
+                <Location value="Unit"/>
+            </Charge>
+        </InfoArray>
+        <InfoArray index="Learn12">
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Link value="Abil/LearnAbilityMOS"/>
+                <Location value="Unit"/>
+            </Charge>
+        </InfoArray>
+        <InfoArray index="Learn13">
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Link value="Abil/LearnAbilityMOS"/>
+                <Location value="Unit"/>
+            </Charge>
+        </InfoArray>
+        <InfoArray index="Learn14">
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Link value="Abil/LearnAbilityMOS"/>
+                <Location value="Unit"/>
+            </Charge>
+        </InfoArray>
+        <InfoArray index="Learn15">
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Link value="Abil/LearnAbilityMOS"/>
+                <Location value="Unit"/>
+            </Charge>
+        </InfoArray>
+        <InfoArray index="Learn16">
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Link value="Abil/LearnAbilityMOS"/>
+                <Location value="Unit"/>
+            </Charge>
+        </InfoArray>
+        <InfoArray index="Learn17">
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Link value="Abil/LearnAbilityMOS"/>
+                <Location value="Unit"/>
+            </Charge>
+        </InfoArray>
+        <InfoArray index="Learn18">
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Link value="Abil/LearnAbilityMOS"/>
+                <Location value="Unit"/>
+            </Charge>
+        </InfoArray>
+        <InfoArray index="Learn19">
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Link value="Abil/LearnAbilityMOS"/>
+                <Location value="Unit"/>
+            </Charge>
+        </InfoArray>
+        <InfoArray index="Learn20">
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Link value="Abil/LearnAbilityMOS"/>
+                <Location value="Unit"/>
+            </Charge>
+        </InfoArray>
+        <Flags index="HideOnMaxLevel" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <PointsPerLevel value="1"/>
+    </CAbilLearn>
+    <CUnit id="RiflemanOld2" parent="UnitTemplate">
+        <Description value="Button/Tooltip/Rifleman"/>
+        <DeathRevealFilters value="Visible;Enemy,Missile,Hidden"/>
+        <Race value="Terr"/>
+        <LifeArmorDisplayFlags index="CollapseBuffed" value="0"/>
+        <LifeRegenRate value="0.25"/>
+        <LifeArmorName value="Unit/LifeArmorName/LandWarriorSystemLight"/>
+        <SpeedDisplayFlags index="CollapseBuffed" value="0"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="50"/>
+        <RepairTime value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="HeroInventoryRifle"/>
+        <AbilArray Link="LearnAbilitiesRiflemanOld"/>
+        <AbilArray Link="FragGrenade"/>
+        <AbilArray Link="SoldierSkills"/>
+        <AbilArray Link="Sprint"/>
+        <AbilArray Link="ReloadHero"/>
+        <AbilArray Link="ImmediateRemedialAction"/>
+        <AbilArray Link="PerformSelfAid"/>
+        <AbilArray Link="FiremodeAssaultRifle"/>
+        <AbilArray Link="Marksmanship"/>
+        <AbilArray Link="DropMagazine"/>
+        <AbilArray Link="SmokeGrenade"/>
+        <AbilArray Link="RiflemanSkills"/>
+        <AbilArray Link="GroundFlare"/>
+        <AbilArray Link="Marksmanship"/>
+        <AbilArray Link="ImprovedGroundFlare"/>
+        <AbilArray Link="ImprovedSmokeGrenade"/>
+        <AbilArray Link="Jump"/>
+        <AbilArray Link="Prone"/>
+        <AbilArray Link="FlareGunWO5"/>
+        <AbilArray Link="FocusFireOld"/>
+        <AbilArray Link="MGL"/>
+        <AbilArray Link="WeaponsHold2"/>
+        <AbilArray Link="ImprovedGroundFlareMGL"/>
+        <AbilArray Link="ImprovedSmokeGrenadeMGL"/>
+        <BehaviorArray Link="HeroLevels"/>
+        <BehaviorArray Link="Fitness"/>
+        <BehaviorArray Link="Dexterity"/>
+        <BehaviorArray Link="Mechanical"/>
+        <BehaviorArray Link="StartingStats"/>
+        <BehaviorArray Link="RifleButt"/>
+        <BehaviorArray Link="Marksmanship1"/>
+        <BehaviorArray Link="Marksmanship2"/>
+        <BehaviorArray Link="Marksmanship3"/>
+        <BehaviorArray Link="Marksmanship4"/>
+        <BehaviorArray Link="SoldierSkills1"/>
+        <BehaviorArray Link="SoldierSkills2"/>
+        <BehaviorArray Link="SoldierSkills3"/>
+        <BehaviorArray Link="SoldierSkills4"/>
+        <BehaviorArray Link="ExpertMarksman"/>
+        <BehaviorArray Link="GasMaskRifleman"/>
+        <BehaviorArray Link="Criticallvl1"/>
+        <BehaviorArray Link="Criticallvl2"/>
+        <BehaviorArray Link="Criticallvl3"/>
+        <BehaviorArray Link="Criticallvl4"/>
+        <BehaviorArray Link="AllyDamageReducerRanged"/>
+        <WeaponArray index="0" Link="HeroAssaultRifle"/>
+        <EffectArray index="Birth" value="EquipRiflemanSet"/>
+        <EffectArray index="Revive" value="EquipRiflemanSet"/>
+        <CardLayouts>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="3"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons>
+                <Face value="LearnAbilities"/>
+                <Type value="Submenu"/>
+                <SubmenuAbilState value="LearnAbilitiesRiflemanOld"/>
+                <SubmenuCardId value="0002"/>
+                <Row value="1"/>
+                <Column value="4"/>
+            </LayoutButtons>
+            <LayoutButtons Face="SmokeGrenade" Type="AbilCmd" AbilCmd="SmokeGrenade,Execute" Row="2" Column="3"/>
+            <LayoutButtons Face="SmokeGrenadeMGL" Type="AbilCmd" AbilCmd="ImprovedSmokeGrenadeMGL,Execute" Row="2" Column="3"/>
+            <LayoutButtons Face="SmokeGrenade" Type="AbilCmd" AbilCmd="ImprovedSmokeGrenade,Execute" Row="2" Column="3"/>
+            <LayoutButtons Face="AdditionalActions" Type="Submenu" SubmenuCardId="0003" Row="1" Column="3"/>
+            <LayoutButtons Face="MGLRifleman" Type="AbilCmd" AbilCmd="MGL,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="FragGrenade" Type="AbilCmd" AbilCmd="FragGrenade,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="GroundFlare" Type="AbilCmd" AbilCmd="GroundFlare,Execute" Row="2" Column="4"/>
+            <LayoutButtons Face="GroundFlareMGL" Type="AbilCmd" AbilCmd="ImprovedGroundFlareMGL,Execute" Row="2" Column="4"/>
+            <LayoutButtons Face="GroundFlare" Type="AbilCmd" AbilCmd="ImprovedGroundFlare,Execute" Row="2" Column="4"/>
+            <LayoutButtons Face="FocusFireLevel1" Type="AbilCmd" AbilCmd="FocusFireOld,255" Row="1" Column="0"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="2"/>
+            <LayoutButtons Face="FiremodeBurst2" Type="AbilCmd" AbilCmd="FiremodeAssaultRifle,On" Row="1" Column="1"/>
+            <LayoutButtons Face="FiremodeSemi2" Type="AbilCmd" AbilCmd="FiremodeAssaultRifle,Off" Row="1" Column="1"/>
+        </CardLayouts>
+        <CardLayouts CardId="0002">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="LearnSoldierSkills" Type="AbilCmd" AbilCmd="LearnAbilitiesRiflemanOld,255" Row="0" Column="0"/>
+            <LayoutButtons Face="LearnFragGrenade" Type="AbilCmd" AbilCmd="LearnAbilitiesRiflemanOld,255" Row="0" Column="2"/>
+            <LayoutButtons Face="Marksmanship" Type="AbilCmd" AbilCmd="LearnAbilitiesRiflemanOld,255" Row="0" Column="1"/>
+            <LayoutButtons Face="RiflemanSkillsOld" Type="AbilCmd" AbilCmd="LearnAbilitiesRiflemanOld,255" Row="0" Column="3"/>
+        </CardLayouts>
+        <CardLayouts CardId="0003">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="ImmediateRemedialAction" Type="AbilCmd" AbilCmd="ImmediateRemedialAction,Execute" Row="0" Column="2"/>
+            <LayoutButtons Face="DropMagazine" Type="AbilCmd" AbilCmd="DropMagazine,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="PerformSelfAid" Type="AbilCmd" AbilCmd="PerformSelfAid,Execute" Row="1" Column="0"/>
+            <LayoutButtons Face="Prone" Type="AbilCmd" AbilCmd="Prone,Execute" Row="0" Column="3"/>
+            <LayoutButtons Face="Reload" Type="AbilCmd" AbilCmd="ReloadHero,Execute" Row="0" Column="0"/>
+            <LayoutButtons>
+                <Face value="RifleButt"/>
+                <Type value="Passive"/>
+                <Behavior value="RifleButt"/>
+                <Requirements value="RifleButt"/>
+                <Row value="2"/>
+                <Column value="2"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="ExpertMarksman"/>
+                <Type value="Passive"/>
+                <Behavior value="ExpertMarksman"/>
+                <Requirements value="RankCSM"/>
+                <Row value="2"/>
+                <Column value="3"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="Marksmanship"/>
+                <Type value="Passive"/>
+                <Behavior value="Marksmanship4"/>
+                <Requirements value="Marksmanship04"/>
+                <Row value="2"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="Marksmanship"/>
+                <Type value="Passive"/>
+                <Behavior value="Marksmanship3"/>
+                <Requirements value="Marksmanship03"/>
+                <Row value="2"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="Marksmanship"/>
+                <Type value="Passive"/>
+                <Behavior value="Marksmanship2"/>
+                <Requirements value="Marksmanship02"/>
+                <Row value="2"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="Marksmanship"/>
+                <Type value="Passive"/>
+                <Behavior value="Marksmanship1"/>
+                <Requirements value="Marksmanship01M"/>
+                <Row value="2"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel4"/>
+                <Type value="Passive"/>
+                <Behavior value="SoldierSkills4"/>
+                <Requirements value="SoldierSkills04"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel3"/>
+                <Type value="Passive"/>
+                <Behavior value="SoldierSkills3"/>
+                <Requirements value="SoldierSkills03"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel2"/>
+                <Type value="Passive"/>
+                <Behavior value="SoldierSkills2"/>
+                <Requirements value="SoldierSkills02"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel1"/>
+                <Type value="Passive"/>
+                <Behavior value="SoldierSkills1"/>
+                <Requirements value="SoldierSkills01"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons Face="FlareGun" Type="AbilCmd" AbilCmd="FlareGunWO5,Execute" Row="1" Column="1"/>
+            <LayoutButtons>
+                <Face value="GasMask"/>
+                <Type value="Passive"/>
+                <Behavior value="GasMaskRifleman"/>
+                <Requirements value="SoldierSkills04M"/>
+                <Row value="1"/>
+                <Column value="2"/>
+            </LayoutButtons>
+            <LayoutButtons Face="HoldFire3" Type="AbilCmd" AbilCmd="WeaponsHold2,On" Row="1" Column="3"/>
+            <LayoutButtons Face="HoldFireOff2" Type="AbilCmd" AbilCmd="WeaponsHold2,Off" Row="1" Column="3"/>
+        </CardLayouts>
+        <Radius value="0.375"/>
+        <SeparationRadius value="0.375"/>
+        <DeadInnerRadius value="0"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="15"/>
+        <EditorCategories value="ObjectType:Hero,ObjectFamily:Melee"/>
+        <TacticalAI value="Marine"/>
+        <LeaderAlias value="RiflemanOld"/>
+        <HotkeyAlias value="Marine"/>
+        <SelectAlias value="RiflemanOld"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="21"/>
+        <HotkeyCategory value="Unit/Category/TerranUnits"/>
+        <AIEvaluateAlias value="Marine"/>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
+        <ReviveInfoBase>
+            <Charge Link="Marine/Revive"/>
+            <Cooldown Link="Marine/Revive"/>
+        </ReviveInfoBase>
+        <Attributes index="Light" value="0"/>
+    </CUnit>
+    <CUnit id="RiflemanOld" parent="UnitTemplate">
+        <DeathRevealFilters value="Visible;Enemy,Missile,Hidden"/>
+        <Race value="Terr"/>
+        <LifeArmorDisplayFlags index="CollapseBuffed" value="0"/>
+        <LifeRegenRate value="0.25"/>
+        <LifeArmorName value="Unit/LifeArmorName/LandWarriorSystemLight"/>
+        <SpeedDisplayFlags index="CollapseBuffed" value="0"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="50"/>
+        <RepairTime value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="HeroInventoryRifle"/>
+        <AbilArray Link="LearnAbilitiesRiflemanOld"/>
+        <AbilArray Link="FragGrenade"/>
+        <AbilArray Link="SoldierSkills"/>
+        <AbilArray Link="Sprint"/>
+        <AbilArray Link="ReloadHero"/>
+        <AbilArray Link="ImmediateRemedialAction"/>
+        <AbilArray Link="PerformSelfAid"/>
+        <AbilArray Link="FiremodeAssaultRifle"/>
+        <AbilArray Link="Marksmanship"/>
+        <AbilArray Link="DropMagazine"/>
+        <AbilArray Link="SmokeGrenade"/>
+        <AbilArray Link="RiflemanSkills"/>
+        <AbilArray Link="GroundFlare"/>
+        <AbilArray Link="Marksmanship"/>
+        <AbilArray Link="ImprovedGroundFlare"/>
+        <AbilArray Link="ImprovedSmokeGrenade"/>
+        <AbilArray Link="Jump"/>
+        <AbilArray Link="Prone"/>
+        <AbilArray Link="FlareGunWO5"/>
+        <AbilArray Link="FocusFireOld"/>
+        <AbilArray Link="MGL"/>
+        <AbilArray Link="WeaponsHold2"/>
+        <AbilArray Link="ImprovedGroundFlareMGL"/>
+        <AbilArray Link="ImprovedSmokeGrenadeMGL"/>
+        <BehaviorArray Link="HeroLevels"/>
+        <BehaviorArray Link="Fitness"/>
+        <BehaviorArray Link="Dexterity"/>
+        <BehaviorArray Link="Mechanical"/>
+        <BehaviorArray Link="StartingStats"/>
+        <BehaviorArray Link="RifleButt"/>
+        <BehaviorArray Link="Marksmanship1"/>
+        <BehaviorArray Link="Marksmanship2"/>
+        <BehaviorArray Link="Marksmanship3"/>
+        <BehaviorArray Link="Marksmanship4"/>
+        <BehaviorArray Link="SoldierSkills1"/>
+        <BehaviorArray Link="SoldierSkills2"/>
+        <BehaviorArray Link="SoldierSkills3"/>
+        <BehaviorArray Link="SoldierSkills4"/>
+        <BehaviorArray Link="ExpertMarksman"/>
+        <BehaviorArray Link="GasMaskRifleman"/>
+        <BehaviorArray Link="Criticallvl1"/>
+        <BehaviorArray Link="Criticallvl2"/>
+        <BehaviorArray Link="Criticallvl3"/>
+        <BehaviorArray Link="Criticallvl4"/>
+        <BehaviorArray Link="AllyDamageReducerRanged"/>
+        <WeaponArray index="0" Link="HeroAssaultRifle"/>
+        <EffectArray index="Birth" value="EquipRiflemanSet"/>
+        <EffectArray index="Revive" value="EquipRiflemanSet"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons>
+                <Face value="LearnAbilities"/>
+                <Type value="Submenu"/>
+                <SubmenuAbilState value="LearnAbilitiesRiflemanOld"/>
+                <SubmenuCardId value="0002"/>
+                <Row value="1"/>
+                <Column value="4"/>
+            </LayoutButtons>
+            <LayoutButtons Face="SmokeGrenade" Type="AbilCmd" AbilCmd="SmokeGrenade,Execute" Row="2" Column="3"/>
+            <LayoutButtons Face="SmokeGrenade" Type="AbilCmd" AbilCmd="ImprovedSmokeGrenade,Execute" Row="2" Column="3"/>
+            <LayoutButtons Face="SmokeGrenadeMGL" Type="AbilCmd" AbilCmd="ImprovedSmokeGrenadeMGL,Execute" Row="2" Column="3"/>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel4"/>
+                <Type value="Passive"/>
+                <Behavior value="SoldierSkills4"/>
+                <Requirements value="SoldierSkills04"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel3"/>
+                <Type value="Passive"/>
+                <Behavior value="SoldierSkills3"/>
+                <Requirements value="SoldierSkills03"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel2"/>
+                <Type value="Passive"/>
+                <Behavior value="SoldierSkills2"/>
+                <Requirements value="SoldierSkills02"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel1"/>
+                <Type value="Passive"/>
+                <Behavior value="SoldierSkills1"/>
+                <Requirements value="SoldierSkills01"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons Face="AdditionalActions" Type="Submenu" SubmenuCardId="0003" Row="1" Column="3"/>
+            <LayoutButtons>
+                <Face value="Marksmanship"/>
+                <Type value="Passive"/>
+                <Behavior value="Marksmanship4"/>
+                <Requirements value="Marksmanship04"/>
+                <Row value="2"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="Marksmanship"/>
+                <Type value="Passive"/>
+                <Behavior value="Marksmanship3"/>
+                <Requirements value="Marksmanship03"/>
+                <Row value="2"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="Marksmanship"/>
+                <Type value="Passive"/>
+                <Behavior value="Marksmanship2"/>
+                <Requirements value="Marksmanship02"/>
+                <Row value="2"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="Marksmanship"/>
+                <Type value="Passive"/>
+                <Behavior value="Marksmanship1"/>
+                <Requirements value="Marksmanship01M"/>
+                <Row value="2"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons Face="MGLRifleman" Type="AbilCmd" AbilCmd="MGL,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="FragGrenade" Type="AbilCmd" AbilCmd="FragGrenade,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="GroundFlare" Type="AbilCmd" AbilCmd="GroundFlare,Execute" Row="2" Column="4"/>
+            <LayoutButtons Face="GroundFlare" Type="AbilCmd" AbilCmd="ImprovedGroundFlare,Execute" Row="2" Column="4"/>
+            <LayoutButtons Face="GroundFlareMGL" Type="AbilCmd" AbilCmd="ImprovedGroundFlareMGL,Execute" Row="2" Column="4"/>
+            <LayoutButtons Face="FocusFireLevel1" Type="AbilCmd" AbilCmd="FocusFireOld,255" Row="1" Column="0"/>
+        </CardLayouts>
+        <CardLayouts CardId="0002">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="LearnSoldierSkills" Type="AbilCmd" AbilCmd="LearnAbilitiesRiflemanOld,255" Row="0" Column="0"/>
+            <LayoutButtons Face="LearnFragGrenade" Type="AbilCmd" AbilCmd="LearnAbilitiesRiflemanOld,255" Row="0" Column="2"/>
+            <LayoutButtons Face="Marksmanship" Type="AbilCmd" AbilCmd="LearnAbilitiesRiflemanOld,255" Row="0" Column="1"/>
+            <LayoutButtons Face="RiflemanSkillsOld" Type="AbilCmd" AbilCmd="LearnAbilitiesRiflemanOld,255" Row="0" Column="3"/>
+        </CardLayouts>
+        <CardLayouts CardId="0003">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="Reload" Type="AbilCmd" AbilCmd="ReloadHero,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="ImmediateRemedialAction" Type="AbilCmd" AbilCmd="ImmediateRemedialAction,Execute" Row="0" Column="2"/>
+            <LayoutButtons Face="DropMagazine" Type="AbilCmd" AbilCmd="DropMagazine,Execute" Row="0" Column="3"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="PerformSelfAid" Type="AbilCmd" AbilCmd="PerformSelfAid,Execute" Row="1" Column="0"/>
+            <LayoutButtons>
+                <Face value="RifleButt"/>
+                <Type value="Passive"/>
+                <Behavior value="RifleButt"/>
+                <Requirements value="RifleButt"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons Face="FiremodeBurst" Type="AbilCmd" AbilCmd="FiremodeAssaultRifle,On" Row="1" Column="1"/>
+            <LayoutButtons Face="FiremodeSemi" Type="AbilCmd" AbilCmd="FiremodeAssaultRifle,Off" Row="1" Column="1"/>
+            <LayoutButtons Face="Prone" Type="AbilCmd" AbilCmd="Prone,Execute" Row="1" Column="2"/>
+            <LayoutButtons>
+                <Face value="ExpertMarksman"/>
+                <Type value="Passive"/>
+                <Behavior value="ExpertMarksman"/>
+                <Requirements value="RankCSM"/>
+                <Row value="2"/>
+                <Column value="3"/>
+            </LayoutButtons>
+            <LayoutButtons Face="FlareGun" Type="AbilCmd" AbilCmd="FlareGunWO5,Execute" Row="2" Column="2"/>
+            <LayoutButtons>
+                <Face value="GasMask"/>
+                <Type value="Passive"/>
+                <Behavior value="GasMaskRifleman"/>
+                <Requirements value="SoldierSkills04M"/>
+                <Row value="2"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons Face="HoldFire3" Type="AbilCmd" AbilCmd="WeaponsHold2,On" Row="1" Column="3"/>
+            <LayoutButtons Face="HoldFireOff2" Type="AbilCmd" AbilCmd="WeaponsHold2,Off" Row="1" Column="3"/>
+        </CardLayouts>
+        <Radius value="0.375"/>
+        <SeparationRadius value="0.375"/>
+        <DeadInnerRadius value="0"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="15"/>
+        <EditorCategories value="ObjectType:Hero,ObjectFamily:Melee"/>
+        <TacticalAI value="Marine"/>
+        <HotkeyAlias value="Marine"/>
+        <SelectAlias value="RiflemanOld"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="21"/>
+        <HotkeyCategory value="Unit/Category/TerranUnits"/>
+        <AIEvaluateAlias value="Marine"/>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
+        <ReviveInfoBase>
+            <Charge Link="Marine/Revive"/>
+            <Cooldown Link="Marine/Revive"/>
+        </ReviveInfoBase>
+        <Attributes index="Light" value="0"/>
+    </CUnit>
+    <CUnit id="Rifleman2" parent="UnitTemplateCustom">
+        <DeathRevealFilters value="Visible;Enemy,Missile,Hidden"/>
+        <Race value="Terr"/>
+        <LifeArmorDisplayFlags index="CollapseBuffed" value="0"/>
+        <LifeRegenRate value="0.25"/>
+        <LifeArmorName value="Unit/LifeArmorName/LandWarriorSystemLight"/>
+        <SpeedDisplayFlags index="CollapseBuffed" value="0"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="50"/>
+        <RepairTime value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <AbilArray index="0" Link="stop"/>
+        <AbilArray index="1" Link="attack"/>
+        <AbilArray index="3" Link="HeroInventoryRiflePlasma"/>
+        <AbilArray index="4" Link="LearnAbilitiesRifleman"/>
+        <AbilArray index="5" Link="SoldierSkills"/>
+        <AbilArray index="6" Link="Sprint"/>
+        <AbilArray index="7" Link="ReloadHero"/>
+        <AbilArray index="8" Link="ImmediateRemedialAction"/>
+        <AbilArray index="9" Link="PerformSelfAid"/>
+        <AbilArray Link="FiremodeAssaultRifle"/>
+        <AbilArray Link="Marksmanship"/>
+        <AbilArray Link="DropMagazine"/>
+        <AbilArray Link="SmokeGrenade"/>
+        <AbilArray Link="RiflemanSkills"/>
+        <AbilArray Link="GroundFlare"/>
+        <AbilArray Link="Marksmanship"/>
+        <AbilArray Link="HeroInventoryPlasma"/>
+        <AbilArray Link="Jump"/>
+        <AbilArray Link="Prone"/>
+        <AbilArray Link="FlareGunWO5"/>
+        <AbilArray Link="MGLBeta"/>
+        <AbilArray Link="WeaponsHold2"/>
+        <AbilArray Link="FocusFire"/>
+        <AbilArray Link="GroundFlareMGL"/>
+        <AbilArray Link="SmokeGrenadeMGL"/>
+        <AbilArray Link="PlasmaGrenadeRifleman"/>
+        <AbilArray Link="DisengageLimiter"/>
+        <AbilArray Link="FocusFire1"/>
+        <AbilArray Link="FocusFire2"/>
+        <BehaviorArray Link="RifleButt"/>
+        <BehaviorArray Link="Marksmanship1"/>
+        <BehaviorArray Link="Marksmanship2"/>
+        <BehaviorArray Link="Marksmanship3"/>
+        <BehaviorArray Link="Marksmanship4"/>
+        <BehaviorArray Link="SoldierSkills1"/>
+        <BehaviorArray Link="SoldierSkills2"/>
+        <BehaviorArray Link="SoldierSkills3"/>
+        <BehaviorArray Link="SoldierSkills4"/>
+        <BehaviorArray Link="ExpertMarksman"/>
+        <BehaviorArray Link="GasMaskRifleman"/>
+        <BehaviorArray Link="Criticallvl1"/>
+        <BehaviorArray Link="Criticallvl2"/>
+        <BehaviorArray Link="Criticallvl3"/>
+        <BehaviorArray Link="Criticallvl4"/>
+        <BehaviorArray Link="Recruit"/>
+        <BehaviorArray Link="BlastShield3"/>
+        <WeaponArray index="0" Link="HeroAssaultRifle"/>
+        <EffectArray index="Birth" value="EquipRiflemanSet"/>
+        <EffectArray index="Revive" value="EquipRiflemanSet"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="0" Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="3"/>
+            <LayoutButtons index="1" Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons index="2">
+                <Face value="LearnAbilities"/>
+                <Type value="Submenu"/>
+                <AbilCmd value=""/>
+                <SubmenuAbilState value="LearnAbilitiesRifleman"/>
+                <SubmenuCardId value="0002"/>
+                <Row value="1"/>
+                <Column value="4"/>
+            </LayoutButtons>
+            <LayoutButtons index="3" Face="SmokeGrenadeMGL" Type="AbilCmd" AbilCmd="SmokeGrenadeMGL,Execute" Row="2" Column="3"/>
+            <LayoutButtons index="4" Face="SmokeGrenade" Type="AbilCmd" AbilCmd="SmokeGrenade,Execute" Row="2" Column="3"/>
+            <LayoutButtons index="6">
+                <Face value="MGLNew"/>
+                <Type value="AbilCmd"/>
+                <AbilCmd value="MGLBeta,Execute"/>
+                <SubmenuCardId value=""/>
+                <Row value="2"/>
+                <Column value="2"/>
+            </LayoutButtons>
+            <LayoutButtons Face="PlasmaGrenade" Type="AbilCmd" AbilCmd="PlasmaGrenadeRifleman,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="GroundFlareMGL" Type="AbilCmd" AbilCmd="GroundFlareMGL,Execute" Row="2" Column="4"/>
+            <LayoutButtons Face="GroundFlare" Type="AbilCmd" AbilCmd="GroundFlare,Execute" Row="2" Column="4"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="2"/>
+            <LayoutButtons Face="FiremodeBurst2" Type="AbilCmd" AbilCmd="FiremodeAssaultRifle,On" Row="1" Column="1"/>
+            <LayoutButtons Face="FiremodeSemi2" Type="AbilCmd" AbilCmd="FiremodeAssaultRifle,Off" Row="1" Column="1"/>
+            <LayoutButtons Face="DisengageLimiter" Type="AbilCmd" AbilCmd="DisengageLimiter,On" Row="1" Column="1"/>
+            <LayoutButtons Face="ReengageLimiter" Type="AbilCmd" AbilCmd="DisengageLimiter,Off" Row="1" Column="1"/>
+            <LayoutButtons Face="FocusFireLevel2" Type="AbilCmd" AbilCmd="FocusFire2,Execute" Row="1" Column="0"/>
+            <LayoutButtons Face="FocusFireLevel1" Type="AbilCmd" AbilCmd="FocusFire1,Execute" Row="1" Column="0"/>
+        </CardLayouts>
+        <CardLayouts index="1" CardId="0002">
+            <LayoutButtons Face="LearnSoldierSkills" Type="AbilCmd" AbilCmd="LearnAbilitiesRifleman,Learn1" Row="0" Column="0"/>
+            <LayoutButtons Face="MGLNew" Type="AbilCmd" AbilCmd="LearnAbilitiesRifleman,Learn2" Row="0" Column="2"/>
+            <LayoutButtons Face="PlasmaGrenade" Type="AbilCmd" AbilCmd="LearnAbilitiesRifleman,Learn5" Row="0" Column="2"/>
+            <LayoutButtons Face="Marksmanship" Type="AbilCmd" AbilCmd="LearnAbilitiesRifleman,Learn3" Row="0" Column="1"/>
+            <LayoutButtons Face="RiflemanSkills" Type="AbilCmd" AbilCmd="LearnAbilitiesRifleman,Learn4" Row="0" Column="3"/>
+        </CardLayouts>
+        <CardLayouts index="2" CardId="0003">
+            <LayoutButtons index="0" Face="Cancel" Type="CancelSubmenu" AbilCmd="" Row="2" Column="4"/>
+            <LayoutButtons index="1" Face="ImmediateRemedialAction" Type="AbilCmd" AbilCmd="ImmediateRemedialAction,Execute" Row="0" Column="2"/>
+            <LayoutButtons index="2" Face="DropMagazine" Type="AbilCmd" AbilCmd="DropMagazine,Execute" Row="0" Column="1"/>
+            <LayoutButtons index="3" Face="PerformSelfAid" Type="AbilCmd" AbilCmd="PerformSelfAid,Execute" Row="1" Column="0"/>
+            <LayoutButtons index="4" Face="Prone" Type="AbilCmd" AbilCmd="Prone,Execute" Row="0" Column="3"/>
+            <LayoutButtons index="5" Face="Reload" Type="AbilCmd" AbilCmd="ReloadHero,Execute" Row="0" Column="0"/>
+            <LayoutButtons index="6">
+                <Face value="RifleButt"/>
+                <Type value="Passive"/>
+                <Behavior value="RifleButt"/>
+                <Requirements value="RifleButt"/>
+                <Row value="2"/>
+                <Column value="2"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="ExpertMarksman"/>
+                <Type value="Passive"/>
+                <Behavior value="ExpertMarksman"/>
+                <Requirements value="RankCSM"/>
+                <Row value="2"/>
+                <Column value="3"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="Marksmanship"/>
+                <Type value="Passive"/>
+                <Behavior value="Marksmanship4"/>
+                <Requirements value="Marksmanship04"/>
+                <Row value="2"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="Marksmanship"/>
+                <Type value="Passive"/>
+                <Behavior value="Marksmanship3"/>
+                <Requirements value="Marksmanship03"/>
+                <Row value="2"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="Marksmanship"/>
+                <Type value="Passive"/>
+                <Behavior value="Marksmanship2"/>
+                <Requirements value="Marksmanship02"/>
+                <Row value="2"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="Marksmanship"/>
+                <Type value="Passive"/>
+                <Behavior value="Marksmanship1"/>
+                <Requirements value="Marksmanship01M"/>
+                <Row value="2"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel4"/>
+                <Type value="Passive"/>
+                <Behavior value="SoldierSkills4"/>
+                <Requirements value="SoldierSkills04"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel3"/>
+                <Type value="Passive"/>
+                <Behavior value="SoldierSkills3"/>
+                <Requirements value="SoldierSkills03"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel2"/>
+                <Type value="Passive"/>
+                <Behavior value="SoldierSkills2"/>
+                <Requirements value="SoldierSkills02"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel1"/>
+                <Type value="Passive"/>
+                <Behavior value="SoldierSkills1"/>
+                <Requirements value="SoldierSkills01"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="GasMask"/>
+                <Type value="Passive"/>
+                <Behavior value="GasMaskRifleman"/>
+                <Requirements value="RiflemanSkills3Count"/>
+                <Row value="1"/>
+                <Column value="2"/>
+            </LayoutButtons>
+            <LayoutButtons Face="HoldFire3" Type="AbilCmd" AbilCmd="WeaponsHold2,On" Row="1" Column="3"/>
+            <LayoutButtons Face="HoldFireOff2" Type="AbilCmd" AbilCmd="WeaponsHold2,Off" Row="1" Column="3"/>
+            <LayoutButtons Face="FlareGun" Type="AbilCmd" AbilCmd="FlareGunWO5,Execute" Row="1" Column="1"/>
+            <LayoutButtons>
+                <Face value="BlastShield"/>
+                <Type value="Passive"/>
+                <Behavior value="BlastShield3"/>
+                <Requirements value="SoldierSkills04andGrenadier"/>
+                <Row value="1"/>
+                <Column value="4"/>
+            </LayoutButtons>
+        </CardLayouts>
+        <EditorCategories value="ObjectFamily:Melee,ObjectType:Hero"/>
+        <TacticalAI value="Marine"/>
+        <SelectAlias value="Rifleman2"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="21"/>
+        <HotkeyCategory value="Hotkey/Catagory/MOSCustom"/>
+        <AIEvaluateAlias value="Marine"/>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
+        <Attributes index="Light" value="0"/>
+    </CUnit>
+    <CUnit id="Rifleman">
+        <DeathTime value="-1"/>
+        <DeathRevealFilters value="Visible;Enemy,Missile,Hidden"/>
+        <DeathRevealRadius value="3"/>
+        <DeathRevealDuration value="-1"/>
+        <DeathRevealType value="Vision"/>
+        <Race value="Terr"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="Hero" value="1"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <Attributes index="Heroic" value="1"/>
+        <LifeStart value="420"/>
+        <LifeMax value="420"/>
+        <LifeArmor value="1"/>
+        <LifeRegenRate value="0.25"/>
+        <LifeArmorName value="Unit/LifeArmorName/LandWarriorSystemLight"/>
+        <EnergyStart value="190"/>
+        <EnergyMax value="190"/>
+        <EnergyRegenRate value="1.4492"/>
+        <Speed value="2.914"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="46.0625"/>
+        <StationaryTurningRate value="999.8437"/>
+        <TurningRate value="999.8437"/>
+        <Sight value="15"/>
+        <Food value="-1"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="50"/>
+        <RepairTime value="20"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="100"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="HeroInventoryRiflePlasma"/>
+        <AbilArray Link="LearnRiflemanAbilities"/>
+        <AbilArray Link="SoldierSkills"/>
+        <AbilArray Link="Sprint"/>
+        <AbilArray Link="ReloadHero"/>
+        <AbilArray Link="ImmediateRemedialAction"/>
+        <AbilArray Link="PerformSelfAid"/>
+        <AbilArray Link="FiremodeAssaultRifle"/>
+        <AbilArray Link="Marksmanship"/>
+        <AbilArray Link="DropMagazine"/>
+        <AbilArray Link="SmokeGrenade"/>
+        <AbilArray Link="RiflemanSkills"/>
+        <AbilArray Link="GroundFlare"/>
+        <AbilArray Link="Marksmanship"/>
+        <AbilArray Link="Jump"/>
+        <AbilArray Link="Prone"/>
+        <AbilArray Link="FlareGunWO5"/>
+        <AbilArray Link="FragGrenade"/>
+        <AbilArray Link="WeaponsHold2"/>
+        <AbilArray Link="GroundFlareMGL"/>
+        <AbilArray Link="SmokeGrenadeMGL"/>
+        <AbilArray Link="PlasmaGrenadeRifleman"/>
+        <AbilArray Link="DisengageLimiter"/>
+        <AbilArray Link="FocusFire1"/>
+        <AbilArray Link="FocusFire2"/>
+        <BehaviorArray Link="HeroLevels"/>
+        <BehaviorArray Link="Fitness"/>
+        <BehaviorArray Link="Dexterity"/>
+        <BehaviorArray Link="Mechanical"/>
+        <BehaviorArray Link="StartingStats"/>
+        <BehaviorArray Link="RifleButt"/>
+        <BehaviorArray Link="Marksmanship1"/>
+        <BehaviorArray Link="Marksmanship2"/>
+        <BehaviorArray Link="Marksmanship3"/>
+        <BehaviorArray Link="Marksmanship4"/>
+        <BehaviorArray Link="SoldierSkills1"/>
+        <BehaviorArray Link="SoldierSkills2"/>
+        <BehaviorArray Link="SoldierSkills3"/>
+        <BehaviorArray Link="SoldierSkills4"/>
+        <BehaviorArray Link="ExpertMarksman"/>
+        <BehaviorArray Link="GasMaskRifleman"/>
+        <BehaviorArray Link="Criticallvl1"/>
+        <BehaviorArray Link="Criticallvl2"/>
+        <BehaviorArray Link="Criticallvl3"/>
+        <BehaviorArray Link="Criticallvl4"/>
+        <BehaviorArray Link="Recruit"/>
+        <BehaviorArray Link="BlastShield3"/>
+        <WeaponArray Link="HeroAssaultRifle"/>
+        <EffectArray index="Birth" value="RiflemanEquipSICheck"/>
+        <EffectArray index="Revive" value="RiflemanEquipSICheck"/>
+        <CardLayouts>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="HoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="3"/>
+            <LayoutButtons>
+                <Face value="LearnAbilities"/>
+                <Type value="Submenu"/>
+                <SubmenuAbilState value="LearnRiflemanAbilities"/>
+                <SubmenuCardId value="0002"/>
+                <Row value="1"/>
+                <Column value="4"/>
+            </LayoutButtons>
+            <LayoutButtons Face="SmokeGrenadeMGL" Type="AbilCmd" AbilCmd="SmokeGrenadeMGL,Execute" Row="2" Column="3"/>
+            <LayoutButtons Face="SmokeGrenade" Type="AbilCmd" AbilCmd="SmokeGrenade,Execute" Row="2" Column="3"/>
+            <LayoutButtons Face="AdditionalActions" Type="Submenu" SubmenuCardId="0003" Row="1" Column="3"/>
+            <LayoutButtons Face="FragGrenade" Type="AbilCmd" AbilCmd="FragGrenade,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="PlasmaGrenade" Type="AbilCmd" AbilCmd="PlasmaGrenadeRifleman,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="GroundFlareMGL" Type="AbilCmd" AbilCmd="GroundFlareMGL,Execute" Row="2" Column="4"/>
+            <LayoutButtons Face="GroundFlare" Type="AbilCmd" AbilCmd="GroundFlare,Execute" Row="2" Column="4"/>
+            <LayoutButtons Face="FiremodeBurst" Type="AbilCmd" AbilCmd="FiremodeAssaultRifle,On" Row="1" Column="1"/>
+            <LayoutButtons Face="FiremodeSemi" Type="AbilCmd" AbilCmd="FiremodeAssaultRifle,Off" Row="1" Column="1"/>
+            <LayoutButtons Face="DisengageLimiter" Type="AbilCmd" AbilCmd="DisengageLimiter,On" Row="1" Column="1"/>
+            <LayoutButtons Face="ReengageLimiter" Type="AbilCmd" AbilCmd="DisengageLimiter,Off" Row="1" Column="1"/>
+            <LayoutButtons Face="FocusFireLevel2" Type="AbilCmd" AbilCmd="FocusFire2,Execute" Row="1" Column="0"/>
+            <LayoutButtons Face="FocusFireLevel1" Type="AbilCmd" AbilCmd="FocusFire1,Execute" Row="1" Column="0"/>
+        </CardLayouts>
+        <CardLayouts CardId="0002">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="LearnSoldierSkills" Type="AbilCmd" AbilCmd="LearnRiflemanAbilities,Learn1" Row="0" Column="0"/>
+            <LayoutButtons Face="LearnFragGrenade" Type="AbilCmd" AbilCmd="LearnRiflemanAbilities,Learn3" Row="0" Column="2"/>
+            <LayoutButtons Face="PlasmaGrenade" Type="AbilCmd" AbilCmd="LearnAbilitiesRifleman,Learn5" Row="0" Column="2"/>
+            <LayoutButtons Face="Marksmanship" Type="AbilCmd" AbilCmd="LearnRiflemanAbilities,Learn2" Row="0" Column="1"/>
+            <LayoutButtons Face="RiflemanSkills" Type="AbilCmd" AbilCmd="LearnRiflemanAbilities,Learn4" Row="0" Column="3"/>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel1"/>
+                <Type value="Passive"/>
+                <Behavior value="SoldierSkills1"/>
+                <Requirements value="SoldierSkills01"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel2"/>
+                <Type value="Passive"/>
+                <Behavior value="SoldierSkills2"/>
+                <Requirements value="SoldierSkills02"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel3"/>
+                <Type value="Passive"/>
+                <Behavior value="SoldierSkills3"/>
+                <Requirements value="SoldierSkills03"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel4"/>
+                <Type value="Passive"/>
+                <Behavior value="SoldierSkills4"/>
+                <Requirements value="SoldierSkills04"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons Face="Marksmanship" Row="2" Column="1"/>
+            <LayoutButtons Face="Marksmanship" Row="2" Column="1"/>
+            <LayoutButtons Face="Marksmanship" Row="2" Column="1"/>
+            <LayoutButtons Face="Marksmanship" Row="2" Column="1"/>
+            <LayoutButtons Face="Readme1" Type="Passive" Requirements="RookiePlayer" Row="1" Column="0"/>
+            <LayoutButtons Face="Readme2" Type="Passive" Requirements="RookiePlayer" Row="1" Column="1"/>
+            <LayoutButtons Face="Readme3" Type="Passive" Requirements="RookiePlayer" Row="1" Column="2"/>
+            <LayoutButtons>
+                <Face value="Recruit"/>
+                <Type value="Passive"/>
+                <Behavior value="Recruit"/>
+                <Requirements value="RookiePlayer"/>
+                <Row value="1"/>
+                <Column value="3"/>
+            </LayoutButtons>
+        </CardLayouts>
+        <CardLayouts CardId="0003">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="Reload" Type="AbilCmd" AbilCmd="ReloadHero,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="ImmediateRemedialAction" Type="AbilCmd" AbilCmd="ImmediateRemedialAction,Execute" Row="0" Column="2"/>
+            <LayoutButtons Face="DropMagazine" Type="AbilCmd" AbilCmd="DropMagazine,Execute" Row="0" Column="3"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="PerformSelfAid" Type="AbilCmd" AbilCmd="PerformSelfAid,Execute" Row="1" Column="0"/>
+            <LayoutButtons>
+                <Face value="RifleButt"/>
+                <Type value="Passive"/>
+                <Behavior value="RifleButt"/>
+                <Requirements value="RifleButt"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons Face="FiremodeBurst" Type="AbilCmd" AbilCmd="FiremodeAssaultRifle,On" Row="1" Column="1"/>
+            <LayoutButtons Face="FiremodeSemi" Type="AbilCmd" AbilCmd="FiremodeAssaultRifle,Off" Row="1" Column="1"/>
+            <LayoutButtons Face="DisengageLimiter" Type="AbilCmd" AbilCmd="DisengageLimiter,On" Row="1" Column="1"/>
+            <LayoutButtons Face="ReengageLimiter" Type="AbilCmd" AbilCmd="DisengageLimiter,Off" Row="1" Column="1"/>
+            <LayoutButtons Face="Prone" Type="AbilCmd" AbilCmd="Prone,Execute" Row="1" Column="2"/>
+            <LayoutButtons>
+                <Face value="ExpertMarksman"/>
+                <Type value="Passive"/>
+                <Behavior value="ExpertMarksman"/>
+                <Requirements value="RankCSM"/>
+                <Row value="2"/>
+                <Column value="3"/>
+            </LayoutButtons>
+            <LayoutButtons Face="FlareGun" Type="AbilCmd" AbilCmd="FlareGunWO5,Execute" Row="2" Column="2"/>
+            <LayoutButtons>
+                <Face value="GasMask"/>
+                <Type value="Passive"/>
+                <Behavior value="GasMaskRifleman"/>
+                <Requirements value="RiflemanSkills3Count"/>
+                <Row value="2"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons Face="HoldFire3" Type="AbilCmd" AbilCmd="WeaponsHold2,On" Row="1" Column="3"/>
+            <LayoutButtons Face="HoldFireOff2" Type="AbilCmd" AbilCmd="WeaponsHold2,Off" Row="1" Column="3"/>
+            <LayoutButtons>
+                <Face value="BlastShield"/>
+                <Type value="Passive"/>
+                <Behavior value="BlastShield3"/>
+                <Requirements value="SoldierSkills04andGrenadier"/>
+                <Row value="1"/>
+                <Column value="4"/>
+            </LayoutButtons>
+        </CardLayouts>
+        <Radius value="0.375"/>
+        <SeparationRadius value="0.375"/>
+        <InnerRadius value="0.375"/>
+        <CargoSize value="1"/>
+        <ScoreMake value="50"/>
+        <ScoreKill value="100"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="15"/>
+        <MinimapRadius value="0.375"/>
+        <EditorCategories value="ObjectFamily:Melee,ObjectType:Hero"/>
+        <TacticalAI value="Marine"/>
+        <Item value="8SlotBag"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="21"/>
+        <HotkeyCategory value="Hotkey/Catagory/MOSClassic"/>
+        <KillDisplay value="Always"/>
+        <AIEvaluateAlias value="Marine"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="33"/>
+            <ChanceArray index="Idle" value="33"/>
+            <ChanceArray index="Turn" value="33"/>
+        </Fidget>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
+        <ReviveInfoBase>
+            <Charge Link="Marine/Revive"/>
+            <Cooldown Link="Marine/Revive"/>
+        </ReviveInfoBase>
+    </CUnit>
+    <CBehaviorBuff id="OverheatHellfire">
+        <Alignment value="Negative"/>
+        <Cost>
+            <Charge Link="Behavior/Overheat"/>
+            <Cooldown Link="Behavior/Overheat"/>
+        </Cost>
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <DisplayDuration index="Self" value="1"/>
+        <MaxStackCount value="100"/>
+        <Duration value="3"/>
+        <Modification AttackSpeedMultiplier="1.1">
+            <VitalRegenArray index="Life" value="-2"/>
+        </Modification>
+        <DamageResponse>
+            <Cost>
+                <Charge Link="Behavior/Overheat"/>
+                <Cooldown Link="Behavior/Overheat"/>
+            </Cost>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SafetyLimiter">
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-disruptionblast.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <Modification SightBonus="-0.1">
+            <WeaponArray Link="OverclockedPlasmaRifle"/>
+            <WeaponDisableArray value="PlasmaRifle"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="GasMaskRifleman">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Requirements value="SoldierSkills04M"/>
+    </CBehaviorBuff>
+</Catalog>

@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CEffectDamage id="MGLBetaDamage4">
+        <EditorCategories value="Race:Terran"/>
+        <Marker Link="Effect/MGLDamage1"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <AttributeFactor index="Heroic" value="-0.25"/>
+        <AttributeFactor index="Summoned" value="-0.25"/>
+        <Amount value="775"/>
+        <Random value="100"/>
+        <AreaArray Radius="3.65" Fraction="1"/>
+        <SearchFilters value="Ground;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+    </CEffectDamage>
+    <CEffectDamage id="MGLBetaDamage1">
+        <EditorCategories value="Race:Terran"/>
+        <Marker Link="Effect/MGLDamage1"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <AttributeFactor index="Heroic" value="-0.25"/>
+        <AttributeFactor index="Summoned" value="-0.25"/>
+        <Amount value="550"/>
+        <Random value="25"/>
+        <AreaArray Radius="3.65" Fraction="1"/>
+        <SearchFilters value="Ground;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+    </CEffectDamage>
+    <CEffectDamage id="MGLBetaDamage2">
+        <EditorCategories value="Race:Terran"/>
+        <Marker Link="Effect/MGLDamage1"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <AttributeFactor index="Heroic" value="-0.25"/>
+        <AttributeFactor index="Summoned" value="-0.25"/>
+        <Amount value="625"/>
+        <Random value="50"/>
+        <AreaArray Radius="3.65" Fraction="1"/>
+        <SearchFilters value="Ground;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+    </CEffectDamage>
+    <CEffectDamage id="MGLBetaDamage3">
+        <EditorCategories value="Race:Terran"/>
+        <Marker Link="Effect/MGLDamage1"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <AttributeFactor index="Heroic" value="-0.25"/>
+        <AttributeFactor index="Summoned" value="-0.25"/>
+        <Amount value="700"/>
+        <Random value="75"/>
+        <AreaArray Radius="3.65" Fraction="1"/>
+        <SearchFilters value="Ground;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="MGLBetaLaunchMissile1">
+        <ValidatorArray index="0" removed="1"/>
+        <EditorCategories value="Race:Terran"/>
+        <Marker Link="Effect/MGLLaunch1"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <ImpactOffset value="0.4,0,0"/>
+        <ImpactEffect value="MGLBetaDamage1"/>
+        <AmmoUnit value="40mmGrenade2"/>
+    </CEffectLaunchMissile>
+    <CEffectLaunchMissile id="MGLBetaLaunchMissile2">
+        <ValidatorArray index="0" removed="1"/>
+        <EditorCategories value="Race:Terran"/>
+        <Marker Link="Effect/MGLLaunch1"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <ImpactOffset value="0.4,0,0"/>
+        <ImpactEffect value="MGLBetaDamage2"/>
+        <AmmoUnit value="40mmGrenade2"/>
+    </CEffectLaunchMissile>
+    <CEffectLaunchMissile id="MGLBetaLaunchMissile3">
+        <ValidatorArray index="0" removed="1"/>
+        <EditorCategories value="Race:Terran"/>
+        <Marker Link="Effect/MGLLaunch1"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <ImpactOffset value="0.4,0,0"/>
+        <ImpactEffect value="MGLBetaDamage3"/>
+        <AmmoUnit value="40mmGrenade2"/>
+    </CEffectLaunchMissile>
+    <CEffectLaunchMissile id="MGLBetaLaunchMissile4">
+        <ValidatorArray index="0" removed="1"/>
+        <EditorCategories value="Race:Terran"/>
+        <Marker Link="Effect/MGLLaunch1"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <ImpactOffset value="0.4,0,0"/>
+        <ImpactEffect value="MGLBetaDamage4"/>
+        <AmmoUnit value="40mmGrenade2"/>
+    </CEffectLaunchMissile>
+    <CEffectDamage id="FragGrenadeBetaDamage">
+        <EditorCategories value="Race:Terran"/>
+        <Marker Link="Effect/FragGrenadeDamage1"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <AttributeFactor index="Light" value="0.1"/>
+        <AttributeFactor index="Biological" value="0.1"/>
+        <AttributeFactor index="Mechanical" value="-0.2"/>
+        <AttributeFactor index="Structure" value="0.4"/>
+        <AttributeFactor index="Heroic" value="-0.25"/>
+        <AttributeFactor index="Summoned" value="-0.25"/>
+        <Amount value="550"/>
+        <Random value="25"/>
+        <Death value="Blast"/>
+        <AreaArray Radius="3" Fraction="1"/>
+        <SearchFilters value="Ground;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="FragGrenadeBetaLM">
+        <ValidatorArray index="0" removed="1"/>
+        <EditorCategories value="Race:Terran"/>
+        <Marker Link="Effect/FragGrenade1LaunchMissile"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <ImpactEffect value="FragGrenadeBetaDamage"/>
+        <AmmoUnit value="TossGrenadeWeapon"/>
+    </CEffectLaunchMissile>
+    <CAbilEffectInstant id="Snapfire">
+        <OrderArray index="0" Model="Assets\UI\Cursors\WayPointConfirm_Void\WayPointConfirm_Void.m3"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <Effect index="0" value="SnapfireAB"/>
+        <Cost>
+            <Vital index="Energy" value="45"/>
+            <Charge Link=""/>
+            <Cooldown Location="Unit" TimeUse="45"/>
+        </Cost>
+        <Cost>
+            <Vital index="Energy" value="40"/>
+            <Charge Link=""/>
+            <Cooldown Location="Unit" TimeUse="40"/>
+        </Cost>
+        <Cost>
+            <Vital index="Energy" value="35"/>
+            <Charge Link=""/>
+            <Cooldown TimeUse="35"/>
+        </Cost>
+        <Cost>
+            <Vital index="Energy" value="30"/>
+            <Charge Link=""/>
+            <Cooldown TimeUse="30"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Snapfire"/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="FocusFire">
+        <OrderArray index="0" Model="Assets\UI\Cursors\WayPointConfirm_Void\WayPointConfirm_Void.m3"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <Effect index="0" value="FocusFireMk1AB"/>
+        <Cost>
+            <Vital index="Energy" value="100"/>
+            <Charge Link=""/>
+            <Cooldown Location="Unit" TimeUse="120"/>
+        </Cost>
+        <Cost>
+            <Vital index="Energy" value="100"/>
+            <Charge Link=""/>
+            <Cooldown Location="Unit"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="FocusFireLevel1" Requirements="Level69"/>
+    </CAbilEffectInstant>
+    <CAbilEffectTarget id="GroundFlareMGL">
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <Effect index="0" value="MGLGroundFlare"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Display index="Energy" value="1"/>
+            <Vital index="Energy" value="60"/>
+            <Charge HideCount="1" Link="Abil/GroundFlare" Location="Unit"/>
+            <Cooldown Link="Abil/GroundFlare" TimeStart="0.5" TimeUse="150"/>
+        </Cost>
+        <Cost>
+            <Vital index="Energy" value="50"/>
+            <Charge Link="Abil/GroundFlare" Location="Unit"/>
+            <Cooldown Link="Abil/GroundFlare" TimeUse="75"/>
+        </Cost>
+        <InterruptCost>
+            <Charge Link="Abil/ImprovedGroundFlareMGL"/>
+            <Cooldown Link="Abil/ImprovedGroundFlareMGL"/>
+        </InterruptCost>
+        <Range value="35"/>
+        <Marker Link="Abil/ImprovedGroundFlareMGL"/>
+        <CursorEffect value="MGLDamage"/>
+        <AINotifyEffect value="ImprovedGroundFlareMGL"/>
+        <LevelButtonName value="Button/Name/ImprovedGroundFlare"/>
+        <LevelButtonTooltip value="Button/Tooltip/ImprovedGroundFlare"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="GroundFlare" Requirements="GroundFlare"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="SmokeGrenadeMGL">
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <Effect index="0" value="MGLSmokeGrenade"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Display index="Energy" value="1"/>
+            <Vital index="Energy" value="60"/>
+            <Charge>
+                <CountMax value="2"/>
+                <CountStart value="2"/>
+                <CountUse value="1"/>
+                <Link value="Abil/SmokeGrenade"/>
+                <Location value="Unit"/>
+                <TimeUse value="55"/>
+            </Charge>
+            <Cooldown>
+                <Link value="Abil/SmokeGrenade"/>
+                <Location value="Unit"/>
+                <TimeStart value="0.5"/>
+                <TimeUse value="0.5"/>
+            </Cooldown>
+        </Cost>
+        <Cost>
+            <Vital index="Energy" value="50"/>
+            <Charge>
+                <CountMax value="2"/>
+                <CountStart value="2"/>
+                <CountUse value="1"/>
+                <Link value="Abil/SmokeGrenade"/>
+                <Location value="Unit"/>
+                <TimeUse value="45"/>
+            </Charge>
+            <Cooldown>
+                <Link value="Abil/SmokeGrenade"/>
+                <Location value="Unit"/>
+                <TimeStart value="0.5"/>
+                <TimeUse value="0.5"/>
+            </Cooldown>
+        </Cost>
+        <InterruptCost>
+            <Charge Link="Abil/ImprovedSmokeGrenade"/>
+            <Cooldown Link="Abil/ImprovedSmokeGrenade"/>
+        </InterruptCost>
+        <Range value="35"/>
+        <Marker Link="Abil/ImprovedGroundFlareMGL"/>
+        <CursorEffect value="SmokeGrenadeSearchArea"/>
+        <AINotifyEffect value="FragGrenadeLevel1"/>
+        <LevelButtonName value="Button/Name/ImprovedSmokeGrenade"/>
+        <LevelButtonTooltip value="Button/Tooltip/SmokeGrenade"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SmokeGrenade" Requirements="SmokeGrenade"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="FragGrenadeBeta">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="FragGrenadeBetaLM"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Display index="Energy" value="1"/>
+            <Vital index="Energy" value="70"/>
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <HideCount value="1"/>
+                <Link value="Abil/FragGrenade"/>
+                <Location value="Unit"/>
+                <TimeStart value="0.5"/>
+                <TimeUse value="55"/>
+            </Charge>
+            <Cooldown Link="Abil/FragGrenade" Location="Unit"/>
+        </Cost>
+        <Cost>
+            <Display index="Energy" value="1"/>
+            <Vital index="Energy" value="65"/>
+            <Charge>
+                <CountMax value="2"/>
+                <CountStart value="2"/>
+                <CountUse value="1"/>
+                <Link value="Abil/FragGrenade"/>
+                <Location value="Unit"/>
+                <TimeStart value="0.5"/>
+                <TimeUse value="50"/>
+            </Charge>
+            <Cooldown Link="Abil/FragGrenade" Location="Unit" TimeUse="0.5"/>
+        </Cost>
+        <Cost>
+            <Display index="Energy" value="1"/>
+            <Vital index="Energy" value="60"/>
+            <Charge>
+                <CountMax value="3"/>
+                <CountStart value="3"/>
+                <CountUse value="1"/>
+                <Link value="Abil/FragGrenade"/>
+                <Location value="Unit"/>
+                <TimeStart value="0.5"/>
+                <TimeUse value="45"/>
+            </Charge>
+            <Cooldown>
+                <Link value="Abil/FragGrenade"/>
+                <Location value="Unit"/>
+                <TimeStart value="0.5"/>
+                <TimeUse value="0.5"/>
+            </Cooldown>
+        </Cost>
+        <Cost>
+            <Display index="Energy" value="1"/>
+            <Vital index="Energy" value="50"/>
+            <Charge>
+                <CountMax value="3"/>
+                <CountStart value="3"/>
+                <CountUse value="1"/>
+                <Link value="Abil/FragGrenade"/>
+                <Location value="Unit"/>
+                <TimeStart value="0.5"/>
+                <TimeUse value="35"/>
+            </Charge>
+            <Cooldown Link="Abil/FragGrenade" Location="Unit" TimeUse="0.5"/>
+        </Cost>
+        <InterruptCost>
+            <Charge Link="Abil/FragGrenade"/>
+            <Cooldown Link="Abil/FragGrenade"/>
+        </InterruptCost>
+        <Range value="12"/>
+        <PrepTime value="0.2"/>
+        <PrepTime value="0.1"/>
+        <PrepTime value="0.1"/>
+        <PrepTime value="0.01"/>
+        <Marker Link="Abil/FragGrenade"/>
+        <CursorEffect value="FragGrenadeDamage1"/>
+        <AINotifyEffect value="FragGrenade"/>
+        <LevelButtonImage value="Assets\Buttons\Btn_Custom_UAC_FragGrenade.dds"/>
+        <LevelButtonImage value="Assets\Buttons\Btn_Custom_UAC_FragGrenade.dds"/>
+        <LevelButtonImage value="Assets\Buttons\Btn_Custom_UAC_FragGrenade.dds"/>
+        <LevelButtonImage value="Assets\Buttons\Btn_Custom_UAC_FragGrenade.dds"/>
+        <LevelButtonName value="Button/Name/FragGrenadeBeta"/>
+        <LevelButtonName value="Button/Name/FragGrenadeBeta"/>
+        <LevelButtonName value="Button/Name/FragGrenadeBeta"/>
+        <LevelButtonName value="Button/Name/FragGrenadeBeta"/>
+        <LevelButtonTooltip value="Button/Tooltip/LearnFragGrenadeBeta"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="FragGrenadeBeta"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="MGLBeta">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="MGLBetaLaunchMissile1"/>
+        <Effect value="MGLBetaLaunchMissile2"/>
+        <Effect value="MGLBetaLaunchMissile3"/>
+        <Effect value="MGLBetaLaunchMissile4"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Display index="Energy" value="1"/>
+            <Vital index="Energy" value="62.5"/>
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <HideCount value="1"/>
+                <Link value="Abil/MGLItem"/>
+                <Location value="Unit"/>
+                <TimeStart value="0.5"/>
+                <TimeUse value="55"/>
+            </Charge>
+            <Cooldown Link="Abil/FragGrenade"/>
+        </Cost>
+        <Cost>
+            <Display index="Energy" value="1"/>
+            <Vital index="Energy" value="55"/>
+            <Charge>
+                <CountMax value="2"/>
+                <CountStart value="2"/>
+                <CountUse value="1"/>
+                <Link value="Abil/MGLItem"/>
+                <Location value="Unit"/>
+                <TimeStart value="0.5"/>
+                <TimeUse value="50"/>
+            </Charge>
+            <Cooldown Link="Abil/FragGrenade" TimeStart="0.5" TimeUse="0.5"/>
+        </Cost>
+        <Cost>
+            <Display index="Energy" value="1"/>
+            <Vital index="Energy" value="47.5"/>
+            <Charge>
+                <CountMax value="3"/>
+                <CountStart value="3"/>
+                <CountUse value="1"/>
+                <Link value="Abil/MGLItem"/>
+                <Location value="Unit"/>
+                <TimeStart value="0.5"/>
+                <TimeUse value="45"/>
+            </Charge>
+            <Cooldown Link="Abil/FragGrenade" TimeStart="0.5" TimeUse="0.5"/>
+        </Cost>
+        <Cost>
+            <Display index="Energy" value="1"/>
+            <Vital index="Energy" value="40"/>
+            <Charge>
+                <CountMax value="4"/>
+                <CountStart value="4"/>
+                <CountUse value="1"/>
+                <Link value="Abil/MGLItem"/>
+                <Location value="Unit"/>
+                <TimeStart value="0.5"/>
+                <TimeUse value="40"/>
+            </Charge>
+            <Cooldown Link="Abil/FragGrenade" TimeStart="0.5" TimeUse="0.5"/>
+        </Cost>
+        <InterruptCost>
+            <Charge Link="Abil/MGL"/>
+            <Cooldown Link="Abil/MGL"/>
+        </InterruptCost>
+        <Range value="30"/>
+        <Range value="30"/>
+        <Range value="30"/>
+        <Range value="30"/>
+        <Marker Link="Abil/FragGrenadeLevel1"/>
+        <CursorEffect value="MGLBetaDamage1"/>
+        <CursorEffect value="MGLBetaDamage2"/>
+        <CursorEffect value="MGLBetaDamage3"/>
+        <CursorEffect value="MGLBetaDamage4"/>
+        <AINotifyEffect value="MGLDamage"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MGLNew" Requirements="AdvancedWarfighterSIReq"/>
+    </CAbilEffectTarget>
+    <CRequirement id="RiflemanSkills4">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="And1024824539GTECountAbilRiflemanSkillsCompleteOnlyAtUnit4"/>
+        <NodeArray index="Show" Link="AndGTECountAbilRiflemanSkillsCompleteOnlyAtUnit4"/>
+    </CRequirement>
+    <CRequirement id="RifleMGLBeta">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="OrAndEqCountAbilRiflemanSkillsCompleteOnlyAtUnit4GTECountAbilFragGrenadeBetaCompleteOnlyAtUnit1AndGTECountUpgradeGrenadierCompleteOnly1GTECountAbilFragGrenadeBetaCompleteOnlyAtUnit1"/>
+        <NodeArray index="Show" Link="OrAndEqCountAbilRiflemanSkillsCompleteOnlyAtUnit4GTECountAbilFragGrenadeBetaCompleteOnlyAtUnit1AndGTECountUpgradeGrenadierCompleteOnly1GTECountAbilFragGrenadeBetaCompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CButton id="Snapfire">
+        <Icon value="Assets\Textures\btn-upgrade-tychus-attackspeed.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-tychus-attackspeed.dds"/>
+        <Hotkey value="Button/Hotkey/RiflemanSkills"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="FocusFireLevel1">
+        <Icon value="Buttons\BTNFocusFire.dds"/>
+        <AlertTooltip value="Button/Tooltip/FocusFireLevel1Level2"/>
+        <AlertIcon value="Buttons\BTNFocusFire.dds"/>
+        <Hotkey value="Button/Hotkey/RiflemanSkills"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="FocusFireLevel2">
+        <Icon value="Buttons\BTNFocusFire.dds"/>
+        <AlertIcon value="Buttons\BTNFocusFire.dds"/>
+        <Hotkey value="Button/Hotkey/RiflemanSkills"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="Rifleman">
+        <Icon value="Buttons/BTNSoldier.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-marine.dds"/>
+    </CButton>
+    <CButton id="RiflemanSkills">
+        <Icon value="Buttons\BTNSoldier.dds"/>
+        <AlertIcon value="Buttons\BTNSoldier.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="FragGrenadeBeta">
+        <Icon value="Assets\Buttons\Btn_Custom_UAC_FragGrenade.dds"/>
+        <AlertIcon value="Assets\Buttons\Btn_Custom_UAC_FragGrenade.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="MGLNew">
+        <Icon value="Buttons\Misc Items\BTNM320.dds"/>
+        <AlertIcon value="Buttons\Misc Items\BTNM320.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CUpgrade id="GrenadierBeta">
+        <EffectArray Reference="Effect,MGLBetaDamage1,Amount" Value="50"/>
+        <EffectArray Reference="Effect,MGLBetaDamage2,Amount" Value="100"/>
+        <EffectArray Reference="Effect,MGLBetaDamage3,Amount" Value="150"/>
+        <EffectArray Reference="Effect,MGLBetaDamage4,Amount" Value="200"/>
+        <EffectArray Operation="Subtract" Reference="Abil,MGLBeta,Cost[0].Vital[Energy]" Value="2.5"/>
+        <EffectArray Operation="Subtract" Reference="Abil,MGLBeta,Cost[1].Vital[Energy]" Value="5"/>
+        <EffectArray Operation="Subtract" Reference="Abil,MGLBeta,Cost[2].Vital[Energy]" Value="7.5"/>
+        <EffectArray Operation="Subtract" Reference="Abil,MGLBeta,Cost[3].Vital[Energy]" Value="10"/>
+        <EffectArray Operation="Subtract" Reference="Abil,MGLBeta,Cost[0].Charge.TimeUse" Value="2.500000"/>
+        <EffectArray Operation="Subtract" Reference="Abil,MGLBeta,Cost[1].Charge.TimeUse" Value="5.000000"/>
+        <EffectArray Operation="Subtract" Reference="Abil,MGLBeta,Cost[2].Charge.TimeUse" Value="7.500000"/>
+        <EffectArray Operation="Subtract" Reference="Abil,MGLBeta,Cost[3].Charge.TimeUse" Value="10.000000"/>
+        <EffectArray Reference="Abil,MGLBeta,Range[0]" Value="1.25"/>
+        <EffectArray Reference="Abil,MGLBeta,Range[1]" Value="2.5"/>
+        <EffectArray Reference="Abil,MGLBeta,Range[2]" Value="3.75"/>
+        <EffectArray Reference="Abil,MGLBeta,Range[3]" Value="5"/>
+        <EffectArray Operation="Subtract" Reference="Abil,ImprovedGroundFlareMGL,Cost[0].Vital[Energy]" Value="15"/>
+        <EffectArray Operation="Set" Reference="Abil,ImprovedSmokeGrenadeMGL,Cost[0].Charge.CountMax" Value="2"/>
+        <EffectArray Operation="Set" Reference="Abil,ImprovedSmokeGrenadeMGL,Cost[0].Charge.CountStart" Value="2"/>
+        <EffectArray Operation="Set" Reference="Abil,ImprovedSmokeGrenadeMGL,Cost[0].Charge.CountUse" Value="1"/>
+        <EffectArray Operation="Set" Reference="Abil,ImprovedSmokeGrenadeMGL,Cost[0].Charge.TimeUse" Value="22.000000"/>
+        <EffectArray Operation="Set" Reference="Abil,ImprovedSmokeGrenadeMGL,Cost[0].Cooldown.TimeUse" Value="0.500000"/>
+        <EffectArray Operation="Set" Reference="Abil,ImprovedSmokeGrenadeMGL,Cost[0].Vital[Energy]" Value="45"/>
+        <EffectArray Operation="Set" Reference="Abil,ImprovedSmokeGrenadeMGL,Cost[0].Charge.HideCount" Value="0"/>
+        <EffectArray Operation="Set" Reference="Behavior,GasMaskRifleman,Requirements" Value="RiflemanSkills02"/>
+        <EditorCategories value="Race:Terran,UpgradeType:SpellResearch"/>
+    </CUpgrade>
+    <CBehaviorBuff id="Snapfire">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="15"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="FocusFireLvl2">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="15"/>
+        <Modification AttackSpeedMultiplier="1.25" WeaponRange="2">
+            <DamageDealtFraction index="Ranged" value="1.25"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="FocusFireLvl1">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="15"/>
+        <Modification AttackSpeedMultiplier="1.12" WeaponRange="1">
+            <DamageDealtFraction index="Ranged" value="0.62"/>
+        </Modification>
+    </CBehaviorBuff>
+</Catalog>

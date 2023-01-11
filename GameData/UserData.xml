@@ -1,0 +1,1336 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CUser id="Camos">
+        <Fields Id="Camo Name" Type="String" EditorText="Name"/>
+        <Fields>
+            <Id value="Camo"/>
+            <Type value="GameLink"/>
+            <GameLinkType value="Texture"/>
+            <EditorText value="Name"/>
+        </Fields>
+        <Instances Id="[Default]"/>
+        <Instances Id="Default">
+            <GameLink GameLink="CamoDefault">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="Default">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="ACUPAT">
+            <GameLink GameLink="CamoACUPAT">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="ACUPAT">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="CADPAT">
+            <GameLink GameLink="CamoCADPAT">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="CADPAT">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="MARPAT">
+            <GameLink GameLink="CamoMARPAT">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="MARPAT">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Night">
+            <GameLink GameLink="CamoNight">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="Night">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Olive">
+            <GameLink GameLink="CamoOlive">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="Olive">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Red Tiger">
+            <GameLink GameLink="CamoRedTiger">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="Red Tiger">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="SAS">
+            <GameLink GameLink="CamoSAS">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="SAS">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Woodland">
+            <GameLink GameLink="VikingWoodland">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="Woodland">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Woodland Tiger">
+            <GameLink GameLink="CamoWoodlandTiger">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="Woodland Tiger">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Chameleon">
+            <GameLink GameLink="CamoChameleon">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="Chameleon">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="OctoCamo">
+            <GameLink GameLink="CamoMulticam">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="OctoCamo">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Medic">
+            <GameLink GameLink="CamoMedic">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="Medic">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Desert">
+            <GameLink GameLink="CamoDesert">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="Desert">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Navy Blue">
+            <GameLink GameLink="CamoNavyBlue">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="Navy Blue">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="ABU">
+            <GameLink GameLink="CamoABU">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="ABU">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Snow">
+            <GameLink GameLink="CamoSnow">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="Snow">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Rock Avalanche">
+            <GameLink GameLink="CamoRockAvalanche">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="Rock Avalanche">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Gold">
+            <GameLink GameLink="CamoGold">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="Gold">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Rain">
+            <GameLink GameLink="CamoRain">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="Rain">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Cyber">
+            <GameLink GameLink="CamoCyber">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="Cyber">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Desert Storm">
+            <GameLink GameLink="CamoDesertStorm">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="Desert Storm">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Frost">
+            <GameLink GameLink="CamoFrost">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="Frost">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Beta Tester">
+            <GameLink GameLink="CamoBetaTester">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="Beta Tester">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="SnowRA">
+            <GameLink GameLink="CamoSnowRA">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="SnowRA">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Spectre">
+            <GameLink GameLink="CamoSpectreUpdated">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="Spectre">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="BDU">
+            <GameLink GameLink="CamoBDU">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="BDU">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Red Steel">
+            <GameLink GameLink="RedSteel">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="Red Steel">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Party">
+            <GameLink GameLink="CamoParty">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="Party">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Galactic">
+            <GameLink GameLink="CamoGalactic">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="Galactic">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Blood">
+            <GameLink GameLink="CamoBlood">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="Blood">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Lightning">
+            <GameLink GameLink="CamoLightning">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="Lightning">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Galaxy">
+            <GameLink GameLink="CamoInferno">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="Galaxy">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Doom">
+            <GameLink GameLink="CamoDoom">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="Doom">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Obsidian">
+            <GameLink GameLink="CamoObsidian">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="Obsidian">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="AUC">
+            <GameLink GameLink="CamoScarlet">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="AUC">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Icy">
+            <GameLink GameLink="CamoIcy">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="Icy">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Pride">
+            <GameLink GameLink="CamoPride">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="Pride">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="HellFire">
+            <GameLink GameLink="CamoHellfire">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="HellFire">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Laser">
+            <GameLink GameLink="CamoLaser">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="Laser">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Leopard">
+            <GameLink GameLink="CamoLeopard">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="Leopard">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="DND">
+            <GameLink GameLink="CamoDND">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="DND">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Sparkle">
+            <GameLink GameLink="CamoSparkle">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="Sparkle">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Emerald">
+            <GameLink GameLink="CamoEmerald">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="Emerald">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="ZES">
+            <GameLink GameLink="CamoZES">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="ZES">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Bio">
+            <GameLink GameLink="CamoBio">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="Bio">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Holiday">
+            <GameLink GameLink="CamoChristmas">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="Holiday">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Urban Snow">
+            <GameLink GameLink="CamoUrbanSnow">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="Urban Snow">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="RN Jesus">
+            <GameLink GameLink="CamoRNJesus">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="RN Jesus">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="White Tiger">
+            <GameLink GameLink="CamoWhiteTiger">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="White Tiger">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Ghost">
+            <GameLink GameLink="CamoDefault">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="Ghost">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="SYL">
+            <GameLink GameLink="CamoSYL">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="Solyluna">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+    </CUser>
+    <CUser id="Decals">
+        <Fields Id="Decal Name" Type="String" EditorText="Name"/>
+        <Fields Id="Decals" Type="GameLink" GameLinkType="Texture"/>
+        <Instances Id="[Default]">
+            <String String="Rank Insignia">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Bear Claw">
+            <GameLink GameLink="DecalBearClaw">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="Bear Claw">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Blue Diamond">
+            <GameLink GameLink="DecalBlueDiamond">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="Blue Diamond">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Calvary Sabers">
+            <GameLink GameLink="DecalCavSabers">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="Calvary Sabers">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Outlaw">
+            <GameLink GameLink="DecalOutlaw">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="Outlaw">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Rock Avalanche">
+            <GameLink GameLink="DecalRA">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="Rock Avalanche">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Ravensword">
+            <GameLink GameLink="DecalRavensword">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="Ravensword">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Combat Medic Badge">
+            <GameLink GameLink="DecalCMB">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="Combat Medic Badge">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="ZES">
+            <GameLink GameLink="DecalZES">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="ZES">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Wolves">
+            <GameLink GameLink="DecalWolves">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="Wolves">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="US Flag">
+            <GameLink GameLink="DecalUSFlag">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="US Flag">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="AUC">
+            <GameLink GameLink="DecalAUC">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="AUC">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Russia Flag">
+            <GameLink GameLink="DecalRussiaFlag">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="Russia Flag">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Singapore Flag">
+            <GameLink GameLink="DecalSingapore">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="Singapore Flag">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Italy Flag">
+            <GameLink GameLink="DecalItaly">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="Italy Flag">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Finland Flag">
+            <GameLink GameLink="DecalFinland">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="Finland Flag">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Canada Flag">
+            <GameLink GameLink="DecalCanadaFlag">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="Canada Flag">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="South Korea Flag">
+            <GameLink GameLink="DecalSouthKoreaFlag">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="South Korea Flag">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Great Britain Flag">
+            <GameLink GameLink="DecalGBFlag">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="Great Britain Flag">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Germany Flag">
+            <GameLink GameLink="DecalGermanyFlag">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="Germany Flag">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Woodland">
+            <GameLink GameLink="DecalWoodland">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="Woodland">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Bronze">
+            <GameLink GameLink="DecalBronze">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="Bronze">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Silver">
+            <GameLink GameLink="DecalSilver">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="Silver">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Gold">
+            <GameLink GameLink="DecalGold">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="Gold">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Platinum">
+            <GameLink GameLink="DecalPlatinum">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="Platinum">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Diamond">
+            <GameLink GameLink="DecalDiamond">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="Diamond">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Master">
+            <GameLink GameLink="DecalMaster">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="Master">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="GrandMaster">
+            <GameLink GameLink="DecalGrandmaster">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="GrandMaster">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Galactic">
+            <GameLink GameLink="DecalGalactic">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="Galactic">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Biohazard">
+            <GameLink GameLink="DecalBioHazard">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="Biohazard">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Green Diamond">
+            <GameLink GameLink="DecalGreenDiamond">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="Green Diamond">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Lionheart">
+            <GameLink GameLink="DecalLion">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="Lionheart">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Serpent">
+            <GameLink GameLink="DecalSerpent">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="Serpent">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Krypton">
+            <GameLink GameLink="DecalKrypton">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="Krypton">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Earth">
+            <GameLink GameLink="DecalEarth">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="Earth">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="T1 Hunter">
+            <GameLink GameLink="DecalT1Hunter">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="T1 Hunter">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Ranger">
+            <GameLink GameLink="DecalRanger">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="Ranger">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Lost Pact">
+            <GameLink GameLink="DecalLostPact">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="Lost Pact">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Red Skull">
+            <GameLink GameLink="DecalRedSkull">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="Red Skull">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Huntress">
+            <GameLink GameLink="DecalHuntress">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="Huntress">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Dare to Win">
+            <GameLink GameLink="DecalWinner">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="Dare to Win">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Mexico Flag">
+            <GameLink GameLink="DecalMexicoFlag">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="Mexico Flag">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Dark Sky">
+            <GameLink GameLink="DecalDS">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="DS (Dark Sky)">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Australia Flag">
+            <GameLink GameLink="DecalAustraliaFlag">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="Australia Flag">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Vietnam Flag">
+            <GameLink GameLink="DecalVietnamFlag">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="Vietnam Flag">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="US/Canada Flag">
+            <GameLink GameLink="DecalUSCA">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="US/Canada Flag">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+        <Instances Id="SYL">
+            <GameLink GameLink="DecalSYL">
+                <Field Id="Decals"/>
+            </GameLink>
+            <String String="Solyluna">
+                <Field Id="Decal Name"/>
+            </String>
+        </Instances>
+    </CUser>
+    <CUser id="Accessories">
+        <Fields Id="Accessory Name" Type="String" EditorText="Name"/>
+        <Fields Id="Accessories" Type="GameLink" GameLinkType="Texture"/>
+        <Instances Id="[Default]"/>
+        <Instances Id="1">
+            <String String="1">
+                <Field Id="Accessory Name"/>
+            </String>
+        </Instances>
+        <Instances Id="2">
+            <String String="2">
+                <Field Id="Accessory Name"/>
+            </String>
+        </Instances>
+        <Instances Id="3">
+            <String String="3">
+                <Field Id="Accessory Name"/>
+            </String>
+        </Instances>
+        <Instances Id="4">
+            <String String="4">
+                <Field Id="Accessory Name"/>
+            </String>
+        </Instances>
+        <Instances Id="5">
+            <String String="5">
+                <Field Id="Accessory Name"/>
+            </String>
+        </Instances>
+        <Instances Id="6">
+            <String String="6">
+                <Field Id="Accessory Name"/>
+            </String>
+        </Instances>
+        <Instances Id="7">
+            <String String="7">
+                <Field Id="Accessory Name"/>
+            </String>
+        </Instances>
+        <Instances Id="8">
+            <String String="8">
+                <Field Id="Accessory Name"/>
+            </String>
+        </Instances>
+        <Instances Id="9">
+            <String String="9">
+                <Field Id="Accessory Name"/>
+            </String>
+        </Instances>
+        <Instances Id="10">
+            <String String="10">
+                <Field Id="Accessory Name"/>
+            </String>
+        </Instances>
+        <Instances Id="11">
+            <String String="11">
+                <Field Id="Accessory Name"/>
+            </String>
+        </Instances>
+        <Instances Id="12">
+            <String String="12">
+                <Field Id="Accessory Name"/>
+            </String>
+        </Instances>
+        <Instances Id="13">
+            <String String="13">
+                <Field Id="Accessory Name"/>
+            </String>
+        </Instances>
+        <Instances Id="14">
+            <String String="14">
+                <Field Id="Accessory Name"/>
+            </String>
+        </Instances>
+        <Instances Id="15">
+            <String String="15">
+                <Field Id="Accessory Name"/>
+            </String>
+        </Instances>
+        <Instances Id="16">
+            <String String="16">
+                <Field Id="Accessory Name"/>
+            </String>
+        </Instances>
+        <Instances Id="17">
+            <String String="17">
+                <Field Id="Accessory Name"/>
+            </String>
+        </Instances>
+        <Instances Id="18">
+            <String String="18">
+                <Field Id="Accessory Name"/>
+            </String>
+        </Instances>
+        <Instances Id="19">
+            <String String="19">
+                <Field Id="Accessory Name"/>
+            </String>
+        </Instances>
+        <Instances Id="20">
+            <String String="20">
+                <Field Id="Accessory Name"/>
+            </String>
+        </Instances>
+    </CUser>
+    <CUser id="DevHandles">
+        <Fields Id="Handle" Type="String" EditorColumn="2"/>
+        <Instances Id="[Default]"/>
+        <Instances Id="Xempest">
+            <String String="1-S2-1-375017">
+                <Field Id="Handle"/>
+            </String>
+        </Instances>
+        <Instances Id="Malikav">
+            <String String="1-S2-1-2424587">
+                <Field Id="Handle"/>
+            </String>
+        </Instances>
+        <Instances Id="Ubermarine">
+            <String String="1-S2-1-7775786">
+                <Field Id="Handle"/>
+            </String>
+        </Instances>
+        <Instances Id="Ascantha">
+            <String String="1-S2-1-3681588">
+                <Field Id="Handle"/>
+            </String>
+        </Instances>
+        <Instances Id="Bobosk">
+            <String String="1-S2-1-1705491">
+                <Field Id="Handle"/>
+            </String>
+        </Instances>
+        <Instances Id="Mstachife">
+            <String String="1-S2-1-323494">
+                <Field Id="Handle"/>
+            </String>
+        </Instances>
+        <Instances Id="Skylance">
+            <String String="1-S2-1-3162777">
+                <Field Id="Handle"/>
+            </String>
+        </Instances>
+        <Instances Id="Warplayer">
+            <String String="3-S2-1-5165461">
+                <Field Id="Handle"/>
+            </String>
+        </Instances>
+        <Instances Id="Kaji">
+            <String String="1-S2-1-4235173">
+                <Field Id="Handle"/>
+            </String>
+        </Instances>
+    </CUser>
+    <CUser id="GameModes">
+        <Fields Id="Name" Type="Text" EditorColumn="1"/>
+        <Fields Id="Spawn Modifier" Type="Int" EditorColumn="2"/>
+        <Fields Id="Image" Type="Image" EditorColumn="5"/>
+        <Fields Id="Tooltip" Type="Text" EditorColumn="3"/>
+        <Instances Id="[Default]"/>
+        <Instances Id="Recruit">
+            <Image Image="Assets\Images\difficulties\Recruit.dds">
+                <Field Id="Image"/>
+            </Image>
+            <Int Int="-1">
+                <Field Id="Spawn Modifier"/>
+            </Int>
+            <Text Text="UserData/GameModes/Recruit_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/GameModes/Recruit_Tooltip">
+                <Field Id="Tooltip"/>
+            </Text>
+        </Instances>
+        <Instances Id="Normal">
+            <Image Image="Assets\Images\difficulties\Normal.dds">
+                <Field Id="Image"/>
+            </Image>
+            <Text Text="UserData/GameModes/Normal_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/GameModes/Normal_Tooltip">
+                <Field Id="Tooltip"/>
+            </Text>
+        </Instances>
+        <Instances Id="Hard">
+            <Image Image="Assets\Images\difficulties\Hard.dds">
+                <Field Id="Image"/>
+            </Image>
+            <Int Int="1">
+                <Field Id="Spawn Modifier"/>
+            </Int>
+            <Text Text="UserData/GameModes/Hard_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/GameModes/Hard_Tooltip">
+                <Field Id="Tooltip"/>
+            </Text>
+        </Instances>
+        <Instances Id="Insane">
+            <Image Image="Assets\Images\difficulties\Insane.dds">
+                <Field Id="Image"/>
+            </Image>
+            <Int Int="2">
+                <Field Id="Spawn Modifier"/>
+            </Int>
+            <Text Text="UserData/GameModes/Insane_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/GameModes/Insane_Tooltip">
+                <Field Id="Tooltip"/>
+            </Text>
+        </Instances>
+        <Instances Id="Nightmare">
+            <Image Image="Assets\Images\difficulties\Nightmare.dds">
+                <Field Id="Image"/>
+            </Image>
+            <Int Int="3">
+                <Field Id="Spawn Modifier"/>
+            </Int>
+            <Text Text="UserData/GameModes/Nightmare_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/GameModes/Nightmare_Tooltip">
+                <Field Id="Tooltip"/>
+            </Text>
+        </Instances>
+        <Instances Id="Genesis">
+            <Image>
+                <Field Id="Image"/>
+            </Image>
+            <Int Int="4">
+                <Field Id="Spawn Modifier"/>
+            </Int>
+            <Text Text="UserData/GameModes/Genesis_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/GameModes/Genesis_Tooltip">
+                <Field Id="Tooltip"/>
+            </Text>
+        </Instances>
+        <Instances Id="Survival">
+            <Image Image="Assets\Images\difficulties\Survival.dds">
+                <Field Id="Image"/>
+            </Image>
+            <Int Int="2">
+                <Field Id="Spawn Modifier"/>
+            </Int>
+            <Text Text="UserData/GameModes/Survival_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/GameModes/Survival_Tooltip">
+                <Field Id="Tooltip"/>
+            </Text>
+        </Instances>
+        <Instances Id="PMC Survival">
+            <Image Image="Assets\Images\difficulties\PMC Survival.dds">
+                <Field Id="Image"/>
+            </Image>
+            <Text Text="UserData/GameModes/PMC Survival_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/GameModes/PMC Survival_Tooltip">
+                <Field Id="Tooltip"/>
+            </Text>
+        </Instances>
+        <Instances Id="Boss Mode">
+            <Image Image="Assets\Images\difficulties\Boss Mode.dds">
+                <Field Id="Image"/>
+            </Image>
+            <Text Text="UserData/GameModes/Boss Mode_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/GameModes/Boss Mode_Tooltip">
+                <Field Id="Tooltip"/>
+            </Text>
+        </Instances>
+        <Instances Id="Death Match">
+            <Image>
+                <Field Id="Image"/>
+            </Image>
+            <Text Text="UserData/GameModes/Death Match_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/GameModes/Death Match_Tooltip">
+                <Field Id="Tooltip"/>
+            </Text>
+        </Instances>
+        <Instances Id="PMC">
+            <Image Image="Assets\Images\difficulties\PMC.dds">
+                <Field Id="Image"/>
+            </Image>
+            <Text Text="UserData/GameModes/PMC_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/GameModes/PMC_Tooltip">
+                <Field Id="Tooltip"/>
+            </Text>
+        </Instances>
+        <Instances Id="Sand Box">
+            <Image Image="Assets\Images\difficulties\Sand Box.dds">
+                <Field Id="Image"/>
+            </Image>
+            <Text Text="UserData/GameModes/Sand Box_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/GameModes/Sand Box_Tooltip">
+                <Field Id="Tooltip"/>
+            </Text>
+        </Instances>
+        <Instances Id="LUNATIC">
+            <Image Image="Assets\Images\Difficulties\LUNATIC.dds">
+                <Field Id="Image"/>
+            </Image>
+            <Int Int="2">
+                <Field Id="Spawn Modifier"/>
+            </Int>
+            <Text Text="UserData/GameModes/LUNATIC_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/GameModes/LUNATIC_Tooltip">
+                <Field Id="Tooltip"/>
+            </Text>
+        </Instances>
+        <Instances Id="Campaign2">
+            <Image Image="Assets\Images\Difficulties\Campaign2.tga">
+                <Field Id="Image"/>
+            </Image>
+            <Text Text="UserData/GameModes/Campaign2_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/GameModes/Campaign2_Tooltip">
+                <Field Id="Tooltip"/>
+            </Text>
+        </Instances>
+        <Instances Id="Campaign Menu">
+            <Image Image="Assets\Images\Difficulties\Campaign.tga">
+                <Field Id="Image"/>
+            </Image>
+            <Text Text="UserData/GameModes/Campaign Menu_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/GameModes/Campaign Menu_Tooltip">
+                <Field Id="Tooltip"/>
+            </Text>
+        </Instances>
+        <Instances Id="Survival Menu">
+            <Image Image="Assets\Images\difficulties\Survival.dds">
+                <Field Id="Image"/>
+            </Image>
+            <Text Text="UserData/GameModes/Survival Menu_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/GameModes/Survival Menu_Tooltip">
+                <Field Id="Tooltip"/>
+            </Text>
+        </Instances>
+    </CUser>
+    <CUser id="MOSSpecificSkillIdentifiers">
+        <Fields Id="SI Icon" Type="Image" Count="2"/>
+        <Fields Id="SI Name" Type="Text" Count="2"/>
+        <Fields Id="SI Tooltip" Type="Text" Count="2"/>
+        <Fields Id="SI Abbreviation" Type="Text" Count="2"/>
+        <Fields Id="SI Button" Type="Int" Count="2"/>
+        <Instances Id="[Default]"/>
+        <Instances Id="Rifleman">
+            <Image Image="BTNFragGrenade.dds">
+                <Field Id="SI Icon"/>
+            </Image>
+            <Int Int="31">
+                <Field Id="SI Button"/>
+            </Int>
+            <Int Int="32">
+                <Field Id="SI Button" Index="1"/>
+            </Int>
+            <Text Text="UserData/MOSSpecificSkillIdentifiers/Rifleman_SI Name">
+                <Field Id="SI Name"/>
+            </Text>
+            <Text Text="UserData/MOSSpecificSkillIdentifiers/Rifleman_SI Abbreviation">
+                <Field Id="SI Abbreviation"/>
+            </Text>
+            <Text Text="UserData/MOSSpecificSkillIdentifiers/Rifleman_SI Tooltip">
+                <Field Id="SI Tooltip"/>
+            </Text>
+        </Instances>
+        <Instances Id="Combat Medic"/>
+        <Instances Id="Automatic Rifleman"/>
+        <Instances Id="Flamethrower"/>
+        <Instances Id="Enforcer"/>
+        <Instances Id="Cavalry Scout"/>
+        <Instances Id="Squad Designated Marksman"/>
+        <Instances Id="Javelin Gunner"/>
+        <Instances Id="Platoon Leader"/>
+        <Instances Id="Combat Engineer"/>
+        <Instances Id="Cyborg"/>
+        <Instances Id="Ghost"/>
+        <Instances Id="Fire Support Specialist"/>
+        <Instances Id="Commando"/>
+        <Instances Id="Laser Enforcer"/>
+        <Instances Id="Specter"/>
+        <Instances Id="Orbital Support Specialist"/>
+        <Instances Id="Heavy Gunner"/>
+    </CUser>
+    <CUser id="OctoCamoTextures">
+        <Fields>
+            <Id value="Terrain Texture"/>
+            <Type value="GameLink"/>
+            <GameLinkType value="TerrainTex"/>
+            <EditorText value="Name"/>
+        </Fields>
+        <Fields>
+            <Id value="Camo"/>
+            <Type value="GameLink"/>
+            <GameLinkType value="Texture"/>
+            <EditorText value="Name"/>
+        </Fields>
+        <Instances Id="[Default]"/>
+        <Instances Id="AGRIA Concrete">
+            <GameLink GameLink="AGRIAConcrete">
+                <Field Id="Camo"/>
+            </GameLink>
+            <GameLink GameLink="AgriaConcrete">
+                <Field Id="Terrain Texture"/>
+            </GameLink>
+        </Instances>
+        <Instances Id="AGRIA Crops">
+            <GameLink GameLink="AgriaCrops">
+                <Field Id="Terrain Texture"/>
+            </GameLink>
+            <GameLink GameLink="AGRIACrops">
+                <Field Id="Camo"/>
+            </GameLink>
+        </Instances>
+        <Instances Id="AGRIA Dirt">
+            <GameLink GameLink="AgriaDirt">
+                <Field Id="Terrain Texture"/>
+            </GameLink>
+            <GameLink GameLink="AGRIADirt">
+                <Field Id="Camo"/>
+            </GameLink>
+        </Instances>
+        <Instances Id="AGRIA Dirt Rough">
+            <GameLink GameLink="AgriaDirtRough">
+                <Field Id="Terrain Texture"/>
+            </GameLink>
+            <GameLink GameLink="AGRIADirtRough">
+                <Field Id="Camo"/>
+            </GameLink>
+        </Instances>
+        <Instances Id="AGRIA Foliage">
+            <GameLink GameLink="AgriaFoliage">
+                <Field Id="Terrain Texture"/>
+            </GameLink>
+            <GameLink GameLink="AGRIAFoilage">
+                <Field Id="Camo"/>
+            </GameLink>
+        </Instances>
+        <Instances Id="AGRIA Grass Green">
+            <GameLink GameLink="AgriaGrassGreen">
+                <Field Id="Terrain Texture"/>
+            </GameLink>
+            <GameLink GameLink="AGRIAGrassGreen">
+                <Field Id="Camo"/>
+            </GameLink>
+        </Instances>
+        <Instances Id="AGRIA Grass Yellow">
+            <GameLink GameLink="AGRIAGrassYellow">
+                <Field Id="Camo"/>
+            </GameLink>
+            <GameLink GameLink="AgriaGrassYellow">
+                <Field Id="Terrain Texture"/>
+            </GameLink>
+        </Instances>
+        <Instances Id="AGRIA Rock">
+            <GameLink GameLink="AgriaRock">
+                <Field Id="Terrain Texture"/>
+            </GameLink>
+            <GameLink GameLink="AGRIARock">
+                <Field Id="Camo"/>
+            </GameLink>
+        </Instances>
+    </CUser>
+    <CUser id="EnlistedRanks">
+        <Fields Id="Decal" Type="Image" EditorColumn="3"/>
+        <Fields>
+            <Id value="Texture"/>
+            <Type value="GameLink"/>
+            <GameLinkType value="Texture"/>
+            <EditorColumn value="4"/>
+        </Fields>
+        <Fields Id="XP Min" Type="Int" EditorColumn="2"/>
+        <Fields Id="Prefix" Type="Text" EditorColumn="1"/>
+        <Instances Id="[Default]"/>
+        <Instances Id="PVT">
+            <GameLink GameLink="RankPVT">
+                <Field Id="Texture"/>
+            </GameLink>
+            <Image Image="Buttons\Ranks\RankPVT.dds">
+                <Field Id="Decal"/>
+            </Image>
+            <Text Text="UserData/EnlistedRanks/PVT_Prefix">
+                <Field Id="Prefix"/>
+            </Text>
+        </Instances>
+    </CUser>
+    <CUser id="SpawnTier1">
+        <Fields>
+            <Id value="Spawn Count"/>
+            <Type value="Int"/>
+            <Count value="5"/>
+            <EditorColumn value="2"/>
+        </Fields>
+        <Fields>
+            <Id value="Unit"/>
+            <Type value="Unit"/>
+            <Count value="5"/>
+            <EditorColumn value="1"/>
+        </Fields>
+        <Fields Id="Chance" Type="Int" EditorColumn="3"/>
+        <Fields Id="XP Required" Type="Int" EditorColumn="4"/>
+        <Instances Id="[Default]"/>
+        <Instances Id="5 Minutes">
+            <Int Int="1">
+                <Field Id="Chance"/>
+            </Int>
+            <Unit Unit="Risen">
+                <Field Id="Unit"/>
+            </Unit>
+        </Instances>
+    </CUser>
+</Catalog>

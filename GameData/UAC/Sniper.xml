@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CEffectSet id="ComputerAssistedTargetingSystemSet">
+        <EditorCategories value=""/>
+        <EffectArray value="ComputerAssistedTargetingSystemPersist"/>
+    </CEffectSet>
+    <CEffectCreatePersistent id="ComputerAssistedTargetingSystemPersist">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetUnit"/>
+        <Flags index="Channeled" value="1"/>
+        <Flags index="PersistUntilDestroyed" value="1"/>
+        <RevealRadius value="2"/>
+    </CEffectCreatePersistent>
+    <CEffectSet id="EquipScoutSniperSet">
+        <EditorCategories value=""/>
+        <EffectArray value="EquipSubmachineGun"/>
+        <EffectArray value="EquipAS50"/>
+    </CEffectSet>
+    <CAbilEffectTarget id="ComputerAssistedTargetingSystem">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="ComputerAssistedTargetingSystemSet"/>
+        <Range value="500"/>
+        <Marker Link="Abil/NovaStoneTargetEnemy"/>
+        <AINotifyEffect value="NovaStoneTargetEnemy"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="ComputerAssistedTargetingSystem"/>
+    </CAbilEffectTarget>
+    <CAbilLearn id="LearnAbilitiesScoutSniper" parent="LearnAbilityMOS">
+        <Name value="Abil/Name/LearnAbilitiesScoutSniper"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CAbilLearn>
+    <CButton id="ComputerAssistedTargetingSystem">
+        <Icon value="Assets\Textures\talent-swann-level04-laserdrillresearchbundle.dds"/>
+    </CButton>
+    <CActorModel id="ComputerAssistedTargetingSystem2" parent="ModelAnimationStyleContinuous">
+        <EditorCategories value=""/>
+        <On Terms="Effect.ComputerAssistedTargetingSystemPersist.Start; At Target" Send="Create"/>
+        <On Terms="Effect.ComputerAssistedTargetingSystemPersist.Stop" Send="AnimBracketStop BSD"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachCenter"/>
+        <Model value="NovaStoneTargetEnemy"/>
+    </CActorModel>
+    <CActorBeamSimple id="ComputerAssistedTargetingSystemBeam" parent="BeamSimpleAnimationStyleContinuous">
+        <EditorCategories value=""/>
+        <On Terms="Effect.ComputerAssistedTargetingSystemPersist.Start; At Target" Send="Create"/>
+        <On Terms="Effect.ComputerAssistedTargetingSystemPersist.Stop" Send="AnimBracketStop BSD"/>
+        <On Terms="ActorCreation" Send="SetVisibility"/>
+        <On Terms="AgeReached; Age 0.500000" Send="SetVisibility 1"/>
+        <Model value="NovaStoneTargetEnemyBeam"/>
+        <HostLaunch Subject="_Selectable" Scope="Caster" Actor="Find"/>
+        <HostLaunchSiteOps Ops="SOpAttachWeapon"/>
+        <HostImpactSiteOps Ops="SOpTargetUnit SOpAttachCenter"/>
+    </CActorBeamSimple>
+    <CActorSound id="ComputerAssistedTargetingSystemSound" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.ComputerAssistedTargetingSystemPersist.Start" Send="Create"/>
+        <On Terms="Behavior.AimAssistant.On" Send="Create"/>
+        <Sound value="NovaStoneTargetEnemyLockSound"/>
+    </CActorSound>
+    <CActorUnit id="ComputerAssistedTargetingSystem" parent="GenericUnitStandard" unitName="ComputerAssistedTargetingSystem">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.Precursor.Off" Send="Create AutoTurretReleaseMissileImpact"/>
+        <On Terms="Behavior.Precursor.Off" Send="$Birth"/>
+        <On Terms="WeaponStart.*.AttackStart" Send="AnimClear Birth"/>
+        <On Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death"/>
+        <Model value="HiveMindEmulator"/>
+        <Scale value="0.300000,0.300000,0.100000"/>
+        <BuildModel value="SensorTower"/>
+        <DeathArray index="Normal" ModelLink="SensorTowerDeath" SoundLink="Raven_AutoTurretExplode"/>
+        <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="Raven_AutoTurretExplode"/>
+        <PlacementModel value="SensorTowerPlacement"/>
+        <PlacementSound value="Terran_BuildingPlacement"/>
+        <PortraitModel value="SensorTower"/>
+        <StandAnimTurnTime value="1"/>
+        <StandAnimTurnTimeScaleMin value="1.000000"/>
+        <BarOffset value="50"/>
+        <ErrorArray Error="CantBuildLocationInvalid" Sound="Raven_Pissed"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-AutoTurret.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-ability-terran-snipe-color.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-buildingarmor.dds"/>
+        <SoundArray index="Birth" value="Raven_AutoTurretBirth"/>
+        <SoundArray index="Ready" value="Raven_AutoTurretReady"/>
+        <SoundArray index="What" value="Raven_AutoTurretWhat"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <UnitIcon value="Assets\Textures\btn-ability-terran-snipe-color.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-terran-sensortower.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorUnit id="ScoutSniper" parent="UnitTemplateActor" unitName="ScoutSniper">
+        <EditorCategories value=""/>
+        <PortraitModel value="NarudPortrait"/>
+        <HeroIcon value="Assets\Textures\narudportrait_static.dds"/>
+        <HighlightTooltip value="Unit/Name/Bogus"/>
+        <UnitIcon value="Assets\Textures\narudportrait_static.dds"/>
+    </CActorUnit>
+    <CUnit id="ComputerAssistedTargetingSystem">
+        <DeathRevealRadius value="3"/>
+        <ReviveType value="FieldCamera"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="NoScore" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
+        <FlagArray index="AILifetime" value="1"/>
+        <FlagArray index="AIDefense" value="1"/>
+        <FlagArray index="ArmorDisabledWhileConstructing" value="1"/>
+        <FogVisibility value="Snapshot"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Burrow" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Structure" value="1"/>
+        <Collide index="RoachBurrow" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <Attributes index="Psionic" value="1"/>
+        <LifeStart value="80"/>
+        <LifeMax value="80"/>
+        <LifeArmor value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranBuildingPlating"/>
+        <StationaryTurningRate value="719.4726"/>
+        <TurningRate value="719.4726"/>
+        <Sight value="15"/>
+        <RepairTime value="50"/>
+        <AttackTargetPriority value="20"/>
+        <AbilArray Link="ComputerAssistedTargetingSystem"/>
+        <BehaviorArray Link="LightFilter"/>
+        <BehaviorArray Link="DurableFieldCameras"/>
+        <CardLayouts>
+            <LayoutButtons Face="ComputerAssistedTargetingSystem" Type="AbilCmd" AbilCmd="ComputerAssistedTargetingSystem,Execute" Row="1" Column="2"/>
+        </CardLayouts>
+        <Radius value="0"/>
+        <SeparationRadius value="0"/>
+        <SubgroupPriority value="2"/>
+        <MinimapRadius value="0.75"/>
+        <EditorCategories value=""/>
+        <TacticalAI value="FieldCamera"/>
+        <LeaderAlias value="FieldCamera"/>
+        <SelectAlias value="FieldCamera"/>
+        <SubgroupAlias value="FieldCamera"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="346"/>
+        <HotkeyCategory value="Unit/Category/TerranUnits"/>
+        <KillDisplay value="Never"/>
+        <RankDisplay value="Never"/>
+        <AIEvaluateAlias value="FieldCamera"/>
+        <ReviveInfoBase>
+            <Charge Link="FieldCamera/Revive"/>
+            <Cooldown Link="FieldCamera/Revive"/>
+        </ReviveInfoBase>
+    </CUnit>
+    <CUnit id="ScoutSniper" parent="UnitTemplateClassic">
+        <BehaviorArray Link="EquipSniperRifle"/>
+        <BehaviorArray Link="UnequipSniperRifle"/>
+        <WeaponArray index="0" Link="PDW"/>
+        <EffectArray index="Birth" value="EquipScoutSniperSet"/>
+        <EffectArray index="Revive" value="EquipScoutSniperSet"/>
+        <EditorCategories value=""/>
+        <AbilArray Link="ComputerAssistedTargetingSystem"/>
+        <AbilArray Link="GPlasmaGrenade"/>
+        <CardLayouts index="0">
+            <LayoutButtons Face="ComputerAssistedTargetingSystem" Type="AbilCmd" AbilCmd="ComputerAssistedTargetingSystem,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="GPlasmaGrenade" Type="AbilCmd" AbilCmd="GPlasmaGrenade,Execute" Row="2" Column="1"/>
+        </CardLayouts>
+        <Attributes index="Light" value="0"/>
+    </CUnit>
+    <CBehaviorBuff id="ComputerAssistedTargetingSystem">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification LifeArmorBonus="-10"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="UnequipSniperRifle">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <BehaviorLinkDisableArray value="EquipAS50"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="EquipSniperRifle">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="IsProned"/>
+        <Modification>
+            <BehaviorLinkDisableArray value="EquipSubmachineGun"/>
+            <BehaviorLinkDisableArray value="UnequipSniperRifle"/>
+            <WeaponArray Link="AntiMaterielRifle"/>
+            <WeaponDisableArray value="PDW"/>
+        </Modification>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+</Catalog>

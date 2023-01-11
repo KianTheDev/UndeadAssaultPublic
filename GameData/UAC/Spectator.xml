@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CEffectCreateUnit id="ChooseSpectator">
+        <EditorCategories value=""/>
+        <SpawnUnit value="Spectator"/>
+    </CEffectCreateUnit>
+    <CAbilEffectInstant id="ChooseSpectator">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="ChooseSpectator" Requirements="Spectators"/>
+    </CAbilEffectInstant>
+    <CRequirement id="Spectators">
+        <NodeArray index="Use" Link="AndEq2699008109CountUpgradeSpectatorCompleteOnly1"/>
+    </CRequirement>
+    <CButton id="ChooseSpectator">
+        <Icon value="Assets\Textures\ui_tutorial_cameraicon.dds"/>
+    </CButton>
+    <CRequirementAnd id="AndEq2699008109CountUpgradeSpectatorCompleteOnly1">
+        <OperandArray value="Eq2699008109CountUpgradeSpectatorCompleteOnly1"/>
+    </CRequirementAnd>
+    <CRequirementCountUpgrade id="CountUpgradeSpectatorCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Spectator" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementEq id="Eq2699008109CountUpgradeSpectatorCompleteOnly1">
+        <OperandArray index="0" value="CountUpgradeSpectatorCompleteOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementEq>
+    <CActorUnit id="Spectator" parent="UnitTemplateActor" unitName="Spectator">
+        <EditorCategories value=""/>
+        <Model value="Invisible"/>
+        <PortraitModel value="EditorCamera"/>
+        <HeroIcon value="Assets\Textures\ui_tutorial_cameraicon.dds"/>
+        <HighlightTooltip value="Unit/Name/Bogus"/>
+        <LifeArmorIcon value="Assets\Textures\ui_tutorial_cameraicon.dds"/>
+        <StatusBarFlags index="Shields" value="0"/>
+        <StatusBarFlags index="Life" value="0"/>
+        <StatusBarFlags index="Energy" value="0"/>
+        <StatusBarFlags index="Cargo" value="0"/>
+        <StatusBarFlags index="Progress" value="0"/>
+        <StatusBarFlags index="Duration" value="0"/>
+        <StatusBarFlags index="Magazine" value="0"/>
+        <StatusBarFlags index="Workers" value="0"/>
+        <StatusBarFlags index="Custom" value="0"/>
+        <UnitIcon value="Assets\Textures\ui_tutorial_cameraicon.dds"/>
+    </CActorUnit>
+    <CUnit id="Spectator" parent="UnitTemplateClassic">
+        <FlagArray index="Untargetable" value="1"/>
+        <FlagArray index="Undetectable" value="1"/>
+        <FlagArray index="Invulnerable" value="1"/>
+        <Collide index="Ground" value="0"/>
+        <Collide index="ForceField" value="0"/>
+        <Attributes index="Light" value="0"/>
+        <Attributes index="Biological" value="0"/>
+        <Attributes index="Heroic" value="0"/>
+        <LifeStart value="1"/>
+        <LifeMax value="1"/>
+        <EnergyStart value="0"/>
+        <EnergyMax value="0"/>
+        <EnergyRegenRate value="0"/>
+        <Speed value="10"/>
+        <Sight value="3"/>
+        <KillXP value="0"/>
+        <BehaviorArray index="0" Link="ImmuneToDamage"/>
+        <BehaviorArray index="1" Link="DamageTakenNone"/>
+        <BehaviorArray index="2" Link="ImmuneToFriendlySplash"/>
+        <BehaviorArray index="3" Link="ImmuneToSnare"/>
+        <BehaviorArray index="4" removed="1"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="1">
+                <Face value="Stop"/>
+                <Type value="AbilCmd"/>
+                <AbilCmd value="stop,Stop"/>
+                <SubmenuCardId value=""/>
+                <Row value="0"/>
+                <Column value="2"/>
+            </LayoutButtons>
+            <LayoutButtons index="2">
+                <Face value="MoveHoldPosition"/>
+                <Type value="AbilCmd"/>
+                <AbilCmd value="move,HoldPos"/>
+                <SubmenuCardId value=""/>
+                <Row value="0"/>
+                <Column value="3"/>
+            </LayoutButtons>
+            <LayoutButtons index="3" Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons index="4" Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="1"/>
+            <LayoutButtons index="5" removed="1"/>
+            <LayoutButtons index="6" removed="1"/>
+        </CardLayouts>
+        <MinimapRadius value="0"/>
+        <EditorCategories value=""/>
+        <ReviveInfoBase>
+            <Charge Link="Spectator/Revive"/>
+            <Cooldown Link="Spectator/Revive"/>
+        </ReviveInfoBase>
+    </CUnit>
+    <CUpgrade id="Spectator"/>
+</Catalog>

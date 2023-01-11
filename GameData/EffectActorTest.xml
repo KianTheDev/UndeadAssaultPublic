@@ -1,0 +1,606 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+  <CActorModel id="UpgradeEffectBlueCrystals" parent="ModelAnimationStyleOneShotUNIT">
+    <Inherits index="Visibility" value="1" />
+    <HostSiteOps Ops="SOpAttachCenter SOp2DRotation SOpForwardSouth" />
+  </CActorModel>
+  <CModel id="UpgradeEffectBlueCrystals" parent="OneShotSpellFX">
+    <Model value="Assets\Effects\Neutral\MineralSpawn\MineralSpawn.m3" />
+    <EditorCategories value="Race:Neutral" />
+  </CModel>
+  <CActorModel id="UpgradeEffectGreen" parent="ModelAnimationStyleOneShotUNIT">
+    <Filter index="Neutral" value="1" />
+    <Filter index="Enemy" value="1" />
+    <Inherits index="Visibility" value="1" />
+    <On index="0" Send="AnimBracketStart BSD Birth Stand {} ContentPlayOnce" />
+    <On Terms="ActorCreation" Send="SetTintColor 0,255,0" />
+    <On Terms="ActorCreation" Send="TimerSet 1.000000 Die" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectGreenBeam" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectGreenSound" />
+    <On Terms="TimerExpired; TimerName Die" Send="SetOpacity 0.000000 0.750000" />
+    <On Terms="Effect.UpgradeEffectGreen.Start; At Caster" Send="Create" />
+    <On Terms="Abil.StukovResearchAutocast.Start; ValidateUnit NoRecentlyCreated" Send="Create" />
+    <HostSiteOps Ops="SOpAttachOrigin SOpForwardNorth SOp2DRotation" />
+    <ModelFlags index="AllowHitTest" value="0" />
+  </CActorModel>
+  <CActorModel id="UpgradeEffectGreenBeam" parent="ModelAnimationStyleOneShotUNIT">
+    <Filter index="Neutral" value="1" />
+    <Filter index="Enemy" value="1" />
+    <On Terms="ActorCreation" Send="SetTintColor 0,255,0" />
+    <On Terms="ActorCreation" Send="TimerSet 1.250000 Die" />
+    <On Terms="TimerExpired; TimerName Die" Send="SetOpacity 0.000000 0.250000" />
+    <HostSiteOps Ops="SOpAttachOrigin SOpForwardNorth SOp2DRotation" />
+    <Model value="RecalledImpact" />
+    <Scale value="0.666660,0.666667,1.333333" />
+    <ModelFlags index="AllowHitTest" value="0" />
+    <Inherits index="Visibility" value="1" />
+  </CActorModel>
+  <CActorSound id="UpgradeEffectGreenSound" parent="SoundOneShot">
+    <Filter index="Ally" value="1" />
+    <Filter index="Neutral" value="1" />
+    <Filter index="Enemy" value="1" />
+    <Sound value="UI_BnetLevelUp" />
+  </CActorSound>
+  <CEffectSet id="UpgradeEffectGreen" />
+  <CModel id="UpgradeEffectGreen" parent="OneShotSpellFX">
+    <Model value="Assets\UI\Feedback\AIBeaconDefend\AIBeaconDefend.m3" />
+    <ScaleMax value="2.000000,2.000000,2.000000" />
+    <ScaleMin value="2.000000,2.000000,2.000000" />
+  </CModel>
+  <CActorModel id="UpgradeEffectRed" parent="ModelAnimationStyleOneShotUNIT">
+    <Filter index="Neutral" value="1" />
+    <Filter index="Enemy" value="1" />
+    <Inherits index="Visibility" value="1" />
+    <On index="0" Send="AnimBracketStart BSD Birth Stand {} ContentPlayOnce" />
+    <On Terms="ActorCreation" Send="TimerSet 1.000000 Die" />
+    <On Terms="ActorCreation" Send="SetTintColor 255,128,128" />
+    <On Terms="ActorCreation" Send="TimerSet 1.250000 Die" />
+    <On Terms="TimerExpired; TimerName Die" Send="SetOpacity 0.000000 0.500000" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectRedBeam" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectRedSound" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectRedGlaze" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectRedSimple" />
+    <On Terms="TimerExpired; TimerName Die" Send="SetOpacity 0.000000 0.750000" />
+    <On Terms="Effect.UpgradeEffectRed.Start; At Caster" Send="Create" />
+    <On Terms="Abil.HeroStukovTugofWarTalentsB.Start" Send="Create" />
+    <HostSiteOps Ops="SOpAttachOrigin SOp2DRotation SOpForwardNorth" />
+    <ModelFlags index="AllowHitTest" value="0" />
+  </CActorModel>
+  <CActorModel id="UpgradeEffectRedBeam" parent="ModelAnimationStyleOneShotUNIT">
+    <Filter index="Neutral" value="1" />
+    <Filter index="Enemy" value="1" />
+    <On Terms="ActorCreation" Send="SetTintColor 255,40,20" />
+    <On Terms="ActorCreation" Send="TimerSet 1.250000 Die" />
+    <On Terms="TimerExpired; TimerName Die" Send="SetOpacity 0.000000 0.250000" />
+    <HostSiteOps Ops="SOpAttachOrigin SOp2DRotation SOpForwardNorth" />
+    <Model value="RecalledImpact" />
+    <Scale value="0.666660,0.666667,1.333333" />
+    <ModelFlags index="AllowHitTest" value="0" />
+    <Inherits index="Visibility" value="1" />
+  </CActorModel>
+  <CActorSound id="UpgradeEffectRedSound" parent="SoundOneShot">
+    <Filter index="Ally" value="1" />
+    <Filter index="Neutral" value="1" />
+    <Filter index="Enemy" value="1" />
+  </CActorSound>
+  <CSound id="UpgradeEffectRedSound" parent="UI">
+    <EditorCategories value="Race:Neutral" />
+    <AssetArray File="Assets\Sounds\UI_LevelsEarned_1.wav" FacialGroup="" />
+    <Volume value="-6.000000,-6.000000" />
+  </CSound>
+  <CActorModelMaterial id="UpgradeEffectRedGlaze" parent="GlazeParent">
+    <On Terms="ActorCreation" Send="ModelMaterialApplyTo ::Main" />
+    <On Terms="ActorCreation" Send="AnimBracketStart Birth Birth" />
+    <On Terms="AnimDone; AnimName Birth" Send="Destroy" />
+    <ModelFlags index="AutomateGlobalLoops" value="1" />
+  </CActorModelMaterial>
+  <CModel id="UpgradeEffectRedGlaze">
+    <Model value="Assets\Effects\Glaze\Glaze_Alarak_COOP_SoulAbsorption\Glaze_Alarak_COOP_SoulAbsorption.m3" />
+  </CModel>
+  <CActorSimple id="UpgradeEffectRedSimple">
+    <On Terms="ActorCreation" Target="_Unit" Send="SetTintColor 255,160,160 0.500000 OneShot UpgradeEffectRedTint" />
+    <On Terms="ActorCreation" Target="_Unit" Send="ClearTintColor 1.500000 UpgradeEffectRedTint" />
+    <On Terms="ActorCreation" Send="Destroy" />
+  </CActorSimple>
+  <CEffectSet id="UpgradeEffectRed" />
+  <CModel id="UpgradeEffectRed" parent="ImpactFX">
+    <Model value="Assets\UI\Feedback\AIBeaconCustom\AIBeaconCustom.m3" />
+    <ScaleMax value="2.000000,2.000000,2.000000" />
+    <ScaleMin value="2.000000,2.000000,2.000000" />
+  </CModel>
+  <CActorModel id="UpgradeEffectGold" parent="ModelAnimationStyleOneShotUNIT">
+    <Inherits index="Visibility" value="1" />
+    <HostSiteOps Ops="SOpAttachOrigin SOpForwardNorth SOp2DRotation" />
+    <ModelFlags index="AllowHitTest" value="0" />
+    <On Terms="ActorCreation" Send="SetTintColor 128,255,255" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectGoldGlow" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectGoldGlow" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectGoldGlow" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectGoldGlow" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectGoldGlow" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectGoldGlow" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectGoldSound" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectGoldGlaze" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectGoldSimple" />
+    <On Terms="Effect.Tier4Upgrade.Start" Send="Create" />
+  </CActorModel>
+  <CActorModel id="UpgradeEffectGoldGlow" parent="ModelAnimationStyleContinuousUNIT">
+    <Inherits index="Visibility" value="1" />
+    <On Terms="ActorCreation" Send="SetTintColor 255,255,0" />
+    <On Terms="ActorCreation" Send="TimerSet 2.500000 Die" />
+    <On Terms="TimerExpired; TimerName Die" Send="AnimBracketStop BSD" />
+    <HostSiteOps Ops="SOpAttachChestCenter SOpForwardNorth SOp2DRotation" />
+    <ModelFlags index="AllowHitTest" value="0" />
+  </CActorModel>
+  <CModel id="UpgradeEffectGoldGlow" parent="OneShotSpellFX">
+    <Model value="Assets\UI\Feedback\SwarmMPVictoryEffect\SwarmMPVictoryEffect.m3" />
+    <ScaleMax value="2.000000,2.000000,2.000000" />
+    <ScaleMin value="2.000000,2.000000,2.000000" />
+  </CModel>
+  <CActorSound id="UpgradeEffectGoldSound" parent="SoundOneShot" />
+  <CSound id="UpgradeEffectGoldSound" parent="Spell">
+    <AssetArray File="Assets\Sounds\Uni\UI\BattleNet_UI\UI_BnetLevelUpFadeOut_02.ogg" FacialGroup="" />
+    <Pitch value="-0.300000,0.300000" />
+    <Volume value="-3.000000,-3.000000" />
+  </CSound>
+  <CActorModelMaterial id="UpgradeEffectGoldGlaze" parent="GlazeParent">
+    <On Terms="ActorCreation" Send="ModelMaterialApplyTo ::Main" />
+    <On Terms="ActorCreation" Send="AnimBracketStart Birth Birth" />
+    <On Terms="AnimDone; AnimName Birth" Send="Destroy" />
+    <ModelFlags index="AutomateGlobalLoops" value="1" />
+  </CActorModelMaterial>
+  <CModel id="UpgradeEffectGoldGlaze">
+    <Model value="Assets\Effects\Glaze\Glaze_FenixShield\Glaze_FenixShield.m3" />
+    <AnimSpeed value="0.600000" />
+  </CModel>
+  <CActorSimple id="UpgradeEffectGoldSimple">
+    <On Terms="ActorCreation" Target="_Unit" Send="SetTintColor 255,215,128 1.000000 OneShot UpgradeEffectGoldTint" />
+    <On Terms="ActorCreation" Send="TimerSet 2.000000 Die" />
+    <On Terms="TimerExpired; TimerName Die" Target="_Unit" Send="ClearTintColor 1.000000 UpgradeEffectGoldTint" />
+    <On Terms="TimerExpired; TimerName Die" Send="Destroy" />
+  </CActorSimple>
+  <CModel id="UpgradeEffectGold" parent="OneShotSpellFX">
+    <Model value="Assets\Effects\Zerg\ZergHeroRevive\ZergHeroRevive.m3" />
+  </CModel>
+  <CActorModel id="UpgradeEffectRedStrong" parent="ModelAnimationStyleOneShotUNIT">
+    <On Terms="ActorCreation" Send="SetTintColor {255,0,0 1.400000}" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectRedGlaze" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectRedStrongDust" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectRedStrongRift" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectRedStrongSimple" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectRedStrongBeam" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectRedStrongSound" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectRedStrongSoundWoosh" />
+    <On Terms="Effect.UpgradeEffectRedStrong.Start; At Caster" Send="Create" />
+    <HostSiteOps Ops="SOpAttachChestCenter SOp2DRotation SOpForwardSouth" />
+    <Scale value="3.000000" />
+    <ModelFlags index="AllowHitTest" value="0" />
+  </CActorModel>
+  <CActorModel id="UpgradeEffectRedStrongDust" parent="ModelAnimationStyleOneShotUNIT">
+    <On Terms="ActorCreation" Send="SetTintColor {255,0,0 1.400000}" />
+    <HostSiteOps Ops="SOpAttachChestCenter SOp2DRotation SOpForwardSouth" />
+    <Scale value="1.500000" />
+    <ModelFlags index="AllowHitTest" value="0" />
+  </CActorModel>
+  <CModel id="UpgradeEffectRedStrongDust" parent="OneShotSpellFX">
+    <Model value="Assets\Effects\Protoss\HighTemplarTaldarim_Sacrifice\HighTemplarTaldarim_Sacrifice.m3" />
+    <EditorCategories value="Race:Neutral" />
+  </CModel>
+  <CActorModel id="UpgradeEffectRedStrongRift" parent="ModelAnimationStyleOneShotUNIT">
+    <On Terms="ActorCreation" Send="SetTintColor {255,0,0 1.400000}" />
+    <HostSiteOps Ops="SOpAttachChestCenter SOp2DRotation SOpForwardSouth" />
+    <Model value="PlacementRift" />
+    <ModelFlags index="AllowHitTest" value="0" />
+  </CActorModel>
+  <CModel id="PlacementRift" parent="OneShotSpellFX">
+    <Model value="Assets\Effects\Protoss\Dragoon_Purifier_Coop_AirBomb\Dragoon_Purifier_Coop_AirBomb.m3" />
+    <AnimSpeed value="0.350000" />
+    <EditorCategories value="Race:Protoss" />
+  </CModel>
+  <CActorSimple id="UpgradeEffectRedStrongSimple">
+    <On Terms="ActorCreation" Target="_Unit" Send="SetTintColor 255,80,80 0.500000 OneShot UpgradeEffectRedTint" />
+    <On Terms="ActorCreation" Send="TimerSet 1.000000 Die" />
+    <On Terms="TimerExpired; TimerName Die" Target="_Unit" Send="ClearTintColor 0.500000 UpgradeEffectRedTint" />
+    <On Terms="TimerExpired; TimerName Die" Send="Destroy" />
+  </CActorSimple>
+  <CActorModel id="UpgradeEffectRedStrongBeam" parent="ModelAnimationStyleOneShotUNIT">
+    <Inherits index="Visibility" value="1" />
+    <On Terms="ActorCreation" Send="SetTintColor {255,0,0 1.500000}" />
+    <On Terms="ActorCreation" Send="TimerSet 0.250000 Die" />
+    <On Terms="TimerExpired; TimerName Die" Send="Destroy" />
+    <HostSiteOps Ops="SOpAttachChestCenter SOp2DRotation SOpForwardSouth" />
+    <Model value="RecalledImpact" />
+    <Scale value="0.400000,0.400000,1.250000" />
+    <ModelFlags index="AllowHitTest" value="0" />
+  </CActorModel>
+  <CActorSound id="UpgradeEffectRedStrongSound" parent="SoundOneShot" />
+  <CSound id="UpgradeEffectRedStrongSound" parent="Spell">
+    <AssetArray File="Assets\Sounds\Alarak_Retreat_DeathFleet_01.wav" FacialGroup="" />
+    <AssetArray File="Assets\Sounds\Alarak_Retreat_DeathFleet_02.wav" FacialGroup="" />
+    <AssetArray File="Assets\Sounds\Alarak_Retreat_DeathFleet_03.wav" FacialGroup="" />
+    <Volume value="3.000000,3.000000" />
+  </CSound>
+  <CActorSound id="UpgradeEffectRedStrongSoundWoosh" parent="SoundOneShot" />
+  <CSound id="UpgradeEffectRedStrongSoundWoosh" parent="Spell">
+    <AssetArray File="Assets\Sounds\UI_pickup_jetpack01.wav" FacialGroup="" />
+  </CSound>
+  <CEffectSet id="UpgradeEffectRedStrong" />
+  <CModel id="UpgradeEffectRedStrong" parent="OneShotSpellFX">
+    <Model value="Assets\Effects\Protoss\Alarak_COOP_Sacrifice_Missile_Impact\Alarak_COOP_Sacrifice_Missile_Impact.m3" />
+    <EditorCategories value="Race:Neutral" />
+  </CModel>
+  <CActorModel id="UpgradeEffectGreenStrong" parent="ModelAnimationStyleOneShotUNIT">
+    <On Terms="ActorCreation" Send="SetTintColor {128,255,128 1.400000}" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectGreenGlazeStrong" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectGreenStrongSimple" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectGreenStrongBeam" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectGreenStrongPulse" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectGreenStrongSound" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectGreenStrongSoundWoosh" />
+    <On Terms="Effect.EnhanceRegeneration.Start; At Caster" Send="Create" />
+    <HostSiteOps Ops="SOpAttachChestCenter SOp2DRotation SOpForwardSouth" HoldPosition="1" HoldRotation="1" />
+    <Scale value="1.250000" />
+    <ModelFlags index="AllowHitTest" value="0" />
+  </CActorModel>
+  <CActorModelMaterial id="UpgradeEffectGreenGlazeStrong" parent="GlazeParent">
+    <On Terms="ActorCreation" Send="ModelMaterialApplyTo ::Main" />
+    <On Terms="ActorCreation" Send="TimerSet 0.500000 Die" />
+    <On Terms="TimerExpired; TimerName Die" Send="$Death" />
+    <On Terms="AnimDone; AnimName Death" Send="Destroy" />
+    <Model value="GlazeSymbioteCarapace" />
+    <ModelFlags index="AutomateGlobalLoops" value="1" />
+  </CActorModelMaterial>
+  <CModel id="GlazeSymbioteCarapace">
+    <Model value="Assets\Effects\Glaze\Glaze_Symbiote_Carapace\Glaze_Symbiote_Carapace.m3" />
+  </CModel>
+  <CActorSimple id="UpgradeEffectGreenStrongSimple">
+    <On Terms="ActorCreation" Target="_Unit" Send="SetTintColor 150,255,100 0.500000 OneShot UpgradeEffectGreenTint" />
+    <On Terms="ActorCreation" Send="TimerSet 1.000000 Die" />
+    <On Terms="TimerExpired; TimerName Die" Target="_Unit" Send="ClearTintColor 0.500000 UpgradeEffectGreenTint" />
+    <On Terms="TimerExpired; TimerName Die" Send="Destroy" />
+  </CActorSimple>
+  <CActorModel id="UpgradeEffectGreenStrongBeam" parent="ModelAnimationStyleOneShotUNIT">
+    <Inherits index="Visibility" value="1" />
+    <On Terms="ActorCreation" Send="SetTintColor {0,255,0 1.500000}" />
+    <On Terms="ActorCreation" Send="TimerSet 0.250000 Die" />
+    <On Terms="TimerExpired; TimerName Die" Send="Destroy" />
+    <HostSiteOps Ops="SOpAttachChestCenter SOp2DRotation SOpForwardSouth" HoldPosition="1" HoldRotation="1" />
+    <Model value="RecalledImpact" />
+    <Scale value="0.400000,0.400000,1.250000" />
+    <ModelFlags index="AllowHitTest" value="0" />
+  </CActorModel>
+  <CActorModel id="UpgradeEffectGreenStrongPulse" parent="ModelAnimationStyleOneShotUNIT">
+    <On Terms="ActorCreation" Send="SetTintColor {128,255,128 1.500000}" />
+    <HostSiteOps Ops="SOpAttachChestCenter SOp2DRotation SOpForwardSouth" HoldPosition="1" HoldRotation="1" />
+    <Scale value="0.600000" />
+    <ModelFlags index="AllowHitTest" value="0" />
+  </CActorModel>
+  <CModel id="UpgradeEffectGreenStrongPulse" parent="OneShotSpellFX">
+    <Model value="Assets\Effects\Protoss\Zeratul_VoidArmor\Zeratul_VoidArmor.m3" />
+    <EditorCategories value="Race:Neutral" />
+  </CModel>
+  <CActorSound id="UpgradeEffectGreenStrongSound" parent="SoundOneShot" />
+  <CSound id="UpgradeEffectGreenStrongSound" parent="Spell">
+    <AssetArray File="Assets\Sounds\UI_AC_WarpIn01.wav" FacialGroup="" />
+    <AssetArray File="Assets\Sounds\UI_AC_WarpIn02.wav" FacialGroup="" />
+    <AssetArray File="Assets\Sounds\UI_AC_WarpIn03.wav" FacialGroup="" />
+    <Volume value="3.000000,3.000000" />
+  </CSound>
+  <CActorSound id="UpgradeEffectGreenStrongSoundWoosh" parent="SoundOneShot" />
+  <CSound id="UpgradeEffectGreenStrongSoundWoosh" parent="Spell">
+    <AssetArray File="Assets\Sounds\AC_Abathur_Mend_01.wav" FacialGroup="" />
+    <AssetArray File="Assets\Sounds\AC_Abathur_Mend_02.wav" FacialGroup="" />
+    <AssetArray File="Assets\Sounds\AC_Abathur_Mend_03.wav" FacialGroup="" />
+    <AssetArray File="Assets\Sounds\AC_Abathur_Mend_04.wav" FacialGroup="" />
+    <AssetArray File="Assets\Sounds\AC_Abathur_Mend_05.wav" FacialGroup="" />
+    <Volume value="3.000000,3.000000" />
+  </CSound>
+  <CModel id="UpgradeEffectGreenStrong" parent="OneShotSpellFX">
+    <Model value="Assets\Effects\Zerg\KerriganCorrosiveSporesImpact\KerriganCorrosiveSporesImpact.m3" />
+    <EditorCategories value="Race:Neutral" />
+    <ScaleMax value="0.800000,0.800000,0.800000" />
+    <ScaleMin value="0.800000,0.800000,0.800000" />
+  </CModel>
+  <CActorModel id="UpgradeEffectBlue" parent="ModelAnimationStyleOneShotUNIT">
+    <Filter index="Neutral" value="1" />
+    <Filter index="Enemy" value="1" />
+    <On index="0" Send="AnimBracketStart BSD Birth Stand {} ContentPlayOnce" />
+    <On Terms="ActorCreation" Send="TimerSet 1.000000 Die" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectBlueBeam" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectBlueCrystals" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectBlueSound" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectBlueGlaze" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectBlueSimple" />
+    <On Terms="TimerExpired; TimerName Die" Send="SetOpacity 0.000000 0.250000" />
+    <On Terms="ActorCreation" Send="SetTintColor 32,128,255" />
+    <On Terms="Effect.UpgradeEffectBlue.Start; At Caster" Send="Create" />
+    <On Terms="Effect.UpgradeEffectBlueTarget.Start; At Target" Send="Create" />
+    <HostSiteOps Ops="SOpAttachOrigin SOpForwardNorth SOp2DRotation" />
+    <ModelFlags index="AllowHitTest" value="0" />
+    <Inherits index="Visibility" value="1" />
+  </CActorModel>
+  <CActorModel id="UpgradeEffectBlueBeam" parent="ModelAnimationStyleOneShotUNIT">
+    <Filter index="Neutral" value="1" />
+    <Filter index="Enemy" value="1" />
+    <On Terms="ActorCreation" Send="SetTintColor 128,255,255" />
+    <On Terms="ActorCreation" Send="TimerSet 1.250000 Die" />
+    <On Terms="TimerExpired; TimerName Die" Send="SetOpacity 0.000000 0.250000" />
+    <HostSiteOps Ops="SOpAttachOrigin SOpForwardNorth SOp2DRotation" />
+    <Model value="RecalledImpact" />
+    <Scale value="0.666660,0.666667,1.333333" />
+    <ModelFlags index="AllowHitTest" value="0" />
+    <Inherits index="Visibility" value="1" />
+  </CActorModel>
+  <CActorSound id="UpgradeEffectBlueSound" parent="SoundOneShot">
+    <Filter index="Ally" value="1" />
+    <Filter index="Neutral" value="1" />
+    <Filter index="Enemy" value="1" />
+    <Sound value="UI_BnetLevelUp" />
+  </CActorSound>
+  <CActorModelMaterial id="UpgradeEffectBlueGlaze" parent="GlazeParent">
+    <On Terms="ActorCreation" Send="ModelMaterialApplyTo ::Main" />
+    <On Terms="ActorCreation" Send="AnimBracketStart Birth Birth" />
+    <On Terms="AnimDone; AnimName Birth" Send="Destroy" />
+    <ModelFlags index="AutomateGlobalLoops" value="1" />
+  </CActorModelMaterial>
+  <CModel id="UpgradeEffectBlueGlaze">
+    <Model value="Assets\Effects\Glaze\Glaze_RegenerativeBioSteel\Glaze_RegenerativeBioSteel.m3" />
+    <AnimSpeed value="0.500000" />
+  </CModel>
+  <CActorSimple id="UpgradeEffectBlueSimple">
+    <On Terms="ActorCreation" Target="_Unit" Send="SetTintColor {50,150,255 3.000000} 0.250000 OneShot UpgradeEffectBlueTint" />
+    <On Terms="ActorCreation" Send="TimerSet 1.000000 Die" />
+    <On Terms="TimerExpired; TimerName Die" Target="_Unit" Send="ClearTintColor 1.500000 UpgradeEffectBlueTint" />
+    <On Terms="TimerExpired; TimerName Die" Send="Destroy" />
+  </CActorSimple>
+  <CEffectSet id="UpgradeEffectBlue" />
+  <CModel id="UpgradeEffectBlue" parent="OneShotSpellFX">
+    <Model value="Assets\UI\Feedback\AIBeaconCustom\AIBeaconCustom.m3" />
+    <ScaleMax value="2.000000,2.000000,2.000000" />
+    <ScaleMin value="2.000000,2.000000,2.000000" />
+  </CModel>
+  <CActorModel id="UpgradeEffectRedPulse" parent="ModelAnimationStyleOneShotUNIT">
+    <Macros value="GlobalLoopMacro" />
+    <On Terms="ActorCreation" Send="SetTintColor {255,0,0 1.400000}" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectRedGlaze" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectRedPulseSwirl" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectRedPulseSound" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectRedStrongSimple" />
+    <On Terms="Effect.DynamicPlaceRandomizeForTriggers.Start; At Caster" Send="Create" />
+    <HostSiteOps Ops="SOpAttachOrigin SOp2DRotation SOpForwardSouth" HoldPosition="1" HoldRotation="1" />
+    <Scale value="1.500000" />
+    <ModelFlags index="AllowHitTest" value="0" />
+  </CActorModel>
+  <CActorModel id="UpgradeEffectRedPulseSwirl" parent="ModelAnimationStyleOneShotUNIT">
+    <Inherits index="Visibility" value="1" />
+    <On Terms="ActorCreation" Send="SetTintColor {255,0,0 1.500000}" />
+    <HostSiteOps Ops="SOpAttachChestCenter SOp2DRotation SOpForwardSouth" HoldPosition="1" HoldRotation="1" />
+    <Scale value="1.000000,1.000000,1.250000" />
+    <ModelFlags index="AllowHitTest" value="0" />
+  </CActorModel>
+  <CModel id="UpgradeEffectRedPulseSwirl" parent="OneShotSpellFX">
+    <Model value="Assets\Effects\Protoss\HighTemplarTaldarim_Sacrifice\HighTemplarTaldarim_Sacrifice.m3" />
+    <EditorCategories value="Race:Neutral" />
+  </CModel>
+  <CActorSound id="UpgradeEffectRedPulseSound" parent="SoundOneShot" />
+  <CSound id="UpgradeEffectRedPulseSound" parent="Spell">
+    <AssetArray File="Assets\Sounds\AC_Abathur_Mend_01.wav" FacialGroup="" />
+    <AssetArray File="Assets\Sounds\AC_Abathur_Mend_02.wav" FacialGroup="" />
+    <AssetArray File="Assets\Sounds\AC_Abathur_Mend_03.wav" FacialGroup="" />
+    <AssetArray File="Assets\Sounds\AC_Abathur_Mend_04.wav" FacialGroup="" />
+    <AssetArray File="Assets\Sounds\AC_Abathur_Mend_05.wav" FacialGroup="" />
+    <Volume value="3.000000,3.000000" />
+  </CSound>
+  <CModel id="UpgradeEffectRedPulse" parent="OneShotSpellFX">
+    <Model value="Assets\Effects\Protoss\DisruptionBlast_Impact\DisruptionBlast_Impact.m3" />
+    <EditorCategories value="Race:Neutral" />
+  </CModel>
+  <CActorModel id="UpgradeEffectBlueStrong" parent="ModelAnimationStyleOneShotUNIT">
+    <On Terms="ActorCreation" Send="SetTintColor {200,255,255 1.500000}" />
+    <On Terms="ActorCreation" Send="TimerSet 1.000000 Die" />
+    <On Terms="TimerExpired; TimerName Die" Send="SetOpacity 0.000000 1.000000" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectBlueGlaze" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectBlueGlazeStrong" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectBlueStrongSimple" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectBlueStrongBeam" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectBlueStrongDust" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectBlueStrongPulse" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectBlueStrongSound" />
+    <On Terms="Effect.UpgradeEffectBlueStrong.Start; At Caster" Send="Create" />
+    <HostSiteOps Ops="SOpAttachChestCenter SOp2DRotation SOpForwardSouth" HoldPosition="1" HoldRotation="1" />
+    <Scale value="1.250000" />
+    <ModelFlags index="AllowHitTest" value="0" />
+  </CActorModel>
+  <CActorModelMaterial id="UpgradeEffectBlueGlazeStrong" parent="GlazeParent">
+    <On Terms="ActorCreation" Send="ModelMaterialApplyTo ::Main" />
+    <On Terms="ActorCreation" Send="AnimBracketStart Birth Birth" />
+    <On Terms="AnimDone; AnimName Birth" Send="Destroy" />
+    <Model value="GlazeNovaDamage" />
+    <ModelFlags index="AutomateGlobalLoops" value="1" />
+  </CActorModelMaterial>
+  <CModel id="GlazeNovaDamage">
+    <Model value="Assets\Effects\Glaze\Glaze_Nova_Buff_Damage\Glaze_Nova_Buff_Damage.m3" />
+  </CModel>
+  <CActorSimple id="UpgradeEffectBlueStrongSimple">
+    <On Terms="ActorCreation" Target="_Unit" Send="SetTintColor 50,150,255 0.500000 OneShot UpgradeEffectBlueTint" />
+    <On Terms="ActorCreation" Send="TimerSet 1.000000 Die" />
+    <On Terms="TimerExpired; TimerName Die" Target="_Unit" Send="ClearTintColor 0.500000 UpgradeEffectBlueTint" />
+    <On Terms="TimerExpired; TimerName Die" Send="Destroy" />
+  </CActorSimple>
+  <CActorModel id="UpgradeEffectBlueStrongBeam" parent="ModelAnimationStyleOneShotUNIT">
+    <Inherits index="Visibility" value="1" />
+    <On Terms="ActorCreation" Send="SetTintColor {0,255,255 1.500000}" />
+    <On Terms="ActorCreation" Send="TimerSet 0.250000 Die" />
+    <On Terms="TimerExpired; TimerName Die" Send="Destroy" />
+    <HostSiteOps Ops="SOpAttachChestCenter SOp2DRotation SOpForwardSouth" HoldPosition="1" HoldRotation="1" />
+    <Model value="RecalledImpact" />
+    <Scale value="0.400000,0.400000,1.250000" />
+    <ModelFlags index="AllowHitTest" value="0" />
+  </CActorModel>
+  <CActorModel id="UpgradeEffectBlueStrongDust" parent="ModelAnimationStyleOneShotUNIT">
+    <On Terms="ActorCreation" Send="SetTintColor {128,255,255 1.500000}" />
+    <On Terms="ActorCreation" Send="TimerSet 0.750000 Die" />
+    <On Terms="TimerExpired; TimerName Die" Send="SetOpacity 0.000000 0.500000" />
+    <HostSiteOps Ops="SOpAttachChestCenter SOp2DRotation SOpForwardSouth" HoldPosition="1" HoldRotation="1" />
+    <Scale value="1.250000" />
+    <ModelFlags index="AllowHitTest" value="0" />
+  </CActorModel>
+  <CModel id="UpgradeEffectBlueStrongDust" parent="OneShotSpellFX">
+    <Model value="Assets\Effects\Protoss\HallucinateDeath\HallucinateDeath.m3" />
+    <EditorCategories value="Race:Neutral" />
+  </CModel>
+  <CActorModel id="UpgradeEffectBlueStrongPulse" parent="ModelAnimationStyleOneShotUNIT">
+    <On Terms="ActorCreation" Send="SetTintColor {200,255,255 1.500000}" />
+    <HostSiteOps Ops="SOpAttachChestCenter SOp2DRotation SOpForwardSouth SOpMoveDownByDot25" HoldPosition="1" HoldRotation="1" />
+    <Scale value="2.500000" />
+    <ModelFlags index="AllowHitTest" value="0" />
+  </CActorModel>
+  <CModel id="UpgradeEffectBlueStrongPulse" parent="OneShotSpellFX">
+    <Model value="Assets\Effects\Terran\Goliath_Lockdown_Impact\Goliath_Lockdown_Impact.m3" />
+    <EditorCategories value="Race:Neutral" />
+  </CModel>
+  <CActorSound id="UpgradeEffectBlueStrongSound" parent="SoundOneShot" />
+  <CSound id="UpgradeEffectBlueStrongSound" parent="Spell">
+    <AssetArray File="Assets\Sounds\UI_AC_AllyFound.wav" FacialGroup="" />
+    <Pitch value="-1.000000,2.000000" />
+  </CSound>
+  <CEffectSet id="UpgradeEffectBlueStrong" />
+  <CModel id="UpgradeEffectBlueStrong" parent="OneShotSpellFX">
+    <Model value="Assets\Effects\Protoss\DisruptionBlast_Impact\DisruptionBlast_Impact.m3" />
+    <EditorCategories value="Race:Neutral" />
+  </CModel>
+  <CActorModel id="UpgradeEffectGreenPulse" parent="ModelAnimationStyleOneShotUNIT">
+    <Macros value="GlobalLoopMacro" />
+    <On Terms="ActorCreation" Send="SetTintColor {0,255,0 1.400000}" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectGreenGlazeStrong" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectGreenPulseGlow" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectGreenPulseNova" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectGreenStrongSound" />
+    <On Terms="ActorCreation" Send="Create UpgradeEffectGreenPulseSimple" />
+    <On Terms="Behavior.GeyserBuildLaunch.On" Send="Create" />
+    <HostSiteOps Ops="SOpAttachOrigin SOp2DRotation SOpForwardSouth" HoldPosition="1" HoldRotation="1" />
+    <Scale value="1.500000" />
+    <ModelFlags index="AllowHitTest" value="0" />
+  </CActorModel>
+  <CActorModel id="UpgradeEffectGreenPulseGlow" parent="ModelAnimationStyleOneShotUNIT">
+    <On Terms="ActorCreation" Send="SetTintColor {0,255,0 1.400000}" />
+    <HostSiteOps Ops="SOpAttachChestCenter SOp2DRotation SOpForwardSouth" />
+    <ModelFlags index="AllowHitTest" value="0" />
+  </CActorModel>
+  <CModel id="UpgradeEffectGreenPulseGlow" parent="OneShotSpellFX">
+    <Model value="Assets\Effects\Zerg\Void_Kerrigan_Extinction_Impact\Void_Kerrigan_Extinction_Impact.m3" />
+    <AnimSpeed value="0.800000" />
+    <EditorCategories value="Race:Neutral" />
+    <ScaleMax value="1.500000,1.500000,1.500000" />
+    <ScaleMin value="1.500000,1.500000,1.500000" />
+  </CModel>
+  <CActorModel id="UpgradeEffectGreenPulseNova" parent="ModelAnimationStyleOneShotUNIT">
+    <On Terms="ActorCreation" Send="SetTintColor {128,255,128 1.100000}" />
+    <HostSiteOps Ops="SOpAttachChestCenter SOp2DRotation SOpForwardSouth" />
+    <ModelFlags index="AllowHitTest" value="0" />
+  </CActorModel>
+  <CModel id="UpgradeEffectGreenPulseNova" parent="OneShotSpellFX">
+    <Model value="Assets\Effects\Protoss\Zeratul_ShadowBlade_Impact\Zeratul_ShadowBlade_Impact.m3" />
+    <EditorCategories value="Race:Neutral" />
+    <ScaleMax value="0.800000,0.800000,0.800000" />
+    <ScaleMin value="0.800000,0.800000,0.800000" />
+  </CModel>
+  <CActorSimple id="UpgradeEffectGreenPulseSimple">
+    <On Terms="ActorCreation" Target="_Unit" Send="SetTintColor {75,255,50 1.400000} 0.200000 OneShot UpgradeEffectGreenTint" />
+    <On Terms="ActorCreation" Send="TimerSet 0.500000 Die" />
+    <On Terms="TimerExpired; TimerName Die" Target="_Unit" Send="ClearTintColor 0.500000 UpgradeEffectGreenTint" />
+    <On Terms="TimerExpired; TimerName Die" Send="Destroy" />
+  </CActorSimple>
+  <CModel id="UpgradeEffectGreenPulse" parent="OneShotSpellFX">
+    <Model value="Assets\Effects\Neutral\GasSpawn\GasSpawn.m3" />
+    <EditorCategories value="Race:Neutral" />
+  </CModel>
+  <CActorModel id="TierUpgradeProtossBeam" parent="ModelAnimationStyleContinuousUNIT">
+    <Inherits index="Visibility" value="1" />
+    <On Terms="Abil.NeutralUpgradesAutocast.Start; ValidatePlayer PlayerIsProtoss" Send="Create" />
+    <On Terms="Abil.NeutralUpgradesAutocast.Stop" Send="AnimBracketStop BSD" />
+    <On Terms="ActorCreation" Send="SetTintColor 0,160,255" />
+    <HostSiteOps Ops="SOpAttachCenter SOpForwardNorth SOp2DRotation" />
+    <ModelFlags index="AllowHitTest" value="0" />
+    <Macros value="GlobalLoopMacro" />
+  </CActorModel>
+  <CModel id="TierUpgradeProtossBeam" parent="PersistentSpellFX">
+    <Model value="Assets\Effects\Protoss\SOA_Pickup_Beam\SOA_Pickup_Beam.m3" />
+    <EditorCategories value="Race:Neutral" />
+    <ScaleMax value="0.600000,0.600000,0.600000" />
+    <ScaleMin value="0.600000,0.600000,0.600000" />
+  </CModel>
+  <CActorModel id="TierUpgradeProtossModel" parent="ModelAnimationStyleContinuousUNIT">
+    <Inherits index="Visibility" value="1" />
+    <On Terms="Abil.NeutralUpgradesAutocast.Start; ValidatePlayer PlayerIsProtoss" Send="Create" />
+    <On Terms="Abil.NeutralUpgradesAutocast.Stop" Send="AnimBracketStop BSD" />
+    <On Terms="ActorCreation" Send="SetTintColor 0,160,255" />
+    <HostSiteOps Ops="SOpAttachCenter SOpForwardNorth SOp2DRotation" />
+    <ModelFlags index="AllowHitTest" value="0" />
+    <Macros value="GlobalLoopMacro" />
+  </CActorModel>
+  <CModel id="TierUpgradeProtossModel" parent="PersistentSpellFX">
+    <Model value="Assets\Effects\Protoss\SOA_GuardianShell_Tall\SOA_GuardianShell_Tall.m3" />
+    <EditorCategories value="Race:Neutral" />
+  </CModel>
+  <CActorModel id="TierUpgradeZergModel" parent="ModelAnimationStyleContinuousUNIT">
+    <Macros value="GlobalLoopMacro" />
+    <Inherits index="Visibility" value="1" />
+    <On Terms="Abil.NeutralUpgradesAutocast.Start; ValidatePlayer PlayerIsZerg" Send="Create" />
+    <On Terms="Abil.NeutralUpgradesAutocast.Stop" Send="AnimBracketStop BSD" />
+    <On Terms="ActorCreation" Send="SetTintColor {255,128,0 3.000000}" />
+    <HostSiteOps Ops="SOpAttachCenter SOpForwardNorth SOp2DRotation" />
+    <ModelFlags index="AllowHitTest" value="0" />
+  </CActorModel>
+  <CModel id="TierUpgradeZergModel" parent="PersistentSpellFX">
+    <Model value="Assets\Effects\Zerg\Kerrigan_Energy_Charge\Kerrigan_Energy_Charge.m3" />
+    <EditorCategories value="Race:Neutral" />
+    <ScaleMax value="0.600000,0.600000,0.600000" />
+    <ScaleMin value="0.600000,0.600000,0.600000" />
+  </CModel>
+  <CActorModel id="TierUpgradeZergBeam" parent="ModelAnimationStyleContinuousUNIT">
+    <Macros value="GlobalLoopMacro" />
+    <Inherits index="Visibility" value="1" />
+    <On Terms="Abil.NeutralUpgradesAutocast.Start; ValidatePlayer PlayerIsZerg" Send="Create" />
+    <On Terms="Abil.NeutralUpgradesAutocast.Stop" Send="AnimBracketStop BSD" />
+    <On Terms="ActorCreation" Send="SetTintColor {255,128,0 3.000000}" />
+    <HostSiteOps Ops="SOpAttachCenter SOpForwardNorth SOp2DRotation" />
+    <ModelFlags index="AllowHitTest" value="0" />
+  </CActorModel>
+  <CModel id="TierUpgradeZergBeam" parent="PersistentSpellFX">
+    <Model value="Assets\Effects\Protoss\Solar_Forge_Beam\Solar_Forge_Beam.m3" />
+    <EditorCategories value="Race:Neutral" />
+    <ScaleMax value="0.700000,0.700000,0.700000" />
+    <ScaleMin value="0.700000,0.700000,0.700000" />
+  </CModel>
+  <CActorModel id="TierUpgradeTerranBeam" parent="ModelAnimationStyleContinuousUNIT">
+    <Macros value="GlobalLoopMacro" />
+    <Inherits index="Visibility" value="1" />
+    <On Terms="Abil.NeutralUpgradesAutocast.Start; ValidatePlayer PlayerIsTerran" Send="Create" />
+    <On Terms="Abil.NeutralUpgradesAutocast.Stop" Send="AnimBracketStop BSD" />
+    <On Terms="ActorCreation" Send="SetTintColor 128,255,0" />
+    <HostSiteOps Ops="SOpAttachCenter SOpForwardNorth SOp2DRotation" />
+    <ModelFlags index="AllowHitTest" value="0" />
+  </CActorModel>
+  <CModel id="TierUpgradeTerranBeam" parent="PersistentSpellFX">
+    <Model value="Assets\Effects\Protoss\SOA_OrbitalAssimilator_Beam\SOA_OrbitalAssimilator_Beam.m3" />
+    <EditorCategories value="Race:Neutral" />
+    <ScaleMax value="0.580000,0.580000,0.580000" />
+    <ScaleMin value="0.580000,0.580000,0.580000" />
+  </CModel>
+  <CActorModel id="TierUpgradeTerranModel" parent="ModelAnimationStyleContinuousUNIT">
+    <Macros value="GlobalLoopMacro" />
+    <Inherits index="Visibility" value="1" />
+    <On Terms="Abil.NeutralUpgradesAutocast.Start; ValidatePlayer PlayerIsTerran" Send="Create" />
+    <On Terms="Abil.NeutralUpgradesAutocast.Stop" Send="AnimBracketStop BSD" />
+    <On Terms="ActorCreation" Send="SetTintColor 128,255,0" />
+    <HostSiteOps Ops="SOpAttachCenter SOpForwardNorth SOp2DRotation" />
+    <ModelFlags index="AllowHitTest" value="0" />
+  </CActorModel>
+  <CModel id="TierUpgradeTerranModel" parent="PersistentSpellFX">
+    <Model value="Assets\Effects\Protoss\Zeratul_VoidArmor_Impact\Zeratul_VoidArmor_Impact.m3" />
+    <EditorCategories value="Race:Neutral" />
+    <ScaleMax value="1.500000,1.500000,1.500000" />
+    <ScaleMin value="1.500000,1.500000,1.500000" />
+  </CModel>
+</Catalog>

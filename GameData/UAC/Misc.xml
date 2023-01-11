@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CEffectCreateUnit id="OrbitalSupportReconnaissance">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetPoint"/>
+        <SpawnUnit value="OrbitalSupportReconnaissance"/>
+    </CEffectCreateUnit>
+    <CEffectCreateUnit id="ChooseForceRecon">
+        <EditorCategories value=""/>
+        <SpawnUnit value="ForceRecon"/>
+    </CEffectCreateUnit>
+    <CEffectCreateUnit id="ChooseMechOperator">
+        <EditorCategories value=""/>
+        <SpawnUnit value="MechOperator"/>
+    </CEffectCreateUnit>
+    <CEffectCreateUnit id="ChooseBioSpecialist">
+        <EditorCategories value=""/>
+        <SpawnUnit value="BioSpecialist"/>
+    </CEffectCreateUnit>
+    <CAbilEffectTarget id="OrbitalSatelliteReconnaissanceOSS">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="OrbitalSupportReconnaissance"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Vital index="Energy" value="75"/>
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Link value="Abil/OrbitalStrikeEMPHero"/>
+                <TimeUse value="70"/>
+            </Charge>
+            <Cooldown TimeUse="5"/>
+        </Cost>
+        <Cost>
+            <Vital index="Energy" value="70"/>
+            <Charge>
+                <CountMax value="2"/>
+                <CountStart value="2"/>
+                <CountUse value="1"/>
+                <TimeUse value="60"/>
+            </Charge>
+            <Cooldown TimeUse="4"/>
+        </Cost>
+        <Cost>
+            <Vital index="Energy" value="65"/>
+            <Charge>
+                <CountMax value="2"/>
+                <CountStart value="2"/>
+                <CountUse value="1"/>
+                <TimeUse value="55"/>
+            </Charge>
+            <Cooldown TimeUse="3"/>
+        </Cost>
+        <Cost>
+            <Vital index="Energy" value="60"/>
+            <Charge>
+                <CountMax value="2"/>
+                <CountStart value="2"/>
+                <CountUse value="1"/>
+                <TimeUse value="50"/>
+            </Charge>
+            <Cooldown TimeUse="2"/>
+        </Cost>
+        <Cost>
+            <Vital index="Energy" value="55"/>
+            <Charge>
+                <CountMax value="3"/>
+                <CountStart value="3"/>
+                <CountUse value="1"/>
+                <TimeUse value="40"/>
+            </Charge>
+        </Cost>
+        <Range value="500"/>
+        <AutoCastFilters value="-;Player,Ally,Neutral,Visible"/>
+        <UseMarkerArray index="Approach" value="0"/>
+        <UseMarkerArray index="Prep" value="0"/>
+        <UseMarkerArray index="Channel" value="0"/>
+        <ValidatedArray index="Approach" value="0"/>
+        <ValidatedArray index="Prep" value="0"/>
+        <ValidatedArray index="Channel" value="0"/>
+        <AINotifyEffect value="BinocularsPL"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="OrbitalSatelliteReconnaissance"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="OrbitalSatelliteReconnaissanceViper">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="OrbitalSupportReconnaissance"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Vital index="Energy" value="45"/>
+            <Cooldown TimeUse="80"/>
+        </Cost>
+        <Range value="42"/>
+        <UseMarkerArray index="Approach" value="0"/>
+        <UseMarkerArray index="Prep" value="0"/>
+        <UseMarkerArray index="Channel" value="0"/>
+        <ValidatedArray index="Approach" value="0"/>
+        <ValidatedArray index="Prep" value="0"/>
+        <ValidatedArray index="Channel" value="0"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="OrbitalSatelliteReconnaissance" Requirements="OSRViper"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="OrbitalSatelliteReconnaissance">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="OrbitalSupportReconnaissance"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Vital index="Energy" value="45"/>
+            <Cooldown TimeUse="80"/>
+        </Cost>
+        <Range value="42"/>
+        <AutoCastFilters value="-;Player,Ally,Neutral,Visible"/>
+        <UseMarkerArray index="Approach" value="0"/>
+        <UseMarkerArray index="Prep" value="0"/>
+        <UseMarkerArray index="Channel" value="0"/>
+        <ValidatedArray index="Approach" value="0"/>
+        <ValidatedArray index="Prep" value="0"/>
+        <ValidatedArray index="Channel" value="0"/>
+        <AINotifyEffect value="BinocularsPL"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="OrbitalSatelliteReconnaissance" Requirements="JFO12"/>
+    </CAbilEffectTarget>
+    <CAbilEffectInstant id="ChooseForceRecon">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="ChooseForceRecon" Requirements="DevOnlyNR"/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="ChooseBioSpecialist">
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <Cost>
+            <Charge CountMax="1" CountStart="1" CountUse="1"/>
+            <Cooldown TimeUse="1"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="ChooseBioSpecialist" Requirements="BetaTesterOnlyNR"/>
+    </CAbilEffectInstant>
+    <CAbilLearn id="LearnAbilitiesForceRecon2" parent="LearnAbilityMOS">
+        <Name value="Abil/Name/LearnAbilitiesForceRecon2"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InfoArray index="Learn1" Abil="SoldierSkills">
+            <Button DefaultButtonFace="LearnSoldierSkills"/>
+        </InfoArray>
+        <InfoArray index="Learn2" Abil="Marksmanship">
+            <Button DefaultButtonFace="Marksmanship"/>
+        </InfoArray>
+        <InfoArray index="Learn3" Abil="MonomolecularWire">
+            <Button DefaultButtonFace="MonomolecularWire"/>
+        </InfoArray>
+        <InfoArray index="Learn4" Abil="ReconnaissanceSkills">
+            <Button DefaultButtonFace="ReconnaissanceSkills"/>
+        </InfoArray>
+        <InfoArray index="Learn5" Abil="StrengthTraining">
+            <Button DefaultButtonFace="StrengthTraining"/>
+        </InfoArray>
+    </CAbilLearn>
+    <CAbilEffectInstant id="ChooseMechOperator">
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <Flags index="AbortOnAllianceChange" value="0"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Location value="Global"/>
+            </Charge>
+            <Cooldown Location="Player" TimeUse="1"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="ChooseMechOperator" Requirements="RankMechOperatorNR"/>
+    </CAbilEffectInstant>
+    <CButton id="ChooseForceRecon">
+        <Tooltip value="Button/Tooltip/CavalryScout"/>
+        <Icon value="Assets\Buttons\Portraits\BTN_Cavalry_Scout_Portrait.dds"/>
+        <AlertTooltip value="Button/Tooltip/CavalryScout"/>
+        <AlertIcon value="Assets\Buttons\Portraits\BTN_Cavalry_Scout_Portrait.dds"/>
+    </CButton>
+    <CButton id="ChooseBioSpecialist">
+        <Icon value="Assets\Textures\stetmannportrait_static.dds"/>
+        <AlertIcon value="Assets\Textures\stetmannportrait_static.dds"/>
+    </CButton>
+    <CButton id="ChooseMechOperator">
+        <Icon value="Assets\Images\Mechoperator_static.dds"/>
+        <AlertIcon value="Assets\Textures\transportpilotportrait_static.dds"/>
+    </CButton>
+    <CActorUnit id="OrbitalSupportReconnaissance" parent="GenericUnitStandard" unitName="OrbitalSupportReconnaissance">
+        <EditorCategories value=""/>
+        <Model value="Invisible"/>
+        <HighlightTooltip value="Unit/Name/Bogus"/>
+    </CActorUnit>
+    <CUnit id="OrbitalSupportReconnaissance">
+        <FlagArray index="Turnable" value="0"/>
+        <FlagArray index="Movable" value="0"/>
+        <FlagArray index="Unclickable" value="0"/>
+        <FlagArray index="Uncommandable" value="1"/>
+        <FlagArray index="Unhighlightable" value="0"/>
+        <FlagArray index="Untooltipable" value="0"/>
+        <FlagArray index="Unselectable" value="1"/>
+        <FlagArray index="Untargetable" value="1"/>
+        <FlagArray index="KillCredit" value="0"/>
+        <FlagArray index="Invulnerable" value="1"/>
+        <FlagArray index="ShowResources" value="0"/>
+        <LifeStart value="200"/>
+        <LifeMax value="200"/>
+        <Mover value="Fly"/>
+        <Sight value="18"/>
+        <BehaviorArray Link="FlashlightReveal"/>
+        <BehaviorArray Link="OrbitalSatelliteReconaissanceTimedLife"/>
+        <Radius value="0"/>
+        <MinimapRadius value="0"/>
+        <EditorCategories value=""/>
+        <HotkeyAlias value="GroundFlare2"/>
+        <AIEvaluateAlias value="GroundFlare2"/>
+    </CUnit>
+    <CUnit id="OrbitalSupportSpecialist" parent="UnitTemplate">
+        <DeathRevealFilters value="Visible;Enemy,Missile,Hidden"/>
+        <Race value="Terr"/>
+        <LifeArmorDisplayFlags index="CollapseBuffed" value="0"/>
+        <LifeRegenRate value="0.25"/>
+        <LifeArmorName value="Unit/LifeArmorName/LandWarriorSystemLight"/>
+        <EnergyStart value="200"/>
+        <EnergyMax value="200"/>
+        <EnergyRegenRate value="1.5507"/>
+        <SpeedDisplayFlags index="CollapseBuffed" value="0"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="50"/>
+        <RepairTime value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="HeroInventoryRifle"/>
+        <AbilArray Link="LearnAbilitiesOSS"/>
+        <AbilArray Link="SoldierSkills"/>
+        <AbilArray Link="Sprint"/>
+        <AbilArray Link="ReloadHero"/>
+        <AbilArray Link="PerformSelfAid"/>
+        <AbilArray Link="DropMagazine"/>
+        <AbilArray Link="Jump"/>
+        <AbilArray Link="Prone"/>
+        <AbilArray Link="WeaponsHold2"/>
+        <AbilArray Link="OrbitalSupport"/>
+        <AbilArray Link="BinocularsOSS"/>
+        <AbilArray Link="OrbitalSatelliteReconnaissanceOSS"/>
+        <AbilArray Link="Tier1Scanner"/>
+        <AbilArray Link="ItemScanner"/>
+        <AbilArray Link="LaserDesignatorOSS"/>
+        <AbilArray Link="SupplyDropOSS"/>
+        <AbilArray Link="ShockTroopers"/>
+        <AbilArray Link="OrbitalBombardment"/>
+        <AbilArray Link="OSEMP"/>
+        <AbilArray Link="OSIncendiary"/>
+        <AbilArray Link="OrbitalStrikeHero"/>
+        <AbilArray Link="OrbitalStrikeEMPHero"/>
+        <AbilArray Link="OrbitalStrikeIncendiaryHero"/>
+        <AbilArray Link="SolarFocusingTest"/>
+        <AbilArray Link="EnergyRays"/>
+        <AbilArray Link="NeutronEmitter"/>
+        <AbilArray Link="FiremodeCarbine"/>
+        <AbilArray Link="ImmediateRemedialAction"/>
+        <BehaviorArray Link="HeroLevels"/>
+        <BehaviorArray Link="Fitness"/>
+        <BehaviorArray Link="Dexterity"/>
+        <BehaviorArray Link="Mechanical"/>
+        <BehaviorArray Link="StartingStats"/>
+        <BehaviorArray Link="SoldierSkills1"/>
+        <BehaviorArray Link="SoldierSkills2"/>
+        <BehaviorArray Link="SoldierSkills3"/>
+        <BehaviorArray Link="SoldierSkills4"/>
+        <BehaviorArray Link="BackupGenerator"/>
+        <BehaviorArray Link="SecurityClearance4"/>
+        <WeaponArray index="0" Link="Carbine"/>
+        <EffectArray index="Birth" value="EquipOSSSet"/>
+        <EffectArray index="Revive" value="EquipOSSSet"/>
+        <CardLayouts>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="3"/>
+            <LayoutButtons>
+                <Face value="LearnAbilities"/>
+                <Type value="Submenu"/>
+                <SubmenuAbilState value="LearnAbilitiesOSS"/>
+                <SubmenuCardId value="0002"/>
+                <Row value="1"/>
+                <Column value="4"/>
+            </LayoutButtons>
+            <LayoutButtons Face="EnergyRays" Type="AbilCmd" AbilCmd="EnergyRays,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="AdditionalActions" Type="Submenu" SubmenuCardId="0003" Row="1" Column="3"/>
+            <LayoutButtons Face="Binoculars6" Type="AbilCmd" AbilCmd="BinocularsOSS,Execute" Row="1" Column="0"/>
+            <LayoutButtons Face="OrbitalSatelliteReconnaissance" Type="AbilCmd" AbilCmd="OrbitalSatelliteReconnaissanceOSS,Execute" Row="2" Column="3"/>
+            <LayoutButtons Face="SupplyDropOSS" Type="AbilCmd" AbilCmd="SupplyDropOSS,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="FiremodeBurst2" Type="AbilCmd" AbilCmd="FiremodeCarbine,On" Row="1" Column="1"/>
+            <LayoutButtons Face="FiremodeSemi2" Type="AbilCmd" AbilCmd="FiremodeCarbine,Off" Row="1" Column="1"/>
+            <LayoutButtons Face="OrbitalAssets" Type="Submenu" SubmenuCardId="0004" Row="1" Column="2"/>
+            <LayoutButtons Face="OrbitalStrikeEMP2" Type="AbilCmd" AbilCmd="OrbitalStrikeEMPHero,Execute" Row="2" Column="4"/>
+            <LayoutButtons Face="OrbitalStrikeIncendiary2" Type="AbilCmd" AbilCmd="OrbitalStrikeIncendiaryHero,Execute" Row="2" Column="4"/>
+            <LayoutButtons Face="OrbitalStrike" Type="AbilCmd" AbilCmd="OrbitalStrikeHero,Execute" Row="2" Column="4"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="LaserDesignatorOSS" Type="AbilCmd" AbilCmd="LaserDesignatorOSS,Execute" Row="2" Column="2"/>
+        </CardLayouts>
+        <CardLayouts CardId="0002">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="LearnSoldierSkills" Type="AbilCmd" AbilCmd="LearnAbilitiesOSS,Learn1" Row="0" Column="0"/>
+            <LayoutButtons Face="OrbitalSurveillance" Type="AbilCmd" AbilCmd="LearnAbilitiesOSS,Learn2" Row="0" Column="1"/>
+            <LayoutButtons Face="OrbitalSupportTest" Type="AbilCmd" AbilCmd="LearnAbilitiesOSS,Learn4" Row="0" Column="2"/>
+            <LayoutButtons Face="LearnOrbitalStrike" Type="AbilCmd" AbilCmd="LearnAbilitiesOSS,Learn3" Row="0" Column="3"/>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel1"/>
+                <Type value="Passive"/>
+                <Behavior value="SoldierSkills1"/>
+                <Requirements value="SoldierSkills01"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel2"/>
+                <Type value="Passive"/>
+                <Behavior value="SoldierSkills2"/>
+                <Requirements value="SoldierSkills02"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel3"/>
+                <Type value="Passive"/>
+                <Behavior value="SoldierSkills3"/>
+                <Requirements value="SoldierSkills03"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel4"/>
+                <Type value="Passive"/>
+                <Behavior value="SoldierSkills4"/>
+                <Requirements value="SoldierSkills04"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="Level4SecurityClearance"/>
+                <Type value="Passive"/>
+                <Behavior value="SecurityClearance4"/>
+                <Requirements value="OrbitalSupport5"/>
+                <Row value="2"/>
+                <Column value="2"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="BackupGenerator"/>
+                <Type value="Passive"/>
+                <Behavior value="BackupGenerator"/>
+                <Requirements value="SoldierSkills04"/>
+                <Row value="2"/>
+                <Column value="1"/>
+            </LayoutButtons>
+        </CardLayouts>
+        <CardLayouts CardId="0003">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="DropMagazine" Type="AbilCmd" AbilCmd="DropMagazine,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="Reload" Type="AbilCmd" AbilCmd="ReloadHero,Execute" Row="0" Column="3"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="PerformSelfAid" Type="AbilCmd" AbilCmd="PerformSelfAid,Execute" Row="1" Column="0"/>
+            <LayoutButtons Face="Prone" Type="AbilCmd" AbilCmd="Prone,Execute" Row="0" Column="2"/>
+            <LayoutButtons Face="ImmediateRemedialAction" Type="AbilCmd" AbilCmd="ImmediateRemedialAction,Execute" Row="1" Column="3"/>
+            <LayoutButtons Face="HoldFire3" Type="AbilCmd" AbilCmd="WeaponsHold2,255" Row="1" Column="4"/>
+            <LayoutButtons Face="HoldFireOff2" Type="AbilCmd" AbilCmd="WeaponsHold2,Off" Row="1" Column="4"/>
+            <LayoutButtons Face="NeutronEmitter" Type="AbilCmd" AbilCmd="NeutronEmitter,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="SolarFocusing" Type="AbilCmd" AbilCmd="SolarFocusingTest,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="HoldFire3" Type="AbilCmd" AbilCmd="WeaponsHold2,255" Row="1" Column="2"/>
+            <LayoutButtons Face="HoldFireOff2" Type="AbilCmd" AbilCmd="WeaponsHold2,Off" Row="1" Column="2"/>
+        </CardLayouts>
+        <CardLayouts CardId="0004">
+            <LayoutButtons Face="OrbitalStrikeEMP" Type="AbilCmd" AbilCmd="OSEMP,On" Row="0" Column="0"/>
+            <LayoutButtons Face="RegularShells" Type="AbilCmd" AbilCmd="OSEMP,Off" Row="0" Column="0"/>
+            <LayoutButtons Face="OrbitalStrikeIncendiary" Type="AbilCmd" AbilCmd="OSIncendiary,On" Row="0" Column="1"/>
+            <LayoutButtons Face="RegularShells" Type="AbilCmd" AbilCmd="OSIncendiary,Off" Row="0" Column="1"/>
+            <LayoutButtons Face="OrbitalBombardmentv2" Type="AbilCmd" AbilCmd="OrbitalBombardment,Execute" Row="0" Column="2"/>
+            <LayoutButtons Face="ShockTroopers" Type="AbilCmd" AbilCmd="ShockTroopers,Execute" Row="0" Column="3"/>
+            <LayoutButtons Face="Tier1Scanner" Type="AbilCmd" AbilCmd="Tier1Scanner,Execute" Row="1" Column="0"/>
+            <LayoutButtons Face="ItemScanner" Type="AbilCmd" AbilCmd="ItemScanner,Execute" Row="1" Column="1"/>
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+        </CardLayouts>
+        <Radius value="0.375"/>
+        <SeparationRadius value="0.375"/>
+        <DeadInnerRadius value="0"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="15"/>
+        <EditorCategories value="ObjectType:Hero,ObjectFamily:Melee"/>
+        <TacticalAI value="Marine"/>
+        <SelectAlias value="OrbitalSupportSpecialist"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="21"/>
+        <HotkeyCategory value="Hotkey/Catagory/MOSClassic"/>
+        <AIEvaluateAlias value="Marine"/>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
+        <ReviveInfoBase>
+            <Charge Link="Marine/Revive"/>
+            <Cooldown Link="Marine/Revive"/>
+        </ReviveInfoBase>
+        <Attributes index="Light" value="0"/>
+    </CUnit>
+    <CUpgrade id="RadioMan">
+        <EffectArray Operation="Subtract" Reference="Abil,StrafeRun,Cost[0].Charge.TimeUse" Value="5.000000"/>
+        <EffectArray Operation="Subtract" Reference="Abil,StrafeRun,Cost[2].Charge.TimeUse" Value="5.000000"/>
+        <EffectArray Operation="Subtract" Reference="Abil,StrafeRun,Cost[4].Charge.TimeUse" Value="5.000000"/>
+        <EffectArray Operation="Subtract" Reference="Abil,StrafeRun,Cost[1].Charge.TimeUse" Value="5.000000"/>
+        <EffectArray Operation="Subtract" Reference="Abil,StrafeRun,Cost[3].Charge.TimeUse" Value="5.000000"/>
+        <EffectArray Operation="Set" Reference="Abil,StrafeRun,Cost[4].Cooldown.TimeUse" Value="0.000000"/>
+        <EffectArray Operation="Set" Reference="Abil,StrafeRun,Cost[0].Cooldown.TimeUse" Value="0.000000"/>
+        <EffectArray Operation="Set" Reference="Abil,StrafeRun,Cost[1].Cooldown.TimeUse" Value="0.000000"/>
+        <EffectArray Operation="Set" Reference="Abil,StrafeRun,Cost[2].Cooldown.TimeUse" Value="0.000000"/>
+        <EffectArray Operation="Set" Reference="Abil,StrafeRun,Cost[3].Cooldown.TimeUse" Value="0.000000"/>
+        <EffectArray Operation="Subtract" Reference="Abil,StrafeRun,Cost[0].Vital[Energy]" Value="20"/>
+        <EffectArray Operation="Subtract" Reference="Abil,StrafeRun,Cost[1].Vital[Energy]" Value="20"/>
+        <EffectArray Operation="Subtract" Reference="Abil,StrafeRun,Cost[2].Vital[Energy]" Value="20"/>
+        <EffectArray Operation="Subtract" Reference="Abil,StrafeRun,Cost[3].Vital[Energy]" Value="20"/>
+        <EffectArray Operation="Subtract" Reference="Abil,StrafeRun,Cost[4].Vital[Energy]" Value="20"/>
+        <EffectArray Operation="Set" Reference="Abil,StrafeRun,Cost[4].Charge.CountMax" Value="5"/>
+        <EffectArray Operation="Set" Reference="Abil,StrafeRun,Cost[2].Charge.CountStart" Value="3"/>
+        <EffectArray Operation="Set" Reference="Abil,StrafeRun,Cost[1].Charge.CountMax" Value="2"/>
+        <EffectArray Operation="Set" Reference="Abil,StrafeRun,Cost[1].Charge.CountStart" Value="2"/>
+        <EffectArray Operation="Set" Reference="Abil,StrafeRun,Cost[4].Charge.CountStart" Value="5"/>
+        <EffectArray Operation="Set" Reference="Abil,StrafeRun,Cost[3].Charge.CountMax" Value="4"/>
+        <EffectArray Operation="Set" Reference="Abil,StrafeRun,Cost[3].Charge.CountStart" Value="4"/>
+        <EffectArray Operation="Set" Reference="Abil,StrafeRun,Cost[2].Charge.CountMax" Value="3"/>
+        <EffectArray Operation="Subtract" Reference="Abil,CallforCAS,Cost[0].Cooldown.TimeUse" Value="60.000000"/>
+        <EffectArray Operation="Subtract" Reference="Abil,CallforCAS,Cost[0].Vital[Energy]" Value="35"/>
+        <EffectArray Operation="Subtract" Reference="Abil,AttackWeaponsTeam,Cost[0].Vital[Energy]" Value="50"/>
+        <EffectArray Operation="Subtract" Reference="Abil,AttackWeaponsTeam,Cost[0].Cooldown.TimeUse" Value="30.000000"/>
+    </CUpgrade>
+    <CUpgrade id="BasicBitch">
+        <EffectArray Operation="Set" Reference="Abil,ChooseCombatMedic,Cost[0].Charge.CountStart" Value="0"/>
+        <EffectArray Operation="Set" Reference="Abil,ChooseCombatMedic,Cost[0].Charge.CountMax" Value="0"/>
+    </CUpgrade>
+    <CBehaviorBuff id="RadioMan">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="OrbitalSatelliteReconaissanceTimedLife" parent="TimedLife">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="20"/>
+    </CBehaviorBuff>
+</Catalog>

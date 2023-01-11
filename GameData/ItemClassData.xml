@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CItemClass id="Armor"/>
+    <CItemClass id="Misc"/>
+    <CItemClass id="WeaponFlame"/>
+    <CItemClass id="WeaponLaser"/>
+    <CItemClass id="WeaponSDM"/>
+    <CItemClass id="WeaponRifle"/>
+    <CItemClass id="WeaponMG"/>
+    <CItemClass id="WeaponPlasma"/>
+    <CItemClass id="WeaponShotgun"/>
+    <CItemClass id="WeaponSniper"/>
+    <CItemClass id="WeaponSubmachinegun"/>
+</Catalog>

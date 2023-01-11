@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CValidatorUnitCompareBehaviorCount id="NoBladeDashHit">
+        <Behavior value="BladeDashHit"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitFilters id="EnergyBladeExecuteTarget">
+        <Filters value="-;Self,Air,Mechanical,Massive,Item"/>
+    </CValidatorUnitFilters>
+    <CValidatorUnitCompareBehaviorCount id="NoBlackout">
+        <Behavior value="BlackoutAbility"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="NoEMP">
+        <Behavior value="OrbitalStrikeEMP"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="ExecuteArmoredTarget">
+        <Type value="And"/>
+        <CombineArray value="ExecuteTargetisArmored"/>
+        <CombineArray value="UnitLife75"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="ExecuteMassiveTarget">
+        <Type value="And"/>
+        <CombineArray value="ExecuteTargetisMassive"/>
+        <CombineArray value="UnitHealth50"/>
+    </CValidatorCombine>
+    <CValidatorUnitFilters id="ExecuteTargetisArmored">
+        <Filters value="Armored,Biological;Light,Mechanical,Massive"/>
+    </CValidatorUnitFilters>
+    <CValidatorUnitFilters id="ExecuteTargetisLight">
+        <Filters value="Light,Biological;Armored,Mechanical,Massive"/>
+    </CValidatorUnitFilters>
+    <CValidatorUnitFilters id="ExecuteTargetisMassive">
+        <Filters value="Biological,Massive;-"/>
+    </CValidatorUnitFilters>
+    <CValidatorUnitCompareVital id="UnitHealth50">
+        <ResultNoUnit value="Error"/>
+        <Compare value="LE"/>
+        <Type value="Fraction"/>
+        <Value value="0.5"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitCompareVital id="UnitLife75">
+        <Compare value="LE"/>
+        <Type value="Fraction"/>
+        <Value value="0.75"/>
+    </CValidatorUnitCompareVital>
+    <CEffectIssueOrder id="BladeDashMoveOrder">
+        <EditorCategories value="Race:Terran"/>
+        <WhichUnit Value="Caster"/>
+        <Abil value="move"/>
+        <Player Value="Caster"/>
+        <Target Value="TargetPoint"/>
+    </CEffectIssueOrder>
+    <CEffectApplyBehavior id="BloodRageExhaustAB">
+        <EditorCategories value="Race:Terran"/>
+        <Behavior value="BloodRageExhaust"/>
+    </CEffectApplyBehavior>
+    <CEffectModifyPlayer id="CleaveAugment">
+        <EditorCategories value="Race:Terran"/>
+        <Upgrades Upgrade="CleaveAugment" Count="1"/>
+    </CEffectModifyPlayer>
+    <CEffectModifyPlayer id="ConsumingAugment">
+        <EditorCategories value="Race:Terran"/>
+        <Upgrades Upgrade="ConsumingAugment" Count="1"/>
+    </CEffectModifyPlayer>
+    <CEffectModifyPlayer id="RangeAugment">
+        <EditorCategories value="Race:Terran"/>
+        <Upgrades Upgrade="RangeAugment" Count="1"/>
+    </CEffectModifyPlayer>
+    <CEffectModifyPlayer id="ReapingAugment">
+        <EditorCategories value="Race:Terran"/>
+        <Upgrades Upgrade="ReapingAugment" Count="1"/>
+    </CEffectModifyPlayer>
+    <CEffectSet id="BladeDash">
+        <EditorCategories value="Race:Terran"/>
+        <EffectArray value="BladeDashSpeed"/>
+        <TargetLocationType value="Point"/>
+    </CEffectSet>
+    <CEffectDamage id="BladeDashDamage">
+        <ValidatorArray value="NoBladeDashHit"/>
+        <EditorCategories value="Race:Terran"/>
+        <ImpactLocation Value="TargetUnit"/>
+        <Kind value="Melee"/>
+        <KindSplash value="Melee"/>
+        <Amount value="500"/>
+        <Death value="Eviscerate"/>
+    </CEffectDamage>
+    <CEffectApplyBehavior id="BladeDashDamageAB">
+        <EditorCategories value="Race:Terran"/>
+        <Behavior value="BladeDashHit"/>
+    </CEffectApplyBehavior>
+    <CEffectRemoveBehavior id="BladeDashDamageRB">
+        <EditorCategories value="Race:Terran"/>
+        <BehaviorLink value="BladeDashHit"/>
+    </CEffectRemoveBehavior>
+    <CEffectEnumArea id="BladeDashDamageRBSA">
+        <EditorCategories value="Race:Terran"/>
+        <ImpactLocation Value="CasterUnit"/>
+        <AreaArray Radius="10" Effect="BladeDashDamageRB"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="BladeDashDamageSA">
+        <EditorCategories value="Race:Terran"/>
+        <ImpactLocation Value="SourceUnit"/>
+        <SearchFilters value="-;Self,Ally"/>
+        <AreaArray Radius="1" Effect="BladeDashDamageSet"/>
+    </CEffectEnumArea>
+    <CEffectSet id="BladeDashDamageSet">
+        <EditorCategories value="Race:Terran"/>
+        <EffectArray value="BladeDashDamage"/>
+        <EffectArray value="BladeDashDamageAB"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="BladeDashSpeed">
+        <EditorCategories value="Race:Terran"/>
+        <WhichUnit Value="Source"/>
+    </CEffectApplyBehavior>
+    <CEffectIssueOrder id="BladeDashStop">
+        <EditorCategories value="Race:Terran"/>
+        <WhichUnit Value="Source"/>
+        <Abil value="Stop"/>
+        <Player Value="Source"/>
+    </CEffectIssueOrder>
+    <CEffectSet id="BladeDashStopSet">
+        <EditorCategories value="Race:Terran"/>
+        <EffectArray value="BladeDashStop"/>
+        <EffectArray value="BladeDashDamageRBSA"/>
+    </CEffectSet>
+    <CEffectEnumArea id="EnergyBladeCriticalExecuteSA">
+        <ValidatorArray value="EnergyBladeExecuteTarget"/>
+        <EditorCategories value="Race:Terran"/>
+        <AreaArray Arc="180" Radius="1" Effect="EnergyBladeCriticalExecute"/>
+    </CEffectEnumArea>
+    <CEffectSet id="EnergyBladeCriticalSet">
+        <EditorCategories value=""/>
+    </CEffectSet>
+    <CEffectModifyUnit id="EnergyBladeCriticalExecute">
+        <EditorCategories value="Race:Terran"/>
+        <VitalArray index="Life" ChangeFraction="-1"/>
+        <VitalArray index="Shields" ChangeFraction="-1"/>
+        <VitalArray index="Energy" ChangeFraction="-1"/>
+    </CEffectModifyUnit>
+    <CEffectDamage id="EnergyBladeDamage">
+        <EditorCategories value="Race:Terran"/>
+        <Amount value="500"/>
+        <AreaArray Arc="180" Radius="1" Fraction="1"/>
+        <Kind value="Melee"/>
+        <KindSplash value="Melee"/>
+        <SearchFilters value="-;Self"/>
+    </CEffectDamage>
+    <CEffectSet id="ExecuteDamageSet">
+        <EditorCategories value=""/>
+        <EffectArray value="ExecuteTargetDamage"/>
+        <EffectArray value="ExecuteDamageStunAB"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="ExecuteDamageStunAB">
+        <EditorCategories value=""/>
+        <Behavior value="ExecuteDamageStun"/>
+    </CEffectApplyBehavior>
+    <CEffectSwitch id="ExecuteSwitch">
+        <EditorCategories value=""/>
+        <CaseArray Validator="ExecuteMassiveTarget" Effect="ExecuteTargetExecute"/>
+        <CaseArray Validator="ExecuteArmoredTarget" Effect="ExecuteTargetExecute"/>
+        <CaseArray Validator="ExecuteTargetisLight" Effect="ExecuteTargetExecute"/>
+        <CaseArray Effect="ExecuteDamageSet"/>
+    </CEffectSwitch>
+    <CEffectModifyUnit id="ExecuteTargetDamage">
+        <EditorCategories value=""/>
+        <VitalArray index="Life" ChangeFraction="-0.25"/>
+        <VitalArray index="Shields" ChangeFraction="-0.25"/>
+        <VitalArray index="Energy" ChangeFraction="-0.25"/>
+    </CEffectModifyUnit>
+    <CEffectModifyUnit id="ExecuteTargetExecute">
+        <EditorCategories value="Race:Terran"/>
+        <VitalArray index="Life" ChangeFraction="-1"/>
+        <VitalArray index="Shields" ChangeFraction="-1"/>
+        <VitalArray index="Energy" ChangeFraction="-1"/>
+    </CEffectModifyUnit>
+    <CAbilBehavior id="BloodRage">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="BloodRage"/>
+        <BehaviorArray value="BloodRage"/>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link="" TimeStart="20"/>
+        </Cost>
+    </CAbilBehavior>
+    <CAbilEffectInstant id="BladeAugments">
+        <OrderArray index="0" Model="Assets\UI\Cursors\WayPointConfirm_Void\WayPointConfirm_Void.m3"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="ConsumingAugment"/>
+        <Effect value="RangeAugment"/>
+        <Effect value="CleaveAugment"/>
+        <Effect value="ReapingAugment"/>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BladeAugments"/>
+    </CAbilEffectInstant>
+    <CAbilBehavior id="ShadeCloak">
+        <Alignment value="Positive"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <CmdButtonArray index="On" DefaultButtonFace="ShadeCloakOn"/>
+        <CmdButtonArray index="Off" DefaultButtonFace="ShadeCloakOff"/>
+        <Flags index="Toggle" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <BehaviorArray value="ShadeCloak"/>
+    </CAbilBehavior>
+    <CAbilEffectTarget id="BladeDash">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Flags index="Transient" value="1"/>
+        <Range value="500"/>
+        <Arc value="360"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BladeDash"/>
+        <PrepEffect value="BladeDashMoveOrder"/>
+        <PrepTime value="0.01"/>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link="" TimeStart="10"/>
+        </Cost>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="Execute">
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <Effect index="0" value="ExecuteSwitch"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Execute"/>
+        <TargetFilters value="-;Mechanical"/>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link="" TimeStart="30"/>
+        </Cost>
+    </CAbilEffectTarget>
+    <CButton id="BloodRage">
+        <Icon value="Assets\Textures\btn-ability-alarak-massteleport.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="BladeAugments">
+        <Icon value="Assets\Textures\btn-upgrade-protoss-airweaponslevel3-void.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="BladeDash">
+        <Icon value="Assets\Textures\btn-upgrade-protoss-alarak-dashrange&amp;cdr.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="Execute">
+        <Icon value="Assets\Textures\btn-upgrade-protoss-alarak-combatmastery.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ShadeCloakOff">
+        <Icon value="Assets\Textures\btn-command-cancel.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ShadeCloakOn">
+        <Icon value="Assets\Textures\btn-upgrade-protoss-alarak-rangeincrease.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CActorSound id="BladeDashSound" parent="SoundOneShot">
+        <On Terms="Behavior.BladeDashSpeed.On" Send="Create"/>
+    </CActorSound>
+    <CActorModel id="BladeDashImpact" parent="ModelAnimationStyleOneShotNoOrphan">
+        <On Terms="Effect.BladeDashStop.Start" Send="Create"/>
+    </CActorModel>
+    <CActorSound id="BladeDashImpactSound" parent="SoundOneShot">
+        <On Terms="Effect.BladeDashStop.Start" Send="Create"/>
+        <Sound value="AlarakDeadlyChargeImpactSound"/>
+    </CActorSound>
+    <CActorModel id="BladeDashModel" parent="ModelAddition">
+        <On Terms="Behavior.BladeDashSpeed.On" Send="Create"/>
+        <On Terms="Behavior.BladeDashSpeed.Off" Send="Destroy"/>
+    </CActorModel>
+    <CActorQuad id="BladeDashGuide" parent="ZergGuideVisualQuadDownRedScaled" abil="BladeDash">
+        <Height value="8.000000"/>
+        <Width value="2.000000"/>
+    </CActorQuad>
+    <CActorUnit id="Executioner" parent="UnitTemplateActor" unitName="Executioner">
+        <Model value="Alarak"/>
+        <BuildModel value="Alarak"/>
+        <PlacementModel value="Alarak"/>
+        <PortraitModel value="TalDarimExecutorPortrait"/>
+        <HeroIcon value="Assets\Textures\btn-unit-protoss-alarak.dds"/>
+        <HighlightTooltip value="Unit/Name/Bogus"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-protoss-airarmorlevel3-void.dds"/>
+        <UnitIcon value="Assets\Textures\btn-unit-protoss-alarak.dds"/>
+        <SoundArray index="Ready" value="Nova_Ready"/>
+        <SoundArray index="Help" value="Nova_Help"/>
+        <SoundArray index="What" value="Nova_What"/>
+        <SoundArray index="Yes" value="Nova_Yes"/>
+        <SoundArray index="Attack" value="Nova_Attack"/>
+        <SoundArray index="Pissed" value="Nova_Pissed"/>
+        <AbilSoundArray index="0" AbilCmd="" Sound=""/>
+        <GroupIcon>
+            <Image index="0" value="Assets\Textures\btn-unit-protoss-alarak.dds"/>
+        </GroupIcon>
+        <ShieldArmorIcon value="Assets\Textures\btn-upgrade-protoss-shieldslevel3-void.dds"/>
+    </CActorUnit>
+    <CWeaponLegacy id="EnergyBlades">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Melee" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-alarak-melleeweapon.dds"/>
+        <Range value="0"/>
+        <Period value="1.35"/>
+        <Effect value="EnergyBladeDamage"/>
+        <CriticalEffect value="EnergyBladeCriticalExecuteSA"/>
+        <TargetFilters value="Visible;Air"/>
+    </CWeaponLegacy>
+    <CModel id="BladeDashImpact">
+        <Model value="Assets\Effects\Protoss\Alarak_DeadlyCharge_Impact\Alarak_DeadlyCharge_Impact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="BladeDashModel">
+        <Model value="Assets\Effects\Protoss\Alarak_DeadlyCharge_Trail\Alarak_DeadlyCharge_Trail.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CUnit id="Executioner" parent="UnitTemplateCustom">
+        <Race value="Terr"/>
+        <Attributes index="Light" value="0"/>
+        <LifeStart value="300"/>
+        <LifeMax value="300"/>
+        <LifeArmor value="0"/>
+        <EnergyStart value="100"/>
+        <EnergyMax value="100"/>
+        <EnergyRegenRate value="5"/>
+        <ShieldsStart value="100"/>
+        <ShieldsMax value="100"/>
+        <ShieldArmor value="5"/>
+        <ShieldRegenRate value="5"/>
+        <AbilArray Link="Execute"/>
+        <AbilArray Link="ShadeCloak"/>
+        <AbilArray Link="BladeDash"/>
+        <AbilArray Link="BladeAugments"/>
+        <AbilArray Link="BloodRage"/>
+        <BehaviorArray Link="StalkerCloak"/>
+        <WeaponArray index="0" Link="EnergyBlades"/>
+        <CardLayouts index="0">
+            <LayoutButtons Face="ShadeCloakOn" Type="AbilCmd" AbilCmd="ShadeCloak,On" Row="1" Column="1"/>
+            <LayoutButtons Face="ShadeCloakOff" Type="AbilCmd" AbilCmd="ShadeCloak,Off" Row="1" Column="1"/>
+            <LayoutButtons Face="Execute" Type="AbilCmd" AbilCmd="Execute,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="BladeDash" Type="AbilCmd" AbilCmd="BladeDash,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="BloodRage" Row="2" Column="2"/>
+            <LayoutButtons Face="BladeAugments" Row="2" Column="4"/>
+        </CardLayouts>
+        <EditorCategories value="ObjectType:Hero,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUpgrade id="CleaveAugment">
+        <EffectArray Operation="Set" Reference="Effect,EnergyBladeDamage,AreaArray[0].Arc" Value="270.000000"/>
+        <EffectArray Operation="Set" Reference="Effect,EnergyBladeDamage,AreaArray[0].Radius" Value="2"/>
+        <EffectArray/>
+        <EffectArray Operation="Set" Reference="Actor,BladeDashGuide,Width" Value="4.000000"/>
+        <EffectArray Operation="Set" Reference="Effect,BladeDashDamageSA,AreaArray[0].Radius" Value="2"/>
+        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+    </CUpgrade>
+    <CUpgrade id="ConsumingAugment">
+        <EffectArray Operation="Set" Reference="Effect,EnergyBladeDamage,LeechFraction[Shields]" Value="0.01"/>
+        <EffectArray Operation="Set" Reference="Effect,EnergyBladeDamage,LeechFraction[Energy]" Value="0.01"/>
+        <EffectArray Operation="Set" Reference="Effect,EnergyBladeDamage,LeechFraction[Life]" Value="0.01"/>
+        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+    </CUpgrade>
+    <CUpgrade id="RangeAugment">
+        <EffectArray Operation="Set" Reference="Weapon,EnergyBlades,Range" Value="1"/>
+        <EffectArray Operation="Set" Reference="Weapon,EnergyBlades,TargetFilters" Value="Visible;-"/>
+        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+    </CUpgrade>
+    <CUpgrade id="ReapingAugment">
+        <EffectArray Operation="Set" Reference="Weapon,EnergyBlades,CriticalChance" Value="0.15"/>
+        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+    </CUpgrade>
+    <CUpgrade id="Test"/>
+    <CBehaviorBuff id="BloodRage">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-ability-alarak-massteleport.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="10"/>
+        <FinalEffect value="BloodRageExhaustAB"/>
+        <Modification MoveSpeedMultiplier="2" AttackSpeedMultiplier="4" MeleeWeaponRange="1">
+            <VitalDamageLeechArray index="Shields">
+                <KindArray index="Melee" value="1"/>
+            </VitalDamageLeechArray>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BloodRageExhaust">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-alarak-massteleport.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="10"/>
+        <Modification MoveSpeedMultiplier="0.5" AttackSpeedMultiplier="0.5"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BladeDashHit">
+        <Alignment value="Negative"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BladeDashSpeed">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="0.5625"/>
+        <Period value="0.0625"/>
+        <PeriodicEffect value="BladeDashDamageSA"/>
+        <FinalEffect value="BladeDashStopSet"/>
+        <Modification MoveSpeedMultiplier="7">
+            <StateFlags index="Invulnerable" value="1"/>
+            <StateFlags index="SuppressCollision" value="1"/>
+            <StateFlags index="Uncommandable" value="1"/>
+            <StateFlags index="Unstoppable" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ShadeCloak">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-upgrade-protoss-alarak-rangeincrease.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <DisableValidatorArray value="NoBlackout"/>
+        <DisableValidatorArray value="NoEMP"/>
+        <Modification>
+            <StateFlags index="Cloak" value="1"/>
+            <StateFlags index="Undetectable" value="1"/>
+            <StateFlags index="Unradarable" value="1"/>
+            <StateFlags index="Untargetable" value="1"/>
+            <VitalRegenMultiplier index="Energy" value="-1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ExecuteDamageStun">
+        <InfoIcon value="Assets\Textures\btn-upgrade-protoss-alarak-stunnonheroicenemies.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Modification>
+            <ModifyFlags index="DisableAbils" value="1"/>
+            <ModifyFlags index="DisableWeapons" value="1"/>
+            <ModifyFlags index="SuppressMoving" value="1"/>
+            <ModifyFlags index="SuppressTurning" value="1"/>
+        </Modification>
+        <Duration value="2"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="StalkerCloak">
+        <Alignment value="Positive"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-ability-hornerhan-wraith-permanentcloak.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <DisableValidatorArray value="NoBlackout"/>
+        <DisableValidatorArray value="NoEMP"/>
+        <Modification>
+            <StateFlags index="Cloak" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+</Catalog>

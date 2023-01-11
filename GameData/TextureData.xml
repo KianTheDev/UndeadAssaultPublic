@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CTexture id="AGRIAConcrete">
+        <File value="Assets\Textures\agria_concrete_low.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="AGRIACrops">
+        <File value="Assets\Textures\agria_crops_low.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="AGRIADirt">
+        <File value="Assets\Textures\agria_dirt_low.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="AGRIADirtRough">
+        <File value="Assets\Textures\agria_dirt_rough_low.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="AGRIAFoilage">
+        <File value="Assets\Textures\agria_foliage_low.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="AGRIAGrassGreen">
+        <File value="Assets\Textures\agria_grass_green_low.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="AGRIAGrassYellow">
+        <File value="Assets\Textures\agria_grass_yellow_low.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="AGRIARoad">
+        <File value="Assets\Textures\korhal_road_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="AGRIARock">
+        <File value="Assets\Textures\agria_rock_low.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="AGRIAWater">
+        <File value="Assets\Textures\defaultwater07.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoBio">
+        <File value="Textures\Armor_Bio_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoBetaTester">
+        <File value="Textures\Armour_purpleglitter_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoChristmas">
+        <File value="Textures\Armour_Christmas_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoRNJesus">
+        <File value="Textures\Armour_RNJesus_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoSYL">
+        <File value="Assets\Textures\Armor_SYL_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoSherif">
+        <File value="Assets\Textures\Armor_Sheriff_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoWhite">
+        <File value="Assets\Textures\Armor_White_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoWhiteTiger">
+        <File value="Textures\Armour_WhiteTiger_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoSparkle">
+        <File value="Textures\Armour_WhiteSparkle_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoDND">
+        <File value="Textures\Armour_DND_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoDoom">
+        <File value="Textures\Armor_Doom_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoHellfire">
+        <File value="Textures\Armour_Hellfire_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoInferno">
+        <File value="Textures\Armour_FW_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoLN">
+        <File value="Textures\Armor_LNCamo_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoLaser">
+        <File value="Textures\Armour_Laser_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoLightning">
+        <File value="Textures\Armor_Lightning_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoEmerald">
+        <File value="Textures\Armour_GreenCeleb_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoObsidian">
+        <File value="Textures\Armor_Obsidian_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoPride">
+        <File value="Textures\Armour_Pride_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoLeopard">
+        <File value="Textures\Armour_Leopard_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoScarlet">
+        <File value="Textures\Armour_CrimsonTide_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoSpectreUpdated">
+        <File value="Textures\Armor_Spectre3_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoDarkSky">
+        <File value="Textures\Armor__DarkSky_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoUltron">
+        <File value="Textures\Armor_COD_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoUrbanSnow">
+        <File value="Textures\Armor_Snurban.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoZES">
+        <File value="Textures\Armour_PD_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="DecalSYL">
+        <File value="Assets\Textures\SYL_Decal.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalVietnamFlag">
+        <File value="Assets\Textures\Viet_Flag.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalBioHazard">
+        <File value="Textures\Decals\BioHazardF_Decal.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalBronze">
+        <File value="Textures\Decals\Bronze.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalCanadaFlag">
+        <File value="Textures\Decals\Canada Flag.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalDiamond">
+        <File value="Textures\Decals\Diamond.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalEarth">
+        <File value="Textures\Decals\Earth.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalFinland">
+        <File value="Textures\Decals\Finland.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalFranceFlag">
+        <File value="Textures\Decals\France Flag.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalGBFlag">
+        <File value="Textures\Decals\Great Britain Flag.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalGalactic">
+        <File value="Textures\Decals\Galactic.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalGermanyFlag">
+        <File value="Textures\Decals\Germany Flag.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalGold">
+        <File value="Textures\Decals\Gold.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalGrandmaster">
+        <File value="Textures\Decals\Grandmaster.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalHuntress">
+        <File value="Textures\Decals\HuntressOps.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalItaly">
+        <File value="Textures\Decals\Italy.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalMexicoFlag">
+        <File value="Textures\Decals\Mexico.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalAustraliaFlag">
+        <File value="Assets\Textures\Aus_Flag.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalUSFlag2">
+        <File value="Assets\Textures\Decal_UA3.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalUSCA">
+        <File value="Assets\Textures\US_CA_Flag.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="SmithyDiffuse">
+        <File value="Assets\Textures\darkvoiceportrait_diff.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="SmithyEmissive">
+        <File value="Assets\Textures\zportrait_emiss.dds"/>
+        <Slot value="main.emissive"/>
+    </CTexture>
+    <CTexture id="SmithySpecular">
+        <File value="Assets\Textures\zergedcliff_spec.dds"/>
+        <Slot value="main.specular"/>
+    </CTexture>
+    <CTexture id="Terminator">
+        <File value="Textures\Decals\Terminator.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalKrypton">
+        <File value="Textures\Decals\DecalProtoss.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalLion">
+        <File value="Textures\Decals\DecalLion.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalLostPact">
+        <File value="Textures\Decals\Lost_Pact.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalMaster">
+        <File value="Textures\Decals\Master.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalPlatinum">
+        <File value="Textures\Decals\Platinum.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalRedSkull">
+        <File value="Textures\Decals\DecalSkull.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalRussiaFlag">
+        <File value="Textures\Decals\Russia.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalSerpent">
+        <File value="Textures\Decals\Decalserpent.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalSilver">
+        <File value="Textures\Decals\Silver.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalSingapore">
+        <File value="Textures\Decals\Singapore.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalSouthKoreaFlag">
+        <File value="Textures\Decals\South Korea Flag.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="CamoBlood">
+        <File value="Textures\Armor_AUC_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="DecalT1Hunter">
+        <File value="Textures\Decals\T1Hunters.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalUN">
+        <File value="Textures\Decals\United Nations Flag.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalUkraineFlag">
+        <File value="Textures\Decals\Ukraine Flag.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalWinner">
+        <File value="Textures\Decals\Who Dares Wins.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalWoodland">
+        <File value="Textures\Decals\Woodland Decal.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="PoliceOfficerDiffuse">
+        <File value="Textures\PoliceOfficer_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="PoliceDecal">
+        <File value="Textures\decal_ThalimPolice.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="RankCMA1">
+        <File value="Buttons\Ranks\RankCMA1.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="CamoBDU">
+        <File value="Textures\Armor_VitaminC_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoGalactic">
+        <File value="Textures\Armor_Galactic_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoCyber">
+        <File value="Textures\Armor_Cyber_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoDesertStorm">
+        <File value="Textures\Armor_DesertStorm_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoFrost">
+        <File value="Textures\Armor_Frost_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoGold">
+        <File value="Textures\Armour_Star_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoIcy">
+        <File value="Textures\Armor_Icy_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoParty">
+        <File value="Textures\Armor_Party_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoRain">
+        <File value="Textures\Armor_Rain_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoSnow">
+        <File value="Textures\Armour_Snow_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoACUPAT">
+        <File value="Textures\Armour_ACUPAT_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoChameleon">
+        <File value="Textures\Armour_Chameleon_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoDefault">
+        <File value="Assets\Textures\Armour_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoNavyBlue">
+        <File value="Textures\Armour_Navy(Blue)_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoMARPAT">
+        <File value="Textures\Armour_MARPAT_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoDesert">
+        <File value="Textures\Armour_Desert(Brit)_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoMulticam">
+        <File value="Textures\Armour_Multicam_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoABU">
+        <File value="Textures\Armour_Golden_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoNight">
+        <File value="Textures\Armour_Night_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoOlive">
+        <File value="Textures\Armour_Green_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoRockAvalanche">
+        <File value="Textures\Armour_Woodland_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoSAS">
+        <File value="Textures\Armour_95Urban(British)_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoCADPAT">
+        <File value="Textures\Armour_CADPAT_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoSnowRA">
+        <File value="Textures\Armor_SnowRA_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoSpectre">
+        <File value="Textures\Armor_Spectre_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoWoodlandTiger">
+        <File value="Textures\Armour_MARPAT_Woodland_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoMedic">
+        <File value="Textures\Armour_Medic_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CyborgStonewall">
+        <File value="Assets\Textures\newfolsomrock_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="DecalAUC">
+        <File value="Textures\Decals\AUC New.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalWolves">
+        <File value="Textures\Decals\Wolves.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalOutlaw">
+        <File value="Textures\Decals\OutlawSkull.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalCMB">
+        <File value="Textures\Decals\Combat Medic Badge.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalDS">
+        <File value="Assets\Textures\Decal DS.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalRanger">
+        <File value="Textures\Decals\RangerTab.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalRavensword">
+        <File value="Textures\Decals\RavenswordLogo.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalBlueDiamond">
+        <File value="Textures\Decals\BlueDiamondLogo.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalBearClaw">
+        <File value="Textures\Decals\BearClaw.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalCavSabers">
+        <File value="Textures\Decals\CavalrySabers.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalZES">
+        <File value="Textures\Decals\ZES decal.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalUSFlag">
+        <File value="Textures\Decals\USA Flag.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="InfestedCivilianBloody">
+        <File value="Assets\Textures\infestedcolonist_02.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="RankCMA2">
+        <File value="Buttons\Ranks\RankCMA2.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="RankCMA3">
+        <File value="Buttons\Ranks\RankCMA3.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="RankGOA">
+        <File value="Buttons\Ranks\RankGOA.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="RankMW1">
+        <File value="Buttons\Ranks\RankMW1.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="RankMW2">
+        <File value="Buttons\Ranks\RankMW2.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="RankMW3">
+        <File value="Buttons\Ranks\RankMW3.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="RankMW4">
+        <File value="Buttons\Ranks\RankMW4.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="RankMW5">
+        <File value="Buttons\Ranks\RankMWO5.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="RedSteel">
+        <File value="Textures\Armor_RedSteel_Diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoBreeze">
+        <File value="Textures\Armour_Breeze_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="DecalGreenDiamond">
+        <File value="Textures\Decals\Green Diamond.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="blue">
+        <File value="Assets\Textures\diagnalgradientbluelightblue.dds"/>
+    </CTexture>
+    <CTexture id="ZombieDiff">
+        <File value="Assets\Textures\bloodybuildingguts.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="Rank1LT">
+        <File value="Buttons\Ranks\Rank1lt.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="DecalRA">
+        <File value="Textures\Decals\RALogo.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="RankBGEN">
+        <File value="Buttons\Ranks\RankBgen.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="RankGEN">
+        <File value="Buttons\Ranks\RankGen.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="RankMGEN">
+        <File value="Buttons\Ranks\RankMgen.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="RankCPT">
+        <File value="Buttons\Ranks\RankCpt.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="RankCOL">
+        <File value="Buttons\Ranks\RankCol.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="RankMAJ">
+        <File value="Buttons\Ranks\RankMaj.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="RankCWO3">
+        <File value="Buttons\Ranks\RankCwo3.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="RankCWO4">
+        <File value="Buttons\Ranks\RankCwo4.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="RankCWO5">
+        <File value="Buttons\Ranks\RankCwo5.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="Rank2LT">
+        <File value="Buttons\Ranks\Rank2lt.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="RankLTCOL">
+        <File value="Buttons\Ranks\RankLtcol.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="RankLTGEN">
+        <File value="Buttons\Ranks\RankLtgen.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="RankSMA">
+        <File value="Buttons\Ranks\RankSma.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="RankSGM">
+        <File value="Buttons\Ranks\RankSgm.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="RankMSG">
+        <File value="Buttons\Ranks\RankMsg.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="Rank1SG">
+        <File value="Buttons\Ranks\Rank1sg.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="RankCSM">
+        <File value="Buttons\Ranks\RankCsm.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="RankSGT">
+        <File value="Buttons\Ranks\RankSgt.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="RankPFC">
+        <File value="Buttons\Ranks\RankPFC.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="RankSSG">
+        <File value="Buttons\Ranks\RankSsg.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="RankSPC">
+        <File value="Buttons\Ranks\RankSPC.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="RankPVT">
+        <File value="Buttons\Ranks\RankPVT.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="RankPV2">
+        <File value="Buttons\Ranks\RankPV2.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="RankCPL">
+        <File value="Buttons\Ranks\RankCpl.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="RankSFC">
+        <File value="Buttons\Ranks\RankSfc.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="RankWO1">
+        <File value="Buttons\Ranks\RankWo1.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="RankCWO2">
+        <File value="Buttons\Ranks\RankCwo2.dds"/>
+        <Slot value="decal"/>
+    </CTexture>
+    <CTexture id="CamoRedTiger">
+        <File value="Textures\Armour_UTRed_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="VikingWoodland">
+        <File value="Textures\Viking_woodland_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="WeaponsCacheRock">
+        <File value="Textures\rocks_diffuse_agria X.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="ZombieSpec">
+        <File value="Assets\Textures\bloodybuildingguts.dds"/>
+        <Slot value="main.specular"/>
+    </CTexture>
+    <CTexture id="ZombieNorm">
+        <File value="Assets\Textures\bloodybuildingguts_normal.dds"/>
+        <Slot value="main.normal"/>
+    </CTexture>
+    <CTexture id="Ignis20ADiffuse">
+        <File value="Assets\Textures\charrocklarge_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="Vesania20ADiffuse">
+        <File value="Assets\Textures\korhal_buildings_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="Test3ADiffuse">
+        <File value="Assets\Textures\redstonelavafall_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="Vesania20AEmissive">
+        <File value="Assets\Textures\korhal_buildings_glow.dds"/>
+        <Slot value="main.emissive"/>
+    </CTexture>
+    <CTexture id="Test4ADiffuse">
+        <File value="Assets\Textures\fleetbecon_diffuse_dark.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="Test3AEmissive">
+        <File value="Assets\Textures\leviathan_emissive.dds"/>
+        <Slot value="main.emissive"/>
+    </CTexture>
+    <CTexture id="Vesania20ASpecular">
+        <File value="Assets\Textures\korhal_buildings_specular.dds"/>
+        <Slot value="main.specular"/>
+    </CTexture>
+    <CTexture id="Ignis20BDiffuse">
+        <File value="Assets\Textures\charcrystalhuge_diffuse.dds"/>
+        <Slot value="head.diffuse"/>
+    </CTexture>
+    <CTexture id="Ignis20AEmissive">
+        <File value="Assets\Textures\charrocklarge_emissive.dds"/>
+        <Slot value="main.emissive"/>
+    </CTexture>
+    <CTexture id="Ignis20BEmissive">
+        <File value="Assets\Textures\charcrystalhuge_emissive_all.dds"/>
+        <Slot value="head.emissive"/>
+    </CTexture>
+    <CTexture id="Ignis20ASpecular">
+        <File value="Assets\Textures\charrocklarge_normal.dds"/>
+        <Slot value="main.specular"/>
+    </CTexture>
+    <CTexture id="Ignis20BSpecular">
+        <File value="Assets\Textures\charcrystalhuge_specular.dds"/>
+        <Slot value="head.specular"/>
+    </CTexture>
+    <CTexture id="Test5ADiffuse">
+        <File value="Assets\Textures\sludgewater.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="Test4AEmissive">
+        <File value="Assets\Textures\fleetbecon_emissive_dark.dds"/>
+        <Slot value="main.emissive"/>
+    </CTexture>
+    <CTexture id="Test3ASpecular">
+        <File value="Assets\Textures\hybridprotoss_specular.dds"/>
+        <Slot value="main.specular"/>
+    </CTexture>
+    <CTexture id="Test5AEmissive">
+        <File value="Assets\Textures\fleetbecon_emissive.dds"/>
+        <Slot value="main.emissive"/>
+    </CTexture>
+    <CTexture id="Test4ASpecular">
+        <File value="Assets\Textures\fleetbecon_specular_dark.dds"/>
+        <Slot value="main.specular"/>
+    </CTexture>
+    <CTexture id="Test5ASpecular">
+        <File value="Assets\Textures\fleetbecon_specular.dds"/>
+        <Slot value="main.specular"/>
+    </CTexture>
+</Catalog>

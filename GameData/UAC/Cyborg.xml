@@ -1,0 +1,1342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CEffectSet id="CombativeAugmentLoadoutTOs">
+        <EditorCategories value=""/>
+        <EffectArray value="TOProsthesisAugmentLoadout"/>
+        <EffectArray value="TOExperimentalAugmentLoadout"/>
+        <EffectArray value="TOStealthModes"/>
+    </CEffectSet>
+    <CEffectCreateUnit id="CreateHologram">
+        <EditorCategories value=""/>
+        <SpawnUnit value="CyborgHologram"/>
+    </CEffectCreateUnit>
+    <CEffectCreateUnit id="CreateNewCyborg">
+        <EditorCategories value=""/>
+        <SpawnUnit value="newCyborg"/>
+    </CEffectCreateUnit>
+    <CEffectSet id="EquipBorgSet">
+        <EditorCategories value=""/>
+        <Marker Link="Effect/EquipCyborgSet"/>
+        <EffectArray value="EquipMachineGun"/>
+        <EffectArray value="EquipAmmoBackPack"/>
+        <EffectArray value="EquipMedicalScanVisor"/>
+        <EffectArray value="EquipEnforcerShield"/>
+    </CEffectSet>
+    <CEffectSet id="ExperimentalAugmentLoadoutTOs">
+        <EditorCategories value=""/>
+        <EffectArray value="TOCombativeAugmentLoadout"/>
+        <EffectArray value="TOOverlockCombativeAugments"/>
+        <EffectArray value="TOProsthesisAugmentLoadout"/>
+    </CEffectSet>
+    <CEffectSet id="ProsthesisAugmentLoadoutTOs">
+        <EditorCategories value=""/>
+        <EffectArray value="TOCombativeAugmentLoadout"/>
+        <EffectArray value="TOOverlockCombativeAugments"/>
+        <EffectArray value="TOExperimentalAugmentLoadout"/>
+        <EffectArray value="TOStealthModes"/>
+    </CEffectSet>
+    <CEffectModifyUnit id="SystemReboot">
+        <EditorCategories value=""/>
+        <VitalArray index="Life">
+            <ChangeFraction value="1"/>
+        </VitalArray>
+        <VitalArray index="Shields">
+            <ChangeFraction value="1"/>
+        </VitalArray>
+        <VitalArray index="Energy">
+            <ChangeFraction value="1"/>
+        </VitalArray>
+    </CEffectModifyUnit>
+    <CEffectIssueOrder id="TOCombativeAugmentLoadout">
+        <EditorCategories value=""/>
+        <Abil value="CombativeAugmentLoadout"/>
+        <AbilCmdIndex value="1"/>
+    </CEffectIssueOrder>
+    <CEffectIssueOrder id="TOExperimentalAugmentLoadout">
+        <EditorCategories value=""/>
+        <Abil value="ExperimentalAugmentLoadout"/>
+        <AbilCmdIndex value="1"/>
+    </CEffectIssueOrder>
+    <CEffectIssueOrder id="TOOverlockCombativeAugments">
+        <EditorCategories value=""/>
+        <Marker Link="Effect/TOProsthesisAugmentLoadout"/>
+        <Abil value="OverclockCombativeAugments"/>
+        <AbilCmdIndex value="1"/>
+    </CEffectIssueOrder>
+    <CEffectIssueOrder id="TOProsthesisAugmentLoadout">
+        <EditorCategories value=""/>
+        <Abil value="ProsthesisAugmentLoadout"/>
+        <AbilCmdIndex value="1"/>
+    </CEffectIssueOrder>
+    <CEffectIssueOrder id="TOStealthMode2">
+        <EditorCategories value=""/>
+        <Abil value="StealthMode2"/>
+        <AbilCmdIndex value="1"/>
+    </CEffectIssueOrder>
+    <CEffectIssueOrder id="TOStealthMode1">
+        <EditorCategories value=""/>
+        <Abil value="StealthMode1"/>
+        <AbilCmdIndex value="1"/>
+    </CEffectIssueOrder>
+    <CEffectIssueOrder id="TOStealthMode3">
+        <EditorCategories value=""/>
+        <Abil value="StealthMode3"/>
+        <AbilCmdIndex value="1"/>
+    </CEffectIssueOrder>
+    <CEffectSet id="TOStealthModes">
+        <EditorCategories value=""/>
+        <EffectArray value="TOStealthMode1"/>
+        <EffectArray value="TOStealthMode2"/>
+        <EffectArray value="TOStealthMode3"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="ReaciveFieldAB">
+        <EditorCategories value=""/>
+        <Behavior value="ReactiveFieldTarget"/>
+    </CEffectApplyBehavior>
+    <CEffectEnumArea id="ReactiveFieldSA">
+        <EditorCategories value=""/>
+        <SearchFilters value="-;Player,Ally,Neutral,Psionic,Stasis,Dead,Hidden,Invulnerable"/>
+        <AreaArray Radius="7" Effect="ReaciveFieldAB"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="AegisRadarSystemEnum">
+        <EditorCategories value=""/>
+        <AreaArray MaxCount="3"/>
+    </CEffectEnumArea>
+    <CEffectModifyUnit id="BackupBattery">
+        <EditorCategories value=""/>
+        <Cost Abil="PhaseShifting,255"/>
+        <VitalArray index="Energy">
+            <Change value="200"/>
+        </VitalArray>
+    </CEffectModifyUnit>
+    <CAbilEffectInstant id="CreateHologram">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Cost>
+            <Vital index="Energy" value="100"/>
+            <Charge Location="Unit"/>
+            <Cooldown Location="Unit" TimeUse="120"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="CreateHologram" Requirements="ExperimentalAugmentLoadoutActive3"/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="CreateNewCyborg">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Flags index="BestUnit" value="1"/>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+    </CAbilEffectInstant>
+    <CAbilBehavior id="MeltdownBorg">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="Meltdown" Requirements="MeltdownUnlock">
+            <Flags index="ShowInGlossary" value="0"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="Off" DefaultButtonFace="MeltdownOff"/>
+        <Flags index="Toggle" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="1"/>
+        </Cost>
+        <BehaviorArray value="Meltdown"/>
+    </CAbilBehavior>
+    <CAbilEffectInstant id="SystemReboot">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Cost>
+            <Charge Location="Unit"/>
+            <Cooldown Location="Unit" TimeUse="260"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SystemReboot" Requirements="ExperimentalAugmentLoadoutActive3"/>
+    </CAbilEffectInstant>
+    <CAbilEffectTarget id="FieldCameraBorg">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InfoTooltipPriority value="21"/>
+        <Effect index="0" value="FieldCameraPlace"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="55"/>
+            <Charge Link="Abil/FieldCameraCyborg"/>
+            <Cooldown Link="Abil/FieldCameraCyborg" TimeUse="180"/>
+        </Cost>
+        <InterruptCost>
+            <Charge Link="Abil/FieldCameraCyborg"/>
+            <Cooldown Link="Abil/FieldCameraCyborg"/>
+        </InterruptCost>
+        <Range value="1.5"/>
+        <Marker Link="Abil/FieldCameraCyborg"/>
+        <ErrorAlert value="Error"/>
+        <AINotifyEffect value=""/>
+        <ProducedUnitArray value="FieldCamera"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="FieldCameraSDM" Requirements="ExperimentalAugmentLoadoutPassive1"/>
+    </CAbilEffectTarget>
+    <CAbilBehavior id="OverclockCombativeAugments">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="OverclockCombativeAugments" Requirements="CombativeAugmentLoadoutActive3"/>
+        <CmdButtonArray index="Off" DefaultButtonFace="OverclockCombativeAugmentsOff" Requirements="CombativeAugmentLoadoutActive3"/>
+        <Flags index="Toggle" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="25"/>
+            <Charge Link=""/>
+            <Cooldown Link="" TimeUse="0.5"/>
+        </Cost>
+        <BehaviorArray value="OverclockCombativeAugments"/>
+    </CAbilBehavior>
+    <CAbilBehavior id="StealthMode1">
+        <OrderArray index="0">
+            <DisplayType value="Confirm"/>
+            <Color value="255,0,255,0"/>
+            <Model value="Assets\UI\Cursors\WayPointConfirmSwarm\WayPointConfirmSwarm.m3"/>
+            <LineTexture value="Assets\Textures\WayPointLine.dds"/>
+        </OrderArray>
+        <AbilSetId value="Clok"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="StealthMode1" Requirements="StealthMode1">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="Off" DefaultButtonFace="StealthModeOff" Requirements="StealthMode1">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Flags index="Toggle" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="50"/>
+        </Cost>
+        <BehaviorArray value="StealthMode1"/>
+    </CAbilBehavior>
+    <CAbilBehavior id="StealthMode2">
+        <OrderArray index="0">
+            <DisplayType value="Confirm"/>
+            <Color value="255,0,255,0"/>
+            <Model value="Assets\UI\Cursors\WayPointConfirmSwarm\WayPointConfirmSwarm.m3"/>
+            <LineTexture value="Assets\Textures\WayPointLine.dds"/>
+        </OrderArray>
+        <AbilSetId value="Clok"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="StealthMode2" Requirements="StealthMode2">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="Off" DefaultButtonFace="StealthModeOff" Requirements="StealthMode2">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Flags index="Toggle" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="50"/>
+        </Cost>
+        <BehaviorArray value="StealthMode2"/>
+    </CAbilBehavior>
+    <CAbilBehavior id="StealthMode3">
+        <OrderArray index="0">
+            <DisplayType value="Confirm"/>
+            <Color value="255,0,255,0"/>
+            <Model value="Assets\UI\Cursors\WayPointConfirmSwarm\WayPointConfirmSwarm.m3"/>
+            <LineTexture value="Assets\Textures\WayPointLine.dds"/>
+        </OrderArray>
+        <AbilSetId value="Clok"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="StealthMode3" Requirements="StealthMode3">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="Off" DefaultButtonFace="StealthModeOff" Requirements="StealthMode3">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Flags index="Toggle" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="50"/>
+        </Cost>
+        <BehaviorArray value="StealthMode3"/>
+    </CAbilBehavior>
+    <CAbilBehavior id="PhaseShifting">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="PhaseShifting" Requirements="ProsthesisAugmentLoadoutActive3"/>
+        <CmdButtonArray index="Off" DefaultButtonFace="PhaseShiftingOff" Requirements="ProsthesisAugmentLoadoutActive3"/>
+        <Flags index="Toggle" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost/>
+        <BehaviorArray value="PhaseShifting"/>
+    </CAbilBehavior>
+    <CAbilBehavior id="CombativeAugmentLoadout">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="CombativeAugmentLoadout"/>
+        <CmdButtonArray index="Off" DefaultButtonFace="CombativeAugmentLoadoutOff"/>
+        <Flags index="Toggle" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <BehaviorArray value="CombativeAugmentLoadout"/>
+        <BehaviorArray value="CombativeAugmentLoadout2"/>
+        <BehaviorArray value="CombativeAugmentLoadout3"/>
+    </CAbilBehavior>
+    <CAbilBehavior id="ExperimentalAugmentLoadout">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="ExperimentalAugmentLoadout"/>
+        <CmdButtonArray index="Off" DefaultButtonFace="ExperimentalAugmentLoadoutOff"/>
+        <Flags index="Toggle" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <BehaviorArray value="ExperimentalAugmentLoadout1"/>
+        <BehaviorArray value="ExperimentalAugmentLoadout2"/>
+        <BehaviorArray value="ExperimentalAugmentLoadout3"/>
+    </CAbilBehavior>
+    <CAbilLearn id="LearnAbilitiesCyborgMk2" parent="LearnAbilityMOS">
+        <Name value="Abil/Name/LearnAbilitiesCyborgMk2"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InfoArray index="Learn1" Abil="CombativeAugmentLoadout">
+            <Button DefaultButtonFace="CombativeAugmentLoadout" Requirements=""/>
+        </InfoArray>
+        <InfoArray index="Learn2" Abil="ExperimentalAugmentLoadout">
+            <Button DefaultButtonFace="ExperimentalAugmentLoadout" Requirements=""/>
+        </InfoArray>
+        <InfoArray index="Learn3" Abil="ProsthesisAugmentLoadout">
+            <Charge CountMax="100" CountStart="100"/>
+            <Button DefaultButtonFace="ProsthesisAugmentLoadout"/>
+        </InfoArray>
+        <InfoArray index="Learn4" Abil="SoldierSkills">
+            <Charge CountMax="100" CountStart="100"/>
+            <Button DefaultButtonFace="LearnSoldierSkills"/>
+        </InfoArray>
+        <InfoArray index="Learn5" Abil="ClusterRockets">
+            <Charge CountMax="100" CountStart="100"/>
+            <Button DefaultButtonFace="ClusterRockets"/>
+        </InfoArray>
+        <InfoArray index="Learn6">
+            <Charge CountMax="100" CountStart="100"/>
+        </InfoArray>
+    </CAbilLearn>
+    <CAbilBehavior id="ProsthesisAugmentLoadout">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="ProsthesisAugmentLoadout"/>
+        <CmdButtonArray index="Off" DefaultButtonFace="ProsthesisAugmentLoadoutOff"/>
+        <Flags index="Toggle" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <BehaviorArray value="ProsthesisAugmentLoadout1"/>
+        <BehaviorArray value="ProsthesisAugmentLoadout2"/>
+        <BehaviorArray value="ProsthesisAugmentLoadout3"/>
+    </CAbilBehavior>
+    <CValidatorUnitCompareBehaviorCount id="HasRebreatherBorg">
+        <Value value="1"/>
+        <Behavior value="Rebreather"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="ProsthesisAugmentLoadout2">
+        <WhichUnit Value="Source"/>
+        <Value value="1"/>
+        <Behavior value="ProsthesisAugmentLoadout2"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="ProsthesisAugmentLoadout3">
+        <WhichUnit Value="Source"/>
+        <Value value="1"/>
+        <Behavior value="ProsthesisAugmentLoadout3"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CRequirement id="MarksDummy1">
+        <NodeArray index="Use" Link="GTECountUpgradeCyborgSkillsCompleteOnly2"/>
+    </CRequirement>
+    <CRequirement id="MarksDummy2">
+        <NodeArray index="Use" Link="GTECountUpgradeCyborgSkillsCompleteOnly5"/>
+    </CRequirement>
+    <CRequirement id="MeltdownUnlock">
+        <NodeArray index="Use" Link="GTE3366690453CountUpgradeCyborgSkillsCompleteOnly5"/>
+        <NodeArray index="Show" Link="GTE3366690453CountUpgradeCyborgSkillsCompleteOnly0"/>
+    </CRequirement>
+    <CRequirement id="StealthMode1">
+        <NodeArray index="Use" Link="OrEqCountBehaviorExperimentalAugmentLoadout1CompleteOnlyAtUnit1"/>
+        <NodeArray index="Show" Link="OrEqCountBehaviorExperimentalAugmentLoadout1CompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="StealthMode2">
+        <NodeArray index="Use" Link="OrEqCountBehaviorExperimentalAugmentLoadout2CompleteOnlyAtUnit1"/>
+        <NodeArray index="Show" Link="OrEqCountBehaviorExperimentalAugmentLoadout2CompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="StealthMode3">
+        <NodeArray index="Use" Link="OrEqCountBehaviorExperimentalAugmentLoadout3CompleteOnlyAtUnit1"/>
+        <NodeArray index="Show" Link="OrEqCountBehaviorExperimentalAugmentLoadout3CompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="CombativeAugmentLoadoutActive1">
+        <NodeArray index="Use" Link="OrEqCountBehaviorCombativeAugmentLoadoutCompleteOnlyAtUnit1EqCountBehaviorCombativeAugmentLoadout2CompleteOnlyAtUnit1EqCountBehaviorCombativeAugmentLoadout3CompleteOnlyAtUnit1"/>
+        <NodeArray index="Show" Link="OrEqCountBehaviorCombativeAugmentLoadoutCompleteOnlyAtUnit1EqCountBehaviorCombativeAugmentLoadout2CompleteOnlyAtUnit1EqCountBehaviorCombativeAugmentLoadout3CompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="CombativeAugmentLoadoutActive2">
+        <NodeArray index="Use" Link="OrEqCountBehaviorCombativeAugmentLoadout2CompleteOnlyAtUnit1EqCountBehaviorCombativeAugmentLoadout3CompleteOnlyAtUnit1"/>
+        <NodeArray index="Show" Link="OrEqCountBehaviorCombativeAugmentLoadoutCompleteOnlyAtUnit1EqCountBehaviorCombativeAugmentLoadout2CompleteOnlyAtUnit1EqCountBehaviorCombativeAugmentLoadout3CompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="CombativeAugmentLoadoutActive3">
+        <NodeArray index="Use" Link="OrEqCountBehaviorCombativeAugmentLoadout3CompleteOnlyAtUnit1"/>
+        <NodeArray index="Show" Link="OrEqCountBehaviorCombativeAugmentLoadoutCompleteOnlyAtUnit1EqCountBehaviorCombativeAugmentLoadout2CompleteOnlyAtUnit1EqCountBehaviorCombativeAugmentLoadout3CompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="ExperimentalAugmentLoadoutActive1">
+        <NodeArray index="Use" Link="OrEqCountBehaviorExperimentalAugmentLoadout1CompleteOnlyAtUnit1EqCountBehaviorExperimentalAugmentLoadout2CompleteOnlyAtUnit1EqCountBehaviorExperimentalAugmentLoadout3CompleteOnlyAtUnit1"/>
+        <NodeArray index="Show" Link="OrEqCountBehaviorExperimentalAugmentLoadout1CompleteOnlyAtUnit1EqCountBehaviorExperimentalAugmentLoadout2CompleteOnlyAtUnit1EqCountBehaviorExperimentalAugmentLoadout3CompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="ExperimentalAugmentLoadoutActive2">
+        <NodeArray index="Use" Link="OrEqCountBehaviorExperimentalAugmentLoadout2CompleteOnlyAtUnit1EqCountBehaviorExperimentalAugmentLoadout3CompleteOnlyAtUnit1"/>
+        <NodeArray index="Show" Link="OrEqCountBehaviorExperimentalAugmentLoadout1CompleteOnlyAtUnit1EqCountBehaviorExperimentalAugmentLoadout2CompleteOnlyAtUnit1EqCountBehaviorExperimentalAugmentLoadout3CompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="ExperimentalAugmentLoadoutActive3">
+        <NodeArray index="Use" Link="OrEqCountBehaviorExperimentalAugmentLoadout3CompleteOnlyAtUnit1"/>
+        <NodeArray index="Show" Link="OrEqCountBehaviorExperimentalAugmentLoadout1CompleteOnlyAtUnit1EqCountBehaviorExperimentalAugmentLoadout2CompleteOnlyAtUnit1EqCountBehaviorExperimentalAugmentLoadout3CompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="ProsthesisAugmentLoadoutActive1">
+        <NodeArray index="Use" Link="OrEqCountBehaviorProsthesisAugmentLoadout1CompleteOnlyAtUnit1EqCountBehaviorProsthesisAugmentLoadout2CompleteOnlyAtUnit1EqCountBehaviorProsthesisAugmentLoadout3CompleteOnlyAtUnit1"/>
+        <NodeArray index="Show" Link="OrEqCountBehaviorProsthesisAugmentLoadout1CompleteOnlyAtUnit1EqCountBehaviorProsthesisAugmentLoadout2CompleteOnlyAtUnit1EqCountBehaviorProsthesisAugmentLoadout3CompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="ProsthesisAugmentLoadoutActive2">
+        <NodeArray index="Use" Link="OrEqCountBehaviorProsthesisAugmentLoadout2CompleteOnlyAtUnit1EqCountBehaviorProsthesisAugmentLoadout3CompleteOnlyAtUnit1"/>
+        <NodeArray index="Show" Link="OrEqCountBehaviorProsthesisAugmentLoadout1CompleteOnlyAtUnit1EqCountBehaviorProsthesisAugmentLoadout2CompleteOnlyAtUnit1EqCountBehaviorProsthesisAugmentLoadout3CompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="ProsthesisAugmentLoadoutActive3">
+        <NodeArray index="Use" Link="OrEqCountBehaviorProsthesisAugmentLoadout3CompleteOnlyAtUnit1"/>
+        <NodeArray index="Show" Link="OrEqCountBehaviorProsthesisAugmentLoadout1CompleteOnlyAtUnit1EqCountBehaviorProsthesisAugmentLoadout2CompleteOnlyAtUnit1EqCountBehaviorProsthesisAugmentLoadout3CompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="CombativeAugmentLoadoutPassive1">
+        <NodeArray index="Use" Link="GTECountAbilCombativeAugmentLoadoutCompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="CombativeAugmentLoadoutPassive2">
+        <NodeArray index="Use" Link="GTECountAbilCombativeAugmentLoadoutCompleteOnlyAtUnit2"/>
+    </CRequirement>
+    <CRequirement id="CombativeAugmentLoadoutPassive3">
+        <NodeArray index="Use" Link="GTECountAbilCombativeAugmentLoadoutCompleteOnlyAtUnit3"/>
+    </CRequirement>
+    <CRequirement id="EmptyAugmentSlot">
+        <NodeArray index="Show" Link="AndEqCountBehaviorCombativeAugmentLoadoutCompleteOnlyAtUnit0EqCountBehaviorCombativeAugmentLoadout2CompleteOnlyAtUnit0EqCountBehaviorCombativeAugmentLoadout3CompleteOnlyAtUnit0EqCountBehaviorProsthesi142281095"/>
+    </CRequirement>
+    <CRequirement id="ExperimentalAugmentLoadoutPassive1">
+        <NodeArray index="Use" Link="GTECountAbilExperimentalAugmentLoadoutCompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="ExperimentalAugmentLoadoutPassive2">
+        <NodeArray index="Use" Link="GTECountAbilExperimentalAugmentLoadoutCompleteOnlyAtUnit2"/>
+    </CRequirement>
+    <CRequirement id="ExperimentalAugmentLoadoutPassive3">
+        <NodeArray index="Use" Link="GTECountAbilExperimentalAugmentLoadoutCompleteOnlyAtUnit2"/>
+    </CRequirement>
+    <CRequirement id="ProsthesisAugmentLoadoutPassive1">
+        <NodeArray index="Use" Link="GTECountAbilProsthesisAugmentLoadoutCompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="ProsthesisAugmentLoadoutPassive2">
+        <NodeArray index="Use" Link="GTECountAbilProsthesisAugmentLoadoutCompleteOnlyAtUnit2"/>
+    </CRequirement>
+    <CRequirement id="ProsthesisAugmentLoadoutPassive3">
+        <NodeArray index="Use" Link="GTECountAbilProsthesisAugmentLoadoutCompleteOnlyAtUnit3"/>
+    </CRequirement>
+    <CButton id="PhaseShiftingOff">
+        <Icon value="Assets\Textures\btn-command-cancel.dds"/>
+    </CButton>
+    <CButton id="CreateHologram">
+        <Icon value="Assets\Textures\btn-ability-protoss-hallucination-color.dds"/>
+    </CButton>
+    <CButton id="CreateNewCyborg">
+        <Icon value="Assets\Textures\marinemercenaryportrait_static.dds"/>
+    </CButton>
+    <CButton id="StealthMode2">
+        <Icon value="Buttons\BTNStealth.dds"/>
+    </CButton>
+    <CButton id="StealthMode3">
+        <Icon value="Buttons\BTNStealth.dds"/>
+    </CButton>
+    <CButton id="SystemReboot">
+        <Icon value="Assets\Textures\btn-tips-computerterminals.dds"/>
+    </CButton>
+    <CButton id="CombativeAugmentLoadout1">
+        <Icon value="Assets\Textures\btn-ability-dehaka-detector.dds"/>
+    </CButton>
+    <CButton id="CombativeAugmentLoadout2">
+        <Icon value="Assets\Textures\btn-upgrade-zerg-stukov-attackspeedmastery.dds"/>
+    </CButton>
+    <CButton id="StealthMode1">
+        <Icon value="Buttons\BTNStealth.dds"/>
+    </CButton>
+    <CButton id="CombativeAugmentLoadout3">
+        <Icon value="Assets\Textures\btn-ability-concentratedbeam.dds"/>
+    </CButton>
+    <CButton id="OverclockCombativeAugments">
+        <Icon value="Assets\Textures\btn-upgrade-terran-nova-snipeenergyrefund.dds"/>
+    </CButton>
+    <CButton id="OverclockCombativeAugmentsOff">
+        <Icon value="Assets\Textures\btn-command-cancel.dds"/>
+    </CButton>
+    <CButton id="ReactiveField">
+        <Icon value="Assets\Textures\btn-ability-protoss-timewarp.dds"/>
+    </CButton>
+    <CButton id="StealthModeOff">
+        <Icon value="Assets\Textures\btn-ability-terran-decloak-color.dds"/>
+    </CButton>
+    <CButton id="StickyPlasmaGrenade">
+        <Icon value="Assets\Textures\btn-upgrade-terran-plasmashot.dds"/>
+    </CButton>
+    <CButton id="AegisRadarSystem">
+        <Icon value="Assets\Textures\btn-tips-laserdrillantiair.dds"/>
+    </CButton>
+    <CButton id="PhaseShifting">
+        <Icon value="Assets\Textures\talent-vorazun-level07-improvedshieldregeneration.dds"/>
+    </CButton>
+    <CButton id="ProsthesisAugmentLoadout1">
+        <Icon value="Buttons\BTNStrength.dds"/>
+    </CButton>
+    <CButton id="ProsthesisAugmentLoadout2">
+        <Icon value="Assets\Textures\btn-ability-protoss-mindcontrol.dds"/>
+    </CButton>
+    <CButton id="ProsthesisAugmentLoadout3">
+        <Icon value="Assets\Textures\btn-ability-protoss-shieldcapacitor.dds"/>
+    </CButton>
+    <CButton id="EmptyAuxillaryAugmentSlot">
+        <Icon value="Assets\Textures\btn-ability-protoss-targetlock.dds"/>
+    </CButton>
+    <CButton id="CombativeAugmentLoadout">
+        <Icon value="Assets\Textures\btn-upgrade-terran-nova-dominationvisor.dds"/>
+    </CButton>
+    <CButton id="EmptyAugmentSlot">
+        <Icon value="Assets\Textures\btn-ability-terran-lockon.dds"/>
+    </CButton>
+    <CButton id="ExperimentalAugmentLoadout">
+        <Icon value="Assets\Textures\btn-upgrade-nova-btn-upgrade-nova-novarespawn.dds"/>
+    </CButton>
+    <CButton id="ExperimentalAugmentLoadoutOff">
+        <Icon value="Assets\Textures\btn-command-cancel.dds"/>
+    </CButton>
+    <CButton id="CombativeAugmentLoadoutOff">
+        <Icon value="Assets\Textures\btn-command-cancel.dds"/>
+    </CButton>
+    <CButton id="ProsthesisAugmentLoadout">
+        <Icon value="Assets\Textures\btn-ability-zerg-dehaka-essencecollector.dds"/>
+    </CButton>
+    <CButton id="ProsthesisAugmentLoadoutOff">
+        <Icon value="Assets\Textures\btn-command-cancel.dds"/>
+    </CButton>
+    <CRequirementCountUpgrade id="CountUpgradeCyborgSkillsCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="CyborgSkills" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementGTE id="GTE3366690453CountUpgradeCyborgSkillsCompleteOnly0">
+        <OperandArray index="0" value="CountUpgradeCyborgSkillsCompleteOnly"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementGTE>
+    <CRequirementGTE id="GTE3366690453CountUpgradeCyborgSkillsCompleteOnly5">
+        <OperandArray index="0" value="CountUpgradeCyborgSkillsCompleteOnly"/>
+        <OperandArray index="1" value="5"/>
+    </CRequirementGTE>
+    <CRequirementGTE id="GTECountUpgradeCyborgSkillsCompleteOnly2">
+        <OperandArray index="0" value="CountUpgradeCyborgSkillsCompleteOnly"/>
+        <OperandArray index="1" value="2"/>
+    </CRequirementGTE>
+    <CRequirementGTE id="GTECountUpgradeCyborgSkillsCompleteOnly5">
+        <OperandArray index="0" value="CountUpgradeCyborgSkillsCompleteOnly"/>
+        <OperandArray index="1" value="5"/>
+    </CRequirementGTE>
+    <CRequirementOr id="OrEqCountBehaviorExperimentalAugmentLoadout1CompleteOnlyAtUnit1">
+        <OperandArray value="EqCountBehaviorExperimentalAugmentLoadout1CompleteOnlyAtUnit1"/>
+    </CRequirementOr>
+    <CRequirementOr id="OrEqCountBehaviorExperimentalAugmentLoadout2CompleteOnlyAtUnit1">
+        <OperandArray value="EqCountBehaviorExperimentalAugmentLoadout2CompleteOnlyAtUnit1"/>
+    </CRequirementOr>
+    <CRequirementEq id="EqCountBehaviorCombativeAugmentLoadout2CompleteOnlyAtUnit1">
+        <OperandArray index="0" value="CountBehaviorCombativeAugmentLoadout2CompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountBehaviorCombativeAugmentLoadout3CompleteOnlyAtUnit1">
+        <OperandArray index="0" value="CountBehaviorCombativeAugmentLoadout3CompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountBehaviorCombativeAugmentLoadoutCompleteOnlyAtUnit1">
+        <OperandArray index="0" value="CountBehaviorCombativeAugmentLoadoutCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountBehaviorExperimentalAugmentLoadout1CompleteOnlyAtUnit1">
+        <OperandArray index="0" value="CountBehaviorExperimentalAugmentLoadout1CompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountBehaviorExperimentalAugmentLoadout2CompleteOnlyAtUnit1">
+        <OperandArray index="0" value="CountBehaviorExperimentalAugmentLoadout2CompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountBehaviorExperimentalAugmentLoadout3CompleteOnlyAtUnit1">
+        <OperandArray index="0" value="CountBehaviorExperimentalAugmentLoadout3CompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountBehaviorProsthesisAugmentLoadout1CompleteOnlyAtUnit1">
+        <OperandArray index="0" value="CountBehaviorProsthesisAugmentLoadout1CompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountBehaviorProsthesisAugmentLoadout2CompleteOnlyAtUnit1">
+        <OperandArray index="0" value="CountBehaviorProsthesisAugmentLoadout2CompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountBehaviorProsthesisAugmentLoadout3CompleteOnlyAtUnit1">
+        <OperandArray index="0" value="CountBehaviorProsthesisAugmentLoadout3CompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementEq>
+    <CRequirementOr id="OrEqCountBehaviorCombativeAugmentLoadout2CompleteOnlyAtUnit1EqCountBehaviorCombativeAugmentLoadout3CompleteOnlyAtUnit1">
+        <OperandArray value="EqCountBehaviorCombativeAugmentLoadout2CompleteOnlyAtUnit1"/>
+        <OperandArray value="EqCountBehaviorCombativeAugmentLoadout3CompleteOnlyAtUnit1"/>
+    </CRequirementOr>
+    <CRequirementOr id="OrEqCountBehaviorCombativeAugmentLoadout3CompleteOnlyAtUnit1">
+        <OperandArray value="EqCountBehaviorCombativeAugmentLoadout3CompleteOnlyAtUnit1"/>
+    </CRequirementOr>
+    <CRequirementOr id="OrEqCountBehaviorCombativeAugmentLoadoutCompleteOnlyAtUnit1EqCountBehaviorCombativeAugmentLoadout2CompleteOnlyAtUnit1EqCountBehaviorCombativeAugmentLoadout3CompleteOnlyAtUnit1">
+        <OperandArray value="EqCountBehaviorCombativeAugmentLoadoutCompleteOnlyAtUnit1"/>
+        <OperandArray value="EqCountBehaviorCombativeAugmentLoadout2CompleteOnlyAtUnit1"/>
+        <OperandArray value="EqCountBehaviorCombativeAugmentLoadout3CompleteOnlyAtUnit1"/>
+    </CRequirementOr>
+    <CRequirementOr id="OrEqCountBehaviorExperimentalAugmentLoadout1CompleteOnlyAtUnit1EqCountBehaviorExperimentalAugmentLoadout2CompleteOnlyAtUnit1EqCountBehaviorExperimentalAugmentLoadout3CompleteOnlyAtUnit1">
+        <OperandArray value="EqCountBehaviorExperimentalAugmentLoadout1CompleteOnlyAtUnit1"/>
+        <OperandArray value="EqCountBehaviorExperimentalAugmentLoadout2CompleteOnlyAtUnit1"/>
+        <OperandArray value="EqCountBehaviorExperimentalAugmentLoadout3CompleteOnlyAtUnit1"/>
+    </CRequirementOr>
+    <CRequirementOr id="OrEqCountBehaviorExperimentalAugmentLoadout2CompleteOnlyAtUnit1EqCountBehaviorExperimentalAugmentLoadout3CompleteOnlyAtUnit1">
+        <OperandArray value="EqCountBehaviorExperimentalAugmentLoadout2CompleteOnlyAtUnit1"/>
+        <OperandArray value="EqCountBehaviorExperimentalAugmentLoadout3CompleteOnlyAtUnit1"/>
+    </CRequirementOr>
+    <CRequirementOr id="OrEqCountBehaviorExperimentalAugmentLoadout3CompleteOnlyAtUnit1">
+        <OperandArray value="EqCountBehaviorExperimentalAugmentLoadout3CompleteOnlyAtUnit1"/>
+    </CRequirementOr>
+    <CRequirementOr id="OrEqCountBehaviorProsthesisAugmentLoadout1CompleteOnlyAtUnit1EqCountBehaviorProsthesisAugmentLoadout2CompleteOnlyAtUnit1EqCountBehaviorProsthesisAugmentLoadout3CompleteOnlyAtUnit1">
+        <OperandArray value="EqCountBehaviorProsthesisAugmentLoadout1CompleteOnlyAtUnit1"/>
+        <OperandArray value="EqCountBehaviorProsthesisAugmentLoadout2CompleteOnlyAtUnit1"/>
+        <OperandArray value="EqCountBehaviorProsthesisAugmentLoadout3CompleteOnlyAtUnit1"/>
+    </CRequirementOr>
+    <CRequirementOr id="OrEqCountBehaviorProsthesisAugmentLoadout2CompleteOnlyAtUnit1EqCountBehaviorProsthesisAugmentLoadout3CompleteOnlyAtUnit1">
+        <OperandArray value="EqCountBehaviorProsthesisAugmentLoadout2CompleteOnlyAtUnit1"/>
+        <OperandArray value="EqCountBehaviorProsthesisAugmentLoadout3CompleteOnlyAtUnit1"/>
+    </CRequirementOr>
+    <CRequirementOr id="OrEqCountBehaviorProsthesisAugmentLoadout3CompleteOnlyAtUnit1">
+        <OperandArray value="EqCountBehaviorProsthesisAugmentLoadout3CompleteOnlyAtUnit1"/>
+    </CRequirementOr>
+    <CRequirementAnd id="AndEqCountBehaviorCombativeAugmentLoadoutCompleteOnlyAtUnit0EqCountBehaviorCombativeAugmentLoadout2CompleteOnlyAtUnit0EqCountBehaviorCombativeAugmentLoadout3CompleteOnlyAtUnit0EqCountBehaviorProsthesi142281095">
+        <OperandArray value="EqCountBehaviorCombativeAugmentLoadoutCompleteOnlyAtUnit0"/>
+        <OperandArray value="EqCountBehaviorCombativeAugmentLoadout2CompleteOnlyAtUnit0"/>
+        <OperandArray value="EqCountBehaviorCombativeAugmentLoadout3CompleteOnlyAtUnit0"/>
+        <OperandArray value="EqCountBehaviorProsthesisAugmentLoadout1CompleteOnlyAtUnit0"/>
+        <OperandArray value="EqCountBehaviorProsthesisAugmentLoadout2CompleteOnlyAtUnit0"/>
+        <OperandArray value="EqCountBehaviorProsthesisAugmentLoadout3CompleteOnlyAtUnit0"/>
+        <OperandArray value="EqCountBehaviorExperimentalAugmentLoadout1CompleteOnlyAtUnit0"/>
+        <OperandArray value="EqCountBehaviorExperimentalAugmentLoadout2CompleteOnlyAtUnit0"/>
+        <OperandArray value="EqCountBehaviorExperimentalAugmentLoadout3CompleteOnlyAtUnit0"/>
+    </CRequirementAnd>
+    <CRequirementCountAbil id="CountAbilCombativeAugmentLoadoutCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="CombativeAugmentLoadout" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountAbil>
+    <CRequirementCountAbil id="CountAbilExperimentalAugmentLoadoutCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ExperimentalAugmentLoadout" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountAbil>
+    <CRequirementCountAbil id="CountAbilProsthesisAugmentLoadoutCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ProsthesisAugmentLoadout" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountAbil>
+    <CRequirementCountBehavior id="CountBehaviorCombativeAugmentLoadout2CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="CombativeAugmentLoadout2" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorCombativeAugmentLoadout3CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="CombativeAugmentLoadout3" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorCombativeAugmentLoadoutCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="CombativeAugmentLoadout" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorExperimentalAugmentLoadout1CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ExperimentalAugmentLoadout1" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorExperimentalAugmentLoadout2CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ExperimentalAugmentLoadout2" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorExperimentalAugmentLoadout3CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ExperimentalAugmentLoadout3" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorProsthesisAugmentLoadout1CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ProsthesisAugmentLoadout1" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorProsthesisAugmentLoadout2CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ProsthesisAugmentLoadout2" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorProsthesisAugmentLoadout3CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ProsthesisAugmentLoadout3" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementEq id="EqCountBehaviorCombativeAugmentLoadout2CompleteOnlyAtUnit0">
+        <OperandArray index="0" value="CountBehaviorCombativeAugmentLoadout2CompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountBehaviorCombativeAugmentLoadout3CompleteOnlyAtUnit0">
+        <OperandArray index="0" value="CountBehaviorCombativeAugmentLoadout3CompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountBehaviorCombativeAugmentLoadoutCompleteOnlyAtUnit0">
+        <OperandArray index="0" value="CountBehaviorCombativeAugmentLoadoutCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountBehaviorExperimentalAugmentLoadout1CompleteOnlyAtUnit0">
+        <OperandArray index="0" value="CountBehaviorExperimentalAugmentLoadout1CompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountBehaviorExperimentalAugmentLoadout2CompleteOnlyAtUnit0">
+        <OperandArray index="0" value="CountBehaviorExperimentalAugmentLoadout2CompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountBehaviorExperimentalAugmentLoadout3CompleteOnlyAtUnit0">
+        <OperandArray index="0" value="CountBehaviorExperimentalAugmentLoadout3CompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountBehaviorProsthesisAugmentLoadout1CompleteOnlyAtUnit0">
+        <OperandArray index="0" value="CountBehaviorProsthesisAugmentLoadout1CompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountBehaviorProsthesisAugmentLoadout2CompleteOnlyAtUnit0">
+        <OperandArray index="0" value="CountBehaviorProsthesisAugmentLoadout2CompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountBehaviorProsthesisAugmentLoadout3CompleteOnlyAtUnit0">
+        <OperandArray index="0" value="CountBehaviorProsthesisAugmentLoadout3CompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementEq>
+    <CRequirementGTE id="GTECountAbilCombativeAugmentLoadoutCompleteOnlyAtUnit1">
+        <OperandArray index="0" value="CountAbilCombativeAugmentLoadoutCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementGTE>
+    <CRequirementGTE id="GTECountAbilCombativeAugmentLoadoutCompleteOnlyAtUnit2">
+        <OperandArray index="0" value="CountAbilCombativeAugmentLoadoutCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="2"/>
+    </CRequirementGTE>
+    <CRequirementGTE id="GTECountAbilCombativeAugmentLoadoutCompleteOnlyAtUnit3">
+        <OperandArray index="0" value="CountAbilCombativeAugmentLoadoutCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="3"/>
+    </CRequirementGTE>
+    <CRequirementGTE id="GTECountAbilExperimentalAugmentLoadoutCompleteOnlyAtUnit1">
+        <OperandArray index="0" value="CountAbilExperimentalAugmentLoadoutCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementGTE>
+    <CRequirementGTE id="GTECountAbilExperimentalAugmentLoadoutCompleteOnlyAtUnit2">
+        <OperandArray index="0" value="CountAbilExperimentalAugmentLoadoutCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="2"/>
+    </CRequirementGTE>
+    <CRequirementGTE id="GTECountAbilProsthesisAugmentLoadoutCompleteOnlyAtUnit1">
+        <OperandArray index="0" value="CountAbilProsthesisAugmentLoadoutCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementGTE>
+    <CRequirementGTE id="GTECountAbilProsthesisAugmentLoadoutCompleteOnlyAtUnit2">
+        <OperandArray index="0" value="CountAbilProsthesisAugmentLoadoutCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="2"/>
+    </CRequirementGTE>
+    <CRequirementGTE id="GTECountAbilProsthesisAugmentLoadoutCompleteOnlyAtUnit3">
+        <OperandArray index="0" value="CountAbilProsthesisAugmentLoadoutCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="3"/>
+    </CRequirementGTE>
+    <CActorUnit id="CyborgHologram" parent="GenericUnitStandard" unitName="CyborgHologram">
+        <Macros value="UnloadDropAnim"/>
+        <Macros value="Animations"/>
+        <EditorCategories value=""/>
+        <On index="61" Terms="WeaponStart; WeaponTargetElevation GE 20.000000" Send="AnimBracketStart Attack Attack,Superior"/>
+        <On index="62" Terms="WeaponStart; WeaponTargetElevation LE -20.000000" Send="AnimBracketStart Attack Attack,Inferior"/>
+        <On index="63" Terms="WeaponStart" Send="AnimBracketStart Attack Attack"/>
+        <On index="64" Terms="WeaponStop" Send="AnimBracketStop Attack"/>
+        <On Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
+        <On Terms="ModelEvent; ModelEventName SquibStart" Send="Create MarineCheerSquib"/>
+        <On Terms="ModelEvent; ModelEventName SquibStop" Target="MarineCheerSquib" Send="Destroy"/>
+        <On Terms="ModelEvent; ModelEventName SquibStop" Target="MarineCheerSquibSound" Send="Destroy"/>
+        <On Terms="AnimDone; AnimName Cheer" Target="MarineCheerSquib" Send="Destroy"/>
+        <On Terms="AnimDone; AnimName Cheer" Target="MarineCheerSquibSound" Send="Destroy"/>
+        <On Terms="ActorCreation" Send="SetOpacity 0.500000"/>
+        <On Terms="ActorCreation" Send="SetTintColor 0,0,255"/>
+        <Model value="Marine"/>
+        <Scale value="1.100000"/>
+        <BuildModel value="Marine"/>
+        <DeathArray index="Normal">
+            <AnimProps value="Death,Silentkill"/>
+            <ModelLink value="MarineDeath"/>
+            <SoundLink value="Cyborgdeath"/>
+            <VoiceLink value="InfantryRiflemanDeathVoice"/>
+        </DeathArray>
+        <DeathArray index="Blast" ModelLink="MarineDeathBlast"/>
+        <DeathArray index="Disintegrate" ModelLink="MarineDeathAcid" SoundLink="Uni_DeathFXAcid"/>
+        <DeathArray index="Eat" AnimProps="Stand" ModelLink="MarineDeathEat" SoundLink="Marine_DeathFXEat"/>
+        <DeathArray index="Eviscerate" ModelLink="MarineDeathEviscerate" SoundLink="Marine_DeathFXEviscerate"/>
+        <DeathArray index="Fire" ModelLink="MarineDeathFire" SoundLink="Marine_DeathFXFire"/>
+        <DeathArray index="Silentkill" SoundLink="Uni_DeathFXSilentKill"/>
+        <DeathArray index="Squish" SoundLink="Marine_DeathFXBloodSpray"/>
+        <PlacementModel value="Marine"/>
+        <PortraitModel value="MarineMercenaryPortrait"/>
+        <StandAnimTurnTime value="4"/>
+        <WalkAnimMoveSpeed value="2.25"/>
+        <AbilSoundArray AbilCmd="Stimpack,Execute" Sound="Marine_StimPackVO"/>
+        <BarOffset value="40"/>
+        <BarWidth value="36"/>
+        <GlossaryAnim value="Spell"/>
+        <GroupIcon>
+            <Image value="Assets\Wireframes\UAC_Marine_Wireframe.dds"/>
+        </GroupIcon>
+        <GroupSoundArray index="What" value="Marine_GroupWhat"/>
+        <GroupSoundArray index="Yes" value="Marine_GroupYes"/>
+        <GroupSoundArray index="Attack" value="Marine_GroupAttack"/>
+        <GroupSoundArray index="Board" value="Marine_GroupBoard"/>
+        <HeroIcon value="Assets\Textures\marinemercenaryportrait_static.dds"/>
+        <LifeArmorIcon value="Buttons\BTNKevlar.dds"/>
+        <SoundArray index="Birth" value=""/>
+        <SoundArray index="Ready" value="Marauder_Ready"/>
+        <SoundArray index="Help" value="Marauder_Help"/>
+        <SoundArray index="What" value="Marauder_What"/>
+        <SoundArray index="Yes" value="Marauder_Yes"/>
+        <SoundArray index="Attack" value="Marauder_Attack"/>
+        <SoundArray index="Pissed" value="Marauder_Pissed"/>
+        <SoundArray index="Movement" value="Tychus_Movement"/>
+        <SoundArray index="Turning" value="Tychus_Turning"/>
+        <SoundArray index="Board" value="Tychus_Board"/>
+        <SoundArray index="Click" value="TychusCommando_Click"/>
+        <SoundArray index="ClickError" value="TychusCommando_ClickError"/>
+        <SoundArray index="Highlight" value="TychusCommando_Highlight"/>
+        <UnitBorderNormalColor value="150,150,150"/>
+        <UnitBorderSubgroupColor value="255,255,255"/>
+        <UnitIcon value="Assets\Textures\marinemercenaryportrait_static.dds"/>
+        <Wireframe>
+            <Image value="Assets\Wireframes\UAC_Marine_Wireframe.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorUnit id="newCyborg" parent="GenericUnitStandard" unitName="newCyborg">
+        <Macros value="UnloadDropAnim"/>
+        <Macros value="Animations"/>
+        <EditorCategories value=""/>
+        <On index="61" Terms="WeaponStart; WeaponTargetElevation GE 20.000000" Send="AnimBracketStart Attack Attack,Superior"/>
+        <On index="62" Terms="WeaponStart; WeaponTargetElevation LE -20.000000" Send="AnimBracketStart Attack Attack,Inferior"/>
+        <On index="63" Terms="WeaponStart" Send="AnimBracketStart Attack Attack"/>
+        <On index="64" Terms="WeaponStop" Send="AnimBracketStop Attack"/>
+        <On Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
+        <On Terms="ModelEvent; ModelEventName SquibStart" Send="Create MarineCheerSquib"/>
+        <On Terms="ModelEvent; ModelEventName SquibStop" Target="MarineCheerSquib" Send="Destroy"/>
+        <On Terms="ModelEvent; ModelEventName SquibStop" Target="MarineCheerSquibSound" Send="Destroy"/>
+        <On Terms="AnimDone; AnimName Cheer" Target="MarineCheerSquib" Send="Destroy"/>
+        <On Terms="AnimDone; AnimName Cheer" Target="MarineCheerSquibSound" Send="Destroy"/>
+        <Model value="Marine"/>
+        <Scale value="1.100000"/>
+        <BuildModel value="Marine"/>
+        <DeathArray index="Normal">
+            <AnimProps value="Death,Silentkill"/>
+            <ModelLink value="MarineDeath"/>
+            <SoundLink value="Cyborgdeath"/>
+            <VoiceLink value="InfantryRiflemanDeathVoice"/>
+        </DeathArray>
+        <DeathArray index="Blast" ModelLink="MarineDeathBlast"/>
+        <DeathArray index="Disintegrate" ModelLink="MarineDeathAcid" SoundLink="Uni_DeathFXAcid"/>
+        <DeathArray index="Eat" AnimProps="Stand" ModelLink="MarineDeathEat" SoundLink="Marine_DeathFXEat"/>
+        <DeathArray index="Eviscerate" ModelLink="MarineDeathEviscerate" SoundLink="Marine_DeathFXEviscerate"/>
+        <DeathArray index="Fire" ModelLink="MarineDeathFire" SoundLink="Marine_DeathFXFire"/>
+        <DeathArray index="Silentkill" SoundLink="Uni_DeathFXSilentKill"/>
+        <DeathArray index="Squish" SoundLink="Marine_DeathFXBloodSpray"/>
+        <PlacementModel value="Marine"/>
+        <PortraitModel value="MarineMercenaryPortrait"/>
+        <StandAnimTurnTime value="4"/>
+        <WalkAnimMoveSpeed value="2.25"/>
+        <AbilSoundArray AbilCmd="Stimpack,Execute" Sound="Marine_StimPackVO"/>
+        <BarOffset value="40"/>
+        <BarWidth value="36"/>
+        <GlossaryAnim value="Spell"/>
+        <GroupIcon>
+            <Image value="Assets\Wireframes\UAC_Marine_Wireframe.dds"/>
+        </GroupIcon>
+        <GroupSoundArray index="What" value="Marine_GroupWhat"/>
+        <GroupSoundArray index="Yes" value="Marine_GroupYes"/>
+        <GroupSoundArray index="Attack" value="Marine_GroupAttack"/>
+        <GroupSoundArray index="Board" value="Marine_GroupBoard"/>
+        <HeroIcon value="Assets\Textures\marinemercenaryportrait_static.dds"/>
+        <LifeArmorIcon value="Buttons\BTNKevlar.dds"/>
+        <SoundArray index="Birth" value=""/>
+        <SoundArray index="Ready" value="Marauder_Ready"/>
+        <SoundArray index="Help" value="Marauder_Help"/>
+        <SoundArray index="What" value="Marauder_What"/>
+        <SoundArray index="Yes" value="Marauder_Yes"/>
+        <SoundArray index="Attack" value="Marauder_Attack"/>
+        <SoundArray index="Pissed" value="Marauder_Pissed"/>
+        <SoundArray index="Movement" value="Tychus_Movement"/>
+        <SoundArray index="Turning" value="Tychus_Turning"/>
+        <SoundArray index="Board" value="Tychus_Board"/>
+        <SoundArray index="Click" value="TychusCommando_Click"/>
+        <SoundArray index="ClickError" value="TychusCommando_ClickError"/>
+        <SoundArray index="Highlight" value="TychusCommando_Highlight"/>
+        <UnitBorderNormalColor value="150,150,150"/>
+        <UnitBorderSubgroupColor value="255,255,255"/>
+        <UnitIcon value="Assets\Textures\marinemercenaryportrait_static.dds"/>
+        <Wireframe>
+            <Image value="Assets\Wireframes\UAC_Marine_Wireframe.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorModel id="AegisRadarSystem" parent="ModelAddition">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.AegisRadarSystemTarget.On" Send="Create"/>
+        <On Terms="Behavior.AegisRadarSystemTarget.Off" Send="Destroy"/>
+        <Model value="AegisRadarSystemModel"/>
+        <Scale value="0.500000"/>
+    </CActorModel>
+    <CActorUnit id="newCyborg2" parent="GenericUnitStandard" unitName="newCyborg2">
+        <Macros value="UnloadDropAnim"/>
+        <Macros value="Animations"/>
+        <EditorCategories value=""/>
+        <On index="61" Terms="WeaponStart; WeaponTargetElevation GE 20.000000" Send="AnimBracketStart Attack Attack,Superior"/>
+        <On index="62" Terms="WeaponStart; WeaponTargetElevation LE -20.000000" Send="AnimBracketStart Attack Attack,Inferior"/>
+        <On index="63" Terms="WeaponStart" Send="AnimBracketStart Attack Attack"/>
+        <On index="64" Terms="WeaponStop" Send="AnimBracketStop Attack"/>
+        <On Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
+        <On Terms="ModelEvent; ModelEventName SquibStart" Send="Create MarineCheerSquib"/>
+        <On Terms="ModelEvent; ModelEventName SquibStop" Target="MarineCheerSquib" Send="Destroy"/>
+        <On Terms="ModelEvent; ModelEventName SquibStop" Target="MarineCheerSquibSound" Send="Destroy"/>
+        <On Terms="AnimDone; AnimName Cheer" Target="MarineCheerSquib" Send="Destroy"/>
+        <On Terms="AnimDone; AnimName Cheer" Target="MarineCheerSquibSound" Send="Destroy"/>
+        <Model value="Marine"/>
+        <Scale value="1.100000"/>
+        <BuildModel value="Marine"/>
+        <DeathArray index="Normal">
+            <AnimProps value="Death,Silentkill"/>
+            <ModelLink value="MarineDeath"/>
+            <SoundLink value="Cyborgdeath"/>
+            <VoiceLink value="InfantryRiflemanDeathVoice"/>
+        </DeathArray>
+        <DeathArray index="Blast" ModelLink="MarineDeathBlast"/>
+        <DeathArray index="Disintegrate" ModelLink="MarineDeathAcid" SoundLink="Uni_DeathFXAcid"/>
+        <DeathArray index="Eat" AnimProps="Stand" ModelLink="MarineDeathEat" SoundLink="Marine_DeathFXEat"/>
+        <DeathArray index="Eviscerate" ModelLink="MarineDeathEviscerate" SoundLink="Marine_DeathFXEviscerate"/>
+        <DeathArray index="Fire" ModelLink="MarineDeathFire" SoundLink="Marine_DeathFXFire"/>
+        <DeathArray index="Silentkill" SoundLink="Uni_DeathFXSilentKill"/>
+        <DeathArray index="Squish" SoundLink="Marine_DeathFXBloodSpray"/>
+        <PlacementModel value="Marine"/>
+        <PortraitModel value="MarineMercenaryPortrait"/>
+        <StandAnimTurnTime value="4"/>
+        <WalkAnimMoveSpeed value="2.25"/>
+        <AbilSoundArray AbilCmd="Stimpack,Execute" Sound="Marine_StimPackVO"/>
+        <BarOffset value="40"/>
+        <BarWidth value="36"/>
+        <GlossaryAnim value="Spell"/>
+        <GroupIcon>
+            <Image value="Assets\Wireframes\UAC_Marine_Wireframe.dds"/>
+        </GroupIcon>
+        <GroupSoundArray index="What" value="Marine_GroupWhat"/>
+        <GroupSoundArray index="Yes" value="Marine_GroupYes"/>
+        <GroupSoundArray index="Attack" value="Marine_GroupAttack"/>
+        <GroupSoundArray index="Board" value="Marine_GroupBoard"/>
+        <HeroIcon value="Assets\Textures\marinemercenaryportrait_static.dds"/>
+        <LifeArmorIcon value="Buttons\BTNKevlar.dds"/>
+        <SoundArray index="Birth" value=""/>
+        <SoundArray index="Ready" value="Marauder_Ready"/>
+        <SoundArray index="Help" value="Marauder_Help"/>
+        <SoundArray index="What" value="Marauder_What"/>
+        <SoundArray index="Yes" value="Marauder_Yes"/>
+        <SoundArray index="Attack" value="Marauder_Attack"/>
+        <SoundArray index="Pissed" value="Marauder_Pissed"/>
+        <SoundArray index="Movement" value="Tychus_Movement"/>
+        <SoundArray index="Turning" value="Tychus_Turning"/>
+        <SoundArray index="Board" value="Tychus_Board"/>
+        <SoundArray index="Click" value="TychusCommando_Click"/>
+        <SoundArray index="ClickError" value="TychusCommando_ClickError"/>
+        <SoundArray index="Highlight" value="TychusCommando_Highlight"/>
+        <UnitBorderNormalColor value="150,150,150"/>
+        <UnitBorderSubgroupColor value="255,255,255"/>
+        <UnitIcon value="Assets\Textures\marinemercenaryportrait_static.dds"/>
+        <Wireframe>
+            <Image value="Assets\Wireframes\UAC_Marine_Wireframe.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CModel id="AegisRadarSystemModel">
+        <Model value="Assets\UI\LaserDrillTargetingUI\LaserDrillTargetingUI.m3"/>
+        <Events Attachment="Ref_Center"/>
+        <Flags index="Wait" value="0"/>
+        <Lighting value="NovaStoneTargetEnemy"/>
+        <Priority value="24"/>
+    </CModel>
+    <CWeaponLegacy id="CyborgHologramMG">
+        <EditorCategories value=""/>
+        <Icon value="Buttons\BTNM241.dds"/>
+        <DisplayEffect value="MachineGunDamage"/>
+        <TargetFilters value="Visible;Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <ChaseFilters value="-;Player,Ally,Neutral,Enemy"/>
+        <MinScanRange value="17"/>
+        <Range value="17"/>
+        <RangeSlop value="3"/>
+        <Marker Link="Weapon/MachineGunCyborg"/>
+        <Cost>
+            <Cooldown Link="Weapon/MachineGunCyborg"/>
+        </Cost>
+        <Period value="0.11"/>
+        <DamagePoint value="0.05"/>
+        <Backswing value="0"/>
+        <Effect value="CyborgBullet"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CBehaviorBuff id="PhaseShifting">
+        <Alignment value="Positive"/>
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoIcon value="Assets\Textures\talent-vorazun-level07-improvedshieldregeneration.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <VitalRegenArray index="Energy" value="-15"/>
+        </Modification>
+        <DamageResponse ModifyFraction="0">
+            <Chance value="0.45"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="HologramTimedLife" parent="TimedLife">
+        <BehaviorFlags index="EnabledWhileDead" value="0"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisplayDuration index="Ally" value="0"/>
+        <Duration value="10"/>
+        <DurationRandomMax value="0"/>
+        <Modification>
+            <StateFlags index="Summoned" value="0"/>
+            <StateFlags index="SuppressPassenger" value="1"/>
+        </Modification>
+        <KillCredit Value="Unknown"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MarksDummy1">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="MarksDummy1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MarksDummy2">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="MarksDummy2"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="LightFilterBorg">
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-techupgrade-terran-ocularimplants.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="CombativeAugmentLoadoutPassive1"/>
+        <Modification Detect="15" DetectFilters="-;Missile"/>
+        <BehaviorFlags index="Permanent" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="OverclockCombativeAugments">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-nova-snipeenergyrefund.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="CombativeAugmentLoadoutActive3"/>
+        <RemoveValidatorArray value="hasEnergy"/>
+        <RemoveValidatorArray value="CanSpendEnergy"/>
+        <Modification MoveSpeedMultiplier="1.1" AttackSpeedMultiplier="1.5">
+            <DamageDealtScaled index="Ranged" value="1.5"/>
+            <VitalRegenArray index="Energy" value="-5"/>
+            <BehaviorLinkDisableArray value="MGBurst"/>
+            <BehaviorLinkDisableArray value="MGBurstPause"/>
+            <BehaviorLinkDisableArray value="MinigunBurstPause"/>
+            <BehaviorLinkDisableArray value="MGBurstUpgrade"/>
+            <BehaviorLinkDisableArray value="MGBurstUpgradePause"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ReactiveField">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-timewarp.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="ExperimentalAugmentLoadoutActive2"/>
+        <Period value="1"/>
+        <PeriodicEffect value="ReactiveFieldSA"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ReactiveFieldTarget">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <BehaviorFlags index="EnabledWhileDead" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-timebomb.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="1.2"/>
+        <Modification TimeScale="0.85" DetectArc="0" RadarArc="0"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="StealthMode1">
+        <InfoIcon value="Buttons/BTNStealth.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="StealthMode1"/>
+        <DisableValidatorArray value="NotAttacking"/>
+        <RemoveValidatorArray value="CanSpendEnergy"/>
+        <RemoveValidatorArray value="hasEnergy"/>
+        <Modification>
+            <StateFlags index="Cloak" value="1"/>
+            <StateFlags index="Passive" value="1"/>
+            <VitalRegenArray index="Energy" value="-6"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="StealthMode2">
+        <InfoIcon value="Buttons/BTNStealth.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="StealthMode2"/>
+        <RemoveValidatorArray value="CanSpendEnergy"/>
+        <RemoveValidatorArray value="hasEnergy"/>
+        <Modification>
+            <StateFlags index="Cloak" value="1"/>
+            <VitalRegenArray index="Energy" value="-4"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="StealthMode3">
+        <InfoIcon value="Buttons/BTNStealth.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="StealthMode3"/>
+        <RemoveValidatorArray value="CanSpendEnergy"/>
+        <RemoveValidatorArray value="hasEnergy"/>
+        <Modification>
+            <StateFlags index="Cloak" value="1"/>
+            <VitalRegenArray index="Energy" value="-3.5"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="AegisRadarSystem">
+        <Name value="Behavior/AegisRadarSystem"/>
+        <Alignment value="Positive"/>
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-tips-laserdrillantiair.dds"/>
+        <EditorCategories value="AbilityorEffectType:Structures"/>
+        <Requirements value="CombativeAugmentLoadoutActive1"/>
+        <BuffFlags index="DisableWhileUnderConstruction" value="1"/>
+        <Modification Radar="30" RadarFilters="-;Player,Ally,Neutral,RawResource,HarvestableResource,Missile,Destructible,Buried"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BluntAilments">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="ProsthesisAugmentLoadoutActive2"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ChemicalShielding">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="ProsthesisAugmentLoadoutPassive2"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RhinoDermalArmor">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="ProsthesisAugmentLoadoutActive3"/>
+        <Modification>
+            <LifeArmorBonus value="10"/>
+            <AttributeChangeArray Attribute="Fitness" Points="6"/>
+        </Modification>
+        <DamageResponse ModifyFraction="0.5">
+            <Kind index="NoProc" value="0"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RifleButtBorg">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoIcon value="BTNMeleeAttack.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="ProsthesisAugmentLoadoutPassive1"/>
+        <Period value="1.5"/>
+        <PeriodicEffect value="RifleButtSearchArea"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RifleButtBorgActive">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoIcon value="BTNMeleeAttack.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="ProsthesisAugmentLoadoutActive1"/>
+        <Period value="1.4"/>
+        <PeriodicEffect value="RifleButtSearchAreaCyborg"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SentinelRXHealthSystem">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="ProsthesisAugmentLoadoutPassive3"/>
+        <DisableValidatorArray value="CasterNotInCombatShort"/>
+        <Modification>
+            <VitalRegenArray index="Energy" value="0.5"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Rebreather">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="ProsthesisAugmentLoadoutPassive1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ShockAbsorbers">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="ProsthesisAugmentLoadoutPassive1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CombativeAugmentLoadout">
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-nova-dominationvisor.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InitialEffect value="CombativeAugmentLoadoutTOs"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CombativeAugmentLoadout2">
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-nova-dominationvisor.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification AttackSpeedMultiplier="1.15">
+            <DamageDealtScaled index="Ranged" value="1.05"/>
+        </Modification>
+        <InitialEffect value="CombativeAugmentLoadoutTOs"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CombativeAugmentLoadout3">
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-nova-dominationvisor.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification SightBonus="5" AttackSpeedMultiplier="1.15" WeaponRange="5">
+            <DamageDealtScaled index="Ranged" value="1.05"/>
+        </Modification>
+        <InitialEffect value="CombativeAugmentLoadoutTOs"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CombativeAugmentLoadoutPassive1">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification AttackSpeedMultiplier="1.025">
+            <AttributeChangeArray Attribute="Dexterity" Points="2"/>
+        </Modification>
+        <Requirements value="CombativeAugmentLoadoutPassive1"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CombativeAugmentLoadoutPassive2">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <AdditiveAttackSpeedFactor value="1.025"/>
+            <AttributeChangeArray Attribute="Dexterity" Points="2"/>
+        </Modification>
+        <Requirements value="CombativeAugmentLoadoutPassive2"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CombativeAugmentLoadoutPassive3">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <AdditiveAttackSpeedFactor value="1.025"/>
+            <AttributeChangeArray Attribute="Dexterity" Points="14"/>
+        </Modification>
+        <Requirements value="CombativeAugmentLoadoutPassive3"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ExperimentalAugmentLoadout1">
+        <InfoIcon value="Assets\Textures\btn-upgrade-nova-btn-upgrade-nova-novarespawn.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InitialEffect value="ExperimentalAugmentLoadoutTOs"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ExperimentalAugmentLoadout2">
+        <InfoIcon value="Assets\Textures\btn-upgrade-nova-btn-upgrade-nova-novarespawn.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InitialEffect value="ExperimentalAugmentLoadoutTOs"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ExperimentalAugmentLoadout3">
+        <InfoIcon value="Assets\Textures\btn-upgrade-nova-btn-upgrade-nova-novarespawn.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InitialEffect value="ExperimentalAugmentLoadoutTOs"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ExperimentalAugmentLoadoutPassive1">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <VitalMaxArray index="Energy" value="10"/>
+            <VitalRegenMultiplier index="Energy" value="0.05"/>
+            <AttributeChangeArray Attribute="Mechanical" Points="2"/>
+        </Modification>
+        <Requirements value="ExperimentalAugmentLoadoutPassive1"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ExperimentalAugmentLoadoutPassive2">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <VitalMaxArray index="Energy" value="10"/>
+            <VitalRegenMultiplier index="Energy" value="0.05"/>
+            <AttributeChangeArray Attribute="Mechanical" Points="2"/>
+        </Modification>
+        <Requirements value="ExperimentalAugmentLoadoutPassive2"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ExperimentalAugmentLoadoutPassive3">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <VitalMaxArray index="Energy" value="10"/>
+            <VitalRegenMultiplier index="Life" value="0.05"/>
+            <AttributeChangeArray Attribute="Mechanical" Points="2"/>
+        </Modification>
+        <Requirements value="ExperimentalAugmentLoadoutPassive3"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ProsthesisAugmentLoadout1">
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-dehaka-essencecollector.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <AttributeChangeArray Attribute="Fitness" Points="12"/>
+        </Modification>
+        <InitialEffect value="ProsthesisAugmentLoadoutTOs"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ProsthesisAugmentLoadout2">
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-dehaka-essencecollector.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <VitalMaxArray index="Shields" value="10"/>
+            <AttributeChangeArray Attribute="Fitness" Points="12"/>
+        </Modification>
+        <InitialEffect value="ProsthesisAugmentLoadoutTOs"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ProsthesisAugmentLoadout3">
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-dehaka-essencecollector.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <VitalMaxArray index="Shields" value="10"/>
+            <AttributeChangeArray Attribute="Fitness" Points="12"/>
+        </Modification>
+        <InitialEffect value="ProsthesisAugmentLoadoutTOs"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ProsthesisAugmentLoadoutPassive1">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification MoveSpeedBonus="0.0742">
+            <VitalMaxArray index="Life" value="25"/>
+            <AttributeChangeArray Attribute="Fitness" Points="2"/>
+        </Modification>
+        <Requirements value="ProsthesisAugmentLoadoutPassive1"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ProsthesisAugmentLoadoutPassive2">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification MoveSpeedBonus="0.0742">
+            <VitalMaxArray index="Life" value="25"/>
+            <AttributeChangeArray Attribute="Fitness" Points="2"/>
+        </Modification>
+        <Requirements value="ProsthesisAugmentLoadoutPassive2"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ProsthesisAugmentLoadoutPassive3">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification MoveSpeedBonus="0.0742">
+            <VitalMaxArray index="Life" value="25"/>
+            <AttributeChangeArray Attribute="Fitness" Points="2"/>
+            <RateMultiplierArray index="Cooldown" value="1.05"/>
+        </Modification>
+        <Requirements value="ProsthesisAugmentLoadoutPassive3"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CUpgrade id="CyborgSkills">
+        <MaxLevel value="9"/>
+    </CUpgrade>
+</Catalog>
