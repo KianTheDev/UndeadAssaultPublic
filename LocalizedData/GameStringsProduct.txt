@@ -1,0 +1,1 @@
+﻿UI/EmoticonPanel/Title=<s val="Military_Title_Small"><c val="00BF60">Emoticons

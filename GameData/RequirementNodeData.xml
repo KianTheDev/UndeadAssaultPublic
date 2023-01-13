@@ -1,5 +1,8 @@
-<?xml version="1.0" encoding="us-ascii"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CRequirementAllowAbil id="AllowAbilDefensiveSkills0">
+        <Link value="DefensiveSkills"/>
+    </CRequirementAllowAbil>
     <CRequirementAllowBehavior id="AllowBehaviorD20LaserRifle">
         <Link value="D20LaserRifle"/>
     </CRequirementAllowBehavior>
@@ -107,6 +110,13 @@
         <OperandArray value="EqCountAbilCyborgStealthQueuedOnly0"/>
         <OperandArray value="EqCountAbilSuppressiveFireQueuedOnly0"/>
         <OperandArray value="EqCountAbilMarksmanshipQueuedOnly0"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndEqCountAbilDefensiveSkillsQueuedOnly0EqCountAbilMarksmanshipQueuedOnly0EqCountAbilAssassinSkillsQueuedOnly0EqCountAbilSpecializedRoundsQueuedOnly0EqCountAbilReconExpertQueuedOnly0">
+        <OperandArray value="EqCountAbilDefensiveSkillsQueuedOnly0"/>
+        <OperandArray value="EqCountAbilMarksmanshipQueuedOnly0"/>
+        <OperandArray value="EqCountAbilAssassinSkillsQueuedOnly0"/>
+        <OperandArray value="EqCountAbilSpecializedRoundsQueuedOnly0"/>
+        <OperandArray value="EqCountAbilReconExpertQueuedOnly0"/>
     </CRequirementAnd>
     <CRequirementAnd id="AndEqCountAbilGhostSkillsQueuedOnly0EqCountAbilCombatEnhancementsQueuedOnly0EqCountAbilMarksmanshipQueuedOnly0EqCountAbilPlasmaGrenadeQueuedOnly0">
         <Tooltip value=""/>
@@ -325,7 +335,6 @@
         <OperandArray value="EqCountUpgradeCSMCompleteOnlyTechTreeCheat1"/>
     </CRequirementAnd>
     <CRequirementAnd id="AndEqCountUpgradeBasicBitchCompleteOnly0EqCountUpgradeMechOperatorUnlockedCompleteOnly2850641369TechTreeCheat1Eq2967964474CountUpgradeRifleModeCompleteOnlyTechTreeCheat0">
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <OperandArray value="EqCountUpgradeBasicBitchCompleteOnly0"/>
         <OperandArray value="EqCountUpgradeMechOperatorUnlockedCompleteOnly2850641369TechTreeCheat1"/>
         <OperandArray value="Eq2967964474CountUpgradeRifleModeCompleteOnlyTechTreeCheat0"/>
@@ -664,6 +673,14 @@
         <Tooltip value=""/>
         <Count Link="CyborgStrength"/>
     </CRequirementCountAbil>
+    <CRequirementCountAbil id="CountAbilDefensiveSkillsCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DefensiveSkills" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountAbil>
+    <CRequirementCountAbil id="CountAbilDefensiveSkillsQueuedOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DefensiveSkills"/>
+    </CRequirementCountAbil>
     <CRequirementCountAbil id="CountAbilDefensiveTacticsCompleteOnlyAtUnit">
         <Flags index="TechTreeCheat" value="0"/>
         <Tooltip value=""/>
@@ -829,6 +846,11 @@
         <Flags index="TechTreeCheat" value="0"/>
         <Tooltip value=""/>
         <Count Link="Napalm"/>
+    </CRequirementCountAbil>
+    <CRequirementCountAbil id="CountAbilOffensiveSkillsCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="OffensiveSkills" State="CompleteOnlyAtUnit"/>
     </CRequirementCountAbil>
     <CRequirementCountAbil id="CountAbilOrbitalSatelliteReconnaissanceOSSCompleteOnlyAtUnit">
         <Flags index="TechTreeCheat" value="0"/>
@@ -1580,6 +1602,26 @@
         <OperandArray index="0" value="CountAbilCyborgStrengthQueuedOnly"/>
         <OperandArray index="1" value="0"/>
     </CRequirementEq>
+    <CRequirementEq id="EqCountAbilDefensiveSkillsCompleteOnlyAtUnit1">
+        <OperandArray index="0" value="CountAbilDefensiveSkillsCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountAbilDefensiveSkillsCompleteOnlyAtUnit2">
+        <OperandArray index="0" value="CountAbilDefensiveSkillsCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="2"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountAbilDefensiveSkillsCompleteOnlyAtUnit3">
+        <OperandArray index="0" value="CountAbilDefensiveSkillsCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="3"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountAbilDefensiveSkillsCompleteOnlyAtUnit4">
+        <OperandArray index="0" value="CountAbilDefensiveSkillsCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="4"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountAbilDefensiveSkillsQueuedOnly0">
+        <OperandArray index="0" value="CountAbilDefensiveSkillsQueuedOnly"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementEq>
     <CRequirementEq id="EqCountAbilDefensiveTacticsQueuedOnly0">
         <Tooltip value=""/>
         <OperandArray index="0" value="CountAbilDefensiveTacticsQueuedOnly"/>
@@ -1713,6 +1755,26 @@
         <Tooltip value=""/>
         <OperandArray index="0" value="CountAbilNapalmQueuedOnly"/>
         <OperandArray index="1" value="0"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountAbilOffensiveSkillsCompleteOnlyAtUnit1">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountAbilOffensiveSkillsCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountAbilOffensiveSkillsCompleteOnlyAtUnit2">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountAbilOffensiveSkillsCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="2"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountAbilOffensiveSkillsCompleteOnlyAtUnit3">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountAbilOffensiveSkillsCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="3"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountAbilOffensiveSkillsCompleteOnlyAtUnit4">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountAbilOffensiveSkillsCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="4"/>
     </CRequirementEq>
     <CRequirementEq id="EqCountAbilOrbitalStrikeQueuedOnly0">
         <Tooltip value=""/>

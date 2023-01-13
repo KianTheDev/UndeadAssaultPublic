@@ -1667,6 +1667,22 @@
         <Period value="1.2"/>
         <DamagePoint value="0.2666"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="Vesania30Weapon">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-hisecautotracking.dds"/>
+        <DisplayEffect value="VesaniaGLDamage2"/>
+        <TargetFilters value="Visible;Psionic,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="15"/>
+        <Range value="15"/>
+        <Period value="1.5"/>
+        <PeriodDisplayFlags index="CollapseBuffed" value="1"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0"/>
+        <Effect value="VesaniaGLLaunch2"/>
+        <Cost>
+            <Resource index="Minerals" value="1"/>
+        </Cost>
+    </CWeaponLegacy>
     <CWeaponLegacy id="VileStream">
         <Options index="Hidden" value="0"/>
         <Icon value="Assets\Textures\btn-upgrade-zerg-missileattacks-level1.dds"/>

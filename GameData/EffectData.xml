@@ -119,6 +119,10 @@
         <EffectArray value="BoltActionRB"/>
         <EffectArray value="BoltActionMP"/>
     </CEffectSet>
+    <CEffectCreateUnit id="ChooseLaserEnforcer2">
+        <EditorCategories value="Race:Terran"/>
+        <SpawnUnit value="Vesania30"/>
+    </CEffectCreateUnit>
     <CEffectSet id="CombatWalkerAttack">
         <EditorCategories value=""/>
         <EffectArray value="BurstCounter"/>
@@ -167,6 +171,133 @@
     <CEffectApplyBehavior id="EquipMk47">
         <EditorCategories value=""/>
     </CEffectApplyBehavior>
+    <CEffectLaunchMissile id="PlasmaPulse1">
+        <ValidatorArray index="0" removed="1"/>
+        <EditorCategories value="Race:Terran"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <ImpactOffset value="0.4,0,0"/>
+        <ImpactEffect value="PlasmaPulseDamage1"/>
+        <AmmoUnit value="PlasmaPulse"/>
+    </CEffectLaunchMissile>
+    <CEffectLaunchMissile id="PlasmaPulse2">
+        <ValidatorArray index="0" removed="1"/>
+        <EditorCategories value="Race:Terran"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <ImpactOffset value="0.4,0,0"/>
+        <ImpactEffect value="PlasmaPulseHit1"/>
+        <AmmoUnit value="PlasmaPulse"/>
+    </CEffectLaunchMissile>
+    <CEffectLaunchMissile id="PlasmaPulse3">
+        <ValidatorArray index="0" removed="1"/>
+        <EditorCategories value="Race:Terran"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <ImpactOffset value="0.4,0,0"/>
+        <ImpactEffect value="PlasmaPulseHit3"/>
+        <AmmoUnit value="PlasmaPulse"/>
+    </CEffectLaunchMissile>
+    <CEffectLaunchMissile id="PlasmaPulse4">
+        <ValidatorArray index="0" removed="1"/>
+        <EditorCategories value="Race:Terran"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <ImpactOffset value="0.4,0,0"/>
+        <ImpactEffect value="PlasmaPulseHit4"/>
+        <AmmoUnit value="PlasmaPulse"/>
+    </CEffectLaunchMissile>
+    <CEffectDamage id="PlasmaPulseDamage1">
+        <EditorCategories value="Race:Terran"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <AttributeFactor index="Mechanical" value="-0.25"/>
+        <Amount value="2750"/>
+        <Death value="Blast"/>
+        <AreaArray Radius="4" Fraction="1"/>
+        <SearchFilters value="-;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+    </CEffectDamage>
+    <CEffectDamage id="PlasmaPulseDamage2">
+        <EditorCategories value="Race:Terran"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <AttributeFactor index="Mechanical" value="-0.25"/>
+        <Amount value="3500"/>
+        <Death value="Blast"/>
+        <AreaArray Radius="4" Fraction="1"/>
+        <SearchFilters value="-;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+    </CEffectDamage>
+    <CEffectDamage id="PlasmaPulseDamage3">
+        <EditorCategories value="Race:Terran"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <AttributeFactor index="Mechanical" value="-0.25"/>
+        <Amount value="4250"/>
+        <Death value="Blast"/>
+        <AreaArray Radius="4" Fraction="1"/>
+        <SearchFilters value="-;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+    </CEffectDamage>
+    <CEffectDamage id="PlasmaPulseDamage4">
+        <EditorCategories value="Race:Terran"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <AttributeFactor index="Mechanical" value="-0.25"/>
+        <Amount value="5000"/>
+        <Death value="Blast"/>
+        <AreaArray Radius="4" Fraction="1"/>
+        <SearchFilters value="-;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+    </CEffectDamage>
+    <CEffectApplyBehavior id="PlasmaPulseDebuff2">
+        <ValidatorArray index="0" removed="1"/>
+        <EditorCategories value=""/>
+        <Behavior value="PlasmaPulseVulnerability"/>
+        <Duration value="10"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="PlasmaPulseDebuff32">
+        <ValidatorArray index="0" removed="1"/>
+        <EditorCategories value=""/>
+        <Behavior value="PlasmaPulseVulnerability3"/>
+        <Duration value="10"/>
+    </CEffectApplyBehavior>
+    <CEffectEnumArea id="PlasmaPulseDebuffAoE2">
+        <EditorCategories value=""/>
+        <AreaArray Radius="4" Effect="PlasmaPulseDebufflv2"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="PlasmaPulseDebuffAoE3">
+        <EditorCategories value=""/>
+        <AreaArray Radius="4" Effect="PlasmaPulseDebuff32"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="PlasmaPulseDebuffAoE4">
+        <EditorCategories value=""/>
+        <AreaArray Radius="4" Effect="PlasmaPulseDebuff4"/>
+    </CEffectEnumArea>
+    <CEffectApplyBehavior id="PlasmaPulseDebufflv2">
+        <ValidatorArray index="0" removed="1"/>
+        <EditorCategories value=""/>
+        <Behavior value="PlasmaPulseVulnerability"/>
+        <Duration value="10"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="PlasmaPulseDebuff4">
+        <ValidatorArray index="0" removed="1"/>
+        <EditorCategories value=""/>
+        <Behavior value="PlasmaPulseVulnerability4"/>
+        <Duration value="10"/>
+    </CEffectApplyBehavior>
+    <CEffectSet id="PlasmaPulseHit1">
+        <EditorCategories value=""/>
+        <EffectArray value="PlasmaPulseDamage2"/>
+        <EffectArray value="PlasmaPulseDebuffAoE2"/>
+    </CEffectSet>
+    <CEffectSet id="PlasmaPulseHit3">
+        <EditorCategories value=""/>
+        <EffectArray value="PlasmaPulseDamage3"/>
+        <EffectArray value="PlasmaPulseDebuffAoE3"/>
+    </CEffectSet>
+    <CEffectSet id="PlasmaPulseHit4">
+        <EditorCategories value=""/>
+        <EffectArray value="PlasmaPulseDamage4"/>
+        <EffectArray value="PlasmaPulseDebuffAoE4"/>
+    </CEffectSet>
     <CEffectRemoveBehavior id="SFRemoveRankModifier">
         <EditorCategories value="Race:Terran"/>
         <BehaviorLink value="RankModifier"/>
@@ -3648,6 +3779,29 @@
         <WhichUnit Value="Caster"/>
         <BehaviorLink value="SMGlowGreen"/>
     </CEffectRemoveBehavior>
+    <CEffectDamage id="VesaniaGLDamage2" parent="DU_WEAP_MISSILE">
+        <EditorCategories value="Race:Terran"/>
+        <AttributeFactor index="Armored" value="0.1"/>
+        <AttributeFactor index="Mechanical" value="0.1"/>
+        <AttributeFactor index="Massive" value="0.1"/>
+        <Total value="Combine"/>
+        <Amount value="200"/>
+        <Random value="50"/>
+        <AreaArray Radius="1" Fraction="0.7"/>
+        <AreaArray Radius="3" Fraction="0.3"/>
+        <ExcludeArray Value="Target"/>
+        <ExcludeArray Value="Source"/>
+        <SearchFilters value="-;Self,Player,Ally,Neutral,Psionic,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Kind value="Spell"/>
+        <DisplayFlags index="CollapseBuffed" value="1"/>
+        <DisplayFlags index="DisplayRounded" value="1"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="VesaniaGLLaunch2">
+        <EditorCategories value="Race:Terran"/>
+        <Marker Link="Effect/RiflemanBullet"/>
+        <ImpactEffect value="VesaniaGLDamage2"/>
+        <AmmoUnit value="PunisherGrenadesLMWeapon"/>
+    </CEffectLaunchMissile>
     <CEffectCreatePersistent id="ZHybridPsionicShockwaveCreatePersistent">
         <ValidatorArray value="EnemiesNearby"/>
     </CEffectCreatePersistent>

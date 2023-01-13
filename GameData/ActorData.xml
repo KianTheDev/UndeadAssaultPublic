@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="us-ascii"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Catalog>
     <CActorModel default="1" id="GenericGlazeController" parent="ModelAddition">
         <?token id="ModelMaterial" value="Bogus"?>
@@ -670,6 +670,38 @@
         <UnitFlags index="StandAnimBirthVariation" value="0"/>
         <UnitIcon value="BTN_CR_Mindblast.dds"/>
     </CActorUnit>
+    <CActorSelection id="FlyerHelperSplat2">
+        <Flags index="SuppressSaveLoad" value="0"/>
+        <Inherits index="CloakEffect" value="1"/>
+        <On Terms="ActorCreation" Send="Create FlyerHelperBeam"/>
+        <On Terms="ActorDestruction" Target="FlyerHelperBeam" Send="Destroy"/>
+        <On Terms="ActorOrphan" Send="Destroy"/>
+        <On Terms="PreTargetingUpdate.*.Start" Send="SetTintColorBlendPair 255,64,0 255,0,0 0.150000 Bounce Pretarget 175.000000"/>
+        <On Terms="PreTargetingUpdate.*.Stop" Send="ClearTintColor 0.100000 Pretarget"/>
+        <On Terms="StatusOn.*.PreTargetingTint" Send="PreTargetingUpdate Start"/>
+        <On Terms="StatusOff.*.PreTargetingTint" Send="PreTargetingUpdate Stop"/>
+        <On Terms="Behavior.VortexEventHorizon.On" Send="SetVisibility"/>
+        <On Terms="Behavior.VortexEventHorizon.Off" Send="SetVisibility 1"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachOrigin SOpShadowRespectsBaseHeight"/>
+        <Layer value="MaterialUILayer"/>
+        <Model value="AOEPreTargetAirUnitProtossSplat"/>
+    </CActorSelection>
+    <CActorShadow id="FlyerShadow2">
+        <Inherits index="CloakEffect" value="1"/>
+        <Inherits index="Visibility" value="1"/>
+        <On Terms="AbilMorph.*.Finish; ValidateUnit IsFlying; Option Shadow Low; $AllowBlobShadow" Send="Create"/>
+        <On Terms="AbilMorph.*.Finish; ValidateUnit IsNotFlying" Send="Destroy"/>
+        <On Terms="OptionsChange; Option Shadow Low; Scope Unit; ValidateUnit IsFlying; $AllowBlobShadow" Send="Create"/>
+        <On Terms="OptionsChange; Option Shadow Medium" Send="Destroy"/>
+        <On Terms="OptionsChange; Option Shadow High" Send="Destroy"/>
+        <On Terms="OptionsChange; Option Shadow Ultra" Send="Destroy"/>
+        <Color value="120,0,0,0"/>
+        <FallOff value="0.600000"/>
+        <HalfHeight value="1.500000"/>
+        <Attenuation value="0.500000"/>
+        <HostRadiusPercent value="0.300000"/>
+    </CActorShadow>
     <CActorModel id="GlazeFieldTunedController" parent="GenericGlazeController" ModelMaterial="GlazeGhost" Behavior="GlazeGhost">
         <On index="3" Terms="Behavior.FieldTuned.On" Send="Create"/>
         <On index="4" Terms="ActorCreation" Target="_Unit" Send="ModelMaterialApply GlazeFieldTuned"/>
@@ -689,6 +721,65 @@
     <CActorModelMaterial id="GlazeFieldTuned" parent="GenericGlaze">
         <EditorCategories value=""/>
     </CActorModelMaterial>
+    <CActorSelection id="GroundPreSelection2" parent="PreSelection">
+        <On Terms="PreSelectionUpdate.*.Start; !ValidateUnit UseCliffSelection; IsLocalParticipantType" Send="Create"/>
+        <On Terms="PreSelectionUpdate.*.Stop" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Finish; ValidateUnit UseCliffSelection" Send="CreateCopy CliffPreSelection"/>
+        <On Terms="AbilMorph.*.Finish; ValidateUnit UseCliffSelection" Send="Destroy"/>
+        <HalfHeight value="1.000000"/>
+        <Attenuation value="0.500000"/>
+    </CActorSelection>
+    <CActorShadow id="GroundShadow2">
+        <Inherits index="CloakEffect" value="1"/>
+        <Inherits index="Visibility" value="1"/>
+        <On Terms="AbilMorph.*.Finish; ValidateUnit IsNotFlying; Option Shadow Low; $AllowBlobShadow" Send="Create"/>
+        <On Terms="AbilMorph.*.Finish; ValidateUnit IsFlying" Send="Destroy"/>
+        <On Terms="OptionsChange; Option Shadow Low; Scope Unit; ValidateUnit IsNotFlying; $AllowBlobShadow" Send="Create"/>
+        <On Terms="OptionsChange; Option Shadow Medium" Send="Destroy"/>
+        <On Terms="OptionsChange; Option Shadow High" Send="Destroy"/>
+        <On Terms="OptionsChange; Option Shadow Ultra" Send="Destroy"/>
+        <Color value="140,0,0,0"/>
+        <FallOff value="0.500000"/>
+        <HalfHeight value="1.500000"/>
+        <Attenuation value="0.500000"/>
+        <HostRadiusPercent value="0.300000"/>
+    </CActorShadow>
+    <CActorMissile id="PlasmaPulseMissile" parent="GenericAttackMissile" unitName="PlasmaPulse">
+        <Model value="YamatoWeapon"/>
+        <Scale value="0.700000"/>
+        <BarHeight value="1"/>
+        <BarWidth value="1"/>
+    </CActorMissile>
+    <CActorAction id="PlasmaPulseProjectile" parent="GenericAttack" effectImpact="PlasmaPulseDamage1" effectLaunch="PlasmaPulse1">
+        <FogVisibility value="Visible"/>
+        <On Terms="Effect.PlasmaPulse2.Start; At Caster" Send="Create"/>
+        <On Terms="Effect.PlasmaPulse3.Start; At Caster" Send="Create"/>
+        <On Terms="Effect.PlasmaPulse4.Start; At Caster" Send="Create"/>
+        <On Terms="Effect.PlasmaPulseHit1.Start; FromEffectTreeDescendant" Send="ActionImpact"/>
+        <On Terms="Effect.PlasmaPulseHit3.Start; FromEffectTreeDescendant" Send="ActionImpact"/>
+        <On Terms="Effect.PlasmaPulseHit4.Start; FromEffectTreeDescendant" Send="ActionImpact"/>
+        <On Terms="Effect.PlasmaPulseHit1.Stop; FromEffectTreeDescendant" Send="ActionImpactPhysics"/>
+        <On Terms="Effect.PlasmaPulseHit3.Stop; FromEffectTreeDescendant" Send="ActionImpactPhysics"/>
+        <On Terms="Effect.PlasmaPulseHit4.Stop; FromEffectTreeDescendant" Send="ActionImpactPhysics"/>
+        <LaunchAttachQuery Methods="AMFilterCenter"/>
+        <Missile value="PlasmaPulseMissile"/>
+        <ImpactMap index="None" Model="BattlecruiserYamatoAttackImpact" Scale="2.500000" Sound="Battlecruiser_YamatoAttackImpact"/>
+    </CActorAction>
+    <CActorModel id="MarineCheerSquib2" parent="ModelAdditionNoAnims">
+        <On Terms="ActorCreation" Send="$Stand"/>
+        <On Terms="AnimDone; AnimName Stand" Send="$Stand"/>
+        <On Terms="AnimPlay; AnimName Stand" Send="Create MarineCheerSquibSound"/>
+        <HostSiteOps Ops="SOpAttachWeapon"/>
+        <Model value="MarineAttackLaunch"/>
+    </CActorModel>
+    <CActorModel id="ModelPretargetGround2" parent="ModelPretarget">
+        <Model value="AOEPreTargetGroundUnitProtoss"/>
+    </CActorModel>
+    <CActorSound id="SoundEmitter2" parent="SoundContinuous">
+        <Terms value="!HasScopeFlag DisableSoundEmitters"/>
+        <Flags index="SuppressCreationErrors" value="1"/>
+        <Host Subject="::Creator"/>
+    </CActorSound>
     <CActorModel id="StrikeTeamNotice" parent="FloatingTextActorDefault" effectPickup="PickupEnergyFull" actorCreate="PickupEnergyFullText">
         <On index="0" Terms="ActorCreation" Send="Create StrikeTeamIndicator"/>
         <On index="1" Terms="ActorCreation" Send="TimerSet 10.000000 Die"/>
@@ -1209,6 +1300,82 @@
         <HeightOffset value="2.000000"/>
         <Text value="PMCStrikeTeam"/>
     </CActorText>
+    <CActorUnit id="Vesania302" parent="GenericUnitBase" unitName="Vesania20">
+        <Macros value="UnloadDropAnim"/>
+        <On index="0" Terms="UnitBirth.Vesania30"/>
+        <On index="1" Terms="UnitBirth.Vesania30"/>
+        <On index="2" Terms="UnitRevive.Vesania30"/>
+        <On index="3" Terms="UnitRevive.Vesania30"/>
+        <On index="4" Terms="UnitConstruction.Vesania30"/>
+        <On index="5" Terms="UnitConstruction.Vesania30"/>
+        <On Terms="ActorCreation" Send="StatusSet WeaponNext 0"/>
+        <On Terms="Effect.TerminatorGrenadeLaunch.Start; At Caster" Send="StatusIncrement WeaponNext"/>
+        <On Terms="Effect.TerminatorGrenadeLaunch.Start; At Caster; IsStatus WeaponNext 2" Send="StatusSet WeaponNext 0"/>
+        <On Terms="Effect.TerminatorGrenadeLaunch.Start; At Caster; IsStatus WeaponNext 0" Send="AnimPlay AttackLeft Attack,00"/>
+        <On Terms="Effect.TerminatorGrenadeLaunch.Start; At Caster; IsStatus WeaponNext 1" Send="AnimPlay AttackRight Attack,01"/>
+        <On Terms="UnitMovementUpdate.*.Walk" Send="AnimClear AttackLeft"/>
+        <On Terms="UnitMovementUpdate.*.Walk" Send="AnimClear AttackRight"/>
+        <On Terms="ActorCreation" Send="TextureSelectById Vesania20ADiffuse"/>
+        <On Terms="ActorCreation" Send="TextureSelectById Vesania20AEmissive"/>
+        <On Terms="ActorCreation" Send="TextureSelectById Vesania20ASpecular"/>
+        <Model value="Vesania30"/>
+        <Scale value="1.500000"/>
+        <BuildModel value="Vesania30"/>
+        <DeathArray index="Normal" ModelLink="MGLImpact" SoundLink="Cyborgdeath"/>
+        <DeathArray index="Eviscerate" ModelLink="MarauderDeathEviscerate" SoundLink="Uni_DeathFXEviscerate"/>
+        <DeathArray index="Silentkill" SoundLink="Uni_DeathFXSilentKill"/>
+        <PlacementModel value="Vesania30"/>
+        <PortraitModel value="Marauder_CovertOps_Portrait"/>
+        <WalkAnimMoveSpeed value="2.8007"/>
+        <BarOffset value="40"/>
+        <BarWidth value="36"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-Marauder-killsquad.dds"/>
+        </GroupIcon>
+        <GroupSoundArray index="What" value="MarauderGroupWhat"/>
+        <GroupSoundArray index="Yes" value="MarauderGroupYes"/>
+        <GroupSoundArray index="Attack" value="MarauderGroupAttack"/>
+        <GroupSoundArray index="Board" value="MarauderGroupBoard"/>
+        <HeroIcon value="Assets\Textures\ui_mercenaries_maraudermercenaryportrait_hired.dds"/>
+        <HighlightTooltip value="Unit/Name/Vesania302"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
+        <SoundArray index="Birth" value="MarauderBirth"/>
+        <SoundArray index="Ready" value="Marauder_Ready"/>
+        <SoundArray index="Help" value="Marauder_Help"/>
+        <SoundArray index="What" value="Marauder_What"/>
+        <SoundArray index="Yes" value="Marauder_Yes"/>
+        <SoundArray index="Attack" value="Marauder_Attack"/>
+        <SoundArray index="Pissed" value="Marauder_Pissed"/>
+        <SoundArray index="Movement" value="MarauderMovement"/>
+        <SoundArray index="Turning" value="MarauderTurning"/>
+        <SoundArray index="Board" value="MarauderBoard"/>
+        <SoundArray index="Click" value="MarauderClick"/>
+        <SoundArray index="ClickError" value="MarauderClickError"/>
+        <SoundArray index="Highlight" value="MarauderHighlight"/>
+        <UnitIcon value="Assets\Textures\BTN-Unit-Terran-MarauderKillsquad.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-terran-marauder-blackops.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorAction id="VesaniaAttack2" parent="MarauderAttackBase" effectImpact="" effectLaunch="VesaniaGLLaunch">
+        <FogVisibility value="Visible"/>
+        <On index="0" Terms="Effect.VesaniaGLDamage.Start; At Caster; FromEffectTreeDescendant" Send="ActionImpact"/>
+        <On index="1" Terms="Effect.Start; FromEffectTreeDescendant" Send="ActionImpact"/>
+        <On index="2" Terms="Effect.Stop; FromEffectTreeDescendant" Send="ActionImpactPhysics"/>
+        <On Terms="Effect.VesaniaGLLaunch2.Start; At Caster" Send="Create"/>
+        <LaunchAttachQuery Methods="AMPatternMarauder"/>
+        <LaunchAssets Model="MarauderAttackLaunch"/>
+        <ImpactMap index="None" Model="TossGrenadeImpact2" Sound="TossGrenadeImpact" ModelReaction="MK79SentryGunAttackImpactReaction"/>
+        <ImpactMap index="Dirt" Sound="MK79SentryGunAttackImpactDirt" ModelReaction="MK79SentryGunAttackImpactReactionDirt"/>
+        <ImpactMap index="Rock" Sound="MK79SentryGunAttackImpactRock" ModelReaction="MK79SentryGunAttackImpactReactionRock"/>
+        <ImpactMap index="Snow" Sound="MK79SentryGunAttackImpactSnow" ModelReaction="MK79SentryGunAttackImpactReactionSnow"/>
+        <ImpactMap index="Sand" Sound="MK79SentryGunAttackImpactSand" ModelReaction="MK79SentryGunAttackImpactReactionSand"/>
+        <ImpactMap index="Water" Sound="MK79SentryGunAttackImpactWater" ModelReaction="MK79SentryGunAttackImpactReactionWater"/>
+        <ImpactMap index="Flesh" Sound="MK79SentryGunAttackImpactFlesh" ModelReaction="MK79SentryGunAttackImpactReactionFlesh"/>
+        <ImpactMap index="LightArmor" Sound="MK79SentryGunAttackImpactLightArmor" ModelReaction="MK79SentryGunAttackImpactReactionLightArmor"/>
+        <ImpactMap index="Metal" Sound="MK79SentryGunAttackImpactMetal" ModelReaction="MK79SentryGunAttackImpactReactionMetal"/>
+        <ImpactMap index="Shield" Sound="MK79SentryGunAttackImpactShield" ModelReaction="MK79SentryGunAttackImpactReactionShield"/>
+    </CActorAction>
     <CActorUnit id="Wrath" parent="GenericUnitBase" unitName="Vindicare">
         <Macros value="UnloadDropAnim"/>
         <Macros value="Animations"/>
@@ -3644,7 +3811,7 @@
         <Scale value="1.150000,1.150000,1.000000"/>
     </CActorSplat>
     <CActorDoodad id="CompoundMansion_Fountain">
-        <On index="0" Terms="ActorCreation" Send="Create SoundEmitter Doodad_Fountain"/>
+        <On index="0" Send="Create SoundEmitter Doodad_Fountain"/>
     </CActorDoodad>
     <CActorSound id="ExplosionSmallEcho" parent="SoundOneShot">
         <FogVisibility value="Visible"/>
@@ -6044,10 +6211,10 @@
         <Model value="GAU52Spinning"/>
     </CActorModel>
     <CActorRegionCircle id="NukeTreeKiller">
-        <On index="0" Terms="Effect.ExplosiveChargeDamage.Start; At Effect" Send="Create"/>
-        <On index="1" Terms="Effect.ExplosiveChargeDamage.Start; At Effect" Send="Create"/>
-        <On index="4" Terms="Effect.ExplosiveChargeDamage.Start; At Effect" Send="Destroy"/>
-        <On index="5" Terms="Effect.ExplosiveChargeDamage.Start; At Effect" Send="Destroy"/>
+        <On index="0" Terms="Effect.ExplosiveChargeDamage.Start; At Effect"/>
+        <On index="1" Terms="Effect.ExplosiveChargeDamage.Start; At Effect"/>
+        <On index="4" Terms="Effect.ExplosiveChargeDamage.Start; At Effect"/>
+        <On index="5" Terms="Effect.ExplosiveChargeDamage.Start; At Effect"/>
         <On Terms="Effect.ExplosiveChargeDamage.Start; At Effect" Send="Create"/>
         <On Terms="Effect.ExplosiveChargeDamage.Start; At Effect" Send="Destroy"/>
         <Radius value="6.000000"/>
@@ -6778,7 +6945,7 @@
         </Wireframe>
     </CActorUnit>
     <CActorSound id="Spell_ElectricFieldGenerator">
-        <On index="1" Terms="Abil.SJPirateLightningStorm.SourceCastStart" Send="Create"/>
+        <On index="1" Terms="Abil.SJPirateLightningStorm.SourceCastStart"/>
         <On index="2" removed="1"/>
         <On index="3" removed="1"/>
     </CActorSound>
@@ -7301,7 +7468,7 @@
         </WireframeVariations>
     </CActorUnit>
     <CActorDoodad id="AlarmLight">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_AlarmLight"/>
+        <On index="0" Send="Create {} Doodad_AlarmLight"/>
     </CActorDoodad>
     <CActorSound id="AresRoar" parent="SoundOneShot">
         <On Terms="Effect.AresRoarSA.Start" Send="Create"/>
@@ -7607,30 +7774,30 @@
         <DamageMap index="Shield" Sound="SporeCrawlerAttackDamageShield" ModelReaction="SporeCrawlerAttackDamageReactionShield"/>
     </CActorAction>
     <CActorDoodad id="CastanarMonitorFloor">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_CastanarMonitorFloor"/>
+        <On index="0" Send="Create {} Doodad_CastanarMonitorFloor"/>
     </CActorDoodad>
     <!--                                                                                         -->
     <!--                                                                                         -->
     <CActorDoodad id="CastanarMonitorLarge">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_CastanarMonitorLarge"/>
+        <On index="0" Send="Create {} Doodad_CastanarMonitorLarge"/>
     </CActorDoodad>
     <CActorDoodad id="CastanarMonitorWall">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_CastanarMonitorWall"/>
+        <On index="0" Send="Create {} Doodad_CastanarMonitorWall"/>
     </CActorDoodad>
     <CActorDoodad id="CastanarStasisTubeLarge">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_CastanarStasisTubeLarge"/>
+        <On index="0" Send="Create {} Doodad_CastanarStasisTubeLarge"/>
     </CActorDoodad>
     <CActorDoodad id="CastanarStasisTubeQuad">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_CastanarStasisTubeQuad"/>
+        <On index="0" Send="Create {} Doodad_CastanarStasisTubeQuad"/>
     </CActorDoodad>
     <CActorDoodad id="CastanarStasisTubeRising">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_CastanarStasisTubeRising"/>
+        <On index="0" Send="Create {} Doodad_CastanarStasisTubeRising"/>
     </CActorDoodad>
     <CActorDoodad id="CastanarStasisTubeWall">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_CastanarStasisTubeWall"/>
+        <On index="0" Send="Create {} Doodad_CastanarStasisTubeWall"/>
     </CActorDoodad>
     <CActorDoodad id="CastanarTable">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_CastanarTable"/>
+        <On index="0" Send="Create {} Doodad_CastanarTable"/>
     </CActorDoodad>
     <CActorUnit id="CavalryScout2" parent="GenericUnitBase" unitName="CavalryScout2">
         <Macros value="UnloadDropAnim"/>
@@ -7708,9 +7875,9 @@
         <On Terms="ActorDestruction" Target="_Selectable" Send="ClearTintColor 1.500000 Chrono"/>
     </CActorSimple>
     <CActorDoodad id="CivilianCars">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_CivilianCars"/>
-        <On index="1" Terms="ActorCreation" Send="$Stand RandomStartOffset"/>
-        <On index="2" Terms="ActorCreation; ModelVariation 3" Send="Create {} Terran_ConstantFireSmall"/>
+        <On index="0" Send="Create {} Doodad_CivilianCars"/>
+        <On index="1" Send="$Stand RandomStartOffset"/>
+        <On index="2" Send="Create {} Terran_ConstantFireSmall"/>
     </CActorDoodad>
     <CActorUnit id="ColonistBiodome">
         <StatusBarFlags index="Life" value="0"/>
@@ -9004,16 +9171,16 @@
         </Wireframe>
     </CActorUnit>
     <CActorDoodad id="ExhaustPipes">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_ExhaustPipes"/>
-        <On index="1" Terms="ActorCreation" Send="$Stand RandomStartOffset"/>
-        <On index="2" Terms="ActorCreation; ModelVariation 3" Send="Create {} Doodad_SteamLoopLarge"/>
-        <On index="3" Terms="ActorCreation; ModelVariation 4" Send="Create {} Doodad_SteamLoopSmall"/>
-        <On index="4" Terms="ActorCreation; ModelVariation 5" Send="Create {} Terran_ConstantFireSmall"/>
-        <On index="5" Terms="ActorCreation; ModelVariation 6" Send="Create {} Terran_ConstantFireSmall"/>
-        <On index="6" Terms="ActorCreation; ModelVariation 7" Send="Create {} Doodad_SteamLoopSmall"/>
+        <On index="0" Send="Create {} Doodad_ExhaustPipes"/>
+        <On index="1" Send="$Stand RandomStartOffset"/>
+        <On index="2" Send="Create {} Doodad_SteamLoopLarge"/>
+        <On index="3" Send="Create {} Doodad_SteamLoopSmall"/>
+        <On index="4" Send="Create {} Terran_ConstantFireSmall"/>
+        <On index="5" Send="Create {} Terran_ConstantFireSmall"/>
+        <On index="6" Send="Create {} Doodad_SteamLoopSmall"/>
     </CActorDoodad>
     <CActorDoodad id="FanVent">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_FanVent"/>
+        <On index="0" Send="Create {} Doodad_FanVent"/>
     </CActorDoodad>
     <CActorUnit id="Fatty" parent="GenericUnitStandard" unitName="Fatty">
         <Model value="Bloated"/>
@@ -9162,7 +9329,7 @@
         </Wireframe>
     </CActorUnit>
     <CActorDoodad id="Floodlight">
-        <On index="1" Terms="ActorCreation" Send="$Stand"/>
+        <On index="1" Send="$Stand"/>
     </CActorDoodad>
     <CActorUnit id="GapGenerator" parent="GenericUnitStandard" unitName="GapGenerator">
         <On Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death"/>
@@ -9191,11 +9358,11 @@
         </Wireframe>
     </CActorUnit>
     <CActorDoodad id="GarageLarge_Warfield">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_GarageLarge_Warfield"/>
+        <On index="0" Send="Create {} Doodad_GarageLarge_Warfield"/>
     </CActorDoodad>
     <CActorDoodad id="GenericFire_Medium">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_GenericFire_Medium"/>
-        <On index="2" Terms="ActorCreation" Send="Create"/>
+        <On index="0" Send="Create {} Doodad_GenericFire_Medium"/>
+        <On index="2" Send="Create"/>
     </CActorDoodad>
     <CActorUnit id="GhostHero2" parent="GenericUnitBase" unitName="GhostHero2">
         <Macros value="UnloadDropAnim"/>
@@ -10662,9 +10829,9 @@
         </Wireframe>
     </CActorUnit>
     <CActorDoodad id="HavenDoodadsCrates">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_HavenDoodadsCrates"/>
-        <On index="2" Terms="ActorCreation; ModelVariation 2" Send="Create {} Doodad_HavenDoodadsCratesCovers"/>
-        <On index="3" Terms="ActorCreation; ModelVariation 3" Send="Create {} Doodad_HavenDoodadsCratesCovers"/>
+        <On index="0" Send="Create {} Doodad_HavenDoodadsCrates"/>
+        <On index="2" Send="Create {} Doodad_HavenDoodadsCratesCovers"/>
+        <On index="3" Send="Create {} Doodad_HavenDoodadsCratesCovers"/>
     </CActorDoodad>
     <CActorUnit id="HeavyGunner" parent="GenericUnitStandard" unitName="HeavyGunner">
         <Macros value="UnloadDropAnim"/>
@@ -11187,7 +11354,7 @@
         <On Terms="Effect.DrainAB.Stop; FromEffectTreeDescendant" Send="ActionImpactPhysics"/>
     </CActorAction>
     <CActorMissile id="InfestedStukovAttackMissile">
-        <On index="1" Terms="UnitBirth.InfestedStukovWeapon" Send="AnimBracketStart Lifetime Birth Stand"/>
+        <On index="1" Terms="UnitBirth.InfestedStukovWeapon"/>
     </CActorMissile>
     <CActorUnit id="NeutronEmitter" parent="GenericUnitStandard" unitName="NeutronEmitter">
         <On index="0" Terms="ActorCreation" Send="$Stand PlayForever"/>
@@ -11583,12 +11750,12 @@
         <On index="0" Send="Create {} Doodad_JunkPileSpaceShips"/>
     </CActorDoodad>
     <CActorDoodad id="KorhalBuilding">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_KorhalBuilding"/>
-        <On index="1" Terms="ActorCreation" Send="$Stand"/>
+        <On index="0" Send="Create {} Doodad_KorhalBuilding"/>
+        <On index="1" Send="$Stand"/>
         <FogVisibility value="Dimmed"/>
     </CActorDoodad>
     <CActorDoodad id="KorhalFlag">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_KorhalFlag"/>
+        <On index="0" Send="Create {} Doodad_KorhalFlag"/>
     </CActorDoodad>
     <CActorUnit id="Korhal_SpacePort_ControlTower2" parent="GenericUnitStandard" unitName="PortControlTower">
         <CopySource value=""/>
@@ -12984,16 +13151,16 @@
         <StatusBarGroups index="All" value="0"/>
     </CActorUnit>
     <CActorDoodad id="MetalWall">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_MetalWall"/>
-        <On index="1" Terms="ActorCreation" Send="$Stand"/>
+        <On index="0" Send="Create {} Doodad_MetalWall"/>
+        <On index="1" Send="$Stand"/>
     </CActorDoodad>
     <CActorDoodad id="MetalWallCorner">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_MetalWallCorner"/>
-        <On index="1" Terms="ActorCreation" Send="$Stand"/>
+        <On index="0" Send="Create {} Doodad_MetalWallCorner"/>
+        <On index="1" Send="$Stand"/>
     </CActorDoodad>
     <CActorDoodad id="MetalWallDiagonal">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_MetalWallDiagonal"/>
-        <On index="1" Terms="ActorCreation" Send="$Stand"/>
+        <On index="0" Send="Create {} Doodad_MetalWallDiagonal"/>
+        <On index="1" Send="$Stand"/>
     </CActorDoodad>
     <!--CActorSound id="ZerusAlienTreeViperStunSound" parent="SoundOneShot">-->
     <!--        <On Terms="Effect.ZerusAlienTreeViperDamage.Start; At Target" Send="Create"/>-->
@@ -13003,7 +13170,7 @@
         <StatusBarFlags index="Life" value="0"/>
     </CActorUnit>
     <CActorDoodad id="MilitarySupplies">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_MilitarySupplies"/>
+        <On index="0" Send="Create {} Doodad_MilitarySupplies"/>
     </CActorDoodad>
     <CActorUnit id="MiniM1SentryGun" parent="GenericUnitStandard" unitName="MiniM1SentryGun">
         <On Terms="Behavior.Precursor.Off" Send="Create AutoTurretReleaseMissileImpact"/>
@@ -13116,14 +13283,14 @@
         <LaunchAttachQuery Methods="AMPatternMKII AMFilterWeaponALT" Fallback="Channel"/>
     </CActorAction>
     <CActorDoodad id="MoebiusLab_DissectionArm">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_MoebiusLab_DissectionArm"/>
+        <On index="0" Send="Create {} Doodad_MoebiusLab_DissectionArm"/>
     </CActorDoodad>
     <CActorDoodad id="MoebiusLab_DissectionTable">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_MoebiusLab_DissectionTable"/>
-        <On index="1" Terms="ActorCreation" Send="$Stand"/>
+        <On index="0" Send="Create {} Doodad_MoebiusLab_DissectionTable"/>
+        <On index="1" Send="$Stand"/>
     </CActorDoodad>
     <CActorDoodad id="MoebiusLab_DissectionTable_Destroyed">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_MoebiusLab_DissectionTable_Destroyed"/>
+        <On index="0" Send="Create {} Doodad_MoebiusLab_DissectionTable_Destroyed"/>
     </CActorDoodad>
     <CActorUnit id="NuclearMissileSilo">
         <StatusBarFlags index="Shields" value="0"/>
@@ -13655,26 +13822,26 @@
         </Wireframe>
     </CActorUnit>
     <CActorDoodad id="PortZionCompactor">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_PortZionCompactor"/>
+        <On index="0" Send="Create {} Doodad_PortZionCompactor"/>
     </CActorDoodad>
     <CActorDoodad id="PortZionDumpster">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_PortZionDumpster"/>
+        <On index="0" Send="Create {} Doodad_PortZionDumpster"/>
     </CActorDoodad>
     <CActorDoodad id="PortZionJunkPile">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_PortZionJunkPile"/>
+        <On index="0" Send="Create {} Doodad_PortZionJunkPile"/>
     </CActorDoodad>
     <CActorDoodad id="PortZionScrapConveyorBelt">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_PortZionScrapConveyorBelt"/>
+        <On index="0" Send="Create {} Doodad_PortZionScrapConveyorBelt"/>
     </CActorDoodad>
     <CActorDoodad id="PortZionScrapElevatorLeft">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_PortZionScrapElevatorLeft"/>
+        <On index="0" Send="Create {} Doodad_PortZionScrapElevatorLeft"/>
     </CActorDoodad>
     <CActorDoodad id="PortZionScrapElevatorRight">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_PortZionScrapElevatorRight"/>
+        <On index="0" Send="Create {} Doodad_PortZionScrapElevatorRight"/>
     </CActorDoodad>
     <CActorDoodad id="PortZionTower">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_PortZionTower"/>
-        <On index="2" Terms="ActorCreation; ModelVariation 9" Send="Create {} Doodad_PortZionTower09"/>
+        <On index="0" Send="Create {} Doodad_PortZionTower"/>
+        <On index="2" Send="Create {} Doodad_PortZionTower09"/>
     </CActorDoodad>
     <CActorModel id="PreciseAimModel" parent="BuffContinuous">
         <On index="0" Terms="Behavior.PreciseAim1.On" Send="Create"/>
@@ -15750,9 +15917,9 @@
         <On index="4" Terms="Behavior.SteelSaber.Off" Send="Destroy"/>
     </CActorModel>
     <CActorDoodad id="Searchlight">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_Searchlight"/>
-        <On index="1" Terms="ActorCreation" Send="$Stand"/>
-        <On index="2" Terms="ActorCreation; ModelVariation 2" Send="Create {} Doodad_Searchlight02"/>
+        <On index="0" Send="Create {} Doodad_Searchlight"/>
+        <On index="1" Send="$Stand"/>
+        <On index="2" Send="Create {} Doodad_Searchlight02"/>
     </CActorDoodad>
     <CActorUnit id="SecurityArmor" parent="GenericUnitStandard" unitName="SecurityArmor">
         <On index="0" Terms="ActorCreation" Send="Create SoundEmitter Doodad_Item"/>
@@ -16036,21 +16203,21 @@
         <HighlightTooltip value="Unit/Name/Sniper"/>
     </CActorUnit>
     <CActorDoodad id="SpacePlatformFan">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_SpacePlatformFan"/>
+        <On index="0" Send="Create {} Doodad_SpacePlatformFan"/>
     </CActorDoodad>
     <CActorDoodad id="SpacePlatformFanLarge">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_SpacePlatformFanLarge"/>
+        <On index="0" Send="Create {} Doodad_SpacePlatformFanLarge"/>
         <!--        <On Terms="ActorCreation; ModelVariation" Send="Create SoundEmitter Doodad_SpacePlatformFanLarge00"/> -->
     </CActorDoodad>
     <CActorDoodad id="SpacePlatformRadar">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_SpacePlatformRadar"/>
-        <On index="1" Terms="ActorCreation" Send="$Stand"/>
+        <On index="0" Send="Create {} Doodad_SpacePlatformRadar"/>
+        <On index="1" Send="$Stand"/>
     </CActorDoodad>
     <CActorDoodad id="SpacePlatformRadarZerged">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_SpacePlatformRadarZerged"/>
+        <On index="0" Send="Create {} Doodad_SpacePlatformRadarZerged"/>
     </CActorDoodad>
     <CActorDoodad id="SpacePlatformReactor">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_SpacePlatformReactor"/>
+        <On index="0" Send="Create {} Doodad_SpacePlatformReactor"/>
     </CActorDoodad>
     <CActorUnit id="Specter" parent="GenericUnitBase" unitName="Specter">
         <Macros value="UnloadDropAnim"/>
@@ -16360,7 +16527,7 @@
         <Scale value="0.900000"/>
     </CActorModel>
     <CActorDoodad id="TerrainObjectBraxisAlphaReactorDoodad">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_TerrainObjectBraxisAlphaReactorDoodad"/>
+        <On index="0" Send="Create {} Doodad_TerrainObjectBraxisAlphaReactorDoodad"/>
     </CActorDoodad>
     <!--                                                                                         -->
     <!-- Terrorzor                                                                               -->
@@ -16373,7 +16540,7 @@
         <BarOffset value="-50"/>
     </CActorUnit>
     <CActorDoodad id="TyphonTree">
-        <On index="1" Terms="ActorCreation" Send="$Stand"/>
+        <On index="1" Send="$Stand"/>
     </CActorDoodad>
     <CActorUnit id="AH64Apache" parent="Banshee" unitName="AH64Apache">
         <On index="0" Terms="UnitBirth.AH64Apache"/>
@@ -16395,7 +16562,7 @@
         </Wireframe>
     </CActorUnit>
     <CActorDoodad id="UmojanLabAlarms">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_UmojanLabAlarms"/>
+        <On index="0" Send="Create {} Doodad_UmojanLabAlarms"/>
     </CActorDoodad>
     <CActorUnit id="Unclean" parent="GenericUnitStandard" unitName="Unclean">
         <Macros value="ZergBurrowStandardAnimMacro"/>
@@ -16602,7 +16769,7 @@
         <Scale value="2.000000"/>
     </CActorUnit>
     <CActorDoodad id="ValhallaCamera">
-        <On index="0" Terms="ActorCreation" Send="Create {} Doodad_ValhallaCamera"/>
+        <On index="0" Send="Create {} Doodad_ValhallaCamera"/>
     </CActorDoodad>
     <CActorAction id="RAJuggernaughtAttack" parent="DominionKillTeamAttackBase" effectImpact="MachineGun2">
         <On index="0" Terms="Effect.JuggernaughtIncendiaryRoundsLaunch.Stop; FromEffectTreeDescendant" Send="ActionImpactPhysics"/>
@@ -19551,7 +19718,7 @@
         <DeathCustoms index="3" ModelLink="ZergSmallUnitDeathLow2"/>
         <DeathCustoms index="4" ModelLink="Invisible2"/>
         <DeathCustoms index="5" ModelLink="ZergGenericBuildingDeath2"/>
-        <DeathCustoms index="6" ModelLink="ZergGenericBuildingDeath2" Name="Detached"/>
+        <DeathCustoms index="6" ModelLink="ZergGenericBuildingDeath2"/>
         <PlacementModel value="NydusCanalPlacement2"/>
         <PlacementSound value="Zerg_BuildingPlacement2"/>
         <PortraitModel value="OverlordPortrait2"/>
@@ -40943,7 +41110,7 @@
         <On Terms="Effect.UncleanClaws.Start; At Caster" Send="Create"/>
     </CActorAction>
     <CActorSound id="ZerglingAttackStart">
-        <On index="1" Terms="WeaponStart.RaisuliClaws.AttackStart" Send="Create"/>
+        <On index="1" Terms="WeaponStart.RaisuliClaws.AttackStart"/>
     </CActorSound>
     <CActorSound id="ArachnathidAttackStart" parent="SoundOneShot">
         <On Terms="WeaponStart.ArachnathidClaws.AttackStart" Send="Create"/>
@@ -40965,7 +41132,7 @@
         <Sound value="DarreusAttack"/>
     </CActorSound>
     <CActorSound id="Zergling_Death">
-        <On index="1" Terms="UnitDeath.ZerglingBurrowed; PassChance 25.000000" Send="Create"/>
+        <On index="1" Terms="UnitDeath.ZerglingBurrowed; PassChance 25.000000"/>
         <Sound value="ZombieDeath"/>
     </CActorSound>
     <CActorSound id="ZombieAttackStart" parent="SoundOneShot">

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="us-ascii"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Catalog>
     <CValidatorUnitCompareBehaviorCount id="AA12">
         <WhichUnit Value="Source"/>
@@ -100,6 +100,21 @@
         <Value value="1"/>
         <Behavior value="FuelBombReady"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="HasForceLowDeathProtoss2">
+        <Type value="And"/>
+        <CombineArray value="IsProtoss"/>
+        <CombineArray value="HasForceLowDeath"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="HasForceLowDeathTerran2">
+        <Type value="And"/>
+        <CombineArray value="IsTerran"/>
+        <CombineArray value="HasForceLowDeath"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="HasForceLowDeathZerg2">
+        <Type value="And"/>
+        <CombineArray value="IsZerg"/>
+        <CombineArray value="HasForceLowDeath"/>
+    </CValidatorCombine>
     <CValidatorUnitCompareBehaviorCount id="HasMechSeat">
         <WhichUnit Value="Caster"/>
         <Value value="1"/>
@@ -118,10 +133,43 @@
         <Value value="1"/>
         <Behavior value="SpecialForcesExpertise"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareField id="IsFlying2">
+        <Compare value="GE"/>
+        <Field value="Height"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareField>
+    <CValidatorUnitCompareBehaviorCount id="IsHallucination2">
+        <Value value="1"/>
+        <Behavior value="Hallucination"/>
+    </CValidatorUnitCompareBehaviorCount>
     <CValidatorUnitCompareBehaviorCount id="IsInspired">
         <Value value="1"/>
         <Behavior value="SquadLeadership2"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareField id="IsNotFlying2">
+        <Compare value="LT"/>
+        <Field value="Height"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareField>
+    <CValidatorCombine id="IsProtossUnit2">
+        <Type value="And"/>
+        <CombineArray value="NotStructure"/>
+        <CombineArray value="IsProtoss"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="IsTerranUnit2">
+        <Type value="And"/>
+        <CombineArray value="NotStructure"/>
+        <CombineArray value="IsTerran"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="IsVortexed2">
+        <CombineArray value="IsVortexdFriendly"/>
+        <CombineArray value="IsVortexdEnemy"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="IsZergUnit2">
+        <Type value="And"/>
+        <CombineArray value="NotStructure"/>
+        <CombineArray value="IsZerg"/>
+    </CValidatorCombine>
     <CValidatorUnitCompareBehaviorCount id="M241MMGEquipped">
         <WhichUnit Value="Caster"/>
         <Value value="1"/>
@@ -143,6 +191,9 @@
         <CombineArray value="M92TorrentItem"/>
         <CombineArray value="XR900"/>
     </CValidatorCombine>
+    <CValidatorUnitFilters id="NotStructure2">
+        <Filters value="-;Structure"/>
+    </CValidatorUnitFilters>
     <CValidatorUnitCompareBehaviorCount id="SAW">
         <WhichUnit Value="Source"/>
         <Compare value="GE"/>
@@ -915,7 +966,7 @@
         <Behavior value="WhizKid"/>
     </CValidatorUnitCompareBehaviorCount>
     <CValidatorLocationEnumArea id="EnemiesNearby">
-        <AreaArray index="0" Compare="GE" Count="1" Radius="6"/>
+        <AreaArray index="0" Compare="GE"/>
     </CValidatorLocationEnumArea>
     <CValidatorUnitCompareVital id="Energy0">
         <WhichUnit Value="Caster"/>

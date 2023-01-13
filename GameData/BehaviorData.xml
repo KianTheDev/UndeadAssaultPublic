@@ -32,8 +32,173 @@
             <Chance value="0.27"/>
         </DamageResponse>
     </CBehaviorBuff>
+    <CBehaviorBuff id="ForceLowDeath2">
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="GlazeSnowWorld">
         <DisableValidatorArray value="NotATree"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="HardArmor2">
+        <Alignment value="Positive"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-buildingarmor.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="VesaniaDefenseUpgrade12"/>
+        <DamageResponse ModifyFraction="0.85">
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="HeroVesaniaDefense12">
+        <Tooltip value="Behavior/Tooltip/HeroVesaniaDefense1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-research-terran-vanadiumplating.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="VesaniaDefenseUpgrade1"/>
+        <Modification>
+            <LifeArmorBonus value="10"/>
+            <VitalMaxArray index="Life" value="20"/>
+            <VitalRegenArray index="Life" value="3"/>
+            <AttributeChangeArray Attribute="Fitness" Points="2"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="HeroVesaniaDefense122">
+        <Tooltip value="Behavior/Tooltip/HeroVesaniaDefense2"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-research-terran-vanadiumplating.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="VesaniaDefenseUpgrade122"/>
+        <Modification>
+            <LifeArmorBonus value="15"/>
+            <VitalMaxArray index="Life" value="40"/>
+            <VitalRegenArray index="Life" value="3"/>
+            <AttributeChangeArray Attribute="Fitness" Points="4"/>
+        </Modification>
+        <DamageResponse ModifyFraction="0.5">
+            <Kind index="Melee" value="0"/>
+            <Kind index="Ranged" value="0"/>
+            <Kind index="Splash" value="0"/>
+            <Kind index="NoProc" value="0"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="HeroVesaniaDefense1222">
+        <Tooltip value="Behavior/Tooltip/HeroVesaniaDefense3"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-research-terran-vanadiumplating.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="VesaniaDefenseUpgrade123"/>
+        <Modification ShieldArmorBonus="5">
+            <LifeArmorBonus value="20"/>
+            <VitalMaxArray index="Life" value="60"/>
+            <VitalMaxArray index="Shields" value="50"/>
+            <VitalRegenArray index="Life" value="3"/>
+            <VitalRegenArray index="Shields" value="3"/>
+            <AttributeChangeArray Attribute="Fitness" Points="6"/>
+        </Modification>
+        <DamageResponse ModifyFraction="0.5">
+            <Kind index="Melee" value="0"/>
+            <Kind index="Ranged" value="0"/>
+            <Kind index="Splash" value="0"/>
+            <Kind index="NoProc" value="0"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="HeroVesaniaDefense12222">
+        <Tooltip value="Behavior/Tooltip/HeroVesaniaDefense4"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-research-terran-vanadiumplating.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="VesaniaDefenseUpgrade12"/>
+        <Modification ShieldArmorBonus="10">
+            <LifeArmorBonus value="25"/>
+            <VitalMaxArray index="Life" value="80"/>
+            <VitalMaxArray index="Shields" value="100"/>
+            <VitalRegenArray index="Life" value="3"/>
+            <VitalRegenArray index="Shields" value="3"/>
+            <AttributeChangeArray Attribute="Fitness" Points="8"/>
+        </Modification>
+        <DamageResponse ModifyFraction="0.5">
+            <Kind index="Melee" value="0"/>
+            <Kind index="Ranged" value="0"/>
+            <Kind index="Splash" value="0"/>
+            <Kind index="NoProc" value="0"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="NoCost">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <VitalRegenArray index="Energy" value="100"/>
+            <RateMultiplierArray index="Cooldown" value="1000"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="PlasmaPulseVulnerability">
+        <InfoIcon value="Assets\Textures\btn-ability-terran-electricfield.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="8"/>
+        <DamageResponse ModifyFraction="1.1">
+            <Kind index="Melee" value="0"/>
+            <Kind index="Ranged" value="0"/>
+            <Kind index="Splash" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="PlasmaPulseVulnerability3">
+        <InfoIcon value="Assets\Textures\btn-ability-terran-electricfield.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="8"/>
+        <DamageResponse ModifyFraction="1.2">
+            <Kind index="Melee" value="0"/>
+            <Kind index="Ranged" value="0"/>
+            <Kind index="Splash" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="PlasmaPulseVulnerability4">
+        <InfoIcon value="Assets\Textures\btn-ability-terran-electricfield.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="8"/>
+        <DamageResponse ModifyFraction="1.3">
+            <Kind index="Melee" value="0"/>
+            <Kind index="Ranged" value="0"/>
+            <Kind index="Splash" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="VesaniaShield1">
+        <InfoIcon value="Assets\Textures\btn-tips-terran-psishield.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisplayDuration index="Self" value="1"/>
+        <DisplayDuration index="Ally" value="1"/>
+        <Duration value="9"/>
+        <Modification ShieldArmorBonus="5">
+            <VitalMaxArray index="Shields" value="300"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="VesaniaShield2">
+        <InfoIcon value="Assets\Textures\btn-tips-terran-psishield.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisplayDuration index="Self" value="1"/>
+        <DisplayDuration index="Ally" value="1"/>
+        <Duration value="11"/>
+        <Modification ShieldArmorBonus="10">
+            <VitalMaxArray index="Shields" value="600"/>
+        </Modification>
+        <DamageResponse ClampMaximum="500" Maximum="2000" Minimum="500">
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="VesaniaOffense1">
+        <Tooltip value="Behavior/Tooltip/HeroVesaniaOffense1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-ability-terran-punishergrenade-color.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="VesaniaOffenseUpgrade1"/>
+        <Modification WeaponRange="2">
+            <DamageDealtFraction index="Spell" value="0.1"/>
+            <AttributeChangeArray Attribute="Dexterity" Points="2"/>
+            <AttributeChangeArray Attribute="Mechanical" Points="1"/>
+        </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="SpecialForces">
         <BehaviorFlags index="Permanent" value="1"/>
@@ -3011,6 +3176,80 @@
             <VitalRegenArray index="Shields" value="1"/>
         </Modification>
     </CBehaviorBuff>
+    <CBehaviorBuff id="VesaniaOffense2">
+        <Tooltip value="Behavior/Tooltip/HeroVesaniaOffense2"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-ability-terran-punishergrenade-color.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="VesaniaOffenseUpgrade2"/>
+        <Modification AttackSpeedMultiplier="1.15" WeaponRange="2">
+            <DamageDealtFraction index="Spell" value="0.2"/>
+            <AttributeChangeArray Attribute="Dexterity" Points="4"/>
+            <AttributeChangeArray Attribute="Mechanical" Points="2"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="VesaniaOffense3">
+        <Tooltip value="Behavior/Tooltip/HeroVesaniaOffense3"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-ability-terran-punishergrenade-color.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="VesaniaOffenseUpgrade3"/>
+        <Modification AttackSpeedMultiplier="1.15" WeaponRange="4">
+            <DamageDealtFraction index="Spell" value="0.2"/>
+            <DamageDealtAttributeMultiplier index="Armored" value="0.15"/>
+            <DamageDealtAttributeMultiplier index="Massive" value="0.15"/>
+            <AttributeChangeArray Attribute="Dexterity" Points="6"/>
+            <AttributeChangeArray Attribute="Mechanical" Points="3"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="VesaniaOffense4">
+        <Tooltip value="Behavior/Tooltip/HeroVesaniaOffense4"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-ability-terran-punishergrenade-color.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="VesaniaOffenseUpgrade4"/>
+        <Modification AttackSpeedMultiplier="1.3" WeaponRange="4">
+            <DamageDealtFraction index="Spell" value="0.2"/>
+            <DamageDealtAttributeMultiplier index="Armored" value="0.35"/>
+            <DamageDealtAttributeMultiplier index="Massive" value="0.35"/>
+            <AttributeChangeArray Attribute="Dexterity" Points="8"/>
+            <AttributeChangeArray Attribute="Mechanical" Points="4"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="VesaniaShield3">
+        <InfoIcon value="Assets\Textures\btn-tips-terran-psishield.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisplayDuration index="Self" value="1"/>
+        <DisplayDuration index="Ally" value="1"/>
+        <Duration value="13"/>
+        <Modification ShieldArmorBonus="15">
+            <VitalMaxArray index="Shields" value="1000"/>
+        </Modification>
+        <DamageResponse ClampMaximum="400" Maximum="2000" Minimum="400">
+            <Chance value="1"/>
+            <Cost>
+                <Charge Link="Behavior/VesaniaShield2"/>
+                <Cooldown Link="Behavior/VesaniaShield2"/>
+            </Cost>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="VesaniaShield4">
+        <InfoIcon value="Assets\Textures\btn-tips-terran-psishield.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisplayDuration index="Self" value="1"/>
+        <DisplayDuration index="Ally" value="1"/>
+        <Duration value="15"/>
+        <Modification ShieldArmorBonus="20">
+            <VitalMaxArray index="Shields" value="1000"/>
+        </Modification>
+        <DamageResponse ClampMaximum="300" Maximum="2000" Minimum="300">
+            <Chance value="1"/>
+            <Cost>
+                <Charge Link="Behavior/VesaniaShield2"/>
+                <Cooldown Link="Behavior/VesaniaShield2"/>
+            </Cost>
+        </DamageResponse>
+    </CBehaviorBuff>
     <CBehaviorBuff id="XM88b">
         <Tooltip value="Button/Tooltip/XM88bPhasedPlasmaRifle"/>
         <Alignment value="Positive"/>
@@ -5315,11 +5554,13 @@
         <InfoIcon value="Assets\Custom Icons\BTN-SecArmorRA.dds"/>
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
         <Modification>
-            <LifeArmorBonus value="4"/>
+            <LifeArmorBonus value="17"/>
         </Modification>
-        <DamageResponse ModifyFraction="0.84">
+        <DamageResponse ModifyFraction="0.7">
             <Kind index="Melee" value="0"/>
+            <Kind index="Ranged" value="0"/>
             <Kind index="Splash" value="0"/>
+            <Kind index="NoProc" value="0"/>
             <Chance value="1"/>
         </DamageResponse>
     </CBehaviorBuff>
@@ -5993,6 +6234,7 @@
         <DisableValidatorArray value="Health50"/>
         <InitialEffect value="BioSuitSet"/>
         <Modification>
+            <LifeArmorBonus value="7"/>
             <VitalRegenArray index="Life" value="1.5"/>
         </Modification>
     </CBehaviorBuff>
@@ -6918,8 +7160,7 @@
         <DisableValidatorArray value="Health100"/>
         <VitalRegenVitalsRemainPercent index="Life" AmountMissing="0.01" RegenModification="0.1015"/>
         <Modification>
-            <VitalRegenArray index="Energy" value="-0.5"/>
-            <VitalRegenMultiplier index="Shields" value="-1"/>
+            <VitalMaxArray index="Energy" value="-30"/>
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="Slimed">
@@ -7736,7 +7977,8 @@
         <BehaviorFlags index="Permanent" value="1"/>
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
-        <Modification MoveSpeedBonus="-0.0703">
+        <Modification ShieldArmorBonus="15">
+            <LifeArmorBonus value="15"/>
             <VitalMaxFractionArray index="Life" value="0.1"/>
         </Modification>
         <DamageResponse ModifyFraction="0.75">
@@ -10124,9 +10366,7 @@
         <Alignment value="Positive"/>
         <InfoIcon value="Assets\Buttons\Btn_Custom_UAC_StabVest.dds"/>
         <Modification DetectArc="0" RadarArc="0">
-            <LifeArmorBonus value="5"/>
-            <VitalMaxArray index="Shields" value="50"/>
-            <VitalRegenArray index="Shields" value="1"/>
+            <LifeArmorBonus value="14"/>
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="ImprovedPainKiller">
@@ -10213,9 +10453,7 @@
         <Alignment value="Positive"/>
         <InfoIcon value="Assets\Buttons\Btn_Custom_UAC_InterceptorBodyArmor.dds"/>
         <Modification MoveSpeedBonus="-0.1015" DetectArc="0" RadarArc="0">
-            <LifeArmorBonus value="12"/>
-            <VitalMaxArray index="Shields" value="75"/>
-            <VitalRegenArray index="Shields" value="1"/>
+            <LifeArmorBonus value="24"/>
         </Modification>
         <Tooltip value="Button/Tooltip/SPCS"/>
     </CBehaviorBuff>

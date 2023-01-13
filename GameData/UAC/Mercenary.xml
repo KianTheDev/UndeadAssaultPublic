@@ -1383,6 +1383,7 @@
             <Charge Link="Marine/Revive"/>
             <Cooldown Link="Marine/Revive"/>
         </ReviveInfoBase>
+        <LifeArmorName value="Unit/LifeArmorName/LandWarriorSystemLight"/>
     </CUnit>
     <CUnit id="Mercenary2" parent="UnitTemplateCustom" UnitTemplateCustomWeapon="">
         <AbilArray index="5" Link="ImmediateRemedialAction"/>

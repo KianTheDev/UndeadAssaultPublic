@@ -1,10 +1,15 @@
-<?xml version="1.0" encoding="us-ascii"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Catalog>
     <CButton id="25YOrbitalSupportSpecialistTest">
         <Tooltip value="Button/Tooltip/OrbitalSupportSpecialist"/>
         <Icon value="Assets\Buttons\Portraits\BTN_OSS_Portrait.dds"/>
         <AlertTooltip value="Button/Tooltip/OrbitalSupportSpecialist"/>
         <AlertIcon value="Assets\Buttons\Portraits\BTN_OSS_Portrait.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="24XVesania30">
+        <Icon value="Assets\Textures\marauderdeluxe_static.dds"/>
+        <AlertIcon value="Buttons\BTNMedic.dds"/>
         <EditorCategories value="Race:Terran"/>
     </CButton>
     <CButton id="74DFlamethrowerTest">
@@ -32,6 +37,21 @@
         <AlertName value="Button/Name/ATRocket"/>
         <AlertTooltip value="Button/Tooltip/ATRocket"/>
         <AlertIcon value="Buttons\Misc Items\BTNRocketLauncher.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="LearnDefensiveSkills">
+        <Icon value="Assets\Textures\btn-research-terran-vanadiumplating.dds"/>
+        <AlertIcon value="Assets\Textures\btn-research-terran-vanadiumplating.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="LearnOffensiveSkills">
+        <Icon value="Assets\Textures\btn-ability-terran-punishergrenade-color.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-punishergrenade-color.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="VesaniaPlasmaShield">
+        <Icon value="Assets\Textures\btn-tips-terran-psishield.dds"/>
+        <AlertIcon value="Assets\Textures\btn-tips-terran-psishield.dds"/>
         <EditorCategories value="Race:Terran"/>
     </CButton>
     <CButton id="Readme1">
@@ -2483,6 +2503,12 @@
     </CButton>
     <CButton id="XR900">
         <Icon value="Assets\Custom Icons\BTN_XR9000.dds"/>
+    </CButton>
+    <CButton id="PlasmaPulseCannon">
+        <Icon value="Assets\Textures\btn-ability-terran-yamatogun-color.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-yamatogun-color.dds"/>
+        <EditorCategories value="Race:Terran"/>
+        <Universal value="1"/>
     </CButton>
     <CButton id="immediateSmoke">
         <Icon value="Assets\Textures\btn-ability-terran-irradiate.dds"/>

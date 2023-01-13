@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="us-ascii"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Catalog>
     <CRequirement id="AWPlasmaGrenReq">
         <EditorCategories value="Race:Terran,TechType:Ability"/>
@@ -61,6 +61,10 @@
     <CRequirement id="LNM2SentryReq">
         <EditorCategories value="Race:Terran,TechType:Ability"/>
         <NodeArray index="Use" Link="OrAnd2113077449GTECountUpgradeTrainingCompleteOnlyTechTreeCheat4LTSumCountUnitLNM1SentryGunCompleteOnlyCountUnitLNM2SentryGunCompleteOnlySumCountUnitLNCombatEngineerCompleteOnlyCountUnitLNCombatEngine290581353"/>
+    </CRequirement>
+    <CRequirement id="LearnAbilitiesVesaniaReq">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="AndEqCountAbilDefensiveSkillsQueuedOnly0EqCountAbilMarksmanshipQueuedOnly0EqCountAbilAssassinSkillsQueuedOnly0EqCountAbilSpecializedRoundsQueuedOnly0EqCountAbilReconExpertQueuedOnly0"/>
     </CRequirement>
     <CRequirement id="LearnAssassinSkills1A">
         <NodeArray index="Use" Link="EqCountAbilAssassinSkillsCompleteOnlyAtUnit1"/>
@@ -1477,6 +1481,46 @@
     </CRequirement>
     <CRequirement id="RainofFireReq">
         <NodeArray index="Use" Link="CountUpgradeOrbitalStrikeHeroCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="VesaniaDefenseUpgrade1">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="EqCountAbilDefensiveSkillsCompleteOnlyAtUnit1"/>
+        <NodeArray index="Show" Link="EqCountAbilDefensiveSkillsCompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="VesaniaDefenseUpgrade12">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="EqCountAbilDefensiveSkillsCompleteOnlyAtUnit4"/>
+        <NodeArray index="Show" Link="EqCountAbilDefensiveSkillsCompleteOnlyAtUnit4"/>
+    </CRequirement>
+    <CRequirement id="VesaniaDefenseUpgrade122">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="EqCountAbilDefensiveSkillsCompleteOnlyAtUnit2"/>
+        <NodeArray index="Show" Link="EqCountAbilDefensiveSkillsCompleteOnlyAtUnit2"/>
+    </CRequirement>
+    <CRequirement id="VesaniaDefenseUpgrade123">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="EqCountAbilDefensiveSkillsCompleteOnlyAtUnit3"/>
+        <NodeArray index="Show" Link="EqCountAbilDefensiveSkillsCompleteOnlyAtUnit3"/>
+    </CRequirement>
+    <CRequirement id="VesaniaOffenseUpgrade1">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="EqCountAbilOffensiveSkillsCompleteOnlyAtUnit1"/>
+        <NodeArray index="Show" Link="EqCountAbilOffensiveSkillsCompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="VesaniaOffenseUpgrade2">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="EqCountAbilOffensiveSkillsCompleteOnlyAtUnit2"/>
+        <NodeArray index="Show" Link="EqCountAbilOffensiveSkillsCompleteOnlyAtUnit2"/>
+    </CRequirement>
+    <CRequirement id="VesaniaOffenseUpgrade3">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="EqCountAbilOffensiveSkillsCompleteOnlyAtUnit3"/>
+        <NodeArray index="Show" Link="EqCountAbilOffensiveSkillsCompleteOnlyAtUnit3"/>
+    </CRequirement>
+    <CRequirement id="VesaniaOffenseUpgrade4">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="EqCountAbilOffensiveSkillsCompleteOnlyAtUnit4"/>
+        <NodeArray index="Show" Link="EqCountAbilOffensiveSkillsCompleteOnlyAtUnit4"/>
     </CRequirement>
     <CRequirement id="WaveAmplifier">
         <EditorCategories value="Race:Terran,TechType:Upgrade"/>

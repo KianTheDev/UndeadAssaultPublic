@@ -1,16 +1,17 @@
-<?xml version="1.0" encoding="us-ascii"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Catalog>
-    <CMoverMissile id="WarHoundWeapon">
-        <MotionPhases index="0">
+    <CMoverMissile id="PunisherGrenadesWeapon2">
+        <MotionPhases>
             <Driver value="Guidance"/>
             <Acceleration value="3200"/>
-            <MaxSpeed value="120"/>
-            <ClearanceAcceleration value="75"/>
-            <ActorTracking value="Actual"/>
-            <Outro value="-1"/>
-            <RotationLaunchActorType value="LaunchToTarget"/>
-            <YawPitchRoll value="719.2968"/>
+            <MaxSpeed value="32"/>
+            <ThrowBandYaw value="-360,-360,-360,-360"/>
+            <ThrowBandPitch value="-360,-360,-360,-360"/>
+            <YawPitchRoll value="5759.6484"/>
         </MotionPhases>
+    </CMoverMissile>
+    <CMoverMissile id="WarHoundWeapon">
+        <MotionPhases index="0" MaxSpeed="120"/>
     </CMoverMissile>
     <CMoverMissile id="WristRocket">
         <HeightMap value="Air"/>
@@ -112,18 +113,7 @@
         <PathMode value="Scaler"/>
     </CMoverAvoid>
     <CMoverMissile id="FungalGrowthWeapon">
-        <MotionPhases index="0">
-            <Driver value="Guidance"/>
-            <Acceleration value="1000"/>
-            <Speed value="100"/>
-            <MaxSpeed value="16"/>
-            <IgnoresTerrain value="1"/>
-            <ActorTracking value="Actual"/>
-            <ThrowBandYaw value="-360,-360,-360,-360"/>
-            <ThrowBandPitch value="-360,-360,-360,-360"/>
-            <YawPitchRoll value="119.8828"/>
-            <YawPitchRollAccel value="180"/>
-        </MotionPhases>
+        <MotionPhases index="0" MaxSpeed="16"/>
     </CMoverMissile>
     <CMoverMissile id="MonoWireMover">
         <MotionPhases>
@@ -148,17 +138,12 @@
     </CMoverMissile>
     <CMoverMissile id="InfestorNeuralParasite">
         <MotionPhases index="0">
-            <Driver value="Guidance"/>
-            <Acceleration value="20"/>
             <MaxSpeed value="15"/>
-            <Outro value="4,5"/>
             <ThrowBandYaw value="-360,-360,-360,-360"/>
             <ThrowBandPitch value="-360,-360,-360,-360"/>
             <YawPitchRoll value="5759.6484"/>
         </MotionPhases>
         <MotionPhases index="1">
-            <Driver value="Guidance"/>
-            <Acceleration value="20"/>
             <MaxSpeed value="18"/>
             <ThrowBandYaw value="-360,-360,-360,-360"/>
             <ThrowBandPitch value="-360,-360,-360,-360"/>
@@ -218,8 +203,6 @@
     </CMoverMissile>
     <CMoverMissile id="PunisherGrenadesWeapon">
         <MotionPhases index="0">
-            <Driver value="Guidance"/>
-            <Acceleration value="3200"/>
             <MaxSpeed value="32"/>
             <ThrowBandYaw value="-360,-360,-360,-360"/>
             <ThrowBandPitch value="-360,-360,-360,-360"/>
@@ -227,27 +210,7 @@
         </MotionPhases>
     </CMoverMissile>
     <CMoverMissile id="RavasaurWeapon">
-        <MotionPhases index="0">
-            <Driver value="AdaptableParabola"/>
-            <Acceleration value="0"/>
-            <MinSpeed value="15"/>
-            <MaxSpeed value="15"/>
-            <ClearanceAcceleration value="75"/>
-            <ActorTracking value="Actual"/>
-            <Outro value="0"/>
-            <AdaptableParabolaIsUpright value="1"/>
-            <AdaptableParabolaClearance value="3,0.5"/>
-            <YawPitchRoll value="0"/>
-            <AdaptableParabolaDistances index="Launch" value="1"/>
-            <AdaptableParabolaDistances index="PreApex" value="0.3"/>
-            <AdaptableParabolaDistances index="PostApex" value="0.3"/>
-            <AdaptableParabolaDistances index="Land" value="1"/>
-            <AdaptableParabolaAccels index="Launch" value="0"/>
-            <AdaptableParabolaAccels index="Ascent" value="0"/>
-            <AdaptableParabolaAccels index="Apex" value="0"/>
-            <AdaptableParabolaAccels index="Descent" value="0"/>
-            <AdaptableParabolaAccels index="Land" value="0"/>
-        </MotionPhases>
+        <MotionPhases index="0" MinSpeed="15" MaxSpeed="15"/>
     </CMoverMissile>
     <CMoverMissile id="Shell">
         <PathMode value="Flying"/>
@@ -276,7 +239,6 @@
     </CMoverMissile>
     <CMoverMissile id="TossGrenade">
         <MotionPhases index="0">
-            <Driver value="Ballistic"/>
             <Gravity value="9"/>
             <IgnoresTerrain value="1"/>
             <ThrowBandYaw value="-360,-360,-360,-360"/>

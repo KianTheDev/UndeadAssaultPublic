@@ -394,6 +394,101 @@
         <GlossaryWeakArray index="2" removed="1"/>
         <GlossaryWeakArray index="3" removed="1"/>
     </CUnit>
+    <CUnit id="PlasmaPulse" parent="MISSILE">
+        <Race value="Terr"/>
+        <FlagArray index="Invulnerable" value="1"/>
+        <Mover value="MRLRocket"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Campaign"/>
+    </CUnit>
+    <CUnitHero id="Vesania30" parent="UnitTemplate">
+        <Race value="Terr"/>
+        <Attributes index="Light" value="0"/>
+        <Attributes index="Biological" value="0"/>
+        <Attributes index="Mechanical" value="1"/>
+        <LifeStart value="600"/>
+        <LifeMax value="600"/>
+        <LifeArmor value="10"/>
+        <LifeArmorDisplayFlags index="CollapseBuffed" value="0"/>
+        <LifeArmorDisplayFlags index="ExpandUpgraded" value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/Vesania30"/>
+        <Speed value="2.8007"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="Sprint"/>
+        <AbilArray Link="Jump"/>
+        <AbilArray Link="ReloadHero"/>
+        <AbilArray Link="LearnAbilitiesVesania30"/>
+        <AbilArray Link="DefensiveSkills"/>
+        <AbilArray Link="OffensiveSkills"/>
+        <AbilArray Link="HeroInventoryNoWeapon2"/>
+        <AbilArray Link="VesaniaPlasmaShield"/>
+        <AbilArray Link="ImmediateRemedialAction"/>
+        <AbilArray Link="VesaniaPlasmaPulse"/>
+        <AbilArray Link="WeaponsHold2"/>
+        <AbilArray Link="DropMagazine"/>
+        <BehaviorArray Link="HeroLevels"/>
+        <BehaviorArray Link="Fitness"/>
+        <BehaviorArray Link="Dexterity"/>
+        <BehaviorArray Link="Mechanical"/>
+        <BehaviorArray Link="StartingStats"/>
+        <BehaviorArray Link="HeroVesaniaDefense12"/>
+        <BehaviorArray Link="HeroVesaniaDefense122"/>
+        <BehaviorArray Link="HeroVesaniaDefense1222"/>
+        <BehaviorArray Link="HeroVesaniaDefense12222"/>
+        <BehaviorArray Link="HardArmor2"/>
+        <BehaviorArray Link="VesaniaOffense1"/>
+        <BehaviorArray Link="VesaniaOffense2"/>
+        <BehaviorArray Link="VesaniaOffense3"/>
+        <BehaviorArray Link="VesaniaOffense4"/>
+        <BehaviorArray Link="GasMaskNoReq"/>
+        <WeaponArray index="0" Link="Vesania30Weapon"/>
+        <CardLayouts>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="AdditionalActions" Type="Submenu" SubmenuCardId="0003" Row="2" Column="0"/>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="2"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="3"/>
+            <LayoutButtons>
+                <Face value="LearnAbilities"/>
+                <Type value="Submenu"/>
+                <SubmenuAbilState value="LearnAbilitiesVesania30"/>
+                <SubmenuCardId value="0002"/>
+                <Row value="1"/>
+                <Column value="4"/>
+            </LayoutButtons>
+            <LayoutButtons Face="VesaniaPlasmaShield" Type="AbilCmd" AbilCmd="VesaniaPlasmaShield,On" Row="2" Column="2"/>
+            <LayoutButtons Face="PlasmaPulseCannon" Type="AbilCmd" AbilCmd="VesaniaPlasmaPulse,Execute" Row="2" Column="3"/>
+        </CardLayouts>
+        <CardLayouts CardId="0002">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="LearnDefensiveSkills" Type="AbilCmd" AbilCmd="LearnAbilitiesVesania30,Learn1" Row="0" Column="0"/>
+            <LayoutButtons Face="LearnOffensiveSkills" Type="AbilCmd" AbilCmd="LearnAbilitiesVesania30,Learn2" Row="0" Column="1"/>
+            <LayoutButtons Face="VesaniaPlasmaShield" Type="AbilCmd" AbilCmd="LearnAbilitiesVesania30,Learn3" Row="0" Column="2"/>
+            <LayoutButtons Face="PlasmaPulseCannon" Type="AbilCmd" AbilCmd="LearnAbilitiesVesania30,Learn4" Row="0" Column="3"/>
+        </CardLayouts>
+        <CardLayouts CardId="0003">
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="Reload" Type="AbilCmd" AbilCmd="ReloadHero,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="ImmediateRemedialAction" Type="AbilCmd" AbilCmd="ImmediateRemedialAction,Execute" Row="0" Column="2"/>
+            <LayoutButtons Face="HoldFire" Type="AbilCmd" AbilCmd="WeaponsHold2,255" Row="1" Column="3"/>
+            <LayoutButtons Face="HoldFireOff" Type="AbilCmd" AbilCmd="WeaponsHold2,Off" Row="1" Column="3"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="DropMagazine" Type="AbilCmd" AbilCmd="DropMagazine,Execute" Row="0" Column="3"/>
+            <LayoutButtons>
+                <Face value="HardArmor"/>
+                <Type value="Passive"/>
+                <Behavior value="HardArmor2"/>
+                <Requirements value="VesaniaDefenseUpgrade12"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+        </CardLayouts>
+        <EditorCategories value="ObjectType:Hero,ObjectFamily:Melee"/>
+        <ShieldArmor value="5"/>
+    </CUnitHero>
     <CUnit id="PrimalRoach">
         <BehaviorArray index="2" removed="1"/>
     </CUnit>
@@ -20067,7 +20162,7 @@
         <AbilArray Link="ChooseOrbitalSupportSpecialist"/>
         <AbilArray Link="ChooseHeavyGunner"/>
         <AbilArray Link="ChooseAH32Viper"/>
-        <AbilArray Link="ChooseAkma"/>
+        <AbilArray Link="ChooseVesania30"/>
         <AbilArray Link="ChooseJashan"/>
         <AbilArray Link="ChooseRandomMos"/>
         <AbilArray Link="ChooseBioSpecialist"/>
@@ -20111,6 +20206,7 @@
             <LayoutButtons Face="ChooseMercenary" Type="AbilCmd" AbilCmd="ChooseMercenary,Execute" Row="1" Column="0"/>
             <LayoutButtons Face="ChooseMechOperator" Type="AbilCmd" AbilCmd="ChooseMechOperator,Execute" Row="1" Column="1"/>
             <LayoutButtons Face="ChooseBioSpecialist" Type="AbilCmd" AbilCmd="ChooseBioSpecialist,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="24XVesania30" Type="AbilCmd" AbilCmd="ChooseVesania30,Execute" Row="1" Column="2"/>
         </CardLayouts>
         <CardLayouts CardId="0003">
             <LayoutButtons Face="ChooseAH32Viper" Type="AbilCmd" AbilCmd="ChooseAH32Viper,Execute" Row="0" Column="0"/>

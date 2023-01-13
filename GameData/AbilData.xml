@@ -238,6 +238,133 @@
         <ProgressButtonArray index="Cast" value="ATRocket"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="ATMissile"/>
     </CAbilEffectTarget>
+    <CAbilEffectInstant id="ChooseVesania30">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="ChooseLaserEnforcer2"/>
+        <Flags index="AbortOnAllianceChange" value="0"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Location value="Global"/>
+            </Charge>
+            <Cooldown Link="ChooseHero" Location="Player" TimeUse="1"/>
+        </Cost>
+        <AINotifyEffect value="ChooseLaserEnforcer2"/>
+        <ProducedUnitArray value="Vesania30"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="24XVesania30"/>
+    </CAbilEffectInstant>
+    <CAbilEffectTarget id="VesaniaPlasmaPulse">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="PlasmaPulse1"/>
+        <Effect value="PlasmaPulse2"/>
+        <Effect value="PlasmaPulse3"/>
+        <Effect value="PlasmaPulse4"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Vital index="Energy" value="90"/>
+            <Cooldown TimeUse="40"/>
+        </Cost>
+        <Cost>
+            <Vital index="Energy" value="83"/>
+            <Cooldown TimeUse="36"/>
+        </Cost>
+        <Cost>
+            <Vital index="Energy" value="76"/>
+            <Cooldown TimeUse="33"/>
+        </Cost>
+        <Cost>
+            <Vital index="Energy" value="70"/>
+            <Cooldown TimeUse="30"/>
+        </Cost>
+        <Range value="20"/>
+        <Range value="25"/>
+        <Range value="30"/>
+        <Range value="35"/>
+        <CastIntroTime value="1"/>
+        <CastIntroTime value="1"/>
+        <CastIntroTime value="1"/>
+        <CastIntroTime value="1"/>
+        <ShowProgressArray index="Cast" value="1"/>
+        <CursorEffect value="PlasmaPulseDamage1"/>
+        <CursorEffect value="PlasmaPulseHit1"/>
+        <CursorEffect value="PlasmaPulseHit3"/>
+        <CursorEffect value="PlasmaPulseHit4"/>
+        <AINotifyEffect value="PlasmaPulseDamage1"/>
+        <ProgressButtonArray index="Cast" value="PlasmaPulseCannon"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="PlasmaPulseCannon"/>
+    </CAbilEffectTarget>
+    <CAbilInventory id="HeroInventoryNoWeapon2">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Range value="2"/>
+        <MaxDropRange value="2"/>
+        <InfoArray Alignment="Left">
+            <Classes value="Misc"/>
+        </InfoArray>
+        <InfoArray Alignment="Left">
+            <Classes value="Misc"/>
+        </InfoArray>
+        <InfoArray Alignment="Left">
+            <Classes value="Misc"/>
+        </InfoArray>
+        <InfoArray Alignment="Left">
+            <Classes value="Misc"/>
+        </InfoArray>
+        <InfoArray Alignment="Left">
+            <Classes value="Misc"/>
+            <Classes value="Misc"/>
+        </InfoArray>
+        <InfoArray Alignment="Left">
+            <Classes value="Misc"/>
+        </InfoArray>
+    </CAbilInventory>
+    <CAbilBehavior id="OffensiveSkills">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="LearnOffensiveSkills"/>
+        <Flags index="ToggledOn" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+    </CAbilBehavior>
+    <CAbilLearn id="LearnAbilitiesVesania30" parent="LearnAbilityMOS">
+        <Name value="Abil/Name/LearnAbilitiesVesania30"/>
+        <InfoArray index="Learn1" Abil="DefensiveSkills">
+            <Button DefaultButtonFace="LearnDefensiveSkills" Requirements=""/>
+        </InfoArray>
+        <InfoArray index="Learn2" Abil="OffensiveSkills">
+            <Button DefaultButtonFace="LearnOffensiveSkills" Requirements=""/>
+        </InfoArray>
+        <InfoArray index="Learn3" Abil="VesaniaPlasmaShield">
+            <Charge CountMax="100" CountStart="100"/>
+            <Button DefaultButtonFace="VesaniaPlasmaShield"/>
+        </InfoArray>
+        <InfoArray index="Learn4" Abil="VesaniaPlasmaPulse">
+            <Charge CountMax="100" CountStart="100"/>
+            <Button DefaultButtonFace="PlasmaPulseCannon"/>
+        </InfoArray>
+        <InfoArray index="Learn5" Abil="PlasmaGrenade">
+            <Charge CountMax="100" CountStart="100"/>
+            <Button DefaultButtonFace="PlasmaGrenade"/>
+        </InfoArray>
+    </CAbilLearn>
     <CAbilLearn id="LearnRiflemanAbilities">
         <EditorCategories value="AbilityorEffectType:Units,Race:Human"/>
         <InfoArray index="Learn1" Abil="SoldierSkills">
@@ -306,6 +433,75 @@
         </InfoArray>
         <PointsPerLevel value="1"/>
     </CAbilLearn>
+    <CAbilBehavior id="VesaniaPlasmaShield">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="VesaniaPlasmaShield">
+            <Flags index="ShowInGlossary" value="0"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="Off">
+            <Flags index="Hidden" value="1"/>
+        </CmdButtonArray>
+        <Flags index="Toggle" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="90"/>
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <TimeUse value="40"/>
+            </Charge>
+            <Cooldown TimeUse="15"/>
+        </Cost>
+        <Cost>
+            <Vital index="Energy" value="85"/>
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <TimeUse value="35"/>
+            </Charge>
+            <Cooldown TimeUse="15"/>
+        </Cost>
+        <Cost>
+            <Vital index="Energy" value="80"/>
+            <Charge>
+                <CountMax value="2"/>
+                <CountStart value="2"/>
+                <CountUse value="1"/>
+                <TimeUse value="30"/>
+            </Charge>
+            <Cooldown TimeUse="15"/>
+        </Cost>
+        <Cost>
+            <Vital index="Energy" value="75"/>
+            <Charge>
+                <CountMax value="2"/>
+                <CountStart value="2"/>
+                <CountUse value="1"/>
+                <TimeUse value="27"/>
+            </Charge>
+            <Cooldown TimeUse="15"/>
+        </Cost>
+        <BehaviorArray value="VesaniaShield1"/>
+        <BehaviorArray value="VesaniaShield2"/>
+        <BehaviorArray value="VesaniaShield3"/>
+        <BehaviorArray value="VesaniaShield4"/>
+    </CAbilBehavior>
+    <CAbilEffectInstant id="Stimpack2">
+        <AbilSetId value="Stimpack"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <InfoTooltipPriority value="1"/>
+        <Effect index="0" value="Stimpack"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Vital index="Life" value="10"/>
+        </Cost>
+        <AINotifyEffect value="Stimpack"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Stim" State="Restricted" Requirements="UseStimpackSM">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+    </CAbilEffectInstant>
     <CAbilEffectTarget id="StrikeTeam">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
         <Flags index="AllowMovement" value="1"/>
@@ -9269,6 +9465,11 @@
         <ProgressButtonArray index="Cast" value="SummonZulusJashan"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="SummonZulusJashan" Requirements="CivLevel10"/>
     </CAbilEffectInstant>
+    <CAbilAttack id="attack2">
+        <TargetMessage value="Abil/TargetMessage/attack2"/>
+        <MinAttackSpeedMultiplier value="0.25"/>
+        <MaxAttackSpeedMultiplier value="128"/>
+    </CAbilAttack>
     <CAbilEffectTarget id="immediateSmoke">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
         <Effect index="0" value="CallForFirePL"/>
@@ -9691,4 +9892,26 @@
     <CAbilEffectTarget id="AmonTentacleC">
         <TargetFilters value="Ground,Visible;Self,Player,Ally,Neutral,Psionic,Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CAbilEffectTarget>
+    <CAbilBehavior id="DefensiveSkills">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="LearnDefensiveSkills"/>
+        <Flags index="ToggledOn" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+    </CAbilBehavior>
 </Catalog>
