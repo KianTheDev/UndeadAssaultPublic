@@ -32,6 +32,11 @@
             <Chance value="0.27"/>
         </DamageResponse>
     </CBehaviorBuff>
+    <CBehaviorBuff id="EdinWoofWoof">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification UnitNameOverride="Unit\Troll\WoofWoof"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="ForceLowDeath2">
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
@@ -122,12 +127,45 @@
             <Kind index="NoProc" value="0"/>
         </DamageResponse>
     </CBehaviorBuff>
+    <CBehaviorBuff id="InfestedSmithyPlating">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DamageResponse ModifyFraction="0.1">
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
     <CBehaviorBuff id="NoCost">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
-            <VitalRegenArray index="Energy" value="100"/>
+            <VitalRegenArray index="Energy" value="10000"/>
+            <RateMultiplierArray index="Charge" value="1000"/>
             <RateMultiplierArray index="Cooldown" value="1000"/>
         </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="InfestedNuclearAI">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Period value="6"/>
+        <PeriodicEffect value="InfestedNuclearCast"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DoomsdayBeam">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Custom Icons\btn-ability-RaysPurple.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="NotCleansing"/>
+        <Duration value="-1"/>
+        <Modification>
+            <ModifyFlags index="Reveal" value="1"/>
+            <StateFlags index="SuppressCloak" value="1"/>
+        </Modification>
+        <DamageResponse ModifyFraction="3">
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DoomsdayBeamTarget">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="1"/>
+        <FinalEffect value="DoomsdayTargetAB"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="PlasmaPulseVulnerability">
         <InfoIcon value="Assets\Textures\btn-ability-terran-electricfield.dds"/>
@@ -164,6 +202,50 @@
             <Kind index="NoProc" value="0"/>
             <Chance value="1"/>
         </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="InfestedSystemRestore">
+        <InfoIcon value="Assets\Textures\btn-tips-computerterminals.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="NoEMP"/>
+        <FinalEffect value="InfestedSystemRestoreSet"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="InfestedSystemRestoreCooldown">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-tips-computerterminals.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="3"/>
+        <FinalEffect value="ApplyInfestedSystemRestore"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DevInvul">
+        <Alignment value="Positive"/>
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-hero-alarak.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <DamageResponse ModifyFraction="0">
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="OrbitalBeam">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Custom Icons\btn-ability-RaysPurple.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="NotCleansing"/>
+        <Duration value="15"/>
+        <Period value="0.1"/>
+        <PeriodicEffect value="OrbitalBeamDoT"/>
+        <Modification>
+            <ModifyFlags index="Reveal" value="1"/>
+            <StateFlags index="SuppressCloak" value="1"/>
+        </Modification>
+        <DamageResponse ModifyFraction="2">
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="OrbitalBeamTarget">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="3"/>
+        <FinalEffect value="OrbitalBeamTargetAB"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="VesaniaShield1">
         <InfoIcon value="Assets\Textures\btn-tips-terran-psishield.dds"/>
@@ -228,15 +310,9 @@
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
         <InitialEffect value="EquipPlasmaRifle"/>
-        <Modification>
-            <HealTakenMultiplier value="0.5"/>
-            <MoveSpeedBonus value="-0.0117"/>
-            <Detect value="8"/>
-            <DetectFilters value="-;Missile"/>
-            <UnitNameOverride value="AdvancedWarfighter"/>
+        <Modification Detect="8" DetectFilters="-;Missile" UnitNameOverride="AdvancedWarfighter">
             <VitalMaxArray index="Life" value="-85"/>
-            <VitalMaxArray index="Shields" value="25"/>
-            <VitalRegenMultiplier index="Life" value="-0.5"/>
+            <VitalMaxArray index="Shields" value="50"/>
             <VitalRegenMultiplier index="Shields" value="0.5"/>
             <BehaviorLinkDisableArray value="EquipRifleBasic"/>
         </Modification>
@@ -9792,6 +9868,7 @@
         <InfoIcon value="Assets\Textures\btn-ability-protoss-arguslink.dds"/>
         <Modification SightMaximum="0">
             <ModifyFlags index="DisableAbils" value="1"/>
+            <ModifyFlags index="DisableWeapons" value="1"/>
             <ModifyFlags index="SuppressMoving" value="1"/>
             <ModifyFlags index="SuppressTurning" value="1"/>
             <StateFlags index="Invulnerable" value="1"/>

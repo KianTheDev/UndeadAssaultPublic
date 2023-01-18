@@ -116,7 +116,7 @@
         <DamagePoint value="0.05"/>
         <Backswing value="0"/>
         <Effect value="AssaultRifleSwitch"/>
-        <DisplayAttackCount value="60"/>
+        <DisplayAttackCount value="3"/>
         <RandomDelayMin value="0"/>
         <RandomDelayMax value="0"/>
     </CWeaponLegacy>
@@ -207,6 +207,26 @@
         <DamagePoint value="0.05"/>
         <Backswing value="0"/>
         <Effect value="CorruptedMortarLaunch"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ExampleRifle">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Buttons\Weapons\MANTEL-75.dds"/>
+        <DisplayEffect value="ExamplePlasmaDamage"/>
+        <DisplayAttackCount value="3"/>
+        <TargetFilters value="Visible;Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <ChaseFilters value="-;Player,Ally,Neutral,Enemy"/>
+        <MinScanRange value="15"/>
+        <Range value="15"/>
+        <RangeSlop value="3"/>
+        <Cost>
+            <Resource index="Minerals" value="1"/>
+        </Cost>
+        <Period value="0.5"/>
+        <DamagePoint value="0.05"/>
+        <Backswing value="0"/>
+        <Effect value="ExampleBurst"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="OverclockedPlasmaRifle">
         <EditorCategories value="Race:Terran"/>

@@ -208,6 +208,11 @@
         <EquipmentArray Icon="Assets\Textures\btn-research-zerg-shriketurret.dds"/>
         <Sight value="0"/>
     </CUnit>
+    <CUnit id="CollapsiblePurifierTowerDebris">
+        <LifeStart value="500"/>
+        <LifeMax value="500"/>
+        <AttackTargetPriority value="50"/>
+    </CUnit>
     <CUnit id="ColonistShipFlying">
         <Description value="Button/Tooltip/Magpie"/>
         <LifeStart value="1200"/>
@@ -332,6 +337,58 @@
         <CargoSize value="1"/>
         <EditorCategories value="ObjectFamily:Melee,ObjectType:Unit"/>
     </CUnit>
+    <CUnit id="DestructibleRock2x4Horizontal">
+        <Footprint value="Footprint4x4DestructibleRock"/>
+    </CUnit>
+    <CUnit id="OrbitalSatelliteTargeter" parent="ITEM">
+        <FlagArray index="Unclickable" value="0"/>
+        <FlagArray index="Unhighlightable" value="0"/>
+        <FlagArray index="Untooltipable" value="0"/>
+        <FlagArray index="ShowResources" value="0"/>
+        <Collide index="Larva" value="1"/>
+        <Attributes index="Psionic" value="1"/>
+        <LifeStart value="200"/>
+        <LifeMax value="200"/>
+        <Sight value="0"/>
+        <Radius value="0.1875"/>
+        <SeparationRadius value="0.2"/>
+        <EquipmentArray Icon="Assets\Textures\btn-ability-protoss-planetcracker.dds"/>
+    </CUnit>
+    <CUnit id="SolarBeam">
+        <ReviveType value="SmokeGrenade2"/>
+        <Race value="Terr"/>
+        <FlagArray index="Turnable" value="0"/>
+        <FlagArray index="Movable" value="0"/>
+        <FlagArray index="Unclickable" value="0"/>
+        <FlagArray index="Uncommandable" value="1"/>
+        <FlagArray index="Unhighlightable" value="0"/>
+        <FlagArray index="Untooltipable" value="0"/>
+        <FlagArray index="Unselectable" value="1"/>
+        <FlagArray index="Untargetable" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="KillCredit" value="0"/>
+        <FlagArray index="Invulnerable" value="1"/>
+        <FlagArray index="ShowResources" value="0"/>
+        <EditorFlags index="BlockStructures" value="0"/>
+        <LifeStart value="200"/>
+        <LifeMax value="200"/>
+        <Sight value="1"/>
+        <BehaviorArray Link="EnergyRaysLoop"/>
+        <BehaviorArray Link="SmokeGrenadeTimedLife"/>
+        <Radius value="0"/>
+        <SeparationRadius value="0"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <TacticalAI value="SmokeGrenade"/>
+        <LeaderAlias value="SmokeGrenade2"/>
+        <HotkeyAlias value="SmokeGrenade2"/>
+        <SelectAlias value="SmokeGrenade2"/>
+        <SubgroupAlias value="SmokeGrenade2"/>
+        <AIEvaluateAlias value="SmokeGrenade2"/>
+        <ReviveInfoBase>
+            <Charge Link="SmokeGrenade/Revive"/>
+            <Cooldown Link="SmokeGrenade/Revive"/>
+        </ReviveInfoBase>
+    </CUnit>
     <CUnit id="HERC">
         <CardLayouts index="0">
             <LayoutButtons Face="AcidExplosionImmunity" Type="Passive" Row="2" Column="1"/>
@@ -394,11 +451,106 @@
         <GlossaryWeakArray index="2" removed="1"/>
         <GlossaryWeakArray index="3" removed="1"/>
     </CUnit>
+    <CUnit id="ExampleRocket" parent="MISSILE">
+        <Race value="Terr"/>
+        <FlagArray index="Invulnerable" value="1"/>
+        <Mover value="MRLRocket"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Campaign"/>
+    </CUnit>
     <CUnit id="PlasmaPulse" parent="MISSILE">
         <Race value="Terr"/>
         <FlagArray index="Invulnerable" value="1"/>
         <Mover value="MRLRocket"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Campaign"/>
+    </CUnit>
+    <CUnit id="InfestedSmithy">
+        <DeathRevealRadius value="3"/>
+        <Facing value="135"/>
+        <Race value="Terr"/>
+        <Mob value="Campaign"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="TurnBeforeMove" value="1"/>
+        <FlagArray index="Unstoppable" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <PlaneArray index="Air" value="1"/>
+        <PushPriority value="50"/>
+        <Collide index="Flying" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <Attributes index="Massive" value="1"/>
+        <LifeStart value="90000"/>
+        <LifeMax value="90000"/>
+        <LifeArmor value="20"/>
+        <LifeRegenDelay value="1"/>
+        <LifeRegenRate value="8"/>
+        <LifeArmorName value="Unit/LifeArmorName/InfestedPlating"/>
+        <EnergyStart value="1000"/>
+        <EnergyMax value="1000"/>
+        <EnergyRegenRate value="5"/>
+        <Mover value="Fly"/>
+        <Speed value="2.6015"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="46.0625"/>
+        <StationaryTurningRate value="359.2968"/>
+        <TurningRate value="359.2968"/>
+        <Sight value="15"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="500"/>
+        <CostResource index="Vespene" value="200"/>
+        <RepairTime value="180"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="1200"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="VehicleSeat"/>
+        <AbilArray Link="InfestedNuclearStrike"/>
+        <AbilArray Link="SpawnMutantT1s"/>
+        <BehaviorArray Link="LightFilter"/>
+        <BehaviorArray Link="InfestedNuclearAI"/>
+        <BehaviorArray Link="InfestedSystemRestore"/>
+        <BehaviorArray Link="SmithyRepel"/>
+        <BehaviorArray Link="TerminatorChargeAI"/>
+        <BehaviorArray Link="InfestedSmithyPlating"/>
+        <BehaviorArray Link="InfantryXPSharing"/>
+        <WeaponArray Link="OdinAntiAir"/>
+        <WeaponArray Link="Odin"/>
+        <WeaponArray/>
+        <WeaponArray/>
+        <WeaponArray/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="OdinBarrage" Type="AbilCmd" AbilCmd="OdinBarrage,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="OdinBarrage,Cancel" Row="2" Column="4"/>
+            <LayoutButtons Face="OdinNukeCalldown" Type="AbilCmd" AbilCmd="InfestedNuclearStrike,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="CreateMutantT1s" Type="AbilCmd" AbilCmd="SpawnMutantT1s,Execute" Row="2" Column="2"/>
+        </CardLayouts>
+        <Radius value="2.25"/>
+        <SeparationRadius value="0.8"/>
+        <InnerRadius value="0.8125"/>
+        <ScoreMake value="1000"/>
+        <ScoreKill value="2000"/>
+        <SubgroupPriority value="49"/>
+        <MinimapRadius value="1.25"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Campaign"/>
+        <TacticalAIThink value="AIThinkOdin"/>
+        <TacticalAIChannel value="AIChannelOdin"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="360"/>
+        <GlossaryWeakArray value="Banshee"/>
+        <GlossaryWeakArray value="Battlecruiser"/>
+        <HotkeyCategory value="Unit/Category/TerranStory"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="10"/>
+            <ChanceArray index="Idle" value="90"/>
+        </Fidget>
     </CUnit>
     <CUnitHero id="Vesania30" parent="UnitTemplate">
         <Race value="Terr"/>
@@ -694,13 +846,6 @@
             <LayoutButtons index="9" removed="1"/>
             <LayoutButtons index="10" removed="1"/>
         </CardLayouts>
-    </CUnit>
-    <CUnit id="DestructibleRock2x4Horizontal">
-        <FlagArray index="Unselectable" value="1"/>
-        <FlagArray index="Untargetable" value="1"/>
-        <Attributes index="Armored" value="0"/>
-        <Attributes index="Psionic" value="1"/>
-        <Attributes index="Structure" value="0"/>
     </CUnit>
     <CUnit id="GehennaCruiser">
         <Description value="Button/Tooltip/Goregon"/>
@@ -2106,6 +2251,8 @@
         <PlaneArray index="Air" value="1"/>
         <PushPriority value="20"/>
         <Collide index="Ground" value="0"/>
+        <Collide index="Small" value="0"/>
+        <Collide index="Flying" value="1"/>
         <Attributes index="Armored" value="1"/>
         <Attributes index="Massive" value="1"/>
         <Attributes index="Heroic" value="0"/>
@@ -2304,11 +2451,11 @@
         <Attributes index="Armored" value="1"/>
         <Attributes index="Mechanical" value="1"/>
         <Attributes index="Structure" value="1"/>
-        <LifeStart value="800"/>
-        <LifeMax value="800"/>
+        <LifeStart value="2000"/>
+        <LifeMax value="2000"/>
         <LifeArmorName value="Unit/LifeArmorName/TerranBuildingPlating"/>
         <Sight value="6"/>
-        <AttackTargetPriority value="18"/>
+        <AttackTargetPriority value="5"/>
         <BehaviorArray Link="TerranBuildingBurnDown"/>
         <Radius value="0.75"/>
         <ScoreMake value="50"/>
@@ -2317,6 +2464,7 @@
         <TacticalAI value=""/>
         <HotkeyCategory value="Unit/Category/TerranStory"/>
         <AIEvaluateAlias value=""/>
+        <LifeArmor value="40"/>
     </CUnit>
     <CUnit id="RAAssaultman">
         <DeathRevealRadius value="3"/>
@@ -2574,6 +2722,8 @@
         <DeathTime value="10"/>
         <PlaneArray index="Air" value="1"/>
         <Collide index="Ground" value="0"/>
+        <Collide index="Small" value="0"/>
+        <Collide index="Flying" value="1"/>
         <Attributes index="Heroic" value="0"/>
         <LifeStart value="65000"/>
         <LifeMax value="65000"/>
@@ -17630,12 +17780,12 @@
         <FogVisibility value="Snapshot"/>
         <PlaneArray index="Ground" value="1"/>
         <Attributes index="Mechanical" value="1"/>
-        <LifeStart value="800"/>
-        <LifeMax value="800"/>
+        <LifeStart value="2000"/>
+        <LifeMax value="2000"/>
         <LifeArmorName value=""/>
         <Sight value="6"/>
         <Height value="1.5"/>
-        <AttackTargetPriority value="11"/>
+        <AttackTargetPriority value="5"/>
         <Radius value="0"/>
         <SeparationRadius value="0"/>
         <InnerRadius value="1"/>
@@ -17644,6 +17794,7 @@
         <EditorCategories value="ObjectType:Destructible,ObjectFamily:Campaign"/>
         <LeaderAlias value=""/>
         <HotkeyAlias value=""/>
+        <LifeArmor value="40"/>
     </CUnit>
     <CUnit id="Sanies">
         <Description value=""/>
@@ -20648,8 +20799,8 @@
         <LifeArmor value="1"/>
         <LifeRegenRate value="0.25"/>
         <LifeArmorName value="Unit/LifeArmorName/TerranInfantryArmor"/>
-        <EnergyStart value="1000"/>
-        <EnergyMax value="1000"/>
+        <EnergyStart value="60"/>
+        <EnergyMax value="60"/>
         <Speed value="2.8984"/>
         <Acceleration value="1000"/>
         <LateralAcceleration value="46.0625"/>
@@ -20677,7 +20828,6 @@
         <AbilArray Link="FiremodeMini"/>
         <BehaviorArray Link="Infantry"/>
         <BehaviorArray Link="InfantryXPSharing"/>
-        <BehaviorArray Link="CriticalShot"/>
         <WeaponArray Link="InfantryRiflemanRifle"/>
         <EffectArray index="Birth" value="EquipRiflemanSet"/>
         <CardLayouts>
@@ -21069,6 +21219,7 @@
         <Description value="Button/Tooltip/Drake"/>
         <Collide index="Ground" value="0"/>
         <Collide index="ForceField" value="0"/>
+        <Collide index="Small" value="0"/>
         <Collide index="Flying" value="1"/>
         <Attributes index="Light" value="0"/>
         <Attributes index="Armored" value="1"/>
@@ -21293,6 +21444,7 @@
         <PushPriority value="20"/>
         <Collide index="Ground" value="0"/>
         <Collide index="ForceField" value="0"/>
+        <Collide index="Small" value="0"/>
         <Collide index="Flying" value="1"/>
         <Attributes index="Light" value="0"/>
         <Attributes index="Armored" value="1"/>
@@ -21508,6 +21660,7 @@
         <PushPriority value="15"/>
         <Collide index="Ground" value="0"/>
         <Collide index="ForceField" value="0"/>
+        <Collide index="Small" value="0"/>
         <Collide index="Flying" value="1"/>
         <Attributes index="Light" value="0"/>
         <Attributes index="Armored" value="1"/>
@@ -22067,6 +22220,8 @@
         <PlaneArray index="Air" value="1"/>
         <PushPriority value="15"/>
         <Collide index="Ground" value="0"/>
+        <Collide index="ForceField" value="0"/>
+        <Collide index="Small" value="0"/>
         <Collide index="Flying" value="1"/>
         <Attributes index="Light" value="0"/>
         <Attributes index="Armored" value="1"/>
@@ -22384,6 +22539,7 @@
         <PushPriority value="25"/>
         <Collide index="Ground" value="0"/>
         <Collide index="ForceField" value="0"/>
+        <Collide index="Small" value="0"/>
         <Collide index="Flying" value="1"/>
         <Attributes index="Light" value="0"/>
         <Attributes index="Armored" value="1"/>
@@ -22567,8 +22723,9 @@
         <Collide index="Structure" value="1"/>
         <Attributes index="Armored" value="1"/>
         <Attributes index="Biological" value="1"/>
-        <LifeStart value="2500"/>
-        <LifeMax value="2500"/>
+        <Attributes index="Structure" value="1"/>
+        <LifeStart value="600"/>
+        <LifeMax value="600"/>
         <LifeArmor value="5"/>
         <LifeRegenRate value="10"/>
         <KillXP value="90"/>
@@ -22615,6 +22772,8 @@
         <PushPriority value="25"/>
         <Collide index="Ground" value="0"/>
         <Collide index="ForceField" value="0"/>
+        <Collide index="Small" value="0"/>
+        <Collide index="Flying" value="1"/>
         <Attributes index="Light" value="0"/>
         <Attributes index="Armored" value="1"/>
         <Attributes index="Massive" value="1"/>

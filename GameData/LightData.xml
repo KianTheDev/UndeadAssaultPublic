@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="us-ascii"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Catalog>
     <CLight id="UACDawn" parent="default">
         <ToDInfoArray index="0">
+            <Id value="UACDawn"/>
             <TimeOfDay value="06:00:00"/>
-            <AmbientColor value="0.560784,0.392157,0.203922"/>
+            <AmbientColor value="1.000000,0.427451,0.129412"/>
             <TriggerTransition value="90000"/>
             <Colorize value="1"/>
             <Param index="HDRExposure" value="1.500000"/>
@@ -22,6 +23,41 @@
                 <SpecularColor value="0.921569,0.937255,0.713726"/>
                 <SpecColorMultiplier value="1.100000"/>
                 <Direction value="-0.685818,-0.373144,-0.624834"/>
+            </DirectionalLight>
+            <DirectionalLight index="Fill" Color="0.478431,0.396078,0.105882" ColorMultiplier="2.000000" Direction="0.214883,-0.974911,0.058087"/>
+            <DirectionalLight index="Back" Color="0.047059,0.219608,0.494118" ColorMultiplier="0.638000" Direction="-0.668793,-0.021251,0.743145"/>
+        </ToDInfoArray>
+        <EditorCategories value="LightGroup:Tilesets"/>
+    </CLight>
+    <CLight id="UACEarlyDawn" parent="default">
+        <TimeEventArray index="Dawn" Time="03:00:00"/>
+        <ToDInfoArray index="0">
+            <Id value="UACEarlyDawn"/>
+            <TimeOfDay value="06:00:00"/>
+            <AmbientColor value="0.635294,0.196078,0.047059"/>
+            <TriggerTransition value="90000"/>
+            <Colorize value="1"/>
+            <Param index="HDRExposure" value="1.150000"/>
+            <Param index="HDRBloomThreshold" value="1.050000"/>
+            <Param index="HDRWhitePoint" value="1.850000"/>
+            <Param index="HDRSpecMultiplier" value="1.050000"/>
+            <Param index="HDREmisMultiplier" value="5.080000"/>
+            <Param index="TerrainSpecularExp" value="11.210000"/>
+            <Param index="TerrainHDRSpecular" value="3.750000"/>
+            <Param index="CreepSpecularExp" value="30.000000"/>
+            <Param index="CreepHDRSpecMultiplier" value="3.000000"/>
+            <Param index="ColorizationBrightness" value="1.025000"/>
+            <Param index="ColorizationContrast" value="0.986000"/>
+            <Param index="ColorizationHue" value="-0.000000"/>
+            <Param index="ColorizationSaturation" value="0.412000"/>
+            <Param index="ColorizationBlend" value="0.255000"/>
+            <Param index="ShadowPenumbraSize" value="0.035000"/>
+            <DirectionalLight index="Key">
+                <Color value="0.972549,0.486275,0.219608"/>
+                <ColorMultiplier value="1.679000"/>
+                <SpecularColor value="1.000000,0.937255,0.639216"/>
+                <SpecColorMultiplier value="1.203000"/>
+                <Direction value="-0.792876,0.060174,-0.606405"/>
             </DirectionalLight>
             <DirectionalLight index="Fill" Color="0.478431,0.396078,0.105882" ColorMultiplier="2.000000" Direction="0.214883,-0.974911,0.058087"/>
             <DirectionalLight index="Back" Color="0.047059,0.219608,0.494118" ColorMultiplier="0.638000" Direction="-0.668793,-0.021251,0.743145"/>
@@ -326,12 +362,12 @@
     </CLight>
     <CLight id="UACNight" parent="default">
         <ToDInfoArray index="0">
-            <Id value="UA3Night"/>
+            <Id value="UACNight"/>
             <TimeOfDay value="02:00:00"/>
-            <AmbientColor value="0.082353,0.149020,0.156863"/>
+            <AmbientColor value="0.133333,0.149020,0.188235"/>
             <TriggerTransition value="90000"/>
             <Colorize value="1"/>
-            <Param index="HDRExposure" value="0.875000"/>
+            <Param index="HDRExposure" value="1.800000"/>
             <Param index="HDRBloomThreshold" value="0.550000"/>
             <Param index="HDRAmbientMultiplier" value="0.800000"/>
             <Param index="HDRDiffuseMultiplier" value="1.100000"/>
@@ -352,10 +388,10 @@
             <Param index="ColorizationLightness" value="-0.000000"/>
             <Param index="ColorizationBlend" value="0.334000"/>
             <DirectionalLight index="Key">
-                <Color value="0.360784,0.478431,0.619608"/>
+                <Color value="0.356863,0.474510,0.619608"/>
                 <ColorMultiplier value="1.259000"/>
                 <SpecColorMultiplier value="0.501000"/>
-                <Direction value="0.055925,-0.413628,-0.908727"/>
+                <Direction value="-0.366447,-0.077757,-0.927184"/>
             </DirectionalLight>
             <DirectionalLight index="Fill" Color="0.121569,0.576471,0.603922" ColorMultiplier="0.989000" Direction="0.387512,0.586579,0.711168"/>
             <DirectionalLight index="Back" Color="0.047059,0.239216,0.447059" ColorMultiplier="0.174000" Direction="-0.642699,-0.010657,0.766044"/>

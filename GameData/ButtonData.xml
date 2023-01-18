@@ -39,6 +39,14 @@
         <AlertIcon value="Buttons\Misc Items\BTNRocketLauncher.dds"/>
         <EditorCategories value="Race:Terran"/>
     </CButton>
+    <CButton id="CreateMutantT1s">
+        <Icon value="Textures\Decals\T1Hunters.dds"/>
+    </CButton>
+    <CButton id="ExampleRocket">
+        <Icon value="Assets\Textures\btn-ability-terran-snipe.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-snipe.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
     <CButton id="LearnDefensiveSkills">
         <Icon value="Assets\Textures\btn-research-terran-vanadiumplating.dds"/>
         <AlertIcon value="Assets\Textures\btn-research-terran-vanadiumplating.dds"/>
@@ -47,6 +55,10 @@
     <CButton id="LearnOffensiveSkills">
         <Icon value="Assets\Textures\btn-ability-terran-punishergrenade-color.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-terran-punishergrenade-color.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="OrbitalBeam">
+        <Icon value="Assets\Textures\btn-ability-protoss-planetcracker.dds"/>
         <EditorCategories value="Race:Terran"/>
     </CButton>
     <CButton id="VesaniaPlasmaShield">

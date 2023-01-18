@@ -50,6 +50,50 @@
         <EffectArray value="HorrorAcid"/>
         <EffectArray value="SpitterAcid"/>
     </CEffectSet>
+    <CEffectApplyBehavior id="AddMutation">
+        <EditorCategories value=""/>
+        <Behavior value="Mutation"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="ApplyInfestedSystemRestore">
+        <ValidatorArray index="0" value="SystemRestoreTest"/>
+        <EditorCategories value="Race:Terran"/>
+        <WhichUnit Value="Caster"/>
+        <Behavior value="InfestedSystemRestore"/>
+    </CEffectApplyBehavior>
+    <CEffectCreateUnit id="CreateMutantHunter">
+        <EditorCategories value=""/>
+        <WhichLocation Value="CasterUnit"/>
+        <SpawnEffect value="AddMutation"/>
+        <SpawnUnit value="Hunter"/>
+        <SpawnCount value="3"/>
+    </CEffectCreateUnit>
+    <CEffectSet id="CreateMutantT1">
+        <EditorCategories value=""/>
+        <EffectArray value="CreateMutantHunter"/>
+        <EffectArray value="CreateMutantYeti"/>
+    </CEffectSet>
+    <CEffectCreateUnit id="CreateMutantYeti">
+        <EditorCategories value=""/>
+        <WhichLocation Value="CasterUnit"/>
+        <SpawnEffect value="AddMutation"/>
+        <SpawnUnit value="ZombieYeti"/>
+        <SpawnCount value="2"/>
+    </CEffectCreateUnit>
+    <CEffectSet id="ExampleBurstSet">
+        <EditorCategories value="Race:Terran"/>
+        <EffectArray value="ExamplePlasmaMissile"/>
+        <EffectArray value="BurstResourceSubtract"/>
+    </CEffectSet>
+    <CEffectCreatePersistent id="ExampleBurst">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="TargetUnit"/>
+        <TimeScaleSource Value="Caster"/>
+        <InitialEffect value="ExamplePlasmaMissile"/>
+        <PeriodCount value="2"/>
+        <PeriodicValidator value="MineralsGE1"/>
+        <PeriodicEffectArray value="ExampleBurstSet"/>
+        <PeriodicPeriodArray value="0.04"/>
+    </CEffectCreatePersistent>
     <CEffectEnumArea id="AssaultRifleDispersion">
         <ValidatorArray value="EnemyTarget"/>
         <EditorCategories value=""/>
@@ -171,6 +215,90 @@
     <CEffectApplyBehavior id="EquipMk47">
         <EditorCategories value=""/>
     </CEffectApplyBehavior>
+    <CEffectDamage id="ExampleDamage2">
+        <EditorCategories value="Race:Terran"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <AttributeFactor index="Massive" value="0.5"/>
+        <Amount value="2000"/>
+        <Death value="Blast"/>
+        <AreaArray Radius="3.5" Fraction="1"/>
+        <SearchFilters value="-;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="ExampleRocket1">
+        <ValidatorArray index="0" removed="1"/>
+        <EditorCategories value="Race:Terran"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <ImpactOffset value="0.4,0,0"/>
+        <ImpactEffect value="ExampleDamage1"/>
+        <AmmoUnit value="ExampleRocket"/>
+    </CEffectLaunchMissile>
+    <CEffectDamage id="ExampleDamage1">
+        <EditorCategories value="Race:Terran"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <AttributeFactor index="Massive" value="0.5"/>
+        <Amount value="1500"/>
+        <Death value="Blast"/>
+        <AreaArray Radius="3.5" Fraction="1"/>
+        <SearchFilters value="-;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="ExampleRocket2">
+        <ValidatorArray index="0" removed="1"/>
+        <EditorCategories value="Race:Terran"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <ImpactOffset value="0.4,0,0"/>
+        <ImpactEffect value="ExampleRocketHit2"/>
+        <AmmoUnit value="ExampleRocket"/>
+    </CEffectLaunchMissile>
+    <CEffectSet id="ExampleRocketHit2">
+        <EditorCategories value=""/>
+        <EffectArray value="ExampleDamage2"/>
+        <EffectArray value="ExampleRocketStunAoE"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="ExampleRocketStun">
+        <EditorCategories value=""/>
+        <Behavior value="ClusterRocketStun"/>
+        <Duration value="2"/>
+    </CEffectApplyBehavior>
+    <CEffectEnumArea id="ExampleRocketStunAoE">
+        <EditorCategories value=""/>
+        <AreaArray Radius="3.5" Effect="ExampleRocketStun"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="InfestedNuclearAIEnum">
+        <EditorCategories value="Race:Terran"/>
+        <ExcludeArray/>
+        <SearchFilters value="Heroic;Player,Ally,Neutral,Air,Psionic,Missile,Cloaked,Dead,Invulnerable"/>
+        <TargetSorts RequestCount="1" RequestPercentage="1">
+            <SortArray value="TSRandom"/>
+        </TargetSorts>
+        <AreaArray Radius="150" Effect="InfestedNuclearAIOrder"/>
+        <MinCount value="1"/>
+        <MaxCount value="1"/>
+    </CEffectEnumArea>
+    <CEffectCreatePersistent id="InfestedNuclearCast">
+        <EditorCategories value=""/>
+        <PeriodCount value="4"/>
+        <PeriodicEffectArray value="InfestedNuclearAIEnum"/>
+        <PeriodicPeriodArray value="0.5"/>
+    </CEffectCreatePersistent>
+    <CEffectIssueOrder id="InfestedNuclearAIOrder">
+        <EditorCategories value="Race:Terran"/>
+        <WhichUnit Value="Source"/>
+        <Abil value="InfestedNuclearStrike"/>
+        <Player Value="Source"/>
+        <Target Value="TargetPoint"/>
+    </CEffectIssueOrder>
+    <CEffectApplyBehavior id="DoomsdayTargetAB">
+        <EditorCategories value="Race:Terran"/>
+        <Behavior value="DoomsdayBeam"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="OrbitalBeamTargetItem">
+        <EditorCategories value="Race:Terran"/>
+        <Behavior value="OrbitalBeamTarget"/>
+    </CEffectApplyBehavior>
     <CEffectLaunchMissile id="PlasmaPulse1">
         <ValidatorArray index="0" removed="1"/>
         <EditorCategories value="Race:Terran"/>
@@ -184,7 +312,7 @@
         <EditorCategories value="Race:Terran"/>
         <ImpactLocation Value="TargetPoint"/>
         <ImpactOffset value="0.4,0,0"/>
-        <ImpactEffect value="PlasmaPulseHit1"/>
+        <ImpactEffect value="PlasmaPulseHit2"/>
         <AmmoUnit value="PlasmaPulse"/>
     </CEffectLaunchMissile>
     <CEffectLaunchMissile id="PlasmaPulse3">
@@ -253,6 +381,12 @@
         <Behavior value="PlasmaPulseVulnerability"/>
         <Duration value="10"/>
     </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="PlasmaPulseStun">
+        <ValidatorArray index="0" removed="1"/>
+        <EditorCategories value=""/>
+        <Behavior value="ClusterRocketStun"/>
+        <Duration value="2"/>
+    </CEffectApplyBehavior>
     <CEffectApplyBehavior id="PlasmaPulseDebuff32">
         <ValidatorArray index="0" removed="1"/>
         <EditorCategories value=""/>
@@ -262,6 +396,10 @@
     <CEffectEnumArea id="PlasmaPulseDebuffAoE2">
         <EditorCategories value=""/>
         <AreaArray Radius="4" Effect="PlasmaPulseDebufflv2"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="PlasmaPulseStunAoE">
+        <EditorCategories value=""/>
+        <AreaArray Radius="4" Effect="PlasmaPulseStun"/>
     </CEffectEnumArea>
     <CEffectEnumArea id="PlasmaPulseDebuffAoE3">
         <EditorCategories value=""/>
@@ -283,21 +421,52 @@
         <Behavior value="PlasmaPulseVulnerability4"/>
         <Duration value="10"/>
     </CEffectApplyBehavior>
-    <CEffectSet id="PlasmaPulseHit1">
+    <CEffectSet id="PlasmaPulseHit2">
         <EditorCategories value=""/>
         <EffectArray value="PlasmaPulseDamage2"/>
         <EffectArray value="PlasmaPulseDebuffAoE2"/>
+        <EffectArray value="PlasmaPulseStunAoE"/>
+    </CEffectSet>
+    <CEffectSet id="PlasmaPulseHit1">
+        <EditorCategories value=""/>
+        <EffectArray value="PlasmaPulseDamage1"/>
+        <EffectArray value="PlasmaPulseStunAoE"/>
     </CEffectSet>
     <CEffectSet id="PlasmaPulseHit3">
         <EditorCategories value=""/>
         <EffectArray value="PlasmaPulseDamage3"/>
         <EffectArray value="PlasmaPulseDebuffAoE3"/>
+        <EffectArray value="PlasmaPulseStunAoE"/>
     </CEffectSet>
     <CEffectSet id="PlasmaPulseHit4">
         <EditorCategories value=""/>
         <EffectArray value="PlasmaPulseDamage4"/>
         <EffectArray value="PlasmaPulseDebuffAoE4"/>
+        <EffectArray value="PlasmaPulseStunAoE"/>
     </CEffectSet>
+    <CEffectDamage id="ExamplePlasmaDamage" parent="DU_WEAP">
+        <EditorCategories value="Race:Terran"/>
+        <ResponseFlags index="Flee" value="0"/>
+        <AttributeFactor index="Heroic" value="-0.5"/>
+        <AttributeFactor index="Summoned" value="-0.5"/>
+        <ArmorReduction value="0.5"/>
+        <Kind value="Ranged"/>
+        <KindSplash value="Ranged"/>
+        <Total value="Combine"/>
+        <Amount value="50"/>
+        <Random value="7"/>
+        <AreaArray Radius="1" Fraction="0.25"/>
+        <AreaArray Radius="2.2" Fraction="0.15"/>
+        <ExcludeArray Value="Target"/>
+        <ExcludeArray Value="Source"/>
+        <SearchFilters value="-;Self,Player,Ally,Neutral,Psionic,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <DisplayFlags index="CollapseBuffed" value="1"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="ExamplePlasmaMissile">
+        <EditorCategories value="Race:Terran"/>
+        <ImpactEffect value="ExamplePlasmaDamage"/>
+        <AmmoUnit value="MissilePlasmaRifle"/>
+    </CEffectLaunchMissile>
     <CEffectRemoveBehavior id="SFRemoveRankModifier">
         <EditorCategories value="Race:Terran"/>
         <BehaviorLink value="RankModifier"/>
@@ -787,6 +956,15 @@
         <MinCount value="1"/>
         <MaxCount value="1"/>
     </CEffectEnumArea>
+    <CEffectApplyBehavior id="OrbitalBeamTargetAB">
+        <EditorCategories value="Race:Terran"/>
+        <Behavior value="OrbitalBeam"/>
+    </CEffectApplyBehavior>
+    <CEffectDamage id="OrbitalBeamDoT">
+        <EditorCategories value="Race:Terran"/>
+        <Amount value="300"/>
+        <Death value="Fire"/>
+    </CEffectDamage>
     <CEffectDamage id="SpectreNukeDamage">
         <AttributeFactor index="Heroic" value="0.1"/>
         <Amount value="5000"/>
@@ -2736,6 +2914,10 @@
         <EditorCategories value="Race:Terran"/>
         <ValidatorArray index="0" value="SystemRestoreTest"/>
     </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="InfestedSystemRestoreCooldown">
+        <ValidatorArray index="0" value="SystemRestoreTest"/>
+        <EditorCategories value="Race:Terran"/>
+    </CEffectApplyBehavior>
     <CEffectRemoveBehavior id="SystemRestoreRemoveEMP">
         <EditorCategories value="Race:Terran"/>
         <BehaviorLink value="OrbitalStrikeEMP"/>
@@ -2745,6 +2927,11 @@
         <EditorCategories value="Race:Terran"/>
         <EffectArray value="SystemRestoreRemoveEMP"/>
         <EffectArray value="SystemRestoreCooldown"/>
+    </CEffectSet>
+    <CEffectSet id="InfestedSystemRestoreSet">
+        <EditorCategories value="Race:Terran"/>
+        <EffectArray value="SystemRestoreRemoveEMP"/>
+        <EffectArray value="InfestedSystemRestoreCooldown"/>
     </CEffectSet>
     <CEffectApplyBehavior id="TagAB">
         <ValidatorArray index="0" removed="1"/>
@@ -3549,7 +3736,7 @@
         <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
-        <PeriodCount value="59"/>
+        <PeriodCount value="2"/>
         <PeriodicEffectArray value="AssaultRifleBurstSet"/>
         <PeriodicPeriodArray value="0.016"/>
         <PeriodicValidator value="MineralsGE1"/>
@@ -3795,6 +3982,7 @@
         <Kind value="Spell"/>
         <DisplayFlags index="CollapseBuffed" value="1"/>
         <DisplayFlags index="DisplayRounded" value="1"/>
+        <ArmorReduction value="3"/>
     </CEffectDamage>
     <CEffectLaunchMissile id="VesaniaGLLaunch2">
         <EditorCategories value="Race:Terran"/>

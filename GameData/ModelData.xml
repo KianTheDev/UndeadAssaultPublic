@@ -7,11 +7,20 @@
     <CModel id="AS50SniperRfile">
         <Model value="Assets\Model\ Weapons\UAC_AS50_Sniper_Rifle.m3"/>
     </CModel>
+    <CModel id="RASuperweaon" parent="Unit">
+        <Model value="Assets\Effects\Protoss\SOA_PurifierBeam_Upgrade\SOA_PurifierBeam_Upgrade.m3"/>
+        <Flags index="VariationPreload" value="0"/>
+        <ScaleMax value="0.300000,0.300000,0.300000"/>
+        <ScaleMin value="0.300000,0.300000,0.300000"/>
+    </CModel>
+    <CModel id="SolarBeam" parent="Unit">
+        <Model value="Assets\Effects\Protoss\Cybros_Beam\Cybros_Beam.m3"/>
+        <Flags index="VariationPreload" value="0"/>
+        <ScaleMax value="0.500000,0.500000,0.500000"/>
+        <ScaleMin value="0.500000,0.500000,0.500000"/>
+    </CModel>
     <CModel id="GlazeFieldTuned">
         <Model value="Assets\Effects\Glaze\Glaze_Fenix_AI_Champion\Glaze_Fenix_AI_Champion.m3"/>
-    </CModel>
-    <CModel id="HotSRaptor">
-        <Model value="Assets\Units\Zerg\Carbot_Zergling\Carbot_Zergling.m3"/>
     </CModel>
     <CModel id="InfestedSiegeBreakerSiegedAttackImpact">
         <Model value="Assets\Effects\Zerg\BileLauncherMissileImpact\BileLauncherMissileImpact.m3"/>
@@ -263,6 +272,12 @@
     <CModel id="CorruptedMortar">
         <Model value="Assets\Effects\Zerg\Infested_Terran_AA_MP_Missile\Infested_Terran_AA_MP_Missile.m3"/>
         <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <CModel id="OrbitalBeam" parent="Unit">
+        <Model value="Assets\Effects\Protoss\SOA_SolarLance_Upgrade\SOA_SolarLance_Upgrade.m3"/>
+        <Flags index="VariationPreload" value="0"/>
+        <ScaleMax value="0.500000,0.500000,0.500000"/>
+        <ScaleMin value="0.500000,0.500000,0.500000"/>
     </CModel>
     <CModel id="SupplyDropFalling" parent="PersistentSpellFX">
         <Model value="Assets\Effects\Terran\DropPodFalling\DropPodFalling.m3"/>

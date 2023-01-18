@@ -257,6 +257,144 @@
         <ProducedUnitArray value="Vesania30"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="24XVesania30"/>
     </CAbilEffectInstant>
+    <CAbilEffectTarget id="ExampleRocket">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="ExampleRocket1"/>
+        <Effect value="ExampleRocket2"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Vital index="Energy" value="80"/>
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <TimeUse value="20"/>
+            </Charge>
+            <Cooldown TimeUse="5"/>
+        </Cost>
+        <Cost>
+            <Vital index="Energy" value="70"/>
+            <Charge>
+                <CountMax value="2"/>
+                <CountStart value="2"/>
+                <CountUse value="1"/>
+                <TimeUse value="20"/>
+            </Charge>
+            <Cooldown TimeUse="5"/>
+        </Cost>
+        <Range value="40"/>
+        <Range value="50"/>
+        <CastIntroTime value="1.2"/>
+        <CastIntroTime value="1.05"/>
+        <ShowProgressArray index="Cast" value="1"/>
+        <CursorEffect value="ExampleDamage1"/>
+        <CursorEffect value="ExampleDamage2"/>
+        <AINotifyEffect value="ExampleDamage1"/>
+        <ProgressButtonArray index="Cast" value="ExampleRocket"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="ExampleRocket"/>
+    </CAbilEffectTarget>
+    <CAbilLearn id="LearnAbilitiesExample">
+        <EditorCategories value="AbilityorEffectType:Units,Race:Human"/>
+        <InfoArray index="Learn1" Abil="SoldierSkills">
+            <Charge CountMax="100" CountStart="100" CountUse="1"/>
+            <Button DefaultButtonFace="LearnSoldierSkills"/>
+        </InfoArray>
+        <InfoArray index="Learn2" Abil="Marksmanship">
+            <Charge CountMax="100" CountStart="100" CountUse="1"/>
+            <Button DefaultButtonFace="LearnMarksmanship"/>
+        </InfoArray>
+        <InfoArray index="Learn3" Abil="ExampleRocket">
+            <Charge CountMax="100" CountStart="100" CountUse="1"/>
+            <Button DefaultButtonFace="ExampleRocket"/>
+        </InfoArray>
+        <InfoArray index="Learn4" Abil="RiflemanSkills">
+            <Charge CountMax="100" CountStart="100" CountUse="1"/>
+            <Button DefaultButtonFace="RiflemanSkills"/>
+        </InfoArray>
+        <InfoArray index="Learn5">
+            <Charge CountMax="1" CountStart="1" CountUse="1"/>
+        </InfoArray>
+        <InfoArray index="Learn6">
+            <Charge CountMax="1" CountStart="1" CountUse="1"/>
+        </InfoArray>
+        <InfoArray index="Learn7">
+            <Charge CountMax="1" CountStart="1" CountUse="1"/>
+        </InfoArray>
+        <InfoArray index="Learn8">
+            <Charge CountMax="1" CountStart="1" CountUse="1"/>
+        </InfoArray>
+        <InfoArray index="Learn9">
+            <Charge CountMax="1" CountStart="1" CountUse="1"/>
+        </InfoArray>
+        <InfoArray index="Learn10">
+            <Charge CountMax="1" CountStart="1" CountUse="1"/>
+        </InfoArray>
+        <InfoArray index="Learn11">
+            <Charge CountMax="1" CountStart="1" CountUse="1"/>
+        </InfoArray>
+        <InfoArray index="Learn12">
+            <Charge CountMax="1" CountStart="1" CountUse="1"/>
+        </InfoArray>
+        <InfoArray index="Learn13">
+            <Charge CountMax="1" CountStart="1" CountUse="1"/>
+        </InfoArray>
+        <InfoArray index="Learn14">
+            <Charge CountMax="1" CountStart="1" CountUse="1"/>
+        </InfoArray>
+        <InfoArray index="Learn15">
+            <Charge CountMax="1" CountStart="1" CountUse="1"/>
+        </InfoArray>
+        <InfoArray index="Learn16">
+            <Charge CountMax="1" CountStart="1" CountUse="1"/>
+        </InfoArray>
+        <InfoArray index="Learn17">
+            <Charge CountMax="1" CountStart="1" CountUse="1"/>
+        </InfoArray>
+        <InfoArray index="Learn18">
+            <Charge CountMax="1" CountStart="1" CountUse="1"/>
+        </InfoArray>
+        <InfoArray index="Learn19">
+            <Charge CountMax="1" CountStart="1" CountUse="1"/>
+        </InfoArray>
+        <InfoArray index="Learn20">
+            <Charge CountMax="1" CountStart="1" CountUse="1"/>
+        </InfoArray>
+        <PointsPerLevel value="1"/>
+    </CAbilLearn>
+    <CAbilEffectTarget id="InfestedNuclearStrike">
+        <Alignment value="Negative"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="OdinNukePersistent"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Charge>
+                <CountMax value="3"/>
+                <CountStart value="3"/>
+                <CountUse value="1"/>
+                <TimeUse value="60"/>
+                <Flags index="RestoreAllChargesOnCooldown" value="1"/>
+            </Charge>
+        </Cost>
+        <Range value="150"/>
+        <FinishTime value="1"/>
+        <Marker Link="Abil/NovaNuclearStrike"/>
+        <UninterruptibleArray index="Channel" value="1"/>
+        <ValidatedArray index="Channel" value="0"/>
+        <AlertArray index="Cast" value="CalldownLaunch"/>
+        <CursorEffect value="nukeDamage"/>
+        <CalldownEffect value="NovaNukeCalldown"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="OdinNukeCalldown"/>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+    </CAbilEffectTarget>
+    <CAbilEffectInstant id="SpawnMutantT1s">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="CreateMutantT1"/>
+        <Cost>
+            <Cooldown TimeUse="15"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="CreateMutantT1s"/>
+    </CAbilEffectInstant>
     <CAbilEffectTarget id="VesaniaPlasmaPulse">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
         <Effect index="0" value="PlasmaPulse1"/>
@@ -291,7 +429,7 @@
         <CastIntroTime value="1"/>
         <ShowProgressArray index="Cast" value="1"/>
         <CursorEffect value="PlasmaPulseDamage1"/>
-        <CursorEffect value="PlasmaPulseHit1"/>
+        <CursorEffect value="PlasmaPulseHit2"/>
         <CursorEffect value="PlasmaPulseHit3"/>
         <CursorEffect value="PlasmaPulseHit4"/>
         <AINotifyEffect value="PlasmaPulseDamage1"/>
@@ -7073,7 +7211,7 @@
                 <Link value="Abil/OdinNuclearStrike"/>
                 <TimeUse value="210"/>
             </Charge>
-            <Cooldown Link="Abil/OdinNuclearStrike" TimeUse="35"/>
+            <Cooldown Link="Abil/OdinNuclearStrike"/>
         </Cost>
         <Flags index="RequireTargetVision" value="0"/>
         <Range index="0" value="50"/>

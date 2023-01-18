@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="us-ascii"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Catalog>
     <CItem id="AA12">
         <Flags index="DropOnDeath" value="1"/>
@@ -58,6 +58,27 @@
         <EffectFlags index="Transient" value="1"/>
         <TargetFilters value="Mechanical,Structure;Player,Enemy,Biological,Psionic,Dead,Hidden,Invulnerable"/>
         <Range value="3"/>
+    </CItemEffectTarget>
+    <CItemEffectTarget id="OrbitalSatelliteTargeter" parent="CONTAINER">
+        <Face value="OrbitalBeam"/>
+        <Flags index="DropOnDeath" value="1"/>
+        <Class value="Misc"/>
+        <Effect value="OrbitalBeamTargetItem"/>
+        <EffectCost>
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <HideCount value="1"/>
+                <Link value="ItemCharges"/>
+                <TimeUse value="150"/>
+                <Flags index="RestoreAllChargesOnCooldown" value="1"/>
+            </Charge>
+            <Cooldown Location="Unit"/>
+        </EffectCost>
+        <EffectFlags index="Transient" value="1"/>
+        <TargetFilters value="Massive;Player,Ally,Neutral,Psionic,Dead,Hidden,Invulnerable"/>
+        <Range value="50"/>
     </CItemEffectTarget>
     <CItemEffectInstant id="StynerBR2CQBR2" parent="CONTAINER">
         <Face value="StynerSPR"/>
@@ -351,7 +372,6 @@
         <Flags index="DropOnDeath" value="1"/>
         <Flags index="KillWhenDepleted" value="1"/>
         <Class value="Misc"/>
-        <Requirements value="CASOnStation"/>
     </CItemAbil>
     <CItemAbil id="LiftBoots">
         <Flags index="DropOnDeath" value="1"/>

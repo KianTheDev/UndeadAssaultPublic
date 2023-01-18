@@ -263,6 +263,17 @@
         <On Terms="Abil.WPGrenade.SourcePrepStart" Send="AnimPlay SpellThrow Spell 0 -1.000000 -1.000000 1.300000 AsDuration"/>
         <On Terms="Abil.ChemicalAssault.SourceFinishStart" Send="AnimPlay Jump Jump"/>
     </CActorEventMacro>
+    <CActorDoodad id="CropField">
+        <EditorCategories value="DoodadType:Blocker"/>
+        <On index="0" Terms="ActorCreation" Send="Create SoundEmitter Doodad_AgriaCurtain"/>
+        <Model value="AgriaCurtain"/>
+        <EditorFlags index="NoAutoRotate" value="1"/>
+        <TexSets value="Agria"/>
+        <Footprint value="ShrubFootprint1x1"/>
+        <RandomScaleRange value="1.000000,1.000000"/>
+        <VisibleOpacity value="0.500000"/>
+        <VisibleOpacityBlendDuration value="0.250000"/>
+    </CActorDoodad>
     <CActorSound id="BoltActionSound" parent="SoundOneShot">
         <On Terms="Abil.OperateBolt.SourceCastStart" Send="Create"/>
         <Sound value="BoltAction"/>
@@ -319,6 +330,141 @@
         <AcquisitionPitchHalfArc value="20.000000"/>
         <AccuracyHalfArc value="25.000000"/>
     </CActorAction>
+    <CActorModel id="DoomsdayBeamVisual" parent="ModelAddition">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.DoomsdayBeam.On" Send="Create"/>
+        <On Terms="Behavior.DoomsdayBeam.Off" Send="Destroy"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachCenter"/>
+        <Model value="RASuperweaon"/>
+    </CActorModel>
+    <CActorUnit id="OrbitalTargeter" parent="GenericUnitStandard" unitName="OrbitalSatelliteTargeter">
+        <On index="0" Terms="ActorCreation" Send="Create SoundEmitter Doodad_Item"/>
+        <On index="1" Terms="ActorCreation" Send="$Stand PlayForever"/>
+        <On index="2" Terms="UnitBirth.OrbitalSatelliteTargeter"/>
+        <On index="3" Terms="ActorCreation" Send="SetTintColor {0,0,255 5.000000}"/>
+        <On index="4" removed="1"/>
+        <On index="5" removed="1"/>
+        <On index="6" removed="1"/>
+        <On index="7" removed="1"/>
+        <On index="8" removed="1"/>
+        <On index="9" removed="1"/>
+        <On index="10" removed="1"/>
+        <On index="11" removed="1"/>
+        <On index="12" removed="1"/>
+        <On index="13" removed="1"/>
+        <On index="14" removed="1"/>
+        <On index="15" removed="1"/>
+        <On index="16" removed="1"/>
+        <On index="17" removed="1"/>
+        <On index="18" removed="1"/>
+        <On index="19" removed="1"/>
+        <On index="20" removed="1"/>
+        <On index="21" removed="1"/>
+        <On index="22" removed="1"/>
+        <On index="23" removed="1"/>
+        <On index="24" removed="1"/>
+        <On index="25" removed="1"/>
+        <On index="26" removed="1"/>
+        <On index="27" removed="1"/>
+        <On index="28" removed="1"/>
+        <On index="29" removed="1"/>
+        <On index="30" removed="1"/>
+        <On index="31" removed="1"/>
+        <On index="32" removed="1"/>
+        <On index="33" removed="1"/>
+        <On index="34" removed="1"/>
+        <On index="35" removed="1"/>
+        <On index="36" removed="1"/>
+        <On index="37" removed="1"/>
+        <On index="38" removed="1"/>
+        <On index="39" removed="1"/>
+        <On index="40" removed="1"/>
+        <On index="41" removed="1"/>
+        <On index="42" removed="1"/>
+        <On index="43" removed="1"/>
+        <On index="44" removed="1"/>
+        <On index="45" removed="1"/>
+        <On index="46" removed="1"/>
+        <On index="47" removed="1"/>
+        <On index="48" removed="1"/>
+        <On index="49" removed="1"/>
+        <On index="50" removed="1"/>
+        <On index="51" removed="1"/>
+        <On index="52" removed="1"/>
+        <On index="53" removed="1"/>
+        <On index="54" removed="1"/>
+        <On index="55" removed="1"/>
+        <On index="56" removed="1"/>
+        <On index="57" removed="1"/>
+        <On index="58" removed="1"/>
+        <On index="59" removed="1"/>
+        <On index="60" removed="1"/>
+        <On index="61" removed="1"/>
+        <On index="62" removed="1"/>
+        <On index="63" removed="1"/>
+        <On index="64" removed="1"/>
+        <On index="65" removed="1"/>
+        <On index="66" removed="1"/>
+        <On index="67" removed="1"/>
+        <On index="68" removed="1"/>
+        <Model value="Item"/>
+        <Scale value="0.500000"/>
+        <EventDataFootprint index="0" Actor="" Model=""/>
+        <EventDataSound index="0" Actor=""/>
+        <DeathArray index="Normal" AnimProps="" SoundLink="" VoiceLink=""/>
+        <DeathCustoms index="0" removed="1"/>
+        <DeathCustoms index="1" removed="1"/>
+        <DeathCustoms index="2" removed="1"/>
+        <DeathCustoms index="3" removed="1"/>
+        <DeathCustoms index="4" removed="1"/>
+        <DeathActorModel value=""/>
+        <DeathActorModelLow value=""/>
+        <DeathActorSound value=""/>
+        <DeathActorVoice value=""/>
+        <PlacementActorModel value=""/>
+        <PlaceholderActorModel value=""/>
+        <PortraitActor value=""/>
+        <PortraitModel value=""/>
+        <VarianceWindowStandIntro value="0.000000"/>
+        <VarianceWindowStand value="0.000000"/>
+        <VarianceWindowWalkIntro value="0.000000"/>
+        <VarianceWindowWalk value="0.000000"/>
+        <VarianceWindowWalkOutro value="0.000000"/>
+        <GlossaryAnim value=""/>
+        <GroupSoundThreshold value="0"/>
+        <HeroIcon value=""/>
+        <HighlightTooltip value="Actor/Highlight/OrbitalTargeter"/>
+        <MinimapRenderPriority value=""/>
+        <NameOffset value="0"/>
+        <ShieldArmorIcon value=""/>
+        <SnapshotActor value=""/>
+        <StatusBarFlags index="Shields" value="0"/>
+        <StatusBarFlags index="Life" value="0"/>
+        <StatusBarFlags index="Energy" value="0"/>
+        <StatusBarFlags index="Cargo" value="0"/>
+        <StatusBarFlags index="Progress" value="0"/>
+        <StatusBarFlags index="Duration" value="0"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <UnitFlags index="StandAnimBirthVariation" value="0"/>
+        <UnitIcon value="Assets\Textures\btn-ability-protoss-planetcracker.dds"/>
+    </CActorUnit>
+    <CActorModel id="SolarBeamVisual" parent="ModelAddition">
+        <EditorCategories value=""/>
+        <On Terms="UnitBirth.SolarBeam" Send="Create"/>
+        <On Terms="UnitDeath.SolarBeam" Send="Destroy"/>
+        <On Terms="Behavior.SolarFocusingTest.On" Send="Create"/>
+        <On Terms="Behavior.SolarFocusingTest.Off" Send="Destroy"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachCenter"/>
+        <Model value="SolarBeam"/>
+    </CActorModel>
+    <CActorSimple id="SolarBeam">
+        <On Terms="Behavior.CryoRoundsTarget.On" Send="Create"/>
+        <On Terms="Behavior.CryoRoundsTarget.Off" Send="Destroy"/>
+        <On Terms="ActorCreation" Target="_Selectable" Send="SetTintColor 252,255,128 0.200000 OneShot CryoRoundsSlow"/>
+        <On Terms="ActorDestruction" Target="_Selectable" Send="ClearTintColor 0.200000 SolarBeam"/>
+    </CActorSimple>
     <CActorUnit id="DeadHeroIndicatorMalikav" parent="GenericUnitStandard" unitName="DeadHeroIndicatorMalikav">
         <On index="0" Terms="ActorCreation" Send="Create SoundEmitter Doodad_Item"/>
         <On index="1" Terms="ActorCreation" Send="$Stand PlayForever"/>
@@ -670,6 +816,31 @@
         <UnitFlags index="StandAnimBirthVariation" value="0"/>
         <UnitIcon value="BTN_CR_Mindblast.dds"/>
     </CActorUnit>
+    <CActorMissile id="ExampleRocketMissile" parent="GenericAttackMissile" unitName="ExampleRocket">
+        <Model value="ATSLaserBatteryLMWeapon"/>
+        <Scale value="2.000000"/>
+        <BarHeight value="1"/>
+        <BarWidth value="1"/>
+    </CActorMissile>
+    <CActorAction id="ExampleRocket" parent="GenericAttack" effectImpact="ExampleDamage1" effectLaunch="ExampleRocket1">
+        <FogVisibility value="Visible"/>
+        <On index="1" Terms="Effect.SplashDamage.Start; FromEffectTreeDescendant" Send="ActionDamage"/>
+        <On index="2" Terms="Effect.SplashDamage.Stop; FromEffectTreeDescendant" Send="ActionDamagePhysics"/>
+        <On index="3" Terms="Effect.Bogus.Start; At Caster" Send="Create"/>
+        <On index="4" Terms="Effect.ExampleRocket1.Start; At Caster" Send="Create"/>
+        <On index="5" Terms="Effect.ExampleRocket2.Start; At Caster" Send="Create"/>
+        <On index="6" Terms="Effect.ExampleDamage1.Start; FromEffectTreeDescendant" Send="ActionImpact"/>
+        <On Terms="Effect.ExampleDamage2.Start; FromEffectTreeDescendant" Send="ActionImpact"/>
+        <On Terms="Effect.ExampleDamage1.Stop; FromEffectTreeDescendant" Send="ActionImpactPhysics"/>
+        <On Terms="Effect.ExampleDamage2.Stop; FromEffectTreeDescendant" Send="ActionImpactPhysics"/>
+        <LaunchSiteOps Ops="BackblastRotation"/>
+        <LaunchAttachQuery Methods="AMFilterCenter"/>
+        <LaunchAssets Model="Backblast" Sound="MRLLaunch"/>
+        <ImpactMap index="None" Model="MRLImpact" Sound="MGLImpact"/>
+    </CActorAction>
+    <CActorModel id="ResonatorExplosion" parent="ModelAnimationStyleOneShot">
+        <Model value="EnergyNovaShockwave"/>
+    </CActorModel>
     <CActorSelection id="FlyerHelperSplat2">
         <Flags index="SuppressSaveLoad" value="0"/>
         <Inherits index="CloakEffect" value="1"/>
@@ -755,10 +926,10 @@
         <On Terms="Effect.PlasmaPulse2.Start; At Caster" Send="Create"/>
         <On Terms="Effect.PlasmaPulse3.Start; At Caster" Send="Create"/>
         <On Terms="Effect.PlasmaPulse4.Start; At Caster" Send="Create"/>
-        <On Terms="Effect.PlasmaPulseHit1.Start; FromEffectTreeDescendant" Send="ActionImpact"/>
+        <On Terms="Effect.PlasmaPulseHit2.Start; FromEffectTreeDescendant" Send="ActionImpact"/>
         <On Terms="Effect.PlasmaPulseHit3.Start; FromEffectTreeDescendant" Send="ActionImpact"/>
         <On Terms="Effect.PlasmaPulseHit4.Start; FromEffectTreeDescendant" Send="ActionImpact"/>
-        <On Terms="Effect.PlasmaPulseHit1.Stop; FromEffectTreeDescendant" Send="ActionImpactPhysics"/>
+        <On Terms="Effect.PlasmaPulseHit2.Stop; FromEffectTreeDescendant" Send="ActionImpactPhysics"/>
         <On Terms="Effect.PlasmaPulseHit3.Stop; FromEffectTreeDescendant" Send="ActionImpactPhysics"/>
         <On Terms="Effect.PlasmaPulseHit4.Stop; FromEffectTreeDescendant" Send="ActionImpactPhysics"/>
         <LaunchAttachQuery Methods="AMFilterCenter"/>
@@ -774,6 +945,157 @@
     </CActorModel>
     <CActorModel id="ModelPretargetGround2" parent="ModelPretarget">
         <Model value="AOEPreTargetGroundUnitProtoss"/>
+    </CActorModel>
+    <CActorUnit id="InfestedSmithy" parent="GenericUnitBase" unitName="InfestedSmithy">
+        <Aliases value="_UnitHuge"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo Odin" Send="Create"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom Odin" Send="Destroy"/>
+        <On Terms="WeaponStart.Odin.AttackStart" Send="AnimBracketStart Attack Attack"/>
+        <On Terms="WeaponStop.Odin.AttackStop" Send="AnimBracketStop Attack"/>
+        <On Terms="Abil.OdinEMPBurst.SourceCastStart" Send="AnimPlay EMPBurst Attack NonLooping"/>
+        <On Terms="Abil.OdinBarrage.SourcePrepStart" Send="AnimPlay Morph Morph 0 -1.000000 -1.000000 1.500000 AsTimeScale"/>
+        <On Terms="Abil.OdinBarrage.SourceChannelStart" Send="AnimPlay LoopA Spell"/>
+        <On Terms="Abil.OdinBarrage.SourceChannelStart" Send="AnimClear Morph"/>
+        <On Terms="AnimDone; AnimName LoopA" Send="AnimPlay LoopB Spell"/>
+        <On Terms="AnimDone; AnimName LoopB" Send="AnimPlay LoopC Spell"/>
+        <On Terms="AnimDone; AnimName LoopC" Send="AnimPlay LoopD Spell"/>
+        <On Terms="Abil.OdinBarrage.SourceChannelStop" Send="AnimClear LoopA"/>
+        <On Terms="Abil.OdinBarrage.SourceChannelStop" Send="AnimClear LoopB"/>
+        <On Terms="Abil.OdinBarrage.SourceChannelStop" Send="AnimClear LoopC"/>
+        <On Terms="Abil.OdinBarrage.SourceChannelStop" Send="AnimClear LoopD"/>
+        <On Terms="Abil.OdinBarrage.SourceChannelStop" Send="AnimPlay MorphEnd Morph,End 0 -1.000000 -1.000000 1.833000 AsTimeScale"/>
+        <On Terms="ActorCreation" Send="TextureSelectById SmithyDiffuse"/>
+        <On Terms="ActorCreation" Send="TextureSelectById SmithyEmissive"/>
+        <On Terms="ActorCreation" Send="TextureSelectById SmithySpecular"/>
+        <Model value="Odin"/>
+        <BuildModel value="Odin"/>
+        <DeathArray index="Normal" ModelLink="OdinDeath" SoundLink="Odin_Explode"/>
+        <PlacementModel value="Odin"/>
+        <PortraitModel value="CivilianBlurredPortrait"/>
+        <StandAnimTurnTime value="5"/>
+        <WalkAnimMoveSpeed value="1.75"/>
+        <BarOffset value="200"/>
+        <BarWidth value="220"/>
+        <CustomUnitStatusFrame value="BossBar/Smithy"/>
+        <CustomUnitStatusAttachment value="Ref_Center"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-Odin.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\BTN-Unit-Terran-Odin.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel3.dds"/>
+        <NameOffset value="40"/>
+        <SoundArray index="Birth" value="Thor_Birth"/>
+        <SoundArray index="Ready" value="Thor_Ready"/>
+        <SoundArray index="Help" value="Thor_Help"/>
+        <SoundArray index="What" value="Thor_What"/>
+        <SoundArray index="Yes" value="Thor_Yes"/>
+        <SoundArray index="Attack" value="Thor_Attack"/>
+        <SoundArray index="Pissed" value="Thor_Pissed"/>
+        <SoundArray index="Movement" value="Thor_Movement"/>
+        <SoundArray index="Turning" value="Thor_Turning"/>
+        <SoundArray index="Board" value="Thor_Board"/>
+        <StatusBarFlags index="Shields" value="0"/>
+        <StatusBarFlags index="Life" value="0"/>
+        <StatusBarFlags index="Energy" value="0"/>
+        <StatusBarFlags index="Cargo" value="0"/>
+        <StatusBarFlags index="Progress" value="0"/>
+        <StatusBarFlags index="Duration" value="0"/>
+        <StatusBarFlags index="Magazine" value="0"/>
+        <StatusBarFlags index="Workers" value="0"/>
+        <UnitIcon value="Assets\Textures\BTN-Unit-Terran-Odin.dds"/>
+        <UnitKillRank Text="UnitKillRank/InfestedSmithy"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-Odin.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorUnit id="ExampleMOS" parent="GenericUnitBase" unitName="ExampleMOS">
+        <Macros value="UnloadDropAnim"/>
+        <Macros value="Animations"/>
+        <On Terms="Abil.attack.ReadyStart" Send="AnimGroupApply Ready"/>
+        <On Terms="WeaponStart.*.AttackStart; WeaponTargetElevation GE 20.000000" Send="AnimBracketStart Attack Attack,Superior"/>
+        <On Terms="WeaponStart.*.AttackStart; WeaponTargetElevation LE -20.000000" Send="AnimBracketStart Attack Attack,Inferior"/>
+        <On Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Attack Attack"/>
+        <On Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack"/>
+        <On Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
+        <On Terms="ModelEvent; ModelEventName SquibStart" Send="Create MarineCheerSquib"/>
+        <On Terms="ModelEvent; ModelEventName SquibStop" Target="MarineCheerSquib" Send="Destroy"/>
+        <On Terms="ModelEvent; ModelEventName SquibStop" Target="MarineCheerSquibSound" Send="Destroy"/>
+        <On Terms="AnimDone; AnimName Cheer" Target="MarineCheerSquib" Send="Destroy"/>
+        <On Terms="AnimDone; AnimName Cheer" Target="MarineCheerSquibSound" Send="Destroy"/>
+        <On Terms="UnitBirth.RiflemanKith" Send="Create SoundEmitter Rifleman_Ambience"/>
+        <On Terms="UnitBirth.RiflemanKith" Send="Create"/>
+        <On Terms="UnitRevive.RiflemanKith" Send="Create"/>
+        <On Terms="UnitRevive.RiflemanKith" Send="RefSet ::HostTurretBody _Selectable"/>
+        <On Terms="UnitConstruction.RiflemanKith.Start" Send="Create"/>
+        <On Terms="UnitConstruction.RiflemanKith.Finish" Send="AnimPlay ConstructionDeath Stand,Birth,Death FullMatch"/>
+        <On Terms="UnitBirth.ExampleMOS" Send="Create SoundEmitter Rifleman_Ambience"/>
+        <On Terms="UnitBirth.ExampleMOS" Send="Create"/>
+        <On Terms="UnitRevive.ExampleMOS" Send="Create"/>
+        <On Terms="UnitRevive.ExampleMOS" Send="RefSet ::HostTurretBody _Selectable"/>
+        <On Terms="UnitConstruction.ExampleMOS.Start" Send="Create"/>
+        <On Terms="UnitConstruction.ExampleMOS.Finish" Send="AnimPlay ConstructionDeath Stand,Birth,Death FullMatch"/>
+        <Model value="Marine"/>
+        <BuildModel value="Marine"/>
+        <DeathArray index="Normal">
+            <AnimProps value="Death,Silentkill"/>
+            <ModelLink value="MarineDeath"/>
+            <SoundLink value="Marine_Death"/>
+            <VoiceLink value="InfantryRiflemanDeathVoice"/>
+        </DeathArray>
+        <DeathArray index="Blast" ModelLink="MarineDeathBlast"/>
+        <DeathArray index="Disintegrate" ModelLink="MarineDeathAcid" SoundLink="Uni_DeathFXAcid"/>
+        <DeathArray index="Eat" AnimProps="Stand" ModelLink="MarineDeathEat" SoundLink="Marine_DeathFXEat"/>
+        <DeathArray index="Eviscerate" ModelLink="MarineDeathEviscerate" SoundLink="Marine_DeathFXEviscerate"/>
+        <DeathArray index="Fire" ModelLink="MarineDeathFire" SoundLink="Marine_DeathFXFire"/>
+        <DeathArray index="Silentkill" SoundLink="Uni_DeathFXSilentKill"/>
+        <DeathArray index="Squish" SoundLink="Marine_DeathFXBloodSpray"/>
+        <PlacementModel value="Marine"/>
+        <PortraitModel value="Marine3Portrait"/>
+        <StandAnimTurnTime value="4"/>
+        <WalkAnimMoveSpeed value="2.25"/>
+        <AbilSoundArray AbilCmd="Stimpack,Execute" Sound="Marine_StimPackVO"/>
+        <BarOffset value="40"/>
+        <BarWidth value="36"/>
+        <CustomUnitStatusFrame value="VoidShared_UnitStatus/HeroUnitEnergyStatusFrameTemplate"/>
+        <CustomUnitStatusOffset value="-15,-20"/>
+        <GlossaryAnim value="Spell"/>
+        <GroupIcon>
+            <Image value="Assets\Wireframes\UAC_Marine_Wireframe.dds"/>
+        </GroupIcon>
+        <GroupSoundArray index="What" value="Marine_GroupWhat"/>
+        <GroupSoundArray index="Yes" value="Marine_GroupYes"/>
+        <GroupSoundArray index="Attack" value="Marine_GroupAttack"/>
+        <GroupSoundArray index="Board" value="Marine_GroupBoard"/>
+        <HeroIcon value="Buttons/BTNSoldier.dds"/>
+        <LifeArmorIcon value="Buttons\BTNKevlar.dds"/>
+        <SoundArray index="Birth" value="Marine_Birth"/>
+        <SoundArray index="Ready" value="Marine_Ready"/>
+        <SoundArray index="Help" value="Marine_Help"/>
+        <SoundArray index="What" value="Marine_What"/>
+        <SoundArray index="Yes" value="Marine_Yes"/>
+        <SoundArray index="Attack" value="Marine_Attack"/>
+        <SoundArray index="Pissed" value="Marine_Pissed"/>
+        <SoundArray index="Movement" value="Marine_Movement"/>
+        <SoundArray index="Turning" value="Marine_Turning"/>
+        <SoundArray index="Board" value="Marine_Board"/>
+        <SoundArray index="Click" value="Marine_Click"/>
+        <SoundArray index="ClickError" value="Marine_ClickError"/>
+        <SoundArray index="Highlight" value="Marine_Highlight"/>
+        <UnitBorderNormalColor value="150,150,150"/>
+        <UnitBorderSubgroupColor value="255,255,255"/>
+        <UnitFlags index="SuppressDefaultStatusBar" value="1"/>
+        <UnitIcon value="Buttons/BTNSoldier.dds"/>
+        <Wireframe>
+            <Image value="Assets\Wireframes\UAC_Marine_Wireframe.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorModel id="OrbitalBeamVisual" parent="ModelAddition">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.OrbitalBeam.On" Send="Create"/>
+        <On Terms="Behavior.OrbitalBeam.Off" Send="Destroy"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachCenter"/>
+        <Model value="OrbitalBeam"/>
     </CActorModel>
     <CActorSound id="SoundEmitter2" parent="SoundContinuous">
         <Terms value="!HasScopeFlag DisableSoundEmitters"/>
@@ -17296,7 +17618,7 @@
     <CActorSimple id="SolarFocusingPureTint">
         <On Terms="Behavior.SolarFocusing.On" Send="Create"/>
         <On Terms="Behavior.SolarFocusing.Off" Send="Destroy"/>
-        <On Terms="ActorCreation" Target="_Selectable" Send="SetTintColor 210,0,0 0.100000 OneShot SolarFocusing"/>
+        <On Terms="ActorCreation" Target="_Selectable" Send="SetTintColor 255,255,85 0.100000 OneShot SolarFocusing"/>
         <On Terms="ActorDestruction" Target="_Selectable" Send="ClearTintColor 0.100000 SolarFocusing"/>
         <On Terms="Behavior.SolarFocusingTest.On" Send="Create"/>
         <On Terms="Behavior.SolarFocusingTest.Off" Send="Destroy"/>
@@ -17304,7 +17626,7 @@
     <CActorSimple id="SolarFocusingTint">
         <On Terms="Behavior.SolarFocusingTarget.On" Send="Create"/>
         <On Terms="Behavior.SolarFocusingTarget.Off" Send="Destroy"/>
-        <On Terms="ActorCreation" Target="_Selectable" Send="SetTintColor 210,0,0 5.000000 OneShot SFTarget"/>
+        <On Terms="ActorCreation" Target="_Selectable" Send="SetTintColor 255,255,174 5.000000 OneShot SFTarget"/>
         <On Terms="ActorDestruction" Target="_Selectable" Send="ClearTintColor 0.200000 SFTarget"/>
         <On Terms="Behavior.SolarFocusingTargetTest.On" Send="Create"/>
         <On Terms="Behavior.SolarFocusingTargetTest.Off" Send="Destroy"/>
@@ -22142,7 +22464,7 @@
         <On index="0" Terms="ActorCreation" Send="Create SoundEmitter Doodad_Item"/>
         <On index="1" Terms="ActorCreation" Send="$Stand PlayForever"/>
         <On index="2" Terms="UnitBirth.Binoculars"/>
-        <On index="3" removed="1"/>
+        <On index="3" Terms="ActorCreation" Send="SetTintColor 255,255,0"/>
         <On index="4" removed="1"/>
         <On index="5" removed="1"/>
         <On index="6" removed="1"/>
@@ -26248,7 +26570,7 @@
         <On index="0" Terms="ActorCreation" Send="Create SoundEmitter Doodad_Item"/>
         <On index="1" Terms="ActorCreation" Send="$Stand PlayForever"/>
         <On index="2" Terms="UnitBirth.BioSample"/>
-        <On index="3" removed="1"/>
+        <On index="3" Terms="ActorCreation" Send="SetTintColor 0,0,255"/>
         <On index="4" removed="1"/>
         <On index="5" removed="1"/>
         <On index="6" removed="1"/>
@@ -27674,7 +27996,7 @@
         <On index="0" Terms="ActorCreation" Send="Create SoundEmitter Doodad_Item"/>
         <On index="1" Terms="ActorCreation" Send="$Stand PlayForever"/>
         <On index="2" Terms="UnitBirth.LiftBoots"/>
-        <On index="3" removed="1"/>
+        <On index="3" Terms="ActorCreation" Send="SetTintColor {255,224,102 10.000000}"/>
         <On index="4" removed="1"/>
         <On index="5" removed="1"/>
         <On index="6" removed="1"/>
@@ -33120,7 +33442,7 @@
         <On index="0" Terms="ActorCreation" Send="Create SoundEmitter Doodad_Item"/>
         <On index="1" Terms="ActorCreation" Send="$Stand PlayForever"/>
         <On index="2" Terms="UnitBirth.FirstAidKit"/>
-        <On index="3" removed="1"/>
+        <On index="3" Terms="ActorCreation" Send="SetTintColor 210,0,0"/>
         <On index="4" removed="1"/>
         <On index="5" removed="1"/>
         <On index="6" removed="1"/>
@@ -33645,7 +33967,7 @@
         <On index="0" Terms="ActorCreation" Send="Create SoundEmitter Doodad_Item"/>
         <On index="1" Terms="ActorCreation" Send="$Stand PlayForever"/>
         <On index="2" Terms="UnitBirth.FlareGun"/>
-        <On index="3" removed="1"/>
+        <On index="3" Terms="ActorCreation" Send="SetTintColor 255,255,0"/>
         <On index="4" removed="1"/>
         <On index="5" removed="1"/>
         <On index="6" removed="1"/>
@@ -33930,7 +34252,7 @@
         <On index="0" Terms="ActorCreation" Send="Create SoundEmitter Doodad_Item"/>
         <On index="1" Terms="ActorCreation" Send="$Stand PlayForever"/>
         <On index="2" Terms="UnitBirth.SmokeGrenade"/>
-        <On index="3" removed="1"/>
+        <On index="3" Terms="ActorCreation" Send="SetTintColor 86,57,22"/>
         <On index="4" removed="1"/>
         <On index="5" removed="1"/>
         <On index="6" removed="1"/>
@@ -34398,7 +34720,7 @@
         <On index="0" Terms="ActorCreation" Send="Create SoundEmitter Doodad_Item"/>
         <On index="1" Terms="ActorCreation" Send="$Stand PlayForever"/>
         <On index="2" Terms="UnitBirth.GroundFlare"/>
-        <On index="3" removed="1"/>
+        <On index="3" Terms="ActorCreation" Send="SetTintColor 255,255,0"/>
         <On index="4" removed="1"/>
         <On index="5" removed="1"/>
         <On index="6" removed="1"/>
@@ -34540,7 +34862,7 @@
         <On index="0" Terms="ActorCreation" Send="Create SoundEmitter Doodad_Item"/>
         <On index="1" Terms="ActorCreation" Send="$Stand PlayForever"/>
         <On index="2" Terms="UnitBirth.MuscleRelaxant"/>
-        <On index="3" removed="1"/>
+        <On index="3" Terms="ActorCreation" Send="SetTintColor {255,60,60 10.000000}"/>
         <On index="4" removed="1"/>
         <On index="5" removed="1"/>
         <On index="6" removed="1"/>
@@ -34651,7 +34973,7 @@
         <On index="0" Terms="ActorCreation" Send="Create SoundEmitter Doodad_Item"/>
         <On index="1" Terms="ActorCreation" Send="$Stand PlayForever"/>
         <On index="2" Terms="UnitBirth.KineticIntegrator"/>
-        <On index="3" removed="1"/>
+        <On index="3" Terms="ActorCreation" Send="SetTintColor {0,255,255 15.000000}"/>
         <On index="4" removed="1"/>
         <On index="5" removed="1"/>
         <On index="6" removed="1"/>
@@ -34897,7 +35219,7 @@
         <On index="0" Terms="ActorCreation" Send="Create SoundEmitter Doodad_Item"/>
         <On index="1" Terms="ActorCreation" Send="$Stand PlayForever"/>
         <On index="2" Terms="UnitBirth.EnergyCell"/>
-        <On index="3" removed="1"/>
+        <On index="3" Terms="ActorCreation" Send="SetTintColor 0,178,186"/>
         <On index="4" removed="1"/>
         <On index="5" removed="1"/>
         <On index="6" removed="1"/>
@@ -36289,7 +36611,7 @@
         <On index="0" Terms="ActorCreation" Send="Create SoundEmitter Doodad_Item"/>
         <On index="1" Terms="ActorCreation" Send="$Stand PlayForever"/>
         <On index="2" Terms="UnitBirth.Flashlight"/>
-        <On index="3" removed="1"/>
+        <On index="3" Terms="ActorCreation" Send="SetTintColor 255,255,0"/>
         <On index="4" removed="1"/>
         <On index="5" removed="1"/>
         <On index="6" removed="1"/>
@@ -37527,7 +37849,7 @@
         <On index="0" Terms="ActorCreation" Send="Create SoundEmitter Doodad_Item"/>
         <On index="1" Terms="ActorCreation" Send="$Stand PlayForever"/>
         <On index="2" Terms="UnitBirth.QuikClot"/>
-        <On index="3" removed="1"/>
+        <On index="3" Terms="ActorCreation" Send="SetTintColor 210,0,0"/>
         <On index="4" removed="1"/>
         <On index="5" removed="1"/>
         <On index="6" removed="1"/>
@@ -38783,10 +39105,6 @@
         <Model value="HotSRaptor"/>
         <Scale value="0.800000"/>
         <BuildModel value="HotSRaptor"/>
-        <DeathArray index="Normal" ModelLink="ZerglingCarbotDeath" SoundLink="Zergling_Death" VoiceLink="RaisuliDeathVoice"/>
-        <DeathArray index="Disintegrate" ModelLink="ZerglingCarbotDeath"/>
-        <DeathArray index="Eviscerate" AnimProps="Death" ModelLink="ZerglingCarbotDeath"/>
-        <DeathArray index="Fire" AnimProps="Death" ModelLink="ZerglingCarbotDeath"/>
         <PlacementModel value="HotSRaptor"/>
         <HighlightTooltip value="Unit/Name/Hopper"/>
         <Macros index="2" value="UnloadDropAnim"/>
