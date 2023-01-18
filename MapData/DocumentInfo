@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DocInfo>
+    <ModType>
+        <Value>Interface</Value>
+    </ModType>
+    <Icon>
+        <Value>UI\UAC_Preview_Image.dds</Value>
+    </Icon>
+    <Dependencies>
+        <Value>bnet:Liberty (Mod)/0.0/999,file:Mods/Liberty.SC2Mod</Value>
+        <Value>bnet:Liberty (Campaign)/0.0/999,file:Campaigns/Liberty.SC2Campaign</Value>
+        <Value>bnet:Liberty Story (Campaign)/0.0/999,file:Campaigns/LibertyStory.SC2Campaign</Value>
+        <Value>bnet:Swarm (Mod)/0.0/999,file:Mods/Swarm.SC2Mod</Value>
+        <Value>bnet:Swarm (Campaign)/0.0/999,file:Campaigns/Swarm.SC2Campaign</Value>
+        <Value>bnet:Swarm Story (Campaign)/0.0/999,file:Campaigns/SwarmStory.SC2Campaign</Value>
+        <Value>bnet:Void (Mod)/0.0/999,file:Mods/Void.SC2Mod</Value>
+        <Value>bnet:UAR-LOTV-C/1.0/440476</Value>
+        <Value>bnet:UARA1/1.0/440471</Value>
+        <Value>bnet:UARA2/1.0/440474</Value>
+        <Value>bnet:UARM/1.0/440475</Value>
+        <Value>bnet:UART/1.0/440477</Value>
+        <Value>bnet:UARU/1.0/440478</Value>
+        <Value>bnet:UARBane/1.0/440479</Value>
+        <Value>bnet:UARAdd/1.0/440480</Value>
+    </Dependencies>
+    <ScreenshotHowToPlay>
+        <File>
+            <Value>Assets\Preview\Game_Preview.dds</Value>
+            <Value>Assets\Preview\Sis.dds</Value>
+            <Value>Assets\Preview\Unlocks.dds</Value>
+            <Value>Assets\Custom Icons\UAC Preview.dds</Value>
+        </File>
+        <CaptionId>
+            <Value>1</Value>
+            <Value>2</Value>
+            <Value>3</Value>
+            <Value>4</Value>
+        </CaptionId>
+        <Flags>
+            <Value> </Value>
+            <Value> </Value>
+            <Value> </Value>
+            <Value> </Value>
+        </Flags>
+    </ScreenshotHowToPlay>
+    <PatchNote>
+        <Version>
+            <Value>3.143</Value>
+            <Value>3.144</Value>
+            <Value>3.145</Value>
+            <Value>3.146</Value>
+            <Value>3.147</Value>
+            <Value>3.148</Value>
+            <Value>3.149</Value>
+            <Value>3.150</Value>
+            <Value>3.151</Value>
+            <Value>3.152</Value>
+            <Value>3.153</Value>
+            <Value>3.154</Value>
+            <Value>3.155</Value>
+            <Value>3.156</Value>
+            <Value>3.157</Value>
+            <Value>3.158</Value>
+            <Value>3.159</Value>
+            <Value>3.160</Value>
+            <Value>3.161</Value>
+            <Value>3.162</Value>
+            <Value>3.163</Value>
+        </Version>
+        <Date>
+            <Value>7/20/2018</Value>
+            <Value>7/20/2018</Value>
+            <Value>8/19/2018</Value>
+            <Value>8/20/2018</Value>
+            <Value>8/24/2018</Value>
+            <Value>8/27/2018</Value>
+            <Value>8/28/2018</Value>
+            <Value>8/29/2018</Value>
+            <Value>9/4/2018</Value>
+            <Value>9/11/2018</Value>
+            <Value>9/15/2018</Value>
+            <Value>10/8/2018</Value>
+            <Value>10/25/2018</Value>
+            <Value>10/26/2018</Value>
+            <Value>11/11/2018</Value>
+            <Value>11/13/2018</Value>
+            <Value>11/25/2018</Value>
+            <Value>12/29/2018</Value>
+            <Value>12/29/2018</Value>
+            <Value>12/29/2018</Value>
+            <Value>12/30/2018</Value>
+        </Date>
+        <Notes>
+            <Value>1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20</Value>
+            <Value>21,22,23</Value>
+            <Value>24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51</Value>
+            <Value>52</Value>
+            <Value>53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68</Value>
+            <Value>69,70,71</Value>
+            <Value>72,73</Value>
+            <Value>74</Value>
+            <Value>75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92</Value>
+            <Value>93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112</Value>
+            <Value>113,114,115,116,117,118,119</Value>
+            <Value>120,121,122,123,124,125,126</Value>
+            <Value>127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142</Value>
+            <Value>143</Value>
+            <Value>144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201</Value>
+            <Value>202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217</Value>
+            <Value>218,219,220,221,222,223,224,225,226</Value>
+            <Value>227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242</Value>
+            <Value>243,247</Value>
+            <Value>244,245</Value>
+            <Value>246</Value>
+        </Notes>
+    </PatchNote>
+</DocInfo>

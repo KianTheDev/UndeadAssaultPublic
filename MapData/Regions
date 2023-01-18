@@ -1,0 +1,1550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Regions>
+    <region id="1">
+        <name value="West"/>
+        <shape type="rect">
+            <quad value="0.4765,1.1342,4.2397,143.2746"/>
+        </shape>
+    </region>
+    <region id="2">
+        <name value="South"/>
+        <shape type="rect">
+            <quad value="4.2998,0.6186,255.2998,4.683"/>
+        </shape>
+    </region>
+    <region id="3">
+        <name value="East"/>
+        <shape type="rect">
+            <quad value="251.3806,4.791,255.1196,254.6091"/>
+        </shape>
+    </region>
+    <region id="4">
+        <name value="North"/>
+        <shape type="rect">
+            <quad value="18.274,250.2272,251.1682,255.7734"/>
+        </shape>
+    </region>
+    <region id="5">
+        <name value="Crops1"/>
+        <shape type="circle">
+            <center value="106.0004,89.736"/>
+            <radius value="6.9165"/>
+        </shape>
+    </region>
+    <region id="6">
+        <name value="LZ Wolverine"/>
+        <shape type="diamond">
+            <center value="41.5007,55.5007"/>
+            <width value="6"/>
+            <height value="5"/>
+        </shape>
+    </region>
+    <region id="7">
+        <name value="Windsors Quarters"/>
+        <color value="255,0,128,0"/>
+        <shape type="rect">
+            <quad value="91.0117,225.9787,94.9716,228.1684"/>
+        </shape>
+    </region>
+    <region id="12">
+        <name value="Hill1"/>
+        <shape type="circle">
+            <center value="118.048,64.5727"/>
+            <radius value="3.0971"/>
+        </shape>
+    </region>
+    <region id="13">
+        <name value="LZ Eagles"/>
+        <shape type="circle">
+            <center value="128.374,158.8515"/>
+            <radius value="5.105"/>
+        </shape>
+    </region>
+    <region id="14">
+        <name value="LZ Nightstalker"/>
+        <shape type="circle">
+            <center value="42.0134,222.118"/>
+            <radius value="5.5"/>
+        </shape>
+    </region>
+    <region id="15">
+        <name value="LZ Lions"/>
+        <shape type="circle">
+            <center value="189.1257,107.647"/>
+            <radius value="6.3322"/>
+        </shape>
+    </region>
+    <region id="16">
+        <name value="LZ Predator"/>
+        <shape type="circle">
+            <center value="74.907,23.8576"/>
+            <radius value="6.3322"/>
+        </shape>
+    </region>
+    <region id="17">
+        <name value="Exit1"/>
+        <color value="255,128,64,0"/>
+        <shape type="rect">
+            <quad value="20.6748,251.718,26.3261,255.2844"/>
+        </shape>
+    </region>
+    <region id="18">
+        <name value="Exit2"/>
+        <color value="255,128,64,0"/>
+        <shape type="rect">
+            <quad value="251.3452,128.9394,255.5822,134.38"/>
+        </shape>
+    </region>
+    <region id="19">
+        <name value="Exit3"/>
+        <color value="255,128,64,0"/>
+        <shape type="rect">
+            <quad value="97.238,0.569,102.3713,5.1418"/>
+        </shape>
+    </region>
+    <region id="21">
+        <name value="Tower5"/>
+        <color value="255,255,128,64"/>
+        <shape type="circle">
+            <center value="57.8652,167.1838"/>
+            <radius value="3.4301"/>
+        </shape>
+    </region>
+    <region id="24">
+        <name value="Evacuation Area Unarmed"/>
+        <shape type="rect">
+            <quad value="63.0002,203.0002,89,227"/>
+        </shape>
+        <shape type="rect">
+            <negative/>
+            <quad value="63,224,70,227"/>
+        </shape>
+    </region>
+    <region id="25">
+        <name value="Evacuation Area Armed"/>
+        <shape type="rect">
+            <quad value="55.0004,195.0002,109.0002,245.0002"/>
+        </shape>
+        <shape type="rect">
+            <negative/>
+            <quad value="59,198.75,93,226.25"/>
+        </shape>
+        <shape type="rect">
+            <negative/>
+            <quad value="81,211.75,109,241.25"/>
+        </shape>
+        <shape type="rect">
+            <negative/>
+            <quad value="102,240,109,245"/>
+        </shape>
+        <shape type="rect">
+            <negative/>
+            <quad value="59,233.75,81,241.25"/>
+        </shape>
+        <shape type="rect">
+            <negative/>
+            <quad value="59,221.5,65,234.5"/>
+        </shape>
+        <shape type="diamond">
+            <negative/>
+            <center value="66,233"/>
+            <width value="7"/>
+            <height value="3"/>
+        </shape>
+        <shape type="rect">
+            <negative/>
+            <quad value="55,216,59,228"/>
+        </shape>
+        <shape type="rect">
+            <negative/>
+            <quad value="55,195,70,204"/>
+        </shape>
+        <shape type="rect">
+            <negative/>
+            <quad value="93,199,109,205"/>
+        </shape>
+        <shape type="rect">
+            <negative/>
+            <quad value="101,195,109,199"/>
+        </shape>
+        <shape type="diamond">
+            <negative/>
+            <center value="55.5,244.5"/>
+            <width value="3"/>
+            <height value="2"/>
+        </shape>
+    </region>
+    <region id="26">
+        <name value="Guslani Civilians"/>
+        <shape type="rect">
+            <quad value="172.0607,53.4196,208.4306,80.0895"/>
+        </shape>
+        <shape type="diamond">
+            <negative/>
+            <center value="171.8603,79.9936"/>
+            <width value="10.8598"/>
+            <height value="11.1958"/>
+        </shape>
+        <shape type="diamond">
+            <negative/>
+            <center value="209.1115,79.5954"/>
+            <width value="10.8598"/>
+            <height value="11.1958"/>
+        </shape>
+        <shape type="diamond">
+            <negative/>
+            <center value="172.4382,53.1408"/>
+            <width value="10.8598"/>
+            <height value="11.1958"/>
+        </shape>
+        <shape type="diamond">
+            <negative/>
+            <center value="207.7092,53.646"/>
+            <width value="10.8598"/>
+            <height value="11.1958"/>
+        </shape>
+    </region>
+    <region id="28">
+        <name value="TCP01"/>
+        <shape type="rect">
+            <quad value="14.9587,130.7663,26.7048,142.6733"/>
+        </shape>
+    </region>
+    <region id="29">
+        <name value="TCP02"/>
+        <shape type="rect">
+            <quad value="20.8066,231.4113,27.9025,243.2558"/>
+        </shape>
+    </region>
+    <region id="30">
+        <name value="TCP03"/>
+        <shape type="rect">
+            <quad value="232.1887,131.9101,243.9348,143.8171"/>
+        </shape>
+    </region>
+    <region id="31">
+        <name value="TCP04"/>
+        <shape type="rect">
+            <quad value="94.878,14.3735,106.624,26.2805"/>
+        </shape>
+    </region>
+    <region id="32">
+        <name value="Silo01"/>
+        <shape type="circle">
+            <center value="66.0874,132.2922"/>
+            <radius value="2.6791"/>
+        </shape>
+    </region>
+    <region id="33">
+        <name value="Silo02"/>
+        <shape type="circle">
+            <center value="25.0275,107.8818"/>
+            <radius value="2.4597"/>
+        </shape>
+    </region>
+    <region id="34">
+        <name value="Silo03"/>
+        <shape type="rect">
+            <quad value="126.6281,45.7221,132.2634,51.3254"/>
+        </shape>
+    </region>
+    <region id="35">
+        <name value="Silo04"/>
+        <shape type="circle">
+            <center value="132.2104,89.3156"/>
+            <radius value="2.6791"/>
+        </shape>
+    </region>
+    <region id="36">
+        <name value="Silo05"/>
+        <shape type="circle">
+            <center value="167.8784,127.7214"/>
+            <radius value="3.5356"/>
+        </shape>
+    </region>
+    <region id="37">
+        <name value="Silo06"/>
+        <shape type="circle">
+            <center value="188.5651,149.6367"/>
+            <radius value="3.5356"/>
+        </shape>
+    </region>
+    <region id="38">
+        <name value="Silo07"/>
+        <shape type="rect">
+            <quad value="184.572,119.6057,189.4943,122.0024"/>
+        </shape>
+    </region>
+    <region id="39">
+        <name value="Silo08"/>
+        <shape type="circle">
+            <center value="162.4687,96.6027"/>
+            <radius value="3.5356"/>
+        </shape>
+    </region>
+    <region id="41">
+        <name value="Exit4"/>
+        <color value="255,128,64,0"/>
+        <shape type="rect">
+            <quad value="0.5046,137.5705,4.4082,141.3332"/>
+        </shape>
+    </region>
+    <region id="43">
+        <name value="Windsor LZ"/>
+        <shape type="circle">
+            <center value="115.07,74.4538"/>
+            <radius value="3.2211"/>
+        </shape>
+    </region>
+    <region id="53">
+        <name value="Launch Site2"/>
+        <shape type="circle">
+            <center value="6.406,90.5351"/>
+            <radius value="3.619"/>
+        </shape>
+    </region>
+    <region id="54">
+        <name value="Launch Site3"/>
+        <shape type="circle">
+            <center value="42.752,9.7504"/>
+            <radius value="4.006"/>
+        </shape>
+    </region>
+    <region id="57">
+        <name value="Weapons Cache1"/>
+        <invisible/>
+        <shape type="circle">
+            <center value="149.3935,140.659"/>
+            <radius value="2"/>
+        </shape>
+    </region>
+    <region id="58">
+        <name value="Weapons Cache2"/>
+        <invisible/>
+        <shape type="circle">
+            <center value="149.582,140.863"/>
+            <radius value="2"/>
+        </shape>
+    </region>
+    <region id="59">
+        <name value="Weapons Cache3"/>
+        <invisible/>
+        <shape type="circle">
+            <center value="149.6948,140.9555"/>
+            <radius value="2"/>
+        </shape>
+    </region>
+    <region id="60">
+        <name value="Weapons Cache4"/>
+        <invisible/>
+        <shape type="circle">
+            <center value="149.6835,140.8134"/>
+            <radius value="2"/>
+        </shape>
+    </region>
+    <region id="61">
+        <name value="Weapons Cache5"/>
+        <invisible/>
+        <shape type="circle">
+            <center value="149.686,140.9602"/>
+            <radius value="2"/>
+        </shape>
+    </region>
+    <region id="62">
+        <name value="Weapon Cache Spawn1"/>
+        <color value="255,192,192,192"/>
+        <invisible/>
+        <shape type="rect">
+            <quad value="27.7844,140.4855,174.011,247.3322"/>
+        </shape>
+    </region>
+    <region id="63">
+        <name value="Weapon Cache Spawn2"/>
+        <color value="255,192,192,192"/>
+        <invisible/>
+        <shape type="rect">
+            <quad value="33.4262,6.2321,222.646,143.0964"/>
+        </shape>
+    </region>
+    <region id="64">
+        <name value="Cave01"/>
+        <shape type="circle">
+            <center value="39.825,153.0361"/>
+            <radius value="1.688"/>
+        </shape>
+    </region>
+    <region id="65">
+        <name value="Cave02"/>
+        <shape type="circle">
+            <center value="109.104,155.3256"/>
+            <radius value="1.688"/>
+        </shape>
+    </region>
+    <region id="66">
+        <name value="Cave03"/>
+        <shape type="circle">
+            <center value="169.0234,148.2717"/>
+            <radius value="1.688"/>
+        </shape>
+    </region>
+    <region id="67">
+        <name value="Docking Bay1"/>
+        <shape type="rect">
+            <quad value="147.9636,41.7736,152.981,46.2636"/>
+        </shape>
+    </region>
+    <region id="68">
+        <name value="Docking Bay2"/>
+        <shape type="rect">
+            <quad value="156.8886,41.6958,161.938,46.2692"/>
+        </shape>
+    </region>
+    <region id="69">
+        <name value="Docking Bay3"/>
+        <shape type="rect">
+            <quad value="165.8781,41.6254,171.0451,46.192"/>
+        </shape>
+    </region>
+    <region id="70">
+        <name value="Docking Bay4"/>
+        <shape type="rect">
+            <quad value="165.9074,33.487,170.981,38.028"/>
+        </shape>
+    </region>
+    <region id="71">
+        <name value="Docking Bay5"/>
+        <shape type="rect">
+            <quad value="157.098,33.6435,162.1604,38.1235"/>
+        </shape>
+    </region>
+    <region id="72">
+        <name value="Docking Bay6"/>
+        <shape type="rect">
+            <quad value="147.9216,33.6127,153.0383,38.1923"/>
+        </shape>
+    </region>
+    <region id="73">
+        <name value="Meeting"/>
+        <shape type="circle">
+            <center value="154.6716,39.934"/>
+            <radius value="2.4477"/>
+        </shape>
+    </region>
+    <region id="74">
+        <name value="Airport Guard1"/>
+        <shape type="rect">
+            <quad value="172.0634,33.6562,176.8098,37.141"/>
+        </shape>
+    </region>
+    <region id="75">
+        <name value="Airport Guard2"/>
+        <shape type="rect">
+            <quad value="171.849,38.7238,175.8515,42.206"/>
+        </shape>
+    </region>
+    <region id="76">
+        <name value="Airport Guard3"/>
+        <shape type="circle">
+            <center value="144.9941,35.1018"/>
+            <radius value="2.0207"/>
+        </shape>
+    </region>
+    <region id="77">
+        <name value="Cave04"/>
+        <shape type="circle">
+            <center value="242.34,103.6523"/>
+            <radius value="1.688"/>
+        </shape>
+    </region>
+    <region id="78">
+        <name value="Cave05"/>
+        <shape type="circle">
+            <center value="4.2043,103.8405"/>
+            <radius value="1.688"/>
+        </shape>
+    </region>
+    <region id="79">
+        <name value="Infiltration Spawn"/>
+        <color value="255,0,0,0"/>
+        <shape type="rect">
+            <quad value="251.9404,20.1997,255.347,33.8698"/>
+        </shape>
+    </region>
+    <region id="82">
+        <name value="Sniper 02"/>
+        <color value="255,255,0,0"/>
+        <shape type="circle">
+            <center value="123.1796,149.929"/>
+            <radius value="2.5507"/>
+        </shape>
+    </region>
+    <region id="89">
+        <name value="Disabled Tank"/>
+        <shape type="circle">
+            <center value="151.8488,70.985"/>
+            <radius value="4.7058"/>
+        </shape>
+    </region>
+    <region id="90">
+        <name value="Fighting Position 01"/>
+        <color value="255,255,128,0"/>
+        <shape type="circle">
+            <center value="161.9033,183.119"/>
+            <radius value="3.6174"/>
+        </shape>
+    </region>
+    <region id="92">
+        <name value="Fighting Position 03"/>
+        <color value="255,255,128,0"/>
+        <shape type="circle">
+            <center value="176.618,164.976"/>
+            <radius value="6.2216"/>
+        </shape>
+    </region>
+    <region id="99">
+        <name value="RA Scientists 6"/>
+        <shape type="rect">
+            <quad value="234.1838,226.3217,237.581,229.1303"/>
+        </shape>
+    </region>
+    <region id="100">
+        <name value="RA Scientists 7"/>
+        <shape type="rect">
+            <quad value="235.034,231.7536,241.9165,235.192"/>
+        </shape>
+    </region>
+    <region id="104">
+        <name value="BDS1"/>
+        <color value="255,0,255,255"/>
+        <shape type="circle">
+            <center value="18.9577,118.8933"/>
+            <radius value="4.0146"/>
+        </shape>
+    </region>
+    <region id="105">
+        <name value="BDS2"/>
+        <color value="255,0,255,255"/>
+        <shape type="circle">
+            <center value="143.6291,56.9511"/>
+            <radius value="4.0356"/>
+        </shape>
+    </region>
+    <region id="106">
+        <name value="BDS3"/>
+        <color value="255,0,255,255"/>
+        <shape type="circle">
+            <center value="176.8862,241.8598"/>
+            <radius value="2.5"/>
+        </shape>
+    </region>
+    <region id="107">
+        <name value="LN Spawn Region"/>
+        <color value="255,255,128,255"/>
+        <shape type="rect">
+            <quad value="195,65,199,73"/>
+        </shape>
+        <shape type="rect">
+            <quad value="68,227.5,78,232.5"/>
+        </shape>
+        <shape type="rect">
+            <quad value="122,213,128,223"/>
+        </shape>
+        <shape type="rect">
+            <quad value="228.48,110,236.48,122"/>
+        </shape>
+        <shape type="rect">
+            <quad value="40,54,46,62"/>
+        </shape>
+        <shape type="rect">
+            <quad value="181,63,185,71"/>
+        </shape>
+        <shape type="rect">
+            <quad value="39,210,45,216"/>
+        </shape>
+    </region>
+    <region id="110">
+        <name value="Jump1"/>
+        <shape type="rect">
+            <quad value="230.0854,190.6604,237.915,198.3403"/>
+        </shape>
+    </region>
+    <region id="112">
+        <name value="Nojump1"/>
+        <invisible/>
+        <shape type="rect">
+            <quad value="179.7114,156.0158,251.7502,248.3671"/>
+        </shape>
+    </region>
+    <region id="114">
+        <name value="TCP Containment1"/>
+        <invisible/>
+        <shape type="rect">
+            <quad value="0.0764,101.2578,51.2744,155.0666"/>
+        </shape>
+    </region>
+    <region id="115">
+        <name value="TCP Containment 2"/>
+        <invisible/>
+        <shape type="rect">
+            <quad value="8.1271,187.442,55.417,255.9736"/>
+        </shape>
+    </region>
+    <region id="116">
+        <name value="TCP containment 3"/>
+        <invisible/>
+        <shape type="rect">
+            <quad value="209.725,100.4365,255.8056,151.1176"/>
+        </shape>
+    </region>
+    <region id="117">
+        <name value="TCP Containment 4"/>
+        <invisible/>
+        <shape type="rect">
+            <quad value="59.3803,0.0043,126.175,45.1843"/>
+        </shape>
+    </region>
+    <region id="118">
+        <name value="TCP Spawn 1"/>
+        <shape type="rect">
+            <quad value="0.3867,122.7348,3.6306,144.5732"/>
+        </shape>
+    </region>
+    <region id="119">
+        <name value="TCP Spawn 3"/>
+        <shape type="rect">
+            <quad value="251.7368,123.0815,255.7785,157.2097"/>
+        </shape>
+    </region>
+    <region id="120">
+        <name value="TCP Spawn 4"/>
+        <shape type="rect">
+            <quad value="78.9074,1.2016,119.1816,4.307"/>
+        </shape>
+    </region>
+    <region id="121">
+        <name value="TCP Spawn 2"/>
+        <shape type="rect">
+            <quad value="19.2436,250.0002,42.5388,255.3452"/>
+        </shape>
+    </region>
+    <region id="123">
+        <name value="Motorpool2"/>
+        <shape type="rect">
+            <quad value="21.5712,199.41,27.5712,203.41"/>
+        </shape>
+    </region>
+    <region id="124">
+        <name value="Motorpool3"/>
+        <shape type="rect">
+            <quad value="41.0007,222.0004,47.0007,227.0002"/>
+        </shape>
+    </region>
+    <region id="125">
+        <name value="Motorpool4"/>
+        <shape type="rect">
+            <quad value="21.793,212.3288,27.793,216.3286"/>
+        </shape>
+    </region>
+    <region id="126">
+        <name value="Heliport Check"/>
+        <shape type="rect">
+            <quad value="142.9697,32.7922,176.9694,47.1203"/>
+        </shape>
+    </region>
+    <region id="128">
+        <name value="DS Search2"/>
+        <shape type="circle">
+            <center value="37.5002,238.5007"/>
+            <radius value="3.4924"/>
+        </shape>
+    </region>
+    <region id="131">
+        <name value="DS Search5"/>
+        <shape type="circle">
+            <center value="123.6813,214.059"/>
+            <radius value="3.4924"/>
+        </shape>
+    </region>
+    <region id="132">
+        <name value="KEC Search1"/>
+        <shape type="circle">
+            <center value="85.8928,144.312"/>
+            <radius value="3.2883"/>
+        </shape>
+    </region>
+    <region id="133">
+        <name value="KEC Search2"/>
+        <shape type="circle">
+            <center value="7.755,113.7612"/>
+            <radius value="4.1083"/>
+        </shape>
+    </region>
+    <region id="134">
+        <name value="KEC Search3"/>
+        <shape type="circle">
+            <center value="198.4284,63.8486"/>
+            <radius value="3.6076"/>
+        </shape>
+    </region>
+    <region id="135">
+        <name value="Balaad Gaurd 1"/>
+        <shape type="circle">
+            <center value="58.4833,67.5083"/>
+            <radius value="2.75"/>
+        </shape>
+    </region>
+    <region id="136">
+        <name value="Balaad Gaurd 2"/>
+        <shape type="circle">
+            <center value="66.254,55.9606"/>
+            <radius value="3.75"/>
+        </shape>
+    </region>
+    <region id="137">
+        <name value="Balaad Gaurd 4"/>
+        <shape type="circle">
+            <center value="30.4262,39.5776"/>
+            <radius value="4.1108"/>
+        </shape>
+    </region>
+    <region id="138">
+        <name value="Balaad Gaurd 3"/>
+        <shape type="circle">
+            <center value="41.6281,32.6596"/>
+            <radius value="4.1108"/>
+        </shape>
+    </region>
+    <region id="139">
+        <name value="Exit5"/>
+        <color value="255,255,128,64"/>
+        <shape type="rect">
+            <quad value="0.695,33.763,3.7802,37.9956"/>
+        </shape>
+    </region>
+    <region id="140">
+        <name value="Sanies1"/>
+        <shape type="circle">
+            <center value="225.788,147.7331"/>
+            <radius value="4.356"/>
+        </shape>
+    </region>
+    <region id="142">
+        <name value="City Guards1"/>
+        <shape type="circle">
+            <center value="65.251,199.4487"/>
+            <radius value="3.1647"/>
+        </shape>
+    </region>
+    <region id="143">
+        <name value="Highland Guard1"/>
+        <shape type="circle">
+            <center value="48.2954,157.0466"/>
+            <radius value="4.0141"/>
+        </shape>
+    </region>
+    <region id="144">
+        <name value="Highland Guard2"/>
+        <shape type="circle">
+            <center value="71.3056,156.4682"/>
+            <radius value="4.0141"/>
+        </shape>
+    </region>
+    <region id="145">
+        <name value="Highland Guard3"/>
+        <shape type="circle">
+            <center value="58.5002,141.5002"/>
+            <radius value="4.0141"/>
+        </shape>
+    </region>
+    <region id="146">
+        <name value="Highland Guard4"/>
+        <shape type="circle">
+            <center value="68.0002,173.5002"/>
+            <radius value="5.8583"/>
+        </shape>
+    </region>
+    <region id="148">
+        <name value="Polce TCP01"/>
+        <shape type="circle">
+            <center value="150.551,105.49"/>
+            <radius value="6.801"/>
+        </shape>
+    </region>
+    <region id="149">
+        <name value="Police TCP02"/>
+        <shape type="circle">
+            <center value="127.8032,21.269"/>
+            <radius value="7.1086"/>
+        </shape>
+    </region>
+    <region id="151">
+        <name value="RA Gate Breach"/>
+        <shape type="rect">
+            <quad value="229.8432,185.148,238.418,190.4003"/>
+        </shape>
+    </region>
+    <region id="163">
+        <name value="East Thalim Civilians"/>
+        <invisible/>
+        <shape type="rect">
+            <quad value="131.083,220.781,162.6025,248.3005"/>
+        </shape>
+        <shape type="diamond">
+            <center value="156.2031,226.8383"/>
+            <width value="34.3198"/>
+            <height value="25.73"/>
+        </shape>
+        <shape type="rect">
+            <quad value="109.8227,199.9548,141.0024,247.9548"/>
+        </shape>
+        <shape type="diamond">
+            <center value="139.2358,208.1313"/>
+            <width value="17.19"/>
+            <height value="23.0898"/>
+        </shape>
+    </region>
+    <region id="164">
+        <name value="Training Item Drop 1"/>
+        <color value="255,128,255,0"/>
+        <shape type="rect">
+            <quad value="143.3444,102.746,157.5041,112.986"/>
+        </shape>
+    </region>
+    <region id="84">
+        <name value="AO Entrance Research Facility"/>
+        <shape type="circle">
+            <center value="149.2038,220.3388"/>
+            <radius value="4.3198"/>
+        </shape>
+    </region>
+    <region id="166">
+        <name value="AO Civilian 1"/>
+        <shape type="circle">
+            <center value="93.494,215.9936"/>
+            <radius value="3.63"/>
+        </shape>
+    </region>
+    <region id="170">
+        <name value="Seismic Disturbance 2"/>
+        <shape type="circle">
+            <center value="115.4802,132.3413"/>
+            <radius value="3.2712"/>
+        </shape>
+    </region>
+    <region id="171">
+        <name value="Seismic Disturbance 1"/>
+        <shape type="circle">
+            <center value="116.5031,90.1296"/>
+            <radius value="3.155"/>
+        </shape>
+    </region>
+    <region id="172">
+        <name value="Seismic Disturbance 3"/>
+        <shape type="circle">
+            <center value="70.1953,137.4074"/>
+            <radius value="3.7412"/>
+        </shape>
+    </region>
+    <region id="175">
+        <name value="Seismic Disturbance Spawn 1"/>
+        <shape type="circle">
+            <center value="115.376,88.458"/>
+            <radius value="2.2802"/>
+        </shape>
+    </region>
+    <region id="176">
+        <name value="Seismic Disturbance Spawn 2"/>
+        <shape type="circle">
+            <center value="118.2363,133.6616"/>
+            <radius value="2.6872"/>
+        </shape>
+    </region>
+    <region id="177">
+        <name value="Seismic Disturbance Spawn 3"/>
+        <shape type="circle">
+            <center value="68.72,133.4597"/>
+            <radius value="2.51"/>
+        </shape>
+    </region>
+    <region id="178">
+        <name value="Balaad Assault"/>
+        <shape type="rect">
+            <quad value="83.0676,5.1613,93.838,16.7868"/>
+        </shape>
+    </region>
+    <region id="179">
+        <name value="Research Facility"/>
+        <shape type="diamond">
+            <center value="153.8056,217.3881"/>
+            <width value="2.3925"/>
+            <height value="2.0708"/>
+        </shape>
+    </region>
+    <region id="182">
+        <name value="Kurin Sentry 1"/>
+        <shape type="circle">
+            <center value="143.3564,206.6235"/>
+            <radius value="3.1647"/>
+        </shape>
+    </region>
+    <region id="183">
+        <name value="Kurin Sentry 2"/>
+        <shape type="circle">
+            <center value="161.6171,236.8642"/>
+            <radius value="3.1647"/>
+        </shape>
+    </region>
+    <region id="184">
+        <name value="Guslani Sentry 1"/>
+        <shape type="circle">
+            <center value="182.3312,55.6984"/>
+            <radius value="2"/>
+        </shape>
+    </region>
+    <region id="185">
+        <name value="Guslani Sentry 2"/>
+        <shape type="circle">
+            <center value="200.7014,72.9096"/>
+            <radius value="3.1647"/>
+        </shape>
+    </region>
+    <region id="186">
+        <name value="Research Facility Sentry"/>
+        <shape type="circle">
+            <center value="77.5002,106.5007"/>
+            <radius value="2"/>
+        </shape>
+    </region>
+    <region id="193">
+        <name value="Kurin House 1"/>
+        <shape type="circle">
+            <center value="156.321,237.9064"/>
+            <radius value="1.726"/>
+        </shape>
+    </region>
+    <region id="194">
+        <name value="Kurin House 2"/>
+        <shape type="circle">
+            <center value="141.7568,236.3188"/>
+            <radius value="1.7587"/>
+        </shape>
+    </region>
+    <region id="195">
+        <name value="Guslani House 1"/>
+        <shape type="rect">
+            <quad value="194.1198,64.4531,197.301,67.6342"/>
+        </shape>
+    </region>
+    <region id="198">
+        <name value="No Spawn Zone"/>
+        <invisible/>
+        <shape type="rect">
+            <quad value="102.169,54.5498,145.0317,83.455"/>
+        </shape>
+    </region>
+    <region id="199">
+        <name value="Helicopter Loop"/>
+        <invisible/>
+        <shape type="rect">
+            <quad value="133.513,10.098,209.793,44.035"/>
+        </shape>
+    </region>
+    <region id="212">
+        <name value="Morrow 1"/>
+        <shape type="diamond">
+            <center value="125.3466,113.6904"/>
+            <width value="1.0126"/>
+            <height value="0.62"/>
+        </shape>
+    </region>
+    <region id="213">
+        <name value="Morrow 7"/>
+        <shape type="diamond">
+            <center value="162.0544,165.0383"/>
+            <width value="1.2841"/>
+            <height value="0.8974"/>
+        </shape>
+    </region>
+    <region id="214">
+        <name value="Morrow 3"/>
+        <shape type="diamond">
+            <center value="151.3422,138.425"/>
+            <width value="1.179"/>
+            <height value="0.8605"/>
+        </shape>
+    </region>
+    <region id="215">
+        <name value="Morrow 4"/>
+        <shape type="diamond">
+            <center value="131.4074,132.5974"/>
+            <width value="1.0895"/>
+            <height value="0.8276"/>
+        </shape>
+    </region>
+    <region id="216">
+        <name value="Morrow 5"/>
+        <shape type="diamond">
+            <center value="79.0051,109.0217"/>
+            <width value="1.1726"/>
+            <height value="0.8452"/>
+        </shape>
+    </region>
+    <region id="217">
+        <name value="Morrow 2"/>
+        <shape type="diamond">
+            <center value="189.0131,164.5236"/>
+            <width value="1.1777"/>
+            <height value="0.8198"/>
+        </shape>
+    </region>
+    <region id="218">
+        <name value="Morrow 6"/>
+        <shape type="diamond">
+            <center value="152.504,79.5041"/>
+            <width value="1.2653"/>
+            <height value="0.9335"/>
+        </shape>
+    </region>
+    <region id="220">
+        <name value="Research Data 2"/>
+        <shape type="circle">
+            <center value="227.4516,235.0834"/>
+            <radius value="0.7294"/>
+        </shape>
+    </region>
+    <region id="221">
+        <name value="Research Data 3"/>
+        <shape type="circle">
+            <center value="236.3542,234.845"/>
+            <radius value="0.7167"/>
+        </shape>
+    </region>
+    <region id="222">
+        <name value="Research Data 4"/>
+        <shape type="circle">
+            <center value="240.4372,234.873"/>
+            <radius value="0.7946"/>
+        </shape>
+    </region>
+    <region id="223">
+        <name value="Research Data 5"/>
+        <shape type="circle">
+            <center value="230.0852,219.077"/>
+            <radius value="0.588"/>
+        </shape>
+    </region>
+    <region id="224">
+        <name value="Research Data 6"/>
+        <shape type="circle">
+            <center value="231.8083,219.048"/>
+            <radius value="0.5664"/>
+        </shape>
+    </region>
+    <region id="206">
+        <name value="Sniper #3"/>
+        <shape type="circle">
+            <center value="67.0153,226.643"/>
+            <radius value="1.0605"/>
+        </shape>
+    </region>
+    <region id="234">
+        <name value="Launch Site 1"/>
+        <color value="255,255,0,0"/>
+        <shape type="circle">
+            <center value="153.541,233.486"/>
+            <radius value="5.4255"/>
+        </shape>
+    </region>
+    <region id="235">
+        <name value="PMC Balaad South"/>
+        <color value="255,255,0,0"/>
+        <shape type="rect">
+            <quad value="0.5,1,125.5,4"/>
+        </shape>
+    </region>
+    <region id="236">
+        <name value="PMC Balaad West"/>
+        <color value="255,255,0,0"/>
+        <shape type="rect">
+            <quad value="0.5,2,4,84.5"/>
+        </shape>
+    </region>
+    <region id="241">
+        <name value="Tunnel Satchel 1"/>
+        <color value="255,255,128,0"/>
+        <shape type="circle">
+            <center value="242.9797,108.5178"/>
+            <radius value="2.6503"/>
+        </shape>
+    </region>
+    <region id="242">
+        <name value="Tunnel Satchel 2"/>
+        <color value="255,255,128,0"/>
+        <shape type="circle">
+            <center value="164.6582,150.2714"/>
+            <radius value="2.795"/>
+        </shape>
+    </region>
+    <region id="243">
+        <name value="Tunnel Satchel 3"/>
+        <color value="255,255,128,0"/>
+        <shape type="circle">
+            <center value="44.909,155.4982"/>
+            <radius value="2.121"/>
+        </shape>
+    </region>
+    <region id="249">
+        <name value="Civ Search"/>
+        <shape type="circle">
+            <center value="74.693,224.6567"/>
+            <radius value="2.1503"/>
+        </shape>
+    </region>
+    <region id="250">
+        <name value="Civ Search 2"/>
+        <shape type="rect">
+            <quad value="190.9904,71.1337,194.76,72.9033"/>
+        </shape>
+    </region>
+    <region id="251">
+        <name value="Civ Search 3"/>
+        <shape type="circle">
+            <center value="141.8388,236.2546"/>
+            <radius value="1.677"/>
+        </shape>
+    </region>
+    <region id="271">
+        <name value="Hackers"/>
+        <shape type="rect">
+            <quad value="55.8603,238.7675,61.3603,242.7675"/>
+        </shape>
+    </region>
+    <region id="272">
+        <name value="Hackers 2"/>
+        <shape type="rect">
+            <quad value="113.2976,228.59,122.7976,233.09"/>
+        </shape>
+    </region>
+    <region id="275">
+        <name value="LZ Jaguar"/>
+        <color value="255,255,0,0"/>
+        <shape type="rect">
+            <quad value="32.5966,106.3041,45.5966,116.3041"/>
+        </shape>
+    </region>
+    <region id="276">
+        <name value="PMC Spawns"/>
+        <color value="255,255,0,0"/>
+        <shape type="rect">
+            <quad value="205,0.5,211.5,4.5"/>
+        </shape>
+    </region>
+    <region id="277">
+        <name value="Weapons Cache6"/>
+        <invisible/>
+        <shape type="circle">
+            <center value="149.4296,140.9382"/>
+            <radius value="2"/>
+        </shape>
+    </region>
+    <region id="278">
+        <name value="Weapons Cache7"/>
+        <invisible/>
+        <shape type="circle">
+            <center value="149.472,141.3747"/>
+            <radius value="2"/>
+        </shape>
+    </region>
+    <region id="279">
+        <name value="Police Chief"/>
+        <color value="255,255,0,255"/>
+        <shape type="circle">
+            <center value="104.6484,226.2402"/>
+            <radius value="2.0153"/>
+        </shape>
+    </region>
+    <region id="283">
+        <name value="TS 1"/>
+        <shape type="rect">
+            <quad value="56.3266,204.2976,57.8266,205.7976"/>
+        </shape>
+    </region>
+    <region id="284">
+        <name value="TS 2"/>
+        <shape type="rect">
+            <quad value="56.3376,214.3388,57.8376,215.8388"/>
+        </shape>
+    </region>
+    <region id="285">
+        <name value="TS 3"/>
+        <shape type="rect">
+            <quad value="56.3283,228.8937,57.8283,230.3937"/>
+        </shape>
+    </region>
+    <region id="286">
+        <name value="TS 4"/>
+        <shape type="rect">
+            <quad value="98.8862,242.3815,100.3862,244.3815"/>
+        </shape>
+    </region>
+    <region id="287">
+        <name value="TS 5"/>
+        <shape type="rect">
+            <quad value="71.2568,196.0014,72.7568,198.0014"/>
+        </shape>
+    </region>
+    <region id="288">
+        <name value="TS 6"/>
+        <shape type="rect">
+            <quad value="134.2023,196.9782,135.7023,198.4782"/>
+        </shape>
+    </region>
+    <region id="289">
+        <name value="TS 7"/>
+        <shape type="rect">
+            <quad value="155.7263,211.5053,157.2263,213.0053"/>
+        </shape>
+    </region>
+    <region id="290">
+        <name value="TS 8"/>
+        <shape type="rect">
+            <quad value="134.2565,243.5427,135.7565,245.0427"/>
+        </shape>
+    </region>
+    <region id="291">
+        <name value="Highlands Guard 5"/>
+        <shape type="circle">
+            <center value="60.5007,129"/>
+            <radius value="3.2148"/>
+        </shape>
+    </region>
+    <region id="292">
+        <name value="Highlands Guard6"/>
+        <shape type="circle">
+            <center value="80.5,168.5"/>
+            <radius value="3.6054"/>
+        </shape>
+    </region>
+    <region id="293">
+        <name value="Rock Cache 1"/>
+        <invisible/>
+        <shape type="circle">
+            <center value="149.641,140.6376"/>
+            <radius value="1.9523"/>
+        </shape>
+    </region>
+    <region id="294">
+        <name value="Rock Cache 2"/>
+        <invisible/>
+        <shape type="circle">
+            <center value="149.6284,140.917"/>
+            <radius value="1.9523"/>
+        </shape>
+    </region>
+    <region id="295">
+        <name value="Rock Cache 3"/>
+        <invisible/>
+        <shape type="circle">
+            <center value="149.6923,140.7443"/>
+            <radius value="1.9523"/>
+        </shape>
+    </region>
+    <region id="296">
+        <name value="Rock Cache 4"/>
+        <invisible/>
+        <shape type="circle">
+            <center value="149.8076,140.7946"/>
+            <radius value="1.9523"/>
+        </shape>
+    </region>
+    <region id="297">
+        <name value="Rock Cache 5"/>
+        <invisible/>
+        <shape type="circle">
+            <center value="149.6091,140.6794"/>
+            <radius value="1.9523"/>
+        </shape>
+    </region>
+    <region id="298">
+        <name value="AntiJump 1"/>
+        <color value="255,255,0,0"/>
+        <shape type="rect">
+            <quad value="198.952,255.2807,199.6704,256"/>
+        </shape>
+    </region>
+    <region id="299">
+        <name value="AntiJump 2"/>
+        <color value="255,255,0,0"/>
+        <shape type="rect">
+            <quad value="199.0297,255.0085,199.4416,255.9897"/>
+        </shape>
+    </region>
+    <region id="300">
+        <name value="Antijump 3"/>
+        <color value="255,255,0,0"/>
+        <shape type="diamond">
+            <center value="199.427,255.221"/>
+            <width value="1.0734"/>
+            <height value="0.8242"/>
+        </shape>
+    </region>
+    <region id="301">
+        <name value="Antijump 4"/>
+        <color value="255,255,0,0"/>
+        <shape type="rect">
+            <quad value="198.9814,255.1445,199.7583,255.9934"/>
+        </shape>
+    </region>
+    <region id="302">
+        <name value="Antijump 5"/>
+        <color value="255,255,0,0"/>
+        <shape type="rect">
+            <quad value="198.8425,255.277,199.681,255.996"/>
+        </shape>
+    </region>
+    <region id="303">
+        <name value="Antijump 6"/>
+        <color value="255,255,0,0"/>
+        <shape type="rect">
+            <quad value="198.9174,255.3684,199.6853,255.9953"/>
+        </shape>
+    </region>
+    <region id="304">
+        <name value="Antijump 7"/>
+        <color value="255,255,0,0"/>
+        <shape type="rect">
+            <quad value="198.9992,255.1564,199.6655,255.9868"/>
+        </shape>
+    </region>
+    <region id="305">
+        <name value="Cock block"/>
+        <color value="255,255,0,0"/>
+        <shape type="rect">
+            <quad value="199.0085,255.2102,199.8637,255.8713"/>
+        </shape>
+    </region>
+    <region id="267">
+        <name value="Swamp Wading"/>
+        <color value="255,128,128,0"/>
+        <shape type="diamond">
+            <center value="155.1914,77.1953"/>
+            <width value="19.6047"/>
+            <height value="30.6948"/>
+        </shape>
+        <shape type="circle">
+            <center value="147.94,84.8698"/>
+            <radius value="10.9147"/>
+        </shape>
+        <shape type="circle">
+            <center value="152.14,83.18"/>
+            <radius value="10.9147"/>
+        </shape>
+        <shape type="circle">
+            <center value="165.3598,66.0598"/>
+            <radius value="8.5898"/>
+        </shape>
+        <shape type="diamond">
+            <center value="161.2897,85.0798"/>
+            <width value="2.1198"/>
+            <height value="9.75"/>
+        </shape>
+        <shape type="diamond">
+            <center value="165.64,79.96"/>
+            <width value="2.1198"/>
+            <height value="9.75"/>
+        </shape>
+        <shape type="circle">
+            <center value="169.97,74.39"/>
+            <radius value="3.2"/>
+        </shape>
+        <shape type="diamond">
+            <center value="149.47,69.22"/>
+            <width value="2.1198"/>
+            <height value="21.7"/>
+        </shape>
+        <shape type="diamond">
+            <center value="149.71,68.3498"/>
+            <width value="2.1198"/>
+            <height value="18.0297"/>
+        </shape>
+        <shape type="diamond">
+            <center value="148.45,68.8098"/>
+            <width value="2.1198"/>
+            <height value="9.75"/>
+        </shape>
+    </region>
+    <region id="306">
+        <name value="Shallow Wading 1"/>
+        <color value="255,128,255,255"/>
+        <shape type="diamond">
+            <center value="10.4147,54.1486"/>
+            <width value="10.8608"/>
+            <height value="3.7048"/>
+        </shape>
+    </region>
+    <region id="309">
+        <name value="Balaad Assault 2"/>
+        <shape type="circle">
+            <center value="48.183,86.8635"/>
+            <radius value="5.7946"/>
+        </shape>
+    </region>
+    <region id="312">
+        <name value="Thalim Sentry 1"/>
+        <shape type="circle">
+            <center value="60.5561,222.1135"/>
+            <radius value="3.8071"/>
+        </shape>
+    </region>
+    <region id="313">
+        <name value="Thalim Sentry 2"/>
+        <shape type="circle">
+            <center value="108.8942,198.624"/>
+            <radius value="3"/>
+        </shape>
+    </region>
+    <region id="8">
+        <name value="Balaad Assault 3"/>
+        <shape type="circle">
+            <center value="102.155,67.1945"/>
+            <radius value="6.9904"/>
+        </shape>
+    </region>
+    <region id="9">
+        <name value="Balaad"/>
+        <invisible/>
+        <shape type="circle">
+            <center value="45.682,53.8962"/>
+            <radius value="20.71"/>
+        </shape>
+    </region>
+    <region id="10">
+        <name value="Highlands Guard 6"/>
+        <shape type="circle">
+            <center value="84.0004,143.5004"/>
+            <radius value="3.2148"/>
+        </shape>
+    </region>
+    <region id="11">
+        <name value="Highlands Guard 7"/>
+        <shape type="circle">
+            <center value="99.5004,167.5004"/>
+            <radius value="3.2148"/>
+        </shape>
+    </region>
+    <region id="20">
+        <name value="Highlands Guard 8"/>
+        <shape type="circle">
+            <center value="25.5004,169.0007"/>
+            <radius value="3.2148"/>
+        </shape>
+    </region>
+    <region id="22">
+        <name value="Highlands Guard 9"/>
+        <shape type="diamond">
+            <center value="48.75,192.5"/>
+            <width value="14.4941"/>
+            <height value="3.1816"/>
+        </shape>
+    </region>
+    <region id="23">
+        <name value="Highlands Guard 10"/>
+        <shape type="circle">
+            <center value="37.5004,127.0007"/>
+            <radius value="3.2148"/>
+        </shape>
+    </region>
+    <region id="27">
+        <name value="Highlands Guard 11"/>
+        <shape type="rect">
+            <quad value="18.5,185.5,33.5,189.5"/>
+        </shape>
+    </region>
+    <region id="40">
+        <name value="DS LZ 1"/>
+        <shape type="rect">
+            <quad value="22.0007,147.5004,32.0004,157.5002"/>
+        </shape>
+    </region>
+    <region id="42">
+        <name value="DS LZ 2"/>
+        <shape type="rect">
+            <quad value="38.5007,214.0004,45.5004,224.0002"/>
+        </shape>
+    </region>
+    <region id="44">
+        <name value="DS LZ 3"/>
+        <shape type="rect">
+            <quad value="59.0007,167.5004,67.0004,175.5002"/>
+        </shape>
+    </region>
+    <region id="45">
+        <name value="Convoy Vehicle Guard 1"/>
+        <shape type="circle">
+            <center value="60,147.5"/>
+            <radius value="2"/>
+        </shape>
+    </region>
+    <region id="46">
+        <name value="Convoy Vehicle Guard 2"/>
+        <shape type="circle">
+            <center value="51,180"/>
+            <radius value="2"/>
+        </shape>
+    </region>
+    <region id="47">
+        <name value="Convoy Vehicle Guard 3"/>
+        <shape type="circle">
+            <center value="75.5,181"/>
+            <radius value="2"/>
+        </shape>
+    </region>
+    <region id="48">
+        <name value="Targeter 1"/>
+        <shape type="rect">
+            <quad value="225.759,123.2553,227.259,124.7553"/>
+        </shape>
+    </region>
+    <region id="49">
+        <name value="Targeter 2"/>
+        <shape type="rect">
+            <quad value="225.759,106.7553,227.259,108.2553"/>
+        </shape>
+    </region>
+    <region id="50">
+        <name value="Targeter 3"/>
+        <shape type="rect">
+            <quad value="229.259,15.2553,230.759,16.7553"/>
+        </shape>
+    </region>
+    <region id="51">
+        <name value="Targeter 4"/>
+        <shape type="rect">
+            <quad value="192.759,30.7553,194.259,32.2553"/>
+        </shape>
+    </region>
+    <region id="52">
+        <name value="Targeter 5"/>
+        <shape type="rect">
+            <quad value="103.759,222.7553,105.259,224.2553"/>
+        </shape>
+    </region>
+    <region id="55">
+        <name value="Targeter 6"/>
+        <shape type="rect">
+            <quad value="151.759,218.2553,153.259,219.7553"/>
+        </shape>
+    </region>
+    <region id="56">
+        <name value="Targeter 7"/>
+        <shape type="rect">
+            <quad value="153.259,236.7553,154.759,238.2553"/>
+        </shape>
+    </region>
+    <region id="80">
+        <name value="Targeter 8"/>
+        <shape type="rect">
+            <quad value="183.259,68.7553,184.759,70.2553"/>
+        </shape>
+    </region>
+</Regions>
