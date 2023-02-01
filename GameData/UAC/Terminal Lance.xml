@@ -1,25 +1,5 @@
-<?xml version="1.0" encoding="us-ascii"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Catalog>
-    <CValidatorUnitCompareBehaviorCount id="CombatDroneLaser3">
-        <WhichUnit Value="Caster"/>
-        <Value value="1"/>
-        <Behavior value="CombatDroneLaserDummy3"/>
-    </CValidatorUnitCompareBehaviorCount>
-    <CValidatorUnitCompareBehaviorCount id="CombatDroneLaser1">
-        <WhichUnit Value="Caster"/>
-        <Value value="1"/>
-        <Behavior value="CombatDroneLaserDummy1"/>
-    </CValidatorUnitCompareBehaviorCount>
-    <CValidatorUnitCompareBehaviorCount id="CombatDroneLaser2">
-        <WhichUnit Value="Caster"/>
-        <Value value="1"/>
-        <Behavior value="CombatDroneLaserDummy2"/>
-    </CValidatorUnitCompareBehaviorCount>
-    <CValidatorUnitCompareBehaviorCount id="UnithasUnoperated">
-        <Compare value="NE"/>
-        <Value value="1"/>
-        <Behavior value="Unoperated"/>
-    </CValidatorUnitCompareBehaviorCount>
     <CEffectDamage id="PEWMkIIBounceDamage">
         <EditorCategories value=""/>
         <ResponseFlags index="Acquire" value="1"/>
@@ -182,6 +162,26 @@
         </Cost>
         <CmdButtonArray index="Execute" DefaultButtonFace="LearnDroneTechnology"/>
     </CAbilEffectInstant>
+    <CValidatorUnitCompareBehaviorCount id="CombatDroneLaser3">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="CombatDroneLaserDummy3"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="CombatDroneLaser1">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="CombatDroneLaserDummy1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="CombatDroneLaser2">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="CombatDroneLaserDummy2"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="UnithasUnoperated">
+        <Compare value="NE"/>
+        <Value value="1"/>
+        <Behavior value="Unoperated"/>
+    </CValidatorUnitCompareBehaviorCount>
     <CButton id="CombatDroneEnergyCapacitors">
         <Icon value="Assets\Textures\btn-upgrade-terran-nova-personaldefensivematrix.dds"/>
     </CButton>
@@ -620,11 +620,11 @@
         <EffectArray index="Birth" value="EquipLaserEnforcerSet"/>
         <EffectArray index="Revive" value="EquipLaserEnforcerSet"/>
         <CardLayouts>
-            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
-            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
-            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="2"/>
             <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
-            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="3"/>
             <LayoutButtons>
                 <Face value="LearnAbilities"/>
                 <Type value="Submenu"/>
@@ -943,7 +943,9 @@
         <EditorCategories value="AbilityorEffectType:Units"/>
         <MaxStackCount value="25"/>
         <Duration value="10"/>
-        <Modification LifeArmorBonus="-1" ShieldArmorBonus="-1"/>
+        <Modification ShieldArmorBonus="-1">
+            <LifeArmorBonus value="-1"/>
+        </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="CombatDroneLaser2">
         <Alignment value="Negative"/>

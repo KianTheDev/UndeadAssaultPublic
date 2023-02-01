@@ -365,9 +365,10 @@
             <Id value="UACNight"/>
             <TimeOfDay value="02:00:00"/>
             <AmbientColor value="0.133333,0.149020,0.188235"/>
+            <AmbientEnvironmentMultiplier value="1.047000"/>
             <TriggerTransition value="90000"/>
             <Colorize value="1"/>
-            <Param index="HDRExposure" value="1.800000"/>
+            <Param index="HDRExposure" value="2.425000"/>
             <Param index="HDRBloomThreshold" value="0.550000"/>
             <Param index="HDRAmbientMultiplier" value="0.800000"/>
             <Param index="HDRDiffuseMultiplier" value="1.100000"/>
@@ -389,7 +390,7 @@
             <Param index="ColorizationBlend" value="0.334000"/>
             <DirectionalLight index="Key">
                 <Color value="0.356863,0.474510,0.619608"/>
-                <ColorMultiplier value="1.259000"/>
+                <ColorMultiplier value="1.349000"/>
                 <SpecColorMultiplier value="0.501000"/>
                 <Direction value="-0.366447,-0.077757,-0.927184"/>
             </DirectionalLight>

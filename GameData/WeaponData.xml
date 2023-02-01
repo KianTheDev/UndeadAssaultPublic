@@ -100,6 +100,90 @@
         <Period value="7.1"/>
         <Effect value="AcidicExplosionLM"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="Bofors40mmAutocannon">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="LinkedCooldown" value="0"/>
+        <Options index="RequireEnabledAttackAbil" value="0"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel2.dds"/>
+        <DisplayEffect value="PD3ACDamage"/>
+        <TargetFilters value="Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="30"/>
+        <Range value="30"/>
+        <Marker Link="Weapon/ColonistTransport"/>
+        <Cost>
+            <Cooldown Link="Weapon/ColonistTransport"/>
+        </Cost>
+        <Period value="0.2"/>
+        <Backswing value="0"/>
+        <Effect value="PD3ACLaunch"/>
+        <LegacyOptions index="NoDeceleration" value="1"/>
+        <AllowedMovement value="Moving"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="M242BushmasterChaingun">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="LinkedCooldown" value="0"/>
+        <Options index="RequireEnabledAttackAbil" value="0"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel2.dds"/>
+        <DisplayEffect value="LAV25ChaingunDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="26"/>
+        <Range value="26"/>
+        <Marker Link="Weapon/ColonistTransport"/>
+        <Cost>
+            <Cooldown Link="Weapon/ColonistTransport"/>
+        </Cost>
+        <Period value="0.12"/>
+        <Backswing value="0"/>
+        <Effect value="LAV25ChaingunLaunch"/>
+        <LegacyOptions index="NoDeceleration" value="1"/>
+        <AllowedMovement value="Moving"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="MLRSRocketBarrage">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="LinkedCooldown" value="0"/>
+        <Options index="RequireEnabledAttackAbil" value="0"/>
+        <Icon value="Assets\Textures\btn-ability-terran-haywiremissile.dds"/>
+        <DisplayEffect value="MLRSRocketDamage"/>
+        <DisplayAttackCount value="5"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="70"/>
+        <Range value="70"/>
+        <MinimumRange value="5"/>
+        <Marker Link="Weapon/ColonistTransport"/>
+        <Cost>
+            <Cooldown Link="Weapon/ColonistTransport"/>
+        </Cost>
+        <Period value="15"/>
+        <DamagePoint value="1.5"/>
+        <Backswing value="0"/>
+        <Effect value="MLRSRocketFire"/>
+        <LegacyOptions index="NoDeceleration" value="1"/>
+        <AllowedMovement value="Moving"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ModularSniperAP">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-nova-equipment-canisterrifle.dds"/>
+        <DisplayEffect value="SnipeAPDamage"/>
+        <TargetFilters value="-;Player,Ally,Neutral,Enemy,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <ChaseFilters value="-;Player,Ally,Neutral,Enemy"/>
+        <MinScanRange value="50"/>
+        <Range value="50"/>
+        <RangeSlop value="3"/>
+        <Period value="1"/>
+        <PeriodDisplayFlags index="CollapseBuffed" value="1"/>
+        <DamagePoint value="1"/>
+        <Backswing value="0"/>
+        <Effect value="SnipeAPLaunch"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="AssaultRifleBurst">
         <EditorCategories value="Race:Terran"/>
         <Icon value="Buttons\Weapons\MANTEL-75.dds"/>
@@ -117,6 +201,170 @@
         <Backswing value="0"/>
         <Effect value="AssaultRifleSwitch"/>
         <DisplayAttackCount value="3"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ModularSniperHollowPoint">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="CanInitiateAttackOrder" value="0"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="DisplayCooldown" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-nova-equipment-canisterrifle.dds"/>
+        <DisplayEffect value="SnipeHPDamage"/>
+        <TargetFilters value="-;Player,Ally,Neutral,Enemy,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <ChaseFilters value="-;Player,Ally,Neutral,Enemy"/>
+        <MinScanRange value="50"/>
+        <Range value="50"/>
+        <RangeSlop value="3"/>
+        <Period value="1"/>
+        <PeriodDisplayFlags index="CollapseBuffed" value="1"/>
+        <DamagePoint value="1"/>
+        <Backswing value="0"/>
+        <Effect value="SnipeHPLaunch"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ModularSniperFeedback">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="CanInitiateAttackOrder" value="0"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="DisplayCooldown" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-nova-equipment-canisterrifle.dds"/>
+        <DisplayEffect value="SnipeFeedbackDamage"/>
+        <TargetFilters value="-;Player,Ally,Neutral,Enemy,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <ChaseFilters value="-;Player,Ally,Neutral,Enemy"/>
+        <MinScanRange value="50"/>
+        <Range value="50"/>
+        <RangeSlop value="3"/>
+        <Period value="1"/>
+        <PeriodDisplayFlags index="CollapseBuffed" value="1"/>
+        <DamagePoint value="1"/>
+        <Backswing value="0"/>
+        <Effect value="SnipeFeedbackLaunch"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ModularSniperStandard">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="CanInitiateAttackOrder" value="0"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="DisplayCooldown" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-nova-equipment-canisterrifle.dds"/>
+        <DisplayEffect value="SnipeStandardDamage"/>
+        <TargetFilters value="-;Player,Ally,Neutral,Enemy,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <ChaseFilters value="-;Player,Ally,Neutral,Enemy"/>
+        <MinScanRange value="50"/>
+        <Range value="50"/>
+        <RangeSlop value="3"/>
+        <Period value="1"/>
+        <PeriodDisplayFlags index="CollapseBuffed" value="1"/>
+        <DamagePoint value="1"/>
+        <Backswing value="0"/>
+        <Effect value="SnipeStandardLaunch"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ModularSniperTracer">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="CanInitiateAttackOrder" value="0"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="DisplayCooldown" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-nova-equipment-canisterrifle.dds"/>
+        <DisplayEffect value="SnipeTracerDamage"/>
+        <TargetFilters value="-;Player,Ally,Neutral,Enemy,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <ChaseFilters value="-;Player,Ally,Neutral,Enemy"/>
+        <MinScanRange value="50"/>
+        <Range value="50"/>
+        <RangeSlop value="3"/>
+        <Period value="1"/>
+        <PeriodDisplayFlags index="CollapseBuffed" value="1"/>
+        <DamagePoint value="1"/>
+        <Backswing value="0"/>
+        <Effect value="SnipeTracerLaunch"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="SpecterSMGHP">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-techupgrade-terran-tenstenspikes.dds"/>
+        <DisplayEffect value="SMGHPDamage"/>
+        <DisplayAttackCount value="3"/>
+        <TargetFilters value="Visible;Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <ChaseFilters value="-;Player,Ally,Neutral,Enemy"/>
+        <MinScanRange value="10"/>
+        <Range value="10"/>
+        <RangeSlop value="3"/>
+        <Cost>
+            <Resource index="Minerals" value="1"/>
+        </Cost>
+        <Period value="0.3"/>
+        <DamagePoint value="0.05"/>
+        <Backswing value="0"/>
+        <Effect value="SMGHPBurst"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="SpecterSMGFeedback">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-tychus-tychus-ripperrounds.dds"/>
+        <DisplayEffect value="SMGFeedbackDamage"/>
+        <DisplayAttackCount value="3"/>
+        <TargetFilters value="Visible;Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <ChaseFilters value="-;Player,Ally,Neutral,Enemy"/>
+        <MinScanRange value="10"/>
+        <Range value="10"/>
+        <RangeSlop value="3"/>
+        <Cost>
+            <Resource index="Minerals" value="1"/>
+        </Cost>
+        <Period value="0.3"/>
+        <DamagePoint value="0.05"/>
+        <Backswing value="0"/>
+        <Effect value="SMGFeedbackBurst"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="SpecterSMGTracer">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-ability-tychus-odin-barrage.dds"/>
+        <DisplayEffect value="SMGTracerDamage"/>
+        <DisplayAttackCount value="3"/>
+        <TargetFilters value="Visible;Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <ChaseFilters value="-;Player,Ally,Neutral,Enemy"/>
+        <MinScanRange value="10"/>
+        <Range value="10"/>
+        <RangeSlop value="3"/>
+        <Cost>
+            <Resource index="Minerals" value="1"/>
+        </Cost>
+        <Period value="0.3"/>
+        <DamagePoint value="0.05"/>
+        <Backswing value="0"/>
+        <Effect value="SMGTracerBurst"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="SpecterSMGStandard">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-mengsk-engineeringbay-dominionweaponslevel0.dds"/>
+        <DisplayEffect value="SMGStandardDamage"/>
+        <DisplayAttackCount value="3"/>
+        <TargetFilters value="Visible;Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <ChaseFilters value="-;Player,Ally,Neutral,Enemy"/>
+        <MinScanRange value="10"/>
+        <Range value="10"/>
+        <RangeSlop value="3"/>
+        <Cost>
+            <Resource index="Minerals" value="1"/>
+        </Cost>
+        <Period value="0.3"/>
+        <DamagePoint value="0.05"/>
+        <Backswing value="0"/>
+        <Effect value="SMGStandardBurst"/>
         <RandomDelayMin value="0"/>
         <RandomDelayMax value="0"/>
     </CWeaponLegacy>
@@ -143,11 +391,11 @@
         <EditorCategories value="Race:Terran"/>
         <Icon value="Buttons\Weapons\MANTEL-75.dds"/>
         <DisplayEffect value="RiflemanRifle"/>
-        <DisplayAttackCount value="8"/>
+        <DisplayAttackCount value="3"/>
         <TargetFilters value="Visible;Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <ChaseFilters value="-;Player,Ally,Neutral,Enemy"/>
         <MinScanRange value="15"/>
-        <Range value="30"/>
+        <Range value="15"/>
         <RangeSlop value="3"/>
         <Cost>
             <Display index="Custom" value="1"/>
@@ -245,6 +493,26 @@
         <DamagePoint value="0.05"/>
         <Backswing value="0"/>
         <Effect value="HellfireRifleMissileHero"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="SpecterSMGAP">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-raynor-maelstromrounds.dds"/>
+        <DisplayEffect value="SMGAPDamage"/>
+        <DisplayAttackCount value="3"/>
+        <TargetFilters value="Visible;Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <ChaseFilters value="-;Player,Ally,Neutral,Enemy"/>
+        <MinScanRange value="10"/>
+        <Range value="10"/>
+        <RangeSlop value="3"/>
+        <Cost>
+            <Resource index="Minerals" value="1"/>
+        </Cost>
+        <Period value="0.3"/>
+        <DamagePoint value="0.05"/>
+        <Backswing value="0"/>
+        <Effect value="SMGAPBurst"/>
         <RandomDelayMin value="0"/>
         <RandomDelayMax value="0"/>
     </CWeaponLegacy>
@@ -513,9 +781,9 @@
         <Options index="ContinuousScan" value="1"/>
         <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel3.dds"/>
         <AcquireCliffLevelRange value="-1,1"/>
-        <MinScanRange value="12"/>
-        <Range value="12"/>
-        <Period value="0.78"/>
+        <MinScanRange value="10"/>
+        <Range value="10"/>
+        <Period value="1.2"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="OdinAntiAir">
         <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel2.dds"/>
@@ -1439,10 +1707,10 @@
         <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
         <DisplayEffect value="LaserGuidedSAMDamage"/>
         <DisplayAttackCount value="6"/>
-        <TargetFilters value="Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <TargetFilters value="Air,Massive,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <MinScanRange value="50"/>
         <Range value="50"/>
-        <Period value="8.5"/>
+        <Period value="20"/>
         <Backswing value="0"/>
         <Effect value="LaserGuidedSAMVolley"/>
     </CWeaponLegacy>
@@ -1702,6 +1970,22 @@
         <Cost>
             <Resource index="Minerals" value="1"/>
         </Cost>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Vesania30Weapon2">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-hisecautotracking.dds"/>
+        <DisplayEffect value="VesaniaGLDamageConcussion"/>
+        <TargetFilters value="Visible;Psionic,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="15"/>
+        <Range value="15"/>
+        <Cost>
+            <Resource index="Minerals" value="1"/>
+        </Cost>
+        <Period value="1.5"/>
+        <PeriodDisplayFlags index="CollapseBuffed" value="1"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0"/>
+        <Effect value="VesaniaGLLaunch22"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="VileStream">
         <Options index="Hidden" value="0"/>
@@ -2029,6 +2313,9 @@
         <TargetFilters value="Ground,Visible;Psionic,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <Period value="3"/>
         <Effect value="ImpalerTentacleLaunchMissile"/>
+        <Cost>
+            <Vital index="Energy" value="3"/>
+        </Cost>
     </CWeaponLegacy>
     <CWeaponLegacy id="IncendiaryRoundsLN">
         <EditorCategories value="Race:Terran"/>

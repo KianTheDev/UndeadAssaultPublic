@@ -133,6 +133,15 @@
         <Value value="1"/>
         <Behavior value="SpecialForcesExpertise"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareVital id="ISRTowerActive">
+        <Compare value="GT"/>
+        <Value value="60"/>
+        <Vital value="Energy"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitCompareBehaviorCount id="ISRTowerCheck">
+        <Value value="1"/>
+        <Behavior value="ISRTowerChargeAI"/>
+    </CValidatorUnitCompareBehaviorCount>
     <CValidatorUnitCompareField id="IsFlying2">
         <Compare value="GE"/>
         <Field value="Height"/>
@@ -186,11 +195,20 @@
     <CValidatorUnitType id="MechOperator">
         <Value value="MechOperator"/>
     </CValidatorUnitType>
+    <CValidatorLocationEnumArea id="NearFlare">
+        <AreaArray Radius="10" Validator="UnitisFlare"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorLocationEnumArea id="NearISRTower">
+        <AreaArray Radius="1.5" Validator="ISRTowerCheck"/>
+    </CValidatorLocationEnumArea>
     <CValidatorCombine id="NoDMR">
         <CombineArray value="IDMR2"/>
         <CombineArray value="M92TorrentItem"/>
         <CombineArray value="XR900"/>
     </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="InfestedNotCleansing">
+        <Behavior value="InfestedCleansing"/>
+    </CValidatorUnitCompareBehaviorCount>
     <CValidatorUnitFilters id="NotStructure2">
         <Filters value="-;Structure"/>
     </CValidatorUnitFilters>
@@ -772,6 +790,10 @@
         <Behavior value="RapidFire"/>
         <WhichUnit Value="Caster"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorLocationCompareCliffLevel id="SameorLowerCliffLevel">
+        <WhichLocation Value="CasterUnit"/>
+        <OtherLocation Value="TargetUnit"/>
+    </CValidatorLocationCompareCliffLevel>
     <CValidatorUnitCompareBehaviorCount id="SatchelChargeReady">
         <WhichUnit Value="Caster"/>
         <Value value="1"/>
@@ -843,6 +865,44 @@
         <Value value="1"/>
         <Behavior value="HorrorAcid"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="SpecterAP">
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="APRoundsReady"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="IsZombie">
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="IsZombie"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="SpecterFB">
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="FeedbackRoundsReady"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="SpecterHP">
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="HollowPointRoundsReady"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorPlayerRequirement id="SpecterNotWE">
+        <Value value="HasWardenElite"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorUnitCompareBehaviorCount id="SpecterSwappingRounds">
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="SwappingRounds"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="SpecterTR">
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="TracerRoundsReady"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="SpecterMagazineNotFull">
+        <Compare value="LT"/>
+        <Value value="4"/>
+        <Behavior value="SpecterSnipesLoaded"/>
+    </CValidatorUnitCompareBehaviorCount>
     <CValidatorUnitCompareBehaviorCount id="SwampSlow1">
         <Behavior value="SwampSlowI"/>
     </CValidatorUnitCompareBehaviorCount>
@@ -869,10 +929,39 @@
         <Value value="1"/>
         <Behavior value="SpitterAcid"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitType id="UnitIsMedic">
+        <Value value="CombatMedic"/>
+    </CValidatorUnitType>
+    <CValidatorLocationEnumArea id="UnitNearRASpotter">
+        <WhichLocation Value="TargetUnitOrPoint"/>
+        <AreaArray Radius="30" Validator="UnitisRASpotter"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorCombine id="UnitisFlare">
+        <CombineArray value="UnitisAirFlare"/>
+        <CombineArray value="UnitisGroundFlare"/>
+    </CValidatorCombine>
+    <CValidatorUnitType id="UnitisGroundFlare">
+        <Value value="GroundFlare2"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="UnitisAirFlare">
+        <Value value="FlareGunFlare"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="UnitisRASpotter">
+        <Value value="RASpotter"/>
+    </CValidatorUnitType>
     <CValidatorCombine id="UnknownValidator">
         <Type value="And"/>
         <CombineArray value="NoFuelBomb"/>
         <CombineArray value="NoSatchelCharge"/>
+    </CValidatorCombine>
+    <CValidatorLocationEnumArea id="SpecterCanModularLoad">
+        <AreaArray Radius="15"/>
+        <LaunchLocation Value="SourceUnit"/>
+        <SearchFilters value="-;Self,Player,Ally,Neutral,Structure,User1,Item"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorCombine id="SpecterModularLoadPassive">
+        <CombineArray value="SpecterCanModularLoad"/>
+        <Negate value="1"/>
     </CValidatorCombine>
     <CValidatorUnitCompareBehaviorCount id="XR900">
         <WhichUnit Value="Source"/>

@@ -1,5 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CRequirement id="APRoundsInactive">
+        <NodeArray index="Use" Link="LTCountBehaviorAPRoundsReadyCompleteOnlyAtUnit1"/>
+        <NodeArray index="Show" Link="LTCountBehaviorAPRoundsReadyCompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="APRoundsReady">
+        <NodeArray index="Use" Link="GTECountBehaviorAPRoundsReadyCompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="APSnipeFire">
+        <NodeArray index="Use" Link="AndGTE1773106101CountBehaviorSpecterSnipesLoadedCompleteOnlyAtUnit1Eq2708064578CountBehaviorSwappingRoundsCompleteOnlyAtUnit0"/>
+        <NodeArray index="Show" Link="GTECountBehaviorAPRoundsReadyCompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="CanReloadModularSnipes">
+        <NodeArray index="Use" Link="LTE3827606705CountBehaviorSpecterSnipesLoadedCompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="HasWardenElite">
+        <NodeArray index="Use" Link="GTECountUpgradeWardenEliteCompleteOnly1"/>
+    </CRequirement>
+    <CRequirement id="IsElitePMC">
+        <NodeArray index="Use" Link="CountUpgradeElitePMCCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="NotElitePMC">
+        <NodeArray index="Use" Link="NotCountUpgradeElitePMCCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="LearnWeaponsTraining1">
+        <NodeArray index="Use" Link="EqCountAbilSpecterWeaponsTrainingCompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="LearnWeaponsTraining2">
+        <NodeArray index="Use" Link="EqCountAbilSpecterWeaponsTrainingCompleteOnlyAtUnit2"/>
+    </CRequirement>
+    <CRequirement id="LearnWeaponsTraining3">
+        <NodeArray index="Use" Link="EqCountAbilSpecterWeaponsTrainingCompleteOnlyAtUnit3"/>
+    </CRequirement>
+    <CRequirement id="LearnWeaponsTraining4">
+        <NodeArray index="Use" Link="EqCountAbilSpecterWeaponsTrainingCompleteOnlyAtUnit4"/>
+    </CRequirement>
+    <CRequirement id="TRSnipeFire">
+        <NodeArray index="Use" Link="AndGTE1773106101CountBehaviorSpecterSnipesLoadedCompleteOnlyAtUnit1Eq2708064578CountBehaviorSwappingRoundsCompleteOnlyAtUnit0"/>
+        <NodeArray index="Show" Link="GTECountBehaviorTracerRoundsReadyCompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="HPSnipeFire">
+        <NodeArray index="Use" Link="AndGTE1773106101CountBehaviorSpecterSnipesLoadedCompleteOnlyAtUnit1Eq2708064578CountBehaviorSwappingRoundsCompleteOnlyAtUnit0"/>
+        <NodeArray index="Show" Link="GTECountBehaviorHollowPointRoundsReadyCompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="FBSnipeFire">
+        <NodeArray index="Use" Link="AndGTE1773106101CountBehaviorSpecterSnipesLoadedCompleteOnlyAtUnit1Eq2708064578CountBehaviorSwappingRoundsCompleteOnlyAtUnit0"/>
+        <NodeArray index="Show" Link="GTECountBehaviorFeedbackRoundsReadyCompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="SnipeLoaded">
+        <NodeArray index="Use" Link="GTECountBehaviorSpecterSnipesLoadedCompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="SpecializeAPOff">
+        <NodeArray index="Use" Link="EqCountBehaviorAPRoundsReadyCompleteOnlyAtUnit0"/>
+        <NodeArray index="Show" Link="EqCountBehaviorAPRoundsReadyCompleteOnlyAtUnit0"/>
+    </CRequirement>
+    <CRequirement id="SpecializeTROff">
+        <NodeArray index="Use" Link="EqCountBehaviorTracerRoundsReadyCompleteOnlyAtUnit0"/>
+        <NodeArray index="Show" Link="EqCountBehaviorTracerRoundsReadyCompleteOnlyAtUnit0"/>
+    </CRequirement>
+    <CRequirement id="SpecializeHPOff">
+        <NodeArray index="Use" Link="EqCountBehaviorHollowPointRoundsReadyCompleteOnlyAtUnit0"/>
+        <NodeArray index="Show" Link="EqCountBehaviorHollowPointRoundsReadyCompleteOnlyAtUnit0"/>
+    </CRequirement>
+    <CRequirement id="SpecializeFBOff">
+        <NodeArray index="Use" Link="EqCountBehaviorFeedbackRoundsReadyCompleteOnlyAtUnit0"/>
+        <NodeArray index="Show" Link="EqCountBehaviorFeedbackRoundsReadyCompleteOnlyAtUnit0"/>
+    </CRequirement>
+    <CRequirement id="STSnipeFire">
+        <NodeArray index="Use" Link="AndGTE1773106101CountBehaviorSpecterSnipesLoadedCompleteOnlyAtUnit1Eq2708064578CountBehaviorSwappingRoundsCompleteOnlyAtUnit0"/>
+    </CRequirement>
+    <CRequirement id="TracerRoundsReady">
+        <NodeArray index="Use" Link="GTECountBehaviorTracerRoundsReadyCompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="HPRoundsReady">
+        <NodeArray index="Use" Link="GTECountBehaviorHollowPointRoundsReadyCompleteOnlyAtUnit1"/>
+    </CRequirement>
     <CRequirement id="AWPlasmaGrenReq">
         <EditorCategories value="Race:Terran,TechType:Ability"/>
         <NodeArray index="Use" Link="EqCountUpgradeAdvancedWarfighterCompleteOnly1"/>
@@ -31,6 +106,9 @@
     <CRequirement id="GroundFlare">
         <EditorCategories value="Race:Terran,TechType:Ability"/>
         <NodeArray index="Show" Link="AndGTECountAbilRiflemanSkillsCompleteOnlyAtUnit2CountUpgradeGrenadierCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="FeedbackRoundsReady">
+        <NodeArray index="Use" Link="GTECountBehaviorFeedbackRoundsReadyCompleteOnlyAtUnit1"/>
     </CRequirement>
     <CRequirement id="HasSF">
         <NodeArray index="Use" Link="EqCountUpgradeSpecialForcesCompleteOnly1"/>
@@ -1051,7 +1129,7 @@
     </CRequirement>
     <CRequirement id="JFO5CAS">
         <EditorCategories value="Race:Terran,TechType:Ability"/>
-        <NodeArray index="Use" Link="AndGTE4063854008CountAbilStrafeRunCompleteOnlyAtUnit5GTE1805456185CountUpgradeCASOnStationCompleteOnly1"/>
+        <NodeArray index="Use" Link="AndGTE4063854008CountAbilStrafeRunCompleteOnlyAtUnit5"/>
     </CRequirement>
     <CRequirement id="JavelinSkills1M">
         <EditorCategories value="Race:Terran,TechType:Ability"/>
@@ -1482,6 +1560,11 @@
     <CRequirement id="RainofFireReq">
         <NodeArray index="Use" Link="CountUpgradeOrbitalStrikeHeroCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="VesaniaConcussionShells">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="GTECountAbilOffensiveSkillsCompleteOnlyAtUnit2"/>
+        <NodeArray index="Show" Link="GTECountAbilOffensiveSkillsCompleteOnlyAtUnit2"/>
+    </CRequirement>
     <CRequirement id="VesaniaDefenseUpgrade1">
         <EditorCategories value="Race:Terran,TechType:Ability"/>
         <NodeArray index="Use" Link="EqCountAbilDefensiveSkillsCompleteOnlyAtUnit1"/>
@@ -1496,6 +1579,11 @@
         <EditorCategories value="Race:Terran,TechType:Ability"/>
         <NodeArray index="Use" Link="EqCountAbilDefensiveSkillsCompleteOnlyAtUnit2"/>
         <NodeArray index="Show" Link="EqCountAbilDefensiveSkillsCompleteOnlyAtUnit2"/>
+    </CRequirement>
+    <CRequirement id="VesaniaBarrelThrough">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="GTECountAbilDefensiveSkillsCompleteOnlyAtUnit2"/>
+        <NodeArray index="Show" Link="GTECountAbilDefensiveSkillsCompleteOnlyAtUnit2"/>
     </CRequirement>
     <CRequirement id="VesaniaDefenseUpgrade123">
         <EditorCategories value="Race:Terran,TechType:Ability"/>

@@ -1163,7 +1163,8 @@
                 <Row value="1"/>
                 <Column value="4"/>
             </LayoutButtons>
-            <LayoutButtons index="6" Face="NanoBoost" Type="AbilCmd" AbilCmd="NanoBoost,Execute" Row="2" Column="2"/>
+            <LayoutButtons index="5" Face="NanoBoost" Type="AbilCmd" AbilCmd="NanoBoost,Execute" Row="2" Column="2"/>
+            <LayoutButtons index="6" Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="0"/>
             <LayoutButtons Face="PlaceBioStasis" Type="AbilCmd" AbilCmd="PlaceBioStasis,Execute" Row="2" Column="2"/>
             <LayoutButtons Face="PlaceImprovedBioStasis" Type="AbilCmd" AbilCmd="PlaceImprovedBioStasis,Execute" Row="2" Column="2"/>
             <LayoutButtons Face="ImprovedNanoBoost" Type="AbilCmd" AbilCmd="ImprovedNanoBoost,Execute" Row="2" Column="2"/>
@@ -1181,6 +1182,7 @@
             <LayoutButtons Face="ImprovedPlasmicShielding" Type="AbilCmd" AbilCmd="ImprovedPlasmicShielding,Execute" Row="1" Column="2"/>
             <LayoutButtons Face="Deteriorate" Type="AbilCmd" AbilCmd="Deteriorate,Execute" Row="1" Column="0"/>
             <LayoutButtons Face="BinocularsBioSpec" Type="AbilCmd" AbilCmd="BinocularsBioSpecialist,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="1"/>
         </CardLayouts>
         <CardLayouts index="1" CardId="0002">
             <LayoutButtons Face="SpecialistSkills" Type="AbilCmd" AbilCmd="LearnAbilitiesBioSpecialist,Learn1" Row="0" Column="0"/>

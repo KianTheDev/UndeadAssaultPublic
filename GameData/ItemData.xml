@@ -80,6 +80,12 @@
         <TargetFilters value="Massive;Player,Ally,Neutral,Psionic,Dead,Hidden,Invulnerable"/>
         <Range value="50"/>
     </CItemEffectTarget>
+    <CItemAbil id="AutomatedNaniteResuscitator">
+        <Flags index="DropOnDeath" value="1"/>
+        <Class value="Misc"/>
+        <Charge CountMax="1" CountStart="1" CountUse="1"/>
+        <Abil value="ANRRevive"/>
+    </CItemAbil>
     <CItemEffectInstant id="StynerBR2CQBR2" parent="CONTAINER">
         <Face value="StynerSPR"/>
         <Flags index="DropOnDeath" value="1"/>

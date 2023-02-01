@@ -1,11 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
     <CModel default="1" id="StormUnitDeathRagdoll" parent="UnitDeathRagdoll"/>
+    <CModel id="MLRSRocketMissile" parent="MissileFX">
+        <Model value="USArmy\MLRS\NanaKey_TO_MLRS_MissileA.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="A102" parent="Unit">
+        <Model value="USArmy\NanaKey_TO_F35B.m3"/>
+        <AttachProps Id="Ref_Hit 01">
+            <Keys index="Weapon" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Hit 04">
+            <Keys index="Weapon" value="1"/>
+        </AttachProps>
+        <EditorCategories value="Race:Terran"/>
+        <Lighting value="DuskWing"/>
+        <Occlusion value="Show"/>
+        <Radius value="0.850000"/>
+        <SelectionOffset value="0.000000,0.000000,-0.500000"/>
+        <SelectionRadius value="0.937500"/>
+        <ShadowRadius value="0.937500"/>
+        <Tipability value="0.650000"/>
+        <UnitGlossaryCamera value="Star2CameraLow07"/>
+    </CModel>
+    <CModel id="LAV25" parent="Unit">
+        <Model value="USArmy\Lav25\NanaKey_TO_Lav25.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Radius value="1.100000"/>
+        <ScaleMax value="1.400000,1.400000,1.400000"/>
+        <ScaleMin value="1.400000,1.400000,1.400000"/>
+        <SelectionRadius value="1.200000"/>
+        <Tipability value="0.750000"/>
+        <TipabilityLength value="1.500000"/>
+        <TipabilityWidth value="1.000000"/>
+    </CModel>
+    <CModel id="M1Sunstrider" parent="Unit">
+        <Model value="USArmy\M1A1Tank\NanaKey_TO_M1A1_Sunstrider.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Radius value="0.800000"/>
+        <SelectionRadius value="1.000000"/>
+        <Tipability value="0.750000"/>
+        <TipabilityLength value="1.500000"/>
+        <TipabilityWidth value="1.000000"/>
+    </CModel>
+    <CModel id="M270MLRS" parent="Unit">
+        <Model value="USArmy\MLRS\NanaKey_TO_MLRS.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Radius value="1.100000"/>
+        <ScaleMax value="1.400000,1.400000,1.400000"/>
+        <ScaleMin value="1.400000,1.400000,1.400000"/>
+        <SelectionRadius value="1.200000"/>
+        <Tipability value="0.750000"/>
+        <TipabilityLength value="1.500000"/>
+        <TipabilityWidth value="1.000000"/>
+    </CModel>
+    <CModel id="MagpieModel" parent="Building" Race="Terran">
+        <Model value="USArmy\UH60\NanaKey_TO_UH60_Animation.m3"/>
+        <Occlusion value="Show"/>
+        <Radius value="2.000000"/>
+        <ScaleMax value="1.800000,1.800000,1.800000"/>
+        <ScaleMin value="1.800000,1.800000,1.800000"/>
+        <SelectionRadius value="2.777500"/>
+        <ShadowRadius value="2.777500"/>
+        <Tipability value="0.250000"/>
+    </CModel>
+    <CModel id="ISRTower">
+        <Model value="Assets\Buildings\Terran\SensorTower_Silver\SensorTower_Silver.m3"/>
+    </CModel>
+    <CModel id="SpyPlane" parent="Unit">
+        <Model value="USArmy\NanaKey_TO_E2cEagleEyes.m3"/>
+        <AttachProps Id="Ref_Hit 01">
+            <Keys index="Weapon" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Hit 04">
+            <Keys index="Weapon" value="1"/>
+        </AttachProps>
+        <EditorCategories value="Race:Terran"/>
+        <Lighting value="DuskWing"/>
+        <Occlusion value="Show"/>
+        <Radius value="0.850000"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+        <SelectionOffset value="0.000000,0.000000,-0.500000"/>
+        <SelectionRadius value="0.937500"/>
+        <ShadowRadius value="0.937500"/>
+        <Tipability value="0.650000"/>
+        <UnitGlossaryCamera value="Star2CameraLow07"/>
+    </CModel>
     <CModel id="AA12">
         <Model value="Models\Soldier\Weapons\Shotgun01.m3"/>
     </CModel>
     <CModel id="AS50SniperRfile">
         <Model value="Assets\Model\ Weapons\UAC_AS50_Sniper_Rifle.m3"/>
+    </CModel>
+    <CModel id="Parasite" parent="LarvaBase">
+        <Model value="Assets\Effects\Zerg\NeuralParasiteMissile\NeuralParasiteMissile.m3"/>
+    </CModel>
+    <CModel id="ModularSnipeImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\ArcadePurpleLaserImpact\ArcadePurpleLaserImpact.m3"/>
+        <Flags index="Wait" value="1"/>
+        <Priority value="32"/>
+        <ScaleMax value="0.800000,4.000000,0.800000"/>
+        <ScaleMin value="0.800000,4.000000,0.800000"/>
+    </CModel>
+    <CModel id="ModularSnipeImpactTmp" parent="ImpactFX">
+        <Model value="Assets\Effects\Zerg\FrenzyMissileImpact\FrenzyMissileImpact.m3"/>
+        <Flags index="Wait" value="1"/>
+        <Priority value="32"/>
+    </CModel>
+    <CModel id="SnipeBullet" parent="MissileFX">
+        <Model value="Models\Seewhatsee_Bullet.m3"/>
+        <ScaleMax value="2.000000,4.000000,4.000000"/>
+        <ScaleMin value="2.000000,4.000000,4.000000"/>
+    </CModel>
+    <CModel id="PingSmall" parent="UIFeedback">
+        <Model value="Assets\UI\Feedback\PingObjective\PingObjective.m3"/>
+        <ScaleMax value="0.500000,0.500000,0.500000"/>
+        <ScaleMin value="0.500000,0.500000,0.500000"/>
     </CModel>
     <CModel id="RASuperweaon" parent="Unit">
         <Model value="Assets\Effects\Protoss\SOA_PurifierBeam_Upgrade\SOA_PurifierBeam_Upgrade.m3"/>
@@ -89,7 +200,7 @@
         <ScaleMin value="0.750000,0.750000,0.750000"/>
     </CModel>
     <CModel id="A10" parent="Unit">
-        <Model value="Assets\Units\Terran\Banshee_BlackOps\Banshee_BlackOps.m3"/>
+        <Model value="USArmy\NanaKey_TO_A10.m3"/>
         <AttachProps Id="Ref_Hit 01">
             <Keys index="Weapon" value="0"/>
         </AttachProps>

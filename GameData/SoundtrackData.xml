@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="us-ascii"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Catalog>
     <CSoundtrack id="AbyssCave">
         <CueArray>
@@ -18,6 +18,15 @@
     <CSoundtrack id="EasterEggMusic_TerranUpTheNight">
         <CueArray index="0">
             <MasterLayer Sound=""/>
+        </CueArray>
+    </CSoundtrack>
+    <CSoundtrack id="EpilogueMusic">
+        <CueArray>
+            <MasterLayer Sound="EpiMusic"/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
+            <SlaveLayers/>
         </CueArray>
     </CSoundtrack>
     <CSoundtrack id="FightingPinkBeen">

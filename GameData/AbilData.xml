@@ -238,6 +238,154 @@
         <ProgressButtonArray index="Cast" value="ATRocket"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="ATMissile"/>
     </CAbilEffectTarget>
+    <CAbilEffectInstant id="ANRRevive">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="ANRSearchArea"/>
+        <Flags index="AbortOnAllianceChange" value="0"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Charge Link="Abil/Revive"/>
+            <Cooldown Link="Abil/Revive" TimeUse="600"/>
+        </Cost>
+        <InterruptCost>
+            <Charge Link="Abil/Revive"/>
+            <Cooldown Link="Abil/Revive"/>
+        </InterruptCost>
+        <Range value="3"/>
+        <AutoCastFilters value="-;-"/>
+        <CastIntroTime value="10"/>
+        <Marker Link="Abil/Revive"/>
+        <UseMarkerArray index="Channel" value="0"/>
+        <ShowProgressArray index="Cast" value="1"/>
+        <CancelableArray index="Approach" value="1"/>
+        <CancelableArray index="Prep" value="1"/>
+        <CancelableArray index="Cast" value="1"/>
+        <CancelableArray index="Channel" value="1"/>
+        <ValidatedArray index="Channel" value="0"/>
+        <ErrorAlert value="Error"/>
+        <AINotifyEffect value=""/>
+        <ProgressButtonArray index="Cast" value="Revive"/>
+        <DefaultError value="Retry,Revive"/>
+        <LevelButtonImage value="Buttons\BTNRevive.dds"/>
+        <LevelButtonImage value="Buttons\BTNRevive.dds"/>
+        <LevelButtonImage value="Buttons\BTNRevive.dds"/>
+        <LevelButtonName value="Abil/Name/ANRRevive"/>
+        <LevelButtonName value="Abil/Name/ANRRevive"/>
+        <LevelButtonName value="Abil/Name/ANRRevive"/>
+        <LevelButtonTooltip value="Abil/Tooltip/ANRRevive1"/>
+        <LevelButtonTooltip value="Abil/Tooltip/ANRRevive"/>
+        <LevelButtonTooltip value="Abil/Tooltip/ANRRevive3"/>
+        <EffectRange index="0" removed="1"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Revive">
+            <Flags index="ShowInGlossary" value="0"/>
+        </CmdButtonArray>
+    </CAbilEffectInstant>
+    <CAbilEffectTarget id="BinocularsPMC">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="Binoculars"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="CancelResetAutoCast" value="0"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Cooldown TimeUse="20"/>
+        </Cost>
+        <Range value="44"/>
+        <AutoCastFilters value="Heroic;Player,Ally,Neutral,Visible"/>
+        <UseMarkerArray index="Approach" value="0"/>
+        <UseMarkerArray index="Prep" value="0"/>
+        <UseMarkerArray index="Channel" value="0"/>
+        <AINotifyEffect value="Binoculars"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Binoculars"/>
+        <AutoCastRange value="40"/>
+        <AutoCastValidatorArray value="SameorLowerCliffLevel"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="BinocularsPMCNorm">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="Binoculars"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Cooldown TimeUse="20"/>
+        </Cost>
+        <Range value="20"/>
+        <AutoCastFilters value="-;Player,Ally,Neutral,Visible"/>
+        <UseMarkerArray index="Approach" value="0"/>
+        <UseMarkerArray index="Prep" value="0"/>
+        <UseMarkerArray index="Channel" value="0"/>
+        <ValidatedArray index="Approach" value="0"/>
+        <ValidatedArray index="Prep" value="0"/>
+        <ValidatedArray index="Channel" value="0"/>
+        <AINotifyEffect value="Binoculars"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Binoculars"/>
+    </CAbilEffectTarget>
+    <CAbilTransport id="LAV25Transport">
+        <AbilSetId value="ULdM"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Load" DefaultButtonFace="MedivacLoad"/>
+        <CmdButtonArray index="UnloadAll">
+            <Flags index="Hidden" value="1"/>
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="UnloadAt" DefaultButtonFace="MedivacUnloadAll"/>
+        <CmdButtonArray index="UnloadUnit">
+            <Flags index="Hidden" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="LoadAll">
+            <Flags index="Hidden" value="1"/>
+        </CmdButtonArray>
+        <MaxCargoCount value="6"/>
+        <MaxCargoSize value="1"/>
+        <TotalCargoSpace value="6"/>
+        <UnloadPeriod value="0.2"/>
+        <TargetFilters value="Visible;Ally,Enemy,Buried,Dead,Hidden"/>
+        <DeathUnloadEffect value="LAV25DeathCargoSet"/>
+    </CAbilTransport>
+    <CAbilEffectTarget id="MLRSRocketBarrage">
+        <Effect index="0" value="MLRSBarrageCP"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Charge Link="ItemCharges"/>
+            <Cooldown Location="Unit" TimeUse="60"/>
+        </Cost>
+        <Range value="200"/>
+        <CastIntroTime value="0"/>
+        <CursorEffect value="NukeDamage"/>
+        <AINotifyEffect value="MLRSRocketDamage"/>
+        <ProgressButtonArray index="Cast" value="MRL"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="CycloneMissiles2"/>
+    </CAbilEffectTarget>
+    <CAbilBehavior id="SpecterWeaponsTraining">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="WeaponsTraining">
+            <Flags index="ShowInGlossary" value="0"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="Off">
+            <Flags index="Hidden" value="1"/>
+        </CmdButtonArray>
+        <Flags index="ToggledOn" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Charge Link="abil/SpecterWeaponsTraining"/>
+            <Cooldown Link="abil/SpecterWeaponsTraining"/>
+        </Cost>
+        <Cost>
+            <Charge Link="abil/SpecterWeaponsTraining"/>
+            <Cooldown Link="abil/SpecterWeaponsTraining"/>
+        </Cost>
+        <Cost>
+            <Charge Link="abil/SpecterWeaponsTraining"/>
+            <Cooldown Link="abil/SpecterWeaponsTraining"/>
+        </Cost>
+        <Cost>
+            <Charge Link="abil/SpecterWeaponsTraining"/>
+            <Cooldown Link="abil/SpecterWeaponsTraining"/>
+        </Cost>
+        <BehaviorArray value="WeaponsTraining1"/>
+        <BehaviorArray value="WeaponsTraining2"/>
+        <BehaviorArray value="WeaponsTraining3"/>
+        <BehaviorArray value="WeaponsTraining4"/>
+    </CAbilBehavior>
     <CAbilEffectInstant id="ChooseVesania30">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
         <Effect index="0" value="ChooseLaserEnforcer2"/>
@@ -294,6 +442,58 @@
         <ProgressButtonArray index="Cast" value="ExampleRocket"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="ExampleRocket"/>
     </CAbilEffectTarget>
+    <CAbilBehavior id="FiremodeAP">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="APRoundsSpec">
+            <Flags index="ShowInGlossary" value="0"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="Off" DefaultButtonFace="StandardRounds"/>
+        <Flags index="Toggle" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="3"/>
+        </Cost>
+        <BehaviorArray value="APRoundsSpec"/>
+    </CAbilBehavior>
+    <CAbilBehavior id="FiremodeTR">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="TracerRounds">
+            <Flags index="ShowInGlossary" value="0"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="Off" DefaultButtonFace="StandardRounds"/>
+        <Flags index="Toggle" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="3"/>
+        </Cost>
+        <BehaviorArray value="TracerRounds"/>
+    </CAbilBehavior>
+    <CAbilBehavior id="FiremodeHP">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="HollowPointRounds">
+            <Flags index="ShowInGlossary" value="0"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="Off" DefaultButtonFace="StandardRounds"/>
+        <Flags index="Toggle" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="3"/>
+        </Cost>
+        <BehaviorArray value="HollowPointRounds"/>
+    </CAbilBehavior>
+    <CAbilBehavior id="FiremodeFB">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="FeedbackRounds">
+            <Flags index="ShowInGlossary" value="0"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="Off" DefaultButtonFace="StandardRounds"/>
+        <Flags index="Toggle" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="3"/>
+        </Cost>
+        <BehaviorArray value="FeedbackRounds"/>
+    </CAbilBehavior>
     <CAbilLearn id="LearnAbilitiesExample">
         <EditorCategories value="AbilityorEffectType:Units,Race:Human"/>
         <InfoArray index="Learn1" Abil="SoldierSkills">
@@ -387,14 +587,183 @@
         <CmdButtonArray index="Execute" DefaultButtonFace="OdinNukeCalldown"/>
         <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
     </CAbilEffectTarget>
+    <CAbilEffectInstant id="LoadModularSniper">
+        <OrderArray index="0" Model="Assets\UI\Cursors\WayPointConfirm_Void\WayPointConfirm_Void.m3"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="LoadModularSnipes"/>
+        <Cost>
+            <Resource index="Vespene" value="1"/>
+            <Vital index="Energy" value="34"/>
+            <Charge>
+                <CountMax value="3"/>
+                <CountStart value="3"/>
+                <CountUse value="1"/>
+                <TimeUse value="48"/>
+            </Charge>
+            <Cooldown TimeUse="1"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="LoadModularSniper" Requirements="CanReloadModularSnipes"/>
+    </CAbilEffectInstant>
+    <CAbilEffectTarget id="ModularSnipeST">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="SnipeStandardSet"/>
+        <PreEffectBehavior Behavior="EnableSnipeST" Count="1"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost/>
+        <Range value="50"/>
+        <CastIntroTime value="0.2"/>
+        <CursorEffect value="SnipeStandardDamage"/>
+        <AINotifyEffect value="SnipeAPDamage"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="ModularSnipe" Requirements="STSnipeFire"/>
+        <TargetFilters value="-;Player,Ally,Neutral,Structure"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="ModularSnipeHP">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="SnipeHPSet"/>
+        <PreEffectBehavior Behavior="EnableSnipeHP" Count="1"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost/>
+        <Range value="50"/>
+        <CastIntroTime value="0.2"/>
+        <CursorEffect value="SnipeHPDamage"/>
+        <AINotifyEffect value="SnipeAPDamage"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="ModularSnipe" Requirements="HPSnipeFire"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="ModularSnipeTR">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="SnipeTracerSet"/>
+        <PreEffectBehavior Behavior="EnableSnipeTR" Count="1"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost/>
+        <Range value="50"/>
+        <CastIntroTime value="0.2"/>
+        <CursorEffect value="SnipeTracerDamage"/>
+        <AINotifyEffect value="SnipeAPDamage"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="ModularSnipe" Requirements="TRSnipeFire"/>
+        <TargetFilters value="-;Player,Ally,Neutral,Structure"/>
+    </CAbilEffectTarget>
+    <CAbilSpecialize id="ModularSnipeSpecialize">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InfoArray index="Specialize1" Effect="SnipeAPSet">
+            <Button DefaultButtonFace="ModularSnipe"/>
+        </InfoArray>
+        <InfoArray index="Specialize2">
+            <Button DefaultButtonFace="ModularSnipe"/>
+        </InfoArray>
+        <InfoArray index="Specialize3">
+            <Button DefaultButtonFace="ModularSnipe"/>
+        </InfoArray>
+        <InfoArray index="Specialize4">
+            <Button DefaultButtonFace="ModularSnipe"/>
+        </InfoArray>
+        <InfoArray index="Specialize5">
+            <Button DefaultButtonFace="ModularSnipe"/>
+        </InfoArray>
+        <Flags index="Transient" value="1"/>
+    </CAbilSpecialize>
+    <CAbilEffectTarget id="ModularSnipeFB">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="SnipeFeedbackSet"/>
+        <PreEffectBehavior Behavior="EnableSnipeFB" Count="1"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost/>
+        <Range value="50"/>
+        <CastIntroTime value="0.2"/>
+        <CursorEffect value="SnipeFeedbackDamage"/>
+        <AINotifyEffect value="SnipeAPDamage"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="ModularSnipe" Requirements="FBSnipeFire"/>
+        <TargetFilters value="-;Player,Ally,Neutral,Structure"/>
+    </CAbilEffectTarget>
+    <CAbilSpecialize id="SMGRoundSpecialize">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Activity value="UI/Training"/>
+        <InfoArray index="Specialize1" Effect="ActivateHPRounds">
+            <Cooldown TimeUse="5"/>
+            <Button DefaultButtonFace="HollowPointRounds" Requirements="SpecializeHPOff"/>
+        </InfoArray>
+        <InfoArray index="Specialize2" Effect="ActivateAPRounds">
+            <Cooldown TimeUse="5"/>
+            <Button DefaultButtonFace="APRoundsSpec" Requirements="SpecializeAPOff"/>
+        </InfoArray>
+        <InfoArray index="Specialize3" Effect="ActivateFBRounds">
+            <Cooldown TimeUse="5"/>
+            <Button DefaultButtonFace="FeedbackRounds" Requirements="SpecializeFBOff"/>
+        </InfoArray>
+        <InfoArray index="Specialize4" Effect="ActivateTRRounds">
+            <Cooldown TimeUse="5"/>
+            <Button DefaultButtonFace="TracerRounds" Requirements="SpecializeTROff"/>
+        </InfoArray>
+        <InfoArray index="Specialize5" Effect="ClearSpecterRounds">
+            <Cooldown Link="Abil/SMGRoundSpecializeOff"/>
+            <Button DefaultButtonFace="StandardRounds"/>
+        </InfoArray>
+        <Alert value="NoAlert"/>
+    </CAbilSpecialize>
     <CAbilEffectInstant id="SpawnMutantT1s">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="CreateMutantT1"/>
         <Cost>
-            <Cooldown TimeUse="15"/>
+            <Cooldown TimeUse="25"/>
         </Cost>
         <CmdButtonArray index="Execute" DefaultButtonFace="CreateMutantT1s"/>
     </CAbilEffectInstant>
+    <CAbilBehavior id="SpecterMunitionsUpgrades">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="MunitionsUpgrades">
+            <Flags index="ShowInGlossary" value="0"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="Off">
+            <Flags index="Hidden" value="1"/>
+        </CmdButtonArray>
+        <Flags index="ToggledOn" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Charge Link="abil/SpecterMunitionsUpgrades"/>
+            <Cooldown Link="abil/SpecterMunitionsUpgrades"/>
+        </Cost>
+        <Cost>
+            <Charge Link="abil/SpecterMunitionsUpgrades"/>
+            <Cooldown Link="abil/SpecterMunitionsUpgrades"/>
+        </Cost>
+        <Cost>
+            <Charge Link="abil/SpecterMunitionsUpgrades"/>
+            <Cooldown Link="abil/SpecterMunitionsUpgrades"/>
+        </Cost>
+        <Cost>
+            <Charge Link="abil/SpecterMunitionsUpgrades"/>
+            <Cooldown Link="abil/SpecterMunitionsUpgrades"/>
+        </Cost>
+        <BehaviorArray value="MunitionsUpgrades1"/>
+        <BehaviorArray value="MunitionsUpgrades2"/>
+        <BehaviorArray value="MunitionsUpgrades3"/>
+        <BehaviorArray value="MunitionsUpgrades4"/>
+    </CAbilBehavior>
+    <CAbilEffectTarget id="StrikeTeamNormal">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="StrikeTeam"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="CancelResetAutoCast" value="0"/>
+        <Cost>
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <TimeUse value="60"/>
+            </Charge>
+            <Cooldown Location="Player" TimeUse="20"/>
+        </Cost>
+        <TargetFilters value="-;Self"/>
+        <Range value="60"/>
+        <AutoCastFilters value="Visible;Player,Ally,Neutral"/>
+        <AINotifyEffect value="CallForFirePL"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="StrikeTeam" Requirements="NotElitePMC"/>
+    </CAbilEffectTarget>
     <CAbilEffectTarget id="VesaniaPlasmaPulse">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
         <Effect index="0" value="PlasmaPulse1"/>
@@ -521,8 +890,16 @@
             <Charge CountMax="100" CountStart="100" CountUse="1"/>
             <Button DefaultButtonFace="RiflemanSkills"/>
         </InfoArray>
-        <InfoArray index="Learn5">
-            <Charge CountMax="1" CountStart="1" CountUse="1"/>
+        <InfoArray index="Learn5" Abil="PlasmaGrenadeRifleman">
+            <Charge>
+                <CountMax value="100"/>
+                <CountStart value="100"/>
+                <CountUse value="1"/>
+                <Link value="Abil/LearnAbilityMOS"/>
+                <Location value="Unit"/>
+            </Charge>
+            <Cooldown Link="Abil/LearnAbilitiesRifleman"/>
+            <Button DefaultButtonFace="PlasmaGrenade" Requirements="AWPlasmaGrenReq"/>
         </InfoArray>
         <InfoArray index="Learn6">
             <Charge CountMax="1" CountStart="1" CountUse="1"/>
@@ -571,6 +948,19 @@
         </InfoArray>
         <PointsPerLevel value="1"/>
     </CAbilLearn>
+    <CAbilEffectTarget id="ModularSnipeAP">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="SnipeAPSet"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost/>
+        <Range value="50"/>
+        <CastIntroTime value="0.2"/>
+        <CursorEffect value="SnipeAPDamage"/>
+        <AINotifyEffect value="SnipeAPDamage"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="ModularSnipe" Requirements="APSnipeFire"/>
+        <PrepEffect value="ApplyAPSniper"/>
+    </CAbilEffectTarget>
     <CAbilBehavior id="VesaniaPlasmaShield">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
         <CmdButtonArray index="On" DefaultButtonFace="VesaniaPlasmaShield">
@@ -645,13 +1035,19 @@
         <Flags index="AllowMovement" value="1"/>
         <Flags index="RequireTargetVision" value="0"/>
         <Cost>
-            <Cooldown TimeUse="60"/>
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <TimeUse value="60"/>
+            </Charge>
+            <Cooldown Location="Player" TimeUse="20"/>
         </Cost>
         <TargetFilters value="-;Self"/>
-        <Range value="100"/>
-        <AutoCastFilters value="-;Player,Ally,Neutral,Visible"/>
+        <Range value="30"/>
+        <AutoCastFilters value="-;Player,Ally,Neutral"/>
         <AINotifyEffect value="CallForFirePL"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="StrikeTeam"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="StrikeTeam" Requirements="IsElitePMC"/>
     </CAbilEffectTarget>
     <CAbilInventory id="DroneInventory">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
@@ -2651,9 +3047,9 @@
                 <CountStart value="2"/>
                 <CountUse value="1"/>
                 <Link value="Abil/SolarFocusing"/>
-                <TimeUse value="35"/>
+                <TimeUse value="90"/>
             </Charge>
-            <Cooldown Link="Abil/SolarFocusing" TimeUse="35"/>
+            <Cooldown Link="Abil/SolarFocusing" TimeUse="30"/>
         </Cost>
         <TargetFilters value="Massive;Player,Ally,Neutral,Psionic,Missile,Hidden,Invulnerable"/>
         <Range value="38"/>
@@ -3395,7 +3791,7 @@
         <ErrorAlert value="Error"/>
         <AINotifyEffect value=""/>
         <ProducedUnitArray value="FieldCamera"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="FieldCameraSDM" Requirements="ReconExpert2"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="FieldCameraSDM" Requirements="ReconExpert3"/>
     </CAbilEffectTarget>
     <CAbilBehavior id="FiremodeAssaultRifle">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
@@ -4393,16 +4789,16 @@
         <InfoArray index="Learn1" Abil="SpecterSkills">
             <Button DefaultButtonFace="SpecterSkills" Requirements=""/>
         </InfoArray>
-        <InfoArray index="Learn2" Abil="Marksmanship">
-            <Button DefaultButtonFace="LearnMarksmanship" Requirements=""/>
+        <InfoArray index="Learn2" Abil="SpecterWeaponsTraining">
+            <Button DefaultButtonFace="WeaponsTraining" Requirements=""/>
         </InfoArray>
         <InfoArray index="Learn3" Abil="AssassinSkills">
             <Charge CountMax="100" CountStart="100"/>
             <Button DefaultButtonFace="AssassinSkills" Requirements="LearnAssassinSkills"/>
         </InfoArray>
-        <InfoArray index="Learn4" Abil="SpecializedRounds">
+        <InfoArray index="Learn4" Abil="SpecterMunitionsUpgrades">
             <Charge CountMax="100" CountStart="100"/>
-            <Button DefaultButtonFace="SpecializedRounds"/>
+            <Button DefaultButtonFace="MunitionsUpgrades"/>
         </InfoArray>
         <InfoArray index="Learn5" Abil="ReconExpert">
             <Charge CountMax="100" CountStart="100"/>
@@ -4735,16 +5131,28 @@
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
         <Effect index="0" value="FlareGunLaunchMissile"/>
         <Flags index="AllowMovement" value="1"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="CancelResetAutoCast" value="0"/>
         <Flags index="RequireTargetVision" value="0"/>
         <Cost>
-            <Charge HideCount="1" Link="ItemCharges"/>
-            <Cooldown Link="Abil/FlareGunItem" TimeUse="90"/>
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <HideCount value="1"/>
+                <Link value="ItemCharges"/>
+                <TimeUse value="90"/>
+            </Charge>
+            <Cooldown Link="Abil/FlareGunItem" Location="Player" TimeUse="1"/>
         </Cost>
         <Range value="24"/>
         <PrepTime value="0"/>
         <Marker Link="Abil/FragGrenadeLevel1"/>
         <AINotifyEffect value=""/>
         <CmdButtonArray index="Execute" DefaultButtonFace="FlareGunItem"/>
+        <AutoCastFilters value="Visible;Player,Ally,Neutral"/>
+        <AutoCastRange value="24"/>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="RAGasGrenade">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
@@ -4763,17 +5171,29 @@
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
         <Effect index="0" value="GroundFlareLaunchMissile"/>
         <Flags index="AllowMovement" value="1"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="CancelResetAutoCast" value="0"/>
         <Flags index="RequireTargetVision" value="0"/>
         <Cost>
             <Display index="Energy" value="1"/>
-            <Charge HideCount="1" Link="ItemCharges"/>
-            <Cooldown Link="Abil/SmokeGrenade" TimeUse="90"/>
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <HideCount value="1"/>
+                <Link value="ItemCharges"/>
+                <TimeUse value="90"/>
+            </Charge>
+            <Cooldown Link="Abil/SmokeGrenade" Location="Player" TimeUse="1"/>
         </Cost>
         <Range value="12"/>
         <PrepTime value="0.361"/>
         <Marker Link="Abil/FragGrenadeLevel1"/>
         <AINotifyEffect value=""/>
         <CmdButtonArray index="Execute" DefaultButtonFace="GroundFlare"/>
+        <AutoCastFilters value="Visible;Player,Ally,Neutral"/>
+        <AutoCastRange value="12"/>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="RAMRL">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
@@ -4785,7 +5205,7 @@
             <Cooldown Link="Abil/MiniMRL" TimeUse="60"/>
         </Cost>
         <Range value="45"/>
-        <CastIntroTime value="2"/>
+        <CastIntroTime value="3"/>
         <Marker Link="Abil/MRL"/>
         <ShowProgressArray index="Cast" value="1"/>
         <CursorEffect value="MRLDamage1"/>
@@ -7991,11 +8411,12 @@
     <CAbilEffectTarget id="Jump">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
         <Effect index="0" value="JumpSwitch"/>
+        <Flags index="BestUnit" value="0"/>
         <Flags index="RequireTargetVision" value="0"/>
         <Cost>
             <Cooldown TimeUse="8"/>
         </Cost>
-        <Range value="10"/>
+        <Range value="200"/>
         <CastIntroTime value="0.1"/>
         <AINotifyEffect value=""/>
         <CmdButtonArray index="Execute" DefaultButtonFace="Jump" Requirements="Jump">
@@ -8108,7 +8529,8 @@
         <Effect index="0" value="LeapSet2"/>
         <Flags index="RequireTargetVision" value="0"/>
         <Cost>
-            <Cooldown TimeUse="6"/>
+            <Vital index="Energy" value="8"/>
+            <Cooldown TimeUse="1"/>
         </Cost>
         <Range value="22"/>
         <CastIntroTime value="0.1"/>
@@ -8484,7 +8906,8 @@
         <Flags index="AbortOnAllianceChange" value="0"/>
         <Flags index="RequireTargetVision" value="0"/>
         <Cost>
-            <Cooldown TimeUse="35"/>
+            <Vital index="Energy" value="35"/>
+            <Cooldown TimeUse="1"/>
         </Cost>
         <TargetFilters value="-;Self,Player,Ally,Neutral,Mechanical,Psionic,Structure,Missile,Cloaked,Stasis,Invulnerable"/>
         <Range value="6"/>
@@ -8709,10 +9132,11 @@
         <Effect index="0" value="ArachnathidChargeSet"/>
         <Flags index="RequireTargetVision" value="0"/>
         <Cost>
+            <Vital index="Energy" value="20"/>
             <Cooldown TimeStart="1" TimeUse="20"/>
         </Cost>
-        <Range value="40"/>
-        <PrepTime value="0.3"/>
+        <Range value="20"/>
+        <PrepTime value="2.5"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="DeepTunnel"/>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="BloodTransfusion">
@@ -9131,8 +9555,9 @@
         <Flags index="RequireTargetVision" value="0"/>
         <Flags index="Transient" value="1"/>
         <Cost>
+            <Vital index="Energy" value="20"/>
             <Charge Link="Abil/Sprint"/>
-            <Cooldown Link="Abil/Sprint" TimeUse="20"/>
+            <Cooldown Link="Abil/Sprint" TimeUse="1"/>
         </Cost>
         <AutoCastFilters value="-;-"/>
         <AINotifyEffect value=""/>
@@ -9463,6 +9888,22 @@
         <ProgressButtonArray index="Cast" value="LaserPrismSkills"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="LaserPrismSkills"/>
     </CAbilEffectInstant>
+    <CAbilBehavior id="VesaniaBarrelThrough">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="BarrelThrough" Requirements="VesaniaBarrelThrough">
+            <Flags index="ShowInGlossary" value="0"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="Off">
+            <Flags index="Hidden" value="1"/>
+        </CmdButtonArray>
+        <Flags index="Toggle" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="20"/>
+            <Cooldown TimeUse="20"/>
+        </Cost>
+        <BehaviorArray value="VesaniaBarrelThrough"/>
+    </CAbilBehavior>
     <CAbilBehavior id="VoidRift">
         <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
         <CmdButtonArray index="On" DefaultButtonFace="VoidRift"/>
@@ -9642,7 +10083,6 @@
     <CAbilLearn id="LearnAbilitiesAutomaticRifleman" parent="LearnAbilityMOS">
         <Name value="Abil/Name/LearnAbilitiesAutomaticRifleman"/>
         <InfoArray index="Learn1" Abil="SoldierSkills">
-            <Charge CountMax="1" CountStart="1"/>
             <Button DefaultButtonFace="LearnSoldierSkills" Requirements=""/>
         </InfoArray>
         <InfoArray index="Learn2" Abil="SuppressiveFire">

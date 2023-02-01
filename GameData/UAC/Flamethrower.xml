@@ -1,11 +1,5 @@
-<?xml version="1.0" encoding="us-ascii"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Catalog>
-    <CValidatorUnitCompareBehaviorCount id="HasPyromaniac">
-        <WhichUnit Value="Caster"/>
-        <Compare value="GE"/>
-        <Value value="1"/>
-        <Behavior value="Pyromaniac"/>
-    </CValidatorUnitCompareBehaviorCount>
     <CEffectSet id="FuelDischargeSet1">
         <EditorCategories value=""/>
         <EffectArray value="FuelDischargeDamageMini"/>
@@ -114,6 +108,12 @@
         <CmdButtonArray index="Execute" DefaultButtonFace="FuelDischarge"/>
         <CastOutroTime value="0.3"/>
     </CAbilEffectTarget>
+    <CValidatorUnitCompareBehaviorCount id="HasPyromaniac">
+        <WhichUnit Value="Caster"/>
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="Pyromaniac"/>
+    </CValidatorUnitCompareBehaviorCount>
     <CRequirement id="Pyromaniac">
         <NodeArray index="Use" Link="GTECountUpgradePyromaniacCompleteOnly1"/>
         <NodeArray index="Show" Link="GTECountUpgradePyromaniacCompleteOnly1"/>
@@ -368,11 +368,11 @@
         <EffectArray index="Birth" value="EquipFlamethrowerSet"/>
         <EffectArray index="Revive" value="EquipFlamethrowerSet"/>
         <CardLayouts>
-            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
-            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
-            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="2"/>
             <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
-            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="3"/>
             <LayoutButtons>
                 <Face value="LearnAbilities"/>
                 <Type value="Submenu"/>
@@ -480,6 +480,35 @@
         </ReviveInfoBase>
         <Attributes index="Light" value="0"/>
     </CUnit>
+    <CBehaviorBuff id="GreenPhosphorus">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-fireroach-increasefiredamage.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <MaxStackCount value="20"/>
+        <MaxStackCountPerCaster value="15"/>
+        <Duration value="10"/>
+        <Period value="0.2"/>
+        <InitialEffect value="GreenPhosphorusDamageInit"/>
+        <PeriodicEffect value="GreenPhosphorusDamageDoT"/>
+        <Modification MoveSpeedBonus="-0.0117">
+            <LifeArmorBonus value="-2"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Overburn">
+        <Tooltip value="Button/Tooltip/Overburn"/>
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-firebeam.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <DamageDealtFraction index="Spell" value="1"/>
+            <DamageDealtFraction index="Ranged" value="1"/>
+            <VitalRegenArray index="Life" value="-15"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Pyromaniac">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
     <CUpgrade id="Pyromaniac">
         <EffectArray Operation="Set" Reference="Abil,FuelDischargeTest,Cost[0].Charge.TimeUse" Value="20.000000"/>
         <EffectArray Reference="Abil,FuelDischargeTest,Cost[0].Charge.CountMax" Value="1"/>
@@ -518,31 +547,4 @@
         <EffectArray Operation="Set" Reference="Effect,GravitonChargePersistent3,PeriodCount" Value="60"/>
         <EffectArray Operation="Set" Reference="Effect,GravitonChargePersistent4,PeriodCount" Value="70"/>
     </CUpgrade>
-    <CBehaviorBuff id="GreenPhosphorus">
-        <Alignment value="Negative"/>
-        <InfoIcon value="Assets\Textures\btn-ability-zerg-fireroach-increasefiredamage.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <MaxStackCount value="20"/>
-        <MaxStackCountPerCaster value="15"/>
-        <Duration value="10"/>
-        <Period value="0.2"/>
-        <InitialEffect value="GreenPhosphorusDamageInit"/>
-        <PeriodicEffect value="GreenPhosphorusDamageDoT"/>
-        <Modification MoveSpeedBonus="-0.0117" LifeArmorBonus="-2"/>
-    </CBehaviorBuff>
-    <CBehaviorBuff id="Overburn">
-        <Tooltip value="Button/Tooltip/Overburn"/>
-        <InfoIcon value="Assets\Textures\btn-ability-protoss-firebeam.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <Modification>
-            <DamageDealtFraction index="Spell" value="1"/>
-            <DamageDealtFraction index="Ranged" value="1"/>
-            <VitalRegenArray index="Life" value="-15"/>
-        </Modification>
-    </CBehaviorBuff>
-    <CBehaviorBuff id="Pyromaniac">
-        <BehaviorFlags index="Permanent" value="1"/>
-        <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
-    </CBehaviorBuff>
 </Catalog>

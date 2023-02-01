@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CMoverMissile id="MLRSMover">
+        <PathMode value="Flying"/>
+        <MotionPhases>
+            <Driver value="Ballistic"/>
+            <Acceleration value="-1.5"/>
+            <AccelerationRange value="0.5"/>
+            <Speed value="15"/>
+            <SpeedRange value="0"/>
+            <Gravity value="55"/>
+            <IgnoresTerrain value="1"/>
+            <ArrivalTestType value="3D"/>
+            <ThrowBandYaw value="-360,-360,-360,-360"/>
+            <ThrowBandPitch value="-360,-360,-360,-360"/>
+            <FlightTime value="-1"/>
+        </MotionPhases>
+    </CMoverMissile>
     <CMoverMissile id="PunisherGrenadesWeapon2">
         <MotionPhases>
             <Driver value="Guidance"/>
