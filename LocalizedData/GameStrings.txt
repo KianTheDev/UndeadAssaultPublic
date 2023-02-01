@@ -7,6 +7,7 @@
 Abil/InfraredRadarSystem=Infrared Radar System
 Abil/Name/40mmLVRocket=40mm LV Rocket
 Abil/Name/A10MaverickStrike=A10 Maverick Strike
+Abil/Name/ANRRevive=ANR Revive
 Abil/Name/ATMissile=AT Missile
 Abil/Name/ATRocket=AT Rocket
 Abil/Name/AirReconnaissance=Air Reconnaissance
@@ -39,6 +40,8 @@ Abil/Name/BinocularsLN=Binoculars LN
 Abil/Name/BinocularsMercenary=Binoculars Mercenary
 Abil/Name/BinocularsOSS=Binoculars
 Abil/Name/BinocularsPL=Binoculars PL
+Abil/Name/BinocularsPMC=Binoculars
+Abil/Name/BinocularsPMCNorm=Binoculars Normal
 Abil/Name/BinocularsSDM=Binoculars
 Abil/Name/BioResonatorSkills=Bio-Resonator Skills
 Abil/Name/BioSpecialistSubAbilities=Bio Specialist Sub Abilities
@@ -186,12 +189,16 @@ Abil/Name/FieldCamera3=Field Camera
 Abil/Name/FieldCameraCyborg=Field Camera
 Abil/Name/FieldCameraGhost=Field Camera Ghost
 Abil/Name/FieldCameraSDM=Field Camera
+Abil/Name/FiremodeAP=Firemode AP
 Abil/Name/FiremodeAssaultRifle=Firemode
 Abil/Name/FiremodeCarbine=Firemode
+Abil/Name/FiremodeFB=Firemode FB
+Abil/Name/FiremodeHP=Firemode HP
 Abil/Name/FiremodeMini=Firemode Mini
 Abil/Name/FiremodeMini2=Firemode Mini
 Abil/Name/FiremodeSteelSaberCarbine=Firemode
 Abil/Name/FiremodeSuppressedRifle=Firemode
+Abil/Name/FiremodeTR=Firemode TR
 Abil/Name/FirstAid=First Aid
 Abil/Name/FlareGun=Flare Gun
 Abil/Name/FlareGun2=Flare Gun
@@ -294,6 +301,7 @@ Abil/Name/JavelinSkills=Javelin Skills
 Abil/Name/Jump=Jump
 Abil/Name/Jump2=Jump
 Abil/Name/KineticWaveModule=Kinetic Wave Module
+Abil/Name/LAV25Transport=Load-Unload
 Abil/Name/LLDR=LLDR
 Abil/Name/LNFiremode=LN Firemode
 Abil/Name/LNIncendiary=LN Incendiary
@@ -359,6 +367,7 @@ Abil/Name/LearnW34Python=Learn W34 Python
 Abil/Name/LickerTongue=Licker Tongue
 Abil/Name/LiftBooting=Lift Booting
 Abil/Name/LiftBoots=Lift Boots
+Abil/Name/LoadModularSniper=Load Modular Sniper
 Abil/Name/LogisticalAdjustments=Logistical Adjustments
 Abil/Name/M1SentryGun=M1 Sentry Gun
 Abil/Name/M2SentryGun=M2 Sentry Gun
@@ -368,6 +377,7 @@ Abil/Name/MGLBeta=MGL Beta
 Abil/Name/MGLItem=MGL Item
 Abil/Name/MK44SentryGun=MK44 Sentry Gun
 Abil/Name/MK79SentryGun=MK79 Sentry Gun
+Abil/Name/MLRSRocketBarrage=MLRS Rocket Barrage
 Abil/Name/MRL=MRL
 Abil/Name/MarksmanSkills=Marksman Skills
 Abil/Name/Marksmanship=Marksmanship
@@ -391,6 +401,12 @@ Abil/Name/MiniInventoryShotgun=MiniInventory Shotgun
 Abil/Name/MiniInventorySniper=MiniInventory Sniper
 Abil/Name/MiniM1SentryGun=Mini M1 Sentry Gun
 Abil/Name/MiniMRL=Mini MRL
+Abil/Name/ModularSnipeAP=Modular Snipe AP
+Abil/Name/ModularSnipeFB=Modular Snipe FB
+Abil/Name/ModularSnipeHP=Modular Snipe HP
+Abil/Name/ModularSnipeST=Modular Snipe ST
+Abil/Name/ModularSnipeSpecialize=Modular Snipe Specialize
+Abil/Name/ModularSnipeTR=Modular Snipe TR
 Abil/Name/MonomolecularWire=Monomolecular Wire
 Abil/Name/MotionSensorCS=Motion Sensor CS
 Abil/Name/MotionSensorGhost=Motion Sensor Ghost
@@ -513,6 +529,7 @@ Abil/Name/Revive=Revive
 Abil/Name/RiflemanSkills=Rifleman Skills
 Abil/Name/SAMSite=SAM Site
 Abil/Name/SITREP=SITREP
+Abil/Name/SMGRoundSpecialize=SMG Round Specialize
 Abil/Name/SafeguardSkills=Safeguard Skills
 Abil/Name/SatTrack=Sat Track
 Abil/Name/SatchelCharge=Satchel Charge
@@ -544,7 +561,9 @@ Abil/Name/SpecialOperationsSkills=Special Operations Skills
 Abil/Name/SpecialistSkills=Specialist Skills
 Abil/Name/SpecializedRounds=Specialized Rounds
 Abil/Name/SpecterCloak=Specter Cloak
+Abil/Name/SpecterMunitionsUpgrades=Specter Munitions Upgrades
 Abil/Name/SpecterSkills=Specter Skills
+Abil/Name/SpecterWeaponsTraining=Specter Weapons Training
 Abil/Name/SpinBarrels=Spin Barrels
 Abil/Name/Sprint=Sprint
 Abil/Name/SprintNPC=Sprint NPC
@@ -559,6 +578,7 @@ Abil/Name/StrafeDesignator=Strafe Designator
 Abil/Name/StrafeRun=Strafe Run
 Abil/Name/StrengthTraining=Strength Training
 Abil/Name/StrikeTeam=Strike Team
+Abil/Name/StrikeTeamNormal=Strike Team Normal
 Abil/Name/StunGrenade=Stun Grenade
 Abil/Name/SuitRecharge=Suit Recharge
 Abil/Name/SuperStimpackStone=Super Stimpack Stone
@@ -584,6 +604,7 @@ Abil/Name/TyrantPull=Tyrant Pull
 Abil/Name/UnconventionalWarfareSkills=Unconventional Warfare Skills
 Abil/Name/UnknownAbility=Learn Laser Prism Skills
 Abil/Name/VehicleSeat=Vehicle Seat
+Abil/Name/VesaniaBarrelThrough=Vesania Barrel Through
 Abil/Name/VesaniaPlasmaPulse=Vesania Plasma Pulse
 Abil/Name/VesaniaPlasmaShield=Vesania Plasma Shield
 Abil/Name/VoidRift=Void Rift
@@ -603,6 +624,8 @@ Abil/Name/stop3=Stop Copy 2
 Abil/Name/stop4=Stop Copy 3
 Abil/TargetMessage/Attack=<IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" height="52" width="32" alignment="absolutemiddle"/>   To Attack<n/><IMG path="Assets\Textures\tutorialmouserightbuttondown.dds" height="52" width="32" alignment="absolutemiddle"/>   Cancel
 Abil/TargetMessage/attack2=<IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/>   To Attack<n/><IMG path="Assets\Textures\tutorialmouserightbuttondown.dds" alignment="absolutemiddle"/>   Cancel
+Abil/Tooltip/ANRRevive1=Revives a nearby dead soldier.<n/>Level 1: 7 second delay - Energy cost 180<n/>Level 2: 6 second delay - Energy cost 120<n/>Level 3: 5 second delay - Energy cost 100<n/>
+Abil/Tooltip/ANRRevive3=Revives a nearby dead soldier.<n/>Level 1: 7 second delay - Energy cost 180<n/>Level 2: 6 second delay - Energy cost 120<n/>Level 3: 5 second delay - Energy cost 100<n/>
 Abil/Tooltip/Revive1=Revives a nearby dead soldier.<n/>Level 1: 7 second delay - Energy cost 180<n/>Level 2: 6 second delay - Energy cost 120<n/>Level 3: 5 second delay - Energy cost 100<n/>
 Abil/Tooltip/Revive2=Revives a nearby dead soldier.<n/>Level 1: 7 second delay - Energy cost 180<n/>Level 2: 6 second delay - Energy cost 120<n/>Level 3: 5 second delay - Energy cost 100<n/>
 Abil/Tooltip/Revive3=Revives a nearby dead soldier.<n/>Level 1: 7 second delay - Energy cost 180<n/>Level 2: 6 second delay - Energy cost 120<n/>Level 3: 5 second delay - Energy cost 100<n/>
@@ -784,12 +807,14 @@ Behavior/Name/A10CascadingDamage=A10 Cascading Damage
 Behavior/Name/A10MaverickAI=A10 Maverick AI
 Behavior/Name/AA12=AA-12
 Behavior/Name/APRounds=AP Rounds
+Behavior/Name/APRoundsReady=AP Rounds Ready
 Behavior/Name/AS50Custom=AS50 Custom
 Behavior/Name/ATLASX50=ATLAS-X50
 Behavior/Name/ATMissileStun=AT Missile Stun
 Behavior/Name/AcidBurns=Acid Burns
 Behavior/Name/AcidMelt=Acid Melt
 Behavior/Name/AcidSplash=Acid Splash
+Behavior/Name/ActivatingComputer=Activating Computer
 Behavior/Name/AdrenalineRushCooldown=Adrenaline Rush Cooldown
 Behavior/Name/AdrenalineRushPanic=Adrenaline Rush Panic
 Behavior/Name/AdvancedSpectrumAmplifier=Advanced Spectrum Amplifier
@@ -807,6 +832,7 @@ Behavior/Name/AuraOfValor2=Aura Of Valor
 Behavior/Name/AutomaticMode=Automatic Mode
 Behavior/Name/AutomaticModePlasma=Automatic Mode
 Behavior/Name/BR2FullAutoFireSetting=BR2 Full-Auto Fire Setting
+Behavior/Name/BallisticPlating=Ballistic Plating
 Behavior/Name/BarrelsNotSpinning=Barrels Not Spinning
 Behavior/Name/BarrelsSpinning=Barrels Spinning
 Behavior/Name/BioSuit=Bio Suit
@@ -857,6 +883,7 @@ Behavior/Name/CausticGoo=Caustic Goo
 Behavior/Name/Charge=Charge
 Behavior/Name/Charger=Charger
 Behavior/Name/ChargerBoss=Charger
+Behavior/Name/ChargingISRTower=Charging ISR Tower
 Behavior/Name/Choked=Choked
 Behavior/Name/Choking=Choking
 Behavior/Name/CivilianArmor=Civilian Armor
@@ -919,6 +946,7 @@ Behavior/Name/EMP=EMP
 Behavior/Name/EMPShells=EMP Shells
 Behavior/Name/EelBite=Eel Bite
 Behavior/Name/EelSpawner=Eel Spawner
+Behavior/Name/ElitePMC=Elite PMC
 Behavior/Name/Encumbered=Encumbered
 Behavior/Name/Encumbered2=Encumbered
 Behavior/Name/EnergyAura2=Energy Aura
@@ -937,6 +965,8 @@ Behavior/Name/ExperimentalAugmentLoadout2=Experimental Augment Loadout 2
 Behavior/Name/ExperimentalAugmentLoadout3=Experimental Augment Loadout 3
 Behavior/Name/FMJRounds=FMJ Rounds
 Behavior/Name/Fear=Fear
+Behavior/Name/FeedbackRoundsReady=Feedback Rounds Ready
+Behavior/Name/FeedbackSnipeAbility=Feedbacked
 Behavior/Name/FieldAid=Field Aid
 Behavior/Name/FieldTuning=Field Tuning
 Behavior/Name/FiltrationSystem=Filtration System
@@ -981,10 +1011,13 @@ Behavior/Name/HatchedParasites=Hatched Parasites
 Behavior/Name/HealingAura2=Healing Aura
 Behavior/Name/HeroIncapacitated=Hero Incapacitated
 Behavior/Name/HeroLevels=Hero Levels
+Behavior/Name/HollowPointRoundsReady=Hollow Point Rounds Ready
 Behavior/Name/HorrorAcid=Horror Acid
 Behavior/Name/HullStrength=Hull Strength
 Behavior/Name/IDMR2=IDMR-2
 Behavior/Name/IPR=IPR
+Behavior/Name/ISRReveal=ISR Reveal
+Behavior/Name/ISRTowerActive=ISR Tower Active
 Behavior/Name/ISS7=ISS-7
 Behavior/Name/Immunity=Immunity
 Behavior/Name/ImpalerTentacle=Impaler Tentacle
@@ -1024,6 +1057,7 @@ Behavior/Name/IncendiaryShells=Incendiary Shells
 Behavior/Name/InfectedBite=Infected Bite
 Behavior/Name/Inferno=Inferno
 Behavior/Name/InfestedBoss=Infested
+Behavior/Name/InfestedCleansing=Cleansing...
 Behavior/Name/InfestedSmithyPlating=Infested Smithy Plating
 Behavior/Name/InfestedSystemRestore=Infested System Restore
 Behavior/Name/InfestedSystemRestoreCooldown=Infested System Restore Cooldown
@@ -1065,6 +1099,8 @@ Behavior/Name/LickerTongue=Licker Tongue
 Behavior/Name/LightFilter=Light Filter
 Behavior/Name/LimiterShield=Limiter Shield
 Behavior/Name/LimiterShieldCharon=Limiter Shield - Charon
+Behavior/Name/LoadModularSniper=Load Modular Sniper
+Behavior/Name/LoadedSnipes=LoadedSnipes
 Behavior/Name/LuckyEffect=Lucky (Effect)
 Behavior/Name/M1014=M1014
 Behavior/Name/M135Minigun=M135 Minigun
@@ -1073,6 +1109,7 @@ Behavior/Name/M41SAW=M41 SAW
 Behavior/Name/M5MAR=M5 MAR
 Behavior/Name/M79Flamethrower=M79 Flamethrower
 Behavior/Name/M92Torrent=M92 Torrent
+Behavior/Name/MLRSBarrageAI=MLRS Barrage AI
 Behavior/Name/MalignantInfection=Malignant Infection
 Behavior/Name/Marked=Marked
 Behavior/Name/Markerlight=Markerlight
@@ -1130,6 +1167,7 @@ Behavior/Name/ParalysisShot3=Paralysis Shot
 Behavior/Name/ParalysisShotsmallmove=Paralysis Shot
 Behavior/Name/ParasiteSpawner=Parasite Spawner
 Behavior/Name/ParasiticInfection=Parasitic Infection
+Behavior/Name/PassiveModularLoad=Passive Modular Load
 Behavior/Name/PhaseShifting=Phase Shifting
 Behavior/Name/PlasmaBubble=Plasma Bubble
 Behavior/Name/PlasmaBurn=Plasma Burn
@@ -1217,12 +1255,14 @@ Behavior/Name/SolarFocusingTest=Solar Focusing Test
 Behavior/Name/SonicPulse=Sonic Pulse
 Behavior/Name/Spawned=Spawned
 Behavior/Name/SpecterCloak=Specter Cloak
+Behavior/Name/SpecterSnipeTest=Specter Snipe Test
 Behavior/Name/SpectrumAmplifier=Spectrum Amplifier
 Behavior/Name/SpinningUp=Spinning Up...
 Behavior/Name/SpitterAcid=Spitter Acid
 Behavior/Name/Sprint=Sprint
 Behavior/Name/SquadLeadership2=Squad Leadership
 Behavior/Name/Stalwart=Stalwart
+Behavior/Name/StandardRounds=Standard Rounds
 Behavior/Name/StasisWardSlow=Stasis Ward Slow
 Behavior/Name/SteadyAim=Steady Aim
 Behavior/Name/Stealth1=Stealth 1
@@ -1253,6 +1293,12 @@ Behavior/Name/SuppressiveFireMini=Suppressive Fire (Mini)
 Behavior/Name/SuspendedSupportSystems=Suspended Support Systems
 Behavior/Name/SwampSlowI=Swamp Slow I
 Behavior/Name/SwampSlowII=Swamp Slow II
+Behavior/Name/SwappingRounds=Swapping Rounds
+Behavior/Name/SwappingtoAP=Swapping to AP
+Behavior/Name/SwappingtoFeedback=Swapping to Feedback
+Behavior/Name/SwappingtoHP=Swapping to HP
+Behavior/Name/SwappingtoStandard=Swapping to Standard
+Behavior/Name/SwappingtoTracer=Swapping to Tracer
 Behavior/Name/SwitchingRounds=Switching Rounds...
 Behavior/Name/SwollenSpawner=Swollen Spawner
 Behavior/Name/SystemRestore=System Restore
@@ -1264,6 +1310,8 @@ Behavior/Name/TestingDummy=Testing Dummy
 Behavior/Name/TimeStopped=Time-Stopped
 Behavior/Name/ToughSkin=Tough Skin
 Behavior/Name/ToughSkinBoss=Tough Skin
+Behavior/Name/TracerRoundsReady=Tracer Rounds Ready
+Behavior/Name/TracerSnipe=Tracer Snipe
 Behavior/Name/Tracked=Tracked
 Behavior/Name/Training1=Training 1
 Behavior/Name/Training1SF=Training 1 SF
@@ -1283,6 +1331,7 @@ Behavior/Name/UnpoweredMech=Unpowered
 Behavior/Name/Unstoppable=Unstoppable
 Behavior/Name/UnwillingtoDie=Unwilling to Die
 Behavior/Name/UpgradedEfficiency=Upgraded Efficiency
+Behavior/Name/VesaniaBarrelThrough=Vesania Barrel Through
 Behavior/Name/VesaniaShield1=Vesania Shield
 Behavior/Name/VesaniaShield2=Vesania Shield
 Behavior/Name/VesaniaShield3=Vesania Shield
@@ -1302,11 +1351,13 @@ Behavior/Name/XR900Range=XR-900 Range
 Behavior/Name/aidummy=aidummy
 Behavior/Name/heattest=heat test
 Behavior/ReconDroneMotionSensor=ReconDroneMotionSensor
+Behavior/Tooltip/APRoundsReady=This unit has loaded AP rounds.
 Behavior/Tooltip/AS50Custom=A customized anti-materiel rifle outfitted with adaptive optics, forward grip, and bipod. This allows for quick acquisition of targets while standing or prone. <n/><n/><c val="FF8000">While Standing: Increases Attack Speed by 15%<n/>While Prone: Increases Attack Speed by 30% and Range by 8</c>
 Behavior/Tooltip/ATMissileStun=This unit is stunned.
 Behavior/Tooltip/AcidBurns=This unit has been burned by an Acid Vore. It takes 75 damage over 5 seconds
 Behavior/Tooltip/AcidMelt=This unit has been burned by an Acid Vore. It loses 20 armor for 45 seconds
 Behavior/Tooltip/AcidSplash=This unit has been splashed by a Swollen, causing a reduction in movement speed and damage over time.
+Behavior/Tooltip/ActivatingComputer=This unit is accessing RA computer systems.
 Behavior/Tooltip/AdrenalineRushCooldown=Refreshing Adrenaline Rush...
 Behavior/Tooltip/AdrenalineRushPanic=Coursing with adrenaline, your movespeed has increased by 0.2 for 20 seconds.
 Behavior/Tooltip/AdvancedSpectrumAmplifier=An advanced ocular device that can detect all invisible objects within 16 range.
@@ -1314,6 +1365,7 @@ Behavior/Tooltip/AnabolicPerformanceEnhancement=Increases attack and movement sp
 Behavior/Tooltip/AuraOfValor2=This unit is inspired to fight on.<n/><n/>Boosts damage by 5% and armor by 3.
 Behavior/Tooltip/AuraOfValor22=This unit is inspired to fight on.<n/><n/>Boosts damage by 5% and armor by 3.
 Behavior/Tooltip/BR2FullAutoFireSetting=The BR2 CQBR is in Full-Auto firemode, increase attack speed by 350% for 3 seconds.
+Behavior/Tooltip/BallisticPlating=This unit has ballistic plating, giving it 50% damage reduction versus ranged.
 Behavior/Tooltip/BarrelsNotSpinning=Cannot fire until barrels are spinning
 Behavior/Tooltip/BarrelsSpinning=Can now fire. Energy slowly drains.
 Behavior/Tooltip/BiologicalToxin=<c val="FFFF00">Biological Toxin</c><n/>Infectious agents have been released into the atmosphere.  This causes hinderance in your movement speed by 2%  and drains 0.75 hp/sec.
@@ -1348,6 +1400,7 @@ Behavior/Tooltip/Catalyst=This unit cannot regenerate energy for 20 seconds.
 Behavior/Tooltip/CausticGoo=You've been covered in sticky goo! Lowers attack and reload speed by 30%, movement speed by 15%, and take 20% additional damage when attacked!
 Behavior/Tooltip/Charger=Charges periodically, increasing movement speed by 50%
 Behavior/Tooltip/ChargerBoss=Charges periodically, increasing movement speed by 25%
+Behavior/Tooltip/ChargingISRTower=This unit is charging a nearby ISR tower.
 Behavior/Tooltip/CivilianArmor=Super Civilians only take 10% damage
 Behavior/Tooltip/ClassIIIHemmorrhaging=<c val="FF8000">Moderate</c><n/>Loss of 30-40% of blood volume. Moderate loss of movement, attack speed and damage, and damage over time.
 Behavior/Tooltip/ClassIVHemmorrhaging=<c val="800000">Severe</c><n/>Loss of over 40% of blood volume. Severe loss of movement, attack speed and damage, and damage over time. Immediate medical attention required to prevent death.
@@ -1386,6 +1439,7 @@ Behavior/Tooltip/DriverInvulnerability=This unit is temporarily invulnerable
 Behavior/Tooltip/DurableFieldCameras=Field cameras are now resistant to explosives.
 Behavior/Tooltip/EM25R=A railgun is a device that uses electromagnetic force to launch high velocity projectiles, by means of a sliding armature that is accelerated along a pair of conductive rails.<n/><c val="800000">This Weapon cannot land Critical Hits.
 Behavior/Tooltip/EelBite=Causes a temporary loss of movement speed
+Behavior/Tooltip/ElitePMC=This unit is a PMC elite.
 Behavior/Tooltip/Encumbered=You have too many magazines readied and are encumbered. Drop magazines to return to normal.
 Behavior/Tooltip/Encumbered2=You have too much fuel readied and are encumbered. Drop fuel to return to normal.
 Behavior/Tooltip/EnergyCell=An energy-dense cell made to regenerate your suit.<n/><c val="FF8000">Regenerates 190 energy over 20 seconds.</c>
@@ -1396,6 +1450,8 @@ Behavior/Tooltip/ExperimentalAugmentLoadout2=Provides the Cyborg with an experim
 Behavior/Tooltip/ExperimentalAugmentLoadout3=Provides the Cyborg with an experimental augment loadout set. Each loadout set has it's own unique Auxillary Augment (Unlocks at Level 3).<n/><n/>Passives:<n/>Each Level - 10 Maximum Energy Capacity, 2 Mechanical, 5% Energy Regeneration Bonus<n/>Level 1 - Field Camera<n/>Level 2 - Sticky Plasma Grenade<n/>Level 3 - Reducess all cooldowns by 5%<n/><n/>Actives:<n/>Level 1 - Enables Cloaking, Cannot Attack<n/>Level 2 - Reactive Field Generator, Can now shoot while cloaked, Cloak drains less energy<n/>Level 3 - Hologram Generator, Cloak drains less energy<n/><n/>Auxillary:<n/>System Reboot - Restores all energy, health, shields, and cooldowns [Not Yet Implented]
 Behavior/Tooltip/FMJRounds=FMJ Rounds are readied.
 Behavior/Tooltip/Fear=AHHHH!! SCARY!!!!!!
+Behavior/Tooltip/FeedbackRoundsReady=This unit has loaded feedback rounds.
+Behavior/Tooltip/FeedbackSnipeAbility=This unit has been hit by feedback rounds.
 Behavior/Tooltip/FieldTuning=.015 MS/Level<n/>.025% Dmg/Level<n/>5% Increased Efficiency Repair/Recharge<n/>2.5% Faster CD on Abilities<n/>2 Armor/5 Levels
 Behavior/Tooltip/FiltrationSystem=Air Filters equipped on the Mech Suit prevent Smoke and Gasses from hindering the Operator's control environment.<n/><n/><c val="008000">Immune to Smoke and Gas Grenades slowing effects.</c>
 Behavior/Tooltip/Firestarterv20=<c val="FF0000">This unit is currently infected with Firestarter v2.0</c>
@@ -1419,8 +1475,10 @@ Behavior/Tooltip/HasteMGLBuff=Nanomachines in the blood stream enhance movement 
 Behavior/Tooltip/HasteMGLDebuff=Nanomachines in blood stream restrict movement speed by 35%.
 Behavior/Tooltip/HatchedParasites=Caused by an untreated parasitic infection. Immobilizes the afflicted. Treatable, but uncurable.
 Behavior/Tooltip/HeroIncapacitated=
+Behavior/Tooltip/HollowPointRoundsReady=This unit has loaded hollow point rounds.
 Behavior/Tooltip/HorrorAcid=Slowed and taking damage.
 Behavior/Tooltip/HullStrength=Hull Strength is a measurement of how strong your hull is. Each point adds 100 life, 2 armor, and 0.05 health regeneration.
+Behavior/Tooltip/ISRTowerActive=This ISR tower is active and can detect PMC.
 Behavior/Tooltip/Immunity=This unit is immune to spell damage and cannot receive ailments.
 Behavior/Tooltip/ImpalerTentacle=
 Behavior/Tooltip/ImprovedAnabolicPerformanceEnhancement=Increases attack and movement speed.
@@ -1482,6 +1540,7 @@ Behavior/Tooltip/LightFilter=This unit can see invisible units.
 Behavior/Tooltip/LimiterShield=This unit takes a maximum of 50 damage from any single attack.
 Behavior/Tooltip/LimiterShield3=This unit takes a maximum of 50 damage from any single attack.
 Behavior/Tooltip/LimiterShieldCharon=This unit takes a maximum of 10,000 damage
+Behavior/Tooltip/LoadModularSniper=This unit is loading modular sniper rounds.
 Behavior/Tooltip/Lucky=Do You Feel Lucky, Punk?
 Behavior/Tooltip/MalignantInfection=<c val="FF8000">Moderate</c><n/>An infection that has grown significantly and become malignant. Deals 2 damage per second, reduces damage dealt by 5%, and reduces attack and movement speed by 5%
 Behavior/Tooltip/Marked=<c val="800000">Marked For Snipe</c>
@@ -1518,6 +1577,7 @@ Behavior/Tooltip/PMCExplosionReduction=Innovative reactive shielding that reduce
 Behavior/Tooltip/PainKiller=Adds life, movement speed, and minimizes movement loss.
 Behavior/Tooltip/Painkillers=Adds life, movement speed, and minimizes movement loss.
 Behavior/Tooltip/ParasiticInfection=<c val="800000">Severe</c><n/>Infected with a mutated parasite. Will worsen exponentially over time. Immediate medical attention required to prevent death.
+Behavior/Tooltip/PassiveModularLoad=This unit is passively loading modular snipe rounds.
 Behavior/Tooltip/PlasmaBubble=This unit is protected with a plasma shield.
 Behavior/Tooltip/PlasmaBurn=This unit is being burned by a plasma storm.
 Behavior/Tooltip/PlasmaPulseVulnerability=This unt's armor has been weakened by the plasma pulse cannon.
@@ -1582,6 +1642,7 @@ Behavior/Tooltip/SpecterCloak=This unit is cloaked and will only be revealed by 
 Behavior/Tooltip/SpectrumAmplifier=An ocular device that allows detection of invisible objects. it is limited to 120 degree vision and 10 range.
 Behavior/Tooltip/SpitterAcid=This unit has been splashed by a Spitter, causing a reduction in movement speed and damage over time.
 Behavior/Tooltip/SquadLeadership2=This unit is being led by a Squad Leader.<n/><n/><c val="FF8040">Increases Damage by 10%<n/>Increases Attack Speed by 15%<n/>Increases Movement Speed by 0.05</c>
+Behavior/Tooltip/StandardRounds=This unit has loaded standard rounds.
 Behavior/Tooltip/StasisWardSlow=This unit is slowed by 75%.
 Behavior/Tooltip/SteadyAim=The Mercenary prones down on the ground taking slower and more precise shots to effectively take down a target.<n/><n/>Must be proned,<n/><n/>Attack Speed: - <d ref="1 - Behavior,SteadyAim,Modification.AttackSpeedMultiplier * 100" precision="2"/>%<n/>Weapon Damage Bonus: + <d ref="Behavior,SteadyAim,Modification.DamageDealtFraction[Ranged]" precision="2"/>x<n/>Weapon Range Bonus: + <d ref="Behavior,SteadyAim,Modification.WeaponRange" precision="2"/>
 Behavior/Tooltip/StickyWeb=This unit is slowed by 2.5% per stack of this buff
@@ -1601,6 +1662,12 @@ Behavior/Tooltip/SuppressiveFireMini=Fires on automatic and with increased criti
 Behavior/Tooltip/SuspendedSupportSystems=Suit Recharge and Repair are disabled, allowing the Mech Operator's suit functions to optimize energy generation.
 Behavior/Tooltip/SwampSlowI=Large reduction in maneuver capabilities.
 Behavior/Tooltip/SwampSlowII=Large reduction in maneuver capabilities.
+Behavior/Tooltip/SwappingRounds=Swapping rounds...
+Behavior/Tooltip/SwappingtoAP=Swapping rounds...
+Behavior/Tooltip/SwappingtoFeedback=Swapping rounds...
+Behavior/Tooltip/SwappingtoHP=Swapping rounds...
+Behavior/Tooltip/SwappingtoStandard=Swapping rounds...
+Behavior/Tooltip/SwappingtoTracer=Swapping rounds...
 Behavior/Tooltip/SwitchingRounds=Cannot fire until rounds are properly switched out.
 Behavior/Tooltip/SystemRestore=This unit can restore its systems once after being hit with an emp attack. Must cooldown for 1 minute after use.
 Behavior/Tooltip/SystemRestoreCooldown=System Restore is recharging ...
@@ -1609,6 +1676,8 @@ Behavior/Tooltip/TestingDummy=+100,000 HP<n/>+100,000 HP Regeneration when HP < 
 Behavior/Tooltip/TimeStopped=This unit has been hit by a time-stop.
 Behavior/Tooltip/ToughSkin=-30% bullet damage taken
 Behavior/Tooltip/ToughSkinBoss=-15% bullet damage taken
+Behavior/Tooltip/TracerRoundsReady=This unit has loaded tracer rounds.
+Behavior/Tooltip/TracerSnipe=This unit has been hit by a tracer snipe.
 Behavior/Tooltip/Tracked=This unit is being tracked by a satellite and it's location relayed to the Vindicare.
 Behavior/Tooltip/Training1=Improves damage, attack speed, mag size, and reload time.
 Behavior/Tooltip/Training1SF=Improves damage, attack speed, mag size, and reload time.
@@ -1625,6 +1694,7 @@ Behavior/Tooltip/Unpowered2=This machine is off.
 Behavior/Tooltip/UnpoweredMech=This machine is powered down.
 Behavior/Tooltip/Unstoppable=with love from Doom
 Behavior/Tooltip/UnwillingtoDie=Death is not the end for this zombie
+Behavior/Tooltip/VesaniaBarrelThrough=This unit is charging forward.
 Behavior/Tooltip/VesaniaShield1=This unit is protected with a plasma shield.
 Behavior/Tooltip/VesaniaShield2=This unit is protected with a plasma shield.
 Behavior/Tooltip/VesaniaShield3=This unit is protected with a plasma shield.
@@ -1664,6 +1734,7 @@ Button/Name/74DFlamethrower=74D - Flamethrower
 Button/Name/74DFlamethrowerTest=74D - Flamethrower Test
 Button/Name/AA12=AA-12
 Button/Name/APRounds=AP Rounds
+Button/Name/APRoundsSpec=AP Rounds
 Button/Name/AS50Custom=AS50 Custom
 Button/Name/ATLASX50=ATLAS-X50
 Button/Name/ATMissile=AT Missile
@@ -1686,12 +1757,14 @@ Button/Name/AssassinSkills=Assassin Skills
 Button/Name/AssaultmanSkills=Assaultman Skills
 Button/Name/AttackWeaponsTeam=Attack Weapons Team
 Button/Name/AuraOfValor=Aura Of Valor
+Button/Name/AutomatedNaniteResuscitator=Automated Nanite Resuscitator
 Button/Name/AutomaticMode=Automatic Mode
 Button/Name/AutomaticMode2=Automatic Mode
 Button/Name/AutomaticRifleman=11B - Automatic Rifleman
 Button/Name/BCA=BCA
 Button/Name/BMDD=Radio Jammer
 Button/Name/BackupGenerator=Backup Generator
+Button/Name/BarrelThrough=Barrel Through
 Button/Name/Barricade=Barricade
 Button/Name/BattleRifle=Battle Rifle
 Button/Name/BeltLinking=Belt Linking
@@ -1855,6 +1928,7 @@ Button/Name/ExplosiveCharge3=Explosive Charge
 Button/Name/ExplosiveCharge5=Explosive Charge
 Button/Name/ExplosivesExpert=Explosives Expert
 Button/Name/FMJRounds=FMJ Rounds
+Button/Name/FeedbackRounds=Feedback Rounds
 Button/Name/FieldAid=Field Aid
 Button/Name/FieldCameraSDM=Field Camera
 Button/Name/FieldTuning=Field Tuning
@@ -1920,6 +1994,7 @@ Button/Name/HoldFireOff=Hold Fire Off
 Button/Name/HoldFireOff2=Hold Fire Off
 Button/Name/HoldFireOff22=Hold Fire Off
 Button/Name/HoldPosition=Hold Position
+Button/Name/HollowPointRounds=Hollow Point Rounds
 Button/Name/HurricaneMissiles=Hurricane Missiles
 Button/Name/IDMR2=IDMR-2
 Button/Name/IPR=IPR
@@ -2029,6 +2104,7 @@ Button/Name/LiftBoots=Lift Boots
 Button/Name/LightFilter=Light Filter
 Button/Name/LightPlating=Light Plating
 Button/Name/Load2=Load Copy
+Button/Name/LoadModularSniper=Load Modular Sniper
 Button/Name/LogisticalAdjustments=Logistical Adjustments
 Button/Name/LogisticalAdjustmentsLevel1=Logistical Adjustments - Level 1
 Button/Name/LogisticalAdjustmentsLevel2=Logistical Adjustments - Level 2
@@ -2064,6 +2140,7 @@ Button/Name/Meltdown=Meltdown
 Button/Name/MeltdownOff=Meltdown Off
 Button/Name/MercenarySkills=Mercenary Skills
 Button/Name/MiniM1SentryGun=Mini M1 Sentry Gun
+Button/Name/ModularSnipe=Modular Snipe
 Button/Name/MolotovCocktails=Molotov Cocktails
 Button/Name/MonomolecularWire=Monomolecular Wire
 Button/Name/MotionSensor=Motion Sensor
@@ -2078,6 +2155,7 @@ Button/Name/Move3=Move Copy 2
 Button/Name/MoveHoldPosition2=Hold Position Copy
 Button/Name/MovePatrol2=Patrol Copy
 Button/Name/MovePatrol3=Patrol Copy 2
+Button/Name/MunitionsUpgrades=Munitions Upgrades
 Button/Name/MuscleRelaxant=Muscle Relaxant
 Button/Name/MutilationSkills=Mutilation Skills
 Button/Name/NanoBoost=Nano Boost
@@ -2174,7 +2252,7 @@ Button/Name/ReadySatchelCharges=Ready Satchel Charges
 Button/Name/ReconDrone=Recon Drone
 Button/Name/ReconDrone2=Recon Drone
 Button/Name/ReconDroneEvasion=Recon Drone Evasion
-Button/Name/ReconExpert=Recon Expert
+Button/Name/ReconExpert=Recon Skills
 Button/Name/ReconnaissanceSkills=Reconnaissance Skills
 Button/Name/Recruit=Recruit
 Button/Name/ReducedRecoil=Reduced Recoil
@@ -2211,6 +2289,7 @@ Button/Name/SatchelChargeCE=Satchel Charge
 Button/Name/Security=Security
 Button/Name/SecurityArmor=Security Armor
 Button/Name/SeismicResonator=Seismic Resonator
+Button/Name/SelectRounds=Select Rounds
 Button/Name/SelfDestruct=Self-Destruct
 Button/Name/SelfNanoInjection=Self Nano-Injection
 Button/Name/SelfRepair=Self Repair
@@ -2235,6 +2314,11 @@ Button/Name/SmokeGrenadeMercenary=Smoke Grenade
 Button/Name/Snapfire=Snapfire
 Button/Name/Snipe=Snipe
 Button/Name/Snipe2=Snipe
+Button/Name/SnipeArmorPenetrator=Snipe Armor Penetrator
+Button/Name/SnipeFeedback=Snipe Feedback
+Button/Name/SnipeHollowPoint=Snipe Hollow Point
+Button/Name/SnipeStandard=Snipe Standard
+Button/Name/SnipeTracer=Snipe Tracer
 Button/Name/SolarArmor=Solar Armor
 Button/Name/SolarFocusing=Solar Focusing
 Button/Name/SoldierSkillsLevel1=Soldier Skills - Level 1
@@ -2256,6 +2340,7 @@ Button/Name/Sprint2=Sprint
 Button/Name/SpyPlane=Spy Plane
 Button/Name/SquadLeadership=Squad Leadership
 Button/Name/Stand=Stand
+Button/Name/StandardRounds=Standard Rounds
 Button/Name/StasisWard=Stasis Ward
 Button/Name/SteadyAim=Steady Aim
 Button/Name/SteadyAimOff=Steady Aim Off
@@ -2303,6 +2388,7 @@ Button/Name/SystemReboot=System Reboot
 Button/Name/Tag=Tag
 Button/Name/ThermobaricMissile=Thermobaric Missile
 Button/Name/Tier1Scanner=Tier 1 Scanner
+Button/Name/TracerRounds=Tracer Rounds
 Button/Name/Training=Training
 Button/Name/Training2=Training
 Button/Name/Tranquilizer=Tranquilizer
@@ -2324,6 +2410,7 @@ Button/Name/WaveAmplifier=Wave Amplifier
 Button/Name/WeakPointTargeting=Weak Point Targeting
 Button/Name/WeaponOverheating=Weapon Overheating
 Button/Name/WeaponProficiency=Weapon Proficiency
+Button/Name/WeaponsTraining=Weapons Training
 Button/Name/WhitePhosphorous=White Phosphorous
 Button/Name/XFW5000=XFW-5000
 Button/Name/XM88bPhasedPlasmaRifle=XM-88b Phased Plasma Rifle
@@ -2343,7 +2430,7 @@ Button/Tooltip/18OCyborg=MOS: 18O Role: Cyborg<n/>Cyborgs are a new addition to 
 Button/Tooltip/18OCyborgMk2=MOS: 18O Role: Cyborg<n/>Cyborgs are a new addition to the military. They are integrated with their suit technology, giving them super-human capabilities. Becoming a Cyborg is a commitment - only the most dedicated of Special Forces candidates are offered the opportunity to permanently change their bodies for the warfighting cause. <n/>Abilities:<n/>-Cluster Rockets<n/>-Suppressive Fire<n/>-Agility<n/>-Strength<n/>-Stealth
 Button/Tooltip/18OCyborgTest=NSN: 2350-01-061-8598       Role: Cyborg<n/>Military Cyborgs are soldiers that were critically wounded and volunteered/conscripted for the MECU project, possessing fully prosthetic body that is highly modular, and specifically designed for combat use.<n/><n/>Components:<n/>- Stalwart<n/>- Mobility<n/>- Wrist Rocket<n/>- Thunder Hammer<n/>- Plasma Cannon<n/>- Arc-en-ciel<n/>- Hypercapacitor Bank<n/>- Necrodermium Plating<n/>- Stealth Module<n/>- Stonewall Protocol<n/>- Vanguard Shielding System<n/>- Enhanced Optical Sensors<n/>- Tactical HUD<n/>- CQC Programming<n/>- Immortality Protocol<n/>- Dead Man Switch<n/>- Grav Manipulator
 Button/Tooltip/18ORACyborg=MOS: 18O Role: Cyborg<n/>Cyborgs are a new addition to the military. They are integrated with their suit technology, giving them super-human capabilities. Becoming a Cyborg is a commitment - only the most dedicated of Special Forces candidates are offered the opportunity to permanently change their bodies for the warfighting cause. Abilities:<n/>-Cluster Rockets<n/>-Suppressive Fire<n/>-Marksmanship<n/>-Cyborg Skills
-Button/Tooltip/18SSpecter=MOS 18S (Specter) Role: Assassin<n/>Specters are skilled at infiltrating enemy territory and taking out high value targets. They can fire while cloaked, making them deadly against enemies without enhanced vision. They also specialize in providing vision for friendly troops in the field.<n/>Abilities:<n/>-Specter Skills<n/>-Marksmanship<n/>-Assassin Skills<n/>-Specialized Rounds<n/>-Recon Expert
+Button/Tooltip/18SSpecter=MOS 18S (Specter) Role: Assassin<n/>Specters are skilled at infiltrating enemy territory and taking out high value targets. They can fire while cloaked, making them deadly against enemies without enhanced vision. They also specialize in providing vision for friendly troops in the field.<n/>Abilities:<n/>-Specter Skills<n/>-Recon<n/>-Sabotage<n/>-Weapons Training<n/>-Munitions Upgrades
 Button/Tooltip/24XVesania30=MOS: 24X (Vesania 3.0) Role: Walking Tank<n/>In response to the dangers posed by the claws and fists of zombies, the US military has deployed an experimental mechanical exoskeleton fitted with the most advanced defensive technologies in existence.<n/>Abilities:<n/>-Defensive Upgrades<n/>-Offensive Upgrades<n/>-Plasma Shields<n/>-Energy Pulse
 Button/Tooltip/31BEnforcer=MOS: 31B (Enforcer) Role: Enforcer<n/>Enforcers were recently added to the military as a result of the outbreak. Once members of S.W.A.T. teams, Enforcers are capable of taking punishment more so than most units and specialize in controlling crowds. <n/>Abilities:<n/>-Soldier Skills<n/>-Marksmanship<n/>-Defensive Tactics<n/>-Protect and Serve<n/>-Crowd Control
 Button/Tooltip/31BParamilitaryOperationsOfficer=Paramilitary Operations Officer MOS: N/A<n/>Paramilitary Operations Officers are responsible for high-threat military and covert operations, recently, they have been more commonly attached to military units for unknown reasons. <n/><n/>Abilities:<n/>Operations Skills<n/>1: <s val="AB_Description">Self-Aid</s><n/>2: <s val="AB_Description">Burst-Fire<n/></s>3: <s val="AB_Description">Lonewolf, Intel Analysis<n/></s>4: <s val="AB_Description">Riflebutt<n/></s><n/>Marksmanship<n/><s val="AB_Description">1 - 4</s><n/><n/>Black Bag Ops Skills<n/>1: <s val="AB_Description">HUMINT Specialist, Broad-Spectrum Sensor</s><n/>2:<s val="AB_Description"> Tag<n/></s>3: <s val="AB_Description">Aerial Reconnaissance Drone, Informants<n/></s>4: <s val="AB_Description">ECHELON Support, Firestarter v2.0<n/></s><n/>Unconventional Warfare Skills<n/>1: <s val="AB_Description">Ambush/Sixth Sense<n/></s>2: Low-Intensity Combat<n/>3: <s val="AB_Description">Remote Cluster Charge, Sonic Snare</s><n/>4: <s val="AB_Description">Low-Profile, Countermeasure</s><n/><n/>Direct Actions Skills<n/>1: <s val="AB_Description">Stun Grenade</s><n/>2: <s val="AB_Description">Precision Strike, Tactical Intel</s><n/>3: <s val="AB_Description">Request Sprectre Team</s><n/>4: <s val="AB_Description">Request Alpha Team, Candela Grenade</s>
@@ -2360,6 +2447,7 @@ Button/Tooltip/AH25Hunter=Deadly gunship.<n/><n/><c val="FF0000">Armed with Rock
 Button/Tooltip/AH32Viper=A recent addition to the US army AH family of helicopters. This one is loaded out with multiple types of rockets and enhanced recon options.
 Button/Tooltip/AH64Apache=Deadly gunship.<n/><n/><c val="FF0000">Armed with Rockets.</c>
 Button/Tooltip/APRounds=Special rounds with a tungsten core designed to penetrate armor.<n/><n/><c val="FF8040">Increases weapon damage by 10%<n/>Increases weapon damage against armor by an additional 10%</c>
+Button/Tooltip/APRoundsSpec=Armor piercing rounds which are effective against a single target.<n/><n/>Round swapping takes 5 seconds (reduced by specter skills).
 Button/Tooltip/AS50=A customized anti-materiel rifle outfitted with adaptive optics, forward grip, and bipod. This allows for quick acquisition of targets while standing or prone. <n/><n/><c val="FF8000">While Standing: Increases Attack Speed by 15%<n/>While Prone: Increases Attack Speed by 30% and Range by 8</c>
 Button/Tooltip/AS50Bipod=A customized anti-materiel rifle outfitted with adaptive optics, forward grip, and  bipod. This allows for quick acquisition of targets while standing or prone. <n/><n/><c val="FF8000">While Standing: Increases Attack Speed by 15%<n/>While Prone: Increases Attack Speed by 30% and Range by 8</c>
 Button/Tooltip/AS50Custom=A customized anti-materiel rifle outfitted with adaptive optics, forward grip, and bipod. This allows for quick acquisition of targets while standing or prone. <n/><n/><c val="FF8000">While Standing: Increases Attack Speed by 15%<n/>While Prone: Increases Attack Speed by 30% and Range by 8</c>
@@ -2399,6 +2487,7 @@ Button/Tooltip/Attack2=Orders selected units to move to the target point, fighti
 Button/Tooltip/AttackWeaponsTeam=Calls in 1 AH-25 Hunter to destroy enemies in the area for 30 seconds.</n>Will search for armored, massive, and mechanical units to cast Hurricane rockets on, Hurricane rockets shoot 16 rockets that deal 300-400 damage + an additional 150 vs massive enemies. If there are no friendly units in a 8 radius circle around the target, it will fire.
 Button/Tooltip/AuraOfValor=Encourage your squad to stand strong and preserve!
 Button/Tooltip/AuraOfValor2=Encourage your squad to stand strong and preserve!
+Button/Tooltip/AutomatedNaniteResuscitator=This item can revive any MOS, with a ten minute cooldown.
 Button/Tooltip/AutomaticMode=Switch your weapon to automatic mode and fire 2x faster. Lasts for 10 seconds.<n/><n/>With soldier skills 4: fire 2.5x faster for 12.5 seconds.
 Button/Tooltip/AutomaticMode2=Switch your weapon to automatic mode and fire 2x faster. Lasts for 10 seconds.<n/><n/>With soldier skills 4: fire 2.5x faster for 12.5 seconds.
 Button/Tooltip/AutomaticModePlasma=Switch your weapon to automatic mode and fire 2x faster. Lasts for 10 seconds.<n/><n/>With soldier skills 4: fire 2.5x faster for 12.5 seconds.
@@ -2406,6 +2495,7 @@ Button/Tooltip/AutomaticRifleman=MOS: 11B (Infantry) Role: Automatic Rifleman<n/
 Button/Tooltip/BCA=The Beta Cell Analyzer, or BCA, is a blood sampling device that tests with up to 90% accuracy for the infection.
 Button/Tooltip/BackupGenerator=A special generator that activates when your energy reserves are less than 40%. Increases energy regeneration by 1.25 until energy reserves are at or above 40%.
 Button/Tooltip/Baron=Massive beast who's sole purpose in life is to run down and squash humans. Often found in groups.<n/><n><c val="FFFF8A">Has the ability to Sprint.</c><n/><c val="#ColorAttackInfo">Barons only take 50% damage from bullets and other ranged or melee attacks</c>.
+Button/Tooltip/BarrelThrough=Vesania rushes forward, throwing back anything in his path. Gives +1 movement speed and an enhanced riflebutt for 2 seconds.
 Button/Tooltip/Barricade=Places a barricade on the ground that draws the undead's attention. Only 3 may be on the field at once.
 Button/Tooltip/BattleRifle=Switch to Battle Rifle.
 Button/Tooltip/BeltLinking=Links a 100 round belt to your current belt. Each level also increases max ammo.<n/>Level 1 - 200 rounds, 3.5s cast time<n/>Level 2 - 300 rounds, 2.5s cast time<n/>Level 3 - 400 rounds, 1.5s cast time<n/><n/>Heavy Gunner: Also increases overheat threshold by 15 shots
@@ -2625,6 +2715,7 @@ Button/Tooltip/FTAttackPoint=Throws a ground flare at the target point, revealin
 Button/Tooltip/FTRallyPoint=Throws a ground flare at the target point, revealing the area and providing a light source for 4 minutes.
 Button/Tooltip/FarmerAkma=Male Civilian.
 Button/Tooltip/FarmerAkmaMOS=Farmer Akma is back with a vengeance. They took his wife, they took his farm... nobody is taking anything from him anymore...
+Button/Tooltip/FeedbackRounds=Feedback rounds disrupt enemy capacity to use abilities.<n/>SMG rounds do +100% damage against shields.<n/><n/>Round swapping takes 5 seconds (reduced by specter skills).
 Button/Tooltip/FieldAid=Performs basic field aid on the target.<n/><c val="FF8000">Heals 65 life over 30 seconds.</c>
 Button/Tooltip/FieldCameraSDM=An invisible camera that reveals the area around it for 5 minutes.
 Button/Tooltip/FieldTuning=Mech Operators slowly tune their suits on the field allowing for better overall performance and proficiency in operations. Suits gain 25% less XP per kill than standard MOS Units.<n/><n/><c val="008000">At Level 10:</c><n/><c val="008000">Critical Chance:</c> 12.5%<n/><c val="008000">Damage Multiplier:</c> 3<n/><c val="008000">Types:</c> Ranged and Explosive<n/><n/><c val="008000">Every 5 Levels Increases:</c><n/><c val="008000">Life Armor:</c> 2<n/><c val="008000">Shield Armor:</c> 5<n/><n/><c val="008000">Every level increases:</c><n/><c val="008000">Movement Speed:</c> 0.015<n/><c val="008000">Damage (Ranged and Ability):</c> 2.5%<n/><n/><c val="008000">Every level reduces:</c><n/><c val="008000">Repair/Recharge Time:</c> 5%<n/><c val="008000">Cooldowns:</c> 2.5%
@@ -2712,14 +2803,16 @@ Button/Tooltip/HoldFireOff2=Enables auto-attacking
 Button/Tooltip/HoldFireOff22=Enables auto-attacking
 Button/Tooltip/HoldFireOff23=Enables auto-attacking
 Button/Tooltip/HoldPosition=Orders selected units to stay where they are and attack enemies that are within range. Units will neither chase down enemies nor move to engage.
+Button/Tooltip/HollowPointRounds=Hollow point rounds which are effective against lightly armored groups.<n/><n/>Round swapping takes 5 seconds (reduced by specter skills).
 Button/Tooltip/Hopper=Fast melee creature. <n/><n/><c val="FFFF8A">Can jump cliffs.</c>
-Button/Tooltip/Horror=A flying horror that spits acid. Can cast abduct when energy is full.
+Button/Tooltip/Horror=A flying horror that spits acid. Can cast abduct when energy is full. This abduct is easily avoidable if you are as skilled as Istalri, who hasn't been pulled by a horror in four years.
 Button/Tooltip/Hunter=Undead beasts with with fast movement. Often in groups of 3.<n/><n><c val="FFFF8A">Has the ability to Sprint.</c>
 Button/Tooltip/HurricaneMissiles=Fires a barrage of rockets at the target area, dealing 300-400 (+ 150 vs massive) damage per rocket and temporarily stunning the targets. Each level improves cooldown, energy cost, range, and rocket count.<n/><c val="FF8000">Level 1 - 7 rockets<n/>Level 2 - 10 rockets<n/>Level 3 - 13 rockets<n/>Level 4 - 16 rockets</c><n/><n/><c val="FF0000">Explosives hurt allies.</c>
 Button/Tooltip/IDMR2=The Improved Designated Marksman Rifle is an updated version of the current DMR. It offers improved recoil and stability for an increased rate of fire.<n/><n/><c val="FF8040">Increases weapon damage by 15<n/>Increases weapon speed by 5%</c><n/>
 Button/Tooltip/IPR=The Improved Plasma Rifle refines the plasma induction system, causing a faster reaction and ultimately a faster rate of fire.<n/><n/><c val="FF8000">Increases weapon speed by 20%.</c>
 Button/Tooltip/ISBot=The Individual Security Bot is a robotic floating machine made to provide security with a personnel shortage. They were rapidly adapted to the modern battlefield for their versatility and ability to keep soldiers out of harm's way.
 Button/Tooltip/ISR=ISR, or Intelligence, Surveillance, Reconnaissance, is a broad term for assets used to enhance battlefield awareness.<n/><n/>Reveals the map's terrain and pings enemy PMCs periodically.
+Button/Tooltip/ISRTower=Places a barricade on the ground that draws the undead's attention. Only 3 may be on the field at once.
 Button/Tooltip/ISS7=The Improved Service Shotgun is a modified, semi-automatic shotgun for the Army.<n/><n/><c val="FF8040">Increases weapon speed by 30%</c>
 Button/Tooltip/Ignis=Specialized anti-infantry attacker.<n/><n/><c val="FF0000">Armed with Cluster Rockets and Plasma Shield.</c>
 Button/Tooltip/Ignis20=Latest version of the Ignis Terminator model. Greatly improved from the 1.0 version, the Ignis 2.0 has a much improved flamethrower that is a lot more capable of killing zombies. The old cluster rockets given to the Ignis model was deemed unfit for this model and replaced with the more appropriate fuel discharge. Improved leg/movement mechanisms have increased the speed of the unit and allows it to overload it's engines for a temporary move speed boost.
@@ -2792,6 +2885,7 @@ Button/Tooltip/KineticIntegrator=Utilizes kinetic motion to create energy to pow
 Button/Tooltip/KineticWaveModule=Kinetic Wave Modules emit a pulse of energy outwards which have been proven to disrupt the undeads' internal systems. It has been observed to be ineffective against flying and massive-tier undead.<n/><n/><c val="800000">Damage dealt: 200<n/>Stun Duration: 3 Seconds<n/>Effective Range: 4<n/></c><n/><c val="008000">Cost: 15 Energy</c>
 Button/Tooltip/KingDarreus="I am become death, Destroyer of Worlds."
 Button/Tooltip/Krill=Undead flyer that is cloaked and very small. Often in groups.
+Button/Tooltip/LAV25Recon=IFV armed with high explosive rounds and also uses a TOW missile.
 Button/Tooltip/LLDR=The Lightweight Laser Designator Rangefinder is a special device used only by qualified Fire Support Specialists or other designated, trained individuals. It has a special laser designator with a specific targeting frequency to coordinate with aircraft.<n/><n/>Calls in CAS upon use, dealing approx. 18,000 damage at the epicenter of the blast.<n/></n>Type<c val="FF8000"> -c ###</c> to set the distribution angle</n>Type<c val="FF8000"> -c d</c> to set distribution to default setting<n/><n/><c val="FF0000">Explosives hurt allies.</c>
 Button/Tooltip/LMTV=Light Medium Tactical Vehicle.
 Button/Tooltip/LN68WCombatMedic=MOS: 68W (Healthcare Specialist)<n/>The Health Care Specialist is primarily responsible for providing emergency medical treatment, limited primary care and health protection and evacuation from a point of injury or illness. Health Care Specialists are often called "combat medics" in the Army, because some Soldiers in this MOS are assigned to deploy with Army combat units, and provide emergency medical treatment directly on the battlefield. Other Heath Care Specialists are assigned to military hospitals and clinics to assist doctors and nurses with the health care needs of patients.
@@ -2833,7 +2927,7 @@ Button/Tooltip/LearnAssassinSkills=First Aid provides a range of skills for trea
 Button/Tooltip/LearnAugmentation=Augmentation contains abilities that allow the Combat Medic to augment his squad's fighting capabilities as well as his own. Each level improves mechanical skills by 1. Each ability also has a 50% chance to apply to yourself.<n/>Level 1: Anabolic Performance Enhancement<n/>Level 2: Cognitive Enhancement<n/>Level 3: Pain Killer<n/>Level 4: Improves Anabolic Performance Enhancement<n/>Level 5: Improves Cognitive Enhancement and Pain Killer
 Button/Tooltip/LearnCovertOperationsSkills=Improve the Vindicare's covert operations capabilities.<n/>Each level improves cloak<n/><n/>Level 1: Clock<n/><c val="FF8000">Cloaks Vindicare when he is not attacking<n/><n/></c>Level 2: Sat Track<n/><c val="FF8000">All units within the target location are revealed to Vindicare for 10 seconds.<n/><n/></c>Level 3: Low Profile<n/><c val="FF8000">While prone, Vindicare has a 10% chance to dodge attacks, and gives Vindicare higher range, and damage.<n/></c><n/>Level 4: Suppressor<n/><c val="FF8000">Not unstealthed when attacking with the Anti-Material Rifle.<n/></c><n/>Level 5: Fractal Camouflage<n/><c val="FF8000">Vindicare is immediately cloaked, and is unrevealable for 5 seconds. Cannot attack while active.</c>
 Button/Tooltip/LearnCyborgStrength=Augmentation contains abilities that allow the Combat Medic to augment his squad's fighting capabilities as well as his own. Each level improves mechanical skills by 1.<n/>Level 1: Anabolic Performance Enhancement<n/>Level 2: Cognitive Enhancement<n/>Level 3: Pain Killer<n/>Level 4: Improves Anabolic Performance Enhancement<n/>Level 5: Improves Cognitive Enhancement and Pain Killer
-Button/Tooltip/LearnDefensiveSkills=Defensive adjustments improve the ability of Vesania 3.0 to resist damage in force-on-force and anti-zombie combat.<n/>Each level: +2 fitness, +20 health<n/>Level 1: +10 life armor, +3 health regen<n/>Level 2: +5 life armor, -50% explosive damage taken<n/>Level 3: +5 life and shield armor, +50 shields, +3 shield regen<n/>Level 4: +5 life and shield armor, +50 shields, hard armor (-15% all damage taken)
+Button/Tooltip/LearnDefensiveSkills=Defensive adjustments improve the ability of Vesania 3.0 to resist damage in force-on-force and anti-zombie combat.<n/>Each level: +2 fitness, +20 health<n/>Level 1: +10 life armor, +3 health regen<n/>Level 2: +5 life armor, -50% explosive damage taken, Barrel Through unlocked<n/>Level 3: +5 life and shield armor, +50 shields, +3 shield regen<n/>Level 4: +5 life and shield armor, +50 shields, hard armor (-15% all damage taken)
 Button/Tooltip/LearnDirectActionSkills=Direct Action refers to short-duration strikes, and other small-scale offensive actions.<n/>Each level improves Snapfire.<n/>Level 1: Snapfire<n/><c val="FF8000">Vindicare can snapfire at the cost of attack speed and range for short duration following the use of snapfire.<n/></c><n/>Level 2: Flash Round<n/><c val="FF8000">Fire a rocket assisted flash round that blinds units within the AoE</c><n/><n/>Level 3: Staggering Hit<n/><c val="FF8000">Critical hit staggers the target<n/></c><n/>Level 4: Tempest Round<n/><c val="FF8000">Fire at a target, dealing 1000 damage, and 600 secondary damage in a 90 degree arc behind the target.</c>
 Button/Tooltip/LearnDroneTechnology=The drone operator gains access to advance prototype drones.<n/>Each level increases your maximum Combat Drone Capacity.<n/>Level 1 - Unlocks Combat Drone<n/>Level 2 - Unlocks Surveillance Drone<n/>Level 3 - Unlocks Support Drone<n/>Level 4 - Unlocks Enchanced Drone System
 Button/Tooltip/LearnEM25r=A railgun is a device that uses electromagnetic force to launch high velocity projectiles, by means of a sliding armature that is accelerated along a pair of conductive rails.<n/><c val="800000">This Weapon cannot land Critical Hits.<n/>This Weapon cannot be fired in Automatic Mode.</c><n/><n/>Level Unlocks: <n/>1. Enables the usage of the weapon<n/><n/>2. Increases Range, Increases Attack Speed<n/><n/>3. Increases Damage, Increases Splash Radius by 50%
@@ -2874,6 +2968,7 @@ Button/Tooltip/LightFilter=A light filter attached to the visor shows the full-s
 Button/Tooltip/LightPlating=Light Plating reduces melee damage taken by 25% and Increases Hull Armor by 3.
 Button/Tooltip/Livid=Fast undead mutation.
 Button/Tooltip/Load2=Loads units into the Nydus Worm.
+Button/Tooltip/LoadModularSniper=Loads 4 Modular Rounds into your sniper rifle. Firing the sniper rifle before finishing reloading discards all remaining rounds in the reload cycle.
 Button/Tooltip/LogisticalAdjustments=General Adjustments to the Mech Suits, ranging from operating time to movement speed.<n/>Level 1: Increases Weapon Damage and Attack Speed by 10%, Increased Weapon Range by 2, and Increases operating time by 10%, Enables Overclock Engines and Scouting Utilities.<n/>Level 2: Increases Vision Range by 5, Increases operating time by 5%, Enables Regenerative Hull.<n/>Level 3: Increases Operating time by 5%, Increases Movement Speed by 5%, Enables Dense Power Cell.
 Button/Tooltip/LogisticalAdjustmentsLevel1=General Adjustments to the Mech Suits, ranging from operating time to movement speed.<n/>Level 1: Increases Weapon Damage and Attack Speed by 10%, Increased Weapon Range by 2, and Increases operating time by 10%, Enables Overclock Engines and Scouting Utilities.
 Button/Tooltip/LogisticalAdjustmentsLevel2=General Adjustments to the Mech Suits, ranging from operating time to movement speed.<n/>Level 2: Increases Vision Range by 2, Increases operating time by 5%, Enables Regenerative Hull and Scouting Utilities.
@@ -2902,6 +2997,7 @@ Button/Tooltip/MK44SentryGun=Automatically defends positions with high firepower
 Button/Tooltip/MK44SentryGunPacked=Throws a frag grenade at the target point, dealing 400 damage.
 Button/Tooltip/MK79SentryGun=Automatically defends positions with a automatic, belt-fed grenade launcher. Requires ammunition resupply.
 Button/Tooltip/MK79SentryGunPacked=Throws a frag grenade at the target point, dealing 400 damage.
+Button/Tooltip/MLRSRocket=
 Button/Tooltip/MOBattleWalker=Mk2 Light Walkers are general purpose mech suits.<n/>They are suitable for light combat and scouting.<n/><n/>Explosive Utility: HEDP Rocket Launcher<n/>Scouting Utility: Proximity Sensor<n/>Mk.1 Defensive Utility: Kinetic Wave Module<n/>Mk.2 Defensive Utility: Disruption Field
 Button/Tooltip/MOCombatWalker=Heavy Walkers are outfitted for heavy resistance and point defense.<n/><n/>Explosive Utility: Cluster Rockets<n/>Scouting Utility: Flares <n/>Mk.1 Defensive Utility: Emergency Repair<n/>Mk.2 Defensive Utility: Overshield
 Button/Tooltip/MRL=The Multi-purpose Rocket Launcher is the Army's cost-effective rocket launcher. It is effective at destroying soft to medium armored targets at excellent range. Takes 1.5 seconds to ready and fire, dealing 2700-3100 damage. Deals 500 bonus damage to massive targets. Deals 1/2 damage to mechanical targets.<n/><n/><c val="FF0000">Explosives hurt allies. Backblast can kill allies.</c>
@@ -2929,6 +3025,7 @@ Button/Tooltip/MindBolt=Penguin deals <d ref="Effect,MindBoltDamage,Amount"/> da
 Button/Tooltip/Minerva=Powerful yeti with the ability to leap onto targets.
 Button/Tooltip/MiniM1SentryGun=Creates 1 MMG sentry gun for the controlling player. Only 1 sentry allowed at a time per player. Requires ammunition resupply.
 Button/Tooltip/MkIIBattleWalker=The MkII Battle Walker is a US designed Battle Walker meant to counter armored vehicles both on the ground and in the sky.
+Button/Tooltip/ModularSnipe=Fires a high power bullet at target unit or location.<n/><n/>Consumes 1 modular snipe charge on firing.
 Button/Tooltip/MonomolecularWire=Deals damage and stuns targets in a line.<n/>Level 1 - <d ref="Effect,MonoWireDamage1,Amount[0]"/> damage, 2s<n/>Level 2 - <d ref="Effect,MonoWireDamage2,Amount[0]"/> damage, 2s<n/>Level 3 - <d ref="Effect,MonoWireDamage3,Amount[0]"/> damage, 3s<n/>Level 4 - <d ref="Effect,MonoWireDamage4,Amount[0]"/> damage, 3s<n/><n/><c val="FF0000">Can kill allies.</c>
 Button/Tooltip/Morbus=Undead creature with the ability to deal damage from afar.
 Button/Tooltip/MotionSensor=Detects motion through the fog for 4.5 minutes.<n/><n/>In the words of Bubbles:"Make boobies".
@@ -2946,6 +3043,7 @@ Button/Tooltip/MoveHoldPosition4=Orders selected units to stay where they are an
 Button/Tooltip/MovePatrol2=Orders selected units to patrol between their current position and the target area. Units will attack enemies and move to engage nearby enemies.
 Button/Tooltip/MovePatrol3=Orders selected units to patrol between their current position and the target area. Units will attack enemies and move to engage nearby enemies.
 Button/Tooltip/MovePatrol4=Orders selected units to patrol between their current position and the target area. Units will attack enemies and move to engage nearby enemies.
+Button/Tooltip/MunitionsUpgrades=Each level improves specific aspects of each round type and improves the reloading speed of Load Modular Sniper.<n/><n/>Each level provides the following:<n/><n/>Load Modular Sniper<n/><c val="00FF00">-0.3s Load time</c><n/><n/>Armor Penetrator Rounds<n/><c val="00FF00">+0.15 Snipe Impact Radius<n/>+0.5 Snipe Splash Radius<n/>-0.25 SMG AP round armor penalty</c><n/><n/>Hollow Point Rounds<n/><c val="00FF00">+0.15 Snipe Impact Radius<n/>+0.5 Snipe Splash Radius<n/>-7.5 Snipe armor penalty<n/>-0.25 SMG HP round armor penalty</c><n/><n/>Feedback Rounds<n/><c val="00FF00">+0.5 Snipe Splash Radius<n/>+2.5s Feedback debuff duration<n/>+10 SMG Feedback Round Damage vs Shield</c><n/><n/>Tracer Rounds<n/><c val="00FF00">+0.5 Snipe Splash Radius<n/>+5s Tracer debuff duration</c><n/><n/>Standard Rounds<n/><c val="00FF00">-5 Standard Snipe armor penalty</c>
 Button/Tooltip/MuscleRelaxant=A benzodiazepine that aids in concentration and relaxation. Frequently used by snipers to improve accuracy and weapon control.<n/><c val="FF8000">Increases damage by 50%, attack speed by 15%, and range by 5 for 90 seconds. Does not stack.</c>
 Button/Tooltip/MutilationSkills=Aside from defensive support, Bio Specialists are also trained to weaken enemies by damaging the outer tissue of organic units using a variety of debuffs, allowing weapons to target vital areas more easily.<n/><n/>Adds 2 Dexterity per level.<n/><n/><c val="FF0000">YOU MAY ONLY CHOOSE 1 SKILLSET BETWEEN TWO. CHOOSING MUTILATION SKILLS WILL EXCLUDE SAFEGUARD SKILLS FROM BEING SELECTED.</c><n/><n/>Level 1: Irradiate<n/>Damages the target and all biological enemies around the target. Can be used on ally without damaging them.<n/><n/>Level 2: Paralysis Shot<n/>Carefully aim at a single biological target and stun it for 2 seconds as well as reducing its movement and attack speed by 50% for 5 seconds. Effect is reduced on units with more than 5000 health.<n/><n/>Level 3: Improved Irradiate<n/>Increased duration, area, damage, and all enemies affected take 10% more damage.<n/><n/>Level 4: Improved Paralysis Shot<n/>Reduces cast time and cooldown, increases slow duration, and health threshold is increased to 7000 health.<n/><n/>Level 5: Deteriorate<n/>Channel a beam at a target, causing 5% of maximum health as damage up to a maximum of 900 per second as well as increasing all damage taken by the target by 35% for up to 10 seconds.
 Button/Tooltip/NanoBoost=Fires a micro-canister at the target, injecting a swarm of nano-machines that increase the target's melee strength and speed.<n/><n/>Target gains a rapid enhanced riflebutt that affects armored for 3 seconds.
@@ -2970,7 +3068,7 @@ Button/Tooltip/OrbitalBeam=Activates an orbiting satellite weapon to fire on a t
 Button/Tooltip/OrbitalBombardmentv2=After 5 seconds the target area of radius 6  is bombarded with 15  high-powered orbital strike shells over 4.5 seconds. Each Shell deals 2000-3000 damage.
 Button/Tooltip/OrbitalSatelliteReconnaissance=Reveals a large area for your team.<n/><n/>Lasts 20 seconds.<n/>Range: <c val="00FF00"><d ref="Abil,OrbitalSatelliteReconnaissance2,Range[0]"/></c>
 Button/Tooltip/OrbitalSatelliteTargeter=Activates an orbiting satellite weapon to fire on a target for 15 seconds, dealing 2000 damage per second and increasing damage taken by 100%.
-Button/Tooltip/OrbitalStrike=Directs an orbital sattelite to fire a shell down at the target area, offering near-instant, precision bombardment. Each level improves range.<n/><n/>Deals 400 damage per shell.<n/><n/>Max 2/3/4/5/6 shells.<n/><n/>Costs 85/80/75/70/65 energy per shell.<n/><n/>Takes 40/37/34/32/30 seconds to reload a shell.<n/><n/><c val="FF0000">Explosives can kill allies.</c>
+Button/Tooltip/OrbitalStrike=Directs an orbital sattelite to fire a shell down at the target area, offering near-instant, precision bombardment. Each level improves range.<n/><n/>Deals 800-1000 damage per shell.<n/><n/>Max 2/3/4/5/6 shells.<n/><n/>Costs 85/80/75/70/65 energy per shell.<n/><n/>Takes 40/37/34/32/30 seconds to reload a shell.<n/><n/><c val="FF0000">Explosives can kill allies.</c>
 Button/Tooltip/OrbitalStrikeEMP=Switches the orbital strike shells to OS EMP shells. OS EMP shells deal 300 damage, cost 10 more energy and prevents the use of zombie abilities. OS EMP also immobilizes and disables mechanical/robotic units for 10 seconds.
 Button/Tooltip/OrbitalStrikeEMP2=Directs an orbital sattelite to fire a shell down at the target area, offering near-instant, precision bombardment. <c val="FF0000">Orbital Strike EMP prevents the use of abilities and immobilizes mechanical/robotic units for 10 seconds</c>. Each level improves range.<n/><n/>Deals <d ref="Effect,OrbitalStrikeEMPDamage2,Amount"/> damage per shell.<n/><n/>Max 2/3/4/5/6 shells.<n/><n/>Costs 95/90/85/80/75 energy per shell.<n/><n/>Takes 40/37/34/32/30 seconds to reload a shell.<n/><n/><c val="FF0000">Explosives can kill allies.</c>
 Button/Tooltip/OrbitalStrikeEMPMod=Directs an orbital sattelite to fire a shell down at the target area, offering near-instant, precision bombardment. Orbital Strike EMP prevents the use of abilities, disables attack and immobilizes mechanical/robotic units for 10 seconds. Each level improves range.<n/><n/>Deals 300 damage per shell. (+200 over 10 seconds vs Mechanical/Robotic)<n/><n/>Max 2/3/4/5/6 shells.<n/><n/>Costs 95/90/85/80/75 energy per shell.<n/><n/>Takes 40/37/34/32/30 seconds to reload a shell.<n/><n/><c val="FF0000">Explosives can kill allies.</c>
@@ -2989,6 +3087,7 @@ Button/Tooltip/OverclockEnginesOff=Stop Overclocking Engine.
 Button/Tooltip/OverclockEnginesOn=Override conservation protocals on the Mech Suit and increases movement speed.<n/><n/><c val="008000">Increase  movement speed by 20%</c><n/><c val="800000">Costs 7.5 Energy per Second</c>
 Button/Tooltip/OverclockWeapons=Override burst protocals on the Mech Suit and attack faster.<n/><n/><c val="008000">Disables Burst Oscillation <n/>Increases Attack speed by 30%</c><n/><c val="800000">Costs 4.5energy per second</c>
 Button/Tooltip/OverclockWeapons2=Stop Overclocking Weapon
+Button/Tooltip/PD3Shepherd=Anti-air vehicle equipped with Surface-to-Air Missiles, anti-air autocannons, and a pintle-mounted machine gun for ground targets.
 Button/Tooltip/PR34E=The Plasma Rifle 34 Energy variant was made for ghosts for who find themselves needing more energy in the field. The 34 drains less energy from your suit along with creating some of its own, resulting in increased energy regeneration. The material the 34 is made out of is slightly lighter than the average plasma rifle, this lets soldiers move faster.<n/><n/><c val="FF8040">Increases movement speed by .05<n/>Increases energy regeneration by 0.8 per second<n/></c>
 Button/Tooltip/PR42C=The Plasma Rifle 42 Combat variant offers a much more powerful plasma rifle than ever before but is also heavier than previous designs. It has an automatic mode function allowing the ghost to fire at a much faster speed for a short duration.<n/><n/><c val="FF8040"><c val="FF8040">Increases weapon damage by 14<n/>Increases weapon speed by 20%<n/>Increases range by 1<n/>Decreases movement speed by .08<n/>Automatic Mode available when used<n/></c>
 Button/Tooltip/PSDE=Experimental Module, which increases the user's flexibility.<c val="80ff80">Add 0.08 Move Speed, but lose 0.5 Energy Regeneration.
@@ -3062,14 +3161,17 @@ Button/Tooltip/RAGrenadier=MOS: 11B (Infantry) Role: Rifleman<n/>The infantry ri
 Button/Tooltip/RAHacker=MOS: 11B (Infantry) Role: Rifleman<n/>The infantry rifleman is a versatile soldier on the battlefield.
 Button/Tooltip/RAHuggerBot=Wait for it wait for it... BOOM
 Button/Tooltip/RAJavelinGunner=MOS: 11B (Infantry) Role: Javelin Gunner<n/>Javelin Gunners are designated within the platoon and have received special training with the Javelin.
+Button/Tooltip/RALAV25Recon=IFV armed with high explosive rounds and also uses a TOW missile.
 Button/Tooltip/RALaserDroid=Ranged support strider.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
 Button/Tooltip/RAM1Abrams=Powerful tank that deals high damage but has a low fire rate.
+Button/Tooltip/RAM270MLRS=IFV armed with high explosive rounds and also uses a TOW missile.
 Button/Tooltip/RAM2BradleyIFV=IFV armed with high explosive rounds and also uses a TOW missile.
 Button/Tooltip/RAPhantomCrew=RA Phantom Crew
 Button/Tooltip/RARifleman=MOS: 11B (Infantry) Role: Rifleman<n/>The infantry rifleman is a versatile soldier on the battlefield.
 Button/Tooltip/RARiotControl=MOS: 31B (Riot Control)<n/>Riot Control officers are outfitted with tough armor and burst shotguns that are easily capable of thinning out crowds. They also have access to mounted smoke launchers that explode on impact to disorient their enemies. 
 Button/Tooltip/RASniper=MOS 11B (Infantry) Role: Squad Designated Marksman<n/>SDMs are hand picked soldiers with excellent performance in marksmanship. They are usually issued special optics or long-range rifles for overwatch.
 Button/Tooltip/RASpecialForces=MOS: 11B (Infantry) Role: Rifleman<n/>The infantry rifleman is a versatile soldier on the battlefield.
+Button/Tooltip/RASpotter=MOS 11C (Infantry) Role: Spotter<n/>Spotters are forward operators for artillery, providing real-time targeting data for precise bombardment.
 Button/Tooltip/RASquadDesignatedMarksman=MOS 11B (Infantry) Role: Squad Designated Marksman<n/>SDMs are hand picked soldiers with excellent performance in marksmanship. They are usually issued special optics or long-range rifles for overwatch.
 Button/Tooltip/RASquadLeader=MOS: 11B (Infantry) Role: Rifleman<n/>The infantry rifleman is a versatile soldier on the battlefield.
 Button/Tooltip/RATechnician=MOS: 11B (Infantry) Role: Rifleman<n/>The infantry rifleman is a versatile soldier on the battlefield.
@@ -3096,7 +3198,7 @@ Button/Tooltip/ReadySatchelCharges=Converts placed explosives to Satchel Charges
 Button/Tooltip/ReconDrone=Creates a cloaked recon drone that can reveal terrain for the Specter. Recon drones are also capable of deploying smoke underneath itself.<n/><n/>Each level of Specter Skills improves recon drones by adding <c val="008000">1  Armor </c>and <c val="008000">0.75 Vision Radius</c>.<n/><n/><c val="008000">Vision Range: 10<n/>Detects Invisible<n/>Shares vision with allies</c>
 Button/Tooltip/ReconDrone2=Recon Drones are supplied to Operators using to assist in scouting maneuvers. They come outfitted with a small smokescreen generator and infared scanners.<n/><n/><c val="008000">Vision Range: 10<n/>Detects Invisible<n/>Shares vision with allies</c>
 Button/Tooltip/ReconDroneEvasion=Recon Drones have a 25% chance to avoid Ranged Damage.
-Button/Tooltip/ReconExpert=The Specter becomes more adept at conducting reconnaissance.<n/>Level 1: Unlocks Binoculars.<n/>Level 2: Unlocks Field Camera and Flare Gun.<n/>Level 3: Unlocks Recon Drone and Light Filter.<n/>Level 4: Unlocks Spy Plane, adds 2 fitness and .05 movement speed.
+Button/Tooltip/ReconExpert=Unlocks and improves the Specter's recon abilities.<n/>Each level adds 0.025 cloaked movement speed.<n/><n/>Level 1: Unlocks Binoculars.<n/>Level 2: Unlocks Light Filter and Flare Gun.<n/>Level 3: Unlocks Field Camera and Tracer Rounds.<n/>Level 4: Unlocks Spy Plane.
 Button/Tooltip/ReconnaissanceSkills=Adds .04 ms and improves camouflage with each level.<n/>1: Adds binoculars and Disarm<n/>2: Adds field camera and flare gun<n/>3: Laser Designator and motion sensor<n/>4: Place C4, Claymore and Heartbeat: Pulses every 10 seconds, detecting Tier 1 hostiles in a 45 radius.
 Button/Tooltip/Recruit=Until you reach Rank: <c val="008000">PFC</c> you'll receive a small benefit to get you started.<n/><n/><c val="008000">20% Increased Health<n/>20% Reduced Damage Taken<n/>10% Increased Damage<n/>0.10 Increased Movement Speed</c>
 Button/Tooltip/ReducedRecoil=Adjusted accessories on the Marksman's rifle allows for better control while rapid firing.<n/><n/><c val="FF8040">Increases Rapid Fire Speeds by 25%<n/>Reduces Rapid Fire range reduction by 2</c>
@@ -3141,6 +3243,7 @@ Button/Tooltip/Security=Security develops local unmanned security measures.<n/>L
 Button/Tooltip/SecurityArmor=Standard issue armor for squad on squad combat.</n><c val="FF8000">Reduces explosive damage taken by 30% and adds 17 armor.</c>
 Button/Tooltip/SecurityArmorPermanent=Standard issue armor for squad on squad combat. <c val="FF8000">Reduces bullet and explosive damage taken by 16% and adds 2 armor.</c>
 Button/Tooltip/SeismicResonator=Used to collapse underground tunnel systems.
+Button/Tooltip/SelectRounds=Select SMG and snipe rounds.
 Button/Tooltip/SelfDestruct=Initiates the self-destruct sequence on this sentry gun. Does NOT deal any damage to it's surroundings.
 Button/Tooltip/SelfNanoInjection=Injects the target with a mixture of plasma, nutrients, and nano-machines that instantly repair tissue and bone damage.<n/><c val="FF8000">Heals <d ref="Effect,ImprovedNanoInjectionHeal,VitalArray[Life].Change[0]"/> life and cures severe ailments and poisons instantly.</c>
 Button/Tooltip/SelfRepair=This structure repairs itself by 2 hp/sec. Repairing can only be done at least 5 seconds after damage was last taken.
@@ -3171,6 +3274,11 @@ Button/Tooltip/SmokeGrenadeMercenary=Throws a smoke grenade at the target point,
 Button/Tooltip/Snapfire=Vindicare immediately attacks with her Anti-Materiel Rifle without preparation.<n/><n/><c val="FF0000">The recoil of the rifle without proper support results in injuries to the user.</c><n/>
 Button/Tooltip/SnapfireLevel2=Level 1: Increases damage by 62.5%, attack speed by 12.5%, and range by 1.<n/><n/>Level 2: Increases damage by 125%, attack speed by 25% and range by 2.
 Button/Tooltip/Snipe2=Fires a high stopping power bullet that deals <d ref="Effect,SpecterSnipeDamage,Amount[0]"/> damage and has a 10% chance to be critical and deal 5x damage. Snipe requires 5 seconds to cast. Each level of Assassin Skills adds 10 range and 2.5% more critical chance to this ability.<n/>Level 1: 50 range, 12.5% critical chance.<n/>Level 2: 60 range, 15% critical chance.<n/>Level 3: 70 range, 17.5% critical chance.<n/>Level 4: 80 range, 20% critical chance.<n/><n/><c val="#ColorAttackInfo">Mechanical units are immune.</c>
+Button/Tooltip/SnipeArmorPenetrator=Damage: <d ref="Effect,SnipeAPDamage,Amount"/> <c val="FFFF00">(Increases with Weapons Training)</c><n/>vs Light: <d ref="Effect,SnipeAPDamage,Amount*(1+Effect,SnipeAPDamage,AttributeFactor[Light])" precision="3"/><n/>Impact Radius: <d ref="Effect,SnipeAPDamage,AreaArray[0].Radius" precision="3"/> <c val="FFFF00">(Increases with Munitions Upgrades)</c><n/>Penetration Range: <d ref="Effect,SnipeAPDamage,AreaArray[1].Radius" precision="3"/><n/>Penetration Damage: <d ref="Effect,SnipeAPDamage,Amount*(Effect,SnipeAPDamage,AreaArray[1].Fraction)" precision="3"/><n/>Penetration Angle: <d ref="Effect,SnipeAPDamage,AreaArray[1].Arc" precision="1"/><n/>Less Damage per Armor: <d ref="Effect,SnipeAPDamage,ArmorReduction" precision="3"/><n/>Damage Type: Ranged<n/><n/>Unique Effects:<n/>None
+Button/Tooltip/SnipeFeedback=Damage: <d ref="Effect,SnipeFeedbackDamage,Amount"/><n/>Penetration Range: <d ref="Effect,SnipeFeedbackDamage,AreaArray[0].Radius" precision="3"/><n/>Penetration Damage: <d ref="Effect,SnipeFeedbackDamage,Amount*(Effect,SnipeFeedbackDamage,AreaArray[0].Fraction)" precision="3"/><n/>Penetration Angle: <d ref="Effect,SnipeFeedbackDamage,AreaArray[0].Arc" precision="1"/><n/>Less Damage per Armor: <d ref="Effect,SnipeFeedbackDamage,ArmorReduction" precision="3"/><n/>Damage Type: Ranged<n/><n/>Unique Effects:<n/>Disables abilities for 20 seconds (all enemies)<n/>Drains energy for 20 seconds (zombies only)<n/><c val="FFFF00">(Duration increases by 2.5 seconds per level of Munitions Upgrades)</c>
+Button/Tooltip/SnipeHollowPoint=Damage: <d ref="Effect,SnipeHPDamage,Amount"/> <c val="FFFF00">(Increases with Weapons Training)</c><n/>vs Armored: <d ref="Effect,SnipeHPDamage,Amount*(1+Effect,SnipeHPDamage,AttributeFactor[Armored])" precision="3"/><n/>Impact Radius: <d ref="Effect,SnipeHPDamage,AreaArray[0].Radius" precision="3"/> <c val="FFFF00">(Increases with Munitions Upgrades)</c><n/>Penetration Range: <d ref="Effect,SnipeHPDamage,AreaArray[1].Radius" precision="3"/><n/>Penetration Damage: <d ref="Effect,SnipeHPDamage,Amount*(Effect,SnipeHPDamage,AreaArray[1].Fraction)" precision="3"/><n/>Penetration Angle: <d ref="Effect,SnipeHPDamage,AreaArray[1].Arc" precision="1"/><n/>Less Damage per Armor: <d ref="Effect,SnipeHPDamage,ArmorReduction" precision="3"/> <c val="FFFF00">(Decreases with Munitions Upgrades)</c><n/>Damage Type: Ranged<n/><n/>Unique Effects:<n/>None
+Button/Tooltip/SnipeStandard=Damage: <d ref="Effect,SnipeStandardDamage,Amount"/> <c val="FFFF00">(Increases with Weapons Training)</c><n/>No penetration<n/>Less Damage per Armor: <d ref="Effect,SnipeStandardDamage,ArmorReduction" precision="3"/> <c val="FFFF00">(Decreases with Munitions Upgrades)</c><n/><n/>Damage Type: Ranged<n/><n/>Unique Effects:<n/>None
+Button/Tooltip/SnipeTracer=Damage: <d ref="Effect,SnipeTracerDamage,Amount"/><n/>Penetration Range: <d ref="Effect,SnipeTracerDamage,AreaArray[0].Radius" precision="3"/><n/>Penetration Damage: <d ref="Effect,SnipeTracerDamage,Amount*(Effect,SnipeTracerDamage,AreaArray[0].Fraction)" precision="3"/><n/>Penetration Angle: <d ref="Effect,SnipeTracerDamage,AreaArray[0].Arc" precision="1"/><n/>Less Damage per Armor: <d ref="Effect,SnipeTracerDamage,ArmorReduction" precision="3"/><n/>Damage Type: Ranged<n/><n/>Unique Effects:<n/>Reveals enemy unit for 10 seconds<n/>Increases damage taken by enemy unit by 15% for 10 seconds<n/><c val="FFFF00">(Duration increases by 5 seconds per level of Munitions Upgrades)</c>
 Button/Tooltip/SolarArmor=With the high efficiency plated solar panels this armor improves the user's energy gain. <c val="80ff80">Add 30 points of shield, in day light gain 0.6 Energy Regeneration. During the night this armor can hamper the user.
 Button/Tooltip/SolarBeam=Focus satellite vanes on a specific area and filter the type of radiation that is reflected such that only beneficial radiation hits the targets. Increases energy regeneration by 3.7 of all heroic units in the target area for 30 seconds. Orbital Satellites need approximately 5 seconds to properly focus on the target.
 Button/Tooltip/SolarFocusing=Has a satellite focus it's solar panels to reflect UV light at a single massive unit, giving them extreme radiation poisoning. Deals 100 damage/sec and makes them 15% more vulnerable to damage for 30 seconds. Orbital Satellites need approximately 5 seconds to properly focus on the target.
@@ -3183,7 +3291,7 @@ Button/Tooltip/SpecialistSkillsLevel3=Due to their heavy usage of energy, Bio Sp
 Button/Tooltip/SpecialistSkillsLevel4=Due to their heavy usage of energy, Bio Specialists are trained to slowly convert their kinetic energy into expanding their total energy and energy regeneration during the field of operation to mitigate their need. Each point increases Mechanical skill by 2 and unlocks specific abilities.<n/><n/>1. Unlocks Binos.<n/><n/>2. Reduces the cost of all skills by 10%.<n/><n/>3. Adds an additional 4 mechanical and improves Prone.<n/><n/>4. Unlocks Backup Generator and reduces all cooldowns by 15%.
 Button/Tooltip/SpecializedRounds=Allows the Specter to fire different types of munitions. Each level of Assassin Skills improves these abilities in certain ways.<n/>Level 1: Unlocks Penetrator Round.<n/>Level 2: Unlocks Snipe.<n/>Level 3: Improves Penetrator Round.<n/>Level 4: Improves Snipe.
 Button/Tooltip/Specimen=Sedated zombie. Return to the research facility.
-Button/Tooltip/SpecterSkills=Developes the Specter's MOS specific skills.<n/>Level 1 - Reduces the activation energy on cloak by 15, increases range by 3.<n/>Level 2 - Increases movement speed by .05, decreases reload/unjam time by 20%.<n/>Level 3 - Increases fitness and mech skills by 4, increases range by 3, improves prone.<n/>Level 4 - Increases movement speed by .05, Unlocks Sonic Pulse.
+Button/Tooltip/SpecterSkills=General skills and training that improve the Specter's mobility and combat effectiveness.<n/>Level 1: +2 Weapon Range, Reduces Specter Cloak Energy Drain, Round Switch Cooldown, and Round Switch Time.<n/>Level 2: +3 Fitness and Mechanical, +0.05 movement speed.<n/>Level 3: +2 Weapon Range, Further Reduces Specter Cloak Energy Drain, Round Switch Cooldown, and Round Switch Time.<n/>Level 4: +3 Fitness and Mechanical, Enables Modular Rounds Passive Loading.
 Button/Tooltip/SpinBarrelsHG=Spins the barrels on your HMG, allowing you to attack. Requires 1.25 seconds to spin up completely. But drains energy over time. Reloading will stop barrel spin.
 Button/Tooltip/Spitter=Slow moving undead beast that shoots acid that pireces armor and deals damge over time. <n/><n/><c val="FF0000">Explodes into a pool of acid when killed that slows and deals damage briefly.</c>
 Button/Tooltip/Sprint=Toggles sprinting on and off. Sprinting increases movement speed by 1 for up to 8 seconds, which slowly drains off. Recovers over up to 15 seconds while not sprinting.<n/><n/><c val="C0C0C0">"Double time!"</c>
@@ -3196,6 +3304,7 @@ Button/Tooltip/SquadDesignatedMarksman=MOS 11B (Infantry) Role: Squad Designated
 Button/Tooltip/SquadLeaderMini=MOS: 11B (Infantry) Role: Rifleman<n/>The infantry rifleman is a versatile soldier on the battlefield.
 Button/Tooltip/SquadLeadership=Squad leaders have been trained to optimize and increase combat effectiveness of their squads. Members of his squad can expect combat orders and additional operation protocols to aide in their effectiveness.<n/><n/><c val="FF8040">Increases Damage by 10%<n/>Increases Attack Speed by 15%<n/>Increases Movement Speed by 0.10<n/>Increases Weapon Range by 2</c>
 Button/Tooltip/StalkerZombie=Fast undead mutation with the ability to remain unseen without Detection. Can ram into targets.
+Button/Tooltip/StandardRounds=Standard SMG and modular sniper rounds.
 Button/Tooltip/SteadyAim=The Mercenary prones down on the ground taking slower and more precise shots to effectively take down a target.<n/><n/>Must be proned,<n/><n/>Attack Speed: - <d ref="1 - Behavior,SteadyAim,Modification.AttackSpeedMultiplier * 100" precision="2"/>%<n/>Weapon Damage Bonus: + <d ref="Behavior,SteadyAim,Modification.DamageDealtFraction[Ranged]" precision="2"/>x<n/>Weapon Range Bonus: + <d ref="Behavior,SteadyAim,Modification.WeaponRange" precision="2"/>
 Button/Tooltip/SteadyAimOff=The Mercenary prones down on the ground taking slower and more precise shots to effectively take down a target.<n/><n/>Must be proned,<n/><n/>Attack Speed: - <d ref="1 - Behavior,SteadyAim,Modification.AttackSpeedMultiplier * 100" precision="2"/>%<n/>Weapon Damage Bonus: + <d ref="Behavior,SteadyAim,Modification.DamageDealtFraction[Ranged]" precision="2"/>x<n/>Weapon Range Bonus: + <d ref="Behavior,SteadyAim,Modification.WeaponRange" precision="2"/>
 Button/Tooltip/Stealth=Switches to Stealth Mode, allowing cloaking and recon abilities.<n/><n/>Passives:<n/><c val="00FF00">+2 mechanical</c> and <c val="00FF00">+1 Range</c> per level<n/>Level 2: Unlocks field camera and light filter<n/>Level 3: Unlocks flare gun, can critical like marksmanship 1 (effect is doubled with agility 3)<n/><n/>Actives:<n/>Level 1: Cloak, <c val="00FF00">5% dodge chance</c>.<n/>Level 2: Can shoot while cloaked, <c val="00FF00">10% dodge chance</c>.<n/>Level 3: Cloak drains less energy, <c val="00FF00">15% dodge chance</c>.<n/><n/>One level of each mode: Improved Prone<n/>Two levels of each mode: Meltdown<n/>Three levels of each mode: Stonewall Protocol
@@ -3251,6 +3360,7 @@ Button/Tooltip/Thanatos=Very fast undead bug with ability to pull units to itsel
 Button/Tooltip/ThermobaricMissile=Fires an experimental missile that combines the effects of both an HE missile and an AT missile. Does 2200 damage in an area with an additional 7500 damage at its center with a 1 second stun.
 Button/Tooltip/ThresherMaw=Giant worm that glides the terrian like nothing but can't turn sharply like other units.
 Button/Tooltip/Tier1Scanner=Scans the AO for 20 seconds and pings every T1 after completion. A 2nd ping will show 5 seconds after the first ping. Scan time is reduced by 2 seconds for each level of Orbital Support.<n/><n/>Both Scanner abilities share their cooldown,
+Button/Tooltip/TracerRounds=Tracer rounds can be used to indicate enemy positions.<n/>SMG rounds apply a brief slow effect.<n/><n/>Round swapping takes 5 seconds (reduced by specter skills).
 Button/Tooltip/Training=Training the force is a fundamental of a Platoon Leader. Training involves battle drills, basic and advanced marksmanship, physical training, and conducting after-action reviews to learn from every patrol and training activity. Each level improves your suboordinate's capabilities.<n/>Level 1 - Improves damage, attack speed, mag capacity and reload time<n/>Level 2 - Learns special ability<n/>Level 3 - Improves range, life, shields, mag capacity, movement speed, and damage<n/>Level 4 - Learns second special ability
 Button/Tooltip/Training2=Combat Adjustments to the Mech Operator's Armor Assets.<n/>Level 1 - Improves damage, attack speed, mag capacity and reload time<n/>Level 2 - Learns special ability<n/>Level 3 - Improves range, life, shields, mag capacity, movement speed, and damage<n/>Level 4 - Learns second special ability
 Button/Tooltip/Tranquilizer=Induces sedation
@@ -3275,6 +3385,7 @@ Button/Tooltip/WaveAmplifier=Amplifies the waves emitted from the laser rifle cr
 Button/Tooltip/WeakPointTargeting=An improvement to the DMR firing mechanism that results in a 15% damage increase vs armored targets and 2 range.
 Button/Tooltip/WeaponOverheating=The S41 Ripsaw - HVAP weapon can overheat. Each time you attack you gain an "Overheat" buff. Once you reach 60 Overheat buffs, you will Overheat and stop firing for <d ref="Behavior,Overheated,Duration[0]"/> seconds. You will be warned twice before you overheat.</n></n>To remove overheat buffs, you must stop your barrels. While the barrels are stopped, you will lose 10 overheat buffs every 0.75 seconds.<n/>
 Button/Tooltip/WeaponProficiency=Weapon Proficieny is your general skill with your weapon. Increasing weapon proficiency improves reload/unjam time, range, round switching time, and damage.<n/><n/>Level 1: +10% Reload/Unjam bonus, 1.5 range, 3.75s round switch, and +10% Damage<n/>Level 2: +20% Reload/Unjam bonus, 3 range, 3.5s round switch, and +15% Damage<n/>Level 3: +30% Reload/Unjam bonus, 4.5 range, 3.25s round switch, and +20% Damage<n/>Level 4: +40% Reload/Unjam bonus, 6 range, 3s round switch, and +25% Damage<n/>
+Button/Tooltip/WeaponsTraining=Extensive training undergone by specters to improve their weapon handling.<n/><n/>Each level provides the following:<n/><c val="00FF00">+4 Dexterity<n/>-2.5s Cooldown on Reload Modular Sniper<n/>+5 Range on Fire Modular Sniper<n/>Increased damage on all Modular Snipes</c>
 Button/Tooltip/Weaver=Fast flying undead unit that shoots globs of sticky green web at it's targets, slowing them on impact.
 Button/Tooltip/WhitePhosphorous=Radios the FDC to fire willy pete at the target area, dealing 200 damage per second for 25 seconds. Consumes 4 shells.
 Button/Tooltip/Windsor=Male Civilian.
@@ -3295,6 +3406,7 @@ Button/Tooltip/ZombieYeti=Smalll yeti with the ability to leap onto targets. Fou
 Button/Tooltip/immediateSmoke=Radios the FDC to fire immediate smoke at the target area, disorienting personnel. Consumes 2 shells.
 Button/Tooltip/nova=MOS: 11B (Infantry) Role: Rifleman
 Buttons/EntrenchedCounter=<s val="0UI_LCD_2"><d ref="$BehaviorStackCount:Entrenched$"/></s>
+Buttons\ModularSnipe=<d ref="$BehaviorStackCount:SpecterSnipesLoaded$"/>
 Chaos Swordsman=Chaos Swordsman
 Chaos Templar=Chaos Swordsman
 Charges Readied=<d ref="$BehaviorStackCount:ChargesReadied$"/>
@@ -3302,6 +3414,7 @@ CharonKillRank=Corpse Bringer
 Combat Adjustments1=Combat Adjustments
 Combat Adjustments2=Combat Adjustments
 Combat Adjustments3=Combat Adjustments
+DOCSTR_0000=Insert Text
 DOCSTR_0004=<h/>Insert Text
 DOCSTR_1LT=<s val="GameButtonCharge">First Lieutenant: 3,500 XP</s>
 DOCSTR_1SG=<s val="GameButtonCharge">First Sergeant: 25,000 XP</s>
@@ -3360,7 +3473,7 @@ DocInfo/HowToPlayBasic00=Even weak zombies hurt! Try your best to not get hit.
 DocInfo/HowToPlayBasic01=Focus on the objectives (in the top left of the screen). Mouse over them to read more.
 DocInfo/HowToPlayBasic02=Teamwork is key! Stay together!
 DocInfo/HowToPlayWinning00=Survive and complete objectives.
-DocInfo/Name=-Undead Assault Chronicles-
+DocInfo/Name=Undead Assault Revised Test
 DocInfo/PatchNote001=- Lunatic Mode - New lighting, infestation, message notification  added
 DocInfo/PatchNote002=- Lunatic Mode - will start with a light fog
 DocInfo/PatchNote003=- Lunatic Mode - Difficulty lowered, NPC bunker changes added
@@ -5227,6 +5340,7 @@ Effect/Name/AH25HunterLaunch=AH-25 Hunter Launch
 Effect/Name/AMRBulletPhantom=AMR Bullet Phantom
 Effect/Name/AMRDamage=AMR
 Effect/Name/AMRDisable=AMR Disable
+Effect/Name/ANRSearchArea=ANR Search Area
 Effect/Name/APEApplyBehavior=APE Apply Behavior
 Effect/Name/APEApplyBehaviorSelf=APE Apply Behavior Self
 Effect/Name/APESet=APE Set
@@ -5264,6 +5378,14 @@ Effect/Name/AcidicExplosionSABurn=Acidic Explosion SA Burn
 Effect/Name/AcidicExplosionSAMelt=Acidic Explosion SA Melt
 Effect/Name/AcidicExplosionSet=Acidic Explosion Set
 Effect/Name/AcidicExplosionSetBurnChance=Acidic Explosion Set Burn Chance
+Effect/Name/ActivateAPRounds=Activate AP Rounds
+Effect/Name/ActivateAPSet=Activate AP Set
+Effect/Name/ActivateFBRounds=Activate FB Rounds
+Effect/Name/ActivateFBSet=Activate FB Set
+Effect/Name/ActivateHPRounds=Activate HP Rounds
+Effect/Name/ActivateHPSet=Activate HP Set
+Effect/Name/ActivateTRRounds=Activate TR Rounds
+Effect/Name/ActivateTRSet=Activate TR Set
 Effect/Name/AddDisarmWhiz=Add Disarm & Whiz
 Effect/Name/AddDisarmable=Add Disarmable
 Effect/Name/AddMutation=AddMutation
@@ -5295,6 +5417,7 @@ Effect/Name/AntiToxin=Anti Toxin
 Effect/Name/Antivenom=Antivenom
 Effect/Name/ApiaryMissile=Apiary Missile
 Effect/Name/ApiaryWeapon=Apiary Weapon
+Effect/Name/ApplyAPSniper=Apply AP Sniper
 Effect/Name/ApplyBloodlust=Apply Bloodlust
 Effect/Name/ApplyBloodlustTarget=Apply Bloodlust Target
 Effect/Name/ApplyCamouflage1A=Apply Camouflage 1A
@@ -5305,14 +5428,20 @@ Effect/Name/ApplyCamouflage3A=Apply Camouflage 3A
 Effect/Name/ApplyCamouflage3B=Apply Camouflage 3B
 Effect/Name/ApplyCamouflage4A=Apply Camouflage 4A
 Effect/Name/ApplyCamouflage4B=Apply Camouflage 4B
+Effect/Name/ApplyFBSniper=Apply FB Sniper
 Effect/Name/ApplyFieldTunedGlaze=Apply Field Tuned Glaze
+Effect/Name/ApplyHPSniper=Apply HP Sniper
 Effect/Name/ApplyHemorrhage=Apply Hemorrhage
 Effect/Name/ApplyInfestedSystemRestore=Apply Infested System Restore
 Effect/Name/ApplyOvershieldGlaze=Apply Overshield Glaze
+Effect/Name/ApplyRoundSwapping=Apply Round Swapping
 Effect/Name/ApplyRunning=ApplyRunning
 Effect/Name/ApplyRunningBoss=ApplyRunning
+Effect/Name/ApplySTSniper=Apply ST Sniper
+Effect/Name/ApplySnipeSet=Apply Snipe Set
 Effect/Name/ApplySuicideDamage=Apply Suicide Damage
 Effect/Name/ApplySystemRestore=Apply System Restore
+Effect/Name/ApplyTRSniper=Apply TR Sniper
 Effect/Name/ArachChargeBehavior=Arach Charge Behavior
 Effect/Name/ArachChargeCheck=Arach Charge Check
 Effect/Name/ArachChargeDamage=Arach Charge Damage
@@ -5390,9 +5519,12 @@ Effect/Name/BeltLinking2=Belt Linking2
 Effect/Name/BeltLinking3=Belt Linking3
 Effect/Name/Beserk=Beserk
 Effect/Name/BeserkTarget=Beserk Target
+Effect/Name/BinoAIEliteSet=Bino AI Elite Set
 Effect/Name/BinoAIHeroSet=Bino AI Hero Set
+Effect/Name/BinocularAISearchAreaElite=Binocular AI Search Area Elite
 Effect/Name/BinocularAISearchAreaHero=Binocular AI Search Area Hero
 Effect/Name/Binoculars=Binoculars
+Effect/Name/BinocularsAIOrderElite=Binoculars AI Order Elite
 Effect/Name/BinocularsCAV=Binoculars CAV
 Effect/Name/BinocularsMiniReveal=Binoculars Mini Reveal
 Effect/Name/BinocularsOrder=Binoculars AI Order
@@ -5499,6 +5631,7 @@ Effect/Name/CamouflageSet1=Camouflage Set 1
 Effect/Name/CamouflageSet2=Camouflage Set 2
 Effect/Name/CamouflageSet3=Camouflage Set 3
 Effect/Name/CamouflageSet4=Camouflage Set 4
+Effect/Name/CancelLoadModularSnipes=Cancel Load Modular Snipes
 Effect/Name/CarbineBurstCP=Carbine Burst CP
 Effect/Name/CarbineBurstCPQuad=Carbine Burst CP
 Effect/Name/CarbineBurstSet=Carbine Burst Set
@@ -5525,6 +5658,7 @@ Effect/Name/ChargeAIEnum=Charge AI Enum
 Effect/Name/ChargeAIOrder=Charge AI Order
 Effect/Name/ChargeAIOrder2=Charge AI Order
 Effect/Name/ChargeCost=Charge Cost
+Effect/Name/ChargeISRSA=Charge ISR SA
 Effect/Name/ChargeSet=Charge Set
 Effect/Name/ChargeSet2=Charge Set
 Effect/Name/ChargerCharge=Charger Charge
@@ -5578,6 +5712,12 @@ Effect/Name/ClawsDamage=Claws (Damage)
 Effect/Name/ClaymoreDamage=Claymore Damage
 Effect/Name/ClaymorePlace=Claymore Place
 Effect/Name/CleansingAB=Cleansing AB
+Effect/Name/ClearAPRounds=Clear AP Rounds
+Effect/Name/ClearFBRounds=Clear FB Rounds
+Effect/Name/ClearHPRounds=Clear HP Rounds
+Effect/Name/ClearSTRounds=Clear ST Rounds
+Effect/Name/ClearSpecterRounds=Clear Specter Rounds
+Effect/Name/ClearTRRounds=Clear TR Rounds
 Effect/Name/CleaveAugment=Cleave Augment
 Effect/Name/ClusterRocketAIOrder=Cluster Rocket AI Order
 Effect/Name/ClusterRocketAIOrderFilter=Cluster Rocket AI Order Filter
@@ -5629,6 +5769,7 @@ Effect/Name/ConcussionShotgunDamage=Concussion Shotgun Damage
 Effect/Name/ConcussionShotgunSet=Concussion Shotgun Set
 Effect/Name/ConstrictingSlimeAIIssueOrder=Constricting Slime AI Issue Order
 Effect/Name/ConstrictingSlimeAISearchArea=Constricting Slime AI Search Area
+Effect/Name/ConsumeModularSnipe=Consume Modular Snipe
 Effect/Name/ConsumingAugment=Consuming Augment
 Effect/Name/CorruptedClaws=Corrupted Claws
 Effect/Name/CorruptedMortarDamage=Corrupted Mortar Damage
@@ -5913,6 +6054,7 @@ Effect/Name/EquipScoutVisor=Equip Scout Visor
 Effect/Name/EquipShockTrooperSet=Equip Shock Trooper Set
 Effect/Name/EquipShotgun=Equip Shotgun
 Effect/Name/EquipSniper=Equip Sniper
+Effect/Name/EquipSniperSpecterSet=Equip Sniper Specter Set
 Effect/Name/EquipSpecterSet=Equip Specter Set
 Effect/Name/EquipStandardVisionVisor=Equip Standard Vision Visor
 Effect/Name/EquipSteelSaber=Equip Steel Saber
@@ -5948,6 +6090,8 @@ Effect/Name/FTRally=FT Rally
 Effect/Name/FieldAidAB=Field Aid AB
 Effect/Name/FieldCameraPlace=Field Camera Place
 Effect/Name/FieldCameraTimedLife=Field Camera Timed Life
+Effect/Name/FindAttackTarget=FindAttackTarget
+Effect/Name/FindAttackTargetEnum=FindAttackTargetEnum
 Effect/Name/FindPlayerAIEnum=Find Player AI Enum
 Effect/Name/FindPlayerAIOrder=Find Player AI Order
 Effect/Name/FindPlayerAISet=Find Player AI Set
@@ -6291,6 +6435,7 @@ Effect/Name/InfestationLevel1=Infestation Level -1
 Effect/Name/InfestationLevel12=Infestation Level +1
 Effect/Name/InfestationLevel2=Infestation Level -2
 Effect/Name/InfestationLevel22=Infestation Level +2
+Effect/Name/InfestedCleansingAB=Infested Cleansing AB
 Effect/Name/InfestedNuclearAIEnum=InfestedNuclearAIEnum
 Effect/Name/InfestedNuclearAIOrder=InfestedNuclearAIOrder
 Effect/Name/InfestedNuclearCast=InfestedNuclearCast
@@ -6345,6 +6490,13 @@ Effect/Name/KingDarreusClaws=King Darreus Claws
 Effect/Name/KratosDeath=Kratos Death
 Effect/Name/KratosDeathSet=Kratos Death Set
 Effect/Name/KrillBite=Krill Bite
+Effect/Name/LAV25ChaingunDamage=LAV25 Chaingun Damage
+Effect/Name/LAV25ChaingunLaunch=LAV25 Chaingun Launch
+Effect/Name/LAV25DeathCargoMU=LAV25 Death Cargo MU
+Effect/Name/LAV25DeathCargoSet=LAV25 Death Cargo Set
+Effect/Name/LAV25DeathCargoStunAB=LAV25 Death Cargo Stun AB
+Effect/Name/LAV25UnloadAIIO=LAV-25 Unload AI IO
+Effect/Name/LAV25UnloadAISA=LAV-25 Unload AI SA
 Effect/Name/LLDR=LLDR
 Effect/Name/LNCEShotgun=LN CE Shotgun
 Effect/Name/LNCEShotgunBullet=LN CE Shotgun Bullet
@@ -6407,6 +6559,8 @@ Effect/Name/LiftbootAICP=Liftboot AI CP
 Effect/Name/LiftbootAIIO=Liftboot AI IO
 Effect/Name/LiftbootAISA=Liftboot AI SA
 Effect/Name/LividClaws=Livid Claws
+Effect/Name/LoadModularSnipe=Load Modular Snipe
+Effect/Name/LoadModularSnipes=Load Modular Snipes
 Effect/Name/LongswordDamage=Longsword Damage
 Effect/Name/LuckyAB=Lucky AB
 Effect/Name/M1AbramsDamage=M1 Abrams Damage
@@ -6454,6 +6608,13 @@ Effect/Name/MK44SentryGunLaunchMissile=MK44 Sentry Gun Launch Missile
 Effect/Name/MK79Place=MK79 Place
 Effect/Name/MK79SentryGun=MK79 Sentry Gun
 Effect/Name/MK79SentryGunLaunch=MK79 Sentry Gun Launch
+Effect/Name/MLRSBarrageAIEnum=MLRS Barrage AI Enum
+Effect/Name/MLRSBarrageAIIO=MLRS Barrage AI IO
+Effect/Name/MLRSBarrageCP=MLRS Barrage CP
+Effect/Name/MLRSRocketDamage=MLRS Rocket Damage
+Effect/Name/MLRSRocketFire=MLRS Rocket Fire
+Effect/Name/MLRSRocketLaunch=MLRS Rocket Launch
+Effect/Name/MLRSRocketPersistent=MLRS Rocket (Persistent)
 Effect/Name/MOSSet=MOS Set
 Effect/Name/MRL1LaunchMissile=MRL1 (Launch Missile)
 Effect/Name/MRLAIEnumMechanical=MRL AI Enum Mechanical
@@ -6506,12 +6667,15 @@ Effect/Name/MinigunBurstPause=Minigun Burst Pause
 Effect/Name/MinorAilment=Minor Ailment
 Effect/Name/MinorLaceration=Minor Laceration
 Effect/Name/Miss=Miss
+Effect/Name/MissileBarrageSearch=Missile Barrage Search
 Effect/Name/Mk47Damage=Mk47 Damage
 Effect/Name/Mk47DamageSet=Mk47 Damage Set
 Effect/Name/Mk47Launch=Mk47 Launch
 Effect/Name/MobileSAMDamage=Mobile SAM Damage
 Effect/Name/MobileSAMLaunchMissile=Mobile SAM Launch Missile
 Effect/Name/ModerateAilment=Moderate Ailment
+Effect/Name/ModularSnipeAttackOrder=Modular Snipe Attack Order
+Effect/Name/ModularSnipeAttackSet=Modular Snipe Attack Set
 Effect/Name/MonoWireAB1=Mono Wire AB1
 Effect/Name/MonoWireAB2=Mono Wire AB2
 Effect/Name/MonoWireCreatePersist=Mono Wire Create Persist
@@ -6588,6 +6752,8 @@ Effect/Name/NuclearAIEnum=NuclearAIEnum
 Effect/Name/NuclearAIOrder=NuclearAIOrder
 Effect/Name/OSIncendiaryFirestormDoT=OS Incendiary Firestorm DoT
 Effect/Name/OSIncendiaryFirestormImpact=OS Incendiary Firestorm Impact
+Effect/Name/OffmapBarrage=Off-map Barrage
+Effect/Name/OffmapBarrage2=Off-map Barrage 2
 Effect/Name/OmniscienceDummy=Omniscience Dummy
 Effect/Name/OpportunedShot=Opportuned Shot
 Effect/Name/OrbitalBeamDoT=Orbital Beam DoT
@@ -6628,6 +6794,8 @@ Effect/Name/OrbitalStrikeTestSet=Orbital Strike Test Set
 Effect/Name/OrbitalSupportReconnaissance=Orbital Support Reconnaissance
 Effect/Name/Overcharge=Overcharge
 Effect/Name/OverheatRB=Overheat RB
+Effect/Name/PD3ACDamage=PD3 AC Damage
+Effect/Name/PD3ACLaunch=PD3 AC Launch
 Effect/Name/PEWMkIIBounceDamage=P.E.W. Mk.II Bounce Damage
 Effect/Name/PEWMkIIBounceSA=P.E.W. Mk.II Bounce SA
 Effect/Name/PEWMkIIBounceSet=P.E.W. Mk.II Bounce Set
@@ -6829,6 +6997,7 @@ Effect/Name/ReadyExplosiveCharge=Ready Explosive Charge
 Effect/Name/ReadyExplosiveCharge2=Ready Explosive Charge
 Effect/Name/ReadyExplosiveCharge3=Ready Explosive Charge
 Effect/Name/ReapingAugment=Reaping Augment
+Effect/Name/RechargeISRMU=Recharge ISR MU
 Effect/Name/ReconDrone=Recon Drone
 Effect/Name/ReduceXPGain=Reduce XP Gain
 Effect/Name/RegeneratingMutationBuff=Regenerating Mutation Buff
@@ -6864,6 +7033,7 @@ Effect/Name/RequestShockTrooperSpread=Request Shock Trooper (Spread)
 Effect/Name/RequestShockTrooperTimedLifeAB=Request Shock Trooper (Timed Life) AB
 Effect/Name/RequestShockTroopersCreateUnit=Request Shock Trooper (Create Unit)
 Effect/Name/ReviveModifyUnit=Revive Modify Unit
+Effect/Name/ReviveModifyUnitSP=Revive Modify Unit SP
 Effect/Name/ReviveRemoveIncap=Revive Remove Incap
 Effect/Name/ReviveSearchArea=Revive Search Area
 Effect/Name/ReviveSet=Revive Set
@@ -6872,16 +7042,20 @@ Effect/Name/RifleButtBehaviorController=Rifle Butt Behavior Controller
 Effect/Name/RifleButtBehaviorController2=Rifle Butt Behavior Controller
 Effect/Name/RifleButtBehaviorControllerCSlam=Rifle Butt Behavior Controller CSlam
 Effect/Name/RifleButtCreatePersistent=Rifle Butt Create Persistent
+Effect/Name/RifleButtCreatePersistentImproved=Rifle Butt Create Persistent Improved
 Effect/Name/RifleButtDamage=Rifle Butt Damage
 Effect/Name/RifleButtDamage2=Rifle Butt Damage
 Effect/Name/RifleButtDamageCSlam=Rifle Butt Damage CSlam
 Effect/Name/RifleButtForce=Rifle Butt Force
+Effect/Name/RifleButtForceImproved=Rifle Butt Force Improved
 Effect/Name/RifleButtSearchArea=Rifle Butt Search Area
 Effect/Name/RifleButtSearchArea2=Rifle Butt Search Area
 Effect/Name/RifleButtSearchAreaCSlam=Rifle Butt Search Area CSlam
 Effect/Name/RifleButtSearchAreaCyborg=Rifle Butt Search Area Cyborg
+Effect/Name/RifleButtSearchAreaCyborg2=Rifle Butt Search Area Barrel Through
 Effect/Name/RifleButtSearchSet=Rifle Butt Search Set
 Effect/Name/RifleButtSearchSet2=Rifle Butt Search Set
+Effect/Name/RifleButtSearchSetBarrelThrough=Rifle Butt Search Set Barrel Through
 Effect/Name/RifleButtSearchSetCSlam=Rifle Butt Search Set CSlam
 Effect/Name/RiflemanAssaultRifle=Assault Rifle
 Effect/Name/RiflemanEquipSICheck=Rifleman Equip SI Check
@@ -6901,9 +7075,30 @@ Effect/Name/SAMMissileDamage=SAM Missile Damage
 Effect/Name/SAMMissileLaunch=SAM Missile Launch
 Effect/Name/SAMSitePlacement=SAM Site Placement
 Effect/Name/SFRemoveRankModifier=SF Remove Rank Modifier
+Effect/Name/SMGAPBurst=SMG AP Burst
+Effect/Name/SMGAPBurstSet=SMG AP Burst Set
+Effect/Name/SMGAPDamage=SMG AP Damage
+Effect/Name/SMGAPLaunch=SMG AP Launch
 Effect/Name/SMGClickEffect=SMG Click Effect
 Effect/Name/SMGDMG=Submachine Gun Damage
+Effect/Name/SMGFeedbackBurst=SMG Feedback Burst
+Effect/Name/SMGFeedbackBurstSet=SMG Feedback Burst Set
+Effect/Name/SMGFeedbackDamage=SMG Feedback Damage
+Effect/Name/SMGFeedbackLaunch=SMG Feedback Launch
+Effect/Name/SMGHPBurst=SMG HP Burst
+Effect/Name/SMGHPBurstSet=SMG HP Burst Set
+Effect/Name/SMGHPDamage=SMG HP Damage
+Effect/Name/SMGHPLaunch=SMG HP Launch
 Effect/Name/SMGLaunch=Submachine Gun Launch Missile
+Effect/Name/SMGStandardBurst=SMG Standard Burst
+Effect/Name/SMGStandardBurstSet=SMG Standard Burst Set
+Effect/Name/SMGStandardDamage=SMG Standard Damage
+Effect/Name/SMGStandardLaunch=SMG Standard Launch
+Effect/Name/SMGTracerBurst=SMG Tracer Burst
+Effect/Name/SMGTracerBurstSet=SMG Tracer Burst Set
+Effect/Name/SMGTracerDamage=SMG Tracer Damage
+Effect/Name/SMGTracerHit=SMG Tracer Hit
+Effect/Name/SMGTracerLaunch=SMG Tracer Launch
 Effect/Name/SMGlowBlue=SM Glow Blue
 Effect/Name/SMGlowGreen=SM Glow Green
 Effect/Name/SMGlowRed=SM Glow Red
@@ -6972,6 +7167,9 @@ Effect/Name/ShotgunBullet=Shotgun Bullet
 Effect/Name/ShredderClaws=Shredder Claws
 Effect/Name/SlivanDeath=Slivan Death
 Effect/Name/SlivanDeathSet=Slivan Death Set
+Effect/Name/SmithyMissileBarrage=Smithy Missile Barrage
+Effect/Name/SmithySpawnEffect=SmithySpawnEffect
+Effect/Name/SmithySpawnOrder=Smithy Spawn Order
 Effect/Name/SmokeDeploy=Smoke Deploy
 Effect/Name/SmokeGrenadeImpact=Smoke Grenade Impact
 Effect/Name/SmokeGrenadeLaunchMissile=Smoke Grenade Launch Missile
@@ -6979,9 +7177,31 @@ Effect/Name/SmokeGrenadeSearchArea=Smoke Grenade Search Area
 Effect/Name/SmokeGrenadeSlow=Smoke Grenade Slow
 Effect/Name/SmokeGrenadeTimedLife=Smoke Grenade Timed Life
 Effect/Name/SnapfireAB=Snapfire AB
+Effect/Name/SnipeAPDamage=Snipe AP Damage
+Effect/Name/SnipeAPLaunch=Snipe AP Launch
+Effect/Name/SnipeAPSet=Snipe AP Set
+Effect/Name/SnipeFeedbackAB=Snipe Feedback AB
+Effect/Name/SnipeFeedbackDamage=Snipe Feedback Damage
+Effect/Name/SnipeFeedbackDamageSingle=Snipe Feedback Damage Single
+Effect/Name/SnipeFeedbackEDAB=Snipe Feedback ED AB
+Effect/Name/SnipeFeedbackHit=Snipe Feedback Hit
+Effect/Name/SnipeFeedbackLaunch=Snipe Feedback Launch
+Effect/Name/SnipeFeedbackSet=Snipe Feedback Set
+Effect/Name/SnipeHPDamage=Snipe HP Damage
+Effect/Name/SnipeHPLaunch=Snipe HP Launch
+Effect/Name/SnipeHPSet=Snipe HP Set
 Effect/Name/SnipeIO=Snipe IO
 Effect/Name/SnipeSet=Snipe Set
 Effect/Name/SnipeSet2=Snipe Set
+Effect/Name/SnipeStandardDamage=Snipe Standard Damage
+Effect/Name/SnipeStandardLaunch=Snipe Standard Launch
+Effect/Name/SnipeStandardSet=Snipe Standard Set
+Effect/Name/SnipeTracerAB=Snipe Tracer AB
+Effect/Name/SnipeTracerDamage=Snipe Tracer Damage
+Effect/Name/SnipeTracerDamageSingle=Snipe Tracer Damage Single
+Effect/Name/SnipeTracerHit=Snipe Tracer Hit
+Effect/Name/SnipeTracerLaunch=Snipe Tracer Launch
+Effect/Name/SnipeTracerSet=Snipe Tracer Set
 Effect/Name/SniperBullet=Sniper Bullet Mini
 Effect/Name/SniperBulletSpecter=Sniper Bullet Specter
 Effect/Name/SniperDamage=Sniper Damage
@@ -7005,9 +7225,13 @@ Effect/Name/SpawnerCarrier=Spawner Carrier
 Effect/Name/SpawnerGourmand=Spawner Gourmand
 Effect/Name/SpawnerGrotesque=Spawner Grotesque
 Effect/Name/SpawnerSingleRisen=Spawner Single Risen
+Effect/Name/SpecterSkills1=Specter Skills 1
+Effect/Name/SpecterSkills3=Specter Skills 3
 Effect/Name/SpecterSnipeCriticalChance=Specter Snipe Critical Chance
 Effect/Name/SpecterSnipeCriticalDamage=Specter Snipe Critical Damage
 Effect/Name/SpecterSnipeDamage=Specter Snipe Damage
+Effect/Name/SpecterUncloak=Specter Uncloak
+Effect/Name/SpecterWeaponsTraining=Specter Weapons Training
 Effect/Name/SpinningUpAB=Spinning Up AB
 Effect/Name/SpitterAcid=Spitter Acid
 Effect/Name/SpitterDamage=Spitter Damage
@@ -7039,6 +7263,8 @@ Effect/Name/StalkerChargeBehavior=Stalker Charge Behavior
 Effect/Name/StalkerChargePersistent=Stalker Charge Persistent
 Effect/Name/StalkerChargeSet=Stalker Charge Set
 Effect/Name/StalkerHorn=Stalker Horn
+Effect/Name/StartISRCharge=Start ISR Charge
+Effect/Name/StartISRChargeAB=Start ISR Charge AB
 Effect/Name/SteelSaberBullet=Steel Saber Bullet
 Effect/Name/SteelSaberCarbineBurstCP=Steel Saber Carbine Burst CP
 Effect/Name/SteelSaberCarbineBurstCPQuad=Steel Saber Carbine Burst CP
@@ -7052,7 +7278,9 @@ Effect/Name/StimAIOrderUmbra=Stim AI Order Umbra
 Effect/Name/StrafeRun=Strafe Run
 Effect/Name/StrikeTeam=Strike Team
 Effect/Name/StrikeTeamAIIO=Strike Team AI IO
+Effect/Name/StrikeTeamAIIONormal=Strike Team AI IO Normal
 Effect/Name/StrikeTeamAISA=Strike Team AI SA
+Effect/Name/StrikeTeamAISANormal=Strike Team AI SA Normal
 Effect/Name/StrikeTeamBorg=Strike Team Borg
 Effect/Name/StrikeTeamChem=Strike Team Chem
 Effect/Name/StrikeTeamCom=Strike Team Com
@@ -7186,11 +7414,15 @@ Effect/Name/UnknownEffect4=SM Glow Green
 Effect/Name/UnwillingClaws=Unwilling Claws
 Effect/Name/UpgradedM135MinigunDummy=Upgraded M135 Minigun Dummy
 Effect/Name/UpgradedM41SAWBurstPause=Upgraded M41 SAW Burst Pause
+Effect/Name/VesaniaConcussionAoE=Vesania Concussion AoE
+Effect/Name/VesaniaConcussionHitSet=Vesania Concussion Hit Set
 Effect/Name/VesaniaExplosionDmg=Vesania Explosion Dmg
 Effect/Name/VesaniaGLDamage=Vesania GL Damage
 Effect/Name/VesaniaGLDamage2=Vesania GL Damage
+Effect/Name/VesaniaGLDamageConcussion=Vesania GL Damage Concussion
 Effect/Name/VesaniaGLLaunch=Vesania GL Launch
 Effect/Name/VesaniaGLLaunch2=Vesania GL Launch
+Effect/Name/VesaniaGLLaunch22=Vesania Concussion Launch
 Effect/Name/VileStreamDamage=Vile Stream Damage
 Effect/Name/Viper30mmChainGunDamage=Viper 30mm Chain Gun Damage
 Effect/Name/Viper30mmChainGunLaunch=Viper 30mm Chain Gun Launch
@@ -7277,6 +7509,7 @@ LoadingScreen/Title=
 Logistical Adjustments1=Logistical Adjustments
 Logistical Adjustments2=Logistical Adjustments
 Logistical Adjustments3=Logistical Adjustments
+LookAtType/PD3Shepherd=
 Mag Cap=To Many Magazines
 MapInfo/Player00/Name=Locals
 MapInfo/Player01/Name=Player 1
@@ -7390,6 +7623,7 @@ Param/Value/065850AA=<c val="FF0000">Combat Engineers KIA
 Param/Value/06691435=Vote Time
 Param/Value/06FAD7B0=Mission Complete
 Param/Value/072FA573=<c val="FF0000">Infernus*</c>
+Param/Value/07338F71=All Random
 Param/Value/073823F9=Defeat RA Juggernaught In A PMC Survival Game.
 Param/Value/076BB20D=<c val="FFFFFF">AP Round</c>
 Param/Value/077D7F73=Inspect Population
@@ -7420,6 +7654,7 @@ Param/Value/09FA987A=<n/>
 Param/Value/0A07166E=+30% XP
 Param/Value/0A18F423=Default
 Param/Value/0A1F3836=<c val="FF0000">Dilophosaur</c>
+Param/Value/0A35E71A=Inspirational SI unlocked.
 Param/Value/0A4AD4FC=<s val="Item_Header">
 Param/Value/0A506A81=Must get closer.
 Param/Value/0A605A67=MW3
@@ -7502,7 +7737,9 @@ Param/Value/0FC2C215=<s val="AiurChefRightSize22Bold">Mos Specific SIs:</s> <s v
 Param/Value/1017F2F0=dev buff (type name of <c val="FF0000">buff</c> for the unit(s) selected)
 Param/Value/1044B3CE=<s val="0UI_LCD">
 Param/Value/105A93FB=<c val="008000">Ravensword Main:</c> Outlaws, reinforcements & supplies will be arriving soon.
+Param/Value/1070BD03=<c val="008000">Outlaw 6:</c> During your previous deployment, a targeting device for a prototype orbital weapon was shipped to AO Thalim. If you can find it, it may be useful.
 Param/Value/1092C424=<c val="008000">Soldier:</c> Satchel charge placed! Move, move!
+Param/Value/10B4B45B=<c val="008000">Soldier:</c> It's running!
 Param/Value/10C38EDB=Decals
 Param/Value/110780FE=50
 Param/Value/11285796=<n/>
@@ -7522,6 +7759,7 @@ Param/Value/11FC032E=<c val="008000">Ravensword Main:</c> Outlaw 6, your situati
 Param/Value/12000568=<c val="FFFFFF">Inferno</c>
 Param/Value/12021982=A large force of Tier 1 Hostiles are moving into your AO. They are the last remaining obstacle before this area can be considered cleansed and can be repopulated. Destroy them, and end the infection for these people once and for all.
 Param/Value/12035E3F=<c val="FF8000">Reverting Time-Stop...</c>
+Param/Value/122CBBE5=High Explosives SI unlocked.
 Param/Value/124A73CF=<c val="00FF40">Hopper</c>
 Param/Value/128C6757=Ghost in the Machine SI Unlocked.
 Param/Value/128FFBB6=reactive fire
@@ -7539,6 +7777,7 @@ Param/Value/135CC785=An unexpected level of Incendiary Rounds was learnt.
 Param/Value/13701C52=<n/>
 Param/Value/13949178=Special Thanks To:<n/><n/>Illidan92 - <c val="FFFFFF">Creator of Undead Assault</c><n/>Commlink - <c val="FFFFFF">Models/Art Assets</c><n/><n/>Doom - <c val="FFFFFF">UAC Developer (mid 2014-2016)  "GOAT"</c><n/>RPS - <c val="FFFFFF"> UAC Developer (2015 till mid 2017) "Aka Prodigy"</c><n/>Regendare - UAC Lead Developer<n/>Healplox - UAC Developer<n/><n/>BlazeKaiser - <c val="FFFFFF">Art Assets</c><n/>ModTassadar - <c val="FFFFFF">Art Assets/Code</c><n/>DrSuperGood - <c val="FFFFFF">Imperial Library</c><n/>NanaKey - <c val="FFFFFF">Models</c><n/>Stereo - <c val="FFFFFF">Story Dialog & Missions</c><n/>Legeld - <c val="FFFFFF">Missions</c>
 Param/Value/139C6A5F=]
+Param/Value/13A54AF5=Search Sites for Satellite Targeter
 Param/Value/13AD209E=35
 Param/Value/13C1CF5B= 
 Param/Value/13CB75A1=Weapons
@@ -7553,6 +7792,7 @@ Param/Value/14CFAC5E=<c val="FFFFFF">ISS-7</c>
 Param/Value/14DE28BA=<c val="008000">Soldier:</c> Helicopter has been refueled.
 Param/Value/14E3A8E8=<s val="0UI_LCD"><c val="00FFFF">
 Param/Value/14F6E29D= [
+Param/Value/1540DADD= 
 Param/Value/157A2CC7=<c val="FFFFFF">M1014</c>
 Param/Value/1583BE75=<c val="008000">Ravensword Main:</c> Outlaws, a supply cache is being delivered to LZ Predator.
 Param/Value/15B1D386=<c val="00FF40">Special Forces</c>
@@ -7572,6 +7812,7 @@ Param/Value/16D8AF8B=A Dark Swarm has moved into your AO and is causing a drasti
 Param/Value/16D8E4CC=<c val="008000">Outlaw 6:</c> We can't take the risk of helping Dark Sky. We have no idea what their intentions are. We're doing this on our own.
 Param/Value/16F3A5C1= set.
 Param/Value/16F417AC=<s val="0UI_LCD">
+Param/Value/1705933C=Mech PMC
 Param/Value/17283B34=An unexpected level of Strength Training was learnt.
 Param/Value/1748CD2B=<c val="008000">System:</c> 
 Param/Value/17695682=<c val="008000">Ravensword Main:</c> Outlaws, a supply cache is being delivered to LZ Lions.
@@ -7598,6 +7839,7 @@ Param/Value/1921E8CA=<c val="00FF40">Pure Blood</c>
 Param/Value/192C4D81=
 Param/Value/1947B739=Phantasm SI unlocked.
 Param/Value/194F2BC8=<c val="008000">Ravensword:</c> Outlaws, the Phantom will be arriving in the AO in approximately 10 minutes to get your asses out of there.  Make sure you clear out the T1's before it arrives.
+Param/Value/194F5AD8= <c val="FF00FF">-Elite PMC</c>
 Param/Value/19585124=Extract VIPs
 Param/Value/195CA0E6=<s val="0UI_LCD">
 Param/Value/1960785B=Malfunction
@@ -7634,6 +7876,7 @@ Param/Value/1BDAB07E=Monsoon
 Param/Value/1BE3E7D8=Inspect Civilian Populations For Infection. <c val="FF0000"> (Move towards the ping on the minimap)</c>
 Param/Value/1BE83C87=<c val="008000">Outlaw 6:</c> We were able to turn all of time stops on the RA! Fight on outlaws.
 Param/Value/1C12A728=<c val="00FF40">Synthesizer</c>
+Param/Value/1C27A4BF=Genesis - Strange zombies have arrived among the infested. All spawn types are increased. Experience gain is increased by 30%.
 Param/Value/1C28133A=<c val="008000">Soldier:</c> Lets get to the phantom, move!
 Param/Value/1C35F5A6=<img path="Assets\Textures\btn-ability-zerg-banelingspooge.dds" height = "13" width = "13" />
 Param/Value/1C4FD8DA=Moving in for landing.
@@ -7647,10 +7890,12 @@ Param/Value/1CC81B8B=<c val="00FF80">Ignis & Vesania Destroyed
 Param/Value/1CD7E650=A Magnus must be killed.
 Param/Value/1CF3294B=<n/>
 Param/Value/1D1B7527=Skill Identifiers
+Param/Value/1D34C5D7=Blood In Blood Out SI & Medic camo pattern unlocked.
 Param/Value/1D55D85C=<c val="FF8000">Kick Board</c>
 Param/Value/1D5ACF96= Combat Engineer</n>
 Param/Value/1D64682D=]
 Param/Value/1DB4D71C=Play 1000 Games.
+Param/Value/1E4F34C4= 
 Param/Value/1E63592B=We're going to need to take you into the lab.
 Param/Value/1E78984F=A 0 denotes the SI cannot be unlocked, and 1 means it is unlocked immediately.<n/><n/><c val="0080C0">Synthesis (SY): </c>400, 1, 1.<n/>+.1 Health and Energy Regeneration at 400, 1, 1.<n/>+.2 Health and Energy Regeneration at 170000, 120000, 250000.<n/>+.3 Health and Energy Regeneration at 500000, 500000, 500000.<n/><n/><c val="0080C0">Tough as Nails (TA):</c> 2000, 1, 1.<n/>+4 Fitness<n/><n/><c val="0080C0">Quick Thinking (QT):</c> 3100, 1, 1.<n/>25% faster reload and unjam speed.<n/><n/><c val="0080C0">Energetic (WN):</c> 4200, 1, 1.<n/>+.5 Energy Regen<n/><n/><c val="0080C0">Intellectual (IN): </c>0, 4000, 8000.<n/>+4 Mechanical<n/><n/><c val="0080C0">Hawkeye (HE):</c> 8000, 1500, 1800.<n/>+2 Weapon range and grants 15 range Invisibility Detection.<n/><n/><c val="0080C0">Always Ready (AR):</c> 13500, 5000, 0.<n/>Grants Level 3 with an Ammo Case[4], Smoke Grenade[3], Ground Flares[3], and Quick Clots[2].<n/><n/><c val="0080C0">Whiz Kid (WK):</c> 15000, 6000, 14000.<n/>+20% explosive damage. Does not effect IDF/CFF.<n/><n/><c val="0080C0">Power User (PU):</c> 0, 11000, 0.<n/>Gives 10 energy cells, and energy cells restore 285 energy.<n/><n/><c val="0080C0">Twinkle Toes (TT):</c> 20000, 15000, 0.<n/>+.07 Movement Speed.<n/><n/><c val="0080C0">Barbaric (BA):</c> 25000, 12000, 19000<n/>Grants Rifle Butt if MOS is able to unlock it.<n/><n/><c val="0080C0">Pure Blood (PB):</c> 16000, 12000, 13000.<n/>+50 HP, Immunity Toxins and Infections.<n/><n/><c val="0080C0">Heavy Armor (HA):</c> 20000, 20000, 20000<n/>+30% life, -.1 Movement Speed.<n/><n/><c val="0080C0">Combat Load (CL):</c> 90000, 80000, 85000<n/>Increases Loaded Magazine Size and prevents Jamming.<n/>Automatic Rifleman and Heavy Gunner gain increased Readied Magazine Capacity. Flamethrower can carry 3000 fuel without becoming encumbered.<n/><n/><c val="0080C0">Siphon (SI):</c> 67500, 35000, 48000<n/>-.75 Energy Regen, +1.5 Health Regen.<n/><n/><c val="0080C0">Light Armor (LA):</c> 50000, 50000, 50000<n/>-25% Life, +.1 Movement Speed.<n/><n/><c val="0080C0">Veteran (VT): </c>170000, 120000, 130000.<n/>-70% life, +50% damage, +.05 Movement Speed.<n/><n/><c val="0080C0">Born to Lead (BL):</c> 0, 0, 15000.<n/>+5% damage, +5% explosive damage in an area of 15.<n/><n/><c val="0080C0">Instructor (IS):</c> 0, 0, 45000.<n/>+.03 Movement Speed, +6% Attack Speed, and 20% faster reload and unjam in an area of 15.<n/><n/><c val="0080C0">Marksman (MA):</c> 75000, 60000, 0.<n/>+5 Dexterity.<n/><n/><c val="0080C0">Impatient (IP):</c> 50000, 35000, 40000<n/>15% Cooldown Reduction.<n/><n/><c val="0080C0">Parachute (PA):</c> 26500, 20000, 20000<n/>Immunity to jump injuries.<n/><n/><c val="0080C0">Reactive Armor (RA): </c>0, 34000, 35000<n/>40% chance to reduce damage by 55% if damage taken is over 125 damage.<n/><n/><c val="0080C0">Lucky (LY): </c>125000, 100000, 0<n/>7.5% Critical Chance increase for 6 seconds every 25 seconds. Requires Marksmanship.<n/><n/><c val="0080C0">Blood Lust (BT): </c>95000, 0, 95000<n/>+1.5% Damage for each kill(Max 30%) for 20 seconds(Stacks refresh).<n/><n/><c val="0080C0">Battle Buddy (BB): </c>Beat Epilogue<n/>Receive a mini infantry of your choice.<n/>You can only have 2 Battle Buddy's over the course of a single game. If you give your BB to someone else, you forfeit getting another.<n/>There can only be 3 of the same type of BB in the game at once.<n/><n/><c val="0080C0">All Nightmare SIs:</c>Beat Nightmare & Epilogue with the specific MOS<n/>You will not receive a Nightmare Skill Identifier for beating Nightmare & Epilogue with any Beta/Test Class.
 Param/Value/1E814AA1=<c val="FF8040">You have been revived.</c>
@@ -7669,6 +7914,7 @@ Param/Value/1F9CE919=<c val="008000">Soldier:</c> Titan has left the AO unhinder
 Param/Value/1FA59B4E=Mission Time
 Param/Value/1FE22BB4=<c val="00FF40">Crysis Suit</c>
 Param/Value/1FE6C787=Search The Thalim Homes
+Param/Value/203E26EE=Heavy Weapons Training SI unlocked.
 Param/Value/204212B8=<c val="008000">Ravensword:</c> Reinforcements have arrived.
 Param/Value/2057A9D0=<s val="0UI_LCD"><c val="00FFFF">
 Param/Value/206167D1=Open/Close Status Menu</n>View Teammates Vitals & Ailments
@@ -7677,6 +7923,7 @@ Param/Value/2077C5AE=Invalid player number or player isnt dead.
 Param/Value/2099FFD8=<c val="00FF80">Survival completed
 Param/Value/209CC752=<s val="0UI_LCD">
 Param/Value/20DCE1BD=<c val="FFFFFF">MK44 Sentry Gun Packed</c>
+Param/Value/20F2DB9E=Computer
 Param/Value/2134CC08=Unavailable
 Param/Value/2156FBAC=
 Param/Value/215824A5=dev LN (Creates 40 LNs)
@@ -7694,8 +7941,10 @@ Param/Value/220ED0F8=Millionaire
 Param/Value/22486F7A=<c val="FF0000">Air suppport unavailable.</c>
 Param/Value/224D4B3D=<s val="0UI_LCD">
 Param/Value/22524962=Standard SIs
+Param/Value/227B4516= <c val="FF0000">-Genesis</c>
 Param/Value/2280913F=Invalid camo number.
 Param/Value/228B28EF=You can only disarm M2 sentries you own.
+Param/Value/228CA663=+30% XP
 Param/Value/22919EC1=<c val="FF0000">Ignis:</c> We are not a securities contractor guarding public facilities. We are Rock Avalanche, the largest PMC on the planet. Your ignorance will cost you your lives.
 Param/Value/23287508=<c val="FF0000">Research Facility Not Searched
 Param/Value/2332C7DB=The RA have combat walkers moving into your AO. They will be difficult to defeat without firepower of our own. To the west of the AO is an old motorpool with unpowered combat walkers. Protect the combat engineers until the combat walkers are ready.
@@ -7711,12 +7960,14 @@ Param/Value/23CF8E8C=<c val="FFFFFF">IDMR-2</c>
 Param/Value/23D2B0A9=<c val="FFFFFF">Styner BR-3</c>
 Param/Value/23D86777=Medic Points: <s val="ChatHelp_Terr">
 Param/Value/23E50509=<s val="HeaderForProfile"><c val="FFFFFF">
+Param/Value/23ECEBE7=RA computers accessed.
 Param/Value/2407D5FF=]
 Param/Value/240886A5=Complete Boss Mode With Intense Weather and Ammo Shortage Modifiers.
 Param/Value/240E0E7A=Advanced Warfighter SI Unlocked.
 Param/Value/2424594E=<c val="FFFFFF">D</c>
 Param/Value/2461D733=<c val="FFFFFF">ISS-7</c>
 Param/Value/246B6E65=    <s val="ChatHelp_Prot">Intense Weather:</s><s val="ChatHelp_Terr"> 
+Param/Value/24939A1D=<c val="00FF80">Undead Purged
 Param/Value/2494FD82=Steel Barrels unlocked.
 Param/Value/24A2118A=<c val="FF0000">They'll be coming for you again</c>
 Param/Value/24A98617=Civilians outside of Thalim are vulnerable
@@ -7762,6 +8013,7 @@ Param/Value/28454A65=
 Param/Value/2869255C=<c val="008000">Soldier:</c> What in the hell happened in here! Bodies of dead scientists are scattered everywhere.
 Param/Value/287FF044=<s val="CantinaTrophyText">Welcome to Undead Assault Chronicles!</s> This short guide is meant to help you transition into the game and ease the learning curve. To find other players, visit channel "<c val="FF8000">UAC</c>". For more information, visit our website at <c val="C19B02">www.undeadassaultchronicles.com</c>.<n/><n/><c val="008000">Mode Dialog:</c> It is recommended you vote for "recruit" mode, and possibly the "rifle" modifier, until you get acquainted.<n/><n/><c val="008000">Basic Gameplay:</c> The goal of UAC is to complete the missions displayed in the top left of the screen. <c val="008000">Teamwork is essential</c>. If you die, a medic can revive you (keep them alive). A completed mission will reward XP depending on the difficulty, and failing will lose a small bit of XP. The game will progressively get harder, therefore it is vital that you search the map for randomly spawning equipment and weapon caches.
 Param/Value/2888C95A=Map is cleared of all units
+Param/Value/28A259C7=Gives you an Automated Nanite Resuscitator that can revive teammates, with a very long cooldown and cast time.
 Param/Value/28D5D7CB=Join/leave this fireteam
 Param/Value/28ECE80A=
 Param/Value/28F55A3F=<c val="00FF00">Downloading...34%</c>
@@ -7806,6 +8058,7 @@ Param/Value/2C074674=<c val="00FF80">Apiary Destroyed
 Param/Value/2C1614A5=<c val="008000">Ravensword:</c> Outlaw 6, ISR assets have picked up combat walkers moving towards your AO. ETA 20 minutes.
 Param/Value/2C19642C=<c val="008000">Ravensword SpecOps:</c> 4 Thresher Maws are entering the AO. Significantly more tier 1s are showing up now.
 Param/Value/2C1F9C04=<c val="FFFFFF">W</c>
+Param/Value/2C24EF41=Barrier SI unlocked.
 Param/Value/2C29E844=Destroy the CLP
 Param/Value/2C69FC93=Camouflage pattern changed to: <c val="00FF80">
 Param/Value/2CAAF659=Default
@@ -7822,15 +8075,18 @@ Param/Value/2DE056F7=invalid command
 Param/Value/2DF6693B=Sand Box Mode
 Param/Value/2E0A3812=<c val="00FF80">Bonus XP Awarded
 Param/Value/2E536AD6=Increases Heavy Gunner's Movement Speed by 0.05.<n/>Reduces Barrels Spinning Energy Drain to 1.5 Energy per Second.<n/>Reduces Spinning Up time by 1 Second.<n/>Overheat Duration reduced by 5 Seconds.
+Param/Value/2E580C0F=PMC
 Param/Value/2E629DC1=<n/>
 Param/Value/2E64EE1D=<s val="Military_Title"><c val="FFFFFF">Delta</c></s>
 Param/Value/2E64F316=<c val="FFFFFF">IDMR-2</c>
 Param/Value/2E729795=<c val="008000">Soldier:</c> Evening, sir. We're here to provide additional security for your AO.
 Param/Value/2EA55B02=T1 Hunter decal unlocked.
 Param/Value/2EC374F2=<c val="008000">Outlaw 6:</c> ISR reports a large force of tier 1s moving towards our AO. We'll make our stand in the northwest Highlands.
+Param/Value/2ECF4F9F=<c val="008000">Ravensword Main:</c> The infested machine has reentered the area with several T1s. Destroy them all.
 Param/Value/2EE6462F=Kill intruding T1s
 Param/Value/2EE8FFE7=<c val="00FF80">Bonus XP Awarded
 Param/Value/2EF97179= 
+Param/Value/2F0912B3=Balaad computers accessed.
 Param/Value/2F3D0522=Your platoon, given their combat experience, has been tasked to retake AO Thalim,
 Param/Value/2F4E77EB=Defend each satchel for a total of 4 minutes
 Param/Value/2F50FC11=Tier 1
@@ -7858,12 +8114,13 @@ Param/Value/30ACB679=Place Satchel To Destroy
 Param/Value/30ECD49F=<c val="FF0000">Aspectus:</c> So some soldiers think they are tough? *Sigh* this again. Just like in Africa, a bunch of self-righteous pawns think they can rule the world. This will be quick.
 Param/Value/30FAD3AA=Blah Blah Blah<n/>
 Param/Value/30FC51AF=Fungus Core
-Param/Value/3107F171=    <s val="ChatHelp_Prot">Tier 3:</s><s val="ChatHelp_Terr"> 
 Param/Value/310895FD=<c val="008000">Pilot:</c> 25 Seconds!
 Param/Value/31097947= 
 Param/Value/313DE7F5=dev tsquad (type <c val="FF0000">#</c> for squad type)
 Param/Value/315A1827=<c val="00FF80">Bonus XP Awarded
 Param/Value/315AB7E2=Blood In Blood Out SI & Medic camo pattern unlocked.
+Param/Value/317A787D=Time until Smithy arrives
+Param/Value/318000C1=    <s val="ChatHelp_Prot">Genesis:</s><s val="ChatHelp_Terr"> 
 Param/Value/31A1E5AB=)
 Param/Value/31B8DF27=Selected Player Already Has SYL Unlocks.
 Param/Value/31D10823=: We need to move, now!
@@ -7873,6 +8130,7 @@ Param/Value/3212A499=]
 Param/Value/323150E7=SI set to: <c val="00FF80">
 Param/Value/32416625=<s val="0UI_LCD">
 Param/Value/327A1FD3=<c val="008000">Ravensword:</c> CAS is on station.
+Param/Value/328716D4=SI set to: <c val="00FF80">
 Param/Value/32B9CF6D=<c val="FFFFFF">Frag Grenade</c>
 Param/Value/32E70F3E=Distribution: 
 Param/Value/332FFE64=Despite the RA onslaught, we still have not finished our mission. In order to narrow down the local outbreak source we need to collect bio-samples from the local food supply.
@@ -7891,6 +8149,7 @@ Param/Value/34016C2D=<c val="FF0000">IDF unavailable.</c>
 Param/Value/3434E535=Rail Gun
 Param/Value/3483CC6A=<c val="FFFFFF">
 Param/Value/34846497= [
+Param/Value/348ACEAD=<c val="00FF40">Warden Elite</c>
 Param/Value/34C74551=ISR is picking up an anomalous IFF (Investigate: Friend or Foe) signal. Investigate and report.
 Param/Value/34D03490=<c val="FF0000">Fire Mission</c>
 Param/Value/34D74378=<c val="008000">Outlaw 6:</c> Unfortunately the RA soldiers were able to rescue the phantom crew.
@@ -7908,6 +8167,7 @@ Param/Value/35B04030=It's the final battle. The successor will take control of t
 Param/Value/35C3BDE6=Input "<c val="008000">-r ##</c>" to set dispersion radius (2-10).
 Param/Value/35DB90C3=<c val="00FF80">Bonus XP Awarded
 Param/Value/35F4DFAC=Destroy the Apiaries (
+Param/Value/3600347C=Possible Targeter Location
 Param/Value/36072BD3=<s val="0UI_LCD">
 Param/Value/3627B693= </n>
 Param/Value/36392777=<c val="FFFFFF">Q</c>
@@ -7941,6 +8201,7 @@ Param/Value/390FEADC=Sentry
 Param/Value/394D8B13=<s val="AchievementFramePoints">
 Param/Value/3969A278=Dev'N It Up
 Param/Value/397A4AB6=55
+Param/Value/397D2211=<c val="00FF40">First Aid</c>
 Param/Value/397D4908=
 Param/Value/39A39EB8=Invalid behavior.
 Param/Value/39A61610=<c val="00FF40">Creeper</c>
@@ -7966,10 +8227,9 @@ Param/Value/3B7E9743=Must have 0 zulus
 Param/Value/3BA542A9=<c val="008000">Pilot:</c> I don't have a lot of fuel. You need to get those casualties here as soon as possible!
 Param/Value/3BA6DAA9=<c val="FFFFFF">Ping Dead</n>Players</c>
 Param/Value/3BAD77EE=<c val="00FF80">1 Helicopter Refueled
-Param/Value/3BB37ADE=Increases life by 10%, reduces explosive damage taken by 25%, but reduces MS by .07.
+Param/Value/3BB37ADE=Increases life by 10%, reduces explosive damage taken by 25%, and increases life and shield armor by 15.
 Param/Value/3BBD02DF=BDU camo pattern unlocked.
 Param/Value/3BC40277=<c val="008000">Ravensword:</c> The phantom has arrived. Take the samples to the phantom so they can be analyzed.
-Param/Value/3BD4C14A=+10% XP
 Param/Value/3BD8DD53=<c val="FF0000">KIA</c>
 Param/Value/3BF61775=<n/><c val="77BBBB">WO: </c>
 Param/Value/3C1ADF4E=<c val="FFFFFF">S</c>
@@ -7981,7 +8241,7 @@ Param/Value/3C69A7AD=<c val="FFFFFF">SPCS</c>
 Param/Value/3C7BA80F=<c val="008000">Soldier:</c> The coward ran! We almost had him.
 Param/Value/3C8C9D64=<c val="FF0000">Gourmand</c>
 Param/Value/3CEFBA12=, 
-Param/Value/3CFA5425=Defend each satchel for a total of 4 minutes
+Param/Value/3CFA5425=Defend the team while activating computers.
 Param/Value/3D005323=K/H/MS/RE
 Param/Value/3D130EA0=<s val="Item_Header">
 Param/Value/3D151991=<s val="AiurChefRightSize22Bold">Mos Specific SIs:</s> <s val="AiurChefLeftSize18Bold">
@@ -8082,7 +8342,7 @@ Param/Value/44FAA311=<c val="FFFFFF">Gas Compressor</c>
 Param/Value/45156BD3=Survival mode is simple: Survive for the allotted time.<n/>Modes of play available are Vanilla Survival, PMC Survival, and Boss Mode.
 Param/Value/451C5DA8=<s val="0UI_LCD">
 Param/Value/453595D8=<c val="008000">Ravensword:</c> ISR reports all nearby tier 1s are moving towards your AO. I guess you've cooked up a storm. Destroy them and this entire area will be cleansed and repopulated. ETA 1 minute. Good luck, out.
-Param/Value/4542C31C=Unstoppable T1 - Increases the rate of experience gain by 30%, but all tier 1 zombies have significantly increased strength. Cannot be used with Tier 3 or Tier 2 mods. If used with Tier 1 mode, the rate of experience gain is increased by an additional 40%.
+Param/Value/4542C31C=Unstoppable T1 - Increases the rate of experience gain by 30%, but all tier 1 zombies have significantly increased strength. If used with Tier 1 mode, the rate of experience gain is increased by an additional 40%.
 Param/Value/455C6C9D= Automatic Rifleman</n>
 Param/Value/456D9516=Dark Sky is willing to aid you, but only if you help them first - by finding a key card granting them access to the RA facility.
 Param/Value/457EE464=<c val="00FF80">3 Bunkers Intact
@@ -8142,6 +8402,7 @@ Param/Value/4A559BFE=Defend Thalim & Escort Refugees
 Param/Value/4A5F7864=Wave Amplifier SI unlocked.
 Param/Value/4A635207=dev boom (nuke unit(s) selected)
 Param/Value/4A782749=<c val="FFFFFF">Ground Flare</c>
+Param/Value/4AB802FA= <c val="FF00FF">-All Random</c>
 Param/Value/4ABD407F=Spawn Undead Units
 Param/Value/4B15FDB4=<s val="GameButtonCharge">Infantry Rifleman</s>
 Param/Value/4B36CEF3=Makes jumping safe from any height, fractured leg no longer affects you, and your movement speed cannot be reduced below 2.4.
@@ -8153,6 +8414,7 @@ Param/Value/4BE47F34= <c val="0080C0">is now team leader.</c>
 Param/Value/4BEB48EC=<n/>
 Param/Value/4C160A11=<c val="FF8000">Time-Stop reverted.</c>
 Param/Value/4C17BEA6=<c val="FF0000">All TCPs Not Relieved
+Param/Value/4C43CAF8=Invalid command.
 Param/Value/4C4B7908= 
 Param/Value/4C54A1FC=<c val="00FF80">PMC Survival bonus
 Param/Value/4C662AF1=Fuel Containers
@@ -8188,18 +8450,22 @@ Param/Value/4E9746A4=<s val="Item_Header">Empty
 Param/Value/4EB61C60=<c val="008000">Dr Morrow:</c> Yes! This will be an excellent time to study the early stages of the infection.
 Param/Value/4EBDF968=<s val="GameButtonCharge"><c val="00FF80">Bank Saved</c></s>
 Param/Value/4EC09CC0=<c val="008000">Outlaw 6:</c> The convoy will be arriving soon. Escort the convoy through the AO.
+Param/Value/4EC76622=Invalid timescale.
 Param/Value/4F158237=Reduces life by 20%, but increases MS by .1.
 Param/Value/4F6ABEC1=<c val="00FF80">Crew Member Killed
 Param/Value/4F758314=Default
+Param/Value/4F9DF288=SI set to: <c val="00FF80">
 Param/Value/4FB6A68E=Current Experience Level
 Param/Value/4FCE67F3=<c val="00FF80">Tier 1 Hostiles Destroyed
 Param/Value/4FD55B6C=Time Stops
 Param/Value/4FE0B188=<c val="FFFFFF">Binoculars</c>
 Param/Value/4FF4E348=Input "<c val="008000">-a ###</c>" to set distribution angle<n/>(degrees, <c val="008000">c</c> for circular or  <c val="008000">0-360</c> for linear engagement).<n/>East=0, North=90, West=180, South=270.
+Param/Value/500A7074= <c val="FF00FF">-All Random</c></n>
 Param/Value/501F8EC1=<c val="FFFFFF">AA-12</c>
 Param/Value/503B670B=<c val="FF8000">All players randomed
 Param/Value/504B6575=Bio-Resonator Charge
 Param/Value/505FBD3E=)
+Param/Value/506A56BF=Loadout SI unlocked.
 Param/Value/506EB4E0=<c val="FF8000">An error occured, please try again.</c>
 Param/Value/507C6DF1=<c val="FF0000">VIPs Killed
 Param/Value/507C9679=<c val="008000">Ravensword SpecOps:</c> Specters, seeing as the AO is completely barren, we have some supplies and sentry guns coming your way. ETA 30 seconds. 
@@ -8213,6 +8479,7 @@ Param/Value/5109787E=<c val="ADADAD">MIA</c>
 Param/Value/5148659C=<c val="00FF80">Bonus XP - All Vehicles Exited
 Param/Value/5149C754=
 Param/Value/51771945=<c val="00FF40">Marksman</c>
+Param/Value/5197E026=Defender unlocked.
 Param/Value/519D8784=<c val="008000">Soldier:</c> Abort code downloaded.
 Param/Value/51A99579=Invalid player number or player isnt dead.
 Param/Value/51B6080E=Type dev pmc to enable pmc triggers
@@ -8229,13 +8496,13 @@ Param/Value/530E7A8B=Cache
 Param/Value/5319D4C0=<c val="00FF00">Logged in. Welcome to the Rock Avalanche science facility! Leading the world in scientific biological research.</c>
 Param/Value/53207ABF=: Frag out!
 Param/Value/5349FBAE=Bringing the BMDD network back online would prove beneficial to future intelligence efforts.
+Param/Value/53A64089=Overclock SI unlocked.
 Param/Value/53B8E610=</n>
 Param/Value/53C9FF8E=<s val="0UI_LCD">
 Param/Value/53CB3301=+40% XP
 Param/Value/53E3DFEF=<c val="008000">Outlaw 6:</c> We don't take orders from just anybody. We're not going anywhere without proper identification.
 Param/Value/53EAD7FA=Leadership too low
 Param/Value/53F5B4F0=<c val="FF0000">Arachnathid*</c>
-Param/Value/53FAD0DC=+20% XP
 Param/Value/544D2A23=<c val="FFFFFF">Kinetic Integrator</c>
 Param/Value/5468A4D6= 
 Param/Value/548FAC95=<c val="00FF80">Air Threat Destroyed
@@ -8257,6 +8524,7 @@ Param/Value/55D296DC= Orbital Support Specialist**</n>
 Param/Value/55FDDCEA=<c val="008000">Soldier:</c> A vehicle has been destroyed!
 Param/Value/5600E17B=<c val="008000">Soldier:</c> All of the refugees are dead, lets go.
 Param/Value/5603BCDC=<c val="008000">System:</c> Tier 1 Scan initiated: Scanning...
+Param/Value/56061BB3=Genesis
 Param/Value/560888CE=Run To The Hills
 Param/Value/560A2D56=Displays Info About Rank, XP, And Game Stats 
 Param/Value/5612EAE3=<c val="008000">Soldier:</c> Tower is online.
@@ -8368,6 +8636,7 @@ Param/Value/605FDA1D=Replace the Rifleman's Assault rifle with a Plasma Rifle<n/
 Param/Value/6068FDAF=<c val="00FF80">KLE Completed
 Param/Value/607F87B0=<c val="008000">Ravensword:</c> A phantom has arrived.
 Param/Value/609ED8B1=<c val="008000">Saber 7:</c> We'll drop them off at the east TCP. Thank you, god speed.
+Param/Value/60A3FAA7=Adds 3 to fitness, dexterity, and mechanical stats.
 Param/Value/60A70AF8=]
 Param/Value/60A8909D=High Explosives SI unlocked.
 Param/Value/60B9BD7A=Missions Completed <c val="00FF80">(
@@ -8423,6 +8692,7 @@ Param/Value/64FA8713=Defend Bunkers
 Param/Value/64FB7317=<s val="0UI_LCD">
 Param/Value/64FE57A8=Reduces reload and unjam time by 25%.
 Param/Value/65675F25=The recent activity in the AO has awoken a colony of infected deep beneath the surface. The only way to stop them is to activate a seismic resonator and collapse the tunnels.
+Param/Value/657D7AD5=<c val="FF0000">Stand</n> Here</c>
 Param/Value/65836218=SMA
 Param/Value/658AE22A=US Army
 Param/Value/65963ED3=<c val="00FF40">Leaper</c>
@@ -8463,6 +8733,7 @@ Param/Value/682150FD=25
 Param/Value/6822808E=Default
 Param/Value/68373657=<c val="00FF80">RA Destroyed
 Param/Value/68405048=    <s val="ChatHelp_Prot">Officer XP:</s><s val="ChatHelp_Terr"> 
+Param/Value/684EE576=Field Tuning
 Param/Value/68508703=Protect The Helicopters Until Fuel Arrives
 Param/Value/68789C83=<c val="00FF00">Logged off.</c>
 Param/Value/6890A5F0=Disable use of Sentry Guns, increase maximum IS bot cap and unlock additional modules.
@@ -8479,6 +8750,7 @@ Param/Value/6969149A=
 Param/Value/6977F19D=%
 Param/Value/69821AE2=Distribution: Circular
 Param/Value/698B9B39=Survivalist SI unlocked.
+Param/Value/69A4242D=Search locations where the satellite targeting device may be stored.
 Param/Value/69AFBFB8=Skill Identifiers
 Param/Value/69DE9993=<c val="008000">Ravensword:</c> Good luck soldiers.
 Param/Value/6A0531DE=<c val="008000">Soldier:</c> So we've heard. We were sent to reinforce the AO as soon as we got reports of the incursion.
@@ -8553,7 +8825,7 @@ Param/Value/70161BE9=Mission Time
 Param/Value/7045F447=Enable Mini/Armored Vehicle Creation
 Param/Value/7051B857=<c val="008000">Outlaw 6:</c> BMDD network restored, signal strength weak.
 Param/Value/70533A75=Randomize Me
-Param/Value/70583B4F=Adds 5 to mechanical skills.
+Param/Value/70583B4F=Adds 6 to mechanical skills.
 Param/Value/706E16CE= [
 Param/Value/7091241C=<c val="008000">Ravensword Main:</c> Excellent work, Outlaw 6.
 Param/Value/70A62567=<c val="FF0000">Spore Colonies Not Destroyed
@@ -8561,7 +8833,9 @@ Param/Value/70BF1A46=<c val="FF0000">EVERYONE IS A BETA MALE</c>
 Param/Value/70BF2821= Javelin Gunner</n>
 Param/Value/70CE32BF=: We're leaving, let's go!
 Param/Value/70DB82AD=<c val="00FF40">High Explosive</c>
+Param/Value/70FA2E98=Invalid color.
 Param/Value/7108FFDA=" height = "
+Param/Value/71220E22=<c val="00FF80">Bonus XP Awarded
 Param/Value/71281D75=Name
 Param/Value/7136BAB4=Increases Fitness by 6.<n/>Increases Movement Speed by 0.5.<n/>Gain an additional Charge to Field Aid.<n/>Reduces Energy Cost of Field Aid by 47.<n/>Reduces Energy Cost of Self Aid by 30.
 Param/Value/714087A0=<s val="0UI_LCD"><c val="FF0000">
@@ -8570,6 +8844,7 @@ Param/Value/7152ED48=: What's this about?
 Param/Value/716C0651=<c val="FFFFFF">OPA</c>
 Param/Value/7184AD65=Invalid unit type.
 Param/Value/71C9BDEC= [
+Param/Value/71D3E803=<c val="008000">Soldier:</c> It's running!
 Param/Value/71E512F7=<c val="FF0000">Cannot use Born to Lead/Instructor with Inspirational.</c>
 Param/Value/71ECD4DE=<c val="00FF80">Phantom Landed
 Param/Value/71F2C9D5=<c val="00FF40">Steel Barrels</c>
@@ -8637,6 +8912,7 @@ Param/Value/75E9CD72=Loadout SI unlocked.
 Param/Value/76116D2E=<c val="008000">Ravensword:</c> Outlaw 6, we have procured some special equipment to aid you. Mark 3 locations for air drop.
 Param/Value/7612EC3D=<s val="0UI_LCD">
 Param/Value/7618D723=+15% XP
+Param/Value/7621F242=<c val="008000">Soldier:</c> We have the second set of access codes.
 Param/Value/7630385B=Kill Both Arachnathids.
 Param/Value/7646675E=Every Soldier [12 Man] Escapes In A Survival Game.
 Param/Value/76606482=US Army
@@ -8650,7 +8926,7 @@ Param/Value/76A89193=<c val="00FF80">
 Param/Value/76B35098=% <img path="Assets\Textures\icon-health-zerg.dds" height = "13" width = "13" /> 
 Param/Value/76C1F129=<c val="FF0000">YOUR ANUS THANKS YOU</c>
 Param/Value/76D1F53B=<s val="AchievementFramePoints">
-Param/Value/76D97D94=Tier 1 - Increases the rate of experience gain by 10% in campaign and 30% in survival, but the AO will be steamrolled by tier 1 zombies. Cannot be used with Tier 3 or Tier 2 mods.
+Param/Value/76D97D94=Tier 1 - Increases the rate of experience gain by 30%, but the AO will be steamrolled by tier 1 zombies. Cannot be used with Tier 3 or Tier 2 mods.
 Param/Value/76ED791E=<c val="008000">Outlaw 6:</c> Sun's starting to rise. Get a move on, soldiers!
 Param/Value/76FCDC6B=The Heliport is being used to land reinforcements. Secure the Heliport and ensure every Phantom lands safely.
 Param/Value/770199CB=Destroy RA TCPs (
@@ -8703,17 +8979,19 @@ Param/Value/7B126C03=<c val="008000">Soldier:</c> What the hell was that?
 Param/Value/7B1DABC0=Enlisted XP: <s val="ChatHelp_Terr">
 Param/Value/7B38AAE7=Bunkers
 Param/Value/7B50436C=<s val="Item_Description"><c val="8080FF">-
+Param/Value/7B6E4CBA=<c val="008000">Ravensword Main:</c> It looks like the next set of computers is at the airport terminal.
 Param/Value/7B715C2D=<c val="008000">Soldier:</c> Understood, sir.
 Param/Value/7BA933C9=
 Param/Value/7BB7B3C2=<c val="FFFFFF">Plasma Inducer</c>
 Param/Value/7BB90175=<s val="AiurChefRightSize22Bold">Mos Specific SIs:</s> <s val="AiurChefLeftSize18Bold">
+Param/Value/7BDA3412= <c val="FF00FF">-Elite PMC</c></n>
 Param/Value/7BFB0D90=
+Param/Value/7C1C8845=Time until Smithy arrives
 Param/Value/7C3B84FF=<c val="008000">Soldier:</c> They're all dead.
 Param/Value/7C3D527E=We're are taking fire. All units move in!
 Param/Value/7C4A618F=<c val="FFFF00">
 Param/Value/7C830A95=<c val="FF0000">All Vehicles Destroyed
 Param/Value/7C87430B=<c val="008000">System:</c> Scan complete: 
-Param/Value/7CAC888D=    <s val="ChatHelp_Prot">Tier 1:</s><s val="ChatHelp_Terr"> 
 Param/Value/7CC76839=</s>
 Param/Value/7CDCDFF8=<c val="008000">Ravenswood Main:</c> Outlaws, the situation outside of your AO is in catastrophic condition. AO Dasdan has been overrun.
 Param/Value/7CF955B5=]
@@ -8726,6 +9004,7 @@ Param/Value/7D3FCE94=<c val="008000">Ravensword SpecOps:</c> A Magnus is enterin
 Param/Value/7D499A6F=<c val="00FF40">Tarantula</c>
 Param/Value/7D5903E1=<c val="FF0000">Bio-Resonator Destroyed
 Param/Value/7D7189B3=<c val="008000">Ravensword:</c> Air drop inbound.
+Param/Value/7DB0D9E5=Access the computer codes at the airport.
 Param/Value/7DD621FA=Juggerwhat? 2.0
 Param/Value/7DE8CB20=Survive the onslaught for 50 minutes
 Param/Value/7DF19832=<c val="FFFFFF">Mini Combat Engineer</c>
@@ -8739,6 +9018,7 @@ Param/Value/7E802B5E=2 Ares' must be killed.
 Param/Value/7EA99E90=<c val="008000">Dr. Rosen:</c> Finished. Preparing to move to the next area.
 Param/Value/7ECE921B=<c val="FF8000">LN's Recruited: </c>
 Param/Value/7F174113=Blood camo pattern unlocked.
+Param/Value/7F23DEFA= cannot be used with Warrant Officer rank.
 Param/Value/7F2A54FB=Leave The AO
 Param/Value/7F5C8D2B=+25% XP
 Param/Value/7F69B6EC=<n/>
@@ -8772,6 +9052,7 @@ Param/Value/81460692=
 Param/Value/816E5F80=<c val="008000">Outlaw 6:</c> Rock Avalanche.
 Param/Value/81720FE5= has been promoted to <s val="ArcadeFighterScoreTitle">
 Param/Value/817EEDF5=Invalid accessory number.
+Param/Value/8194DD89=Attempting artillery barrage 2
 Param/Value/81A73D31=Increases damage with explosives by 20%. IFS explosives do not count.
 Param/Value/81B3B556=Search for KEC
 Param/Value/81BB708C=<c val="008000">Outlaw 6:</c> Ravenswood Main, we couldn't find the source of the unknown signal.
@@ -8818,6 +9099,7 @@ Param/Value/85F79929=BGEN
 Param/Value/862FFAF2=Only one man has access to the RA Facility, and he never left the AO. He is almost guaranteed dead, but his location is unknown. Search the homes in Thalim that employees lived in to find any clues to his location.
 Param/Value/8653490A=<c val="008000">Outlaw 6:</c> We've arrived. Get your night vision on and move out.
 Param/Value/865B8B9B=/
+Param/Value/865FFCC9=Survivalist SI unlocked.
 Param/Value/8689810E=  5
 Param/Value/86C2B12A= 
 Param/Value/873949A8=Warrant   Officer
@@ -8840,6 +9122,7 @@ Param/Value/883BE596=<c val="C4AC0B">Ravensword Main:</c> ISR is revealing more 
 Param/Value/8844F18B=
 Param/Value/88498661=<c val="00FF80">Soldier Extracted
 Param/Value/8849BC7A=<c val="00FF80">All VIPs Evacuated
+Param/Value/884FC213=<c val="008000">Computer system:</c> Access complete.
 Param/Value/8858F1E3= <c val="00FFFF">-Unstoppable T1</c>
 Param/Value/8860F989=<c val="008000">Outlaw 6:</c> BMDD network restored, signal strength acceptable.
 Param/Value/8862CD77=: Back ta hell with ya!
@@ -8857,6 +9140,7 @@ Param/Value/8920CD75=<c val="FFFFFF">M92 Torrent</c>
 Param/Value/89213E87=Spore Colony
 Param/Value/89271604=Rock Avalanche
 Param/Value/894A1C39= 
+Param/Value/895D4502=Gives +15% damage against massive.<n/>Grants personal radar that detects T1s within 30 range of the specter.<n/>Swapping rounds is instantaneous.
 Param/Value/895D4D26=<c val="008000">Soldier:</c> The fog is clearing.
 Param/Value/89728758=SI cannot be used with your selected rank.
 Param/Value/8973ED7D=
@@ -8883,6 +9167,7 @@ Param/Value/8B02EB02=Mission Time
 Param/Value/8B114B31=<c val="00FF80">Bonus XP Awarded
 Param/Value/8B176DEC=<c val="00FF40">Zombie</c>
 Param/Value/8B265319=Special SIs
+Param/Value/8B309D4E=<c val="008000">Ravensword Main:</c> There's a deactivated SAM site in Thalim. If you can turn it on, it may be able to intercept artillery from outside the AO.
 Param/Value/8B603602=
 Param/Value/8B6B0E15=
 Param/Value/8B74D425=    <s val="ChatHelp_Prot">UT1:</s><s val="ChatHelp_Terr"> 
@@ -8935,6 +9220,7 @@ Param/Value/8F3A9941= [
 Param/Value/8F6AA7F1= <c val="00FFFF">-Unstoppable T1</c></n>
 Param/Value/8F791B6B=</c>!
 Param/Value/8F803558=<c val="FF0000">Enemy Ion Cannon detected.</c>
+Param/Value/8F8104CF=+10% XP
 Param/Value/8F925B70=dev create (type name of<c val="FF0000"> unit/item/doodad</c>)
 Param/Value/8FB6CCDF=<s val="0UI_LCD">
 Param/Value/8FB84FD8=<c val="008000">Ravensword:</c> A T1 Titan has arrived in your AO from the North. He is mimicking the behavior of another T1 in your AO and headed straight for you. Eliminate them both.
@@ -9011,8 +9297,10 @@ Param/Value/94A6DE6D=Increases maximum mag capacity and prevents jamming. Mag in
 Param/Value/94A89AA7=Input "<c val="008000">-i ##</c>" to set interval (seconds, .2-5).
 Param/Value/94BA5051=] 
 Param/Value/954B2624=Spawn Menu
+Param/Value/9582E628=<c val="008000">Ravensword Main:</c> We're tracking a large group of incoming hostiles. Get ready to repel it.
 Param/Value/959CA119=US Army
 Param/Value/95C71E47=Seismic Disturbance
+Param/Value/95DE82EA=<c val="008000">Soldier:</c> I've found the targeting device. Wait... why is the ground shaking?
 Param/Value/95E71EFF=Increases movement speed by .065.
 Param/Value/9600DFC5=<c val="008000">Outlaw 6:</c> Let's hurry and destroy those fungus cores outlaws.
 Param/Value/960650E1=<s val="0UI_LCD">
@@ -9022,6 +9310,7 @@ Param/Value/9627108C=40
 Param/Value/962B2D63=<c val="FFFFFF">Intense Fog</c>
 Param/Value/963BDD75=<c val="FFFFFF">Binoculars</c>
 Param/Value/9642145D=dev unsi (type <c val="FF0000">#</c> for unit(s) selected)
+Param/Value/9686E979= 
 Param/Value/96C51E93=: But I feel fine! Its just a rash!
 Param/Value/96CB1A10=<c val="00FF40">Blood In Blood Out</c>
 Param/Value/96D05E90=The RA have sent in attack helicopters to destroy the incoming US Army battallion. Destroy them with the SAM site and any other means available.
@@ -9100,6 +9389,7 @@ Param/Value/9BC06094=<c val="FF0000">Juggernaught:</c> You think you can capture
 Param/Value/9BCC56D2=Play A Game With A Member Of The Dev Team.<n>Unlocks Gold Camo.
 Param/Value/9BD44A31=15
 Param/Value/9BDCBC71=LZ marked
+Param/Value/9BEEE26A=<c val="008000">Ravensword Main:</c> It looks like the uplink station in the RA base has been activated. If you use it, you may be able to target their orbital weapon at the infested machine.
 Param/Value/9BF96D19=<c val="008000">Outlaw 6:</c> Alright Dark Sky, we'll give you this key once we control this AO again.
 Param/Value/9BFD14D7=<c val="FFFFFF">Fireteams</c>
 Param/Value/9C3EC7DE=Special Forces<n/>
@@ -9154,12 +9444,14 @@ Param/Value/A0372216= XP
 Param/Value/A063A1A5=Death Match mode is.......
 Param/Value/A067CD99=<c val="008000">Outlaw 6:</c> Ravenswood, the Reconnaissance Drone has been located.
 Param/Value/A07BAD03=Displays Teammates Inventory Items
+Param/Value/A0A695ED=SAM Control Location
 Param/Value/A0C4F644=<c val="008000">Soldier:</c> The sky is clearing.
 Param/Value/A0D5ADF1=<c val="00FF80">Bonus XP Awarded
 Param/Value/A0F15190=Heals: <s val="ChatHelp_Terr">
 Param/Value/A0F641A2=<c val="FFFFFF">US MCR</c>
 Param/Value/A0FFB3FD=1 Life
 Param/Value/A10C5083=<c val="FF8000">Satchel Charge fuse initiated.</c>
+Param/Value/A127EFC7=Airport computers accessed.
 Param/Value/A14EEA0A=Banana Soldiers
 Param/Value/A15D5840=15+ MOS Specific SIs Unlocked.
 Param/Value/A17A83EA=Master decal unlocked.
@@ -9172,6 +9464,7 @@ Param/Value/A253BD0C=5
 Param/Value/A268ADEC=<c val="008000">Dr Morrow:</c> Please, this way.
 Param/Value/A2705B8A=Recruit Mode Completed.</n>Unlocks Woodland Decal.
 Param/Value/A28F550D=Kill the Genesis.
+Param/Value/A299FFB5=<c val="008000">Computer system:</c> Access 67% complete.
 Param/Value/A2A0E9C9=<c val="008000">Soldiers:</c> Moving to defend.
 Param/Value/A2A3144B=Kill a Wraith Lord and Infernus.
 Param/Value/A2BDC827=    <s val="ChatHelp_Prot">Ammo Shortage:</s><s val="ChatHelp_Terr"> 
@@ -9184,6 +9477,7 @@ Param/Value/A319814F=<c val="FF0000">Hunter</c>
 Param/Value/A31C07B3=Sample Location
 Param/Value/A328B3F0=The Purge
 Param/Value/A3594932=Bear claw decal unlocked.
+Param/Value/A362FC16=Activate the RA superweapon against Infested Smithy.
 Param/Value/A365B254=<c val="FF0000">Umbra:</c> Your blindness will show itself soon enough.
 Param/Value/A3D368BC=<c val="0000FF">Dark Sky:</c> Dr. Morrow. The AO's Chief Scientist. Typical of the RA.
 Param/Value/A41EF439=: 
@@ -9191,14 +9485,17 @@ Param/Value/A421D2E7=<n/>
 Param/Value/A43A1FC4=Defeat Thanatos
 Param/Value/A44479A8= </n>
 Param/Value/A4570D21=<s val="Military_Title"><c val="FFFFFF">Decal & Camouflage</c></s>
+Param/Value/A459843A=Elite PMC
 Param/Value/A460E722=Enemy has been located.
 Param/Value/A48160C9=<c val="008000">Operative:</c> Contact! Don't let them near the convoy!
 Param/Value/A4D00B72=50
+Param/Value/A4DE34E6=Cavalry Sabers decal and Steel Saber SI unlocked.
 Param/Value/A4EA5619=<c val="008000">Pilot:</c> We're here, but we barely made it! Get on the bird now!
 Param/Value/A4F5236A=Complete Hard Outbreak With All Players Using Random Mos.</n>Unlocks Dare To Win Decal.
 Param/Value/A526A1D0= samples collected.
 Param/Value/A530C60B= [
 Param/Value/A53260C0=<c val="FF0000">Stand</n> Here</c>
+Param/Value/A54DA8BA=<c val="008000">Computer system:</c> Access 33% complete.
 Param/Value/A5587391= has voted for: 
 Param/Value/A56D69C3=<c val="00FF40">All Combat Medics are dead. Use the shock paddles to revive a Combat Medic.</c>
 Param/Value/A5862E0A=Revert Time-Stops
@@ -9232,12 +9529,14 @@ Param/Value/A89D85C5=<img path="Assets\Textures\btn-upgrade-zerg-meleeattacks-le
 Param/Value/A8C66B00=<s val="0UI_LCD">
 Param/Value/A8CDE510=Rock Avalanche decal unlocked.
 Param/Value/A8D657AD=Destroy Ignis & Vesania
+Param/Value/A8D78280=Phantasm SI unlocked.
 Param/Value/A90D8BA9=    <s val="ChatHelp_Prot">Biometric ID Recognized:</s><s val="ChatHelp_Terr"> 
 Param/Value/A91A67D2= Javelin Gunner</n>
 Param/Value/A92C8C93=Enable/Disable Undead Spawn Loops
 Param/Value/A943EF0A=<c val="FFFFFF">US MCR</c>
 Param/Value/A9474A91=Phantom Crew
 Param/Value/A96D1387=75
+Param/Value/A978C851=Invalid color.
 Param/Value/A9A60C50=<c val="FF0000">TCP Overrun
 Param/Value/A9C63D94=US Army
 Param/Value/A9F9AD50=5
@@ -9266,14 +9565,17 @@ Param/Value/AC1F55F7=Protect the Combat Engineers
 Param/Value/AC2EA4E6=<c val="FF0000">
 Param/Value/AC302612=: Thank you! I thought I would die here!
 Param/Value/AC35D9AA=PVT
+Param/Value/AC3F5A8A=<c val="008000">Ravensword Main:</c> Aerial reconnaissance shows active computer equipment in outpost Balaad.
 Param/Value/AC4EC115=Dark Sky
 Param/Value/AC526C13=<c val="00FF80">Soldier Extracted
 Param/Value/AC76E5C8=<s val="Item_Header">
 Param/Value/AC824326=Emerald camo pattern & Diamond decal unlocked.
 Param/Value/AC8AB30B=3 vehicle drivers will move in from the south and take control of the vehicles in the motorpool. Escort them safely.
 Param/Value/AC92CD6D=Ammo Shortage - Increases the rate of experience gain by 30%, but readying a magazine will only give 1 magazine (70 fuel for flamethrowers). Requires 7+ players.
+Param/Value/ACB2085A=Increases attack speed by 15% and weapon range by 1, and decreases damage to friendly units by 50%.
 Param/Value/ACD7DD41=BanHammer Activated!
 Param/Value/ACE2816B=Anti-Tank Rocket has 15s shorter cooldown, costs 15 less energy, and 15 more range at each level and additionally does 1250-2750 more damage. Backblast deals 750 more damage, with increased radius.
+Param/Value/AD063F4D=Activate the Thalim SAM system.
 Param/Value/AD1A1A79=<c val="FF0000">Select a item group before you scan.</c>
 Param/Value/AD3AB911=<c val="008000">Ravensword:</c> We'll air drop a satchel charge to breach the RA Facility gate. ETA 30 seconds. Good luck, out.
 Param/Value/AD518587=has killed themself.
@@ -9290,6 +9592,7 @@ Param/Value/AE25988F=<c val="008000">System:</c> Scan 50% complete
 Param/Value/AE3DAB09=<c val="00FF80">KLE Completed
 Param/Value/AE48D3A7=<s val="Military_Title"><c val="FFFFFF">Choose Sandbox Type</c></s>
 Param/Value/AE6498C8=]
+Param/Value/AE67E09A=Elite PMC - All PMC will do 30% more damage and take 20% less damage. PMC will also use additional abilities. Experience gain increased by 30%.
 Param/Value/AE6EF1CC=<s val="Item_Header"><c val="0080FF">
 Param/Value/AEC4CE95=<c val="008000">Ravenwood Main:</c> The final satchel is on its way.
 Param/Value/AED8482D=<c val="008000">Ravenswood Main:</c> A convoy is on its way to pick up the citizens, and refugees are moving in from AO Dasdan, to the east. Provide security for Thalim and the refugees until the convoy arrives. When the objective is complete evacuate AO Thalim.
@@ -9312,7 +9615,7 @@ Param/Value/AFCB211B=Type dev pmc to enable pmc triggers
 Param/Value/AFE125BC=<c val="008000">Outlaw 6:</c> Identify yourself.
 Param/Value/AFE2547B=Kill Both Minervas.
 Param/Value/AFFDADC4=1LT
-Param/Value/B00C7DB9=Adds 5 to dexterity.
+Param/Value/B00C7DB9=Adds 6 to dexterity.
 Param/Value/B011D637=<c val="FF0000">Barbaric cannot be used on MOSes without Riflebutt.</c>
 Param/Value/B016F55E=Generator
 Param/Value/B01C6578=Satellite surveillance has revealed a small presence of Undead near the caves in AO Thalim.
@@ -9335,6 +9638,7 @@ Param/Value/B1DACE9A=<c val="008000">Dr. Rosen:</c> Thats all the samples I need
 Param/Value/B1E25D6A= [
 Param/Value/B1F954CD=: Fire in the desync!
 Param/Value/B2244729=Breach RA Facility Gate
+Param/Value/B2259B32=Scouter SI unlocked.
 Param/Value/B231CA56=dev mutate (type <c val="FF0000">#</c> & name of <c val="FF0000">mutated undead unit</c>)
 Param/Value/B239E83B=<c val="00FF80">Crew Member Extracted
 Param/Value/B2413071=<c val="FF0000">PMC Enabled</c>
@@ -9351,7 +9655,7 @@ Param/Value/B2F02275=<c val="008000">Soldier:</c> Silo energized.
 Param/Value/B2F1673F=Makes all abilities cooldown 15% faster.<n/>(Timers aren't affected but countdown 15% faster)
 Param/Value/B2F4EDFD=<c val="00FF80">Infernus Destroyed
 Param/Value/B2FA7DCB=Time Remaining
-Param/Value/B2FE79AF=Destroy the tunnels(
+Param/Value/B2FE79AF=Investigate RA equipment (
 Param/Value/B30546B3=]
 Param/Value/B3057696=Destroy RA TCPs (
 Param/Value/B30CF2BA=dev pmcsquad (type <c val="FF0000">#</c> for squad type)
@@ -9375,12 +9679,14 @@ Param/Value/B4912C07=Scouter SI unlocked.
 Param/Value/B4BD60FF=<c val="008000">Outlaw 6:</c> The convoy has arrived.
 Param/Value/B4E471DC=Dr. Rosen
 Param/Value/B5164E83=Next rank: <s val="ChatHelp_Terr">
+Param/Value/B532FE45=<c val="00FF80">Targeter Located
 Param/Value/B53FFB59=<c val="00FF80">20 Minute Survival bonus
 Param/Value/B5407A1E=SGT
 Param/Value/B540B90C= [
 Param/Value/B5E2D94D=Do Not Help Dark Sky
 Param/Value/B5E7A768=Remove 1 LN Sentry Gun or Recruit 1 CE
 Param/Value/B6052E43= has initiated vote kick against 
+Param/Value/B6066D95=Computer
 Param/Value/B61A22D3=<c val="FF0000">PMC Enabled</c>
 Param/Value/B61D8E0E= has joined the fireteam.
 Param/Value/B634A0F6= <c val="FF00FF">-Banana Soldiers</c>
@@ -9399,15 +9705,18 @@ Param/Value/B750846E=Destroy the spore colonies before the AO gets overrun.
 Param/Value/B760BD33=<c val="008000">Outlaw 6:</c> Before we do anything, we need to get a feel for this AO. Conduct a KLE with the Police Chief, and we'll go from there.
 Param/Value/B7751EFC=<c val="008000">Outlaw 6:</c> Outlaws, get ready for force-on-force combat. Retain a minimum 5m spread. Remember, they can see our light sources, too, so stay away from flares. Good luck, out.
 Param/Value/B797F9C1=<c val="FF8000">
+Param/Value/B7B557B1=<c val="00FF80">SAM system online
 Param/Value/B7BA1E26=<s val="0UI_LCD">
 Param/Value/B7CB89FE=<s val="AiurChefCenterSize22Bold">
 Param/Value/B7D48066= 
 Param/Value/B804B550=<c val="00FF80">KEC Found
 Param/Value/B825ECD0=<c val="008000">Soldier:</c> How about security?
+Param/Value/B82AE09D=<c val="00FF40">Generalist</c>
 Param/Value/B83D2D5C=US Army
 Param/Value/B8595770=dev camo (type<c val="FF0000"> # </c>for unit(s) selected)
 Param/Value/B8626747=Chapter 2
 Param/Value/B863569B=<c val="008000">Soldier:</c> Alright, get the refugees on the vehicles!
+Param/Value/B86934BE=<c val="008000">Soldier:</c> This site is online now.
 Param/Value/B89ABF6E=15
 Param/Value/B8A9B6A4=<c val="008000">Outlaw 6:</c> The time-stops have detonated! Fight on, outlaws!
 Param/Value/B8BDB2C6=Wait for the seismic resonator to arrive
@@ -9428,6 +9737,7 @@ Param/Value/B9B153C2=<c val="FF0000">Air support unavailable.</c>
 Param/Value/B9B88725=<c val="00FF00">Downloading...86%</c>
 Param/Value/B9CCDD1E=<s val="0UI_LCD">
 Param/Value/B9E14470=<s val="0UI_LCD">
+Param/Value/BA0C3B7C=    <s val="ChatHelp_Prot">All Random:</s><s val="ChatHelp_Terr"> 
 Param/Value/BA25CD8D=Colonel Windsor
 Param/Value/BA2703B3=CW3
 Param/Value/BA27FFA3=<c val="008000">Ravensword:</c> Outlaw 6, a Rock Avalanche phantom just crashed in the AO. Detain the crew before the RA get to them.
@@ -9452,12 +9762,15 @@ Param/Value/BBF1CD52=Mission Impossible
 Param/Value/BBF2112B=<c val="00FF80">Undead Purged
 Param/Value/BC04547D=Neutron Emitter
 Param/Value/BC10473C=Battle Buddy SI unlocked.
+Param/Value/BC1CD2B9=Steel Barrels unlocked.
 Param/Value/BC2E3186=<c val="00FF40">Turned</c>
 Param/Value/BC37F621=Invalid si number.
 Param/Value/BC4B6CDB=<c val="FF0000">Infestation Not Contained</c>
 Param/Value/BC858F6A=<c val="0000FF">Dark Sky:</c> Only one man in this area had the key to the RA Facility's gate. During the evacuation, he never left the AO.
 Param/Value/BCA1B380=<c val="008000">System:</c> Scan complete: Pinging Tier 1s now.
 Param/Value/BCA79EEE=<c val="008000">Intercom:</c> Reinforcements? About time, show yourselves in.
+Param/Value/BCE7B99F=Heavy Artillery SI unlocked.
+Param/Value/BCEF7AD5= cannot be used with Commissioned Officer rank.
 Param/Value/BCF1C1E4=Supply Drop
 Param/Value/BD270EE4=<c val="FFFFFF">First Aid Kit</c>
 Param/Value/BD3D93E0=<c val="00FF80">Juggernaught & RA Forces Destroyed
@@ -9479,6 +9792,7 @@ Param/Value/BE5F25CC=<c val="00FF40">Light Armor</c>
 Param/Value/BE6AB04C=<c val="0000FF">Dark Sky:</c> He must have mutated while he had the key card on him. Kill him and search his body for it!
 Param/Value/BE7652B5=<c val="00FF80">Minervas Eliminated.
 Param/Value/BE863068=/
+Param/Value/BE918BCC=<c val="008000">Soldier:</c> It looks like these are access codes for some kind of... orbital superweapon.
 Param/Value/BEBAC834=US Army
 Param/Value/BEC564EB=
 Param/Value/BF0D33DD=<c val="FF0000">Mission failed.</c>
@@ -9523,12 +9837,16 @@ Param/Value/C1D8B463=Open/Close Spawn Menu<n/>Press F12 to view additional text 
 Param/Value/C1E65828=Radius: 
 Param/Value/C1EB1A82=<c val="008000">Ravensword Main:</c> Col. Windsor's reports put local populations within close proximity of the infected. Patrol the AO and insure that the infection is not propagating among the locals.
 Param/Value/C20A8DAF=<c val="0000FF">Dark Sky:</c> Run! It's gonna blow! What have you done!?
+Param/Value/C22D3E91=Attempting Smithy trigger on unit
 Param/Value/C2502233= has voted to do it ourselves
 Param/Value/C251BBBD=/
 Param/Value/C25F72AD=<c val="FF0000">Repick. To many infantry sdm</c>
+Param/Value/C26AFB26=<c val="FF0000">Stand</n> Here</c>
 Param/Value/C276B373=    <s val="ChatHelp_Prot">WO XP:</s><s val="ChatHelp_Terr"> 
+Param/Value/C27A4C4F=Energy Efficient SI unlocked.
 Param/Value/C29F836B=    <s val="ChatHelp_Prot">Officer XP:</s><s val="ChatHelp_Terr"> 
 Param/Value/C2A789E6=<c val="FF8000">Sequence Terminated.</c>
+Param/Value/C2AB2D3C=Wave Amplifier SI unlocked.
 Param/Value/C2DB533D=(Aura) Increases Attack Speed by 6% and Movement speed by .03 for nearby allies. Decreases Reload and Unjam time by 20%.<n/>
 Param/Value/C2F2E897=
 Param/Value/C312C86A=<s val="0UI_LCD">
@@ -9551,7 +9869,7 @@ Param/Value/C4F0CD1E=Win 10+ Normal Games.
 Param/Value/C5272114=Sprint Bar
 Param/Value/C54CB5A8=<c val="00FF40">Enhanced Scanner</c>
 Param/Value/C567B92C=SSG
-Param/Value/C579A6F5=Gain bonus damage towards massive at the cost of doing less to non-massives.
+Param/Value/C579A6F5=Gives +35% damage against massive targets.
 Param/Value/C59F20E5=Kill Both Ares'.
 Param/Value/C5ADBD60= Enforcer</n>
 Param/Value/C5BB03EA=<c val="008000">Ravensword SpecOps:</c> Supply drop has arrived. Same place we dropped you off Specters.
@@ -9561,6 +9879,7 @@ Param/Value/C60A39B1=<c val="FFFFFF">B</c>
 Param/Value/C6540767=Satchel charge has arrived
 Param/Value/C65674AE=<s val="HeaderForProfile"><c val="FFFFFF">
 Param/Value/C66BC957=Reduces life by 70%, increases damage 50% and .05ms.
+Param/Value/C68D0399=Attempting artillery barrage
 Param/Value/C6B7BE51=<c val="FFFFFF">X</c>
 Param/Value/C6BDD3EF=<c val="FFFFFF">Scan</c>
 Param/Value/C6D0ACF6=<s val="ABChoiceReplayButtonText">
@@ -9589,7 +9908,7 @@ Param/Value/C86EAF5D=<img path="Assets\Textures\btn-upgrade-zerg-meleeattacks-le
 Param/Value/C8740D2A=Reduces Energy Cost of Binoculars by 1.8.<n/>Reduces Energy Cost of Field Camera by 11,<n/>Reduces Energy Cost of Flare Gun by 8.<n/>Reduces Energy Cost of Ion Cannon by 30.<n/>Reduces Energy Cost of Laser Designator by 7.<n/>Reduces Energy Cost of Motion Sensor by 8.<n/>Reduces Energy Cost of Plasma Grenade by 20.<n/>Reduces Energy Cost of Specialized Rounds by 50%
 Param/Value/C879867F=" />
 Param/Value/C896C1E4=Courage
-Param/Value/C8AE1D65=Your squad has been deployed to investigate and destroy any undead and RA assets in the area.
+Param/Value/C8AE1D65=Your squad has been deployed to investigate and destroy any hostiles in the area.
 Param/Value/C8B097C3=<c val="FFFFFF">
 Param/Value/C8BE5089=<c val="00FF80">Tunnel Destroyed
 Param/Value/C8DEA38D=<c val="0000FF">Glutton</c>
@@ -9608,6 +9927,7 @@ Param/Value/C9BB81B3=<c val="008000">Ravensword Main:</c> A thick fog is moving 
 Param/Value/C9C7E9B5=<s val="0UI_LCD"><c val="00FFFF">N/A</c>
 Param/Value/C9DA4501= has killed himself.
 Param/Value/C9FF35C5=Additional security is needed to ensure civilians safety. Placing a sentry guns at strategic points will greatly aid in security.
+Param/Value/CA072C7A=<c val="008000">Soldier:</c> Nothing here. Keep moving.
 Param/Value/CA26D9DD=Defeat Charon & Defeat all Undead Units
 Param/Value/CA3B8B65=Energy Efficient SI unlocked.
 Param/Value/CA51D299=<c val="FF0000">Yeti</c>
@@ -9615,10 +9935,12 @@ Param/Value/CA6226C5=<c val="008000">Ravensword:</c> They can be stopped, howeve
 Param/Value/CA6D0370=<c val="FFFFFF">Claymore</c>
 Param/Value/CA719895=Abort codes downloaded
 Param/Value/CA7D063C=<c val="008000">Shocker 17:</c> Mission accomplished, Shocker Out.
+Param/Value/CAD3CDF4=<c val="008000">Soldier:</c> Computers active. Let's take a look...
 Param/Value/CAD3D56A=A Kratos and Slivan must be killed.
 Param/Value/CB01D8D2=<n/>
 Param/Value/CB282B18=<c val="008000">Ravensword:</c> The only way to collapse it is to set up a seismic resonator to collapse the tunnels. We've got one on the way. ETA 5 minutes, out.
 Param/Value/CB459764=<s val="AiurChefRightSize22Bold">Mos Specific SIs:</s> <s val="AiurChefLeftSize18Bold">
+Param/Value/CB51BCC9=    <s val="ChatHelp_Prot">Elite PMC:</s><s val="ChatHelp_Terr"> 
 Param/Value/CB9AFCEC=dev sirepick (repick si's)
 Param/Value/CBB3AED1=: I never thought anybody would come! Thank you!
 Param/Value/CBBCACBA= </n>
@@ -9644,6 +9966,7 @@ Param/Value/CD6CE9B2=<c val="FFFFFF">Projectile Accelerator</c>
 Param/Value/CD78FEC3=dev banhammer (add debuffs to unit(s) selected)
 Param/Value/CD8B7C88=<s val="0UI_LCD">
 Param/Value/CDBB1D68=is IMDC.
+Param/Value/CDC5A489=All Random - Players will automatically have their classes chosen for them. Experience gain is increased by 10%.
 Param/Value/CDCDB9FA=<c val="FF0000">Your gun has overheated. You cannot fire while it cools down.</c>
 Param/Value/CDE5B3C1=<c val="FFFFFF">3</c>
 Param/Value/CDEE5B6B=<c val="00FF80">
@@ -9706,6 +10029,8 @@ Param/Value/D2A0660D=50+ PMC Survival Wins.</n>Unlocks Ranger Decal.
 Param/Value/D2F4BF81=<c val="FFFFFF">Atlas-X50</c>
 Param/Value/D2F88764=20
 Param/Value/D2FDD572= Heavy Gunner
+Param/Value/D3014285=Access RA facility computers (
+Param/Value/D3018023= cannot be used with Enlisted rank.
 Param/Value/D31228D5=Invalid level.
 Param/Value/D3244A86=invalid command
 Param/Value/D327DEC0=I've got minor enemy contact over.
@@ -9722,7 +10047,7 @@ Param/Value/D3D96130=%
 Param/Value/D3DA2B9B=Default
 Param/Value/D3F995F7=<c val="008000">Eagle 2-4:</c>  I've got visual contact. Surveying terrain.
 Param/Value/D409649A=Investigate IFF Anomaly
-Param/Value/D41F2B53=<c val="008000">Ravenwood Main:</c> Aerial reconnaissance shows active computer equipment in Balaad. Investigate it.
+Param/Value/D41F2B53=<c val="008000">Ravenwood Main:</c> Stand by for an intel update.
 Param/Value/D42D72E5=Gain an Additional Charge to Blood Transfusion and Nano-Injection.<n/>Sets Cooldown for Blood Transfusion to 30 Seconds.<n/>Sets Cooldown for Nano-Injection to 20 Seconds.<n/>Nano Injection recovers an additional 50 Health.<n/>Improved Nano Injection recovers an additional 150 Health.
 Param/Value/D43C208B=<c val="0000FF">Dark Sky:</c> They have been inoperable and unused for some time, and their Kinetic Energy Capacitors have been removed. You need to obtain 3 KECs to get them up and running again.
 Param/Value/D463426E=Destroy the tunnels(
@@ -9750,7 +10075,7 @@ Param/Value/D586E2C5=<c val="00FF80">PMC Survival bonus
 Param/Value/D5AA0B2C=Intense Weather - Increases the rate of experience gain by 20%, but the season's weather effect will begin at the start of the game and never relent along with having a greater effect.
 Param/Value/D5EA1898=US Army
 Param/Value/D609152C=<n/>
-Param/Value/D61398AD=Increases weapon range by 2 and adds 15 range invisible detection.
+Param/Value/D61398AD=Increases weapon range by 2, vision range by 3, and adds 15 range invisible detection.
 Param/Value/D6245F54=Infected Civilian
 Param/Value/D627753C=has been killed in action.
 Param/Value/D6399B42=<c val="008000">ISR recalibrated.</c>
@@ -9768,6 +10093,7 @@ Param/Value/D6EC33BC=?
 Param/Value/D723D8F6=Air threat
 Param/Value/D73DBCEE=<c val="FF0000">Helicopter Destroyed
 Param/Value/D7440498=Chapter 4
+Param/Value/D7499A28=<c val="008000">Soldier:</c> SAM system coming online.
 Param/Value/D74FB83D=<c val="FF0000">Immussilus</c>
 Param/Value/D7543C3C= xp lost.
 Param/Value/D771D66E=US Army
@@ -9830,7 +10156,6 @@ Param/Value/DB8B70A3=</n><s val="Item_Description">Reveals Terrain & Cloaked Uni
 Param/Value/DB8CF2D4=Tier 2 - Increases the rate of experience gain by 30% in campaign and 20% in survival, but an onslaught of tier 2 zombies will spawn. Cannot be used with Tier 3 or Tier 1 mods.
 Param/Value/DB9739ED=ABU camo pattern unlocked.
 Param/Value/DB9C9040=Hard mode is the next step after mastering normal. It is for experienced players who want to face a tough, challenging enemy.<n/>The XP reward is worth the extra difficulty.
-Param/Value/DBA9E623=Satchel Charge
 Param/Value/DBC05CDF=<s val="ChatHelp_Prot">XP Gained:</s> <s val="ChatHelp_Terr">
 Param/Value/DBD4E1DA=<c val="008000">Ravensword Main:</c> Conduct a KLE with the current highest ranking officer, located at these coordinates. Sending personnel file now.
 Param/Value/DBE88A99=    <s val="ChatHelp_Prot">Biometric ID Recognized:</s><s val="ChatHelp_Terr"> 
@@ -9841,6 +10166,7 @@ Param/Value/DC2EFDCF=Air threat
 Param/Value/DC475EB2=<c val="008000">Ravensword Main:</c> ISR is picking up a large group of infested approaching from the southwest headed towards Balaad.
 Param/Value/DC82542E=<c val="008000">Civilian:</c> Help! What is happening to me?
 Param/Value/DC8528B7=Top Tier
+Param/Value/DC8E09E2=<c val="00FF80">Infested advance destroyed
 Param/Value/DC99D313=US Army
 Param/Value/DCDDCA92=<n/><c val="77BBBB">CO: </c>
 Param/Value/DCEFFBDC=<c val="FF0000">Cursed</c>
@@ -9851,6 +10177,7 @@ Param/Value/DD42F24B=Meet Dr. Rosen
 Param/Value/DD553E53=<c val="008000">Ravensword:</c> A phantom has arrived.
 Param/Value/DD7EB5CA=<c val="008000">Outlaw 6:</c> BMDD network restored, signal strength weak.
 Param/Value/DD894BD2=<c val="FFFFFF">Accessory</c>
+Param/Value/DDCB1C77=Access RA computers
 Param/Value/DDDC67F9=<c val="008000">Soldier:</c> Contact! I'm taking fire!
 Param/Value/DDEA3397=dev god (set selected unit(s) hp/en to unlimited)
 Param/Value/DDEFA237=] 
@@ -9914,6 +10241,7 @@ Param/Value/E2750AB7=<c val="FFFFFF">G</c>
 Param/Value/E27781D2=<c val="FFFFFF">K</c>
 Param/Value/E2808051=<c val="00FF80">4 Bunkers Intact
 Param/Value/E2953DAB=<s val="0UI_LCD">
+Param/Value/E295CB43=It's time to destroy Smithy and all the remaining undead in AO Thalim.
 Param/Value/E2CF6098= Sentry guns placed
 Param/Value/E2E188E1= <c val="DDDD00">-Rifle</c>
 Param/Value/E2F27387=<c val="008000">Outlaw 6:</c> BMDD network restored, signal strength strong.
@@ -9953,6 +10281,9 @@ Param/Value/E4CCC36E= Combat Medic</n>
 Param/Value/E4EA6D64=<c val="00FF40">Baneling</c>
 Param/Value/E4F7C943=<c val="00FF80">Research Collected
 Param/Value/E4FBC154=Gold camo pattern unlocked.
+Param/Value/E4FD1E38=Purge the infestation.
+Param/Value/E500BED3=Congratulations for winning Nightmare Rifle. You have earned 'Night' Camo!!
+Param/Value/E51941F2=Enhanced Scanners unlocked.
 Param/Value/E5396D1D=<c val="FF0000">Unknown:</c> Outlaw 6, this AO is under control. RTB.
 Param/Value/E548E163= [
 Param/Value/E5578CEE=<s val="0UI_LCD">
@@ -9971,11 +10302,14 @@ Param/Value/E663163B=<s val="Item_Description"><c val="FF0000">Sentry Placement 
 Param/Value/E673E66D=<c val="FFFFFF">Stop Spawn Loop 3</c>
 Param/Value/E6A1FB22=    <s val="ChatHelp_Prot">WO XP:</s><s val="ChatHelp_Terr"> 
 Param/Value/E6C73E7B=<c val="008000">Outlaw 6:</c> Good job escorting that convoy.
+Param/Value/E6C88963=Access RA airport computers
 Param/Value/E6CE208E=<c val="00FF80">PMC Survival bonus
+Param/Value/E703F494=<n/>
 Param/Value/E72A7700=</n><s val="Item_Description">Regenerates +190 Energy</s>
 Param/Value/E7309875= [
 Param/Value/E736F2E0=<c val="FF0000">Mission failed.</c>
 Param/Value/E7841F3E=<c val="FFFFFF">Mini Infantry SDM</c>
+Param/Value/E784F27E=<c val="FF0000">Stand</n> Here</c>
 Param/Value/E78DDECE=Open/Close Skill Identifier [SI] Screen</n>SI's Offer Various Perks To Improve Your Hero
 Param/Value/E7E4EFF9=<c val="FFFFFF">M1014</c>
 Param/Value/E7EAD2CB=<n/>
@@ -9983,9 +10317,11 @@ Param/Value/E7F342A9=<c val="FFFFFF">M79 Flamethrower</c>
 Param/Value/E81D8B34=)
 Param/Value/E828882A=Defeat Smithy In A PMC Survival Game.
 Param/Value/E8551A66=<c val="008000">Police Officer:</c> Thank you for relieving us. We'll leave in 30 seconds.
+Param/Value/E85A5F5B=+30% XP
 Param/Value/E8933C93=<c val="0000FF">Swarmer</c>
 Param/Value/E8DA023E=Hotkeys
 Param/Value/E910B216=)
+Param/Value/E920B532=Battle Buddy SI unlocked.
 Param/Value/E931BEB0=Vote Kick
 Param/Value/E94E087F=CAS Inbound
 Param/Value/E95A141A= 
@@ -9997,7 +10333,6 @@ Param/Value/E9DDDAD4=
 Param/Value/E9DF7FA7= Fire Support Specialist**</n>
 Param/Value/E9EC67D6=dev reveal -> black sheep wall
 Param/Value/E9F0F848=Destroy The Thresher Maw
-Param/Value/EA0322EF=    <s val="ChatHelp_Prot">Tier 2:</s><s val="ChatHelp_Terr"> 
 Param/Value/EA15B91D="<c val="008000">AUC Command:</c> CAS is on station."
 Param/Value/EA28FB61=<c val="FF0000">Lacerti</c>
 Param/Value/EA684B0A=<c val="008000">Ravenswood Main:</c> CAS is on station.
@@ -10006,7 +10341,6 @@ Param/Value/EAA0158E=<n/><c val="77BBBB">Achievements:<c val="FFC600">
 Param/Value/EAA789FF=<s val="0UI_LCD">
 Param/Value/EAB68B12=<c val="FFFFFF">Start/Stop</c>
 Param/Value/EAF6A37F=Input "-s ##" to set shells per mission (1-10).
-Param/Value/EB24A4C6=+30% XP
 Param/Value/EB2C0A25=Excuse me, but you'll have to come with us.
 Param/Value/EB2D39D4=Combat Medic decal unlocked.
 Param/Value/EB35914E=<c val="008000">Ravensword Main:</c> Uploading their positions to our TacNet now. Escort them to the evac point marked at LZ Lions in east highlands.
@@ -10028,6 +10362,7 @@ Param/Value/EC85FA4F=<c val="00FF40">Boomer</c>
 Param/Value/EC9E0FBF=<c val="FF8000">LN Squad Designated Marksman:  </c>
 Param/Value/ECB4B90A=<c val="008000">Soldier:</c> Satchel charge placed.
 Param/Value/ECDD6B42=<c val="00FF40">Anti Tank</c>
+Param/Value/ED180548=<c val="008000">Soldier:</c> We have it! Satellite weapon activating.
 Param/Value/ED19DA85=SFC
 Param/Value/ED243EA5=Select Mode
 Param/Value/ED32E6F8=<c val="00FF40">Born To Lead</c>
@@ -10040,6 +10375,7 @@ Param/Value/EDF4F787= Platoon Leader*</n>
 Param/Value/EE0782EA=Before we conduct security operations, we must get a feel for this AO. Conducting a KLE (Key Leader Engagement) with the Police Commissioner is a good place to start.
 Param/Value/EE10C5F4=US Army
 Param/Value/EE234628=<c val="008000">Thunderbolt-7:</c> Engaging targets.
+Param/Value/EE2C7542= <c val="FF0000">-Genesis</c></n>
 Param/Value/EE2D7BE3=Default
 Param/Value/EE54D00A=An unexpected level of Fuel Discharge Test was learnt.
 Param/Value/EEA317EB=Defeat Thanatos
@@ -10053,6 +10389,7 @@ Param/Value/EEF6E3E2=<c val="008000">Col Windsor:</c> Our first priority should 
 Param/Value/EF105955=Massive Kills: 
 Param/Value/EF26F3A2=SYL Unlocks Have Been Received & Saved To Bank.
 Param/Value/EFC08090=Distribution: 
+Param/Value/EFC4D449=Computer
 Param/Value/F01C60BC=Sand Box mode gives you the freedom to spawn what you want. Modifiers cannot be applied to this mode.
 Param/Value/F031C8B3=<c val="008000">Soldier:</c> A vehicle has been destroyed!
 Param/Value/F04E4812=s found, pinging locations now.
@@ -10122,6 +10459,7 @@ Param/Value/F5F0A441=]
 Param/Value/F5F17D73=Shadow Convoy
 Param/Value/F6082DA6=
 Param/Value/F61226AC=<n/>
+Param/Value/F62D21B5=Grenadier SI unlocked.
 Param/Value/F63C18C8=<s val="ChatHelp_Prot">Biometric ID saved. WO XP:</s> <s val="ChatHelp_Terr">
 Param/Value/F6544151=Chapter 4
 Param/Value/F65E41F9=<c val="008000">Outlaw 6:</c> That convoy will really put the hurt on the outlying AOs.
@@ -10147,6 +10485,7 @@ Param/Value/F8762CAE=<c val="00FF40">Advanced Warfighter</c>
 Param/Value/F8979F99=Enable armor scan
 Param/Value/F897BA94=<c val="0000FF">Horror</c>
 Param/Value/F8B871B8=<s val="HeaderForProfile"><c val="FFFFFF">0</s></c>
+Param/Value/F8D39257=)
 Param/Value/F8E3600F= </n>
 Param/Value/F8F37ABC=<s val="AiurChefRightSize22Bold">Mos Specific SIs:</s> <s val="AiurChefLeftSize18Bold">
 Param/Value/F8F38DAC= Mags)
@@ -10168,6 +10507,7 @@ Param/Value/F9F4B1B6=Career Revives:
 Param/Value/FA14B01D=<c val="008000">Outlaw 6:</c> Ravenswood, the satchel got destroyed.
 Param/Value/FA309389=dev pause (pause unit(s) selected)
 Param/Value/FA474A9F=Adds 5 to fitness.
+Param/Value/FA590D5C=Bring SAM system online
 Param/Value/FA79E667=<c val="00FF40">Swollen</c>
 Param/Value/FAA194E7=
 Param/Value/FAA7B5DC=This T1 entity has entered from outside the AO and poses a great threat to current operations.
@@ -10193,6 +10533,7 @@ Param/Value/FC0B2FC2=Bio-Sample
 Param/Value/FC5B2C2F=Destroy the tunnels(
 Param/Value/FC6A6432=PMC Kills: 
 Param/Value/FCC5F8FB=<c val="0080C0">TL:</c> Attack the <c val="FF8000">
+Param/Value/FCEC9136=Attempting Smithy trigger init
 Param/Value/FD1B1039=<c val="008000">Ravenswood Main:</c> Be advised, a large T1 entity has entered the AO.
 Param/Value/FD217EC4=Mission Time
 Param/Value/FD2902C8=Default
@@ -10200,6 +10541,7 @@ Param/Value/FD36BF49=30<n/>
 Param/Value/FD532329=<s val="ChatHelp_Prot">Biometric ID:</s> <s val="ChatHelp_Terr">
 Param/Value/FD698D4F=MODE VOTED<n/><n/>
 Param/Value/FD747C71=Next Phantom
+Param/Value/FD8543C6=Find out what RA is doing in AO Thalim.
 Param/Value/FD8C89C0=<c val="0000FF">Dark Sky:</c> My scouts report a large force of tier 1 hostiles moving towards our AO. I've got a little surprise for them.
 Param/Value/FE10EC76=Rock Avalanche camo pattern unlocked.
 Param/Value/FE2F2FB8=<c val="FFFFFF">M241 MMG</c>
@@ -10231,10 +10573,17 @@ Param/Value/FFEA1ACD=<c val="00FF80">1 Bunker Intact
 Param/Value/FFEDBA46=Tunnel
 Param/Value/FFF4903D=<c val="00FF80">BDSs Recharged
 Param/Value/FFF9CC5B=Commissioned Officer
+Param/Value/FFF9CC80=<c val="00FF40">Trigger Discipline</c>
 Partial Burst=Incomplete Burst
 Rank/HealPlox=Local Drug Dealer
-Rank/Horror=<c val="800000">Y ME NO MASSIVE?</c>
-Rank/Krill=<c val="FF0000">H</c><c val="EA0014">o</c><c val="D50029">t</c><c val="C0003E"> </c><c val="AA0054">&</c><c val="950069"> </c><c val="80007E">S</c><c val="6B0093">i</c><c val="5500A9">n</c><c val="4000BE">g</c><c val="2B00D3">l</c><c val="1600E8">e</c>
+Rank/Horror=Tier 2 (<c val="2080E0">Skill Issue</c>)
+Rank/Krill=Tier 2 (<c val="FF0000">H</c><c val="EA0014">o</c><c val="D50029">t</c><c val="C0003E"> </c><c val="AA0054">&</c><c val="950069"> </c><c val="80007E">S</c><c val="6B0093">i</c><c val="5500A9">n</c><c val="4000BE">g</c><c val="2B00D3">l</c><c val="1600E8">e</c>)
+Rank\ArchVile=Tier 2 (<c val="FF5000">This is fine.</c>)
+Rank\Boomer=Tier 2 (<c val="00FF00">WATCH THE ITEMS</c>)
+Rank\Hopper=Tier 2 (<c val="FFFF00">The Hoppening</c>)
+Rank\Morbus=Tier 2 (<c val="009D00">MORBIN' TIME</c>)
+Rank\Swollen=Tier 2 (<c val="00FF00">RIP item users</c>)
+Rank\Tier2=Tier 2
 Reload=
 RequirementNode/Tooltip/14246221726=Learn EM-25r - Level 1
 RequirementNode/Tooltip/And1284806349GTECountAbilLogisticalAdjustmentsCompleteOnlyAtUnit1LTCountUnitReconDroneQueuedOrBetter1=Level 1 Logistical Adjustments and
@@ -10287,6 +10636,7 @@ RequirementNode/Tooltip/Eq2432695962CountUpgradeCPLCompleteOnlyTechTreeCheat1=CP
 RequirementNode/Tooltip/Eq2498533345CountUpgradeWO4CompleteOnlyTechTreeCheat1=WO4
 RequirementNode/Tooltip/Eq2544355274CountUpgradeBGENCompleteOnlyTechTreeCheat1=BGEN
 RequirementNode/Tooltip/Eq2699008109CountUpgradeSpectatorCompleteOnly1=Spectator
+RequirementNode/Tooltip/Eq2708064578CountBehaviorSwappingRoundsCompleteOnlyAtUnit0=Not Swapping Rounds
 RequirementNode/Tooltip/Eq2821025729CountAbilSoldierSkillsCompleteOnlyAtUnit4=Soldier Skills Level 4
 RequirementNode/Tooltip/Eq2821025729CountBehaviorSoldierSkills4CompleteOnlyAtUnit1=Soldier Skills Level 4
 RequirementNode/Tooltip/Eq2874532692CountUpgradeDefensiveAdjustmentsCompleteOnly3=Defensive Adjustments - Level 3
@@ -10375,8 +10725,8 @@ RequirementNode/Tooltip/GTE1619583487CountAbilLeadershipSkillsCompleteOnlyAtUnit
 RequirementNode/Tooltip/GTE1639004225CountAbilStrafeRunCompleteOnlyAtUnit1=JFO Level 1
 RequirementNode/Tooltip/GTE1741728965CountAbilExplosivesExpertCompleteOnlyAtUnit2=Explosives Expert Level 2
 RequirementNode/Tooltip/GTE174548600CountUpgradeEngineeringSkillsCompleteOnly1=Engineering Skills Level 1
+RequirementNode/Tooltip/GTE1773106101CountBehaviorSpecterSnipesLoadedCompleteOnlyAtUnit1=Modular Snipe Loaded
 RequirementNode/Tooltip/GTE1791906363CountAbilSoldierSkillsCompleteOnlyAtUnitTechTreeCheat3=Soldier Skills level 3
-RequirementNode/Tooltip/GTE1805456185CountUpgradeCASOnStationCompleteOnly1=CAS On Station
 RequirementNode/Tooltip/GTE1809330113CountAbilRiflemanSkillsCompleteOnlyAtUnit4=Rifleman Skills Level 4
 RequirementNode/Tooltip/GTE1843858759CountUpgradeLogisticalAdjustmentsCompleteOnly2=Logistical Adjustments - Level 2
 RequirementNode/Tooltip/GTE1858328212CountAbilReconExpertCompleteOnlyAtUnit4=Recon Expert Level 4
@@ -10527,6 +10877,7 @@ RequirementNode/Tooltip/LTE3371703760CountAbilRepulsionSkillsCompleteOnlyAtUnitT
 RequirementNode/Tooltip/LTE3371703760CountAbilSafeguardSkillsCompleteOnlyAtUnitTechTreeCheat1=Specialist Skills Level 1
 RequirementNode/Tooltip/LTE3371703760CountAbilSpecialistSkillsCompleteOnlyAtUnitTechTreeCheat1=Specialist Skills Level 1
 RequirementNode/Tooltip/LTE3447350149CountBehaviorRocketPodCompleteOnlyAtUnit0=Security Level 2
+RequirementNode/Tooltip/LTE3827606705CountBehaviorSpecterSnipesLoadedCompleteOnlyAtUnit1=1 or fewer Modular Sniper rounds loaded
 RequirementNode/Tooltip/LTE3960867897CountUnitM2SentryGunQueuedOrBetter2=Max 3 Sentry
 RequirementNode/Tooltip/LTE4095751053CountUnitM2SentryGunQueuedOrBetter1=Max 2 Sentry
 RequirementNode/Tooltip/LTE724820431CountUnitM2SentryGunQueuedOrBetter0=Max 1 Sentry
@@ -10604,6 +10955,7 @@ Unit/LifeArmorName/TerranBuildingPlating=Building Plating
 Unit/LifeArmorName/TerranInfantryArmor=Land Warrior System
 Unit/LifeArmorName/TerranInfantryArmorHeavy=Land Warrior System - Heavy
 Unit/LifeArmorName/TerranShipPlating=Aircraft Frame Plating
+Unit/LifeArmorName/TerranVehiclePlating=Vehicle Plating
 Unit/LifeArmorName/Vesania30=Advanced Exoskeleton
 Unit/LifeArmorName/ZergGroundArmor=<c val="FF0000">Carapace</c>
 Unit/LifeArmorName/ZergLacertiArmor=Zerg Chitinous Plating
@@ -10616,6 +10968,7 @@ Unit/Name/AA12=AA-12
 Unit/Name/AH25Hunter=AH-25 Hunter
 Unit/Name/AH32Viper=AH-32 Viper
 Unit/Name/AH64Apache=AH-64 Apache
+Unit/Name/ANR=Automated Nanite Resuscitator
 Unit/Name/APRounds=AP Rounds
 Unit/Name/AS50Bipod=AS50 Custom
 Unit/Name/ATLASX50=ATLAS-X50
@@ -10636,6 +10989,7 @@ Unit/Name/Ares=Ares
 Unit/Name/Aspectus=Aspectus
 Unit/Name/Assaultman=Assaultman
 Unit/Name/Assaultman2=Assaultman
+Unit/Name/AutomatedNaniteResuscitator=Automated Nanite Resuscitator
 Unit/Name/AutomaticRifleman=Automatic Rifleman
 Unit/Name/AutomaticRifleman2=Automatic Rifleman
 Unit/Name/BDS=BDS
@@ -10810,6 +11164,7 @@ Unit/Name/IDMR2=IDMR-2
 Unit/Name/IPR=IPR
 Unit/Name/ISBot=IS Bot
 Unit/Name/ISDrone=IS Drone
+Unit/Name/ISRTower=ISR Tower
 Unit/Name/ISS7=ISS-7
 Unit/Name/Ignis=Ignis
 Unit/Name/Ignis20=Ignis 2.0
@@ -10840,6 +11195,7 @@ Unit/Name/KineticIntegrator=Kinetic Integrator
 Unit/Name/KingDarreus=King Darreus
 Unit/Name/Kraith=Kratos
 Unit/Name/Krill=Krill
+Unit/Name/LAV25Recon=LAV-25 Recon
 Unit/Name/LLDR=LLDR
 Unit/Name/LMTV=LMTV
 Unit/Name/LN68WCombatMedic=LN 68W Combat Medic
@@ -10895,6 +11251,7 @@ Unit/Name/MK44SentryGun2=MK44 Sentry Gun
 Unit/Name/MK44SentryGunPacked=MK44 Sentry Gun Packed
 Unit/Name/MK79SentryGun=MK79 Sentry Gun
 Unit/Name/MK79SentryGunPacked=MK79 Sentry Gun Packed
+Unit/Name/MLRSRocket=MLRS Rocket
 Unit/Name/MOBattleWalker=Mk2 Light Walker
 Unit/Name/MOCBattleWalker=BattleWalker
 Unit/Name/MOCombatWalker=Heavy Walker
@@ -10931,6 +11288,7 @@ Unit/Name/OrbitalSatelliteTargeter=Orbital Satellite Targeter
 Unit/Name/OrbitalSupportReconnaissance=Orbital Support Reconnaissance
 Unit/Name/OrbitalSupportSpecialist=Orbital Support Specialist
 Unit/Name/OrbitalSupportSpecialist2=Orbital Support Specialist
+Unit/Name/PD3Shepherd=PD-3 Shepherd
 Unit/Name/PR34E=PR34-E
 Unit/Name/PR42C=PR42-C
 Unit/Name/PSDE=Gravity Shifter
@@ -10978,14 +11336,17 @@ Unit/Name/RAGrenadier=RA Grenadier
 Unit/Name/RAHacker=RA Hacker
 Unit/Name/RAHuggerBot=RA "Hugger" Bot
 Unit/Name/RAJavelinGunner=RA Javelin Gunner
+Unit/Name/RALAV25Recon=RA LAV-25 Recon
 Unit/Name/RALaserDroid=RA Laser Droid
 Unit/Name/RAM1Abrams=RA M1 Abrams
+Unit/Name/RAM270MLRS=RA M270 MLRS
 Unit/Name/RAM2BradleyIFV=RA M2 Bradley IFV
 Unit/Name/RAPhantomCrew=RA Phantom Crew
 Unit/Name/RARifleman=RA Rifleman
 Unit/Name/RARiotControl=RA Riot Control
 Unit/Name/RASniper=RA Sniper
 Unit/Name/RASpecialForces=RA Special Forces
+Unit/Name/RASpotter=RA Spotter
 Unit/Name/RASquadDesignatedMarksman=RA Squad Designated Marksman
 Unit/Name/RASquadLeader=RA Squad Leader
 Unit/Name/RATechnician=RA Technician
@@ -11047,6 +11408,7 @@ Unit/Name/Sludge=Sludge
 Unit/Name/Smithy=Smithy
 Unit/Name/SmokeGrenade=Smoke Grenade
 Unit/Name/SmokeGrenade2=Smoke Grenade
+Unit/Name/Snipe Missile=Missile Snipe Bullet
 Unit/Name/SolarArmor=Solar Armor
 Unit/Name/SolarBeam=Solar Beam
 Unit/Name/Specator=Spectator.
@@ -11131,10 +11493,10 @@ UnitKillRan=
 UnitKillRank=
 UnitKillRank/Apiary=Swarm Nest
 UnitKillRank/Arachnathid=Brawler
-UnitKillRank/Ares=Hunter Patriarch
+UnitKillRank/Ares=Tier 1 (Hunter Patriarch)
 UnitKillRank/Cacumen=Abomination
 UnitKillRank/ChaosEvilDOOM=Chaos Templar King
-UnitKillRank/Cursed=Inorganic
+UnitKillRank/Cursed=Tier 1 (<c val="FF0000">Literally Toxic</c>)
 UnitKillRank/DOOM=Developer
 UnitKillRank/Darreus=Titan Bug
 UnitKillRank/Dilophosaur=Pepper Spray
@@ -11230,6 +11592,7 @@ Upgrade/Name/DevOnly=Dev Only
 Upgrade/Name/DroneTechnology=Drone Technology
 Upgrade/Name/EM25rLevel2=EM-25r Level 2
 Upgrade/Name/EM25rLevel3=EM-25r Level 3
+Upgrade/Name/ElitePMC=Elite PMC
 Upgrade/Name/EnergyConservation=Energy Conservation
 Upgrade/Name/EnergyEfficient=Energy Efficient
 Upgrade/Name/EngineeringSkills=Engineering Skills
@@ -11283,6 +11646,7 @@ Upgrade/Name/PMC=PMC
 Upgrade/Name/Party=Party
 Upgrade/Name/PenetratorRoundLevelup=Penetrator Round Levelup
 Upgrade/Name/Phantasm=Phantasm
+Upgrade/Name/PinpointPrecision=Pinpoint Precision
 Upgrade/Name/PinpointRapidFire=Pinpoint Rapid Fire
 Upgrade/Name/Pyromaniac=Pyromaniac
 Upgrade/Name/RadioMan=Radio Man
@@ -11311,8 +11675,11 @@ Upgrade/Name/SnipeLevelup=Snipe Levelup
 Upgrade/Name/SpecialForces=Special Forces
 Upgrade/Name/SpecialistSkills2=Specialist Skills 2
 Upgrade/Name/Spectator=Spectator
+Upgrade/Name/SpecterMunitionsUpgrades=Specter Munitions Upgrades
 Upgrade/Name/SpecterSkills1=Specter Skills 1
+Upgrade/Name/SpecterSkills3=Specter Skills 3
 Upgrade/Name/SpecterSkillsbinodrone=Specter Skills bino/drone
+Upgrade/Name/SpecterWeaponsTraining=Specter Weapons Training
 Upgrade/Name/SteelBarrels=Steel Barrels
 Upgrade/Name/StrengthTraining=Strength Training
 Upgrade/Name/SubmachineGunCritical=Submachine Gun Critical
@@ -11328,6 +11695,7 @@ Upgrade/Name/WO3=WO3
 Upgrade/Name/WO4=WO4
 Upgrade/Name/WO5=WO5
 Upgrade/Name/WPUpgrade=WP Upgrade
+Upgrade/Name/WardenElite=Warden Elite
 Upgrade/Name/WaveAmplifier=Wave Amplifier
 UserData/DevHandles/Adrian_Handle=1-S2-1-1087718
 UserData/DevHandles/HighSeeker_Handle=3-S2-1-584020
@@ -11413,6 +11781,7 @@ Weapon/Name/BattleRifleMk2=Battle Rifle Mk.2
 Weapon/Name/BattleWalkerArmament=Mk2 Light Walker Gun
 Weapon/Name/BioSpecialistWeapon=BioSpecialistWeapon
 Weapon/Name/BitchSlap=Bitch Slap
+Weapon/Name/Bofors40mmAutocannon=Bofors 40mm Autocannon
 Weapon/Name/BruchusClaws=Bruchus Claws
 Weapon/Name/CacumenSledge=Cacumen Sledge
 Weapon/Name/Carbine=Carbine
@@ -11496,15 +11865,22 @@ Weapon/Name/LickerClaws=Licker Claws
 Weapon/Name/LightPlasmaCannon=Light Plasma Cannon
 Weapon/Name/LividClaws=Livid Claws
 Weapon/Name/Longsword=Longsword
+Weapon/Name/M242BushmasterChaingun=M242 Bushmaster Chaingun
 Weapon/Name/M242BushmasterHE=M242 Bushmaster HE
 Weapon/Name/M25GrenadeLauncher=M25 Grenade Launcher
 Weapon/Name/MATV50Cal=M-ATV .50 Cal
+Weapon/Name/MLRSRocketBarrage=MLRS Rocket Barrage
 Weapon/Name/MachineGun=Machine Gun
 Weapon/Name/MachineGunCyborg=Machine Gun
 Weapon/Name/MetasisAttack=Metasis Attack
 Weapon/Name/MinervaFist=Minerva Fist
 Weapon/Name/Mk47Mod0=Mk47 Mod 0
 Weapon/Name/MobileSAMs=Mobile SAMs
+Weapon/Name/ModularSniperAP=Modular Sniper (AP)
+Weapon/Name/ModularSniperFeedback=Modular Sniper (Feedback)
+Weapon/Name/ModularSniperHollowPoint=Modular Sniper (Hollow Point)
+Weapon/Name/ModularSniperStandard=Modular Sniper (Standard)
+Weapon/Name/ModularSniperTracer=Modular Sniper (Tracer)
 Weapon/Name/MorbusSludge=Morbus Sludge
 Weapon/Name/MotherFangs=Mother Fangs
 Weapon/Name/Mounted20mmL70PFF=Mounted 20mm L/70 PFF
@@ -11571,6 +11947,11 @@ Weapon/Name/Shotgun=Shotgun
 Weapon/Name/ShredderClaws=Shredder Claws
 Weapon/Name/SlivanClaws=Slivan Claws
 Weapon/Name/SniperRifle=Sniper Rifle
+Weapon/Name/SpecterSMGAP=Specter SMG (AP)
+Weapon/Name/SpecterSMGFeedback=Specter SMG (Feedback)
+Weapon/Name/SpecterSMGHP=Specter SMG (Hollow Point)
+Weapon/Name/SpecterSMGStandard=Specter SMG (Standard)
+Weapon/Name/SpecterSMGTracer=Specter SMG (Tracer)
 Weapon/Name/SpitterSpit=Spitter Spit
 Weapon/Name/SquadAutomaticWeapon=Squad Automatic Weapon
 Weapon/Name/SquadAutomaticWeaponLN=Squad Automatic Weapon
@@ -11597,6 +11978,7 @@ Weapon/Name/UncleanClaws=Unclean Claws
 Weapon/Name/UnknownWeapon=D20 Laser Rifle Bounce 2
 Weapon/Name/UnwillingClaws=Unwilling Claws
 Weapon/Name/Vesania30Weapon=M224 Portable Ordnance System
+Weapon/Name/Vesania30Weapon2=M224 Portable Ordnance Concussion
 Weapon/Name/VesaniaGrenadeLauncher=Vesania Grenade Launcher
 Weapon/Name/Viper30mmChainGun=Viper 30mm Chain Gun
 Weapon/Name/VoidBlast=Void Blast
@@ -11633,6 +12015,7 @@ Weapon/Tip/AssaultRifleSLMini=Each point of Enemy Armor reduces damage by 1.<n/>
 Weapon/Tip/BaronFist=<c val="FFFF8A">attack type: Blunt</c>
 Weapon/Tip/BattleRifleMk2=Each point of Enemy Armor reduces damage by 1.<n/>Damage Type: Ranged<n/><n/>Rule#2: Double-Tap
 Weapon/Tip/BattleWalkerArmament=Each Point of Armor on the enemy target reduces damage dealt by 1.<n/>Damage Type: Ranged<n/>
+Weapon/Tip/Bofors40mmAutocannon=Each Point of Armor on the enemy target reduces damage dealt by 2.<n/>Damage Type: Ranged<n/>
 Weapon/Tip/BruchusClaws=<c val="FFFF8A">attack type: Slashing</c>
 Weapon/Tip/CacumenSledge=<c val="FFFF8A">attack type: Blunt</c>
 Weapon/Tip/Carbine=Each point of Enemy Armor reduces damage by 1.<n/>Damage Type: Ranged
@@ -11703,15 +12086,22 @@ Weapon/Tip/LacertiTalons=<c val="FFFF8A">attack type: Slashing</c>
 Weapon/Tip/LeaperClaws=<c val="FFFF8A">attack type: Slashing</c>
 Weapon/Tip/LickerClaws=<c val="FFFF8A">attack type: Slashing</c>
 Weapon/Tip/LividClaws=<c val="FFFF8A">attack type: Slashing</c></n>Leeches health equal to 10x the damage dealt by this attack!
+Weapon/Tip/M242BushmasterChaingun=Each Point of Armor on the enemy target reduces damage dealt by 2.<n/>Damage Type: Ranged<n/>
 Weapon/Tip/M242BushmasterHE=Each Point of Armor on the enemy target reduces damage dealt by 2.<n/>Damage Type: Ranged<n/>
 Weapon/Tip/M25GrenadeLauncher=Each point of Enemy Armor reduces damage by 4.<n/>Damage Type: Explosive
 Weapon/Tip/MATV50Cal=Each Point of Armor on the enemy target reduces damage dealt by 1.<n/>Damage Type: Ranged<n/>
+Weapon/Tip/MLRSRocketBarrage=Each Point of Armor on the enemy target reduces damage dealt by 2.<n/>Damage Type: Ranged<n/>
 Weapon/Tip/MachineGun=Each point of Enemy Armor reduces damage by 1<n/>Damage Type: Ranged
 Weapon/Tip/MachineGunCyborg=Each point of Enemy Armor reduces damage by 1.<n/>Damage Type: Ranged
 Weapon/Tip/MetasisAttack=<c val="FFFF8A">attack type: Piercing</c>
 Weapon/Tip/MinervaFist=<c val="FFFF8A">attack type: Blunt</c>
 Weapon/Tip/Mk47Mod0=Each point of Enemy Armor reduces damage by 3.<n/>Damage Type: Explosive
 Weapon/Tip/MobileSAMs=Damage dealt is only 25% affected by target armor
+Weapon/Tip/ModularSniperAP=See V menu for additional information.<n/>Damage Type: Ranged
+Weapon/Tip/ModularSniperFeedback=See V menu for additional information.<n/>Damage Type: Ranged
+Weapon/Tip/ModularSniperHollowPoint=See V menu for additional information.<n/>Damage Type: Ranged
+Weapon/Tip/ModularSniperStandard=See V menu for additional information.<n/>Damage Type: Ranged
+Weapon/Tip/ModularSniperTracer=See V menu for additional information.<n/>Damage Type: Ranged
 Weapon/Tip/MorbusSludge=<c val="FFFF8A">attack type: Piercing</c>
 Weapon/Tip/MotherFangs=<c val="FFFF8A">attack type: Poisonous</c>
 Weapon/Tip/Mounted20mmL70PFF=20mm L/70 gun system, with HE PFF Rounds (High Explosive Pre-Formed Fragmentation)<n/><n/>Each Point of Armor on the enemy target reduces damage dealt by 1.<n/>Damage Type: Ranged<n/>
@@ -11770,7 +12160,7 @@ Weapon/Tip/RaisuliClaws=<c val="FFFF8A">attack type: Slashing</c>
 Weapon/Tip/RisenClaws=<c val="FFFF8A">attack type: Slashing</c>
 Weapon/Tip/RottenClaws=<c val="FFFF8A">attack type: Slashing</c>
 Weapon/Tip/S40Ripsaw=HVAP Rounds are only 40% affected by enemy armor and do bonus damage to armored and mechanical, but have lower AoE damage and firerate.
-Weapon/Tip/SAMBarrage=Damage Type:Explosive
+Weapon/Tip/SAMBarrage=Damage Type: Explosive
 Weapon/Tip/SAMMissile=Damage Type: Explosive<n/>
 Weapon/Tip/ScorpioClaws=<c val="FFFF8A">attack type: Slashing</c></n>Attacks cause Scorpio Poison
 Weapon/Tip/SentryGun=Each Point of Armor on the enemy target reduces damage dealt by 1.<n/>Damage Type: Ranged<n/>
@@ -11779,6 +12169,11 @@ Weapon/Tip/Shotgun=Each point of Enemy Armor reduces damage by 2.<n/>Damage Type
 Weapon/Tip/ShredderClaws=<c val="FFFF8A">attack type: Slashing</c>
 Weapon/Tip/SlivanClaws=<c val="FFFF8A">attack type: Slashing</c>
 Weapon/Tip/SniperRifle=This weapon completely ignores armor.<n/>Damage Type: Ranged
+Weapon/Tip/SpecterSMGAP=Bursts 3 shots in quick succession.<n/>Each point of Enemy Armor reduces damage by <d ref="Effect,SMGAPDamage,ArmorReduction"/>.<n/>Damage Type: Ranged
+Weapon/Tip/SpecterSMGFeedback=Bursts 3 shots in quick succession.<n/>Each point of Enemy Armor reduces damage by <d ref="Effect,SMGFeedbackDamage,ArmorReduction"/>.<n/>Does +100% damage to shields.<n/>Damage Type: Ranged
+Weapon/Tip/SpecterSMGHP=Bursts 3 shots in quick succession.<n/>Each point of Enemy Armor reduces damage by <d ref="Effect,SMGHPDamage,ArmorReduction"/>.<n/>Damage Type: Ranged
+Weapon/Tip/SpecterSMGStandard=Bursts 3 shots in quick succession.<n/>Each point of Enemy Armor reduces damage by <d ref="Effect,SMGStandardDamage,ArmorReduction"/>.<n/>Damage Type: Ranged
+Weapon/Tip/SpecterSMGTracer=Bursts 3 shots in quick succession.<n/>Each point of Enemy Armor reduces damage by <d ref="Effect,SMGTracerDamage,ArmorReduction"/>.<n/>Briefly slows enemies on hit.<n/>Damage Type: Ranged
 Weapon/Tip/SpitterSpit=<c val="FFFF8A">attack type: Piercing</c></n>Attacks cause Spitter Acid
 Weapon/Tip/SquadAutomaticWeapon=Each point of Enemy Armor reduces damage by 1.<n/>Damage Type: Ranged
 Weapon/Tip/SquadAutomaticWeaponLN=Each Point of Armor on the enemy target reduces damage dealt by 1.<n/>Damage Type: Ranged<n/>
@@ -11803,6 +12198,7 @@ Weapon/Tip/UncleanClaws=<c val="FFFF8A">attack type: Slashing</c>
 Weapon/Tip/UnknownWeapon=This weapon completely ignores armor.<n/>Damage Type: Ranged
 Weapon/Tip/UnwillingClaws=<c val="FFFF8A">attack type: Slashing</c>
 Weapon/Tip/Vesania30Weapon=Each Point of Armor on the enemy target reduces damage dealt by 3.<n/>Damage Type: Explosive<n/>
+Weapon/Tip/Vesania30Weapon2=Attacks slow enemy attack and move speed by 16%.<n/>Each Point of Armor on the enemy target reduces damage dealt by 2.<n/>Damage Type: Explosive<n/>
 Weapon/Tip/VesaniaGrenadeLauncher=Each Point of Armor on the enemy target reduces damage dealt by 1.<n/>Damage Type: Ranged<n/>
 Weapon/Tip/VileStream=<c val="FFFF8A">attack type: Piercing</c>
 Weapon/Tip/W34Python=Each point of Enemy Armor reduces damage by 4.<n/>Damage Type: Explosive
