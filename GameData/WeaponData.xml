@@ -46,6 +46,22 @@
         <Period value="1.2"/>
         <Effect value="32mmPunisherCannonCreatePersist"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="32mmHEAutocannon">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="LinkedCooldown" value="0"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel2.dds"/>
+        <DisplayEffect value="32mmPunisherCannonDamage"/>
+        <DisplayAttackCount value="2"/>
+        <TargetFilters value="Visible;Air,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="21"/>
+        <Arc value="29.9926"/>
+        <Period value="1.5"/>
+        <Effect value="32mmPunisherCannonCreatePersist"/>
+        <LegacyOptions index="NoDeceleration" value="1"/>
+        <AllowedMovement value="Moving"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="74DFlamethrowerLN">
         <EditorCategories value="Race:Terran"/>
         <Icon value="Assets\Textures\btn-upgrade-terran-medivacemergencythrusters.dds"/>
@@ -121,6 +137,53 @@
         <LegacyOptions index="NoDeceleration" value="1"/>
         <AllowedMovement value="Moving"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="HeroAssaultRifle2">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Buttons\Weapons\MANTEL-75.dds"/>
+        <DisplayEffect value="RiflemanAssaultRifle"/>
+        <TargetFilters value="Visible;Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <ChaseFilters value="-;Player,Ally,Neutral,Enemy"/>
+        <MinScanRange value="15"/>
+        <Range value="15"/>
+        <RangeSlop value="3"/>
+        <Cost>
+            <Resource index="Minerals" value="1"/>
+        </Cost>
+        <Period value="0.3"/>
+        <DamagePoint value="0.05"/>
+        <Backswing value="0"/>
+        <Effect value="AssaultRifleLaunch"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="DesertEagle50HP">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Icon value="Assets\Textures\btn-upgrade-mengsk-engineeringbay-dominionweaponslevel3.dds"/>
+        <DisplayEffect value="Deagle"/>
+        <TargetFilters value="Visible;Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <ChaseFilters value="-;Player,Ally,Neutral,Enemy"/>
+        <MinScanRange value="7"/>
+        <Range value="7"/>
+        <RangeSlop value="3"/>
+        <Period value="0.6"/>
+        <DamagePoint value="0.05"/>
+        <Backswing value="0"/>
+        <Effect value="DeagleLaunchSet"/>
+        <AllowedMovement value="Moving"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="BloodHunterFist">
+        <EditorCategories value="Race:Zerg"/>
+        <Options index="Melee" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level0.dds"/>
+        <TargetFilters value="Ground,Visible;Psionic,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="150"/>
+        <Range value="0.3"/>
+        <Period value="1.5"/>
+        <DamagePoint value="0.3"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="M242BushmasterChaingun">
         <EditorCategories value="Race:Terran"/>
         <Options index="OnlyFireWhileInAttackOrder" value="0"/>
@@ -129,7 +192,7 @@
         <Options index="RequireEnabledAttackAbil" value="0"/>
         <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel2.dds"/>
         <DisplayEffect value="LAV25ChaingunDamage"/>
-        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <TargetFilters value="Visible;Psionic,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <MinScanRange value="26"/>
         <Range value="26"/>
         <Marker Link="Weapon/ColonistTransport"/>
@@ -150,7 +213,7 @@
         <Icon value="Assets\Textures\btn-ability-terran-haywiremissile.dds"/>
         <DisplayEffect value="MLRSRocketDamage"/>
         <DisplayAttackCount value="5"/>
-        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <TargetFilters value="Visible;Air,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <MinScanRange value="70"/>
         <Range value="70"/>
         <MinimumRange value="5"/>
@@ -164,6 +227,25 @@
         <Effect value="MLRSRocketFire"/>
         <LegacyOptions index="NoDeceleration" value="1"/>
         <AllowedMovement value="Moving"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="MachineGunBorg">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Buttons\BTNM241.dds"/>
+        <DisplayEffect value="MachineGun"/>
+        <TargetFilters value="Visible;Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <ChaseFilters value="-;Player,Ally,Neutral,Enemy"/>
+        <MinScanRange value="15"/>
+        <Range value="15"/>
+        <RangeSlop value="3"/>
+        <Cost>
+            <Resource index="Minerals" value="1"/>
+        </Cost>
+        <Period value="0.1"/>
+        <DamagePoint value="0.05"/>
+        <Backswing value="0"/>
+        <Effect value="HeroMachineGun"/>
         <RandomDelayMin value="0"/>
         <RandomDelayMax value="0"/>
     </CWeaponLegacy>
@@ -287,6 +369,24 @@
         <Effect value="SnipeTracerLaunch"/>
         <RandomDelayMin value="0"/>
         <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="AirtoAirMissiles">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="DisplayCooldown" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
+        <DisplayEffect value="LaserGuidedSAMDamage"/>
+        <DisplayAttackCount value="4"/>
+        <TargetFilters value="Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="30"/>
+        <Range value="25"/>
+        <Arc value="360"/>
+        <Period value="10"/>
+        <Backswing value="0"/>
+        <Effect value="AAMVolleyCP"/>
+        <LegacyOptions index="FaceTargetWhileInCooldown" value="0"/>
+        <AllowedMovement value="Moving"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="SpecterSMGHP">
         <EditorCategories value="Race:Terran"/>
@@ -419,7 +519,7 @@
             <Display index="Custom" value="1"/>
             <Vital index="Energy" value="1"/>
         </Cost>
-        <Period value="0.35"/>
+        <Period value="0.3"/>
         <DamagePoint value="0.05"/>
         <Backswing value="0"/>
         <Effect value="LNJavGunBullet"/>
@@ -2167,7 +2267,7 @@
             <Vital index="Energy" value="1"/>
             <Cooldown Link="Weapon/MachineGun"/>
         </Cost>
-        <Period value="0.85"/>
+        <Period value="0.75"/>
         <DamagePoint value="0.05"/>
         <Backswing value="0"/>
         <Effect value="DMRLaunchLN"/>
@@ -2346,25 +2446,6 @@
         <Period value="0.8"/>
         <DamagePoint value="0"/>
     </CWeaponLegacy>
-    <CWeaponLegacy id="MachineGunCyborg">
-        <EditorCategories value="Race:Terran"/>
-        <Icon value="Buttons\BTNM241.dds"/>
-        <DisplayEffect value="MachineGunDamage"/>
-        <TargetFilters value="Visible;Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <ChaseFilters value="-;Player,Ally,Neutral,Enemy"/>
-        <MinScanRange value="17"/>
-        <Range value="17"/>
-        <RangeSlop value="3"/>
-        <Cost>
-            <Resource index="Minerals" value="1"/>
-        </Cost>
-        <Period value="0.11"/>
-        <DamagePoint value="0.05"/>
-        <Backswing value="0"/>
-        <Effect value="CyborgBullet"/>
-        <RandomDelayMin value="0"/>
-        <RandomDelayMax value="0"/>
-    </CWeaponLegacy>
     <CWeaponLegacy id="MorbusSludge">
         <EditorCategories value="Race:Zerg"/>
         <Icon value="Assets\Textures\btn-upgrade-zerg-airattacks-level0.dds"/>
@@ -2439,7 +2520,7 @@
         <Period value="0.3"/>
         <DamagePoint value="0.05"/>
         <Backswing value="0"/>
-        <Effect value="PlasmaRifleMissileHero"/>
+        <Effect value="PlasmaRifleMissileSwitch"/>
         <RandomDelayMin value="0"/>
         <RandomDelayMax value="0"/>
     </CWeaponLegacy>
@@ -2812,7 +2893,7 @@
         <Period value="1.3"/>
         <DamagePoint value="0.05"/>
         <Backswing value="0"/>
-        <Effect value="ShotgunBullet"/>
+        <Effect value="BorgShotgunSwitch"/>
         <RandomDelayMin value="0"/>
         <RandomDelayMax value="0"/>
     </CWeaponLegacy>
@@ -2831,7 +2912,7 @@
         <EditorCategories value="Race:Zerg"/>
         <Options index="Melee" value="1"/>
         <Icon value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level0.dds"/>
-        <TargetFilters value="Ground,Visible;Psionic,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <TargetFilters value="Visible;Psionic,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <MinScanRange value="150"/>
         <Range value="0"/>
         <Period value="1.2"/>
@@ -2850,7 +2931,7 @@
             <Display index="Custom" value="1"/>
             <Vital index="Energy" value="1"/>
         </Cost>
-        <Period value="0.275"/>
+        <Period value="0.3"/>
         <DamagePoint value="0.05"/>
         <Backswing value="0"/>
         <Effect value="JavGunnerBullet"/>
@@ -2888,7 +2969,7 @@
             <Display index="Custom" value="1"/>
             <Vital index="Energy" value="1"/>
         </Cost>
-        <Period value="0.35"/>
+        <Period value="0.3"/>
         <DamagePoint value="0.05"/>
         <Backswing value="0"/>
         <Effect value="LNJavGunBullet"/>
@@ -2945,7 +3026,7 @@
         <Cost>
             <Vital index="Energy" value="1"/>
         </Cost>
-        <Period value="1.4"/>
+        <Period value="1.3"/>
         <DamagePoint value="0.05"/>
         <Backswing value="0"/>
         <Effect value="CombatEngineerBulletMini"/>
@@ -2963,7 +3044,7 @@
         <Cost>
             <Vital index="Energy" value="1"/>
         </Cost>
-        <Period value="1.4"/>
+        <Period value="1.3"/>
         <DamagePoint value="0.05"/>
         <Backswing value="0"/>
         <Effect value="LNCEShotgunBullet"/>
@@ -3002,7 +3083,7 @@
             <Vital index="Energy" value="1"/>
             <Cooldown Link="Weapon/InfantryRiflemanRifle"/>
         </Cost>
-        <Period value="0.12"/>
+        <Period value="0.1"/>
         <DamagePoint value="0.05"/>
         <Backswing value="0"/>
         <Effect value="InfantryMachineGun"/>
@@ -3015,7 +3096,7 @@
         <Options index="RequireEnabledAttackAbil" value="0"/>
         <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel2.dds"/>
         <DisplayEffect value="BradleyHEDamage"/>
-        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <TargetFilters value="Visible;Psionic,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <MinScanRange value="26"/>
         <Range value="26"/>
         <Marker Link="Weapon/ColonistTransport"/>
@@ -3109,7 +3190,7 @@
             <Vital index="Energy" value="1"/>
             <Cooldown Link="Weapon/InfantryRiflemanRifle"/>
         </Cost>
-        <Period value="0.12"/>
+        <Period value="0.1"/>
         <DamagePoint value="0.05"/>
         <Backswing value="0"/>
         <Effect value="LNMachineGun"/>
@@ -3218,7 +3299,7 @@
             <Display index="Custom" value="1"/>
             <Vital index="Energy" value="1"/>
         </Cost>
-        <Period value="0.325"/>
+        <Period value="0.3"/>
         <DamagePoint value="0.05"/>
         <Backswing value="0"/>
         <Effect value="RifleBulletMini"/>
@@ -3241,6 +3322,17 @@
         <MinScanRange value="150"/>
         <Range value="0.35"/>
         <Period value="1.2"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="VolcanisFireBreath">
+        <EditorCategories value="Race:Zerg"/>
+        <Icon value="Assets\Textures\btn-ability-zerg-yagdra-firewave.dds"/>
+        <DisplayEffect value="YagdraFirebreathDamage"/>
+        <TargetFilters value="Visible;Player,Ally,Neutral,Psionic,Hidden,Invulnerable"/>
+        <Range value="8"/>
+        <ArcSlop value="0"/>
+        <Period value="3"/>
+        <DamagePoint value="0"/>
+        <Effect value="YagdraFireballLaunchMissile"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="YetiFist">
         <EditorCategories value="Race:Zerg"/>
@@ -3458,7 +3550,7 @@
         <Period value="0.3"/>
         <DamagePoint value="0.05"/>
         <Backswing value="0"/>
-        <Effect value="AssaultRifleLaunch"/>
+        <Effect value="AssaultRifleLaunchSwitch"/>
         <RandomDelayMin value="0"/>
         <RandomDelayMax value="0"/>
     </CWeaponLegacy>

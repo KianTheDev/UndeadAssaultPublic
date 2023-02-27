@@ -612,6 +612,186 @@
             <Cooldown Link="Marine/Revive"/>
         </ReviveInfoBase>
     </CUnit>
+    <CUnit id="Cyborg20" parent="UnitTemplate">
+        <Description value="Button/Tooltip/18OCyborg20"/>
+        <Race value="Terr"/>
+        <Attributes index="Light" value="0"/>
+        <Attributes index="Mechanical" value="1"/>
+        <LifeStart value="445"/>
+        <LifeMax value="445"/>
+        <LifeArmor value="5"/>
+        <LifeArmorDisplayFlags index="CollapseBuffed" value="0"/>
+        <LifeRegenRate value="0.25"/>
+        <LifeArmorName value="Unit/LifeArmorName/LandWarriorSystemModular"/>
+        <Speed value="2.9414"/>
+        <SpeedDisplayFlags index="CollapseBuffed" value="0"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="50"/>
+        <RepairTime value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="HeroInventoryBorg20"/>
+        <AbilArray Link="LearnAbilitiesCyborg20"/>
+        <AbilArray Link="ReloadNew"/>
+        <AbilArray Link="ImmediateRemedialAction"/>
+        <AbilArray Link="DropMagazine"/>
+        <AbilArray Link="EnhancedTargetingModule"/>
+        <AbilArray Link="StonewallProtocol2"/>
+        <AbilArray Link="Prone"/>
+        <AbilArray Link="Cyborg20Skills"/>
+        <AbilArray Link="Cyborg20FieldMaintenance"/>
+        <AbilArray Link="PerformFieldRepairs"/>
+        <AbilArray Link="CyborgMeltdown"/>
+        <AbilArray Link="BorgMarksmanship"/>
+        <AbilArray Link="BorgWeaponAssimilation"/>
+        <AbilArray Link="FieldCameraBorg2"/>
+        <AbilArray Link="WeaponsHold2"/>
+        <AbilArray Link="BorgCloak"/>
+        <AbilArray Link="StealthModule"/>
+        <AbilArray Link="CyborgDash"/>
+        <AbilArray Link="OcularVision"/>
+        <AbilArray Link="MotionSensorBorg"/>
+        <AbilArray Link="RadarModule"/>
+        <AbilArray Link="EnhancedJump"/>
+        <AbilArray Link="Cyborg20Jump"/>
+        <AbilArray Link="BurstDispersionBorg"/>
+        <AbilArray Link="UnstableEnergyOrb"/>
+        <AbilArray Link="BorgDirectedEnergy"/>
+        <AbilArray Link="CapacitorDischarge"/>
+        <BehaviorArray Link="HeroLevels"/>
+        <BehaviorArray Link="Fitness"/>
+        <BehaviorArray Link="Dexterity"/>
+        <BehaviorArray Link="Mechanical"/>
+        <BehaviorArray Link="StartingStats"/>
+        <BehaviorArray Link="RifleButtCyborg"/>
+        <BehaviorArray Link="RifleButtCyborg2"/>
+        <BehaviorArray Link="RifleButtCyborgCharging"/>
+        <BehaviorArray Link="LightFilter2"/>
+        <BehaviorArray Link="BorgSkills1"/>
+        <BehaviorArray Link="BorgSkills2"/>
+        <BehaviorArray Link="BorgSkills3"/>
+        <BehaviorArray Link="BorgSkills4"/>
+        <BehaviorArray Link="BorgCriticallvl1"/>
+        <BehaviorArray Link="BorgCriticallvl2"/>
+        <BehaviorArray Link="BorgCriticallvl3"/>
+        <BehaviorArray Link="BorgCriticallvl4"/>
+        <BehaviorArray Link="GasMaskNoReq"/>
+        <BehaviorArray Link="BorgMarksmanship1"/>
+        <BehaviorArray Link="BorgMarksmanship2"/>
+        <BehaviorArray Link="BorgMarksmanship3"/>
+        <BehaviorArray Link="BorgMarksmanship4"/>
+        <BehaviorArray Link="WeaponAssimilation1"/>
+        <BehaviorArray Link="WeaponAssimilation2"/>
+        <BehaviorArray Link="WeaponAssimilation3"/>
+        <BehaviorArray Link="WeaponAssimilation4"/>
+        <BehaviorArray Link="ReloadAutocast"/>
+        <BehaviorArray Link="BurstCyclerPause"/>
+        <BehaviorArray Link="LightFilter4"/>
+        <BehaviorArray Link="RifleButtCyborg20"/>
+        <WeaponArray index="0" removed="1"/>
+        <EffectArray index="Birth" value="EquipCyborg20Set"/>
+        <EffectArray index="Revive" value="EquipCyborg20Set"/>
+        <CardLayouts>
+            <LayoutButtons Face="Cyborg20Jump" Type="AbilCmd" AbilCmd="Cyborg20Jump,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="3"/>
+            <LayoutButtons>
+                <Face value="LearnAbilities"/>
+                <Type value="Submenu"/>
+                <SubmenuAbilState value="LearnAbilitiesCyborg20"/>
+                <SubmenuCardId value="0002"/>
+                <Row value="1"/>
+                <Column value="4"/>
+            </LayoutButtons>
+            <LayoutButtons Face="AdditionalActions" Type="Submenu" SubmenuCardId="0003" Row="2" Column="0"/>
+            <LayoutButtons Face="CyborgDash" Type="AbilCmd" AbilCmd="CyborgDash,On" Row="0" Column="1"/>
+            <LayoutButtons Face="CyborgDashOff" Type="AbilCmd" AbilCmd="CyborgDash,Off" Row="0" Column="1"/>
+            <LayoutButtons Face="StealthModule" Type="AbilCmd" AbilCmd="BorgCloak,On" Row="1" Column="2"/>
+            <LayoutButtons Face="StealthModuleOff" Type="AbilCmd" AbilCmd="BorgCloak,Off" Row="1" Column="2"/>
+            <LayoutButtons Face="EnhancedTargetingModule" Type="AbilCmd" AbilCmd="EnhancedTargetingModule,On" Row="2" Column="4"/>
+            <LayoutButtons Face="EnhancedTargetingModuleOff" Type="AbilCmd" AbilCmd="EnhancedTargetingModule,Off" Row="2" Column="4"/>
+            <LayoutButtons Face="EnhancedTargetingModule" Type="Passive" Requirements="ETM1" Row="2" Column="4"/>
+            <LayoutButtons Face="FieldCameraSDM" Type="AbilCmd" AbilCmd="FieldCameraBorg2,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="MotionSensor" Type="AbilCmd" AbilCmd="MotionSensorBorg,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="StonewallModule" Type="AbilCmd" AbilCmd="StonewallProtocol2,On" Row="1" Column="1"/>
+            <LayoutButtons Face="StonewallModulelOff" Type="AbilCmd" AbilCmd="StonewallProtocol2,Off" Row="1" Column="1"/>
+            <LayoutButtons Face="StonewallModule" Type="Passive" Requirements="Stonewall1" Row="1" Column="1"/>
+            <LayoutButtons Face="OcularVision" Type="AbilCmd" AbilCmd="OcularVision,Execute" Row="1" Column="3"/>
+            <LayoutButtons Face="BurstDispersionOn" Type="AbilCmd" AbilCmd="BurstDispersionBorg,On" Row="1" Column="0"/>
+            <LayoutButtons Face="BurstDispersionOff" Type="AbilCmd" AbilCmd="BurstDispersionBorg,Off" Row="1" Column="0"/>
+            <LayoutButtons>
+                <Face value="DirectedEnergyArray"/>
+                <Type value="Submenu"/>
+                <AbilCmd value="UnstableEnergyOrb,Execute"/>
+                <Requirements value="DirectedEnergy"/>
+                <SubmenuCardId value="0004"/>
+                <Row value="2"/>
+                <Column value="3"/>
+            </LayoutButtons>
+        </CardLayouts>
+        <CardLayouts CardId="0002">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="EnhancedTargetingModule" Type="AbilCmd" AbilCmd="LearnAbilitiesCyborg20,Learn5" Row="0" Column="4"/>
+            <LayoutButtons Face="FieldMaintenance" Type="AbilCmd" AbilCmd="LearnAbilitiesCyborg20,Learn2" Row="0" Column="3"/>
+            <LayoutButtons Face="CyborgSkills2" Type="AbilCmd" AbilCmd="LearnAbilitiesCyborg20,Learn1" Row="0" Column="0"/>
+            <LayoutButtons Face="WeaponAssimilation" Type="AbilCmd" AbilCmd="LearnAbilitiesCyborg20,Learn4" Row="0" Column="1"/>
+            <LayoutButtons Face="MarksmanshipModule" Type="AbilCmd" AbilCmd="LearnAbilitiesCyborg20,Learn3" Row="0" Column="2"/>
+            <LayoutButtons Face="RadarModule" Type="AbilCmd" AbilCmd="LearnAbilitiesCyborg20,Learn7" Row="1" Column="0"/>
+            <LayoutButtons Face="StonewallModule" Type="AbilCmd" AbilCmd="LearnAbilitiesCyborg20,Learn9" Row="1" Column="1"/>
+            <LayoutButtons Face="StealthModule" Type="AbilCmd" AbilCmd="LearnAbilitiesCyborg20,Learn6" Row="1" Column="2"/>
+            <LayoutButtons Face="EnhancedJump" Type="AbilCmd" AbilCmd="LearnAbilitiesCyborg20,Learn8" Row="1" Column="3"/>
+            <LayoutButtons Face="DirectedEnergyArray" Type="AbilCmd" AbilCmd="LearnAbilitiesCyborg20,Learn10" Row="1" Column="4"/>
+        </CardLayouts>
+        <CardLayouts CardId="0003">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="Prone" Type="AbilCmd" AbilCmd="Prone,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="Reload" Type="AbilCmd" AbilCmd="ReloadNew,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="ImmediateRemedialAction" Type="AbilCmd" AbilCmd="ImmediateRemedialAction,Execute" Row="0" Column="2"/>
+            <LayoutButtons Face="DropMagazine" Type="AbilCmd" AbilCmd="DropMagazine,Execute" Row="0" Column="3"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Cyborg20Jump,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="PerformFieldRepairs" Type="AbilCmd" AbilCmd="PerformFieldRepairs,Execute" Row="1" Column="0"/>
+            <LayoutButtons Face="RifleButt" Type="Passive" Requirements="CyborgSkills1" Row="2" Column="0"/>
+            <LayoutButtons Face="WeaponAssimilation" Type="Passive" AbilCmd="FieldCameraCyborg,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="MarksmanshipModule" Type="Passive" Row="2" Column="2"/>
+            <LayoutButtons Face="HoldFire3" Type="AbilCmd" AbilCmd="WeaponsHold2,On" Row="1" Column="3"/>
+            <LayoutButtons Face="HoldFireOff2" Type="AbilCmd" AbilCmd="WeaponsHold2,Off" Row="1" Column="3"/>
+            <LayoutButtons>
+                <Face value="LightFilter"/>
+                <Type value="Passive"/>
+                <Behavior value="LightFilter4"/>
+                <Requirements value="Radar2"/>
+                <Row value="2"/>
+                <Column value="3"/>
+            </LayoutButtons>
+        </CardLayouts>
+        <CardLayouts CardId="0004">
+            <LayoutButtons Face="CapacitorDischarge" Type="AbilCmd" AbilCmd="CapacitorDischarge,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="UnstableEnergyOrb" Type="AbilCmd" AbilCmd="UnstableEnergyOrb,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+        </CardLayouts>
+        <Radius value="0.375"/>
+        <SeparationRadius value="0.375"/>
+        <DeadInnerRadius value="0"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="15"/>
+        <EditorCategories value="ObjectType:Hero,ObjectFamily:Melee"/>
+        <TacticalAI value="Marine"/>
+        <SelectAlias value="Cyborg"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="21"/>
+        <HotkeyCategory value="Hotkey/Catagory/MOSClassic"/>
+        <AIEvaluateAlias value="Marine"/>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
+        <ReviveInfoBase>
+            <Charge Link="Marine/Revive"/>
+            <Cooldown Link="Marine/Revive"/>
+        </ReviveInfoBase>
+    </CUnit>
     <CUnit id="CyborgTest" parent="UnitTemplate">
         <Description value="Button/Tooltip/18OCyborgTest"/>
         <Race value="Terr"/>
@@ -1244,6 +1424,7 @@
         </CardLayouts>
         <HotkeyCategory value="Hotkey/Catagory/MOSClassic"/>
         <Attributes index="Light" value="0"/>
+        <LifeArmor value="5"/>
     </CUnit>
     <CUnit id="Cyborg" parent="UnitTemplate">
         <Description value="Button/Tooltip/18OCyborg"/>
@@ -1252,7 +1433,7 @@
         <LifeMax value="445"/>
         <LifeArmorDisplayFlags index="CollapseBuffed" value="0"/>
         <LifeRegenRate value="0.25"/>
-        <LifeArmorName value="Unit/LifeArmorName/LandWarriorSystemLight"/>
+        <LifeArmorName value="Unit/LifeArmorName/LandWarriorSystemModerate"/>
         <Speed value="3"/>
         <SpeedDisplayFlags index="CollapseBuffed" value="0"/>
         <CostCategory value="Army"/>
@@ -1281,12 +1462,14 @@
         <AbilArray Link="FieldCameraCyborg"/>
         <AbilArray Link="FlareGunCyborg"/>
         <AbilArray Link="WeaponsHold2"/>
+        <AbilArray Link="BorgWeaponSpecialize"/>
+        <AbilArray Link="CyborgWeaponOverdriveModule"/>
+        <AbilArray Link="ClusterRocketsBorg"/>
         <BehaviorArray Link="HeroLevels"/>
         <BehaviorArray Link="Fitness"/>
         <BehaviorArray Link="Dexterity"/>
         <BehaviorArray Link="Mechanical"/>
         <BehaviorArray Link="StartingStats"/>
-        <BehaviorArray Link="MGBurst"/>
         <BehaviorArray Link="RifleButtCyborg"/>
         <BehaviorArray Link="RifleButtCyborg2"/>
         <BehaviorArray Link="RifleButtCyborgCharging"/>
@@ -1310,6 +1493,7 @@
         <BehaviorArray Link="CriticalSuppress222"/>
         <BehaviorArray Link="CriticalSuppress232"/>
         <BehaviorArray Link="CriticalSuppress242"/>
+        <BehaviorArray Link="GasMaskNoReq"/>
         <WeaponArray index="0" Link="Mk47Mod0"/>
         <EffectArray index="Birth" value="EquipCyborgSet"/>
         <EffectArray index="Revive" value="EquipCyborgSet"/>
@@ -1326,25 +1510,27 @@
                 <Row value="1"/>
                 <Column value="4"/>
             </LayoutButtons>
-            <LayoutButtons Face="ClusterRockets" Type="AbilCmd" AbilCmd="ClusterRockets,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="WeaponOverdriveModule" Type="AbilCmd" AbilCmd="CyborgWeaponOverdriveModule,On" Row="2" Column="0"/>
+            <LayoutButtons Face="WeaponOverdriveOff" Type="AbilCmd" AbilCmd="CyborgWeaponOverdriveModule,Off" Row="2" Column="0"/>
             <LayoutButtons Face="AdditionalActions" Type="Submenu" SubmenuCardId="0003" Row="1" Column="3"/>
-            <LayoutButtons Face="SuppressiveFireOff" Type="AbilCmd" AbilCmd="SuppressiveFire,Off" Row="2" Column="2"/>
-            <LayoutButtons Face="SuppressiveFire" Type="AbilCmd" AbilCmd="SuppressiveFire,On" Row="2" Column="2"/>
-            <LayoutButtons Face="Charge2" Type="AbilCmd" AbilCmd="CyborgCharge,On" Row="2" Column="1"/>
-            <LayoutButtons Face="StonewallProtocol" Type="AbilCmd" AbilCmd="StonewallProtocol,On" Row="2" Column="3"/>
-            <LayoutButtons Face="StonewallProtocolOff" Type="AbilCmd" AbilCmd="StonewallProtocol,Off" Row="2" Column="3"/>
-            <LayoutButtons Face="Meltdown" Type="AbilCmd" AbilCmd="CyborgMeltdown,On" Row="2" Column="4"/>
-            <LayoutButtons Face="MeltdownOff" Type="AbilCmd" AbilCmd="CyborgMeltdown,Off" Row="2" Column="4"/>
+            <LayoutButtons Face="Mk47IncendiaryLoadout" Type="AbilCmd" AbilCmd="BorgWeaponSpecialize,Specialize2" Row="2" Column="2"/>
+            <LayoutButtons Face="Mk47Mod2Off" Type="AbilCmd" AbilCmd="BorgWeaponSpecialize,Specialize4" Row="2" Column="2"/>
+            <LayoutButtons Face="Mk47ConcussionLoadout" Type="AbilCmd" AbilCmd="BorgWeaponSpecialize,Specialize1" Row="2" Column="1"/>
+            <LayoutButtons Face="Mk47Mod1Off" Type="AbilCmd" AbilCmd="BorgWeaponSpecialize,Specialize3" Row="2" Column="1"/>
+            <LayoutButtons Face="ClusterRocketsMini" Type="AbilCmd" AbilCmd="ClusterRocketsBorg,Execute" Row="2" Column="3"/>
+            <LayoutButtons Face="SuppressiveFire" Type="AbilCmd" AbilCmd="SuppressiveFire,On" Row="2" Column="4"/>
+            <LayoutButtons Face="SuppressiveFireOff" Type="AbilCmd" AbilCmd="SuppressiveFire,Off" Row="2" Column="4"/>
             <LayoutButtons Face="Agility" Type="AbilCmd" AbilCmd="CyborgAgility,On" Row="1" Column="0"/>
             <LayoutButtons Face="AgilityOff" Type="AbilCmd" AbilCmd="CyborgAgility,Off" Row="1" Column="0"/>
             <LayoutButtons Face="Strength" Type="AbilCmd" AbilCmd="CyborgStrength,On" Row="1" Column="1"/>
             <LayoutButtons Face="StrengthOff" Type="AbilCmd" AbilCmd="CyborgStrength,Off" Row="1" Column="1"/>
             <LayoutButtons Face="Stealth" Type="AbilCmd" AbilCmd="CyborgStealth,On" Row="1" Column="2"/>
             <LayoutButtons Face="StealthOff" Type="AbilCmd" AbilCmd="CyborgStealth,Off" Row="1" Column="2"/>
+            <LayoutButtons Face="Charge2" Type="AbilCmd" AbilCmd="CyborgCharge,On" Row="0" Column="1"/>
         </CardLayouts>
         <CardLayouts CardId="0002">
             <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
-            <LayoutButtons Face="ClusterRockets" Type="AbilCmd" AbilCmd="LearnAbilitiesCyborg,Learn1" Row="0" Column="4"/>
+            <LayoutButtons Face="WeaponOverdriveModule" Type="AbilCmd" AbilCmd="LearnAbilitiesCyborg,Learn6" Row="0" Column="4"/>
             <LayoutButtons Face="SuppressiveFire" Type="AbilCmd" AbilCmd="LearnAbilitiesCyborg,Learn2" Row="0" Column="3"/>
             <LayoutButtons Face="Agility" Type="AbilCmd" AbilCmd="LearnAbilitiesCyborg,Learn3" Row="0" Column="0"/>
             <LayoutButtons Face="Strength" Type="AbilCmd" AbilCmd="LearnAbilitiesCyborg,Learn4" Row="0" Column="1"/>
@@ -1370,6 +1556,10 @@
             <LayoutButtons Face="FlareGunBorg" Type="AbilCmd" AbilCmd="FlareGunCyborg,Execute" Row="2" Column="2"/>
             <LayoutButtons Face="HoldFire3" Type="AbilCmd" AbilCmd="WeaponsHold2,On" Row="1" Column="3"/>
             <LayoutButtons Face="HoldFireOff2" Type="AbilCmd" AbilCmd="WeaponsHold2,Off" Row="1" Column="3"/>
+            <LayoutButtons Face="Meltdown" Type="AbilCmd" AbilCmd="CyborgMeltdown,On" Row="2" Column="3"/>
+            <LayoutButtons Face="MeltdownOff" Type="AbilCmd" AbilCmd="CyborgMeltdown,Off" Row="2" Column="3"/>
+            <LayoutButtons Face="StonewallProtocol" Type="AbilCmd" AbilCmd="StonewallProtocol,On" Row="1" Column="1"/>
+            <LayoutButtons Face="StonewallProtocolOff" Type="AbilCmd" AbilCmd="StonewallProtocol,Off" Row="1" Column="1"/>
         </CardLayouts>
         <Radius value="0.375"/>
         <SeparationRadius value="0.375"/>
@@ -1391,6 +1581,7 @@
         </ReviveInfoBase>
         <Attributes index="Light" value="0"/>
         <Attributes index="Mechanical" value="1"/>
+        <LifeArmor value="10"/>
     </CUnit>
     <CBehaviorBuff id="SpecialistSkills1">
         <EditorCategories value="AbilityorEffectType:Units"/>

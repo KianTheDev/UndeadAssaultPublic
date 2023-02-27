@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="us-ascii"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Catalog>
     <CUser id="Camos">
         <Fields Id="Camo Name" Type="String" EditorText="Name"/>
@@ -422,6 +422,22 @@
                 <Field Id="Camo"/>
             </GameLink>
             <String String="Solyluna">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="VTMed">
+            <GameLink GameLink="CamoVTMed">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="VTMed">
+                <Field Id="Camo Name"/>
+            </String>
+        </Instances>
+        <Instances Id="VTrned">
+            <GameLink GameLink="CamoVTrned">
+                <Field Id="Camo"/>
+            </GameLink>
+            <String String="VTrned">
                 <Field Id="Camo Name"/>
             </String>
         </Instances>
@@ -911,48 +927,8 @@
     <CUser id="DevHandles">
         <Fields Id="Handle" Type="String" EditorColumn="2"/>
         <Instances Id="[Default]"/>
-        <Instances Id="Xempest">
-            <String String="1-S2-1-375017">
-                <Field Id="Handle"/>
-            </String>
-        </Instances>
-        <Instances Id="Malikav">
-            <String String="1-S2-1-2424587">
-                <Field Id="Handle"/>
-            </String>
-        </Instances>
-        <Instances Id="Ubermarine">
-            <String String="1-S2-1-7775786">
-                <Field Id="Handle"/>
-            </String>
-        </Instances>
-        <Instances Id="Ascantha">
-            <String String="1-S2-1-3681588">
-                <Field Id="Handle"/>
-            </String>
-        </Instances>
-        <Instances Id="Bobosk">
-            <String String="1-S2-1-1705491">
-                <Field Id="Handle"/>
-            </String>
-        </Instances>
-        <Instances Id="Mstachife">
-            <String String="1-S2-1-323494">
-                <Field Id="Handle"/>
-            </String>
-        </Instances>
-        <Instances Id="Skylance">
-            <String String="1-S2-1-3162777">
-                <Field Id="Handle"/>
-            </String>
-        </Instances>
-        <Instances Id="Warplayer">
-            <String String="3-S2-1-5165461">
-                <Field Id="Handle"/>
-            </String>
-        </Instances>
-        <Instances Id="Kaji">
-            <String String="1-S2-1-4235173">
+        <Instances Id="CaptainKian">
+            <String String="1-S2-1-7030064">
                 <Field Id="Handle"/>
             </String>
         </Instances>
@@ -1158,6 +1134,45 @@
             </Text>
             <Text Text="UserData/GameModes/Survival Menu_Tooltip">
                 <Field Id="Tooltip"/>
+            </Text>
+        </Instances>
+        <Instances Id="Quick Match">
+            <Image Image="Assets\Images\Difficulties\QuickMatch.dds">
+                <Field Id="Image"/>
+            </Image>
+            <Text Text="UserData/GameModes/Quick Match_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/GameModes/Quick Match_Tooltip">
+                <Field Id="Tooltip"/>
+            </Text>
+        </Instances>
+        <Instances Id="Thalim Holdout">
+            <Image Image="Assets\Images\Difficulties\ThalHoldout.dds">
+                <Field Id="Image"/>
+            </Image>
+            <Int Int="2">
+                <Field Id="Spawn Modifier"/>
+            </Int>
+            <Text Text="UserData/GameModes/Thalim Holdout_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/GameModes/Thalim Holdout_Tooltip">
+                <Field Id="Tooltip"/>
+            </Text>
+        </Instances>
+        <Instances Id="Classic Survival">
+            <Image Image="Assets\Images\Difficulties\ClassicSurvival.dds">
+                <Field Id="Image"/>
+            </Image>
+            <Int Int="2">
+                <Field Id="Spawn Modifier"/>
+            </Int>
+            <Text Text="UserData/GameModes/Classic Survival_Tooltip">
+                <Field Id="Tooltip"/>
+            </Text>
+            <Text Text="UserData/GameModes/Classic Survival_Name">
+                <Field Id="Name"/>
             </Text>
         </Instances>
     </CUser>

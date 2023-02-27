@@ -676,7 +676,7 @@
         <Class value="Misc"/>
         <EffectCost>
             <Charge>
-                <CountMax value="3"/>
+                <CountMax value="5"/>
                 <CountStart value="2"/>
                 <CountUse value="1"/>
                 <Link value="ItemCharges"/>

@@ -14,6 +14,1025 @@
         <Duration value="10"/>
         <FinalEffect value="TimedLifeFate"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="A10TitaniumHousing">
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel1.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DamageResponse ModifyFraction="0.1">
+            <Kind index="Spell" value="0"/>
+            <Kind index="Melee" value="0"/>
+            <Kind index="Splash" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="AutomaticModeVes">
+        <Tooltip value="Button/Tooltip/AutomaticModeVes"/>
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel3.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="5"/>
+        <Modification AttackSpeedMultiplier="2"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BiotechUnlocks2">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BiotechUnlocks3">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BiotechUnlocks4">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InitialEffect value="NaniteGrenadeMP"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BiotechUnlocks5">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BorgCriticallvl2">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <DisableValidatorArray value="BorgMarksmanship2"/>
+        <DamageResponse Location="Attacker" ModifyFraction="5" TargetFilters="-;Player,Ally,Neutral">
+            <Kind index="Spell" value="0"/>
+            <Kind index="Melee" value="0"/>
+            <Kind index="Splash" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <Chance value="0.125"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BorgCriticallvl3">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <DisableValidatorArray value="BorgMarksmanship3"/>
+        <DamageResponse Location="Attacker" ModifyFraction="7.5" TargetFilters="-;Player,Ally,Neutral">
+            <Kind index="Spell" value="0"/>
+            <Kind index="Melee" value="0"/>
+            <Kind index="Splash" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <Chance value="0.125"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BorgCriticallvl4">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <DisableValidatorArray value="BorgMarksmanship4"/>
+        <DamageResponse Location="Attacker" ModifyFraction="10" TargetFilters="-;Player,Ally,Neutral">
+            <Kind index="Spell" value="0"/>
+            <Kind index="Melee" value="0"/>
+            <Kind index="Splash" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <Chance value="0.125"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BorgEquipDMR">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <InitialEffect value="EquipDMR"/>
+        <RefreshEffect value="EquipDMR"/>
+        <FinalEffect value="UnequipDMR"/>
+        <ExpireEffect value="UnequipDMR"/>
+        <Modification>
+            <WeaponArray Link="DesignatedMarksmanRifle"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="LAV25ConvoySpeed">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification MoveSpeedBonus="-0.8984"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="LaserPrism2">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-beambounce.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="CasterEnergyGE1"/>
+        <Modification>
+            <DamageDealtFraction index="Spell" value="-0.1"/>
+            <DamageDealtAttributeMultiplier index="Armored" value="-0.6"/>
+            <VitalRegenArray index="Energy" value="-2.3007"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="LaserPrism3">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-beambounce.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="CasterEnergyGE1"/>
+        <Modification>
+            <DamageDealtFraction index="Spell" value="-0.1"/>
+            <DamageDealtAttributeMultiplier index="Armored" value="-0.6"/>
+            <VitalRegenArray index="Energy" value="-2.3007"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MandoEquipShotgun">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <InitialEffect value="BorgReadyShotgunSet"/>
+        <RefreshEffect value="EquipShotgun"/>
+        <FinalEffect value="BorgRemoveShotgunSet"/>
+        <ExpireEffect value="UnequipShotgun"/>
+        <Modification>
+            <WeaponArray Link="CombatShotgun"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MandoEquipRifle">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <InitialEffect value="EquipRifleBasic"/>
+        <RefreshEffect value="EquipRifleBasic"/>
+        <FinalEffect value="UnequipRifleBasic"/>
+        <ExpireEffect value="UnequipRifleBasic"/>
+        <Modification>
+            <WeaponArray Link="BattleRifleMk2"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CombatDrugs">
+        <InfoIcon value="Buttons\BTNMentality.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="30"/>
+        <Modification MoveSpeedMinimum="2.6992" AttackSpeedMultiplier="1.3">
+            <DamageDealtFraction index="Ranged" value="0.3"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="LaserPrismOld">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-beambounce.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="15"/>
+        <Modification>
+            <WeaponArray Link="D19LaserRifleBounce1"/>
+            <WeaponDisableArray value="D19LaserRifle"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SoldierSkillsUnlocks1">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InitialEffect value="ModifyReload15"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BiotechUnlocks1">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SoldierSkillsUnlocks2">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InitialEffect value="ModifyReload15"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SoldierSkillsUnlocks3">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InitialEffect value="ModifyReload15"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SoldierSkillsUnlocks4">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InitialEffect value="ModifyReload15"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BiglyKill">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="10"/>
+        <InitialEffect value="BiglyKill"/>
+        <Modification>
+            <VitalRegenArray index="Life" value="-100000"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ToxinRound">
+        <InfoIcon value="Assets\Textures\btn-upgrade-swann-irradiate.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="NotCleansing"/>
+        <Duration value="0.45"/>
+        <Modification MoveSpeedMultiplier="0.9" AttackSpeedMultiplier="0.75">
+            <VitalRegenArray index="Life" value="-50"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MedicCrit">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <Requirements value="SoldierSkills02M"/>
+        <DamageResponse Location="Attacker" ModifyFraction="3" TargetFilters="-;Player,Ally,Neutral">
+            <Kind index="Spell" value="0"/>
+            <Kind index="Melee" value="0"/>
+            <Kind index="Splash" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <Chance value="0.125"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MedicEquipDeagle">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Modification>
+            <BehaviorLinkDisableArray value="GAM30PDW"/>
+            <BehaviorLinkDisableArray value="USMCR"/>
+            <BehaviorLinkDisableArray value="HK42"/>
+            <BehaviorLinkDisableArray value="M5MAR"/>
+            <BehaviorLinkDisableArray value="StynerBR3"/>
+            <BehaviorLinkDisableArray value="StynerSPR"/>
+            <BehaviorLinkDisableArray value="ATLASX50"/>
+            <BehaviorLinkDisableArray value="SOFAR"/>
+            <WeaponArray Link="DesertEagle50HP"/>
+            <WeaponDisableArray value="HeroAssaultRifle"/>
+        </Modification>
+        <InitialEffect value="MedicRemoveBurstFire"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BorgEquipMG">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <InitialEffect value="EquipMachineGun"/>
+        <RefreshEffect value="EquipMachineGun"/>
+        <FinalEffect value="UnequipMachineGun"/>
+        <ExpireEffect value="UnequipMachineGun"/>
+        <Modification>
+            <WeaponArray Link="MachineGun"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BorgEquipShotgun">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <InitialEffect value="BorgReadyShotgunSet"/>
+        <RefreshEffect value="EquipShotgun"/>
+        <FinalEffect value="BorgRemoveShotgunSet"/>
+        <ExpireEffect value="UnequipShotgun"/>
+        <Modification>
+            <WeaponArray Link="CombatShotgun"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BorgEquipPlasma">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <InitialEffect value="EquipPlasmaRifle"/>
+        <RefreshEffect value="EquipPlasmaRifle"/>
+        <FinalEffect value="UnequipPlasmaRifle"/>
+        <ExpireEffect value="UnequipPlasmaRifle"/>
+        <Modification>
+            <WeaponArray Link="PlasmaRifle"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BorgFieldMainUnlock2">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InitialEffect value="FieldRepair2MP"/>
+        <Modification>
+            <AttributeChangeArray Attribute="Mechanical" Points="2"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BorgFieldMainUnlock3">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Period value="5"/>
+        <InitialEffect value="BorgFieldRepair3Set"/>
+        <PeriodicEffect value="BorgFieldRepair3SPSwitch"/>
+        <Modification>
+            <AttributeChangeArray Attribute="Mechanical" Points="3"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BurstCounter18">
+        <Alignment value="Negative"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel3.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="NotBurstPausing"/>
+        <BuffFlags index="RefreshStack" value="1"/>
+        <MaxStackCount value="18"/>
+        <Duration value="3"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BurstCounter21">
+        <Alignment value="Negative"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel3.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="NotBurstPausing"/>
+        <BuffFlags index="RefreshStack" value="1"/>
+        <MaxStackCount value="21"/>
+        <Duration value="3"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BurstCounter24">
+        <Alignment value="Negative"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel3.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="NotBurstPausing"/>
+        <BuffFlags index="RefreshStack" value="1"/>
+        <MaxStackCount value="24"/>
+        <Duration value="3"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BurstCounter27">
+        <Alignment value="Negative"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel3.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="NotBurstPausing"/>
+        <BuffFlags index="RefreshStack" value="1"/>
+        <MaxStackCount value="27"/>
+        <Duration value="3"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BurstCounter30">
+        <Alignment value="Negative"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel3.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="NotBurstPausing"/>
+        <BuffFlags index="RefreshStack" value="1"/>
+        <MaxStackCount value="30"/>
+        <Duration value="3"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BurstCounterPause">
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Buttons\Btn_Custom_UAC_BurstFire.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="1.2"/>
+        <Modification>
+            <StateFlags index="SuppressAttack" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BurstDispersionOn">
+        <InfoIcon value="Assets\Textures\btn-ability-hornerhan-raven-analyzetargetmultilock.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BurstPauseMaxCount">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <BehaviorFlags index="EnabledWhileDead" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <MaxStackCount value="100"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CryoRoundsDebuff">
+        <Tooltip value="Button/Tooltip/CryoRoundsDebuff"/>
+        <Alignment value="Negative"/>
+        <InfoIcon value="Buttons\Abilities\BTNAmmoCryo.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="NotCleansing"/>
+        <RemoveValidatorArray value="NotSlowed"/>
+        <BuffFlags index="RefreshStack" value="1"/>
+        <Duration value="3"/>
+        <Modification MoveSpeedMultiplier="0.75" AttackSpeedMultiplier="0.75"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CyborgDischargeStun">
+        <InfoIcon value="Assets\Textures\btn-upgrade-protoss-alarak-supplicantsacrifice-lightingstrike.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="3"/>
+        <Modification>
+            <StateFlags index="Stun" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DeagleAmmo">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <MaxStackCount value="15"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Debug1">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="DeagleEquipped"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Debug2">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="BurstDispersionOn"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Debug3">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="BurstCounterBorg3"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Debug4">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="BurstCounterBorg4"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DisruptorRoundsDebuff">
+        <Tooltip value="Button/Tooltip/DisruptorRounds"/>
+        <Alignment value="Negative"/>
+        <InfoIcon value="Buttons\Abilities\BTNAmmoDistruptor.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="NotCleansing"/>
+        <BuffFlags index="RefreshStack" value="1"/>
+        <Duration value="3"/>
+        <Modification ShieldArmorBonus="-12" DetectArc="0" RadarArc="0">
+            <DamageDealtFraction index="Melee" value="-0.75"/>
+            <DamageDealtFraction index="Ranged" value="-0.75"/>
+            <LifeArmorBonus value="-12"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="EnhJumpUnlocks2">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InitialEffect value="BorgEnhJump2MP"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="EnhancedTargetingModuleLevel2">
+        <InfoIcon value="Assets\Textures\btn-upgrade-swann-targetingoptics.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="ETM2"/>
+        <RemoveValidatorArray value="CasterEnergyGE1"/>
+        <Modification AttackSpeedMultiplier="2.25">
+            <DamageDealtFraction index="Ranged" value="0.3"/>
+            <VitalRegenArray index="Energy" value="-12"/>
+            <BehaviorLinkDisableArray value="BurstPause"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="EnhancedTargetingModuleLevel3">
+        <InfoIcon value="Assets\Textures\btn-upgrade-swann-targetingoptics.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="ETM3"/>
+        <RemoveValidatorArray value="CasterEnergyGE1"/>
+        <InitialEffect value="BorgETM4SPSwitch"/>
+        <FinalEffect value="BorgETM4SPRemoveSwitch"/>
+        <Modification AttackSpeedMultiplier="2.75">
+            <DamageDealtFraction index="Ranged" value="0.45"/>
+            <VitalRegenArray index="Energy" value="-14"/>
+            <BehaviorLinkDisableArray value="BurstPause"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="LightFilter4">
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-techupgrade-terran-ocularimplants.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Requirements value="Radar2"/>
+        <Modification Detect="15" DetectFilters="-;Missile"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="EnhJumpUnlocks1">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InitialEffect value="BorgEnhJump1MP"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MedicLoadInitial">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="0.1"/>
+        <InitialEffect value="LoadDeagleAmmo"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="NaniteCloudBuff">
+        <Tooltip value="Button/Tooltip/NaniteCloudBuff"/>
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-upgrade-tychus-medic-repairnanites.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <BuffFlags index="Countdown" value="0"/>
+        <BuffFlags index="RefreshStack" value="1"/>
+        <Duration value="0.6"/>
+        <Modification MoveSpeedMultiplier="1.1">
+            <VitalRegenArray index="Life" value="10"/>
+            <VitalRegenArray index="Energy" value="1"/>
+            <BehaviorLinkDisableArray value="IrradiatedCloud"/>
+        </Modification>
+        <DamageResponse ModifyFraction="1.1">
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ProneBorg">
+        <Tooltip value="Button/Tooltip/ProneBorg"/>
+        <InfoIcon value="Assets\Buttons\Btn_Custom_UAC_Prone.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Modification>
+            <MoveSpeedMultiplier value="0.55"/>
+            <AttackSpeedMultiplier value="1.1"/>
+            <WeaponRange value="1"/>
+            <DetectArc value="0"/>
+            <RadarArc value="0"/>
+            <DamageDealtFraction index="Ranged" value="0.15"/>
+            <BehaviorLinkDisableArray value="Sprint"/>
+            <BehaviorLinkDisableArray value="Prone"/>
+        </Modification>
+        <DamageResponse ModifyFraction="0.65">
+            <Kind index="Melee" value="0"/>
+            <Chance value="0.8"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RifleButtCyborg20">
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="BTNMeleeAttack.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Requirements value="Borg20Riflebutt"/>
+        <Period value="1.5"/>
+        <PeriodicEffect value="Cyborg20RiflebuttSwitch"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="NaniteCloudTimedLife" parent="TimedLife">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <DisplayDuration index="Enemy" value="1"/>
+        <Duration value="15"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="NaniteCloudLoop">
+        <InfoIcon value="Assets\Buttons\Btn_Custom_UAC_SmokeGrenade.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <BuffFlags index="Countdown" value="0"/>
+        <Period value="0.5"/>
+        <PeriodicEffect value="NaniteCloudSearchAreaSet"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="NaniteCloudDebuff">
+        <Tooltip value="Button/Tooltip/NaniteCloudDebuff"/>
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-upgrade-tychus-medic-repairnanites.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="NotCleansing"/>
+        <BuffFlags index="Countdown" value="0"/>
+        <BuffFlags index="RefreshStack" value="1"/>
+        <Duration value="0.6"/>
+        <Modification MoveSpeedMultiplier="0.5">
+            <VitalRegenArray index="Life" value="-50"/>
+        </Modification>
+        <DamageResponse ModifyFraction="1.1">
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SpecializationPotential">
+        <Alignment value="Positive"/>
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InitialEffect value="AddBorgSkillPointMP"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RadarModUnlocks2">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Period value="5"/>
+        <PeriodicEffect value="BorgRadar2Switch"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ReloadAutocast">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="MedicReloadCombine"/>
+        <DisableValidatorArray value="GasGE1"/>
+        <DisableValidatorArray value="NotReloading"/>
+        <Period value="0.01"/>
+        <PeriodicEffect value="NewReloadIO"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="EnhancedTargetingModuleLevel1">
+        <InfoIcon value="Assets\Textures\btn-upgrade-swann-targetingoptics.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="ETM1"/>
+        <RemoveValidatorArray value="CasterEnergyGE1"/>
+        <Modification AttackSpeedMultiplier="1.75">
+            <DamageDealtFraction index="Ranged" value="0.15"/>
+            <VitalRegenArray index="Energy" value="-10"/>
+            <BehaviorLinkDisableArray value="BurstPause"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CyborgCloak">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-ability-terran-cloak.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="CanSpendEnergy"/>
+        <RemoveValidatorArray value="hasEnergy"/>
+        <Modification AttackSpeedMultiplier="0.5">
+            <StateFlags index="Cloak" value="1"/>
+            <VitalRegenArray index="Energy" value="-1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RadarModUnlocks1">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CyborgJumpImpactStun">
+        <InfoIcon value="Assets\Textures\btn-ability-neutral-ursadonleap.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="3"/>
+        <Modification>
+            <StateFlags index="Stun" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="StealthModUnlocks2">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Period value="5"/>
+        <PeriodicEffect value="BorgStealth2Switch"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="StonewallProtocolExplosiveLevel2">
+        <Tooltip value="Button/Tooltip/StonewallProtocolExplosiveLevel2"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-techupgrade-terran-shapedblast.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DamageResponse ModifyFraction="0.2">
+            <Kind index="Melee" value="0"/>
+            <Kind index="Ranged" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="StonewallProtocolExplosiveLevel3">
+        <Tooltip value="Button/Tooltip/StonewallProtocolExplosiveLevel3"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-techupgrade-terran-shapedblast.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DamageResponse ModifyFraction="0.15">
+            <Kind index="Melee" value="0"/>
+            <Kind index="Ranged" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="StonewallProtocolExplosiveLevel4">
+        <Tooltip value="Button/Tooltip/StonewallProtocolExplosiveLevel4"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-techupgrade-terran-shapedblast.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DamageResponse ModifyFraction="0.1">
+            <Kind index="Melee" value="0"/>
+            <Kind index="Ranged" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="StonewallProtocolLevel1">
+        <Tooltip value="Button/Tooltip/StonewallProtocolLevel1"/>
+        <InfoIcon value="Assets\Textures\btn-techupgrade-terran-shapedblast.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="CanSpendEnergy"/>
+        <RemoveValidatorArray value="hasEnergy"/>
+        <Duration value="15"/>
+        <InitialEffect value="Stonewall1AB"/>
+        <FinalEffect value="Stonewall1RB"/>
+        <ExpireEffect value="Stonewall1RB"/>
+        <Modification MoveSpeedMultiplier="0.5">
+            <LifeArmorBonus value="16"/>
+            <VitalRegenArray index="Energy" value="-5"/>
+        </Modification>
+        <DamageResponse ModifyFraction="0.75">
+            <Kind index="Spell" value="0"/>
+            <Kind index="Splash" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="StonewallProtocolExplosiveLevel1">
+        <Tooltip value="Button/Tooltip/StonewallProtocolExplosiveLevel1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-techupgrade-terran-shapedblast.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DamageResponse ModifyFraction="0.25">
+            <Kind index="Melee" value="0"/>
+            <Kind index="Ranged" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="StonewallProtocolLevel2">
+        <Tooltip value="Button/Tooltip/StonewallProtocolLevel2"/>
+        <InfoIcon value="Assets\Textures\btn-techupgrade-terran-shapedblast.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="CanSpendEnergy"/>
+        <RemoveValidatorArray value="hasEnergy"/>
+        <Duration value="15"/>
+        <InitialEffect value="Stonewall2AB"/>
+        <FinalEffect value="Stonewall2RB"/>
+        <ExpireEffect value="Stonewall2RB"/>
+        <Modification MoveSpeedMultiplier="0.5">
+            <LifeArmorBonus value="33"/>
+            <VitalRegenArray index="Energy" value="-7.5"/>
+        </Modification>
+        <DamageResponse ModifyFraction="0.5">
+            <Kind index="Spell" value="0"/>
+            <Kind index="Splash" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="StonewallProtocolLevel3">
+        <Tooltip value="Button/Tooltip/StonewallProtocolLevel3"/>
+        <InfoIcon value="Assets\Textures\btn-techupgrade-terran-shapedblast.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="CanSpendEnergy"/>
+        <RemoveValidatorArray value="hasEnergy"/>
+        <Duration value="15"/>
+        <InitialEffect value="Stonewall3AB"/>
+        <FinalEffect value="Stonewall3RB"/>
+        <ExpireEffect value="Stonewall3RB"/>
+        <Modification MoveSpeedMultiplier="0.5">
+            <LifeArmorBonus value="50"/>
+            <VitalRegenArray index="Energy" value="-10"/>
+        </Modification>
+        <DamageResponse ModifyFraction="0.25">
+            <Kind index="Spell" value="0"/>
+            <Kind index="Splash" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="StonewallProtocolLevel4">
+        <Tooltip value="Button/Tooltip/StonewallProtocolLevel4"/>
+        <InfoIcon value="Assets\Textures\btn-techupgrade-terran-shapedblast.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="CanSpendEnergy"/>
+        <RemoveValidatorArray value="hasEnergy"/>
+        <Duration value="15"/>
+        <InitialEffect value="Stonewall4AB"/>
+        <FinalEffect value="Stonewall4RB"/>
+        <ExpireEffect value="Stonewall4RB"/>
+        <Modification MoveSpeedMultiplier="0.5">
+            <LifeArmorBonus value="60"/>
+            <VitalRegenArray index="Energy" value="-20"/>
+        </Modification>
+        <DamageResponse ModifyFraction="0.1">
+            <Kind index="Spell" value="0"/>
+            <Kind index="Splash" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BorgEnergyOrbDoTSearch">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Period value="0.1"/>
+        <PeriodicEffect value="BorgEnergyOrbTravelSet"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="IrradiatedCloud">
+        <InfoIcon value="Assets\Textures\btn-upgrade-swann-irradiate.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="NotCleansing"/>
+        <Duration value="5"/>
+        <Modification MoveSpeedMultiplier="0.9" AttackSpeedMultiplier="0.75">
+            <VitalRegenArray index="Life" value="-20"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="WepAssimUnlocks1">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InitialEffect value="WeaponAssim1Set2"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ReloadingNew">
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisplayDuration index="Self" value="1"/>
+        <DisplayDuration index="Ally" value="1"/>
+        <Duration value="3.9"/>
+        <InitialEffect value="ReloadingInitialSwitch"/>
+        <FinalEffect value="ReloadSwitch"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="WeaponAssimilation1">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <Requirements value="WeaponAssim1"/>
+        <Modification SightBonus="1" WeaponRange="1" WeaponScanBonus="1">
+            <DamageDealtFraction index="Ranged" value="0.1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BorgMarksmanship2">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <Requirements value="BorgMarksmanship2"/>
+        <Modification>
+            <AttributeChangeArray Attribute="Dexterity" Points="8"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BorgMarksmanship3">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <Requirements value="BorgMarksmanship3"/>
+        <Modification>
+            <AttributeChangeArray Attribute="Dexterity" Points="12"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BorgMarksmanship4">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <Requirements value="BorgMarksmanship4"/>
+        <Modification>
+            <AttributeChangeArray Attribute="Dexterity" Points="16"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BorgSkillUnlocks1">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BorgInitAbilities">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BorgFieldMainUnlock1">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InitialEffect value="FieldRepair1MP"/>
+        <Modification>
+            <AttributeChangeArray Attribute="Mechanical" Points="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BorgSkillUnlocks2">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InitialEffect value="LevelFieldRepairMP"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BorgSkillUnlocks3">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InitialEffect value="Cyborg20Riflebutt3MP"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BorgSkillUnlocks4">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Period value="5"/>
+        <InitialEffect value="Cyborg20Skills4Set"/>
+        <PeriodicEffect value="BorgDashUpgradeSwitch"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BorgSkills2">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="BorgSkills2"/>
+        <Modification>
+            <LifeArmorBonus value="18"/>
+            <VitalMaxArray index="Life" value="80"/>
+            <AttributeChangeArray Attribute="Fitness" Points="4"/>
+            <AttributeChangeArray Attribute="Mechanical" Points="4"/>
+        </Modification>
+        <DamageResponse ModifyFraction="0.8">
+            <Kind index="Melee" value="0"/>
+            <Kind index="Ranged" value="0"/>
+            <Kind index="Splash" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <Chance value="1"/>
+            <Cost>
+                <Charge Link="Behavior/HeavyArmor"/>
+                <Cooldown Link="Behavior/HeavyArmor"/>
+            </Cost>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BorgSkills3">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="BorgSkills3"/>
+        <Modification>
+            <LifeArmorBonus value="27"/>
+            <VitalMaxArray index="Life" value="120"/>
+            <AttributeChangeArray Attribute="Fitness" Points="6"/>
+            <AttributeChangeArray Attribute="Mechanical" Points="6"/>
+        </Modification>
+        <DamageResponse ModifyFraction="0.7">
+            <Kind index="Melee" value="0"/>
+            <Kind index="Ranged" value="0"/>
+            <Kind index="Splash" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <Chance value="1"/>
+            <Cost>
+                <Charge Link="Behavior/HeavyArmor"/>
+                <Cooldown Link="Behavior/HeavyArmor"/>
+            </Cost>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BorgSkills4">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="BorgSkills4"/>
+        <Modification>
+            <LifeArmorBonus value="36"/>
+            <VitalMaxArray index="Life" value="160"/>
+            <AttributeChangeArray Attribute="Fitness" Points="8"/>
+            <AttributeChangeArray Attribute="Mechanical" Points="8"/>
+        </Modification>
+        <DamageResponse ModifyFraction="0.6">
+            <Kind index="Melee" value="0"/>
+            <Kind index="Ranged" value="0"/>
+            <Kind index="Splash" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <Chance value="1"/>
+            <Cost>
+                <Charge Link="Behavior/HeavyArmor"/>
+                <Cooldown Link="Behavior/HeavyArmor"/>
+            </Cost>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BorgCriticallvl1">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <DisableValidatorArray value="BorgMarksmanship1"/>
+        <DamageResponse Location="Attacker" ModifyFraction="2.5" TargetFilters="-;Player,Ally,Neutral">
+            <Kind index="Spell" value="0"/>
+            <Kind index="Melee" value="0"/>
+            <Kind index="Splash" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <Chance value="0.125"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CyborgDash">
+        <InfoIcon value="Buttons\BTNSprint.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="CasterEnergyGE1"/>
+        <InitialEffect value="Borg20DashRiflebuttMP"/>
+        <FinalEffect value="Borg20DashRiflebuttRemoveMP"/>
+        <Modification MoveSpeedBonus="0.6015">
+            <VitalRegenArray index="Energy" value="-6"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CyborgPickingWeapon">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <ModifyFlags index="DisableAbils" value="1"/>
+            <ModifyFlags index="DisableWeapons" value="1"/>
+            <ModifyFlags index="SuppressMoving" value="1"/>
+            <ModifyFlags index="SuppressTurning" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BorgEquipRifle">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <InitialEffect value="EquipRifleBasic"/>
+        <RefreshEffect value="EquipRifleBasic"/>
+        <FinalEffect value="UnequipRifleBasic"/>
+        <ExpireEffect value="UnequipRifleBasic"/>
+        <Modification>
+            <WeaponArray Link="BattleRifleMk2"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="FeedbackPenumbra">
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-upgrade-tychus-tychus-ripperrounds.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="3"/>
+        <Modification>
+            <BehaviorLinkDisableArray value="KeenSense"/>
+            <BehaviorLinkDisableArray value="KeenSense2"/>
+            <BehaviorLinkDisableArray value="KeenSense3"/>
+            <BehaviorLinkDisableArray value="Hawkeye"/>
+            <BehaviorLinkDisableArray value="FlashlightReveal"/>
+            <BehaviorLinkDisableArray value="LightFilter"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="FieldRepair0">
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-nova-liferegen.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="10"/>
+        <Period value="1"/>
+        <PeriodicEffect value="BorgFieldRepair0Period"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="FieldRepair1">
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-nova-liferegen.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="10"/>
+        <Period value="1"/>
+        <InitialEffect value="BorgFieldRepair1"/>
+        <PeriodicEffect value="BorgFieldRepair1Period"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="FieldRepair2">
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-nova-liferegen.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="10"/>
+        <Period value="1"/>
+        <InitialEffect value="BorgFieldRepair2"/>
+        <PeriodicEffect value="BorgFieldRepair2Period"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="FieldRepair3">
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-nova-liferegen.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="10"/>
+        <Period value="1"/>
+        <InitialEffect value="BorgFieldRepair3Switch"/>
+        <PeriodicEffect value="BorgFieldRepair3Period"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MagazineSize">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <MaxStackCount value="5000"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BorgMarksmanship1">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <Requirements value="BorgMarksmanship1"/>
+        <Modification>
+            <AttributeChangeArray Attribute="Dexterity" Points="4"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SabotageAura">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="SabotageEnabled"/>
+        <Period value="0.5"/>
+        <PeriodicEffect value="SabotageSA"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SabotageSkills1">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Requirements value="LearnSabotageSkills1"/>
+        <DisableValidatorArray value="SpecterCloakisActive"/>
+        <Modification AttackSpeedMultiplier="1.25"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="BinocularAIElitePMC">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
@@ -51,6 +1070,26 @@
             <Kind index="NoProc" value="0"/>
             <Chance value="1"/>
         </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="EnableConcussion">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="CasterEnergyGE10"/>
+        <Modification>
+            <VitalRegenArray index="Energy" value="-1"/>
+            <WeaponArray Link="Mk47Mod1Concussion"/>
+            <WeaponDisableArray value="Mk47Mod0"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="EnableIncendiary">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="CasterEnergyGE10"/>
+        <Modification>
+            <VitalRegenArray index="Energy" value="-2"/>
+            <WeaponArray Link="Mk47Mod2Incendiary"/>
+            <WeaponDisableArray value="Mk47Mod0"/>
+        </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="EnableSnipeST">
         <InfoFlags index="Hidden" value="1"/>
@@ -109,6 +1148,173 @@
         <Period value="5"/>
         <PeriodicEffect value="MLRSBarrageAIEnum"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="NapalmBurnBorg">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\fireball_1hot.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <MaxStackCount value="10"/>
+        <MaxStackCountPerCaster value="6"/>
+        <Duration value="3"/>
+        <Period value="0.1"/>
+        <InitialEffect value="NapalmDamageInitBorg"/>
+        <RefreshEffect value="NapalmDamageInitBorg"/>
+        <PeriodicEffect value="NapalmDoT4"/>
+    </CBehaviorBuff>
+    <CBehaviorAttackModifier id="Sabotage1AM"/>
+    <CBehaviorBuff id="SabotageLevel1">
+        <InfoIcon value="Assets\Textures\btn-ability-terran-tosh-mindblast.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="CanBeSabotaged"/>
+        <Duration value="3"/>
+        <Modification AttackSpeedMultiplier="0.95" WeaponRange="-1" WeaponScanBonus="-1">
+            <BehaviorLinkDisableArray value="InfantryXPSharing"/>
+        </Modification>
+        <DamageResponse Location="Attacker" ModifyFraction="0" TargetFilters="-;Player,Ally,Neutral">
+            <Kind index="Spell" value="0"/>
+            <Kind index="Melee" value="0"/>
+            <Kind index="Splash" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <Chance value="0.1"/>
+            <Cost>
+                <Charge Link="Behavior/Criticallvl4"/>
+                <Cooldown Link="Behavior/Criticallvl4"/>
+            </Cost>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SabotageLevel2">
+        <InfoIcon value="Assets\Textures\btn-ability-terran-tosh-mindblast.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="CanBeSabotaged"/>
+        <Duration value="3"/>
+        <Modification AttackSpeedMultiplier="0.9" WeaponRange="-1.5" WeaponScanBonus="-1.5">
+            <BehaviorLinkDisableArray value="InfantryXPSharing"/>
+        </Modification>
+        <DamageResponse Location="Attacker" ModifyFraction="0" TargetFilters="-;Player,Ally,Neutral">
+            <Kind index="Spell" value="0"/>
+            <Kind index="Melee" value="0"/>
+            <Kind index="Splash" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <Chance value="0.125"/>
+            <Cost>
+                <Charge Link="Behavior/Criticallvl4"/>
+                <Cooldown Link="Behavior/Criticallvl4"/>
+            </Cost>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SabotageLevel3">
+        <InfoIcon value="Assets\Textures\btn-ability-terran-tosh-mindblast.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="CanBeSabotaged"/>
+        <Duration value="3"/>
+        <Modification AttackSpeedMultiplier="0.85" WeaponRange="-2" WeaponScanBonus="-2">
+            <BehaviorLinkDisableArray value="InfantryXPSharing"/>
+            <BehaviorLinkDisableArray value="SquadLeadership"/>
+            <BehaviorLinkDisableArray value="SquadLeadership2"/>
+        </Modification>
+        <DamageResponse Location="Attacker" ModifyFraction="0" TargetFilters="-;Player,Ally,Neutral">
+            <Kind index="Spell" value="0"/>
+            <Kind index="Melee" value="0"/>
+            <Kind index="Splash" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <Chance value="0.15"/>
+            <Cost>
+                <Charge Link="Behavior/Criticallvl4"/>
+                <Cooldown Link="Behavior/Criticallvl4"/>
+            </Cost>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SabotageLevel4">
+        <InfoIcon value="Assets\Textures\btn-ability-terran-tosh-mindblast.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="CanBeSabotaged"/>
+        <Duration value="3"/>
+        <Modification AttackSpeedMultiplier="0.8" WeaponRange="-2.5" WeaponScanBonus="-2.5">
+            <BehaviorLinkDisableArray value="InfantryXPSharing"/>
+            <BehaviorLinkDisableArray value="SquadLeadership"/>
+            <BehaviorLinkDisableArray value="SquadLeadership2"/>
+            <BehaviorLinkDisableArray value="PMCLevels"/>
+        </Modification>
+        <DamageResponse Location="Attacker" ModifyFraction="0" TargetFilters="-;Player,Ally,Neutral">
+            <Kind index="Spell" value="0"/>
+            <Kind index="Melee" value="0"/>
+            <Kind index="Splash" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <Chance value="0.175"/>
+            <Cost>
+                <Charge Link="Behavior/Criticallvl4"/>
+                <Cooldown Link="Behavior/Criticallvl4"/>
+            </Cost>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SabotagePhantasm">
+        <InfoIcon value="Assets\Textures\btn-ability-terran-tosh-mindblast.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="CanBeSabotaged"/>
+        <Duration value="3"/>
+        <Modification AttackSpeedMultiplier="0.8" WeaponRange="-2.5" WeaponScanBonus="-2.5">
+            <BehaviorLinkDisableArray value="InfantryXPSharing"/>
+            <BehaviorLinkDisableArray value="SquadLeadership"/>
+            <BehaviorLinkDisableArray value="SquadLeadership2"/>
+            <BehaviorLinkDisableArray value="PMCLevels"/>
+            <BehaviorLinkDisableArray value="LightFilter"/>
+            <BehaviorLinkDisableArray value="FlashlightReveal"/>
+        </Modification>
+        <DamageResponse Location="Attacker" ModifyFraction="0" TargetFilters="-;Player,Ally,Neutral">
+            <Kind index="Spell" value="0"/>
+            <Kind index="Melee" value="0"/>
+            <Kind index="Splash" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <Chance value="0.175"/>
+            <Cost>
+                <Charge Link="Behavior/Criticallvl4"/>
+                <Cooldown Link="Behavior/Criticallvl4"/>
+            </Cost>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SabotageSkills2">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Requirements value="LearnSabotageSkills2"/>
+        <DisableValidatorArray value="SpecterCloakisActive"/>
+        <Modification AttackSpeedMultiplier="1.5"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SabotageSkills3">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Requirements value="LearnSabotageSkills3"/>
+        <DisableValidatorArray value="SpecterCloakisActive"/>
+        <Modification AttackSpeedMultiplier="1.75"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SabotageSkills4">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Requirements value="LearnSabotageSkills4"/>
+        <DisableValidatorArray value="SpecterCloakisActive"/>
+        <Modification AttackSpeedMultiplier="2"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BorgSkills1">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="BorgSkills1"/>
+        <Modification>
+            <LifeArmorBonus value="9"/>
+            <VitalMaxArray index="Life" value="40"/>
+            <AttributeChangeArray Attribute="Fitness" Points="2"/>
+            <AttributeChangeArray Attribute="Mechanical" Points="2"/>
+        </Modification>
+        <DamageResponse ModifyFraction="0.9">
+            <Kind index="Melee" value="0"/>
+            <Kind index="Ranged" value="0"/>
+            <Kind index="Splash" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <Chance value="1"/>
+            <Cost>
+                <Charge Link="Behavior/HeavyArmor"/>
+                <Cooldown Link="Behavior/HeavyArmor"/>
+            </Cost>
+        </DamageResponse>
+    </CBehaviorBuff>
     <CBehaviorBuff id="StrikeTeamAINormal">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
@@ -119,8 +1325,17 @@
     <CBehaviorBuff id="LAV25UnloadAI">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
-        <Period value="5"/>
+        <Period value="3"/>
         <PeriodicEffect value="LAV25UnloadAISA"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SystemRestorationMode">
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-nova-liferegen.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="15"/>
+        <Modification>
+            <VitalRegenArray index="Life" value="20"/>
+            <VitalRegenArray index="Energy" value="5"/>
+        </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="TriggerDiscipline">
         <BehaviorFlags index="Permanent" value="1"/>
@@ -656,6 +1871,67 @@
             <DamageDealtAttributeMultiplier index="Massive" value="0.15"/>
         </Modification>
     </CBehaviorBuff>
+    <CBehaviorBuff id="WeaponAssimilation2">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <Requirements value="WeaponAssim2"/>
+        <Modification SightBonus="1.5" WeaponRange="2" WeaponScanBonus="2">
+            <DamageDealtFraction index="Ranged" value="0.15"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="WeaponAssimilation3">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <Requirements value="WeaponAssim3"/>
+        <Modification SightBonus="3" WeaponRange="3" WeaponScanBonus="3">
+            <DamageDealtFraction index="Ranged" value="0.2"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="WeaponAssimilation4">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <Requirements value="WeaponAssim4"/>
+        <Modification SightBonus="4.5" WeaponRange="4" WeaponScanBonus="4">
+            <DamageDealtFraction index="Ranged" value="0.25"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="WeaponOverdriveModuleLevel1">
+        <InfoIcon value="Assets\Textures\btn-ability-hornerhan-raven-analyzetarget.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="CyborgWOM1"/>
+        <RemoveValidatorArray value="CasterEnergyGE10"/>
+        <Modification>
+            <DamageDealtFraction index="Spell" value="0.5"/>
+            <DamageDealtFraction index="Ranged" value="0.5"/>
+            <DamageDealtFraction index="Splash" value="0.5"/>
+            <VitalRegenArray index="Energy" value="-2"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="WeaponOverdriveModuleLevel2">
+        <InfoIcon value="Assets\Textures\btn-ability-hornerhan-raven-analyzetarget.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="CyborgWOM2"/>
+        <RemoveValidatorArray value="CasterEnergyGE10"/>
+        <Modification AttackSpeedMultiplier="1.15">
+            <DamageDealtFraction index="Spell" value="0.5"/>
+            <DamageDealtFraction index="Ranged" value="0.5"/>
+            <DamageDealtFraction index="Splash" value="0.5"/>
+            <VitalRegenArray index="Energy" value="-2.5"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="WeaponOverdriveModuleLevel3">
+        <InfoIcon value="Assets\Textures\btn-ability-hornerhan-raven-analyzetarget.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="CyborgConcussionAllowed"/>
+        <RemoveValidatorArray value="CasterEnergyGE10"/>
+        <Modification AttackSpeedMultiplier="1.25" WeaponRange="3">
+            <DamageDealtFraction index="Spell" value="0.5"/>
+            <DamageDealtFraction index="Ranged" value="0.5"/>
+            <DamageDealtFraction index="Splash" value="0.5"/>
+            <DamageDealtAttributeMultiplier index="Armored" value="0.2"/>
+            <VitalRegenArray index="Energy" value="-3"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="WeaponsTraining1">
         <BehaviorFlags index="Permanent" value="1"/>
         <InfoFlags index="Hidden" value="1"/>
@@ -696,6 +1972,34 @@
         <BehaviorFlags index="Permanent" value="1"/>
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="StealthModUnlocks1">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DirectedEnergyUnlocks1">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="WepAssimUnlocks2">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InitialEffect value="WeaponAssim2Set"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="WepAssimUnlocks3">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InitialEffect value="WeaponAssim3Set"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="WepAssimUnlocks4">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InitialEffect value="WeaponAssim4Set"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="ZombieAI">
         <InfoFlags index="Hidden" value="1"/>
@@ -956,18 +2260,17 @@
         <InfoFlags index="Hidden" value="1"/>
         <InfoIcon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel3.dds"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
-        <MaxStackCount value="10"/>
+        <MaxStackCount value="15"/>
         <Duration value="3"/>
         <RemoveValidatorArray value="NotBurstPausing"/>
         <BuffFlags index="RefreshStack" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="BurstCounter2">
         <Alignment value="Negative"/>
-        <InfoFlags index="Hidden" value="1"/>
         <InfoIcon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel3.dds"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="NotBurstPausing"/>
-        <MaxStackCount value="13"/>
+        <MaxStackCount value="16"/>
         <Duration value="3"/>
         <BuffFlags index="RefreshStack" value="1"/>
         <Modification>
@@ -977,12 +2280,13 @@
     <CBehaviorBuff id="BurstCyclerPause2">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
-        <DisableValidatorArray value="BurstCounter13"/>
+        <DisableValidatorArray value="BurstCounter18"/>
         <Period value="0.001"/>
         <PeriodicEffect value="BurstPauseSwitch"/>
         <Modification>
             <BehaviorLinkDisableArray value="BurstCyclerPause"/>
         </Modification>
+        <RemoveValidatorArray value="NotHeroic"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="BurstPause">
         <InfoIcon value="Assets\Textures\btn-ability-terran-holdfire.dds"/>
@@ -993,7 +2297,7 @@
             <StateFlags index="SuppressAttack" value="1"/>
         </Modification>
         <Period value="0.01"/>
-        <PeriodicEffect value="RemoveBurstCounts"/>
+        <PeriodicEffect value="BurstCounterRemoverCombine"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="BurstPause2">
         <InfoIcon value="Assets\Textures\btn-ability-terran-holdfire.dds"/>
@@ -1010,7 +2314,8 @@
         <BehaviorFlags index="Permanent" value="1"/>
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
-        <DisableValidatorArray value="BurstCounter10"/>
+        <DisableValidatorArray value="BurstCounter"/>
+        <DisableValidatorArray value="MGUseValidator"/>
         <Period value="0.001"/>
         <PeriodicEffect value="BurstPauseSwitch"/>
     </CBehaviorBuff>
@@ -1372,7 +2677,7 @@
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\btn-ability-protoss-targetlock.dds"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
-        <Duration value="5"/>
+        <Duration value="3"/>
         <Period value="0.3"/>
         <PeriodicEffect value="MarkedCP"/>
     </CBehaviorBuff>
@@ -2218,6 +3523,7 @@
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
         <DisableValidatorArray value="CriticalSuppress212"/>
+        <DisableValidatorArray value="BorgIncendiaryOff"/>
         <Modification>
             <BehaviorLinkDisableArray value="Criticallvl12"/>
             <BehaviorLinkDisableArray value="Criticallvl22"/>
@@ -2242,6 +3548,7 @@
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
         <DisableValidatorArray value="CriticalSuppress122"/>
+        <DisableValidatorArray value="BorgIncendiaryOff"/>
         <Modification>
             <BehaviorLinkDisableArray value="Criticallvl12"/>
             <BehaviorLinkDisableArray value="Criticallvl22"/>
@@ -2266,6 +3573,7 @@
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
         <DisableValidatorArray value="CriticalSuppress132"/>
+        <DisableValidatorArray value="BorgIncendiaryOff"/>
         <Modification>
             <BehaviorLinkDisableArray value="Criticallvl12"/>
             <BehaviorLinkDisableArray value="Criticallvl22"/>
@@ -2290,6 +3598,7 @@
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
         <DisableValidatorArray value="CriticalSuppress142"/>
+        <DisableValidatorArray value="BorgIncendiaryOff"/>
         <Modification>
             <BehaviorLinkDisableArray value="Criticallvl12"/>
             <BehaviorLinkDisableArray value="Criticallvl22"/>
@@ -2478,6 +3787,7 @@
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
         <DisableValidatorArray value="CriticalSuppress222"/>
+        <DisableValidatorArray value="BorgIncendiaryOff"/>
         <Modification>
             <BehaviorLinkDisableArray value="Criticallvl12"/>
             <BehaviorLinkDisableArray value="Criticallvl22"/>
@@ -2520,6 +3830,7 @@
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
         <DisableValidatorArray value="CriticalSuppress232"/>
+        <DisableValidatorArray value="BorgIncendiaryOff"/>
         <Modification>
             <BehaviorLinkDisableArray value="Criticallvl12"/>
             <BehaviorLinkDisableArray value="Criticallvl22"/>
@@ -2562,6 +3873,7 @@
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
         <DisableValidatorArray value="CriticalSuppress242"/>
+        <DisableValidatorArray value="BorgIncendiaryOff"/>
         <Modification>
             <BehaviorLinkDisableArray value="Criticallvl12"/>
             <BehaviorLinkDisableArray value="Criticallvl22"/>
@@ -2751,6 +4063,9 @@
             <Chance value="0.125"/>
         </DamageResponse>
         <InfoFlags index="Hidden" value="1"/>
+        <Modification>
+            <BehaviorLinkDisableArray value="MedicCrit"/>
+        </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="CriticalRapid14">
         <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
@@ -2792,6 +4107,7 @@
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
         <DisableValidatorArray value="CriticalStealthOrAgility"/>
+        <DisableValidatorArray value="BorgIncendiaryOff"/>
         <DamageResponse Location="Attacker" ModifyFraction="2.5" TargetFilters="-;Player,Ally,Neutral">
             <Kind index="Melee" value="0"/>
             <Kind index="Ranged" value="0"/>
@@ -2808,6 +4124,7 @@
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
         <DisableValidatorArray value="CriticalSuppress112"/>
+        <DisableValidatorArray value="BorgIncendiaryOff"/>
         <Modification>
             <BehaviorLinkDisableArray value="Criticallvl12"/>
             <BehaviorLinkDisableArray value="Criticallvl22"/>
@@ -2832,6 +4149,7 @@
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
         <DisableValidatorArray value="CriticalStealthAndAgility"/>
+        <DisableValidatorArray value="BorgIncendiaryOff"/>
         <Modification>
             <BehaviorLinkDisableArray value="Criticallvl12"/>
         </Modification>
@@ -2884,6 +4202,9 @@
             <Chance value="0.125"/>
         </DamageResponse>
         <InfoFlags index="Hidden" value="1"/>
+        <Modification>
+            <BehaviorLinkDisableArray value="MedicCrit"/>
+        </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="Criticallvl2S">
         <Cost>
@@ -2922,6 +4243,9 @@
             <Chance value="0.125"/>
         </DamageResponse>
         <InfoFlags index="Hidden" value="1"/>
+        <Modification>
+            <BehaviorLinkDisableArray value="MedicCrit"/>
+        </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="Criticallvl3S">
         <Cost>
@@ -2960,6 +4284,9 @@
             <Chance value="0.125"/>
         </DamageResponse>
         <InfoFlags index="Hidden" value="1"/>
+        <Modification>
+            <BehaviorLinkDisableArray value="MedicCrit"/>
+        </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="Critical3xDamage">
         <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
@@ -3230,6 +4557,7 @@
         <Alignment value="Negative"/>
         <InfoFlags index="Hidden" value="1"/>
         <DisableValidatorArray value="M92Rapid"/>
+        <DisableValidatorArray value="DMRUseValidator"/>
         <Modification AttackSpeedMultiplier="0.5"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="CriticalPrecise11">
@@ -4079,10 +5407,11 @@
         <Alignment value="Positive"/>
         <InfoIcon value="Assets\Textures\btn-ability-protoss-beambounce.dds"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
-        <Duration value="15"/>
+        <RemoveValidatorArray value="CasterEnergyGE1"/>
         <Modification>
-            <WeaponArray Link="D19LaserRifleBounce1"/>
-            <WeaponDisableArray value="D19LaserRifle"/>
+            <DamageDealtFraction index="Spell" value="-0.1"/>
+            <DamageDealtAttributeMultiplier index="Armored" value="-0.6"/>
+            <VitalRegenArray index="Energy" value="-2.3007"/>
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="LaserPrismD20">
@@ -4306,6 +5635,7 @@
         <InfoIcon value="Assets\Textures\btn-tips-mercenary.dds"/>
         <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
         <RemoveValidatorArray value="BulletsOnly"/>
+        <RemoveValidatorArray value="NotCyborg20"/>
         <InitialEffect value="UnequipRifleBasicSet"/>
         <FinalEffect value="EquipRifleBasicSet"/>
         <Modification MoveSpeedBonus="0.0507">
@@ -4939,8 +6269,8 @@
         <InfoFlags index="Hidden" value="1"/>
         <MaxStackCount value="30"/>
         <Modification MoveSpeedBonus="0.004">
-            <DamageDealtFraction index="Ranged" value="0.015"/>
-            <VitalMaxArray index="Life" value="-4"/>
+            <DamageDealtFraction index="Ranged" value="0.01"/>
+            <VitalMaxArray index="Life" value="-2"/>
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="SJPirateLightningStormStun">
@@ -5677,6 +7007,7 @@
             <WeaponScanBonus value="1.5"/>
             <DamageDealtScaled index="Ranged" value="32"/>
         </Modification>
+        <DisableValidatorArray value="ShotgunUseValidator"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="OverchargeLE">
         <Alignment value="Positive"/>
@@ -6950,6 +8281,8 @@
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
         <BehaviorFlags index="Permanent" value="1"/>
+        <InitialEffect value="CombatLoadMP"/>
+        <FinalEffect value="CombatLoadRemoveMP"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="ConcussionShellsWeapon">
         <InfoFlags index="Hidden" value="1"/>
@@ -7374,7 +8707,7 @@
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\btn-ability-terran-ignorearmor.dds"/>
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
-        <MaxStackCount value="65535"/>
+        <MaxStackCount value="30"/>
         <Duration value="20"/>
         <Modification ShieldArmorBonus="-1">
             <LifeArmorBonus value="-1"/>
@@ -7384,8 +8717,8 @@
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\btn-ability-terran-ignorearmor.dds"/>
         <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
-        <MaxStackCount value="15"/>
-        <Duration value="3"/>
+        <MaxStackCount value="20"/>
+        <Duration value="5"/>
         <Period value="0.1"/>
         <PeriodicEffect value="D19LaserRifleDoT1"/>
     </CBehaviorBuff>
@@ -7393,8 +8726,8 @@
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\btn-ability-terran-ignorearmor.dds"/>
         <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
-        <MaxStackCount value="15"/>
-        <Duration value="3"/>
+        <MaxStackCount value="20"/>
+        <Duration value="5"/>
         <Period value="0.1"/>
         <PeriodicEffect value="D19LaserRifleDoT2"/>
     </CBehaviorBuff>
@@ -7402,8 +8735,8 @@
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\btn-ability-terran-ignorearmor.dds"/>
         <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
-        <MaxStackCount value="15"/>
-        <Duration value="3"/>
+        <MaxStackCount value="20"/>
+        <Duration value="5"/>
         <Period value="0.1"/>
         <PeriodicEffect value="D19LaserRifleDoT3"/>
     </CBehaviorBuff>
@@ -7411,8 +8744,8 @@
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\btn-ability-terran-ignorearmor.dds"/>
         <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
-        <MaxStackCount value="15"/>
-        <Duration value="3"/>
+        <MaxStackCount value="20"/>
+        <Duration value="5"/>
         <Period value="0.1"/>
         <PeriodicEffect value="D19LaserRifleDoT4"/>
     </CBehaviorBuff>
@@ -7420,7 +8753,7 @@
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\btn-ability-terran-ignorearmor.dds"/>
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
-        <MaxStackCount value="65535"/>
+        <MaxStackCount value="30"/>
         <Duration value="10"/>
         <Modification ShieldArmorBonus="-1">
             <LifeArmorBonus value="-1"/>
@@ -7430,8 +8763,8 @@
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\btn-ability-terran-ignorearmor.dds"/>
         <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
-        <MaxStackCount value="15"/>
-        <Duration value="3"/>
+        <MaxStackCount value="20"/>
+        <Duration value="5"/>
         <Period value="0.1"/>
         <PeriodicEffect value="D19LaserRifleDoT5"/>
     </CBehaviorBuff>
@@ -7439,7 +8772,7 @@
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\btn-ability-terran-ignorearmor.dds"/>
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
-        <MaxStackCount value="65535"/>
+        <MaxStackCount value="30"/>
         <Duration value="20"/>
         <Modification ShieldArmorBonus="-1">
             <LifeArmorBonus value="-1"/>
@@ -7841,7 +9174,7 @@
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="CanSpendEnergy"/>
         <RemoveValidatorArray value="hasEnergy"/>
-        <Modification>
+        <Modification AttackSpeedMultiplier="0.5">
             <StateFlags index="Cloak" value="1"/>
             <VitalRegenArray index="Energy" value="-1"/>
         </Modification>
@@ -7933,6 +9266,7 @@
             <BehaviorLinkEnableArray value="Criticallvl4S"/>
         </Modification>
         <RemoveValidatorArray value="BulletsOnly"/>
+        <RemoveValidatorArray value="RifleUseValidator"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="SuperToughSkin">
         <BehaviorFlags index="Permanent" value="1"/>
@@ -7980,14 +9314,14 @@
         <BehaviorFlags index="Permanent" value="1"/>
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
-        <Modification SightBonus="1" MoveSpeedBonus="0.0117" ShieldArmorBonus="1">
-            <LifeArmorBonus value="1"/>
-            <VitalMaxArray index="Life" value="10"/>
-            <VitalMaxArray index="Shields" value="10"/>
-            <VitalMaxArray index="Energy" value="10"/>
-            <VitalRegenArray index="Life" value="0.1015"/>
-            <VitalRegenArray index="Shields" value="0.5"/>
-            <VitalRegenArray index="Energy" value="0.1015"/>
+        <Modification MoveSpeedBonus="0.0312" ShieldArmorBonus="3">
+            <LifeArmorBonus value="3"/>
+            <VitalMaxArray index="Life" value="20"/>
+            <VitalMaxArray index="Shields" value="20"/>
+            <VitalMaxArray index="Energy" value="20"/>
+            <VitalRegenArray index="Life" value="0.3007"/>
+            <VitalRegenArray index="Shields" value="1"/>
+            <VitalRegenArray index="Energy" value="0.3007"/>
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="BlastShield">
@@ -8075,6 +9409,7 @@
         <Modification AttackSpeedMultiplier="1.6">
             <DamageDealtScaled index="Ranged" value="-18"/>
         </Modification>
+        <DisableValidatorArray value="ShotgunUseValidator"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="HardArmor">
         <InfoFlags index="Hidden" value="1"/>
@@ -8259,6 +9594,7 @@
             <DamageDealtScaled index="Ranged" value="10"/>
         </Modification>
         <RemoveValidatorArray value="BulletsOnly"/>
+        <RemoveValidatorArray value="RifleUseValidator"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="HealingAura">
         <BehaviorFlags index="Permanent" value="1"/>
@@ -9070,6 +10406,7 @@
             <WeaponScanBonus value="5"/>
             <DamageDealtScaled index="Ranged" value="140"/>
         </Modification>
+        <RemoveValidatorArray value="DMRUseValidator"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="IPR">
         <Tooltip value="Button/Tooltip/IPR"/>
@@ -9235,13 +10572,13 @@
         <InitialEffect value="UnequipMachineGun"/>
         <FinalEffect value="EquipMachineGun"/>
         <Modification MoveSpeedBonus="-0.25" AttackSpeedMultiplier="1.4">
-            <DamageDealtAttributeMultiplier index="Armored" value="0.2"/>
             <BehaviorLinkDisableArray value="MGBurst"/>
             <BehaviorLinkDisableArray value="MGBurstUpgrade"/>
             <BehaviorLinkDisableArray value="MGBurstPause"/>
             <BehaviorLinkDisableArray value="MGBurstUpgradePause"/>
             <BehaviorLinkDisableArray value="BurstCyclerPause"/>
         </Modification>
+        <RemoveValidatorArray value="MGUseValidator"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="LiftBootsIn">
         <InfoFlags index="Hidden" value="1"/>
@@ -9265,9 +10602,10 @@
         <Tooltip value="Button/Tooltip/M41SAW"/>
         <Alignment value="Positive"/>
         <InfoIcon value="Buttons\Weapons\BTNLMG.dds"/>
-        <InitialEffect value="UnequipMachineGun"/>
-        <FinalEffect value="EquipMachineGun"/>
+        <InitialEffect value="M41SAWInitSet"/>
+        <FinalEffect value="M41SAWRemoveSet"/>
         <Modification MoveSpeedBonus="0.0781" AttackSpeedMultiplier="1.1"/>
+        <RemoveValidatorArray value="MGUseValidator"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="M241MMG">
         <Tooltip value="Button/Tooltip/M241MMG"/>
@@ -9280,6 +10618,7 @@
             <BehaviorLinkEnableArray value="BurstCounter2"/>
             <BehaviorLinkDisableArray value="BurstCounter"/>
         </Modification>
+        <RemoveValidatorArray value="MGUseValidator"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="M5MAR">
         <Tooltip value="Button/Tooltip/M5MAR"/>
@@ -9290,7 +10629,7 @@
         <Modification WeaponRange="2" WeaponScanBonus="2">
             <DamageDealtScaled index="Ranged" value="5"/>
         </Modification>
-        <RemoveValidatorArray value="BulletsOnly"/>
+        <RemoveValidatorArray value="RifleUseValidator"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="MRLAIHeroMechanical">
         <InfoFlags index="Hidden" value="1"/>
@@ -9483,8 +10822,8 @@
         <Tooltip value="Button/Tooltip/SOFAR"/>
         <Alignment value="Positive"/>
         <InfoIcon value="Buttons\Weapons\MEN7.dds"/>
-        <InitialEffect value="UnequipRifleBasicSet"/>
-        <FinalEffect value="EquipRifleBasicSet"/>
+        <InitialEffect value="USMCRInitSet"/>
+        <FinalEffect value="USMCRRemoveSet"/>
         <Modification WeaponRange="3" WeaponScanBonus="3">
             <DamageDealtScaled index="Ranged" value="15"/>
             <BehaviorLinkEnableArray value="Criticallvl1S"/>
@@ -9493,6 +10832,7 @@
             <BehaviorLinkEnableArray value="Criticallvl4S"/>
         </Modification>
         <RemoveValidatorArray value="BulletsOnly"/>
+        <RemoveValidatorArray value="RifleUseValidator"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="SteelSaber">
         <InfoFlags index="Hidden" value="1"/>
@@ -9707,10 +11047,11 @@
         <Tooltip value="Button/Tooltip/USMCR"/>
         <Alignment value="Positive"/>
         <InfoIcon value="Buttons/BTNUSMCR.dds"/>
-        <InitialEffect value="UnequipRifleBasicSet"/>
-        <FinalEffect value="EquipRifleBasicSet"/>
+        <InitialEffect value="USMCRInitSet"/>
+        <FinalEffect value="USMCRRemoveSet"/>
         <Modification AttackSpeedMultiplier="1.25"/>
         <RemoveValidatorArray value="BulletsOnly"/>
+        <RemoveValidatorArray value="RifleUseValidator"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="VesaniaExplode">
         <InfoFlags index="Hidden" value="1"/>
@@ -9756,11 +11097,12 @@
         <Tooltip value="Button/Tooltip/IDMR2"/>
         <Alignment value="Positive"/>
         <InfoIcon value="Buttons\Weapons\IDMR2.dds"/>
-        <InitialEffect value="UnequipDMR"/>
-        <FinalEffect value="EquipDMR"/>
-        <Modification AttackSpeedMultiplier="1.05">
+        <InitialEffect value="IDMRInitSet"/>
+        <FinalEffect value="IDMRRemoveSet"/>
+        <Modification WeaponRange="2" WeaponScanBonus="2">
             <DamageDealtScaled index="Ranged" value="15"/>
         </Modification>
+        <RemoveValidatorArray value="DMRUseValidator"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="ISS7">
         <Tooltip value="Button/Tooltip/ISS7"/>
@@ -9769,6 +11111,7 @@
         <InitialEffect value="UnequipShotgun"/>
         <FinalEffect value="EquipShotgun"/>
         <Modification AttackSpeedMultiplier="1.3"/>
+        <DisableValidatorArray value="ShotgunUseValidator"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="MinervaCharge">
         <InfoFlags index="Hidden" value="1"/>
@@ -10401,6 +11744,8 @@
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
         <BehaviorFlags index="Permanent" value="1"/>
+        <InitialEffect value="ModifyReload40"/>
+        <FinalEffect value="ModifyReload40Remove"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="StalkerAI">
         <InfoFlags index="Hidden" value="1"/>
@@ -11050,6 +12395,7 @@
             <DamageDealtScaled index="Ranged" value="6"/>
         </Modification>
         <RemoveValidatorArray value="BulletsOnly"/>
+        <RemoveValidatorArray value="RifleUseValidator"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="ArachCharge">
         <InfoFlags index="Hidden" value="1"/>
@@ -11087,12 +12433,10 @@
         <Alignment value="Positive"/>
         <InfoIcon value="Buttons\BTNPlateCarrier.dds"/>
         <Modification MoveSpeedBonus="0.0507">
-            <LifeArmorBonus value="6"/>
-            <VitalMaxArray index="Shields" value="35"/>
-            <VitalRegenArray index="Shields" value="1"/>
+            <LifeArmorBonus value="11"/>
         </Modification>
-        <DamageResponse ModifyFraction="0.6">
-            <Chance value="0.7"/>
+        <DamageResponse ModifyFraction="0.3">
+            <Chance value="0.3"/>
         </DamageResponse>
     </CBehaviorBuff>
     <CBehaviorBuff id="SPCS">
@@ -11120,6 +12464,7 @@
             <DamageDealtScaled index="Ranged" value="13"/>
         </Modification>
         <RemoveValidatorArray value="BulletsOnly"/>
+        <RemoveValidatorArray value="RifleUseValidator"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="SmokeGrenadeLoop">
         <InfoIcon value="Assets\Buttons\Btn_Custom_UAC_SmokeGrenade.dds"/>
@@ -11358,8 +12703,7 @@
         <VeterancyLevelArray MinVeterancyXP="2350"/>
         <VeterancyLevelArray MinVeterancyXP="2525"/>
         <VeterancyLevelArray MinVeterancyXP="2800"/>
-        <ShareFilters index="DamageDealt" value="-;Ally,Neutral,Enemy,Worker,Hallucination"/>
-        <ShareFilters index="Kills" value="-;Enemy,Worker,Hallucination"/>
+        <ShareFilters index="Kills" value="-;Enemy,Hallucination"/>
         <SharedXPRadius index="Kills" value="40"/>
         <SharedXPFraction index="Kills" value="1"/>
     </CBehaviorVeterancy>
@@ -11405,6 +12749,7 @@
         <Modification AttackSpeedMultiplier="1.15" WeaponRange="-4" WeaponScanBonus="-4">
             <DamageDealtScaled index="Ranged" value="25"/>
         </Modification>
+        <RemoveValidatorArray value="DMRUseValidator"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="Unholymind">
         <BehaviorFlags index="Permanent" value="1"/>
@@ -11427,6 +12772,7 @@
     <CBehaviorBuff id="XR900Range">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <DisableValidatorArray value="RapidFiring"/>
+        <DisableValidatorArray value="DMRUseValidator"/>
         <Modification WeaponRange="4"/>
     </CBehaviorBuff>
     <CBehaviorCreepSource id="makeCreep4x42">

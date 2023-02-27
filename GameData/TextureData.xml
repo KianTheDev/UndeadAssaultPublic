@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="us-ascii"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Catalog>
     <CTexture id="AGRIAConcrete">
         <File value="Assets\Textures\agria_concrete_low.dds"/>
@@ -40,6 +40,10 @@
         <File value="Assets\Textures\defaultwater07.dds"/>
         <Slot value="main.diffuse"/>
     </CTexture>
+    <CTexture id="CamoVTMed">
+        <File value="Assets\Textures\Armor_VTmed_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
     <CTexture id="CamoBio">
         <File value="Textures\Armor_Bio_diffuse.dds"/>
         <Slot value="main.diffuse"/>
@@ -62,6 +66,14 @@
     </CTexture>
     <CTexture id="CamoSherif">
         <File value="Assets\Textures\Armor_Sheriff_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoKiwi">
+        <File value="Assets\Textures\Armor_Kiwi_diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="CamoVTrned">
+        <File value="Assets\Textures\Armor_VTrned_diffuse.dds"/>
         <Slot value="main.diffuse"/>
     </CTexture>
     <CTexture id="CamoWhite">

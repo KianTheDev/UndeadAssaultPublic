@@ -1,11 +1,9 @@
-<?xml version="1.0" encoding="us-ascii"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Catalog>
     <CWater id="Agria">
         <State index="0">
-            <Name value="[Default]"/>
             <Height value="7.000000"/>
             <Color value="0.094118,0.349020,0.494118,0.375000"/>
-            <ColorFallOff value="0.100000"/>
             <CausticsFallOff value="9.980000"/>
             <Specularity value="1000.000000"/>
             <SpecularScaler value="0.100000"/>
@@ -16,13 +14,11 @@
             <ReflectionDistortion value="0.014000"/>
             <RefractionDistortion value="0.020000"/>
             <MinReflection value="0.046000"/>
-            <ReflectivityPower value="8.000000"/>
         </State>
         <ReceiveShadows value="1"/>
     </CWater>
     <CWater id="Albion">
         <State index="0">
-            <Name value="[Default]"/>
             <Height value="7.000000"/>
             <Color value="0.094118,0.254902,0.400000,0.264000"/>
             <ColorFallOff value="0.084000"/>
@@ -36,12 +32,10 @@
             <ReflectionDistortion value="0.046000"/>
             <RefractionDistortion value="0.020000"/>
             <MinReflection value="0.243000"/>
-            <ReflectivityPower value="8.000000"/>
         </State>
     </CWater>
     <CWater id="Avernus">
         <State index="0">
-            <Name value="[Default]"/>
             <Height value="7.000000"/>
             <Color value="0.101961,0.164706,0.117647,0.750000"/>
             <ColorFallOff value="0.750000"/>
@@ -59,7 +53,6 @@
     </CWater>
     <CWater id="BelShir">
         <State index="0">
-            <Name value="[Default]"/>
             <Height value="7.000000"/>
             <Color value="0.254902,0.501961,0.462745,0.100000"/>
             <ColorFallOff value="0.750000"/>
@@ -70,41 +63,13 @@
             <MeshRoughness value="0.100000"/>
             <TextureRoughness value="0.100000"/>
             <ReflectionDistortion value="0.000000"/>
-            <RefractionDistortion value="0.020000"/>
             <MinReflection value="0.450000"/>
-            <ReflectivityPower value="8.000000"/>
         </State>
     </CWater>
     <CWater id="Niflheim">
-        <State index="0">
-            <Name value="[Default]"/>
-            <Height value="7.100000"/>
-            <Color value="0.098039,0.349020,0.498039,0.100000"/>
-            <ColorFallOff value="0.000000"/>
-            <Specularity value="58.099998"/>
-            <SpecularScaler value="4.280000"/>
-            <UvRate value="-0.000000,-0.001000,0.000000,0.000000"/>
-            <TextureRoughness value="0.302000"/>
-            <ReflectionDistortion value="0.020000"/>
-            <RefractionDistortion value="0.002000"/>
-            <MinReflection value="0.280000"/>
-            <ReflectivityPower value="8.000000"/>
-        </State>
+        <State index="0" Height="7.100000"/>
     </CWater>
     <CWater id="PortZion">
-        <State index="0">
-            <Name value="[Default]"/>
-            <Height value="7.000000"/>
-            <Color value="0.584314,0.866667,0.000000,0.027000"/>
-            <ColorFallOff value="0.027000"/>
-            <Specularity value="1000.000000"/>
-            <SpecularScaler value="0.300000"/>
-            <UvRate value="-0.000000,-0.001000,0.000000,0.000000"/>
-            <TextureRoughness value="0.536000"/>
-            <ReflectionDistortion value="0.290000"/>
-            <RefractionDistortion value="0.001300"/>
-            <MinReflection value="0.000000"/>
-            <ReflectivityPower value="8.000000"/>
-        </State>
+        <State index="0" Height="7.000000" Color="0.584314,0.866667,0.000000,0.027000"/>
     </CWater>
 </Catalog>

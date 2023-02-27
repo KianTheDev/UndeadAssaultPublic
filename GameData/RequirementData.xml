@@ -11,14 +11,227 @@
         <NodeArray index="Use" Link="AndGTE1773106101CountBehaviorSpecterSnipesLoadedCompleteOnlyAtUnit1Eq2708064578CountBehaviorSwappingRoundsCompleteOnlyAtUnit0"/>
         <NodeArray index="Show" Link="GTECountBehaviorAPRoundsReadyCompleteOnlyAtUnit1"/>
     </CRequirement>
+    <CRequirement id="CombatDrugs1">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="GTE3928398389CountAbilAugmentationCompleteOnlyAtUnitTechTreeCheat1"/>
+    </CRequirement>
+    <CRequirement id="Borg20ArmoredRiflebutt">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="GTECountAbilCyborg20SkillsCompleteOnlyAtUnitTechTreeCheat2"/>
+    </CRequirement>
+    <CRequirement id="BorgFieldMain1">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="Eq2679229701CountAbilCyborg20FieldMaintenanceCompleteOnlyAtUnitTechTreeCheat1"/>
+    </CRequirement>
+    <CRequirement id="BorgFieldMain2">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="Eq2679229701CountAbilCyborg20FieldMaintenanceCompleteOnlyAtUnitTechTreeCheat2"/>
+    </CRequirement>
+    <CRequirement id="BorgFieldMain3">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="Eq2679229701CountAbilCyborg20FieldMaintenanceCompleteOnlyAtUnitTechTreeCheat3"/>
+    </CRequirement>
+    <CRequirement id="Borg20Riflebutt">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="GTE2679229701CountAbilCyborg20SkillsCompleteOnlyAtUnitTechTreeCheat1"/>
+    </CRequirement>
+    <CRequirement id="BurstDispersionAvailable">
+        <NodeArray index="Use" Link="GTECountBehaviorBorgEquipMGCompleteOnlyAtUnit1"/>
+        <NodeArray index="Show" Link="GTECountBehaviorBorgEquipMGCompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="BurstDispersionOn">
+        <NodeArray index="Use" Link="GTECountBehaviorBurstDispersionOnCompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="MandoRifleReq">
+        <NodeArray index="Use" Link="Eq643600613CountBehaviorReloadingNewCompleteOnlyAtUnit0"/>
+        <NodeArray index="Show" Link="EqCountBehaviorMandoEquipRifleCompleteOnlyAtUnit0"/>
+    </CRequirement>
+    <CRequirement id="MandoShotgunReq">
+        <NodeArray index="Use" Link="Eq643600613CountBehaviorReloadingNewCompleteOnlyAtUnit0"/>
+        <NodeArray index="Show" Link="EqCountBehaviorMandoEquipShotgunCompleteOnlyAtUnit0"/>
+    </CRequirement>
+    <CRequirement id="DeagleNotEquipped">
+        <NodeArray index="Use" Link="Eq1352954077CountBehaviorMedicEquipDeagleCompleteOnlyAtUnit0"/>
+    </CRequirement>
+    <CRequirement id="NaniteGrenade1">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="GTE1175602556CountAbilAugmentationCompleteOnlyAtUnitTechTreeCheat2"/>
+    </CRequirement>
+    <CRequirement id="CombatDrugs2">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="GTE2892571211CountAbilAugmentationCompleteOnlyAtUnitTechTreeCheat3"/>
+    </CRequirement>
+    <CRequirement id="NaniteGrenade2">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="GTE1175602556CountAbilAugmentationCompleteOnlyAtUnitTechTreeCheat4"/>
+    </CRequirement>
+    <CRequirement id="NotReloading">
+        <NodeArray index="Use" Link="Eq643600613CountBehaviorReloadingNewCompleteOnlyAtUnit0"/>
+    </CRequirement>
+    <CRequirement id="CyborgCloak">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="GTE45386311CountAbilStealthModuleCompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="ETM1">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="Eq2487187567CountAbilEnhancedTargetingModuleCompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="DirectedEnergy">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="Eq1806167801CountAbilBorgDirectedEnergyCompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="DeagleLoaded">
+        <NodeArray index="Use" Link="GTECountBehaviorDeagleAmmoCompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="MedicEquipDeagle">
+        <NodeArray index="Use" Link="AndEqCountBehaviorBurstFireAssaultRifleCompleteOnlyAtUnit28991817480Eq643600613CountBehaviorReloadingNewCompleteOnlyAtUnit0"/>
+    </CRequirement>
+    <CRequirement id="RankVesania30NR">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="AndOr2092276232Eq3185170552CountUpgradeCPTCompleteOnly1Eq457914689CountUpgrade1SGCompleteOnly1Eq3888807122CountUpgradeWO3CompleteOnly1Eq3230784200CountUpgradeRifleModeCompleteOnly0Eq4101052947CountUpgradeVesania30UnlockedCompleteOnly1"/>
+    </CRequirement>
+    <CRequirement id="RankCyborg20">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="AndEq2111603310CountUpgradeCyborg20UnlockedCompleteOnly1OrEq457914689CountUpgrade1SGCompleteOnlyTechTreeCheat1Eq505824172CountUpgradeWO2CompleteOnlyTechTreeCheat1Eq3185170552CountUpgradeCPTCompleteOnl4156463184"/>
+    </CRequirement>
+    <CRequirement id="Stonewall1">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="Eq3267723806CountAbilStonewallProtocol2CompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="EnhJump2">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="GTECountAbilEnhancedJumpCompleteOnlyAtUnit2"/>
+    </CRequirement>
+    <CRequirement id="Radar1">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="GTE241700965CountAbilRadarModuleCompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="ETM2">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="EqCountAbilEnhancedTargetingModuleCompleteOnlyAtUnit2"/>
+    </CRequirement>
+    <CRequirement id="ETM3">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="EqCountAbilEnhancedTargetingModuleCompleteOnlyAtUnit3"/>
+    </CRequirement>
+    <CRequirement id="Radar2">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="GTE2916891482CountAbilRadarModuleCompleteOnlyAtUnit2"/>
+    </CRequirement>
+    <CRequirement id="EnhJump1">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="GTECountAbilEnhancedJumpCompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="WeaponAssim1">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="EqCountAbilBorgWeaponAssimilationCompleteOnlyAtUnitTechTreeCheat1"/>
+        <NodeArray index="Show" Link="EqCountAbilBorgWeaponAssimilationCompleteOnlyAtUnitTechTreeCheat1"/>
+    </CRequirement>
+    <CRequirement id="BorgMarksmanship2">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="EqCountAbilBorgMarksmanshipCompleteOnlyAtUnitTechTreeCheat2"/>
+        <NodeArray index="Show" Link="EqCountAbilBorgMarksmanshipCompleteOnlyAtUnitTechTreeCheat2"/>
+    </CRequirement>
+    <CRequirement id="BorgMarksmanship3">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="EqCountAbilBorgMarksmanshipCompleteOnlyAtUnitTechTreeCheat3"/>
+        <NodeArray index="Show" Link="EqCountAbilBorgMarksmanshipCompleteOnlyAtUnitTechTreeCheat3"/>
+    </CRequirement>
+    <CRequirement id="BorgMarksmanship4">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="EqCountAbilBorgMarksmanshipCompleteOnlyAtUnitTechTreeCheat4"/>
+        <NodeArray index="Show" Link="EqCountAbilBorgMarksmanshipCompleteOnlyAtUnitTechTreeCheat4"/>
+    </CRequirement>
+    <CRequirement id="BorgSkills2">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="Eq3199199672CountAbilCyborg20SkillsCompleteOnlyAtUnitTechTreeCheat2"/>
+    </CRequirement>
+    <CRequirement id="FieldRepairAllowed">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="GTE3199199672CountAbilCyborg20SkillsCompleteOnlyAtUnitTechTreeCheat2"/>
+    </CRequirement>
+    <CRequirement id="BorgSkills3">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="Eq2274679909CountAbilCyborg20SkillsCompleteOnlyAtUnitTechTreeCheat3"/>
+    </CRequirement>
+    <CRequirement id="BorgSkills4">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="Eq3896392500CountAbilCyborg20SkillsCompleteOnlyAtUnitTechTreeCheat4"/>
+    </CRequirement>
     <CRequirement id="CanReloadModularSnipes">
         <NodeArray index="Use" Link="LTE3827606705CountBehaviorSpecterSnipesLoadedCompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="CyborgIncendiaryAllowed">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="GTE906374358CountAbilCyborgWeaponOverdriveModuleCompleteOnlyAtUnit3"/>
+    </CRequirement>
+    <CRequirement id="CyborgRocketsAllowed">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="GTE817340436CountAbilCyborgWeaponOverdriveModuleCompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="CyborgWOM1">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="EqCountAbilCyborgWeaponOverdriveModuleCompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="CyborgWOM2">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="EqCountAbilCyborgWeaponOverdriveModuleCompleteOnlyAtUnit2"/>
+    </CRequirement>
+    <CRequirement id="CyborgWOM22">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="EqCountAbilCyborgWeaponOverdriveModuleCompleteOnlyAtUnit2"/>
+    </CRequirement>
+    <CRequirement id="CyborgConcussionAllowed">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="GTE681705958CountAbilCyborgWeaponOverdriveModuleCompleteOnlyAtUnit680058482774336177"/>
+    </CRequirement>
+    <CRequirement id="BorgDashAllowed">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="GTE3199199672CountAbilCyborg20SkillsCompleteOnlyAtUnitTechTreeCheat1"/>
     </CRequirement>
     <CRequirement id="HasWardenElite">
         <NodeArray index="Use" Link="GTECountUpgradeWardenEliteCompleteOnly1"/>
     </CRequirement>
+    <CRequirement id="HasPhantasm">
+        <NodeArray index="Use" Link="GTECountUpgradePhantasmCompleteOnly1"/>
+    </CRequirement>
+    <CRequirement id="HasSpecializationPotential">
+        <NodeArray index="Use" Link="GTECountUpgradeSpecializationPotentialCompleteOnly1"/>
+    </CRequirement>
     <CRequirement id="IsElitePMC">
         <NodeArray index="Use" Link="CountUpgradeElitePMCCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="IsPMC">
+        <NodeArray index="Use" Link="GTECountBehaviorPMCCompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="LearnSabotageSkills1">
+        <NodeArray index="Use" Link="EqCountAbilSabotageSkillsCompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="BorgMarksmanship1">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="EqCountAbilBorgMarksmanshipCompleteOnlyAtUnitTechTreeCheat1"/>
+        <NodeArray index="Show" Link="EqCountAbilBorgMarksmanshipCompleteOnlyAtUnitTechTreeCheat1"/>
+    </CRequirement>
+    <CRequirement id="PassiveModularLoad">
+        <NodeArray index="Use" Link="Eq1493068053CountAbilSpecterSkillsCompleteOnlyAtUnit4"/>
+    </CRequirement>
+    <CRequirement id="PenumbraUnlocked">
+        <NodeArray index="Use" Link="And1934737472GTECountAbilSabotageSkillsCompleteOnlyAtUnit3GTECountAbilReconExpertCompleteOnlyAtUnit2"/>
+    </CRequirement>
+    <CRequirement id="SabotageSkillsDisplay1">
+        <NodeArray index="Show" Link="EqCountAbilSabotageSkillsQueuedOnly1"/>
+    </CRequirement>
+    <CRequirement id="SabotageEnabled">
+        <NodeArray index="Use" Link="GTECountAbilSabotageSkillsCompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="LearnSabotageSkills2">
+        <NodeArray index="Use" Link="EqCountAbilSabotageSkillsCompleteOnlyAtUnit2"/>
+    </CRequirement>
+    <CRequirement id="LearnSabotageSkills3">
+        <NodeArray index="Use" Link="EqCountAbilSabotageSkillsCompleteOnlyAtUnit3"/>
+    </CRequirement>
+    <CRequirement id="LearnSabotageSkills4">
+        <NodeArray index="Use" Link="EqCountAbilSabotageSkillsCompleteOnlyAtUnit4"/>
     </CRequirement>
     <CRequirement id="NotElitePMC">
         <NodeArray index="Use" Link="NotCountUpgradeElitePMCCompleteOnly"/>
@@ -34,6 +247,35 @@
     </CRequirement>
     <CRequirement id="LearnWeaponsTraining4">
         <NodeArray index="Use" Link="EqCountAbilSpecterWeaponsTrainingCompleteOnlyAtUnit4"/>
+    </CRequirement>
+    <CRequirement id="SabotageSkillsDisplay2">
+        <NodeArray index="Show" Link="EqCountAbilSabotageSkillsQueuedOnly2"/>
+    </CRequirement>
+    <CRequirement id="SabotageSkillsDisplay3">
+        <NodeArray index="Show" Link="EqCountAbilSabotageSkillsQueuedOnly3"/>
+    </CRequirement>
+    <CRequirement id="SabotageSkillsDisplay4">
+        <NodeArray index="Show" Link="EqCountAbilSabotageSkillsQueuedOnly4"/>
+    </CRequirement>
+    <CRequirement id="BorgSkills1">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="Eq2679229701CountAbilCyborg20SkillsCompleteOnlyAtUnitTechTreeCheat1"/>
+    </CRequirement>
+    <CRequirement id="SpecializeConcussionOn">
+        <NodeArray index="Use" Link="GTECountBehaviorEnableConcussionCompleteOnlyAtUnit1"/>
+        <NodeArray index="Show" Link="GTECountBehaviorEnableConcussionCompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="SpecializeIncendiaryOff">
+        <NodeArray index="Use" Link="AndEq1215369410CountBehaviorEnableIncendiaryCompleteOnlyAtUnit0GTE906374358CountAbilCyborgWeaponOverdriveModuleCompleteOnlyAtUnit3"/>
+        <NodeArray index="Show" Link="EqCountBehaviorEnableIncendiaryCompleteOnlyAtUnit0"/>
+    </CRequirement>
+    <CRequirement id="SpecializeConcussionOff">
+        <NodeArray index="Use" Link="AndEq1015392177CountBehaviorEnableConcussionCompleteOnlyAtUnit0GTE681705958CountAbilCyborgWeaponOverdriveModuleCompleteOnlyAtUnit2"/>
+        <NodeArray index="Show" Link="EqCountBehaviorEnableConcussionCompleteOnlyAtUnit0"/>
+    </CRequirement>
+    <CRequirement id="SpecializeIncendiaryOn">
+        <NodeArray index="Use" Link="GTECountBehaviorEnableIncendiaryCompleteOnlyAtUnit1"/>
+        <NodeArray index="Show" Link="GTECountBehaviorEnableIncendiaryCompleteOnlyAtUnit1"/>
     </CRequirement>
     <CRequirement id="TRSnipeFire">
         <NodeArray index="Use" Link="AndGTE1773106101CountBehaviorSpecterSnipesLoadedCompleteOnlyAtUnit1Eq2708064578CountBehaviorSwappingRoundsCompleteOnlyAtUnit0"/>
@@ -165,8 +407,8 @@
         <NodeArray index="Use" Link="GTECountBehaviorHeroLevelsCompleteOnlyAtUnit4"/>
     </CRequirement>
     <CRequirement id="Level69">
-        <NodeArray index="Use" Link="And935317121GTECountBehaviorHeroLevelsCompleteOnlyAtUnit6LTCountBehaviorHeroLevelsCompleteOnlyAtUnit9EqCountBehaviorAdvancedWarfighterInProgressOrBetterAtUnit0"/>
-        <NodeArray index="Show" Link="LTCountBehaviorHeroLevelsCompleteOnlyAtUnit9"/>
+        <NodeArray index="Use" Link="And935317121GTECountBehaviorHeroLevelsCompleteOnlyAtUnit6LTECountBehaviorHeroLevelsCompleteOnlyAtUnit9EqCountBehaviorAdvancedWarfighterInProgressOrBetterAtUnit0"/>
+        <NodeArray index="Show" Link="LTECountBehaviorHeroLevelsCompleteOnlyAtUnit9"/>
     </CRequirement>
     <CRequirement id="Level10">
         <NodeArray index="Use" Link="And2677204795GTECountBehaviorHeroLevelsCompleteOnlyAtUnit10EqCountBehaviorAdvancedWarfighterInProgressOrBetterAtUnit0"/>
@@ -190,7 +432,7 @@
     </CRequirement>
     <CRequirement id="RankMechOperatorNR">
         <EditorCategories value="Race:Terran,TechType:Upgrade"/>
-        <NodeArray index="Use" Link="AndEqCountUpgradeBasicBitchCompleteOnly0EqCountUpgradeMechOperatorUnlockedCompleteOnly2850641369TechTreeCheat1Eq2967964474CountUpgradeRifleModeCompleteOnlyTechTreeCheat0"/>
+        <NodeArray index="Use" Link="AndEqCountUpgradeMechOperatorUnlockedCompleteOnly2850641369TechTreeCheat1Eq2967964474CountUpgradeRifleModeCompleteOnlyTechTreeCheat0"/>
     </CRequirement>
     <CRequirement id="RiflemanSkills023">
         <EditorCategories value="Race:Terran,TechType:Ability"/>
@@ -893,7 +1135,6 @@
     <CRequirement id="ExplosivesExpert1">
         <EditorCategories value="Race:Terran,TechType:Ability"/>
         <NodeArray index="Use" Link="GTE69493404CountAbilExplosivesExpertCompleteOnlyAtUnit1"/>
-        <NodeArray index="Show" Link="LTCountAbilExplosivesExpertCompleteOnlyAtUnit3"/>
     </CRequirement>
     <CRequirement id="ExplosivesExpert2">
         <EditorCategories value="Race:Terran,TechType:Ability"/>
@@ -1440,7 +1681,7 @@
     </CRequirement>
     <CRequirement id="SoldierSkills02M">
         <EditorCategories value="Race:Terran,TechType:Ability"/>
-        <NodeArray index="Use" Link="And3824807800LTCountUpgradeAdvancedWarfighterCompleteOnly1GTECountAbilSoldierSkillsCompleteOnlyAtUnitTechTreeCheat2"/>
+        <NodeArray index="Use" Link="And3824807800LTCountUpgradeAdvancedWarfighterCompleteOnly1GTECountAbilSoldierSkillsCompleteOnlyAtUnitTechTreeCheat2Eq1352954077CountBehaviorMedicEquipDeagleCompleteOnlyAtUnit0"/>
         <NodeArray index="Show" Link="LTCountUpgradeAdvancedWarfighterCompleteOnly1"/>
     </CRequirement>
     <CRequirement id="SoldierSkills02">
@@ -1590,6 +1831,14 @@
         <NodeArray index="Use" Link="EqCountAbilDefensiveSkillsCompleteOnlyAtUnit3"/>
         <NodeArray index="Show" Link="EqCountAbilDefensiveSkillsCompleteOnlyAtUnit3"/>
     </CRequirement>
+    <CRequirement id="VesaniaAutomaticMode">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="Eq1473992377CountAbilOffensiveSkillsCompleteOnlyAtUnit4"/>
+    </CRequirement>
+    <CRequirement id="VesaniaSystemRestore">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="Eq2726354820CountAbilDefensiveSkillsCompleteOnlyAtUnit4"/>
+    </CRequirement>
     <CRequirement id="VesaniaOffenseUpgrade1">
         <EditorCategories value="Race:Terran,TechType:Ability"/>
         <NodeArray index="Use" Link="EqCountAbilOffensiveSkillsCompleteOnlyAtUnit1"/>
@@ -1614,6 +1863,31 @@
         <EditorCategories value="Race:Terran,TechType:Upgrade"/>
         <NodeArray index="Use" Link="GTECountUpgradeWaveAmplifierCompleteOnly1"/>
         <NodeArray index="Show" Link="GTECountUpgradeWaveAmplifierCompleteOnly1"/>
+    </CRequirement>
+    <CRequirement id="WeaponAssimLT3">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="LTCountAbilBorgWeaponAssimilationCompleteOnlyAtUnitTechTreeCheat3"/>
+        <NodeArray index="Show" Link="LTCountAbilBorgWeaponAssimilationCompleteOnlyAtUnitTechTreeCheat3"/>
+    </CRequirement>
+    <CRequirement id="WeaponAssim2">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="EqCountAbilBorgWeaponAssimilationCompleteOnlyAtUnitTechTreeCheat2"/>
+        <NodeArray index="Show" Link="EqCountAbilBorgWeaponAssimilationCompleteOnlyAtUnitTechTreeCheat2"/>
+    </CRequirement>
+    <CRequirement id="WeaponAssim2Upgrades">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="GTECountAbilBorgWeaponAssimilationCompleteOnlyAtUnitTechTreeCheat2"/>
+        <NodeArray index="Show" Link="GTECountAbilBorgWeaponAssimilationCompleteOnlyAtUnitTechTreeCheat2"/>
+    </CRequirement>
+    <CRequirement id="WeaponAssim3">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="EqCountAbilBorgWeaponAssimilationCompleteOnlyAtUnitTechTreeCheat3"/>
+        <NodeArray index="Show" Link="EqCountAbilBorgWeaponAssimilationCompleteOnlyAtUnitTechTreeCheat3"/>
+    </CRequirement>
+    <CRequirement id="WeaponAssim4">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="EqCountAbilBorgWeaponAssimilationCompleteOnlyAtUnitTechTreeCheat4"/>
+        <NodeArray index="Show" Link="EqCountAbilBorgWeaponAssimilationCompleteOnlyAtUnitTechTreeCheat4"/>
     </CRequirement>
     <CRequirement id="WeaponProficiency">
         <EditorCategories value="Race:Terran,TechType:Ability"/>

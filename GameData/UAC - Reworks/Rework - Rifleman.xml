@@ -1234,7 +1234,7 @@
         <Attributes index="Heroic" value="1"/>
         <LifeStart value="420"/>
         <LifeMax value="420"/>
-        <LifeArmor value="1"/>
+        <LifeArmor value="5"/>
         <LifeRegenRate value="0.25"/>
         <LifeArmorName value="Unit/LifeArmorName/LandWarriorSystemLight"/>
         <EnergyStart value="190"/>

@@ -515,7 +515,7 @@
             <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
             <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
             <LayoutButtons Face="AdditionalActions" Type="Submenu" SubmenuCardId="0003" Row="1" Column="3"/>
-            <LayoutButtons Face="FragGrenadeItem" Type="AbilCmd" AbilCmd="FragGrenadeMini,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="FragGrenadeItem" Type="AbilCmd" AbilCmd="FragGrenadePMC,255" Row="2" Column="0"/>
         </CardLayouts>
         <CardLayouts CardId="0003">
             <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
@@ -558,7 +558,7 @@
         <Race value="Terr"/>
         <LifeStart value="440"/>
         <LifeMax value="440"/>
-        <LifeArmor value="3"/>
+        <LifeArmor value="10"/>
         <LifeArmorDisplayFlags index="CollapseBuffed" value="0"/>
         <LifeRegenRate value="0.25"/>
         <LifeArmorName value="Unit/LifeArmorName/LandWarriorSystemModerate"/>
@@ -591,13 +591,8 @@
         <AbilArray Link="ImprovedOvercharge"/>
         <AbilArray Link="WaveAmplifier"/>
         <AbilArray Link="WeaponsHold2"/>
-        <AbilArray Link="LaserPrismSkills"/>
         <AbilArray Link="ImprovedLaserPrismSkills"/>
-        <AbilArray Link="LaserPrismSkills2"/>
-        <AbilArray Link="UnknownAbility"/>
-        <AbilArray Link="LaserPrismSkillsD20"/>
-        <AbilArray Link="ImprovedLaserPrismSkillsD20"/>
-        <AbilArray Link="MaxLaserPrismSkillsD20"/>
+        <AbilArray Link="LaserPrism"/>
         <AbilArray Link="ShieldBash"/>
         <BehaviorArray Link="HeroLevels"/>
         <BehaviorArray Link="Fitness"/>
@@ -668,20 +663,20 @@
             <LayoutButtons Face="AdditionalActions" Type="Submenu" SubmenuCardId="0003" Row="1" Column="3"/>
             <LayoutButtons Face="LaserBurn" Type="Passive" Requirements="LaserBurn1M" Row="2" Column="1"/>
             <LayoutButtons Face="PlasmaGrenade" Type="AbilCmd" AbilCmd="PlasmaGrenade,Execute" Row="2" Column="3"/>
-            <LayoutButtons Face="LaserPrismSkills" Type="AbilCmd" AbilCmd="LaserPrismSkills2,Execute" Row="1" Column="2"/>
-            <LayoutButtons Face="LaserPrismSkills2" Type="AbilCmd" AbilCmd="ImprovedLaserPrismSkills,Execute" Row="1" Column="2"/>
-            <LayoutButtons Face="LaserPrismSkills3" Type="AbilCmd" AbilCmd="LaserPrismSkills,Execute" Row="1" Column="2"/>
             <LayoutButtons Face="LaserDesignatorPL" Type="AbilCmd" AbilCmd="LaserDesignator2,Execute" Row="2" Column="2"/>
             <LayoutButtons Face="LaserDesignatorPL" Type="AbilCmd" AbilCmd="ImprovedLaserDesignator,Execute" Row="2" Column="2"/>
             <LayoutButtons Face="OverchargeLE" Type="AbilCmd" AbilCmd="OverchargeLE,Execute" Row="2" Column="4"/>
             <LayoutButtons Face="OverchargeLE" Type="AbilCmd" AbilCmd="ImprovedOvercharge,Execute" Row="2" Column="4"/>
+            <LayoutButtons Face="WaveAmplifier" Type="AbilCmd" AbilCmd="WaveAmplifier,On" Row="1" Column="0"/>
+            <LayoutButtons Face="LaserPrism" Type="AbilCmd" AbilCmd="LaserPrism,On" Row="1" Column="1"/>
+            <LayoutButtons Face="TurnOffLaserPrism" Type="AbilCmd" AbilCmd="LaserPrism,Off" Row="1" Column="1"/>
         </CardLayouts>
         <CardLayouts CardId="0002">
             <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
             <LayoutButtons Face="LearnSoldierSkills" Type="AbilCmd" AbilCmd="LearnAbilitiesLaserEnforcer,Learn1" Row="0" Column="0"/>
             <LayoutButtons Face="LaserBurn" Type="AbilCmd" AbilCmd="LearnAbilitiesLaserEnforcer,Learn2" Row="0" Column="1"/>
             <LayoutButtons Face="PlasmaGrenade" Type="AbilCmd" AbilCmd="LearnAbilitiesLaserEnforcer,Learn5" Row="0" Column="4"/>
-            <LayoutButtons Face="LaserPrismSkills" Type="AbilCmd" AbilCmd="LearnAbilitiesLaserEnforcer,Learn3" Row="0" Column="2"/>
+            <LayoutButtons Face="LaserPrism" Type="AbilCmd" AbilCmd="LearnAbilitiesLaserEnforcer,Learn3" Row="0" Column="2"/>
             <LayoutButtons Face="LaserEnforcerSkills" Type="AbilCmd" AbilCmd="LearnAbilitiesLaserEnforcer,Learn4" Row="0" Column="3"/>
         </CardLayouts>
         <CardLayouts CardId="0003">

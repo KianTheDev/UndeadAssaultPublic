@@ -1,19 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectCreatePersistent id="BattleRifleBurstCP3">
+        <EditorCategories value=""/>
+        <Marker Link="Effect/AssaultRifleBurstCP"/>
+        <WhichLocation Value="TargetUnit"/>
+        <TimeScaleSource Value="Caster"/>
+        <Flags index="Channeled" value="1"/>
+        <InitialEffect value="AssaultRifleLaunch"/>
+        <PeriodCount value="2"/>
+        <PeriodicValidator value="MineralsGE1"/>
+        <PeriodicEffectArray value="AssaultRifleBurstSet"/>
+        <PeriodicPeriodArray value="0.033"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="BattleRifleBurstCP4">
+        <EditorCategories value=""/>
+        <Marker Link="Effect/AssaultRifleBurstCP"/>
+        <WhichLocation Value="TargetUnit"/>
+        <TimeScaleSource Value="Caster"/>
+        <Flags index="Channeled" value="1"/>
+        <InitialEffect value="AssaultRifleLaunch"/>
+        <PeriodCount value="3"/>
+        <PeriodicValidator value="MineralsGE1"/>
+        <PeriodicEffectArray value="AssaultRifleBurstSet"/>
+        <PeriodicPeriodArray value="0.033"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="Mk47ConcussionDamage">
+        <EditorCategories value=""/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <AttributeFactor index="Armored" value="0.1"/>
+        <AttributeFactor index="Massive" value="0.1"/>
+        <AttributeFactor index="Heroic" value="-0.6"/>
+        <AttributeFactor index="Summoned" value="-0.6"/>
+        <ArmorReduction value="2"/>
+        <Flags index="Notification" value="1"/>
+        <Total value="Maximum"/>
+        <Amount value="140"/>
+        <Random value="20"/>
+        <AreaArray Radius="1" Fraction="1"/>
+        <AreaArray Radius="2" Fraction="0.25"/>
+        <ExcludeArray/>
+        <ExcludeArray Value="Target"/>
+        <SearchFilters value="-;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="CallForHelp" value="1"/>
+        <SearchFlags index="OffsetByUnitRadius" value="1"/>
+        <SearchFlags index="OffsetAreaByAngle" value="1"/>
+        <DisplayFlags index="CollapseBuffed" value="1"/>
+    </CEffectDamage>
+    <CEffectSet id="Mk47ConcussionDamageSet">
+        <EditorCategories value=""/>
+        <EffectArray value="Mk47ConcussionDamage"/>
+        <EffectArray value="ConcussionShellsAB"/>
+    </CEffectSet>
+    <CEffectLaunchMissile id="Mk47IncendiaryLaunch">
+        <EditorCategories value=""/>
+        <ImpactLocation Value="TargetUnitOrPoint"/>
+        <ImpactEffect value="Mk47IncendiaryDamageSet"/>
+        <AmmoUnit value="40mmGrenade2"/>
+        <Movers Link="BulletMover"/>
+    </CEffectLaunchMissile>
+    <CEffectSet id="Mk47IncendiaryDamageSet">
+        <EditorCategories value=""/>
+        <EffectArray value="Mk47IncendiaryDamage"/>
+        <EffectArray value="Mk47IncendiaryAoESA"/>
+    </CEffectSet>
+    <CEffectDamage id="Mk47IncendiaryDamage">
+        <EditorCategories value=""/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <AttributeFactor index="Light" value="0.3"/>
+        <AttributeFactor index="Armored" value="-0.1"/>
+        <AttributeFactor index="Mechanical" value="-0.2"/>
+        <AttributeFactor index="Massive" value="-0.2"/>
+        <AttributeFactor index="Heroic" value="-0.6"/>
+        <AttributeFactor index="Summoned" value="-0.6"/>
+        <ArmorReduction value="3"/>
+        <Flags index="Notification" value="1"/>
+        <Total value="Maximum"/>
+        <Amount value="120"/>
+        <Random value="20"/>
+        <AreaArray Radius="1.5" Fraction="1"/>
+        <AreaArray Radius="3" Fraction="0.25"/>
+        <ExcludeArray/>
+        <ExcludeArray Value="Target"/>
+        <SearchFilters value="-;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="CallForHelp" value="1"/>
+        <SearchFlags index="OffsetByUnitRadius" value="1"/>
+        <SearchFlags index="OffsetAreaByAngle" value="1"/>
+        <DisplayFlags index="CollapseBuffed" value="1"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="Mk47ConcussionLaunch">
+        <EditorCategories value=""/>
+        <ImpactLocation Value="TargetUnitOrPoint"/>
+        <ImpactEffect value="Mk47ConcussionDamageSet"/>
+        <AmmoUnit value="40mmGrenade2"/>
+        <Movers Link="BulletMover"/>
+    </CEffectLaunchMissile>
     <CEffectDamage id="Mk47Damage">
         <EditorCategories value=""/>
         <ResponseFlags index="Acquire" value="1"/>
         <ResponseFlags index="Flee" value="1"/>
         <ImpactLocation Value="TargetPoint"/>
         <AttributeFactor index="Armored" value="-0.15"/>
-        <AttributeFactor index="Mechanical" value="-0.5"/>
-        <AttributeFactor index="Massive" value="-0.5"/>
+        <AttributeFactor index="Mechanical" value="-0.25"/>
+        <AttributeFactor index="Massive" value="-0.25"/>
         <AttributeFactor index="Heroic" value="-0.6"/>
         <AttributeFactor index="Summoned" value="-0.6"/>
         <ArmorReduction value="3"/>
-        <Visibility value="Visible"/>
         <Flags index="Notification" value="1"/>
-        <Amount value="120"/>
+        <Amount value="150"/>
         <Random value="20"/>
         <AreaArray Radius="1" Fraction="1"/>
         <AreaArray Radius="2" Fraction="0.25"/>
@@ -110,10 +207,8 @@
         <AttributeFactor index="Massive" value="0.5"/>
         <AttributeFactor index="Heroic" value="-0.6"/>
         <AttributeFactor index="Summoned" value="-0.5"/>
-        <Visibility value="Visible"/>
+        <Visibility value="Hidden"/>
         <Flags index="Notification" value="1"/>
-        <Kind value="Ranged"/>
-        <KindSplash value="Ranged"/>
         <Amount value="250"/>
         <Random value="250"/>
         <AreaArray/>
@@ -204,7 +299,6 @@
         <AttributeFactor index="Heroic" value="-0.6"/>
         <AttributeFactor index="Summoned" value="-0.6"/>
         <ArmorReduction value="4"/>
-        <Visibility value="Visible"/>
         <Flags index="Notification" value="1"/>
         <Kind value="Ranged"/>
         <KindSplash value="Ranged"/>
@@ -224,14 +318,13 @@
         <EditorCategories value=""/>
         <ResponseFlags index="Acquire" value="1"/>
         <ResponseFlags index="Flee" value="1"/>
-        <AttributeFactor index="Mechanical" value="1.5"/>
-        <AttributeFactor index="Massive" value="1.5"/>
+        <AttributeFactor index="Mechanical" value="2"/>
+        <AttributeFactor index="Massive" value="2"/>
         <AttributeFactor index="Heroic" value="-0.8"/>
         <AttributeFactor index="Summoned" value="-0.8"/>
-        <Visibility value="Visible"/>
         <Flags index="Notification" value="1"/>
-        <Amount value="1000"/>
-        <Random value="325"/>
+        <Amount value="1225"/>
+        <Random value="100"/>
         <AreaArray Radius="0.5" Fraction="1"/>
         <ExcludeArray Value="Target"/>
         <ExcludeArray Value="Source"/>
@@ -240,7 +333,6 @@
         <SearchFlags index="OffsetAreaByAngle" value="1"/>
         <DisplayFlags index="CollapseBuffed" value="1"/>
         <Death value="Blast"/>
-        <Kind value="Ranged"/>
     </CEffectDamage>
     <CEffectLaunchMissile id="EM25RLM">
         <EditorCategories value=""/>
@@ -840,11 +932,40 @@
         <OperandArray index="0" value="CountAbilMercenarySkillsCompleteOnlyAtUnit"/>
         <OperandArray index="1" value="3"/>
     </CRequirementGTE>
+    <CActorModel id="BorgEnergyOrbAttach" parent="ModelAnimationStyleContinuous">
+        <Aliases value="_Snapshot"/>
+        <Inherits index="BaseModelScale" value="1"/>
+        <Inherits index="CastShadows" value="1"/>
+        <Inherits index="CloakEffect" value="1"/>
+        <Inherits index="CreepEngulfment" value="1"/>
+        <Inherits index="Decal" value="1"/>
+        <Inherits index="Opacity" value="1"/>
+        <Inherits index="Scale" value="1"/>
+        <Inherits index="TeamColor" value="1"/>
+        <Inherits index="TimeScale" value="1"/>
+        <Inherits index="TintColor" value="1"/>
+        <Inherits index="Visibility" value="1"/>
+        <Inherits index="WarpGroup" value="1"/>
+        <EditorCategories value=""/>
+        <On Terms="Effect.BorgEnergyOrbLaunchMissile.Start" Send="Create"/>
+        <On Terms="Effect.BorgEnergyOrbLaunchMissile.Stop" Send="Destroy"/>
+        <On Terms="ActorCreation" Send="SetTintColor 255,0,0"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachCenter"/>
+        <Model value="BorgEnergyOrbField"/>
+        <ModelFlags index="UseSyncSeed" value="1"/>
+    </CActorModel>
     <CActorAction id="Mk47Mod0GrenadeLauncher" parent="GenericAttack" effectImpact="Mk47Damage" effectLaunch="Mk47Launch">
         <EditorCategories value=""/>
         <On Terms="Effect.Viper30mmChainGunDamage.Start; FromEffectTreeDescendant" Send="ActionImpact"/>
         <On Terms="Effect.Viper30mmChainGunDamage.Stop; FromEffectTreeDescendant" Send="ActionImpactPhysics"/>
         <On Terms="Effect.Viper30mmChainGunLaunch.Start; At Caster" Send="Create"/>
+        <On Terms="Effect.Mk47IncendiaryDamage.Start; FromEffectTreeDescendant" Send="ActionImpact"/>
+        <On Terms="Effect.Mk47ConcussionDamage.Start; FromEffectTreeDescendant" Send="ActionImpact"/>
+        <On Terms="Effect.Mk47IncendiaryDamage.Stop; FromEffectTreeDescendant" Send="ActionImpactPhysics"/>
+        <On Terms="Effect.Mk47ConcussionDamage.Stop; FromEffectTreeDescendant" Send="ActionImpactPhysics"/>
+        <On Terms="Effect.Mk47IncendiaryLaunch.Start; At Caster" Send="Create"/>
+        <On Terms="Effect.Mk47ConcussionLaunch.Start; At Caster" Send="Create"/>
         <LaunchAttachQuery Methods="AMFilterWeapon"/>
         <LaunchAssets Model="BradleyHELaunch" Scale="2.500000" Sound="Mk47Launch"/>
         <Beam value="30mmChainGunDamageBeam"/>
@@ -1111,6 +1232,88 @@
         <Model value="Models\Soldier\Weapons\Weapon_SpectreRifle.m3"/>
         <EditorCategories value=""/>
     </CModel>
+    <CWeaponLegacy id="BattleRifleMk3">
+        <EditorCategories value=""/>
+        <Icon value="Buttons\Weapons\MANTEL-75.dds"/>
+        <DisplayEffect value="RiflemanAssaultRifle"/>
+        <DisplayAttackCount value="2"/>
+        <TargetFilters value="Visible;Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <ChaseFilters value="-;Player,Ally,Neutral,Enemy"/>
+        <MinScanRange value="15"/>
+        <Range value="15"/>
+        <RangeSlop value="3"/>
+        <Marker Link="Weapon/AssaultRifleBurst"/>
+        <Cost>
+            <Resource index="Minerals" value="1"/>
+            <Cooldown Link="Weapon/AssaultRifleBurst"/>
+        </Cost>
+        <Period value="0.5"/>
+        <DamagePoint value="0.05"/>
+        <Backswing value="0"/>
+        <Effect value="BattleRifleBurstCP"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Mk47Mod1Concussion">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Icon value="Assets\Textures\btn-ability-terran-punishergrenade-color.dds"/>
+        <DisplayEffect value="Mk47ConcussionDamage"/>
+        <TargetFilters value="Visible;Self,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="15"/>
+        <Range value="15"/>
+        <Cost>
+            <Resource index="Minerals" value="1"/>
+        </Cost>
+        <Period value="0.75"/>
+        <Backswing value="0"/>
+        <Effect value="Mk47ConcussionLaunch"/>
+        <LegacyOptions index="NoDeceleration" value="1"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Mk47Mod2Incendiary">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Icon value="Assets\Textures\btn-ability-terran-punishergrenade-color.dds"/>
+        <DisplayEffect value="Mk47IncendiaryDamage"/>
+        <TargetFilters value="Visible;Self,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="15"/>
+        <Range value="15"/>
+        <Cost>
+            <Resource index="Minerals" value="1"/>
+        </Cost>
+        <Period value="0.75"/>
+        <Backswing value="0"/>
+        <Effect value="Mk47IncendiaryLaunch"/>
+        <LegacyOptions index="NoDeceleration" value="1"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="BattleRifleMk2">
+        <EditorCategories value=""/>
+        <Icon value="Buttons\Weapons\MANTEL-75.dds"/>
+        <DisplayEffect value="RiflemanAssaultRifle"/>
+        <DisplayAttackCount value="2"/>
+        <TargetFilters value="Visible;Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <ChaseFilters value="-;Player,Ally,Neutral,Enemy"/>
+        <MinScanRange value="15"/>
+        <Range value="15"/>
+        <RangeSlop value="3"/>
+        <Marker Link="Weapon/AssaultRifleBurst"/>
+        <Cost>
+            <Resource index="Minerals" value="1"/>
+            <Cooldown Link="Weapon/AssaultRifleBurst"/>
+        </Cost>
+        <Period value="0.5"/>
+        <DamagePoint value="0.05"/>
+        <Backswing value="0"/>
+        <Effect value="BattleRifleBurstSwitch"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="Mk47Mod0">
         <EditorCategories value="Race:Terran"/>
         <Options index="OnlyFireWhileInAttackOrder" value="0"/>
@@ -1146,28 +1349,6 @@
         <Backswing value="0"/>
         <Effect value="W34PythonLM"/>
         <LegacyOptions index="NoDeceleration" value="1"/>
-        <RandomDelayMin value="0"/>
-        <RandomDelayMax value="0"/>
-    </CWeaponLegacy>
-    <CWeaponLegacy id="BattleRifleMk2">
-        <EditorCategories value=""/>
-        <Icon value="Buttons\Weapons\MANTEL-75.dds"/>
-        <DisplayEffect value="RiflemanAssaultRifle"/>
-        <DisplayAttackCount value="2"/>
-        <TargetFilters value="Visible;Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <ChaseFilters value="-;Player,Ally,Neutral,Enemy"/>
-        <MinScanRange value="15"/>
-        <Range value="15"/>
-        <RangeSlop value="3"/>
-        <Marker Link="Weapon/AssaultRifleBurst"/>
-        <Cost>
-            <Resource index="Minerals" value="1"/>
-            <Cooldown Link="Weapon/AssaultRifleBurst"/>
-        </Cost>
-        <Period value="0.5"/>
-        <DamagePoint value="0.05"/>
-        <Backswing value="0"/>
-        <Effect value="BattleRifleBurstCP"/>
         <RandomDelayMin value="0"/>
         <RandomDelayMax value="0"/>
     </CWeaponLegacy>
@@ -1236,7 +1417,7 @@
         <Attributes index="Heroic" value="1"/>
         <LifeStart value="420"/>
         <LifeMax value="420"/>
-        <LifeArmor value="1"/>
+        <LifeArmor value="5"/>
         <LifeArmorDisplayFlags index="CollapseBuffed" value="1"/>
         <EnergyStart value="190"/>
         <EnergyMax value="190"/>
@@ -1328,7 +1509,7 @@
             <LayoutButtons Face="BattleRifle" Type="AbilCmd" AbilCmd="EquipHighCaliberRailgun,Off" Row="1" Column="2"/>
             <LayoutButtons Face="BinocularsPL" Type="AbilCmd" AbilCmd="BinocularsMercenary,Execute" Row="1" Column="0"/>
             <LayoutButtons Face="StunGrenade" Type="AbilCmd" AbilCmd="StunGrenade,Execute" Row="2" Column="0"/>
-            <LayoutButtons Face="SmokeGrenade" Type="AbilCmd" AbilCmd="SmokeGrenadeMercenary,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="SmokeGrenadeMerc" Type="AbilCmd" AbilCmd="SmokeGrenadeMercenary,Execute" Row="2" Column="1"/>
             <LayoutButtons Face="SteadyAim" Type="AbilCmd" AbilCmd="SteadyAim,On" Row="2" Column="2"/>
             <LayoutButtons Face="SteadyAimOff" Type="AbilCmd" AbilCmd="SteadyAim,Off" Row="2" Column="2"/>
         </CardLayouts>

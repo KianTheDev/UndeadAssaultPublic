@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CButton id="18XCyborg20">
+        <Icon value="Assets\Textures\ghost_umojan_portrait_static.dds"/>
+        <AlertIcon value="Assets\Buttons\Portraits\BTN_Cyborg_Portrait.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
     <CButton id="25YOrbitalSupportSpecialistTest">
         <Tooltip value="Button/Tooltip/OrbitalSupportSpecialist"/>
         <Icon value="Assets\Buttons\Portraits\BTN_OSS_Portrait.dds"/>
@@ -28,6 +33,207 @@
         <AlertIcon value="Buttons\BTNRevive.dds"/>
         <EditorCategories value="Race:Neutral"/>
     </CButton>
+    <CButton id="AutomaticModeVes">
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel3.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="BurstDispersionOn">
+        <Icon value="Assets\Textures\btn-ability-hornerhan-raven-analyzetargetmultilock.dds"/>
+    </CButton>
+    <CButton id="BurstDispersionOff">
+        <Icon value="Assets\Textures\btn-command-cancel.dds"/>
+    </CButton>
+    <CButton id="CombatDrugsMedic">
+        <Icon value="Buttons\BTNMentality.dds"/>
+        <AlertIcon value="Buttons\BTNMentality.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="Cyborg20Jump">
+        <Icon value="Assets\Textures\btn-ability-neutral-ursadonleap.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="DesertEagleAmmunition">
+        <Icon value="Assets\Textures\btn-techupgrade-terran-impalerrounds.dds"/>
+        <AlertName value="Button/Name/Snipe"/>
+        <AlertIcon value="Assets\Textures\btn-techupgrade-terran-impalerrounds.dds"/>
+        <EditorCategories value="Race:Terran"/>
+        <ChargeText value="Buttons\ModularSnipeButtons\ModularSnipe2Buttons\ModularSnipeButtons\DesertEagleAmmunition"/>
+    </CButton>
+    <CButton id="EquipCombatShotgun">
+        <Icon value="Buttons\Weapons\BTNHaze S10.dds"/>
+    </CButton>
+    <CButton id="EquipMk2BattleRifle">
+        <Icon value="Buttons\Weapons\MANTEL-75.dds"/>
+    </CButton>
+    <CButton id="EquipDesertEagle50">
+        <Icon value="Assets\Textures\btn-upgrade-nova-equipment-gunblade_gun.dds"/>
+    </CButton>
+    <CButton id="FlareGunGhost">
+        <Icon value="Assets\Buttons\Btn_Custom_UAC_Flare.dds"/>
+        <AlertIcon value="Assets\Buttons\Btn_Custom_UAC_Flare.dds"/>
+        <EditorCategories value="Race:Neutral"/>
+    </CButton>
+    <CButton id="LaserPrism">
+        <Icon value="Assets\Textures\btn-ability-protoss-beambounce.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-protoss-beambounce.dds"/>
+    </CButton>
+    <CButton id="TurnOffLaserPrism">
+        <Icon value="Assets\Textures\btn-command-cancel.dds"/>
+        <AlertIcon value="Assets\Textures\btn-command-cancel.dds"/>
+    </CButton>
+    <CButton id="LearnBiotechnology">
+        <Icon value="Assets\Textures\btn-ability-protoss-gravitonbeam-color.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-protoss-gravitonbeam-color.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="CriticalShot">
+        <Icon value="Assets\Textures\btn-tips-terran-penetrator.dds"/>
+        <AlertIcon value="BTNM16Icon.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="LearnMarksmanshipMando">
+        <Tooltip value="Button/Tooltip/MarksmanshipMando"/>
+        <Icon value="Assets\Textures\btn-tips-terran-penetrator.dds"/>
+        <AlertTooltip value="Button/Tooltip/MarksmanshipMando"/>
+        <AlertIcon value="BTNM16Icon.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="MarksmanshipMando">
+        <Icon value="Assets\Textures\btn-tips-terran-penetrator.dds"/>
+        <AlertIcon value="BTNM16Icon.dds"/>
+        <Hotkey value="Button/Hotkey/LearnMarksmanshipMando"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="NaniteGrenade">
+        <Icon value="Assets\Textures\btn-upgrade-nova-btn-upgrade-nova-pulsegrenade.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-nova-btn-upgrade-nova-pulsegrenade.dds"/>
+        <EditorCategories value="Race:Terran"/>
+        <HidesForSimpleText value="0"/>
+    </CButton>
+    <CButton id="SmokeGrenadeMerc">
+        <Icon value="Assets\Buttons\Btn_Custom_UAC_SmokeGrenade.dds"/>
+        <AlertIcon value="Assets\Buttons\Btn_Custom_UAC_SmokeGrenade.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="SmokeGrenadeJav">
+        <Icon value="Assets\Buttons\Btn_Custom_UAC_SmokeGrenade.dds"/>
+        <AlertIcon value="Assets\Buttons\Btn_Custom_UAC_SmokeGrenade.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="UnequipDesertEagle50">
+        <Icon value="Assets\Textures\btn-command-cancel.dds"/>
+    </CButton>
+    <CButton id="OcularVision">
+        <Icon value="Assets\Textures\btn-upgrade-nova-equipment-ghostvisor.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="Charge2">
+        <Icon value="Buttons/BTNRush.dds"/>
+        <AlertIcon value="Buttons/BTNSprint.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="CyborgDash">
+        <Icon value="Buttons/BTNRush.dds"/>
+        <AlertIcon value="Buttons\BTNRush.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="CyborgDashOff">
+        <Icon value="Assets\Textures\btn-command-cancel.dds"/>
+        <AlertIcon value="Assets\Textures\btn-command-cancel.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="DirectedEnergyArray">
+        <Icon value="Assets\Textures\btn-upgrade-protoss-alarak-ascendant&apos;spsiorbtravelsfurther.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="EnhancedTargetingModuleOff">
+        <Icon value="Assets\Textures\btn-command-cancel.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="FieldMaintenance">
+        <Icon value="Assets\Textures\btn-upgrade-terran-nova-liferegen.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="EnhancedTargetingModule">
+        <Icon value="Assets\Textures\btn-upgrade-swann-targetingoptics.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="EnhancedJump">
+        <Icon value="Assets\Textures\btn-ability-neutral-ursadonleap.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="PerformFieldRepairs">
+        <Icon value="Assets\Textures\btn-upgrade-terran-nova-liferegen.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="Cyborg20RifleButt">
+        <Icon value="Assets\Buttons\Btn_Custom_UAC_RifleButt.dds"/>
+        <AlertIcon value="Assets\Buttons\Btn_Custom_UAC_RifleButt.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="StealthModule">
+        <Icon value="Assets\Textures\btn-ability-hornerhan-wraith-permanentcloak.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="StealthModuleOff">
+        <Icon value="Assets\Textures\btn-ability-terran-decloak-color.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="StonewallModule">
+        <Icon value="Assets\Textures\btn-techupgrade-terran-shapedblast.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="StonewallModulelOff">
+        <Icon value="Assets\Textures\btn-command-cancel.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="UnstableEnergyOrb">
+        <Icon value="Assets\Textures\btn-ability-protoss-psionicorb.dds"/>
+        <HidesForSimpleText value="0"/>
+    </CButton>
+    <CButton id="CapacitorDischarge">
+        <Icon value="Assets\Textures\btn-upgrade-protoss-alarak-supplicantsacrifice-lightingstrike.dds"/>
+        <HidesForSimpleText value="0"/>
+    </CButton>
+    <CButton id="WeaponAssimilation">
+        <Icon value="Assets\Textures\btn-ability-hornerhan-mechbioweaponupgrades-a.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ModularSniperPassiveLoading">
+        <Icon value="Assets\Textures\btn-techupgrade-terran-fullborecanisterammo.dds"/>
+    </CButton>
+    <CButton id="Mk47IncendiaryLoadout">
+        <Icon value="Assets\Textures\btn-ability-zerg-yagdra-firewave.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="Mk47Mod2Off">
+        <Icon value="Assets\Textures\btn-command-cancel.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="PMCSnipe">
+        <Icon value="Assets\Textures\btn-ability-terran-snipe.dds"/>
+    </CButton>
+    <CButton id="PMCMark">
+        <Icon value="Assets\Textures\btn-ability-hornerhan-raven-analyzetargetmultilock.dds"/>
+    </CButton>
+    <CButton id="PenumbraUpgrade">
+        <Icon value="Assets\Textures\btn-upgrade-afaidofthedark.dds"/>
+    </CButton>
+    <CButton id="Sabotage">
+        <Icon value="Assets\Textures\btn-ability-terran-tosh-mindblast.dds"/>
+    </CButton>
+    <CButton id="SabotageLevel1">
+        <Icon value="Assets\Textures\btn-ability-terran-tosh-mindblast.dds"/>
+    </CButton>
+    <CButton id="SabotageLevel2">
+        <Icon value="Assets\Textures\btn-ability-terran-tosh-mindblast.dds"/>
+    </CButton>
+    <CButton id="SabotageLevel3">
+        <Icon value="Assets\Textures\btn-ability-terran-tosh-mindblast.dds"/>
+    </CButton>
+    <CButton id="SabotageLevel4">
+        <Icon value="Assets\Textures\btn-ability-terran-tosh-mindblast.dds"/>
+    </CButton>
     <CButton id="SnipeArmorPenetrator">
         <Icon value="Assets\Textures\btn-upgrade-raynor-maelstromrounds.dds"/>
     </CButton>
@@ -51,6 +257,33 @@
     </CButton>
     <CButton id="SnipeFeedback">
         <Icon value="Assets\Textures\btn-upgrade-tychus-tychus-ripperrounds.dds"/>
+    </CButton>
+    <CButton id="Mk47ConcussionLoadout">
+        <Icon value="Assets\Textures\btn-ability-mengsk-marauder-superconcussiveshells.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="CyborgSkills2">
+        <Icon value="Buttons/BTNStrength.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="SystemRestoration">
+        <Icon value="Assets\Textures\btn-upgrade-terran-nova-liferegen.dds"/>
+    </CButton>
+    <CButton id="MarksmanshipModule">
+        <Icon value="Assets\Textures\btn-tips-terran-penetrator.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="RadarModule">
+        <Icon value="Assets\Textures\btn-upgrade-terran-nova-detector.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="WeaponOverdriveOff">
+        <Icon value="Assets\Textures\btn-command-cancel.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="WeaponOverdriveModule">
+        <Icon value="Assets\Textures\btn-ability-hornerhan-raven-analyzetarget.dds"/>
+        <EditorCategories value="Race:Terran"/>
     </CButton>
     <CButton id="TracerRounds">
         <Icon value="Assets\Textures\btn-ability-tychus-odin-barrage.dds"/>
@@ -641,6 +874,10 @@
     <CButton id="BarrelThrough">
         <Icon value="Assets\Textures\btn-ability-protoss-charge-color.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-protoss-charge-color.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="Mk47Mod1Off">
+        <Icon value="Assets\Textures\btn-command-cancel.dds"/>
         <EditorCategories value="Race:Terran"/>
     </CButton>
     <CButton id="WeaponsTraining">
@@ -1740,6 +1977,7 @@
     <CButton id="BinocularsPL">
         <Icon value="Assets\Buttons\Btn_Custom_UAC_Binoculars.dds"/>
         <EditorCategories value="Race:Terran"/>
+        <HidesForSimpleText value="0"/>
     </CButton>
     <CButton id="BioSample">
         <Icon value="Assets\Textures\btn-techupgrade-terran-stimpack.dds"/>
@@ -2614,11 +2852,6 @@
     <CButton id="18OCyborg">
         <Icon value="Assets\Buttons\Portraits\BTN_Cyborg_Portrait.dds"/>
         <AlertIcon value="Assets\Buttons\Portraits\BTN_Cyborg_Portrait.dds"/>
-        <EditorCategories value="Race:Terran"/>
-    </CButton>
-    <CButton id="Charge2">
-        <Icon value="Buttons/BTNRush.dds"/>
-        <AlertIcon value="Buttons/BTNSprint.dds"/>
         <EditorCategories value="Race:Terran"/>
     </CButton>
     <CButton id="Agility">

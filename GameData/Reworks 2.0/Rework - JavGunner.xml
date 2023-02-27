@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CEffectSet id="GuidedMissileLaunchSet">
+        <EditorCategories value=""/>
+        <EffectArray value="GuidedMissileLaunch"/>
+        <EffectArray value="LaserDesignator"/>
+    </CEffectSet>
+    <CActorUnit id="JavelinGunnerRework" parent="GenericUnitBase" unitName="JavelinGunnerRework">
+        <Macros value="UnloadDropAnim"/>
+        <Macros value="Animations"/>
+        <On Terms="Abil.attack.ReadyStart" Send="AnimGroupApply Ready"/>
+        <On Terms="WeaponStart.*.AttackStart; WeaponTargetElevation GE 20.000000" Send="AnimBracketStart Attack Attack,Superior"/>
+        <On Terms="WeaponStart.*.AttackStart; WeaponTargetElevation LE -20.000000" Send="AnimBracketStart Attack Attack,Inferior"/>
+        <On Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Attack Attack"/>
+        <On Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack"/>
+        <On Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
+        <On Terms="ModelEvent; ModelEventName SquibStart" Send="Create MarineCheerSquib"/>
+        <On Terms="ModelEvent; ModelEventName SquibStop" Target="MarineCheerSquib" Send="Destroy"/>
+        <On Terms="ModelEvent; ModelEventName SquibStop" Target="MarineCheerSquibSound" Send="Destroy"/>
+        <On Terms="AnimDone; AnimName Cheer" Target="MarineCheerSquib" Send="Destroy"/>
+        <On Terms="AnimDone; AnimName Cheer" Target="MarineCheerSquibSound" Send="Destroy"/>
+        <On Terms="UnitBirth.JavelinGunnerKith" Send="Create SoundEmitter JavelinGunner2_Ambience"/>
+        <On Terms="UnitBirth.JavelinGunnerKith" Send="Create"/>
+        <On Terms="UnitRevive.JavelinGunnerKith" Send="Create"/>
+        <On Terms="UnitRevive.JavelinGunnerKith" Send="RefSet ::HostTurretBody _Selectable"/>
+        <On Terms="UnitConstruction.JavelinGunnerKith.Start" Send="Create"/>
+        <On Terms="UnitConstruction.JavelinGunnerKith.Finish" Send="AnimPlay ConstructionDeath Stand,Birth,Death FullMatch"/>
+        <Model value="Marine"/>
+        <BuildModel value="Marine"/>
+        <DeathArray index="Normal">
+            <AnimProps value="Death,Silentkill"/>
+            <ModelLink value="MarineDeath"/>
+            <SoundLink value="Marine_Death"/>
+            <VoiceLink value="InfantryRiflemanDeathVoice"/>
+        </DeathArray>
+        <DeathArray index="Blast" ModelLink="MarineDeathBlast"/>
+        <DeathArray index="Disintegrate" ModelLink="MarineDeathAcid" SoundLink="Uni_DeathFXAcid"/>
+        <DeathArray index="Eat" AnimProps="Stand" ModelLink="MarineDeathEat" SoundLink="Marine_DeathFXEat"/>
+        <DeathArray index="Eviscerate" ModelLink="MarineDeathEviscerate" SoundLink="Marine_DeathFXEviscerate"/>
+        <DeathArray index="Fire" ModelLink="MarineDeathFire" SoundLink="Marine_DeathFXFire"/>
+        <DeathArray index="Silentkill" SoundLink="Uni_DeathFXSilentKill"/>
+        <DeathArray index="Squish" SoundLink="Marine_DeathFXBloodSpray"/>
+        <PlacementModel value="Marine"/>
+        <PortraitModel value="HillPortrait"/>
+        <StandAnimTurnTime value="4"/>
+        <WalkAnimMoveSpeed value="2.25"/>
+        <AbilSoundArray AbilCmd="Stimpack,Execute" Sound="Marine_StimPackVO"/>
+        <BarOffset value="40"/>
+        <BarWidth value="36"/>
+        <CustomUnitStatusFrame value="VoidShared_UnitStatus/HeroUnitEnergyStatusFrameTemplate"/>
+        <CustomUnitStatusOffset value="-15,-20"/>
+        <GlossaryAnim value="Spell"/>
+        <GroupIcon>
+            <Image value="Assets\Wireframes\UAC_Marine_Wireframe.dds"/>
+        </GroupIcon>
+        <GroupSoundArray index="What" value="Marine_GroupWhat"/>
+        <GroupSoundArray index="Yes" value="Marine_GroupYes"/>
+        <GroupSoundArray index="Attack" value="Marine_GroupAttack"/>
+        <GroupSoundArray index="Board" value="Marine_GroupBoard"/>
+        <HeroIcon value="Assets\Textures\hillportrait_static.dds"/>
+        <LifeArmorIcon value="Buttons\BTNKevlar.dds"/>
+        <SoundArray index="Birth" value="Marine_Birth"/>
+        <SoundArray index="Ready" value="Hill_Ready"/>
+        <SoundArray index="Help" value="Hill_Help"/>
+        <SoundArray index="What" value="Hill_What"/>
+        <SoundArray index="Yes" value="Hill_Yes"/>
+        <SoundArray index="Attack" value="Hill_Attack"/>
+        <SoundArray index="Pissed" value="Hill_Pissed"/>
+        <SoundArray index="Movement" value="Marine_Movement"/>
+        <SoundArray index="Turning" value="Marine_Turning"/>
+        <SoundArray index="Board" value="Marine_Board"/>
+        <SoundArray index="Click" value="Marine_Click"/>
+        <SoundArray index="ClickError" value="Marine_ClickError"/>
+        <SoundArray index="Highlight" value="Marine_Highlight"/>
+        <UnitBorderNormalColor value="150,150,150"/>
+        <UnitBorderSubgroupColor value="255,255,255"/>
+        <UnitFlags index="SuppressDefaultStatusBar" value="1"/>
+        <UnitIcon value="Assets\Textures\hillportrait_static.dds"/>
+        <Wireframe>
+            <Image value="Assets\Wireframes\UAC_Marine_Wireframe.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CUnit id="JavelinGunnerRework" parent="UnitTemplate">
+        <DeathRevealFilters value="Visible;Enemy,Missile,Hidden"/>
+        <Race value="Terr"/>
+        <Attributes index="Light" value="0"/>
+        <LifeArmorDisplayFlags index="CollapseBuffed" value="0"/>
+        <LifeRegenRate value="0.25"/>
+        <LifeArmorName value="Unit/LifeArmorName/LandWarriorSystemLight"/>
+        <Speed value="2.8984"/>
+        <SpeedDisplayFlags index="CollapseBuffed" value="0"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="50"/>
+        <RepairTime value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="HeroInventoryRifle"/>
+        <AbilArray Link="LearnAbilitiesJavelinGunner"/>
+        <AbilArray Link="SoldierSkills"/>
+        <AbilArray Link="Sprint"/>
+        <AbilArray Link="ReloadHero"/>
+        <AbilArray Link="ImmediateRemedialAction"/>
+        <AbilArray Link="PerformSelfAid"/>
+        <AbilArray Link="FiremodeAssaultRifle"/>
+        <AbilArray Link="DropMagazine"/>
+        <AbilArray Link="Jump"/>
+        <AbilArray Link="HERocket"/>
+        <AbilArray Link="JavelinSkills"/>
+        <AbilArray Link="ATRocket"/>
+        <AbilArray Link="SmokeGrenadeJG"/>
+        <AbilArray Link="Claymore"/>
+        <AbilArray Link="ParalysisTrap"/>
+        <AbilArray Link="Disarm"/>
+        <AbilArray Link="PlaceExplosiveCharge"/>
+        <AbilArray Link="Prone"/>
+        <AbilArray Link="GuidedMissile"/>
+        <AbilArray Link="WeaponsHold2"/>
+        <AbilArray Link="BinocularsJAV"/>
+        <BehaviorArray Link="HeroLevels"/>
+        <BehaviorArray Link="Fitness"/>
+        <BehaviorArray Link="Dexterity"/>
+        <BehaviorArray Link="Mechanical"/>
+        <BehaviorArray Link="StartingStats"/>
+        <BehaviorArray Link="RifleButt"/>
+        <BehaviorArray Link="SoldierSkills1"/>
+        <BehaviorArray Link="SoldierSkills2"/>
+        <BehaviorArray Link="SoldierSkills3"/>
+        <BehaviorArray Link="SoldierSkills4"/>
+        <BehaviorArray Link="Flakjacket"/>
+        <WeaponArray index="0" Link="HeroAssaultRifle"/>
+        <EffectArray index="Birth" value="EquipJavelinGunnerSet"/>
+        <EffectArray index="Revive" value="EquipJavelinGunnerSet"/>
+        <CardLayouts>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="HoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="3"/>
+            <LayoutButtons>
+                <Face value="LearnAbilities"/>
+                <Type value="Submenu"/>
+                <SubmenuAbilState value="LearnAbilitiesJavelinGunner"/>
+                <SubmenuCardId value="0002"/>
+                <Row value="1"/>
+                <Column value="4"/>
+            </LayoutButtons>
+            <LayoutButtons Face="Binoculars" Type="AbilCmd" AbilCmd="BinocularsJAV,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="AdditionalActions" Type="Submenu" SubmenuCardId="0003" Row="1" Column="3"/>
+            <LayoutButtons Face="HERocket" Type="AbilCmd" AbilCmd="HERocket,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="ATRocket" Type="AbilCmd" AbilCmd="ATRocket,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="ExplosiveCharge" Type="AbilCmd" AbilCmd="PlaceExplosiveCharge,Execute" Row="1" Column="0"/>
+            <LayoutButtons Face="SmokeGrenadeJav" Type="AbilCmd" AbilCmd="SmokeGrenadeJG,Execute" Row="2" Column="4"/>
+            <LayoutButtons Face="ParalysisTrap" Type="AbilCmd" AbilCmd="ParalysisTrap,Execute" Row="1" Column="1"/>
+            <LayoutButtons Face="Claymore" Type="AbilCmd" AbilCmd="Claymore,Execute" Row="1" Column="2"/>
+            <LayoutButtons Face="GuidedMissile" Type="AbilCmd" AbilCmd="GuidedMissile,Execute" Row="2" Column="3"/>
+        </CardLayouts>
+        <CardLayouts CardId="0002">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="LearnSoldierSkills" Type="AbilCmd" AbilCmd="LearnAbilitiesJavelinGunner,Learn1" Row="0" Column="0"/>
+            <LayoutButtons Face="JavelinSkills" Type="AbilCmd" AbilCmd="LearnAbilitiesJavelinGunner,Learn2" Row="0" Column="3"/>
+            <LayoutButtons Face="HERocket" Type="AbilCmd" AbilCmd="LearnAbilitiesJavelinGunner,Learn3" Row="0" Column="1"/>
+            <LayoutButtons Face="ATRocket" Type="AbilCmd" AbilCmd="LearnAbilitiesJavelinGunner,Learn4" Row="0" Column="2"/>
+        </CardLayouts>
+        <CardLayouts CardId="0003">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="Reload" Type="AbilCmd" AbilCmd="ReloadHero,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="ImmediateRemedialAction" Type="AbilCmd" AbilCmd="ImmediateRemedialAction,Execute" Row="0" Column="2"/>
+            <LayoutButtons Face="DropMagazine" Type="AbilCmd" AbilCmd="DropMagazine,Execute" Row="0" Column="3"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="PerformSelfAid" Type="AbilCmd" AbilCmd="PerformSelfAid,Execute" Row="1" Column="0"/>
+            <LayoutButtons>
+                <Face value="RifleButt"/>
+                <Type value="Passive"/>
+                <Behavior value="RifleButt"/>
+                <Requirements value="RifleButt"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons Face="FiremodeBurst" Type="AbilCmd" AbilCmd="FiremodeAssaultRifle,On" Row="1" Column="1"/>
+            <LayoutButtons Face="FiremodeSemi" Type="AbilCmd" AbilCmd="FiremodeAssaultRifle,Off" Row="1" Column="1"/>
+            <LayoutButtons Face="Prone" Type="AbilCmd" AbilCmd="Prone,Execute" Row="1" Column="2"/>
+            <LayoutButtons Face="EnergyGenerator" Type="Passive" Requirements="JavelinSkills3M" Row="1" Column="4"/>
+            <LayoutButtons Face="JavelinSkills" Type="Passive" Requirements="JavelinSkills1M" Row="2" Column="1"/>
+            <LayoutButtons Face="Disarm" Type="AbilCmd" AbilCmd="Disarm,Execute" Row="2" Column="3"/>
+            <LayoutButtons Face="HoldFire3" Type="AbilCmd" AbilCmd="WeaponsHold2,On" Row="1" Column="3"/>
+            <LayoutButtons Face="HoldFireOff2" Type="AbilCmd" AbilCmd="WeaponsHold2,Off" Row="1" Column="3"/>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel1"/>
+                <Type value="Passive"/>
+                <Behavior value="SoldierSkills1"/>
+                <Requirements value="SoldierSkills01"/>
+                <Row value="2"/>
+                <Column value="2"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel2"/>
+                <Type value="Passive"/>
+                <Behavior value="SoldierSkills2"/>
+                <Requirements value="SoldierSkills02"/>
+                <Row value="2"/>
+                <Column value="2"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel3"/>
+                <Type value="Passive"/>
+                <Behavior value="SoldierSkills3"/>
+                <Requirements value="SoldierSkills03"/>
+                <Row value="2"/>
+                <Column value="2"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="SoldierSkillsLevel4"/>
+                <Type value="Passive"/>
+                <Behavior value="SoldierSkills4"/>
+                <Requirements value="SoldierSkills04"/>
+                <Row value="2"/>
+                <Column value="2"/>
+            </LayoutButtons>
+        </CardLayouts>
+        <Radius value="0.375"/>
+        <SeparationRadius value="0.375"/>
+        <DeadInnerRadius value="0"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="15"/>
+        <EditorCategories value="ObjectType:Hero,ObjectFamily:Melee"/>
+        <TacticalAI value="Marine"/>
+        <SelectAlias value="JavelinGunner"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="21"/>
+        <HotkeyCategory value="Hotkey/Catagory/MOSClassic"/>
+        <AIEvaluateAlias value="Marine"/>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
+        <ReviveInfoBase>
+            <Charge Link="Marine/Revive"/>
+            <Cooldown Link="Marine/Revive"/>
+        </ReviveInfoBase>
+    </CUnit>
+</Catalog>

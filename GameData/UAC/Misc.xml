@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="us-ascii"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Catalog>
     <CEffectCreateUnit id="OrbitalSupportReconnaissance">
         <EditorCategories value=""/>
@@ -397,7 +397,16 @@
             <Cooldown Link="Marine/Revive"/>
         </ReviveInfoBase>
         <Attributes index="Light" value="0"/>
+        <LifeArmor value="5"/>
     </CUnit>
+    <CBehaviorBuff id="RadioMan">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="OrbitalSatelliteReconaissanceTimedLife" parent="TimedLife">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="20"/>
+    </CBehaviorBuff>
     <CUpgrade id="RadioMan">
         <EffectArray Operation="Subtract" Reference="Abil,StrafeRun,Cost[0].Charge.TimeUse" Value="5.000000"/>
         <EffectArray Operation="Subtract" Reference="Abil,StrafeRun,Cost[2].Charge.TimeUse" Value="5.000000"/>
@@ -431,12 +440,4 @@
         <EffectArray Operation="Set" Reference="Abil,ChooseCombatMedic,Cost[0].Charge.CountStart" Value="0"/>
         <EffectArray Operation="Set" Reference="Abil,ChooseCombatMedic,Cost[0].Charge.CountMax" Value="0"/>
     </CUpgrade>
-    <CBehaviorBuff id="RadioMan">
-        <BehaviorFlags index="Permanent" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
-    </CBehaviorBuff>
-    <CBehaviorBuff id="OrbitalSatelliteReconaissanceTimedLife" parent="TimedLife">
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <Duration value="20"/>
-    </CBehaviorBuff>
 </Catalog>

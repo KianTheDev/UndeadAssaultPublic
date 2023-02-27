@@ -4,6 +4,9 @@
         <YawRate value="270"/>
         <Idle value="FollowMovement"/>
     </CTurret>
+    <CTurret id="Goliath">
+        <YawArc value="360"/>
+    </CTurret>
     <CTurret id="LAVTurret">
         <Idle value="FollowMovement"/>
         <YawArc value="360"/>

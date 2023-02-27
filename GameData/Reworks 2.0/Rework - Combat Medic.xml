@@ -1,10 +1,5 @@
-<?xml version="1.0" encoding="us-ascii"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Catalog>
-    <CValidatorUnitCompareBehaviorCount id="InsulatedBattery">
-        <Compare value="GE"/>
-        <Value value="1"/>
-        <Behavior value="InsulatedBattery"/>
-    </CValidatorUnitCompareBehaviorCount>
     <CEffectApplyBehavior id="AnabolicSteroidsAB">
         <EditorCategories value="Race:Terran"/>
         <Behavior value="AnabolicSteroids"/>
@@ -44,6 +39,25 @@
         <EditorCategories value="Race:Terran"/>
         <Behavior value="ReactiveAmphetaminesDrawback"/>
     </CEffectApplyBehavior>
+    <CAbilEffectTarget id="CombatDrugs">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="CombatDrugsSwitch"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="95"/>
+            <Charge Link="Abil/AnabolicPerformanceEnhancement"/>
+            <Cooldown Link="Abil/AnabolicPerformanceEnhancement" TimeUse="60"/>
+        </Cost>
+        <InterruptCost>
+            <Charge Link="Abil/AnabolicPerformanceEnhancement"/>
+            <Cooldown Link="Abil/AnabolicPerformanceEnhancement"/>
+        </InterruptCost>
+        <TargetFilters value="Biological;Enemy,Psionic,Structure,Dead,Hidden,Invulnerable"/>
+        <Range value="2"/>
+        <Marker Link="Abil/AnabolicPerformanceEnhancement"/>
+        <AINotifyEffect value="AnabolicPerformanceEnhancement"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="CombatDrugsMedic" Requirements="CombatDrugs1"/>
+    </CAbilEffectTarget>
     <CAbilEffectTarget id="AnabolicSteroids">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
         <Effect index="0" value="AnabolicSteroidsAB"/>
@@ -139,6 +153,11 @@
         <AINotifyEffect value="CognitiveEnhancement"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="CognitiveEnhancement" Requirements="AUG02"/>
     </CAbilEffectTarget>
+    <CValidatorUnitCompareBehaviorCount id="InsulatedBattery">
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="InsulatedBattery"/>
+    </CValidatorUnitCompareBehaviorCount>
     <CUnit id="BetaCorpsman" parent="UnitTemplateClassic">
         <Description value="Button/Tooltip/68WBetaCorpsman"/>
         <Race value="Terr"/>
@@ -295,9 +314,6 @@
         <TauntDuration index="Cheer" value="5"/>
         <TauntDuration index="Dance" value="5"/>
     </CUnit>
-    <CUpgrade id="InjectorPistol">
-        <EditorCategories value="Race:Terran"/>
-    </CUpgrade>
     <CBehaviorBuff id="AnabolicSteroids">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
         <Duration value="30"/>
@@ -385,4 +401,7 @@
     <CBehaviorBuff id="heattest">
         <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>
+    <CUpgrade id="InjectorPistol">
+        <EditorCategories value="Race:Terran"/>
+    </CUpgrade>
 </Catalog>

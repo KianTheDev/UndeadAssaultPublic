@@ -1067,7 +1067,6 @@
             <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
             <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
             <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
-            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
             <LayoutButtons Face="AdditionalActions" Type="Submenu" SubmenuCardId="0003" Row="1" Column="3"/>
             <LayoutButtons Face="BloodTransfusion" Type="AbilCmd" AbilCmd="BloodTransfusionLN,Execute" Row="2" Column="0"/>
             <LayoutButtons Face="NanoInjection" Type="AbilCmd" AbilCmd="NanoInjectionLN,Execute" Row="2" Column="1"/>
@@ -1081,6 +1080,8 @@
                 <Row value="1"/>
                 <Column value="0"/>
             </LayoutButtons>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="1" Column="1"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="1" Column="2"/>
         </CardLayouts>
         <CardLayouts CardId="0003">
             <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
@@ -1193,6 +1194,8 @@
             <LayoutButtons Face="FuelDischargeMini" Type="AbilCmd" AbilCmd="FuelDischargeLN,Execute" Row="2" Column="1"/>
             <LayoutButtons Face="PlasmaShieldLN" Type="AbilCmd" AbilCmd="PlasmaShieldLN,On" Row="2" Column="2"/>
             <LayoutButtons Face="NapalmLN" Type="Passive" Requirements="TrainingShow" Row="2" Column="0"/>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="2" Column="3"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="2" Column="4"/>
         </CardLayouts>
         <CardLayouts CardId="0003">
             <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
@@ -1440,6 +1443,8 @@
             <LayoutButtons Face="RapidFireOff" Type="AbilCmd" AbilCmd="RapidFireLN,Off" Row="2" Column="1"/>
             <LayoutButtons Face="RapidFireLN" Type="AbilCmd" AbilCmd="RapidFireLN,On" Row="2" Column="1"/>
             <LayoutButtons Face="FieldCameraSDM" Type="AbilCmd" AbilCmd="FieldCamera2,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="2" Column="3"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="2" Column="4"/>
         </CardLayouts>
         <CardLayouts CardId="0003">
             <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
@@ -1690,6 +1695,7 @@
             <Cooldown Link="Marine/Revive"/>
         </ReviveInfoBase>
         <Attributes index="Light" value="0"/>
+        <LifeArmor value="5"/>
     </CUnit>
     <CUnit id="LNCombatEngineer">
         <DeathRevealRadius value="3"/>
@@ -1762,6 +1768,8 @@
             <LayoutButtons Face="ClusterRocketsMini" Type="AbilCmd" AbilCmd="ClusterRocketsLN,Execute" Row="2" Column="0"/>
             <LayoutButtons Face="LNM1SentryGun" Type="AbilCmd" AbilCmd="LNM1SentryGun,Execute" Row="2" Column="1"/>
             <LayoutButtons Face="LNM2SentryGun" Type="AbilCmd" AbilCmd="LNM2SentryGun,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="2" Column="3"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="2" Column="4"/>
         </CardLayouts>
         <CardLayouts CardId="0003">
             <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
@@ -1854,7 +1862,6 @@
         <BehaviorArray Link="Critical3xDamage2"/>
         <BehaviorArray Link="CriticalSuppress2"/>
         <BehaviorArray Link="BurstCyclerPause"/>
-        <BehaviorArray Link="EntrenchedAB"/>
         <BehaviorArray Link="SpecialForcesExpertise"/>
         <WeaponArray Link="SquadAutomaticWeaponLN"/>
         <CardLayouts>
@@ -1863,7 +1870,6 @@
             <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
             <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
             <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
-            <LayoutButtons Face="Entrenched" Type="Passive" Behavior="Entrenched" Row="1" Column="3"/>
             <LayoutButtons Face="SuppressiveFireOff" Type="AbilCmd" AbilCmd="SuppressiveFireLN,Off" Row="2" Column="0"/>
             <LayoutButtons Face="SuppressiveFireLN" Type="AbilCmd" AbilCmd="SuppressiveFireLN,On" Row="2" Column="0"/>
             <LayoutButtons>
@@ -1901,6 +1907,8 @@
                 <Column value="2"/>
             </LayoutButtons>
             <LayoutButtons Face="AdditionalActions" Type="Submenu" SubmenuCardId="0003" Row="1" Column="4"/>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="2" Column="3"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="2" Column="4"/>
         </CardLayouts>
         <CardLayouts CardId="0003">
             <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
@@ -2018,6 +2026,8 @@
                 <Column value="1"/>
             </LayoutButtons>
             <LayoutButtons Face="SmokeGrenade" Type="AbilCmd" AbilCmd="SmokeGrenadeLN,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="2" Column="3"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="2" Column="4"/>
         </CardLayouts>
         <CardLayouts CardId="0003">
             <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
@@ -2127,6 +2137,8 @@
             </LayoutButtons>
             <LayoutButtons Face="ExplosiveCharge" Type="AbilCmd" AbilCmd="PlaceExplosiveChargeLN,Execute" Row="2" Column="1"/>
             <LayoutButtons Face="Claymore" Type="AbilCmd" AbilCmd="ClaymoreLN,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="2" Column="3"/>
+            <LayoutButtons Face="Jump" Type="AbilCmd" AbilCmd="Jump,Execute" Row="2" Column="4"/>
         </CardLayouts>
         <CardLayouts CardId="0003">
             <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>

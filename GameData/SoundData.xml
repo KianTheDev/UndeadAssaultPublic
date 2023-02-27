@@ -56,6 +56,9 @@
         <AssetArray index="8" removed="1"/>
         <AssetArray index="9" removed="1"/>
     </CSound>
+    <CSound id="DevDeath">
+        <AssetArray File="Assets\Sounds\18 i need a monk.mp3" FacialGroup=""/>
+    </CSound>
     <CSound id="EpiMusic">
         <AssetArray File="Assets\Jason Sturgill - Guile Theme.mp3" FacialGroup=""/>
         <Flags index="Stream" value="1"/>
@@ -226,8 +229,8 @@
         <AssetArray File="Assets\Rifle_Bolt_Action.wav" Pitch="-3.740000,-2.740000" Volume="3.000000,3.000000"/>
     </CSound>
     <CSound id="ModularSnipeLoad">
-        <AssetArray File="Sounds\Sounds\new sounds\BMS\AmmoUse.ogg" Volume="1.630000,1.630000" FacialGroup=""/>
-        <Mode value="3DHead"/>
+        <AssetArray File="Sounds\Sounds\new sounds\BMS\AmmoUse.ogg" FacialGroup=""/>
+        <Mode value="3DWorld"/>
     </CSound>
     <CSound id="Raynor_TossGrenadeLaunch">
         <AssetArray index="0">
@@ -243,7 +246,7 @@
         <Volume value="0.000000,0.000000"/>
     </CSound>
     <CSound id="ToxicCowboyScream">
-        <AssetArray File="Assets\ahhhhh_I9HpWpL.mp3" Volume="-9.300000,-9.300000" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\08 all hail.mp3" FacialGroup=""/>
     </CSound>
     <CSound id="Uni_DeathFXAcid3" parent="Death">
         <AssetArray File="Assets\Sounds\Uni\Deaths\Uni_DeathFXAcid0.wav"/>
@@ -257,6 +260,11 @@
     </CSound>
     <CSound id="Uni_DeathFXSilentKill2" parent="Combat">
         <AssetArray File="Assets\Sounds\Uni\Deaths\Uni_DeathFXSilentKill0.wav"/>
+    </CSound>
+    <CSound id="Wololo">
+        <AssetArray File="Assets\Sounds\30 wololo.mp3" FacialGroup=""/>
+        <Mode value="3DWorld"/>
+        <Select value="Sequential"/>
     </CSound>
     <CSound id="WristRocket_AttackLaunch" parent="Combat">
         <EditorCategories value="Race:Terran"/>

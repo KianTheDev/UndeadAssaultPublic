@@ -6,6 +6,81 @@
         <Value value="1"/>
         <Behavior value="AA12"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="ARBurst15">
+        <Type value="And"/>
+        <CombineArray value="BurstCounter15"/>
+        <CombineArray value="UnitisAR"/>
+        <CombineArray value="M241MMGNotEquipped"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="LaserPrism1">
+        <WhichUnit Value="Source"/>
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="LaserPrism"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="DeagleNotEquipped">
+        <WhichUnit Value="Source"/>
+        <Behavior value="MedicEquipDeagle"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorPlayerCompareResource id="GasGE1">
+        <ResultFailed value="Error,Partial Burst"/>
+        <WhichPlayer Value="Caster"/>
+        <Compare value="GE"/>
+        <Resource value="Vespene"/>
+        <Value value="1"/>
+    </CValidatorPlayerCompareResource>
+    <CValidatorUnitCompareBehaviorCount id="LaserPrism2">
+        <WhichUnit Value="Source"/>
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="LaserPrism2"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="LaserPrism3">
+        <WhichUnit Value="Source"/>
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="LaserPrism3"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorPlayerRequirement id="MedicBiotech5">
+        <Find value="1"/>
+        <Value value="AUG05"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="MedicBiotech3">
+        <Find value="1"/>
+        <Value value="CombatDrugs2"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorUnitType id="NotCyborg20">
+        <Value value="Cyborg20"/>
+        <Find value="0"/>
+    </CValidatorUnitType>
+    <CValidatorUnitCompareBehaviorCount id="DeagleLoaded">
+        <WhichUnit Value="Source"/>
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="DeagleAmmo"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="DeagleEmpty">
+        <WhichUnit Value="Source"/>
+        <Behavior value="DeagleAmmo"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="DeagleReload">
+        <Type value="And"/>
+        <CombineArray value="DeagleEmpty"/>
+        <CombineArray value="DeagleEquipped"/>
+        <CombineArray value="NotReloading"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="LNBurst18">
+        <Type value="And"/>
+        <CombineArray value="BurstCounter18"/>
+        <CombineArray value="NotHeroic"/>
+        <CombineArray value="M241MMGEquipped"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="LNBurst15">
+        <Type value="And"/>
+        <CombineArray value="BurstCounter15"/>
+        <CombineArray value="NotHeroic"/>
+        <CombineArray value="M241MMGNotEquipped"/>
+    </CValidatorCombine>
     <CValidatorUnitCompareBehaviorCount id="AcidBurns">
         <Compare value="GE"/>
         <Value value="1"/>
@@ -30,16 +105,235 @@
         <Value value="1"/>
         <Behavior value="BloatedAcid"/>
     </CValidatorUnitCompareBehaviorCount>
-    <CValidatorUnitCompareBehaviorCount id="BurstCounter10">
+    <CValidatorCombine id="Borg4BurstRifle">
+        <Type value="And"/>
+        <CombineArray value="BorgWeaponAssimUpgrades"/>
+        <CombineArray value="USMCRorSOFAR"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="BorgBurst15">
+        <Type value="And"/>
+        <CombineArray value="BurstCounter15"/>
+        <CombineArray value="BurstCounterBorg1"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="ARBurst18">
+        <Type value="And"/>
+        <CombineArray value="BurstCounter18"/>
+        <CombineArray value="UnitisAR"/>
+        <CombineArray value="M241MMGEquipped"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="BorgBurst18">
+        <Type value="And"/>
+        <CombineArray value="BurstCounter18"/>
+        <CombineArray value="BurstCounterBorg2"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="BorgBurst21">
+        <Type value="And"/>
+        <CombineArray value="BurstCounter21"/>
+        <CombineArray value="BurstCounterBorg3"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="BorgBurst24">
+        <Type value="And"/>
+        <CombineArray value="BurstCounter24"/>
+        <CombineArray value="BurstCounterBorg4"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="BorgBurst27">
+        <Type value="And"/>
+        <CombineArray value="BurstCounter27"/>
+        <CombineArray value="BurstCounterBorg5"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="BorgBurst30">
+        <Type value="And"/>
+        <CombineArray value="BurstCounter30"/>
+        <CombineArray value="BurstCounterBorg6"/>
+    </CValidatorCombine>
+    <CValidatorPlayerRequirement id="BorgEnhancedJump1">
+        <Find value="1"/>
+        <Value value="EnhJump1"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorCombine id="BorgImprovedProne">
+        <Type value="And"/>
+        <CombineArray value="CyborgIsSP"/>
+        <CombineArray value="BorgMarksmanship4"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="BorgJumpUpCliff">
+        <Type value="And"/>
+        <CombineArray value="BorgEnhancedJump2"/>
+        <CombineArray value="CyborgIsSP"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="BorgMarksmanship2">
         <WhichUnit Value="Caster"/>
-        <Value value="10"/>
+        <Value value="1"/>
+        <Behavior value="BorgMarksmanship2"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="BorgMarksmanship3">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="BorgMarksmanship3"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="BorgMarksmanship4">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="BorgMarksmanship4"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="BorgNotSP">
+        <CombineArray value="CyborgIsSP"/>
+        <Negate value="1"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="BorgSPPlasma">
+        <Type value="And"/>
+        <CombineArray value="BorgWeaponAssim4Upgrades"/>
+        <CombineArray value="CyborgIsSP"/>
+    </CValidatorCombine>
+    <CValidatorPlayerRequirement id="BorgWeaponAssim3Upgrades">
+        <Find value="1"/>
+        <Value value="WeaponAssim3"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="BorgEnhancedJump2">
+        <Find value="1"/>
+        <Value value="EnhJump2"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="BorgArmoredRiflebutt">
+        <Find value="1"/>
+        <Value value="Borg20ArmoredRiflebutt"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="BorgWeaponAssimLT3">
+        <Find value="1"/>
+        <Value value="WeaponAssimLT3"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="BorgWeaponAssimUpgrades">
+        <Find value="1"/>
+        <Value value="WeaponAssim2Upgrades"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="BorgWeaponAssim4Upgrades">
+        <Find value="1"/>
+        <Value value="WeaponAssim4"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorUnitCompareBehaviorCount id="BurstCounter15">
+        <WhichUnit Value="Caster"/>
+        <Compare value="GE"/>
+        <Value value="15"/>
         <Behavior value="BurstCounter"/>
     </CValidatorUnitCompareBehaviorCount>
-    <CValidatorUnitCompareBehaviorCount id="BurstCounter13">
+    <CValidatorCombine id="BurstCounter">
+        <CombineArray value="BorgBurst15"/>
+        <CombineArray value="BorgBurst18"/>
+        <CombineArray value="BorgBurst21"/>
+        <CombineArray value="BorgBurst24"/>
+        <CombineArray value="BorgBurst27"/>
+        <CombineArray value="BorgBurst30"/>
+        <CombineArray value="ARBurst15"/>
+        <CombineArray value="ARBurst18"/>
+        <CombineArray value="LNBurst15"/>
+        <CombineArray value="LNBurst18"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="BurstCounter18">
         <WhichUnit Value="Caster"/>
-        <Value value="13"/>
-        <Behavior value="BurstCounter2"/>
+        <Compare value="GE"/>
+        <Value value="18"/>
+        <Behavior value="BurstCounter18"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="BurstCounter21">
+        <WhichUnit Value="Caster"/>
+        <Compare value="GE"/>
+        <Value value="21"/>
+        <Behavior value="BurstCounter21"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="BurstCounter24">
+        <WhichUnit Value="Caster"/>
+        <Compare value="GE"/>
+        <Value value="24"/>
+        <Behavior value="BurstCounter24"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="BurstCounter27">
+        <WhichUnit Value="Caster"/>
+        <Compare value="GE"/>
+        <Value value="27"/>
+        <Behavior value="BurstCounter27"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="BurstCounter30">
+        <WhichUnit Value="Caster"/>
+        <Compare value="GE"/>
+        <Value value="30"/>
+        <Behavior value="BurstCounter30"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="BurstCounterBorg1">
+        <Type value="And"/>
+        <CombineArray value="MGBorg"/>
+        <CombineArray value="BorgWeaponAssimLT3"/>
+        <CombineArray value="M241MMGNotEquipped"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="BurstCounterAR1">
+        <CombineArray value="MGBorg"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="BurstCounterBorg2">
+        <Type value="And"/>
+        <CombineArray value="MGBorg"/>
+        <CombineArray value="BurstCounterBorg2a"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="BurstCounterBorg2b">
+        <Type value="And"/>
+        <CombineArray value="M241MMGEquipped"/>
+        <CombineArray value="BorgWeaponAssimLT3"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="BurstCounterBorg2c">
+        <Type value="And"/>
+        <CombineArray value="M241MMGNotEquipped"/>
+        <CombineArray value="BorgWeaponAssim3Upgrades"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="BurstCounterBorg3c">
+        <Type value="And"/>
+        <CombineArray value="M241MMGNotEquipped"/>
+        <CombineArray value="BorgWeaponAssim4Upgrades"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="BurstCounterBorg6">
+        <Type value="And"/>
+        <CombineArray value="MGBorg"/>
+        <CombineArray value="CyborgIsSP"/>
+        <CombineArray value="BurstCounterBorg5a"/>
+        <CombineArray value="M241MMGEquipped"/>
+        <CombineArray value="BorgWeaponAssim4Upgrades"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="BurstCounterBorg5">
+        <Type value="And"/>
+        <CombineArray value="MGBorg"/>
+        <CombineArray value="CyborgIsSP"/>
+        <CombineArray value="M241MMGNotEquipped"/>
+        <CombineArray value="BorgWeaponAssim4Upgrades"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="BurstCounterBorg4a">
+        <Type value="And"/>
+        <CombineArray value="M241MMGEquipped"/>
+        <CombineArray value="BorgWeaponAssim4Upgrades"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="BurstCounterBorg4">
+        <Type value="And"/>
+        <CombineArray value="MGBorg"/>
+        <CombineArray value="BurstCounterBorg4a"/>
+        <CombineArray value="BorgNotSP"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="BurstCounterBorg3a">
+        <CombineArray value="BurstCounterBorg3b"/>
+        <CombineArray value="BurstCounterBorg3c"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="BurstCounterBorg3b">
+        <Type value="And"/>
+        <CombineArray value="M241MMGEquipped"/>
+        <CombineArray value="BorgWeaponAssim3Upgrades"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="BurstCounterBorg3">
+        <Type value="And"/>
+        <CombineArray value="MGBorg"/>
+        <CombineArray value="BurstCounterBorg3a"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="BurstCounterBorg2a">
+        <CombineArray value="BurstCounterBorg2b"/>
+        <CombineArray value="BurstCounterBorg2c"/>
+    </CValidatorCombine>
+    <CValidatorPlayerRequirement id="BurstDispersionOn">
+        <Find value="1"/>
+        <Value value="BurstDispersionOn"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorUnitBehaviorStackAlias id="BurstCounterTest"/>
     <CValidatorUnitCompareBehaviorCount id="BurstFire">
         <WhichUnit Value="Caster"/>
         <Value value="1"/>
@@ -78,15 +372,126 @@
     <CValidatorUnitCompareBehaviorCount id="BurstPause2">
         <Behavior value="BurstPause2"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="BurstCounterPause">
+        <Behavior value="BurstCounterPause"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareVital id="Health3000">
+        <ResultNoUnit value="Error"/>
+        <Compare value="LT"/>
+        <Value value="3000"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorCombine id="JumpOnlyDownBorg">
+        <ResultFailed value="Error,JumpUp"/>
+        <CombineArray value="JumpOnlyDown"/>
+        <CombineArray value="BorgJumpUpCliff"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="MedicReloadCombine">
+        <CombineArray value="NewReloadValidator"/>
+        <CombineArray value="DeagleReload"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="NotReloadNew">
+        <Behavior value="ReloadingNew"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="CanBeSabotaged">
+        <Type value="And"/>
+        <CombineArray value="IsPMC"/>
+        <CombineArray value="NotMechanical"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareVital id="CasterEnergyGE10">
+        <WhichUnit Value="Caster"/>
+        <Compare value="GE"/>
+        <Value value="10"/>
+        <Vital value="Energy"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitCompareVital id="CasterEnergyGE1">
+        <WhichUnit Value="Caster"/>
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Vital value="Energy"/>
+    </CValidatorUnitCompareVital>
     <CValidatorUnitCompareBehaviorCount id="ChargesReadied">
         <WhichUnit Value="Caster"/>
         <Compare value="GE"/>
         <Value value="1"/>
         <Behavior value="ChargesReadied"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="BorgIncendiaryOff">
+        <Behavior value="EnableIncendiary"/>
+    </CValidatorUnitCompareBehaviorCount>
     <CValidatorUnitType id="Cyborg2">
         <Value value="Cyborg2"/>
     </CValidatorUnitType>
+    <CValidatorUnitType id="Cyborg20">
+        <Value value="Cyborg20"/>
+    </CValidatorUnitType>
+    <CValidatorPlayerRequirement id="Level2FieldMaint">
+        <Find value="1"/>
+        <Value value="BorgFieldMain2"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="Level3FieldMaint">
+        <Find value="1"/>
+        <Value value="BorgFieldMain3"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorUnitCompareBehaviorCount id="BorgMarksmanship1">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="BorgMarksmanship1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="NewReloadValidator">
+        <Type value="And"/>
+        <CombineArray value="NoAmmo"/>
+        <CombineArray value="NotReloading"/>
+    </CValidatorCombine>
+    <CValidatorPlayerCompareResource id="NoAmmo"/>
+    <CValidatorUnitCompareBehaviorCount id="NotReloading">
+        <Behavior value="ReloadingNew"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="BorgProned">
+        <WhichUnit Value="Source"/>
+        <Value value="1"/>
+        <Behavior value="ProneBorg"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="DeagleEquipped">
+        <WhichUnit Value="Source"/>
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="MedicEquipDeagle"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="RifleReloadClass">
+        <CombineArray value="UnitIsMedic"/>
+        <CombineArray value="UnitIsRifleman"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="ShotgunMando">
+        <WhichUnit Value="Source"/>
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="MandoEquipShotgun"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="RifleMando">
+        <WhichUnit Value="Source"/>
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="MandoEquipRifle"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="ShotgunUseValidator">
+        <CombineArray value="ShotgunBorg"/>
+        <CombineArray value="UnitNotBorgOrMando"/>
+        <CombineArray value="ShotgunMando"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="RifleUseValidator">
+        <CombineArray value="RifleBorg"/>
+        <CombineArray value="UnitIsNotBorg"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="DMRUseValidator">
+        <CombineArray value="DMRBorg"/>
+        <CombineArray value="UnitIsNotBorg"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="ShotgunBorg">
+        <WhichUnit Value="Source"/>
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="BorgEquipShotgun"/>
+    </CValidatorUnitCompareBehaviorCount>
     <CValidatorUnitCompareBehaviorCount id="DilophosaurAcid">
         <Compare value="GE"/>
         <Value value="1"/>
@@ -141,6 +546,18 @@
     <CValidatorUnitCompareBehaviorCount id="ISRTowerCheck">
         <Value value="1"/>
         <Behavior value="ISRTowerChargeAI"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="DMRBorg">
+        <WhichUnit Value="Source"/>
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="BorgEquipDMR"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="PlasmaBorg">
+        <WhichUnit Value="Source"/>
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="BorgEquipPlasma"/>
     </CValidatorUnitCompareBehaviorCount>
     <CValidatorUnitCompareField id="IsFlying2">
         <Compare value="GE"/>
@@ -199,7 +616,7 @@
         <AreaArray Radius="10" Validator="UnitisFlare"/>
     </CValidatorLocationEnumArea>
     <CValidatorLocationEnumArea id="NearISRTower">
-        <AreaArray Radius="1.5" Validator="ISRTowerCheck"/>
+        <AreaArray Radius="2.5" Validator="ISRTowerCheck"/>
     </CValidatorLocationEnumArea>
     <CValidatorCombine id="NoDMR">
         <CombineArray value="IDMR2"/>
@@ -209,9 +626,52 @@
     <CValidatorUnitCompareBehaviorCount id="InfestedNotCleansing">
         <Behavior value="InfestedCleansing"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorLocationEnumArea id="NoNearbyFlare" parent="HostileSearchEmpty">
+        <WhichLocation Value="TargetUnitOrPoint"/>
+        <AreaArray Radius="15" Validator="UnitisFlare"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+        <SearchFilters value="Visible;Missile,Stasis,Dead,Hidden,Hallucination"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorLocationEnumArea id="IsInGroup5" parent="HostileSearchEmpty">
+        <WhichLocation Value="TargetUnitOrPoint"/>
+        <AreaArray Radius="5"/>
+        <Compare value="GE"/>
+        <Count value="5"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+        <SearchFilters value="Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Hallucination"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorCombine id="NotMechanical">
+        <CombineArray value="IsMechanical"/>
+        <Negate value="1"/>
+    </CValidatorCombine>
     <CValidatorUnitFilters id="NotStructure2">
         <Filters value="-;Structure"/>
     </CValidatorUnitFilters>
+    <CValidatorCombine id="PMCFragValidator">
+        <CombineArray value="IsHeroic"/>
+        <CombineArray value="IsInGroup5"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="PMCIonValidator">
+        <CombineArray value="IsHeroic"/>
+        <CombineArray value="IsMassive"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="PMCMRLValidator">
+        <CombineArray value="IsHeroic"/>
+        <CombineArray value="IsMassive"/>
+        <CombineArray value="IsMechanical"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="RifleBorg">
+        <WhichUnit Value="Source"/>
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="BorgEquipRifle"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="MGBorg">
+        <WhichUnit Value="Source"/>
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="BorgEquipMG"/>
+    </CValidatorUnitCompareBehaviorCount>
     <CValidatorUnitCompareBehaviorCount id="SAW">
         <WhichUnit Value="Source"/>
         <Compare value="GE"/>
@@ -598,7 +1058,11 @@
         <Value value="1"/>
         <Behavior value="LocalNational"/>
     </CValidatorUnitCompareBehaviorCount>
-    <CValidatorUnitCompareBehaviorCount id="IsPMC"/>
+    <CValidatorUnitCompareBehaviorCount id="IsPMC">
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="PMC"/>
+    </CValidatorUnitCompareBehaviorCount>
     <CValidatorCombine id="IsPoisoned">
         <CombineArray value="NecroticVenom"/>
         <CombineArray value="NeurotoxicVenom"/>
@@ -790,9 +1254,44 @@
         <Behavior value="RapidFire"/>
         <WhichUnit Value="Caster"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareAbilLevel id="Sabotage1">
+        <WhichUnit Value="Caster"/>
+        <AbilLink value="SabotageSkills"/>
+    </CValidatorUnitCompareAbilLevel>
+    <CValidatorUnitCompareAbilLevel id="Sabotage2">
+        <WhichUnit Value="Caster"/>
+        <AbilLink value="SabotageSkills"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareAbilLevel>
+    <CValidatorUnitCompareAbilLevel id="Recon2">
+        <WhichUnit Value="Caster"/>
+        <AbilLink value="ReconExpert"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareAbilLevel>
+    <CValidatorUnitCompareAbilLevel id="Sabotage3">
+        <WhichUnit Value="Caster"/>
+        <AbilLink value="SabotageSkills"/>
+        <Value value="2"/>
+    </CValidatorUnitCompareAbilLevel>
+    <CValidatorUnitCompareAbilLevel id="Sabotage4">
+        <WhichUnit Value="Caster"/>
+        <AbilLink value="SabotageSkills"/>
+        <Value value="3"/>
+    </CValidatorUnitCompareAbilLevel>
+    <CValidatorCombine id="Sabotage4Normal">
+        <Type value="And"/>
+        <CombineArray value="Sabotage4"/>
+        <CombineArray value="SpecterNotPhantasm"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="Sabotage4Phantasm">
+        <Type value="And"/>
+        <CombineArray value="Sabotage4"/>
+        <CombineArray value="SpecterIsPhantasm"/>
+    </CValidatorCombine>
     <CValidatorLocationCompareCliffLevel id="SameorLowerCliffLevel">
-        <WhichLocation Value="CasterUnit"/>
-        <OtherLocation Value="TargetUnit"/>
+        <WhichLocation Value="TargetUnit"/>
+        <OtherLocation Value="CasterUnit"/>
+        <Compare value="LE"/>
     </CValidatorLocationCompareCliffLevel>
     <CValidatorUnitCompareBehaviorCount id="SatchelChargeReady">
         <WhichUnit Value="Caster"/>
@@ -812,6 +1311,10 @@
         <CombineArray value="DebilitatingInfection"/>
         <CombineArray value="InfectedBite"/>
         <CombineArray value="ParasiticInfection"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="MGUseValidator">
+        <CombineArray value="MGBorg"/>
+        <CombineArray value="UnitIsNotBorg"/>
     </CValidatorCombine>
     <CValidatorUnitCompareBehaviorCount id="SoldierSkills1Check">
         <WhichUnit Value="Caster"/>
@@ -885,8 +1388,27 @@
         <Value value="1"/>
         <Behavior value="HollowPointRoundsReady"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorPlayerRequirement id="SpecterIsPhantasm">
+        <Find value="1"/>
+        <Value value="HasPhantasm"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="SpecterHasPenumbra">
+        <Find value="1"/>
+        <Value value="PenumbraUnlocked"/>
+    </CValidatorPlayerRequirement>
     <CValidatorPlayerRequirement id="SpecterNotWE">
         <Value value="HasWardenElite"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="SpecterNotPhantasm">
+        <Value value="HasPhantasm"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="CyborgIsSP">
+        <Find value="1"/>
+        <Value value="HasSpecializationPotential"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="Level1FieldMaint">
+        <Find value="1"/>
+        <Value value="BorgFieldMain1"/>
     </CValidatorPlayerRequirement>
     <CValidatorUnitCompareBehaviorCount id="SpecterSwappingRounds">
         <Compare value="GE"/>
@@ -932,10 +1454,34 @@
     <CValidatorUnitType id="UnitIsMedic">
         <Value value="CombatMedic"/>
     </CValidatorUnitType>
+    <CValidatorUnitType id="UnitIsNotMando">
+        <WhichUnit Value="Source"/>
+        <Value value="CommandoHero"/>
+        <Find value="0"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="UnitIsRifleman">
+        <Value value="Rifleman"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="UnitIsNotBorg">
+        <WhichUnit Value="Source"/>
+        <Value value="Cyborg20"/>
+        <Find value="0"/>
+    </CValidatorUnitType>
     <CValidatorLocationEnumArea id="UnitNearRASpotter">
         <WhichLocation Value="TargetUnitOrPoint"/>
         <AreaArray Radius="30" Validator="UnitisRASpotter"/>
+        <Compare value="GE"/>
+        <Count value="1"/>
     </CValidatorLocationEnumArea>
+    <CValidatorCombine id="UnitNotBorgOrMando">
+        <Type value="And"/>
+        <CombineArray value="UnitIsNotBorg"/>
+        <CombineArray value="UnitIsNotMando"/>
+    </CValidatorCombine>
+    <CValidatorUnitType id="UnitisAR">
+        <WhichUnit Value="Caster"/>
+        <Value value="AutomaticRifleman"/>
+    </CValidatorUnitType>
     <CValidatorCombine id="UnitisFlare">
         <CombineArray value="UnitisAirFlare"/>
         <CombineArray value="UnitisGroundFlare"/>
@@ -1418,6 +1964,7 @@
     <CValidatorCombine id="IsProned">
         <CombineArray value="Proned"/>
         <CombineArray value="ImprovedProned"/>
+        <CombineArray value="BorgProned"/>
     </CValidatorCombine>
     <CValidatorUnitType id="LNM1SentryGun">
         <Value value="LNM1SentryGun"/>
@@ -1549,6 +2096,7 @@
         <CombineArray value="ShockTrooper"/>
         <CombineArray value="Ghost2"/>
         <CombineArray value="MechOperator"/>
+        <CombineArray value="PlasmaBorg"/>
     </CValidatorCombine>
     <CValidatorUnitCompareBehaviorCount id="Proned">
         <WhichUnit Value="Source"/>

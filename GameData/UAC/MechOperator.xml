@@ -1,5 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectSet id="BattleWalkerHitSet">
+        <EditorCategories value=""/>
+        <EffectArray value="WalkerArmamentDamage"/>
+        <EffectArray value="BattleWalkerArmamentSingle"/>
+    </CEffectSet>
+    <CEffectDamage id="BattleWalkerArmamentSingle">
+        <ResponseFlags index="Acquire" value="1"/>
+        <ImpactLocation Value="TargetUnit"/>
+        <AttributeFactor index="Armored" value="-0.2"/>
+        <AttributeFactor index="Mechanical" value="-0.2"/>
+        <AttributeFactor index="Massive" value="0.2"/>
+        <AttributeFactor index="Heroic" value="-0.5"/>
+        <AttributeFactor index="Summoned" value="-0.5"/>
+        <Kind value="Ranged"/>
+        <KindSplash value="Ranged"/>
+        <Amount value="80"/>
+        <Random value="15"/>
+        <Death value="Impact"/>
+        <DisplayFlags index="CollapseBuffed" value="1"/>
+    </CEffectDamage>
+    <CEffectCreateUnit id="SummonSupportWalker">
+        <EditorCategories value=""/>
+        <WhichLocation Value="CasterUnit"/>
+        <CreateFlags index="Placement" value="0"/>
+        <CreateFlags index="PlacementIgnoreBlockers" value="1"/>
+        <CreateFlags index="UseFood" value="0"/>
+        <CreateFlags index="NormalizeSpawnOffset" value="0"/>
+        <SpawnUnit value="Hunter"/>
+    </CEffectCreateUnit>
     <CEffectApplyBehavior id="ApplyFieldTunedGlaze">
         <EditorCategories value=""/>
         <WhichUnit Value="Caster"/>
@@ -142,12 +171,13 @@
         <Total value="Combine"/>
         <Amount value="60"/>
         <Random value="15"/>
+        <AreaArray Radius="0.2" Fraction="1"/>
         <AreaArray Radius="1.8" Fraction="0.6"/>
         <AreaArray Arc="24.972" Radius="2.55" Fraction="0.4"/>
-        <ExcludeArray Value="Target"/>
         <ExcludeArray Value="Source"/>
         <SearchFilters value="-;Self,Player,Ally,Neutral,Psionic,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <DisplayFlags index="CollapseBuffed" value="1"/>
+        <ImpactLocation Value="SourceUnit"/>
     </CEffectDamage>
     <CEffectApplyBehavior id="DisruptorFieldApplyDebuff">
         <ValidatorArray index="0" value="TargetIsEnemy"/>
@@ -177,7 +207,7 @@
         <EffectArray value="Eject"/>
     </CEffectSet>
     <CEffectLaunchMissile id="BattleWalkerGun">
-        <ImpactEffect value="WalkerArmamentDamage"/>
+        <ImpactEffect value="BattleWalkerHitSet"/>
         <LaunchLocation Value="CasterUnit"/>
     </CEffectLaunchMissile>
     <CEffectDamage id="WalkerArmamentDamage">
@@ -191,10 +221,14 @@
         <KindSplash value="Ranged"/>
         <Amount value="80"/>
         <Random value="15"/>
+        <AreaArray Radius="0.2" Fraction="1"/>
         <AreaArray Arc="14.9963" Radius="2" Fraction="0.3"/>
         <SearchFilters value="-;Self,Ally,Psionic,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <DisplayFlags index="CollapseBuffed" value="1"/>
         <Death value="Impact"/>
+        <ImpactLocation Value="SourceUnit"/>
+        <ExcludeArray Value="Source"/>
+        <ExcludeArray Value="Target"/>
     </CEffectDamage>
     <CEffectIssueOrder id="Eject">
         <EditorCategories value=""/>
@@ -203,18 +237,135 @@
     </CEffectIssueOrder>
     <CEffectCreateUnit id="SummonBattleWalker">
         <EditorCategories value=""/>
-        <WhichLocation Value="TargetPoint"/>
+        <WhichLocation Value="CasterUnit"/>
         <CreateFlags index="UseFood" value="0"/>
         <CreateFlags index="NormalizeSpawnOffset" value="0"/>
         <SpawnUnit value="InvisibleTargetDummy"/>
     </CEffectCreateUnit>
     <CEffectCreateUnit id="SummonCombatWalker">
         <EditorCategories value=""/>
-        <WhichLocation Value="TargetPoint"/>
+        <WhichLocation Value="CasterUnit"/>
         <CreateFlags index="UseFood" value="0"/>
-        <CreateFlags index="NormalizeSpawnOffset" value="0"/>
         <SpawnUnit value="InvisibleTargetDummy"/>
     </CEffectCreateUnit>
+    <CAbilEffectTarget id="RequestHeavyWalkerTarget">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="SummonCombatWalker"/>
+        <Effect value="SummonCombatWalker"/>
+        <Effect value="SummonCombatWalker"/>
+        <Flags index="RangeUsePathing" value="1"/>
+        <Flags index="UpdateChargesOnLevelChange" value="0"/>
+        <Cost>
+            <VitalFraction index="Energy" value="0.5"/>
+            <Charge HideCount="1" Location="Unit"/>
+            <Cooldown Location="Unit" TimeUse="600"/>
+        </Cost>
+        <Cost>
+            <VitalFraction index="Energy" value="0.5"/>
+            <Charge Location="Unit"/>
+            <Cooldown Location="Unit" TimeUse="540"/>
+        </Cost>
+        <Cost>
+            <VitalFraction index="Energy" value="0.5"/>
+            <Charge Location="Unit"/>
+            <Cooldown Location="Unit" TimeUse="540"/>
+        </Cost>
+        <Range value="5"/>
+        <CastIntroTime value="7.5"/>
+        <CastIntroTime value="7.5"/>
+        <CastIntroTime value="0"/>
+        <ShowProgressArray index="Cast" value="1"/>
+        <ProgressButtonArray index="Cast" value="RequestHeavyWalker"/>
+        <EffectRange index="0" value="0.5,500"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="RequestHeavyWalker" Requirements="Level4Needed"/>
+    </CAbilEffectTarget>
+    <CAbilEffectInstant id="RequestMobileSupportWalker">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="MOSupportDummyCU"/>
+        <Effect value="MOSupportDummyCU"/>
+        <Effect value="MOSupportDummyCU"/>
+        <Flags index="BestUnit" value="1"/>
+        <Flags index="UpdateChargesOnLevelChange" value="0"/>
+        <Cost>
+            <VitalFraction index="Energy" value="0.5"/>
+            <Charge HideCount="1" Link="Abil/RequestHeavyWalker" Location="Unit"/>
+            <Cooldown Link="Abil/RequestHeavyWalker" Location="Unit" TimeUse="600"/>
+        </Cost>
+        <Cost>
+            <VitalFraction index="Energy" value="0.5"/>
+            <Charge Link="Abil/RequestHeavyWalker" Location="Unit"/>
+            <Cooldown Link="Abil/RequestHeavyWalker" Location="Unit" TimeUse="540"/>
+        </Cost>
+        <Cost>
+            <VitalFraction index="Energy" value="0.5"/>
+            <Charge Link="Abil/RequestHeavyWalker" Location="Unit"/>
+            <Cooldown Link="Abil/RequestHeavyWalker" Location="Unit" TimeUse="540"/>
+        </Cost>
+        <Range value="5"/>
+        <CastIntroTime value="7.5"/>
+        <CastIntroTime value="7.5"/>
+        <CastIntroTime value="0"/>
+        <ShowProgressArray index="Cast" value="1"/>
+        <ProgressButtonArray index="Cast" value="RequestBattleWalker"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="RequestMobileSupportWalker" Requirements="Level4Needed"/>
+    </CAbilEffectInstant>
+    <CAbilEffectTarget id="RequestMk2LightWalkerTarget">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="SummonBattleWalker"/>
+        <Effect value="SummonBattleWalker"/>
+        <Effect value="SummonBattleWalker"/>
+        <Flags index="RangeUsePathing" value="1"/>
+        <Flags index="UpdateChargesOnLevelChange" value="0"/>
+        <Cost>
+            <VitalFraction index="Energy" value="0.5"/>
+            <Charge HideCount="1" Link="Abil/RequestHeavyWalker" Location="Unit"/>
+            <Cooldown Link="Abil/RequestHeavyWalker" Location="Unit" TimeUse="600"/>
+        </Cost>
+        <Cost>
+            <VitalFraction index="Energy" value="0.5"/>
+            <Charge Link="Abil/RequestHeavyWalker" Location="Unit"/>
+            <Cooldown Link="Abil/RequestHeavyWalker" Location="Unit" TimeUse="540"/>
+        </Cost>
+        <Cost>
+            <VitalFraction index="Energy" value="0.5"/>
+            <Charge Link="Abil/RequestHeavyWalker" Location="Unit"/>
+            <Cooldown Link="Abil/RequestHeavyWalker" Location="Unit" TimeUse="540"/>
+        </Cost>
+        <Range value="5"/>
+        <CastIntroTime value="7.5"/>
+        <CastIntroTime value="7.5"/>
+        <CastIntroTime value="0"/>
+        <ShowProgressArray index="Cast" value="1"/>
+        <ProgressButtonArray index="Cast" value="RequestBattleWalker"/>
+        <EffectRange index="0" value="0.5,500"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="RequestBattleWalker" Requirements="Level4Needed"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="32mmBarrage">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="32mmBarrageCreatePersist"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Display index="Energy" value="1"/>
+            <Vital index="Energy" value="75"/>
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Link value="Abil/MiniMRL"/>
+                <TimeUse value="60"/>
+            </Charge>
+            <Cooldown Link="Abil/MiniMRL"/>
+        </Cost>
+        <Range value="30"/>
+        <CastIntroTime value="0.5"/>
+        <Marker Link="Abil/MRL"/>
+        <ShowProgressArray index="Cast" value="1"/>
+        <CursorEffect value="MRLDamage1"/>
+        <AINotifyEffect value="MRLDamage1"/>
+        <ProgressButtonArray index="Cast" value="MRL"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="32mmBarrage" Requirements="CombatAdjustmentsUpgrade3"/>
+    </CAbilEffectTarget>
     <CAbilEffectInstant id="DisposeMechSuit">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="MechSuitScan"/>
@@ -447,6 +598,33 @@
         </Cost>
         <BehaviorArray value="OverclockEngines"/>
     </CAbilBehavior>
+    <CAbilEffectInstant id="RequestMk2LightWalker">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="SummonBattleWalker"/>
+        <Effect value="SummonBattleWalker"/>
+        <Effect value="SummonBattleWalker"/>
+        <Cost>
+            <VitalFraction index="Energy" value="0.5"/>
+            <Charge HideCount="1" Link="Abil/RequestHeavyWalker" Location="Unit"/>
+            <Cooldown Link="Abil/RequestHeavyWalker" Location="Unit" TimeUse="600"/>
+        </Cost>
+        <Cost>
+            <VitalFraction index="Energy" value="0.5"/>
+            <Charge Link="Abil/RequestHeavyWalker" Location="Unit"/>
+            <Cooldown Link="Abil/RequestHeavyWalker" Location="Unit" TimeUse="540"/>
+        </Cost>
+        <Cost>
+            <VitalFraction index="Energy" value="0.5"/>
+            <Charge Link="Abil/RequestHeavyWalker" Location="Unit"/>
+            <Cooldown Link="Abil/RequestHeavyWalker" Location="Unit" TimeUse="540"/>
+        </Cost>
+        <CastIntroTime value="10"/>
+        <CastIntroTime value="10"/>
+        <CastIntroTime value="0"/>
+        <ShowProgressArray index="Cast" value="1"/>
+        <ProgressButtonArray index="Cast" value="RequestBattleWalker"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="RequestBattleWalker" Requirements="Level4Needed"/>
+    </CAbilEffectInstant>
     <CAbilEffectTarget id="SuitRecharge">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
         <Effect index="0" value="EnergyTransfer2"/>
@@ -507,38 +685,7 @@
         <CmdButtonArray index="Execute" DefaultButtonFace="RepairCE" Requirements="MechOperatorSkills1A"/>
         <FollowRange value="1.5"/>
     </CAbilEffectTarget>
-    <CAbilEffectTarget id="RequestMk2LightWalker">
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <Effect index="0" value="SummonBattleWalker"/>
-        <Effect value="SummonBattleWalker"/>
-        <Effect value="SummonBattleWalker"/>
-        <Cost>
-            <VitalFraction index="Energy" value="0.5"/>
-            <Charge HideCount="1" Link="Abil/RequestHeavyWalker" Location="Unit"/>
-            <Cooldown Link="Abil/RequestHeavyWalker" Location="Unit" TimeUse="600"/>
-        </Cost>
-        <Cost>
-            <VitalFraction index="Energy" value="0.5"/>
-            <Charge Link="Abil/RequestHeavyWalker" Location="Unit"/>
-            <Cooldown Link="Abil/RequestHeavyWalker" Location="Unit" TimeUse="540"/>
-        </Cost>
-        <Cost>
-            <VitalFraction index="Energy" value="0.5"/>
-            <Charge Link="Abil/RequestHeavyWalker" Location="Unit"/>
-            <Cooldown Link="Abil/RequestHeavyWalker" Location="Unit" TimeUse="540"/>
-        </Cost>
-        <Range value="5"/>
-        <CastIntroTime value="7.5"/>
-        <CastIntroTime value="7.5"/>
-        <CastIntroTime value="0"/>
-        <ShowProgressArray index="Cast" value="1"/>
-        <ProgressButtonArray index="Cast" value="RequestBattleWalker"/>
-        <EffectRange index="0" value="0.5,500"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="RequestBattleWalker" Requirements="Level4Needed"/>
-        <Flags index="RangeUsePathing" value="1"/>
-        <Flags index="UpdateChargesOnLevelChange" value="0"/>
-    </CAbilEffectTarget>
-    <CAbilEffectTarget id="RequestHeavyWalker">
+    <CAbilEffectInstant id="RequestHeavyWalker">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="SummonCombatWalker"/>
         <Effect value="SummonCombatWalker"/>
@@ -558,17 +705,13 @@
             <Charge Location="Unit"/>
             <Cooldown Location="Unit" TimeUse="540"/>
         </Cost>
-        <Range value="5"/>
-        <CastIntroTime value="7.5"/>
-        <CastIntroTime value="7.5"/>
+        <CastIntroTime value="10"/>
+        <CastIntroTime value="10"/>
         <CastIntroTime value="0"/>
         <ShowProgressArray index="Cast" value="1"/>
         <ProgressButtonArray index="Cast" value="RequestHeavyWalker"/>
-        <EffectRange index="0" value="0.5,500"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="RequestHeavyWalker" Requirements="Level4Needed"/>
-        <Flags index="RangeUsePathing" value="1"/>
-        <Flags index="UpdateChargesOnLevelChange" value="0"/>
-    </CAbilEffectTarget>
+    </CAbilEffectInstant>
     <CAbilEffectTarget id="WalkerMRL">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
         <Effect index="0" value="MRLFire"/>
@@ -732,6 +875,10 @@
         <InfoArray index="Learn7" Abil="RequestMk2LightWalker">
             <Charge CountMax="100" CountStart="100"/>
             <Button DefaultButtonFace="RequestBattleWalker" Requirements="Level4"/>
+        </InfoArray>
+        <InfoArray index="Learn8" Abil="MORequestSupport">
+            <Charge CountMax="100" CountStart="100"/>
+            <Button DefaultButtonFace="RequestMobileSupportWalker" Requirements="Level4"/>
         </InfoArray>
     </CAbilLearn>
     <CValidatorUnitCompareBehaviorCount id="IsUnPowered">
@@ -902,6 +1049,12 @@
         <NodeArray index="Use" Link="EqCountAbilCombatAdjustmentsCompleteOnly1"/>
         <NodeArray index="Show" Link="EqCountAbilCombatAdjustmentsCompleteOnly1"/>
     </CRequirement>
+    <CButton id="32mmBarrage">
+        <Icon value="Assets\Textures\btn-techupgrade-terran-330mmbarragecannon.dds"/>
+    </CButton>
+    <CButton id="RequestMobileSupportWalker">
+        <Icon value="Assets\Textures\btn-unit-terran-goliathmercenary.dds"/>
+    </CButton>
     <CButton id="FieldTuning">
         <Icon value="Assets\Textures\btn-unit-terran-vikingarchangel.dds"/>
     </CButton>
@@ -1736,6 +1889,7 @@
         <AbilArray Link="MechOperatorSkills"/>
         <AbilArray Link="DisposeMechSuit"/>
         <AbilArray Link="ReconDrone2"/>
+        <AbilArray Link="MORequestSupport"/>
         <BehaviorArray Link="MechOperatorSkillsLvl1"/>
         <BehaviorArray Link="MechOperatorSkillsLvl2"/>
         <BehaviorArray Link="MechOperatorSkillsLvl3"/>
@@ -1762,7 +1916,8 @@
             <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="0" Column="1"/>
             <LayoutButtons Face="RequestBattleWalker" Type="AbilCmd" AbilCmd="RequestMk2LightWalker,Execute" Row="2" Column="0"/>
             <LayoutButtons Face="RequestHeavyWalker" Type="AbilCmd" AbilCmd="RequestHeavyWalker,Execute" Row="2" Column="1"/>
-            <LayoutButtons Face="ReconDrone2" Type="AbilCmd" AbilCmd="ReconDrone2,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="RequestMobileSupportWalker" Type="AbilCmd" AbilCmd="MORequestSupport,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="ReconDrone2" Type="AbilCmd" AbilCmd="ReconDrone2,Execute" Row="2" Column="3"/>
         </CardLayouts>
         <CardLayouts index="1" CardId="0002">
             <LayoutButtons Face="RequestHeavyWalker" Type="AbilCmd" AbilCmd="LearnAbilitiesMechOperator,Learn6" Row="0" Column="2"/>
@@ -1805,7 +1960,7 @@
         <Attributes index="Heroic" value="1"/>
         <LifeStart value="1750"/>
         <LifeMax value="1750"/>
-        <LifeArmor value="15"/>
+        <LifeArmor value="20"/>
         <EnergyStart value="650"/>
         <EnergyMax value="650"/>
         <Speed value="2.5"/>
@@ -2038,7 +2193,7 @@
         <Attributes index="Heroic" value="1"/>
         <LifeStart value="750"/>
         <LifeMax value="750"/>
-        <LifeArmor value="8"/>
+        <LifeArmor value="10"/>
         <LifeArmorName value="Unit/LifeArmorName/BattleWalker"/>
         <EnergyStart value="600"/>
         <EnergyMax value="600"/>
