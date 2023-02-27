@@ -3,7 +3,7 @@
     <region id="1">
         <name value="West"/>
         <shape type="rect">
-            <quad value="0.4765,1.1342,4.2397,143.2746"/>
+            <quad value="0.4765,2.6301,4.2397,247.77"/>
         </shape>
     </region>
     <region id="2">
@@ -15,19 +15,19 @@
     <region id="3">
         <name value="East"/>
         <shape type="rect">
-            <quad value="251.3806,4.791,255.1196,254.6091"/>
+            <quad value="251.6306,0.0002,255.3696,210"/>
         </shape>
     </region>
     <region id="4">
         <name value="North"/>
         <shape type="rect">
-            <quad value="18.274,250.2272,251.1682,255.7734"/>
+            <quad value="1.2773,250.3881,217.277,255.9343"/>
         </shape>
     </region>
     <region id="5">
         <name value="Crops1"/>
         <shape type="circle">
-            <center value="106.0004,89.736"/>
+            <center value="96.9802,103.8618"/>
             <radius value="6.9165"/>
         </shape>
     </region>
@@ -62,9 +62,8 @@
     </region>
     <region id="14">
         <name value="LZ Nightstalker"/>
-        <shape type="circle">
-            <center value="42.0134,222.118"/>
-            <radius value="5.5"/>
+        <shape type="rect">
+            <quad value="37.2502,213.7502,46.7502,225.2502"/>
         </shape>
     </region>
     <region id="15">
@@ -77,15 +76,15 @@
     <region id="16">
         <name value="LZ Predator"/>
         <shape type="circle">
-            <center value="74.907,23.8576"/>
-            <radius value="6.3322"/>
+            <center value="74.7998,25"/>
+            <radius value="4"/>
         </shape>
     </region>
     <region id="17">
         <name value="Exit1"/>
         <color value="255,128,64,0"/>
         <shape type="rect">
-            <quad value="20.6748,251.718,26.3261,255.2844"/>
+            <quad value="17.5,250,25.5,256"/>
         </shape>
     </region>
     <region id="18">
@@ -231,7 +230,7 @@
     <region id="32">
         <name value="Silo01"/>
         <shape type="circle">
-            <center value="66.0874,132.2922"/>
+            <center value="64.5888,127.3986"/>
             <radius value="2.6791"/>
         </shape>
     </region>
@@ -265,7 +264,7 @@
     <region id="37">
         <name value="Silo06"/>
         <shape type="circle">
-            <center value="188.5651,149.6367"/>
+            <center value="182.0002,147.5002"/>
             <radius value="3.5356"/>
         </shape>
     </region>
@@ -376,14 +375,14 @@
     <region id="65">
         <name value="Cave02"/>
         <shape type="circle">
-            <center value="109.104,155.3256"/>
+            <center value="106.2812,152.9184"/>
             <radius value="1.688"/>
         </shape>
     </region>
     <region id="66">
         <name value="Cave03"/>
         <shape type="circle">
-            <center value="169.0234,148.2717"/>
+            <center value="169.7167,147.812"/>
             <radius value="1.688"/>
         </shape>
     </region>
@@ -452,7 +451,7 @@
     <region id="77">
         <name value="Cave04"/>
         <shape type="circle">
-            <center value="242.34,103.6523"/>
+            <center value="242.5087,102.73"/>
             <radius value="1.688"/>
         </shape>
     </region>
@@ -474,7 +473,7 @@
         <name value="Sniper 02"/>
         <color value="255,255,0,0"/>
         <shape type="circle">
-            <center value="123.1796,149.929"/>
+            <center value="42.0007,212.0004"/>
             <radius value="2.5507"/>
         </shape>
     </region>
@@ -504,20 +503,20 @@
     <region id="99">
         <name value="RA Scientists 6"/>
         <shape type="rect">
-            <quad value="234.1838,226.3217,237.581,229.1303"/>
+            <quad value="233.8881,209.942,237.2854,212.7504"/>
         </shape>
     </region>
     <region id="100">
         <name value="RA Scientists 7"/>
         <shape type="rect">
-            <quad value="235.034,231.7536,241.9165,235.192"/>
+            <quad value="220.3952,220.7578,227.2778,224.196"/>
         </shape>
     </region>
     <region id="104">
         <name value="BDS1"/>
         <color value="255,0,255,255"/>
         <shape type="circle">
-            <center value="18.9577,118.8933"/>
+            <center value="19.5002,120.0002"/>
             <radius value="4.0146"/>
         </shape>
     </region>
@@ -533,7 +532,7 @@
         <name value="BDS3"/>
         <color value="255,0,255,255"/>
         <shape type="circle">
-            <center value="176.8862,241.8598"/>
+            <center value="167.0007,245.0004"/>
             <radius value="2.5"/>
         </shape>
     </region>
@@ -541,31 +540,51 @@
         <name value="LN Spawn Region"/>
         <color value="255,255,128,255"/>
         <shape type="rect">
-            <quad value="195,65,199,73"/>
+            <quad value="195.5654,65.1811,199.5654,73.1811"/>
         </shape>
         <shape type="rect">
-            <quad value="68,227.5,78,232.5"/>
+            <quad value="68.5654,227.6811,78.5654,232.6811"/>
         </shape>
         <shape type="rect">
-            <quad value="122,213,128,223"/>
+            <quad value="121.5698,206.18,127.5698,216.18"/>
         </shape>
         <shape type="rect">
-            <quad value="228.48,110,236.48,122"/>
+            <quad value="229.0454,110.1811,237.0454,122.1811"/>
         </shape>
         <shape type="rect">
-            <quad value="40,54,46,62"/>
+            <quad value="40.5654,54.1811,46.5654,62.1811"/>
         </shape>
         <shape type="rect">
-            <quad value="181,63,185,71"/>
+            <quad value="181.5654,63.1811,185.5654,71.1811"/>
         </shape>
         <shape type="rect">
-            <quad value="39,210,45,216"/>
+            <quad value="39.5654,210.1811,45.5654,216.1811"/>
         </shape>
     </region>
     <region id="110">
         <name value="Jump1"/>
         <shape type="rect">
-            <quad value="230.0854,190.6604,237.915,198.3403"/>
+            <quad value="228.5854,190.6604,239.415,198.3403"/>
+        </shape>
+        <shape type="rect">
+            <quad value="230,223.5,234,233.5"/>
+        </shape>
+        <shape type="rect">
+            <quad value="214.9812,194.0798,218.9387,234.0798"/>
+        </shape>
+        <shape type="rect">
+            <quad value="239,190.3698,243,222.3698"/>
+        </shape>
+        <shape type="rect">
+            <quad value="217.25,191.22,228.75,195.22"/>
+        </shape>
+        <shape type="rect">
+            <quad value="216.485,233.22,235.4948,235.22"/>
+        </shape>
+        <shape type="diamond">
+            <center value="235.99,222.7897"/>
+            <width value="4"/>
+            <height value="12"/>
         </shape>
     </region>
     <region id="112">
@@ -834,21 +853,21 @@
     <region id="171">
         <name value="Seismic Disturbance 1"/>
         <shape type="circle">
-            <center value="116.5031,90.1296"/>
+            <center value="119.9987,93.1525"/>
             <radius value="3.155"/>
         </shape>
     </region>
     <region id="172">
         <name value="Seismic Disturbance 3"/>
         <shape type="circle">
-            <center value="70.1953,137.4074"/>
+            <center value="74.2272,138.0461"/>
             <radius value="3.7412"/>
         </shape>
     </region>
     <region id="175">
         <name value="Seismic Disturbance Spawn 1"/>
         <shape type="circle">
-            <center value="115.376,88.458"/>
+            <center value="118.8715,91.481"/>
             <radius value="2.2802"/>
         </shape>
     </region>
@@ -862,7 +881,7 @@
     <region id="177">
         <name value="Seismic Disturbance Spawn 3"/>
         <shape type="circle">
-            <center value="68.72,133.4597"/>
+            <center value="64.7011,137.1806"/>
             <radius value="2.51"/>
         </shape>
     </region>
@@ -890,7 +909,7 @@
     <region id="183">
         <name value="Kurin Sentry 2"/>
         <shape type="circle">
-            <center value="161.6171,236.8642"/>
+            <center value="221.5007,113.5002"/>
             <radius value="3.1647"/>
         </shape>
     </region>
@@ -1008,35 +1027,35 @@
     <region id="220">
         <name value="Research Data 2"/>
         <shape type="circle">
-            <center value="227.4516,235.0834"/>
+            <center value="225.163,228.1828"/>
             <radius value="0.7294"/>
         </shape>
     </region>
     <region id="221">
         <name value="Research Data 3"/>
         <shape type="circle">
-            <center value="236.3542,234.845"/>
+            <center value="223.1162,200.1757"/>
             <radius value="0.7167"/>
         </shape>
     </region>
     <region id="222">
         <name value="Research Data 4"/>
         <shape type="circle">
-            <center value="240.4372,234.873"/>
+            <center value="222.316,228.2656"/>
             <radius value="0.7946"/>
         </shape>
     </region>
     <region id="223">
         <name value="Research Data 5"/>
         <shape type="circle">
-            <center value="230.0852,219.077"/>
+            <center value="228.808,214.6882"/>
             <radius value="0.588"/>
         </shape>
     </region>
     <region id="224">
         <name value="Research Data 6"/>
         <shape type="circle">
-            <center value="231.8083,219.048"/>
+            <center value="222.7824,214.8786"/>
             <radius value="0.5664"/>
         </shape>
     </region>
@@ -1214,7 +1233,7 @@
     <region id="291">
         <name value="Highlands Guard 5"/>
         <shape type="circle">
-            <center value="60.5007,129"/>
+            <center value="56.7412,127.547"/>
             <radius value="3.2148"/>
         </shape>
     </region>
@@ -1406,8 +1425,8 @@
     <region id="8">
         <name value="Balaad Assault 3"/>
         <shape type="circle">
-            <center value="102.155,67.1945"/>
-            <radius value="6.9904"/>
+            <center value="101.0104,65.7155"/>
+            <radius value="6.75"/>
         </shape>
     </region>
     <region id="9">
@@ -1428,29 +1447,29 @@
     <region id="11">
         <name value="Highlands Guard 7"/>
         <shape type="circle">
-            <center value="99.5004,167.5004"/>
+            <center value="97.4841,158.3554"/>
             <radius value="3.2148"/>
         </shape>
     </region>
     <region id="20">
         <name value="Highlands Guard 8"/>
         <shape type="circle">
-            <center value="25.5004,169.0007"/>
+            <center value="29.7753,173.0424"/>
             <radius value="3.2148"/>
         </shape>
     </region>
     <region id="22">
         <name value="Highlands Guard 9"/>
         <shape type="diamond">
-            <center value="48.75,192.5"/>
-            <width value="14.4941"/>
-            <height value="3.1816"/>
+            <center value="45.9506,196.962"/>
+            <width value="7"/>
+            <height value="5"/>
         </shape>
     </region>
     <region id="23">
         <name value="Highlands Guard 10"/>
         <shape type="circle">
-            <center value="37.5004,127.0007"/>
+            <center value="37.1962,112.5097"/>
             <radius value="3.2148"/>
         </shape>
     </region>
@@ -1481,14 +1500,14 @@
     <region id="45">
         <name value="Convoy Vehicle Guard 1"/>
         <shape type="circle">
-            <center value="60,147.5"/>
+            <center value="66,146.5"/>
             <radius value="2"/>
         </shape>
     </region>
     <region id="46">
         <name value="Convoy Vehicle Guard 2"/>
         <shape type="circle">
-            <center value="51,180"/>
+            <center value="55.5,181"/>
             <radius value="2"/>
         </shape>
     </region>
@@ -1545,6 +1564,258 @@
         <name value="Targeter 8"/>
         <shape type="rect">
             <quad value="183.259,68.7553,184.759,70.2553"/>
+        </shape>
+    </region>
+    <region id="81">
+        <name value="Infested Smithy Advance"/>
+        <shape type="rect">
+            <quad value="0,129,11.5,147.5"/>
+        </shape>
+    </region>
+    <region id="83">
+        <name value="Epi SAM 1"/>
+        <shape type="rect">
+            <quad value="92.259,236.7553,93.759,238.2553"/>
+        </shape>
+    </region>
+    <region id="85">
+        <name value="Epi SAM 2"/>
+        <shape type="rect">
+            <quad value="134.259,243.2553,135.759,244.7553"/>
+        </shape>
+    </region>
+    <region id="86">
+        <name value="Epi SAM 3"/>
+        <shape type="rect">
+            <quad value="73.259,202.7553,74.759,204.2553"/>
+        </shape>
+    </region>
+    <region id="87">
+        <name value="Fighter Jet East Spawn 1"/>
+        <shape type="rect">
+            <quad value="246,224.75,256,240.25"/>
+        </shape>
+    </region>
+    <region id="88">
+        <name value="Fighter Jet East Spawn 2"/>
+        <shape type="rect">
+            <quad value="246,177.25,256,192.75"/>
+        </shape>
+    </region>
+    <region id="91">
+        <name value="Fighter Jet East Spawn 3"/>
+        <shape type="rect">
+            <quad value="245.5,137.25,255.5,152.75"/>
+        </shape>
+    </region>
+    <region id="93">
+        <name value="Fighter Jet East Spawn 4"/>
+        <shape type="rect">
+            <quad value="246,78.75,256,94.25"/>
+        </shape>
+    </region>
+    <region id="94">
+        <name value="Fighter Jet East Spawn 5"/>
+        <shape type="rect">
+            <quad value="245.5,4.75,255.5,20.25"/>
+        </shape>
+    </region>
+    <region id="95">
+        <name value="Fighter Jet West Spawn 1"/>
+        <shape type="rect">
+            <quad value="0.5,7.75,10.5,23.25"/>
+        </shape>
+    </region>
+    <region id="96">
+        <name value="Fighter Jet West Spawn 2"/>
+        <shape type="rect">
+            <quad value="0.5,61.75,10.5,77.25"/>
+        </shape>
+    </region>
+    <region id="97">
+        <name value="Fighter Jet West Spawn 3"/>
+        <shape type="rect">
+            <quad value="0,120.75,10,136.25"/>
+        </shape>
+    </region>
+    <region id="98">
+        <name value="Fighter Jet West Spawn 4"/>
+        <shape type="rect">
+            <quad value="1,177.25,11,192.75"/>
+        </shape>
+    </region>
+    <region id="101">
+        <name value="Fighter Jet West Spawn 5"/>
+        <shape type="rect">
+            <quad value="2,236.25,12,251.75"/>
+        </shape>
+    </region>
+    <region id="102">
+        <name value="Fighter Jet West Spawn 6"/>
+        <shape type="rect">
+            <quad value="1,202.25,11,217.75"/>
+        </shape>
+    </region>
+    <region id="103">
+        <name value="Fighter Jet West Spawn 7"/>
+        <shape type="rect">
+            <quad value="0.5,153.75,10.5,169.25"/>
+        </shape>
+    </region>
+    <region id="108">
+        <name value="Fighter Jet West Spawn 8"/>
+        <shape type="rect">
+            <quad value="0,91.25,10,106.75"/>
+        </shape>
+    </region>
+    <region id="109">
+        <name value="Fighter Jet West Spawn 9"/>
+        <shape type="rect">
+            <quad value="0.5,33.25,10.5,48.75"/>
+        </shape>
+    </region>
+    <region id="111">
+        <name value="Fighter Jet East Spawn 6"/>
+        <shape type="rect">
+            <quad value="245,28.25,255,43.75"/>
+        </shape>
+    </region>
+    <region id="113">
+        <name value="Fighter Jet East Spawn 7"/>
+        <shape type="rect">
+            <quad value="245,51.75,255,67.25"/>
+        </shape>
+    </region>
+    <region id="122">
+        <name value="Fighter Jet East Spawn 8"/>
+        <shape type="rect">
+            <quad value="245.5,104.25,255.5,119.75"/>
+        </shape>
+    </region>
+    <region id="127">
+        <name value="Fighter Jet East Spawn 9"/>
+        <shape type="rect">
+            <quad value="245,201.75,255,217.25"/>
+        </shape>
+    </region>
+    <region id="129">
+        <name value="Fighter Jet East Spawn 10"/>
+        <shape type="rect">
+            <quad value="244.5,156.25,254.5,171.75"/>
+        </shape>
+    </region>
+    <region id="130">
+        <name value="Exit6"/>
+        <color value="255,128,64,0"/>
+        <shape type="rect">
+            <quad value="1.501,219.0012,5.501,225.0012"/>
+        </shape>
+    </region>
+    <region id="141">
+        <name value="Exit7"/>
+        <color value="255,128,64,0"/>
+        <shape type="rect">
+            <quad value="114.133,249.771,122.133,255.771"/>
+        </shape>
+    </region>
+    <region id="147">
+        <name value="City Guards2"/>
+        <shape type="circle">
+            <center value="132.5002,218.0002"/>
+            <radius value="3.1647"/>
+        </shape>
+    </region>
+    <region id="150">
+        <name value="City Guards3"/>
+        <shape type="circle">
+            <center value="111.0002,221.5002"/>
+            <radius value="3.1647"/>
+        </shape>
+    </region>
+    <region id="152">
+        <name value="MLRS Hold Site"/>
+        <shape type="rect">
+            <quad value="93,205.5,109,210.5"/>
+        </shape>
+    </region>
+    <region id="153">
+        <name value="MLRS Hold Site 2"/>
+        <shape type="rect">
+            <quad value="67,227.5,80,232.5"/>
+        </shape>
+    </region>
+    <region id="154">
+        <name value="Thal Holdout North Spawn"/>
+        <shape type="rect">
+            <quad value="2,250.5,215,255.5"/>
+        </shape>
+    </region>
+    <region id="155">
+        <name value="Thal Holdout East Spawns"/>
+        <shape type="rect">
+            <quad value="210,237.75,213.5,249.75"/>
+        </shape>
+        <shape type="rect">
+            <quad value="210,216,213.5,223"/>
+        </shape>
+        <shape type="rect">
+            <quad value="213.75,166,218.25,178"/>
+        </shape>
+        <shape type="diamond">
+            <center value="204,195"/>
+            <width value="5"/>
+            <height value="20"/>
+        </shape>
+        <shape type="diamond">
+            <center value="210.2,215"/>
+            <width value="6.2"/>
+            <height value="3.5"/>
+        </shape>
+    </region>
+    <region id="156">
+        <name value="Thalim Holdout West Spawns"/>
+        <shape type="rect">
+            <quad value="0.5,173,4,254.5"/>
+        </shape>
+    </region>
+    <region id="157">
+        <name value="Thalim Holdout Spawns South"/>
+        <shape type="rect">
+            <quad value="14,169,92,173"/>
+        </shape>
+        <shape type="rect">
+            <quad value="113,169,127,173"/>
+        </shape>
+        <shape type="rect">
+            <quad value="138.75,169.5,195.25,172.5"/>
+        </shape>
+    </region>
+    <region id="158">
+        <name value="Recon Drone Spawn"/>
+        <shape type="circle">
+            <center value="162,70.25"/>
+            <radius value="10.8193"/>
+        </shape>
+    </region>
+    <region id="159">
+        <name value="Windsor VIP Escort"/>
+        <color value="255,255,0,255"/>
+        <shape type="circle">
+            <center value="141.501,236.001"/>
+            <radius value="2.0153"/>
+        </shape>
+    </region>
+    <region id="160">
+        <name value="Thalim Spawns South"/>
+        <shape type="rect">
+            <quad value="18,169.5,90.5,179"/>
+        </shape>
+    </region>
+    <region id="161">
+        <name value="Exit8"/>
+        <color value="255,128,64,0"/>
+        <shape type="rect">
+            <quad value="242.992,249.9724,247.492,255.9724"/>
         </shape>
     </region>
 </Regions>
